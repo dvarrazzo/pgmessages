@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres\n"
 "POT-Creation-Date: 2005-09-21 19:01-0300\n"
-"PO-Revision-Date: 2005-09-23 08:22+0200\n"
+"PO-Revision-Date: 2005-09-26 00:10+0200\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -5993,7 +5993,7 @@ msgstr "utilisation non standard d'un échappement dans une chaîne littérale"
 
 #: scan.l:885
 msgid "Use the escape string syntax for escapes, e.g., E'\\r\\n'."
-msgstr ""
+msgstr "Utilisez la syntaxe de la chaîne d'échappement pour les échappements, c'est-à-dire E'\\r\\n'."
 
 #: y.tab.c:10429
 msgid "syntax error: cannot back up"
@@ -6195,9 +6195,8 @@ msgid "multiple ORDER BY clauses not allowed"
 msgstr "Clauses ORDER BY multiples non autorisées"
 
 #: gram.y:8777
-#, fuzzy
 msgid "multiple FOR UPDATE/FOR SHARE clauses not allowed"
-msgstr "Clauses FOR UPDATE multiples non autorisées"
+msgstr "Clauses multiples FOR UPDATE/SHARE non autorisées"
 
 #: gram.y:8785
 msgid "multiple OFFSET clauses not allowed"
@@ -6406,9 +6405,8 @@ msgid "could not create listen socket for \"%s\""
 msgstr "n'a pas pu créer le socket d'écoute pour «%s»"
 
 #: postmaster/postmaster.c:759
-#, fuzzy
 msgid "could not create any TCP/IP sockets"
-msgstr "n'a pas pu créer le socket domaine Unix"
+msgstr "n'a pas pu créer de socket TCP/IP"
 
 #: postmaster/postmaster.c:786
 msgid "could not create Unix-domain socket"
@@ -6434,13 +6432,13 @@ msgid "could not read permissions of directory \"%s\": %m"
 msgstr "n'a pas pu lire les droits du répertoire «%s»: %m"
 
 #: postmaster/postmaster.c:992
-#, fuzzy, c-format
+#, c-format
 msgid "data directory \"%s\" has wrong ownership"
-msgstr "Le répertoire des données «%s» est accessible par le groupe et par les autres"
+msgstr "le répertoire des données «%s» a un mauvais propriétaire"
 
 #: postmaster/postmaster.c:994
 msgid "The server must be started by the user that owns the data directory."
-msgstr ""
+msgstr "Le serveur doit être en cours d'exécution par l'utilisateur qui possède le répertoire des données."
 
 #: postmaster/postmaster.c:1013
 #, c-format
@@ -6829,22 +6827,22 @@ msgid "corrupted pgstat.stat file"
 msgstr "Fichier pgstat.stat corrompu"
 
 #: postmaster/autovacuum.c:161
-#, fuzzy, c-format
+#, c-format
 msgid "could not fork autovacuum process: %m"
-msgstr "n'a pas pu lancer le processus fils de démarrage : %m"
+msgstr "n'a pas pu lancer le processus autovacuum : %m"
 
 #: postmaster/autovacuum.c:409
 #, c-format
 msgid "autovacuum: processing database \"%s\""
-msgstr ""
+msgstr "autovacuum : traitement de la base de données «%s»"
 
 #: postmaster/autovacuum.c:934
 msgid "autovacuum not started because of misconfiguration"
-msgstr ""
+msgstr "autovacuum non exécuté à cause d'une mauvaise configuration"
 
 #: postmaster/autovacuum.c:935
 msgid "Enable options \"stats_start_collector\" and \"stats_row_level\"."
-msgstr ""
+msgstr "Activez les options «stats_start_collector» et «stats_row_level»."
 
 #: postmaster/syslogger.c:319
 #, c-format
@@ -6886,9 +6884,9 @@ msgid "could not redirect stderr: %m"
 msgstr "n'a pas pu rediriger la sortie des erreurs (stderr) : %m"
 
 #: postmaster/syslogger.c:677
-#, fuzzy, c-format
+#, c-format
 msgid "could not write to log file: %s\n"
-msgstr "n'a pas pu écrire dans le journal des traces : %m"
+msgstr "n'a pas pu écrire dans le journal des traces : %s\n"
 
 #: postmaster/syslogger.c:766
 #, c-format
@@ -7109,7 +7107,7 @@ msgstr "max_fsm_pages doit excéder max_fsm_relations * %d"
 #: storage/freespace/freespace.c:709
 #, c-format
 msgid "free space map contains %d pages in %d relations"
-msgstr ""
+msgstr "la carte des espaces libres contient %d pages dans %d relations"
 
 #: storage/freespace/freespace.c:711
 #, c-format
@@ -7118,30 +7116,35 @@ msgid ""
 "%.0f page slots are required to track all free space.\n"
 "Current limits are:  %d page slots, %d relations, using %.0f KB."
 msgstr ""
+"Un total de %.0f emplacements de pages est utilisé (ceci incluant la surcharge).\n"
+"%.0f emplacements de pages sont requis pour tracer tout l'espace libre.\n"
+"Les limites actuelles sont : %d emplacements de pages, %d relations, utilisant %.0f Ko."
 
 #: storage/freespace/freespace.c:728
 #, c-format
 msgid "max_fsm_relations(%d) equals the number of relations checked"
-msgstr ""
+msgstr "max_fsm_relations(%d) équivaut au nombre de relations vérifiées"
 
 #: storage/freespace/freespace.c:730
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You have >= %d relations.\n"
 "Consider increasing the configuration parameter \"max_fsm_relations\"."
-msgstr "Considèrez l'augmentation du paramètre de configuration «checkpoint_segments»."
+msgstr ""
+"Vous avez >= %d relations.\n"
+"Considèrez l'augmentation du paramètre de configuration «max_fsm_relations»."
 
 #: storage/freespace/freespace.c:735
-#, fuzzy, c-format
+#, c-format
 msgid "the number of page slots needed (%.0f) exceeds max_fsm_pages (%d)"
-msgstr "Le nombre de dimensions du tableau (%d) dépasse le maximum autorisé (%d)"
+msgstr "le nombre d'emplacements de pages nécessaire (%.0f) dépasse max_fsm_pages (%d)"
 
 #: storage/freespace/freespace.c:737
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Consider increasing the configuration parameter \"max_fsm_pages\"\n"
 "to a value over %.0f."
-msgstr "Considèrez l'augmentation du paramètre de configuration «checkpoint_segments»."
+msgstr "Considérez l'augmentation du paramètre de configuration «max-fsm-pages» à une valeur supérieure à %.0f."
 
 #: storage/ipc/shmem.c:180 storage/ipc/shmem.c:373 storage/lmgr/lock.c:553
 #: storage/lmgr/lock.c:614 storage/lmgr/lock.c:1828 storage/lmgr/lock.c:2104
@@ -7156,12 +7159,12 @@ msgstr "n'a pas pu allouer un segment de mémoire partagée «%s»"
 
 #: storage/ipc/shmem.c:433 storage/ipc/shmem.c:452
 msgid "requested shared memory size overflows size_t"
-msgstr ""
+msgstr "taille de la mémoire partagée demandée dépasse size_t"
 
 #: storage/large_object/inv_api.c:509
-#, fuzzy, c-format
+#, c-format
 msgid "large object %u was not opened for writing"
-msgstr "le gros objet %u n'existe pas"
+msgstr "le gros objet %u n'a pas été ouvert en écriture"
 
 #: storage/lmgr/deadlock.c:944
 msgid "deadlock detected"
@@ -7174,11 +7177,11 @@ msgstr "Vous pourriez avoir besoin d'augmenter max_locks_per_transaction."
 
 #: storage/lmgr/lock.c:1669
 msgid "cannot PREPARE a transaction that has operated on temporary tables"
-msgstr ""
+msgstr "ne peut pas préparer (PREPARE) une transaction qui a travaillé sur des tables temporaires"
 
 #: storage/lmgr/lock.c:1829
 msgid "Not enough memory for reassigning the prepared transaction's locks."
-msgstr ""
+msgstr "Pas assez de mémoire pour réaffecter les verrous des transactions préparées."
 
 #: storage/page/bufpage.c:135 storage/page/bufpage.c:336
 #: storage/page/bufpage.c:474 storage/page/bufpage.c:603
@@ -7272,9 +7275,9 @@ msgid "invalid frontend message type %d"
 msgstr "Type %d du message de l'interface invalide"
 
 #: tcop/postgres.c:601
-#, fuzzy, c-format
+#, c-format
 msgid "statement: %s%s"
-msgstr "instruction : %s"
+msgstr "instruction : %s%s"
 
 #: tcop/fastpath.c:303 tcop/postgres.c:938 tcop/postgres.c:1272
 #: tcop/postgres.c:1785
@@ -7289,14 +7292,14 @@ msgid "duration: %ld.%03ld ms"
 msgstr "durée : %ld.%03ld ms"
 
 #: tcop/postgres.c:1116
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %ld.%03ld ms  statement: %s%s"
-msgstr "durée : %ld.%03ld ms  instruction : %s"
+msgstr "durée : %ld.%03ld ms  instruction : %s%s"
 
 #: tcop/postgres.c:1167
-#, fuzzy, c-format
+#, c-format
 msgid "statement: PREPARE %s AS %s"
-msgstr "instruction : %s"
+msgstr "instruction : PREPARE %s AS %s"
 
 #: tcop/postgres.c:1234
 msgid "cannot insert multiple commands into a prepared statement"
@@ -7319,9 +7322,9 @@ msgid ""
 msgstr "Le message bind fournit %d paramètres, mais l'instruction préparée «%s» requiert %d"
 
 #: tcop/postgres.c:1471
-#, fuzzy, c-format
+#, c-format
 msgid "statement: <BIND> %s"
-msgstr "instruction : %s"
+msgstr "instruction : <BIND> %s"
 
 #: tcop/postgres.c:1584
 #, c-format
@@ -7336,12 +7339,12 @@ msgstr "Le portail «%s» n'existe pas"
 #: tcop/postgres.c:1737
 #, c-format
 msgid "statement: EXECUTE %s  [PREPARE:  %s]"
-msgstr ""
+msgstr "instruction : EXECUTE %s  [PREPARE:  %s]"
 
 #: tcop/postgres.c:1869
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %ld.%03ld ms  statement: EXECUTE %s  [PREPARE:  %s]"
-msgstr "durée : %ld.%03ld ms  instruction : %s"
+msgstr "durée : %ld.%03ld ms  instruction : EXECUTE %s  [PREPARE:  %s]"
 
 #: tcop/postgres.c:2042
 msgid "terminating connection because of crash of another server process"
@@ -7375,14 +7378,12 @@ msgid "terminating connection due to administrator command"
 msgstr "Arrêt des connexions suite à la demande de l'administrateur"
 
 #: tcop/postgres.c:2211
-#, fuzzy
 msgid "canceling statement due to statement timeout"
-msgstr "Annulation de la requête à la demande de l'utilisateur"
+msgstr "annulation de la requête à cause du délai écoulé pour l'exécution de l'instruction"
 
 #: tcop/postgres.c:2215
-#, fuzzy
 msgid "canceling statement due to user request"
-msgstr "Annulation de la requête à la demande de l'utilisateur"
+msgstr "annulation de la requête à la demande de l'utilisateur"
 
 #: tcop/postgres.c:2266
 msgid "stack depth limit exceeded"
@@ -7513,9 +7514,8 @@ msgid "Use DROP TYPE to remove a type."
 msgstr "Utilisez DROP TYPE pour supprimer un type."
 
 #: tcop/utility.c:845
-#, fuzzy
 msgid "must be superuser to do LOAD"
-msgstr "doit être super-utilisateur pour supprimer des utilisateurs"
+msgstr "doit être super-utilisateur pour exécuter LOAD"
 
 #: tcop/utility.c:1001
 msgid "must be superuser to do CHECKPOINT"
@@ -7652,9 +7652,9 @@ msgid "function \"%s\" does not exist"
 msgstr "La fonction «%s» n'existe pas"
 
 #: utils/adt/acl.c:2968
-#, fuzzy, c-format
+#, c-format
 msgid "must be member of role \"%s\""
-msgstr "doit être le propriétaire du type %s"
+msgstr "doit être un membre du rôle «%s»"
 
 #: utils/adt/like.c:459 utils/adt/like_match.c:291 utils/adt/regexp.c:557
 msgid "invalid escape string"
@@ -8011,13 +8011,12 @@ msgid "input is out of range"
 msgstr "L'entrée est en dehors des limites"
 
 #: utils/adt/formatting.c:442
-#, fuzzy
 msgid "invalid format specification for an interval value"
-msgstr "Statut invalide dans la valeur externe «tinterval»"
+msgstr "format de spécification invalide pour une valeur intervalle"
 
 #: utils/adt/formatting.c:443
 msgid "Intervals are not tied to specific calendar dates."
-msgstr ""
+msgstr "Les intervalles ne sont pas liés aux dates de calendriers spécifiques."
 
 #: utils/adt/formatting.c:995
 msgid "\"9\" must be ahead of \"PR\""
@@ -8199,9 +8198,8 @@ msgid "int2vector has too many elements"
 msgstr "int2vector a trop d'éléments"
 
 #: utils/adt/int.c:228
-#, fuzzy
 msgid "invalid int2vector data"
-msgstr "enregistrement du point de vérification invalide"
+msgstr "données int2vector invalide"
 
 #: utils/adt/int.c:1349 utils/adt/int8.c:1180
 msgid "step size may not equal zero"
@@ -8246,7 +8244,7 @@ msgstr "La locale LC_CTYPE du serveur est probablement incompatible avec le coda
 #: utils/adt/oracle_compat.c:217 utils/adt/oracle_compat.c:227
 #, c-format
 msgid "UTF16 to UTF8 translation failed: %lu"
-msgstr ""
+msgstr "échec de la traduction d'UTF16 vers UTF8 : %lu"
 
 #: utils/adt/genfile.c:130 utils/adt/oracle_compat.c:535
 #: utils/adt/oracle_compat.c:632 utils/adt/oracle_compat.c:1256
@@ -8282,23 +8280,21 @@ msgid "could not send signal to process %d: %m"
 msgstr "n'a pas pu envoyer le signal au processus %d : %m"
 
 #: utils/adt/misc.c:117
-#, fuzzy
 msgid "must be superuser to signal the postmaster"
-msgstr "doit être super-utilisateur pour envoyer un signal aux autres processus serveur"
+msgstr "doit être super-utilisateur pour envoyer un signal au postmaster"
 
 #: utils/adt/misc.c:122
-#, fuzzy, c-format
+#, c-format
 msgid "failed to send signal to postmaster: %m"
-msgstr "n'a pas pu envoyer le signal au processus %d : %m"
+msgstr "n'a pas pu envoyer le signal au postmaster : %m"
 
 #: utils/adt/misc.c:139
-#, fuzzy
 msgid "must be superuser to rotate log files"
-msgstr "doit être super-utilisateur pour créer des utilisateurs"
+msgstr "doit être super-utilisateur pour exécuter la rotation des journaux de traces"
 
 #: utils/adt/misc.c:144
 msgid "rotation not possible because log redirection not active"
-msgstr ""
+msgstr "rotation impossible car la redirection des journaux n'est pas activée"
 
 #: utils/adt/misc.c:197
 msgid "global tablespace never has databases"
@@ -8471,23 +8467,22 @@ msgid "oidvector has too many elements"
 msgstr "oidvector a trop d'éléments"
 
 #: utils/adt/oid.c:270
-#, fuzzy
 msgid "invalid oidvector data"
-msgstr "enregistrement du point de vérification invalide"
+msgstr "donnée oidvector invalide"
 
 #: utils/adt/varlena.c:568 utils/adt/varlena.c:632 utils/adt/varlena.c:1370
 msgid "negative substring length not allowed"
 msgstr "Longueur de sous-chaîne négative non autorisée"
 
 #: utils/adt/varlena.c:896 utils/adt/varlena.c:909
-#, fuzzy, c-format
+#, c-format
 msgid "could not convert string to UTF16: %lu"
-msgstr "%s ne peut convertir le type %s en %s"
+msgstr "n'a pas pu convertir la chaîne en UTF16 : %lu"
 
 #: utils/adt/varlena.c:918
-#, fuzzy, c-format
+#, c-format
 msgid "could not compare unicode strings: %d"
-msgstr "n'a pas pu créer l'index unique"
+msgstr "n'a pas pu comparer les chaînes unicode : %d"
 
 #: utils/adt/varlena.c:1465 utils/adt/varlena.c:1496 utils/adt/varlena.c:1532
 #: utils/adt/varlena.c:1575
@@ -8568,7 +8563,7 @@ msgstr "Expression rationnelle invalide : %s"
 #: utils/adt/regexp.c:499
 #, c-format
 msgid "invalid option of regexp_replace: %c"
-msgstr ""
+msgstr "option invalide pour regexp_replace : %c"
 
 #: utils/adt/regproc.c:121 utils/adt/regproc.c:141
 #, c-format
@@ -8845,9 +8840,9 @@ msgid "cannot calculate week number without year information"
 msgstr "n'a pas pu calculer le numéro de la semaine sans informations sur l'année"
 
 #: utils/adt/timestamp.c:3980 utils/adt/timestamp.c:4152
-#, fuzzy, c-format
+#, c-format
 msgid "could not convert to time zone \"%s\""
-msgstr "%s ne peut convertir le type %s en %s"
+msgstr "n'a pas pu convertir vers le fuseau horaire «%s»"
 
 #: utils/adt/timestamp.c:4027 utils/adt/timestamp.c:4200
 #, c-format
@@ -8902,48 +8897,43 @@ msgstr "Valeur trop longue pour le type character varying(%d)"
 
 #: utils/adt/genfile.c:61
 msgid "reference to parent directory (\"..\") not allowed"
-msgstr ""
+msgstr "référence non autorisée au répertoire parent («..»)"
 
 #: utils/adt/genfile.c:75
-#, fuzzy
 msgid "absolute path not allowed"
-msgstr "Longueur de sous-chaîne négative non autorisée"
+msgstr "chaîne absolue non autorisée"
 
 #: utils/adt/genfile.c:105
-#, fuzzy
 msgid "must be superuser to read files"
-msgstr "doit être super-utilisateur pour créer des utilisateurs"
+msgstr "doit être super-utilisateur pour lire des fichiers"
 
 #: utils/adt/genfile.c:119
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek in file \"%s\": %m"
-msgstr "n'a pas pu ouvrir le fichier «%s» : %m"
+msgstr "n'a pas pu parcourir le fichier «%s» : %m"
 
 #: utils/adt/genfile.c:124
-#, fuzzy
 msgid "requested length cannot be negative"
-msgstr "Longueur demandée trop importante"
+msgstr "la longueur demandée ne peut pas être négative"
 
 #: utils/adt/genfile.c:166
-#, fuzzy
 msgid "must be superuser to get file information"
-msgstr "doit être super-utilisateur pour créer une classe d'opérateur"
+msgstr "doit être super-utilisateur pour obtenir des informations sur le fichier"
 
 #: utils/adt/genfile.c:230
-#, fuzzy
 msgid "must be superuser to get directory listings"
-msgstr "doit être super-utilisateur pour supprimer des utilisateurs"
+msgstr "doit être super-utilisateur pour obtenir le contenu du répertoire"
 
 #: ../port/copydir.c:81 utils/adt/dbsize.c:56 utils/adt/dbsize.c:178
 #: utils/adt/dbsize.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "could not stat \"%s\": %m"
 msgstr "n'a pas pu tester le fichier «%s» : %m"
 
 #: utils/adt/dbsize.c:89 utils/adt/dbsize.c:162
-#, fuzzy, c-format
+#, c-format
 msgid "could not open tablespace directory \"%s\": %m"
-msgstr "n'a pas pu ouvrir le répertoire «%s» : %m"
+msgstr "n'a pas pu ouvrir le répertoire de l'espace logique «%s» : %m"
 
 #: utils/cache/relcache.c:3202
 #, c-format
@@ -9042,11 +9032,11 @@ msgid "function %u has too many arguments (%d, maximum is %d)"
 msgstr "La fonction %u a trop d'arguments (%d, le maximum étant %d)"
 
 #: utils/fmgr/funcapi.c:349
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "could not determine actual result type for function \"%s\" declared to "
 "return type %s"
-msgstr "n'a pas pu déterminer le type du résultat actuel pour la fonction déclarant retourner le type %s"
+msgstr "n'a pas pu déterminer le type du résultat actuel pour la fonction «%s» déclarant retourner le type %s"
 
 #: utils/fmgr/funcapi.c:856 utils/fmgr/funcapi.c:887
 msgid "number of aliases does not match number of columns"
@@ -9067,17 +9057,17 @@ msgid "could not write to temporary file \"%s\": %m"
 msgstr "n'a pas pu écrire le fichier temporaire «%s» : %m"
 
 #: utils/init/flatfiles.c:242
-#, fuzzy, c-format
+#, c-format
 msgid "invalid database name \"%s\""
-msgstr "nom d'utilisateur invalide «%s»"
+msgstr "nom de base de données invalide «%s»"
 
 #: utils/init/flatfiles.c:476
-#, fuzzy, c-format
+#, c-format
 msgid "invalid role name \"%s\""
-msgstr "nom de groupe invalide «%s»"
+msgstr "nom de rôle invalide «%s»"
 
 #: utils/init/flatfiles.c:483
-#, fuzzy, c-format
+#, c-format
 msgid "invalid role password \"%s\""
 msgstr "mot de passe de l'utilisateur invalide «%s»"
 
@@ -9087,23 +9077,23 @@ msgid "could not change directory to \"%s\": %m"
 msgstr "n'a pas pu modifier le répertoire par «%s» : %m"
 
 #: utils/init/miscinit.c:434
-#, fuzzy, c-format
+#, c-format
 msgid "role \"%s\" is not permitted to log in"
-msgstr "Contrôle l'information préfixée sur chaque trace"
+msgstr "le rôle «%s» n'est pas autorisé à se connecter"
 
 #: utils/init/miscinit.c:451
-#, fuzzy, c-format
+#, c-format
 msgid "too many connections for role \"%s\""
-msgstr "Connexion SSL de «%s»"
+msgstr "trop de connexions pour le rôle «%s»"
 
 #: utils/init/miscinit.c:537
 msgid "permission denied to set session authorization"
 msgstr "Droit refusé pour initialiser une autorisation de session"
 
 #: utils/init/miscinit.c:619
-#, fuzzy, c-format
+#, c-format
 msgid "invalid role OID: %u"
-msgstr "identifiant utilisateur invalide : %d"
+msgstr "OID utilisateur invalide : %u"
 
 #: utils/init/miscinit.c:711
 #, c-format
@@ -9151,12 +9141,12 @@ msgid "pre-existing shared memory block (key %lu, ID %lu) is still in use"
 msgstr "Le bloc de mémoire partagé pré-existant (clé %lu, ID %lu) est toujours utilisé"
 
 #: utils/init/miscinit.c:839
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If you're sure there are no old server processes still running, remove the "
 "shared memory block with the command \"ipcclean\", \"ipcrm\", or just delete "
 "the file \"%s\"."
-msgstr "Si vous êtes sûr qu'aucun vieux processus serveur n'est toujours lancé, supprimez le bloc de mémoire partagée avec la commande «ipcrm» ou supprimez simplement le fichier «%s»."
+msgstr "Si vous êtes sûr qu'aucun vieux processus serveur n'est toujours en cours d'exécution, supprimez le bloc de mémoire partagée avec la commande «ipcclean», «ipcrm» ou supprimez simplement le fichier «%s»."
 
 #: utils/init/miscinit.c:857
 #, c-format
@@ -9230,9 +9220,9 @@ msgid "database \"%s\" is not currently accepting connections"
 msgstr "La base de données «%s» n'accepte plus les connexions"
 
 #: utils/init/postinit.c:211
-#, fuzzy, c-format
+#, c-format
 msgid "too many connections for database \"%s\""
-msgstr "Connexion SSL de «%s»"
+msgstr "trop de connexions pour la base de données «%s»"
 
 #: utils/init/postinit.c:367
 #, c-format
@@ -9245,23 +9235,22 @@ msgid "could not access directory \"%s\": %m"
 msgstr "n'a pas pu accéder au répertoire «%s» : %m"
 
 #: utils/init/postinit.c:471
-#, fuzzy
 msgid "no roles are defined in this database system"
-msgstr "Aucun utilisateur n'est défini dans le système de bases de données"
+msgstr "aucun rôle n'est défini dans le système de bases de données"
 
 #: utils/init/postinit.c:472
-#, fuzzy, c-format
+#, c-format
 msgid "You should immediately run CREATE USER \"%s\" CREATEUSER;."
-msgstr "Vous devez immédiatement lancer CREATE USER «%s» WITH SYSID %d CREATEUSER;."
+msgstr "Vous devez immédiatement exécuter CREATE USER «%s» CREATEUSER;."
 
 #: utils/init/postinit.c:513
 msgid "connection limit exceeded for non-superusers"
 msgstr "Limite de connexions dépassée pour les utilisateurs standards"
 
 #: utils/mb/conv.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "ignoring unconvertible UTF8 character 0x%04x"
-msgstr "Laisse de côté les caractères UTF-8 inconvertibles 0x%04x"
+msgstr "ignore les caractères UTF-8 inconvertibles 0x%04x"
 
 #: utils/mb/conv.c:413
 #, c-format
@@ -9295,7 +9284,7 @@ msgstr "Nom de codage destination invalide «%s»"
 #: utils/mb/wchar.c:863
 #, c-format
 msgid "Invalid UNICODE byte sequence detected near byte %c"
-msgstr ""
+msgstr "Séquence d'octets UNICODE invalide détectée près de l'octet %c"
 
 #: utils/mb/wchar.c:890
 #, c-format
@@ -9404,7 +9393,7 @@ msgstr "Statistiques / Collecteur des statistiques sur les requêtes et sur les i
 
 #: utils/misc/guc.c:308
 msgid "Auto Vacuum"
-msgstr ""
+msgstr "Auto Vacuum"
 
 #: utils/misc/guc.c:310
 msgid "Client Connection Defaults"
@@ -9459,9 +9448,8 @@ msgid "Enables the planner's use of index-scan plans."
 msgstr "Active l'utilisation des parcours d'index par le plannificateur."
 
 #: utils/misc/guc.c:401
-#, fuzzy
 msgid "Enables the planner's use of bitmap-scan plans."
-msgstr "Active l'utilisation des parcours d'index par le plannificateur."
+msgstr "Active l'utilisation des parcours de bitmap par le plannificateur."
 
 #: utils/misc/guc.c:409
 msgid "Enables the planner's use of TID scan plans."
@@ -9488,15 +9476,14 @@ msgid "Enables the planner's use of hash join plans."
 msgstr "Active l'utilisation de plans de jointures hâchées par le plannificateur."
 
 #: utils/misc/guc.c:457
-#, fuzzy
 msgid "Enables the planner to use constraints to limit table access."
-msgstr "Active l'utilisation de plans de jointures hâchées par le plannificateur."
+msgstr "Active l'utilisation des contraintes par le plannificateur pour limiter l'accès à la table."
 
 #: utils/misc/guc.c:458
 msgid ""
 "This prevents table access if the table constraints guarantee that table "
 "access is necessary."
-msgstr ""
+msgstr "Ceci empêche l'accès à la table si les contraintes de table garantissent que l'accès à la table est nécessaire."
 
 #: utils/misc/guc.c:466
 msgid "Enables genetic query optimization."
@@ -9541,7 +9528,7 @@ msgstr "La détection d'une en-tête de page endommagée cause normalement le rappo
 
 #: utils/misc/guc.c:517
 msgid "Writes full pages to WAL when first modified after a checkpoint."
-msgstr ""
+msgstr "Écrit des pages complètes dans les WAL lors d'une première modification après un point de vérification."
 
 #: utils/misc/guc.c:518
 msgid ""
@@ -9549,7 +9536,7 @@ msgid ""
 "partially written to disk.  During recovery, the row changesstored in WAL "
 "are not enough to recover.  This option writes pages when first modified "
 "after a checkpoint to WAL so full recovery is possible."
-msgstr ""
+msgstr "Une page écrite au moment d'un arrêt brutal du système d'exploitation pourrait être seulement partiellement écrite sur le disque. Lors de la récupération, les modifications de la ligne, stockées dans le WAL, ne seront pas suffisantes pour terminer la récupération. Cette option écrit les pages lors de la première modification après un point de vérification des WAL pour que la récupération complète soit possible."
 
 #: utils/misc/guc.c:529
 msgid "Runs the server silently."
@@ -9654,9 +9641,8 @@ msgid "Collects block-level statistics on database activity."
 msgstr "Récupère les statistiques au niveau bloc sur l'activité de la base de données."
 
 #: utils/misc/guc.c:712
-#, fuzzy
 msgid "Starts the auto vacuum subprocess."
-msgstr "Lance le sous-processus de récupération des statistiques du serveur."
+msgstr "Lance le sous-processus de l'auto vacuum."
 
 #: utils/misc/guc.c:721
 msgid "Generates debugging output for LISTEN and NOTIFY."
@@ -9743,7 +9729,7 @@ msgstr "Vérifie les corps de fonction lors du CREATE FUNCTION."
 
 #: utils/misc/guc.c:871
 msgid "Create new tables with OIDs by default."
-msgstr ""
+msgstr "Crée des nouvelles tables avec des OID par défaut."
 
 #: utils/misc/guc.c:879
 msgid "Start a subprocess to capture stderr output into log files."
@@ -9765,15 +9751,15 @@ msgstr "Le type datetime est basé sur des entiers"
 
 #: utils/misc/guc.c:922
 msgid "Sets whether Kerberos user names should be treated case insensitive."
-msgstr ""
+msgstr "Indique si les noms d'utilisateurs Kerberos devraient être traités sans se soucier de la casse."
 
 #: utils/misc/guc.c:931
 msgid "Warn about backslash escapes in ordinary string literals."
-msgstr ""
+msgstr "Avertie sur les échappements par antislash dans les littéraux de chaînes ordinaires."
 
 #: utils/misc/guc.c:940
 msgid "'...' strings treat backslashes literally."
-msgstr ""
+msgstr "Les chaînes '...' traitent des antislashs littéralement."
 
 #: utils/misc/guc.c:959
 msgid "Sets the default statistics target."
@@ -9844,9 +9830,8 @@ msgid "Sets the number of shared memory buffers used by the server."
 msgstr "Initialise le nombe de tampons en mémoire partagée utilisé par le serveur."
 
 #: utils/misc/guc.c:1070
-#, fuzzy
 msgid "Sets the maximum number of temporary buffers used by each session."
-msgstr "Initialise le nombe de tampons en mémoire partagée utilisé par le serveur."
+msgstr "Initialise le nombre maximum de tampons en mémoire partagée utilisés par chaque session."
 
 #: utils/misc/guc.c:1079
 msgid "Sets the TCP port the server listens on."
@@ -9907,23 +9892,20 @@ msgid "Vacuum cost delay in milliseconds."
 msgstr "Délai d'un coût de vacuum en millisecondes."
 
 #: utils/misc/guc.c:1175
-#, fuzzy
 msgid "Vacuum cost delay in milliseconds, for autovacuum."
-msgstr "Délai d'un coût de vacuum en millisecondes."
+msgstr "Délai d'un coût de vacuum en millisecondes, pour autovacuum."
 
 #: utils/misc/guc.c:1184
-#, fuzzy
 msgid "Vacuum cost amount available before napping, for autovacuum."
-msgstr "Coût du vacuum disponible avant un repos."
+msgstr "Coût du vacuum disponible avant un repos, pour autovacuum."
 
 #: utils/misc/guc.c:1193
 msgid "Sets the maximum number of simultaneously open files for each server process."
 msgstr "Initialise le nombre maximum de fichiers ouverts simultanément pour chaque processus serveur."
 
 #: utils/misc/guc.c:1202
-#, fuzzy
 msgid "Sets the maximum number of simultaneously prepared transactions."
-msgstr "Initialise le nombre maximum de verrous par transaction."
+msgstr "Initialise le nombre maximum de transactions préparées simultanément."
 
 #: utils/misc/guc.c:1232
 msgid "Sets the maximum allowed duration (in milliseconds) of any statement."
@@ -10021,14 +10003,12 @@ msgid "Background writer sleep time between rounds in milliseconds"
 msgstr "Temps d'endormissement du processus d'écriture en tâche de fond en millisecondes"
 
 #: utils/misc/guc.c:1378
-#, fuzzy
 msgid "Background writer maximum number of LRU pages to flush per round"
-msgstr "Nombre de pages maximal à nettoyer par le processus d'écriture en tâche de fond"
+msgstr "Nombre de pages LRU maximum à nettoyer par le processus d'écriture en tâche de fond"
 
 #: utils/misc/guc.c:1387
-#, fuzzy
 msgid "Background writer maximum number of all pages to flush per round"
-msgstr "Nombre de pages maximal à nettoyer par le processus d'écriture en tâche de fond"
+msgstr "Nombre maximum de toutes les pages à nettoyer par le processus d'écriture en tâche de fond"
 
 #: utils/misc/guc.c:1396
 msgid "Automatic log file rotation will occur after N minutes"
@@ -10058,40 +10038,38 @@ msgstr "Affiche la taille d'un bloc de disque"
 
 #: utils/misc/guc.c:1454
 msgid "Time to sleep between autovacuum runs, in seconds."
-msgstr ""
+msgstr "Temps pour s'endormir entre deux exécutions d'autovacuum, en secondes."
 
 #: utils/misc/guc.c:1462
 msgid "Minimum number of tuple updates or deletes prior to vacuum."
-msgstr ""
+msgstr "Nombre minimum de lignes mises à jour ou supprimées avant du vacuum."
 
 #: utils/misc/guc.c:1470
 msgid "Minimum number of tuple inserts, updates or deletes prior to analyze."
-msgstr ""
+msgstr "Nombre minimum de lignes insérées, mises à jour ou supprimées avant un ANALYZE."
 
 #: utils/misc/guc.c:1479
 msgid "Seconds between issuing TCP keepalives."
-msgstr ""
+msgstr "Secondes entre l'exécution de «TCP keepalives»."
 
 #: utils/misc/guc.c:1480 utils/misc/guc.c:1489
-#, fuzzy
 msgid "A value of 0 uses the system default."
-msgstr "Une valeur de 0 désactive le timeout."
+msgstr "Une valeur de 0 désactive la valeur système par défaut."
 
 #: utils/misc/guc.c:1488
 msgid "Seconds between TCP keepalive retransmits."
-msgstr ""
+msgstr "Secondes entre les retransmissions de «TCP keepalive»."
 
 #: utils/misc/guc.c:1497
-#, fuzzy
 msgid "Maximum number of TCP keepalive retransmits."
-msgstr "Initialise le nombre maximum de verrous par transaction."
+msgstr "Nombre maximum de retransmissions de «TCP keepalive»."
 
 #: utils/misc/guc.c:1498
 msgid ""
 "This controls the number of consecutive keepalive retransmits that can be "
 "lost before a connection is considered dead. A value of 0 uses the system "
 "default."
-msgstr ""
+msgstr "Ceci contrôle le nombre de retransmissions keepalive consécutives qui peuvent être perdues avant qu'une connexion ne soit considérée morte. Une valeur de 0 utilise la valeur par défaut du système."
 
 #: utils/misc/guc.c:1517
 msgid "Sets the planner's assumption about size of the disk cache."
@@ -10140,14 +10118,12 @@ msgid "GEQO: selective pressure within the population."
 msgstr "GEQO : pression sélective dans la population."
 
 #: utils/misc/guc.c:1578
-#, fuzzy
 msgid "Background writer percentage of LRU buffers to flush per round"
-msgstr "Pourcentage de tampons modifiés par le processus d'écriture en tâche de fond pour lancer un nettoyage"
+msgstr "Pourcentage de tampons LRU par le processus d'écriture en tâche de fond pour lancer un nettoyage"
 
 #: utils/misc/guc.c:1587
-#, fuzzy
 msgid "Background writer percentage of all buffers to flush per round"
-msgstr "Pourcentage de tampons modifiés par le processus d'écriture en tâche de fond pour lancer un nettoyage"
+msgstr "Pourcentage de tous les tampons par le processus d'écriture en tâche de fond"
 
 #: utils/misc/guc.c:1596
 msgid "Sets the seed for random-number generation."
@@ -10157,13 +10133,13 @@ msgstr "Initialisation la clré pour la génération de nombres aléatoires."
 msgid ""
 "Number of tuple updates or deletes prior to vacuum as a fraction of "
 "reltuples."
-msgstr ""
+msgstr "Nombre de lignes modifiées ou supprimées avant d'exécuter un vacuum comme une fraction de reltuples."
 
 #: utils/misc/guc.c:1614
 msgid ""
 "Number of tuple inserts, updates or deletes prior to analyze as a fraction "
 "of reltuples."
-msgstr ""
+msgstr "Nombre de lignes insérées, mises à jour ou supprimées avant d'analyser comme une fraction de reltuples."
 
 #: utils/misc/guc.c:1632
 msgid "WAL archiving command."
@@ -10280,19 +10256,16 @@ msgid "Sets the location of the Kerberos server key file."
 msgstr "Initalise l'emplacement du fichier de la clé serveur pour Kerberos."
 
 #: utils/misc/guc.c:1764
-#, fuzzy
 msgid "Sets the name of the Kerberos service."
-msgstr "Initalise l'emplacement du fichier de la clé serveur pour Kerberos."
+msgstr "Initialise le nom du service Kerberos."
 
 #: utils/misc/guc.c:1773
-#, fuzzy
 msgid "Sets the hostname of the Kerberos server."
-msgstr "Initalise l'emplacement du fichier de la clé serveur pour Kerberos."
+msgstr "Initalise le nom d'hôte du serveur Kerberos."
 
 #: utils/misc/guc.c:1782
-#, fuzzy
 msgid "Sets the Bonjour broadcast service name."
-msgstr "Initialise le nom du service broadcast du Rendezvous."
+msgstr "Initialise le nom du service broadcast Bonjour."
 
 #: utils/misc/guc.c:1793
 msgid "Shows the collation order locale."
@@ -10343,9 +10316,8 @@ msgid "Shows the server version."
 msgstr "Affiche la version du serveur."
 
 #: utils/misc/guc.c:1901
-#, fuzzy
 msgid "Sets the current role."
-msgstr "Initialise le niveau d'isolation de la transaction courante."
+msgstr "Initialise le rôle courant."
 
 #: utils/misc/guc.c:1912
 msgid "Sets the session user name."
@@ -10645,7 +10617,7 @@ msgstr "Fermeture du curseur existant «%s»"
 
 #: utils/mmgr/portalmem.c:504
 msgid "cannot PREPARE a transaction that has created a cursor WITH HOLD"
-msgstr ""
+msgstr "ne peut pas préparer une transaction qui a créé un curseur WITH HOLD"
 
 #: utils/sort/logtape.c:202
 #, c-format
@@ -10670,7 +10642,7 @@ msgid "Table contains duplicated values."
 msgstr "La table contient des valeurs dupliquées."
 
 #: ../port/dirmod.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "could not set junction for \"%s\": %s"
-msgstr "n'a pas lire les informations sur le répertoire «%s» : %m"
+msgstr "n'a pas pu configurer la jonction pour «%s» : %s"
 
