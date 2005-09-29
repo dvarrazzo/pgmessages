@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump-fr\n"
-"POT-Creation-Date: 2005-09-21 19:14-0300\n"
-"PO-Revision-Date: 2005-09-22 08:07+0200\n"
+"POT-Creation-Date: 2005-09-29 01:13-0300\n"
+"PO-Revision-Date: 2005-09-29 07:31+0200\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -657,8 +657,8 @@ msgstr "lecture des déclencheurs (triggers)\n"
 #: common.c:422 common.c:554 common.c:588 pg_backup_archiver.c:500
 #: pg_backup_archiver.c:822 pg_backup_archiver.c:936 pg_backup_archiver.c:994
 #: pg_backup_archiver.c:1404 pg_backup_archiver.c:1554
-#: pg_backup_archiver.c:1587 pg_backup_custom.c:141 pg_backup_custom.c:146
-#: pg_backup_custom.c:152 pg_backup_custom.c:167 pg_backup_custom.c:537
+#: pg_backup_archiver.c:1587 pg_backup_custom.c:139 pg_backup_custom.c:144
+#: pg_backup_custom.c:150 pg_backup_custom.c:165 pg_backup_custom.c:535
 #: pg_backup_db.c:156 pg_backup_db.c:232 pg_backup_files.c:112
 #: pg_backup_null.c:69 pg_backup_null.c:107 pg_backup_tar.c:168
 #: pg_backup_tar.c:960
@@ -731,8 +731,8 @@ msgid ""
 msgstr "impossible de restaurer à partir de l'archive compressée (non configuré pour un support de la compression)\n"
 
 #: pg_backup_archiver.c:307
-msgid "restoring blob data\n"
-msgstr "restauration des données du blob\n"
+msgid "restoring large object data\n"
+msgstr "restauration des données des gros objets\n"
 
 #: pg_backup_archiver.c:321
 #, c-format
@@ -979,98 +979,98 @@ msgstr "ATTENTION : l'archive est compressée mais cette installation ne supporte
 msgid "WARNING: invalid creation date in header\n"
 msgstr "ATTENTION : date de création invalide dans l'en-tête\n"
 
-#: pg_backup_custom.c:97
+#: pg_backup_custom.c:95
 msgid "custom archiver"
 msgstr "programme d'archive personnalisé"
 
-#: pg_backup_custom.c:180 pg_backup_custom.c:191
+#: pg_backup_custom.c:178 pg_backup_custom.c:189
 #, c-format
 msgid "could not open archive file \"%s\": %s\n"
 msgstr "impossible d'ouvrir le fichier d'archive «%s»: %s\n"
 
-#: pg_backup_custom.c:387 pg_backup_null.c:148
+#: pg_backup_custom.c:385 pg_backup_null.c:148
 msgid "invalid OID for large object\n"
 msgstr "OID invalide pour le gros objet\n"
 
-#: pg_backup_custom.c:443
+#: pg_backup_custom.c:441
 msgid ""
 "Dumping a specific TOC data block out of order is not supported without ID "
 "on this input stream (fseek required)\n"
 msgstr "Sauvegarder un bloc de données spécifique du TOC sans ordre n'est pas supporté sans identifiant dans ce flux en entrée (fseek requis)\n"
 
-#: pg_backup_custom.c:458
+#: pg_backup_custom.c:456
 #, c-format
 msgid "unrecognized data block type (%d) while searching archive\n"
 msgstr "type du bloc de données non reconnu (%d) lors de la recherche dans l'archive\n"
 
-#: pg_backup_custom.c:469
+#: pg_backup_custom.c:467
 #, c-format
 msgid "error during file seek: %s\n"
 msgstr "erreur lors du parcours du fichier : %s\n"
 
-#: pg_backup_custom.c:476
+#: pg_backup_custom.c:474
 #, c-format
 msgid "found unexpected block ID (%d) when reading data -- expected %d\n"
 msgstr "ID de bloc inattendu (%d) lors de la lecture des données -- attendait %d\n"
 
-#: pg_backup_custom.c:490
+#: pg_backup_custom.c:488
 #, c-format
 msgid "unrecognized data block type %d while restoring archive\n"
 msgstr "type de bloc de données non reconnu %d lors de la restauration de l'archive\n"
 
-#: pg_backup_custom.c:524 pg_backup_custom.c:885
+#: pg_backup_custom.c:522 pg_backup_custom.c:883
 #, c-format
 msgid "could not initialize compression library: %s\n"
 msgstr "impossible d'initialiser la bibliothèque de compression : %s\n"
 
-#: pg_backup_custom.c:546 pg_backup_custom.c:669
+#: pg_backup_custom.c:544 pg_backup_custom.c:667
 #, c-format
 msgid "could not read data block -- expected %lu, got %lu\n"
 msgstr "impossible de lire le bloc de données -- attendu %lu, obtenu %lu\n"
 
-#: pg_backup_custom.c:564 pg_backup_custom.c:594
+#: pg_backup_custom.c:562 pg_backup_custom.c:592
 #, c-format
 msgid "could not uncompress data: %s\n"
 msgstr "impossible de décompresser les données : %s\n"
 
-#: pg_backup_custom.c:600
+#: pg_backup_custom.c:598
 #, c-format
 msgid "could not close compression library: %s\n"
 msgstr "impossible de fermer la bibliothèque de compression : %s\n"
 
-#: pg_backup_custom.c:697
+#: pg_backup_custom.c:695
 #, c-format
 msgid "could not write byte: %s\n"
 msgstr "impossible d'écrire l'octet : %s\n"
 
-#: pg_backup_custom.c:741 pg_backup_files.c:414
+#: pg_backup_custom.c:739 pg_backup_files.c:414
 #, c-format
 msgid "write error in _WriteBuf (%lu != %lu)\n"
 msgstr "erreur d'écriture dans _WriteBuf (%lu != %lu)\n"
 
-#: pg_backup_custom.c:812
+#: pg_backup_custom.c:810
 #, c-format
 msgid "could not close archive file: %s\n"
 msgstr "impossible de fermer le fichier d'archive : %s\n"
 
-#: pg_backup_custom.c:835
+#: pg_backup_custom.c:833
 msgid "WARNING: ftell mismatch with expected position -- ftell used\n"
 msgstr "ATTENTION : ftell ne correspond pas à la position attendue -- ftell utilisé\n"
 
-#: pg_backup_custom.c:917
+#: pg_backup_custom.c:915
 #, c-format
 msgid "could not compress data: %s\n"
 msgstr "impossible de compresser les données : %s\n"
 
-#: pg_backup_custom.c:937
+#: pg_backup_custom.c:935
 msgid "could not write compressed chunk\n"
 msgstr "impossible d'écrire le paquet compressé\n"
 
-#: pg_backup_custom.c:951
+#: pg_backup_custom.c:949
 msgid "could not write uncompressed chunk\n"
 msgstr "impossible d'écrire le paquet décompressé\n"
 
-#: pg_backup_custom.c:997
+#: pg_backup_custom.c:995
 #, c-format
 msgid "could not close compression stream: %s\n"
 msgstr "impossible de fermer le flux de compression : %s\n"
@@ -1382,8 +1382,8 @@ msgstr "%s : impossible de spécifier à la fois -d et -f en sortie\n"
 
 #: pg_restore.c:322
 #, c-format
-msgid "unrecognized archive format '%s'; please specify 't' or 'c'\n"
-msgstr "format d'archive «%s» non reconnu ; merci de spécifier «t» ou «c»\n"
+msgid "unrecognized archive format \"%s\"; please specify \"c\" or \"t\"\n"
+msgstr "format d'archive «%s» non reconnu ; merci de spécifier «c» ou «t»\n"
 
 #: pg_restore.c:349
 #, c-format

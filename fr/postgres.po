@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postgres-fr\n"
-"POT-Creation-Date: 2005-09-26 13:00-0300\n"
-"PO-Revision-Date: 2005-09-26 20:21+0200\n"
+"POT-Creation-Date: 2005-09-29 01:02-0300\n"
+"PO-Revision-Date: 2005-09-29 07:54+0200\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -3967,12 +3967,12 @@ msgstr "Ne s'occupe pas de «%s» --- seul le propriétaire de la table ou de la ba
 msgid "skipping \"%s\" --- cannot vacuum indexes, views, or special system tables"
 msgstr "Ne s'occupe pas de «%s» --- n'a pas pulancer un VACUUM sur les index, vues ou tables système"
 
-#: commands/vacuum.c:1242 commands/vacuumlazy.c:226
+#: commands/vacuum.c:1242 commands/vacuumlazy.c:218
 #, c-format
 msgid "vacuuming \"%s.%s\""
 msgstr "Lancement du VACUUM sur \"%s.%s\""
 
-#: commands/vacuum.c:1294 commands/vacuumlazy.c:320
+#: commands/vacuum.c:1294 commands/vacuumlazy.c:312
 #, c-format
 msgid "relation \"%s\" page %u is uninitialized --- fixing"
 msgstr "Pour la relation «%s», la page \"%u\"  n'est pas initialisé --- correction en cours"
@@ -3991,7 +3991,7 @@ msgid ""
 "relation"
 msgstr "Pour la relation «%s», TID %u/%u : DeleteTransactionInProgress %u --- n'a pas pu diminuer la relation"
 
-#: commands/vacuum.c:1586 commands/vacuumlazy.c:483
+#: commands/vacuum.c:1586 commands/vacuumlazy.c:475
 #, c-format
 msgid "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
 msgstr "«%s»: %.0f versions de ligne supprimables, %.0f non supprimables parmi %u pages"
@@ -4021,25 +4021,25 @@ msgstr ""
 msgid "\"%s\": moved %u row versions, truncated %u to %u pages"
 msgstr "«%s»: moved %u row versions, truncated %u to %u pages"
 
-#: commands/user.c:877 commands/vacuum.c:2365 commands/vacuumlazy.c:544
-#: commands/vacuumlazy.c:839 nodes/print.c:86 storage/lmgr/deadlock.c:945
+#: commands/user.c:877 commands/vacuum.c:2365 commands/vacuumlazy.c:536
+#: commands/vacuumlazy.c:831 nodes/print.c:86 storage/lmgr/deadlock.c:945
 #: tcop/postgres.c:3518
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: commands/vacuum.c:2891 commands/vacuumlazy.c:836
+#: commands/vacuum.c:2891 commands/vacuumlazy.c:828
 #, c-format
 msgid "\"%s\": truncated %u to %u pages"
 msgstr "«%s»: %u pages tronqués à %u"
 
-#: commands/vacuum.c:2980 commands/vacuum.c:3047 commands/vacuumlazy.c:658
-#: commands/vacuumlazy.c:734
+#: commands/vacuum.c:2980 commands/vacuum.c:3047 commands/vacuumlazy.c:650
+#: commands/vacuumlazy.c:726
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "L'index «%s» contient maintenant %.0f versions de ligne dans %u pages"
 
-#: commands/vacuum.c:2984 commands/vacuumlazy.c:662
+#: commands/vacuum.c:2984 commands/vacuumlazy.c:654
 #, c-format
 msgid ""
 "%u index pages have been deleted, %u are currently reusable.\n"
@@ -4057,7 +4057,7 @@ msgstr "L'index «%s» contient %.0f versions de ligne, mais la table contient %.0
 msgid "Rebuild the index with REINDEX."
 msgstr "Reconstruction de l'index avec REINDEX."
 
-#: commands/vacuum.c:3051 commands/vacuumlazy.c:738
+#: commands/vacuum.c:3051 commands/vacuumlazy.c:730
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -4171,7 +4171,7 @@ msgstr "Le rôle «%s» est déjà un membre du rôle «%s»"
 msgid "role \"%s\" is not a member of role \"%s\""
 msgstr "le rôle «%s» n'est pas un membre du rôle «%s»"
 
-#: commands/vacuumlazy.c:486
+#: commands/vacuumlazy.c:478
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -4184,7 +4184,7 @@ msgstr ""
 "%u pages sont entièrement vide.\n"
 "%s"
 
-#: commands/vacuumlazy.c:541
+#: commands/vacuumlazy.c:533
 #, c-format
 msgid "\"%s\": removed %d row versions in %d pages"
 msgstr "«%s»: %d versions versions de ligne supprimée parmi %d pages"
@@ -5129,22 +5129,22 @@ msgstr "Aucune valeur trouvée pour le paramètre %d"
 msgid "SELECT FOR UPDATE/SHARE is not supported for inheritance queries"
 msgstr "SELECT FOR UPDATE/SHARE n'est pas supporté pour les requêtes d'héritage"
 
-#: optimizer/plan/initsplan.c:282 optimizer/prep/prepjointree.c:400
+#: optimizer/plan/initsplan.c:310 optimizer/prep/prepjointree.c:400
 msgid "UNION JOIN is not implemented"
 msgstr "UNION JOIN n'est pas implémenté"
 
-#: optimizer/plan/initsplan.c:339
+#: optimizer/plan/initsplan.c:371
 msgid ""
 "SELECT FOR UPDATE/SHARE cannot be applied to the nullable side of an outer "
 "join"
 msgstr "SELECT FOR UPDATE/SHARE ne peut être appliqué sur le côté possiblement NULL d'une jointure externe"
 
-#: optimizer/plan/initsplan.c:777
+#: optimizer/plan/initsplan.c:827
 #, c-format
 msgid "could not identify an equality operator for types %s and %s"
 msgstr "n'a pas pu identifier l'opérateur d'égalité pour les types %s et %s"
 
-#: optimizer/plan/initsplan.c:790
+#: optimizer/plan/initsplan.c:840
 #, c-format
 msgid "equality operator for types %s and %s should be merge-joinable, but isn't"
 msgstr "L'opérateur d'égalité pour les types %s et %s devraient être compris dans un MERGE JOIN mais ce n'est pas le cas"
@@ -6266,8 +6266,8 @@ msgstr "n'a pas pu créer le segment de mémoire partagée : %m"
 
 #: port/pg_shmem.c:102 port/sysv_shmem.c:102
 #, c-format
-msgid "Failed system call was shmget(key=%lu, size=%u, 0%o)."
-msgstr "L'appel système ayant échoué était shmget(clé=%lu, taille=%u, 0%o)."
+msgid "Failed system call was shmget(key=%lu, size=%lu, 0%o)."
+msgstr "L'appel système ayant échoué était shmget(clé=%lu, taille=%lu, 0%o)."
 
 #: port/pg_shmem.c:106 port/sysv_shmem.c:106
 #, c-format
@@ -6275,7 +6275,7 @@ msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded your kernel's SHMMAX parameter.  You can either reduce the "
 "request size or reconfigure the kernel with larger SHMMAX.  To reduce the "
-"request size (currently %u bytes), reduce PostgreSQL's shared_buffers "
+"request size (currently %lu bytes), reduce PostgreSQL's shared_buffers "
 "parameter (currently %d) and/or its max_connections parameter (currently %"
 "d).\n"
 "If the request size is already small, it's possible that it is less than "
@@ -6284,8 +6284,8 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Cette erreur signifie habituellement que la demande de PostgreSQL pour un segment de mémoire partagée a dépassé le paramètre PostgreSQL de votre noyau. Vous pouvez soit réduire la taille de la requête soit reconfigurer le noyau avec un SHMMAX plus important. Pour réduire la taille de la requête (actuellement %u octets), réduisez le paramètre de shared_buffers de PostgreSQL (actuellement %d) et/ou le paramètre max_connections (actuellement %d).\n"
-"Si la taille de la requête est déjà petite, il est possible qu'il est moindre que le paramètre SHMMIN de votre noyau, dans ce cas, augmentez la taille de la requête ou reconfigurez SHMMIN.\n"
+"Cette erreur signifie habituellement que la demande de PostgreSQL pour un segment de mémoire partagée a dépassé le paramètre SHMMAX de votre noyau. Vous pouvez soit réduire la taille de la requête soit reconfigurer le noyau avec un SHMMAX plus important. Pour réduire la taille de la requête (actuellement %lu octets), réduisez le paramètre de shared_buffers de PostgreSQL (actuellement %d) et/ou le paramètre max_connections (actuellement %d).\n"
+"Si la taille de la requête est déjà petite, il est possible qu'elle soit moindre que le paramètre SHMMIN de votre noyau, auquel cas, augmentez la taille de la requête ou reconfigurez SHMMIN.\n"
 "La documentation de PostgreSQL contient plus d'informations sur la configuration de la mémoire partagée."
 
 #: port/pg_shmem.c:119 port/sysv_shmem.c:119
@@ -6293,12 +6293,12 @@ msgstr ""
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded available memory or swap space. To reduce the request size "
-"(currently %u bytes), reduce PostgreSQL's shared_buffers parameter "
+"(currently %lu bytes), reduce PostgreSQL's shared_buffers parameter "
 "(currently %d) and/or its max_connections parameter (currently %d).\n"
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Cette erreur signifie habituellement que la demande PostgreSQL pour un segment de mémoire partagée dépasse la mémoire disponible ou l'espace swap. Pour réduire la taille de la requête (actuellement %u octets), réduisez le paramètre shared_buffers de PostgreSQL (actuellement %d) et/ou le paramètre max_connections (actuellement %d).\n"
+"Cette erreur signifie habituellement que la demande de PostgreSQL pour un segment de mémoire partagée dépasse la mémoire disponible ou l'espace swap. Pour réduire la taille de la requête (actuellement %lu octets), réduisez le paramètre shared_buffers de PostgreSQL (actuellement %d) et/ou le paramètre max_connections (actuellement %d).\n"
 "La documentation de PostgreSQL contient plus d'informations sur la configuration de la mémoire partagée."
 
 #: port/pg_shmem.c:128 port/sysv_shmem.c:128
@@ -6309,13 +6309,13 @@ msgid ""
 "need to raise the SHMMNI parameter in your kernel, or because the system's "
 "overall limit for shared memory has been reached.  If you cannot increase "
 "the shared memory limit, reduce PostgreSQL's shared memory request "
-"(currently %u bytes), by reducing its shared_buffers parameter (currently %"
+"(currently %lu bytes), by reducing its shared_buffers parameter (currently %"
 "d) and/or its max_connections parameter (currently %d).\n"
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Cette erreur signifie habituellement que la demande de PostgreSQL pour un segment de mémoire partagée a dépassé le paramètre PostgreSQL de votre noyau. Vous pouvez soit réduire la taille de la requête soit reconfigurer le noyau avec un SHMMIN plus important. Pour réduire la taille de la requête (actuellement %u octets), réduisez le paramètre de shared_buffers de PostgreSQL (actuellement %d) et/ou le paramètre max_connections (actuellement %d).\n"
-"Si la taille de la requête est déjà petite, il est possible qu'il est moindre que le paramètre SHMMIN de votre noyau, dans ce cas, augmentez la taille de la requête ou reconfigurez SHMMIN.\n"
+"Cette erreur ne signifie *pas* que vous manquez de place disque. Elle survient si tous les identifiants de mémoire partagé disponibles ont été pris, auquel cas vous devez augmenter le paramètre SHMMIN de votre noyau, ou parce que la limite "
+"maximum de la mémoire partagée de votre système a été atteinte. Si vous ne pouvez pas augmenter la limite de la mémoire partagée, réduisez la demande de mémoire partagée de PostgreSQL (actuellement %lu octets) en réduisant le paramètre shared_buffers (actuellement %d) et.ou le paramètre max_connections (actuellement %d).\n"
 "La documentation de PostgreSQL contient plus d'informations sur la configuration de la mémoire partagée."
 
 #: port/pg_shmem.c:380 port/sysv_shmem.c:380
