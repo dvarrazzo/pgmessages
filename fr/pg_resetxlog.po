@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_resetxlog-fr\n"
-"POT-Creation-Date: 2005-09-21 19:15-0300\n"
-"PO-Revision-Date: 2005-09-22 07:48+0200\n"
+"POT-Creation-Date: 2005-10-01 19:12-0300\n"
+"PO-Revision-Date: 2005-10-02 20:03+0200\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "%s : argument invalide pour l'option -m\n"
 
 #: pg_resetxlog.c:159
 #, c-format
-msgid "%s: multi transaction ID (-m) must not be 0\n"
+msgid "%s: multitransaction ID (-m) must not be 0\n"
 msgstr "%s : l'identifiant de la multi-transaction (-m) ne doit pas être 0\n"
 
 #: pg_resetxlog.c:168
@@ -61,7 +61,7 @@ msgstr "%s : argument invalide pour l'option -O\n"
 
 #: pg_resetxlog.c:174
 #, c-format
-msgid "%s: multi transaction offset (-O) must not be -1\n"
+msgid "%s: multitransaction offset (-O) must not be -1\n"
 msgstr "%s : le décalage de la multi-transaction (-O) ne doit pas être -1\n"
 
 #: pg_resetxlog.c:183 pg_resetxlog.c:190 pg_resetxlog.c:197
@@ -357,26 +357,26 @@ msgid ""
 msgstr "  -l TLI,FILE,SEG force l'emplacement de début minimum du WAL pour le nouveau journal des transactions\n"
 
 #: pg_resetxlog.c:801
+msgid "  -m XID          set next multitransaction ID\n"
+msgstr "  -m XID          initialise le prochain identifiant multi-transaction\n"
+
+#: pg_resetxlog.c:802
 msgid ""
 "  -n              no update, just show extracted control values (for "
 "testing)\n"
 msgstr "  -n              pas de mise à jour, affiche seulement les valeurs de contrôle extraites (pour tests)\n"
 
-#: pg_resetxlog.c:802
+#: pg_resetxlog.c:803
 msgid "  -o OID          set next OID\n"
 msgstr "  -o OID          initialise le prochain OID\n"
 
-#: pg_resetxlog.c:803
-msgid "  -x XID          set next transaction ID\n"
-msgstr "  -x XID          initialise le prochain identifiant de transaction\n"
-
 #: pg_resetxlog.c:804
-msgid "  -m multiXID     set next multi transaction ID\n"
-msgstr "  -m multiXID     initialise le prochain identifiant de multi-transaction\n"
+msgid "  -O OFFSET       set next multitransaction offset\n"
+msgstr "  -O DECALAGE     initialise le prochain décalage multi-transaction\n"
 
 #: pg_resetxlog.c:805
-msgid "  -O multiOffset  set next multi transaction offset\n"
-msgstr "  -O multiDecalage initialise le prochain décalage multi-transaction\n"
+msgid "  -x XID          set next transaction ID\n"
+msgstr "  -x XID          initialise le prochain identifiant de transaction\n"
 
 #: pg_resetxlog.c:806
 msgid "  --help          show this help, then exit\n"

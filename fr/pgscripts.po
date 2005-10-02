@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pgscripts-fr\n"
-"POT-Creation-Date: 2005-09-21 19:19-0300\n"
-"PO-Revision-Date: 2005-09-22 08:20+0200\n"
+"POT-Creation-Date: 2005-10-01 19:15-0300\n"
+"PO-Revision-Date: 2005-10-02 20:19+0200\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -213,7 +213,7 @@ msgid "  -d, --dbname=DBNAME       database to install language in\n"
 msgstr "  -d, --dbname=NOMBASE      database où installer le langage\n"
 
 #: clusterdb.c:240 createlang.c:208 createuser.c:322 dropdb.c:151
-#: droplang.c:325 dropuser.c:150
+#: droplang.c:325 dropuser.c:150 reindexdb.c:340
 msgid "  -e, --echo                show the commands being sent to the server\n"
 msgstr "  -e, --echo                affiche les commandes envoyées au serveur\n"
 
@@ -222,30 +222,32 @@ msgid "  -l, --list                show a list of currently installed languages\
 msgstr "  -l, --list                affiche une liste des langages déjà installés\n"
 
 #: clusterdb.c:245 createlang.c:210 createuser.c:327 dropdb.c:154
-#: droplang.c:327 dropuser.c:153 vacuumdb.c:274
+#: droplang.c:327 dropuser.c:153 reindexdb.c:345 vacuumdb.c:274
 msgid "  -h, --host=HOSTNAME       database server host or socket directory\n"
 msgstr "  -h, --host=HOTE           hôte du serveur de bases de données ou répertoire des sockets\n"
 
 #: clusterdb.c:246 createlang.c:211 createuser.c:328 dropdb.c:155
-#: droplang.c:328 dropuser.c:154 vacuumdb.c:275
+#: droplang.c:328 dropuser.c:154 reindexdb.c:346 vacuumdb.c:275
 msgid "  -p, --port=PORT           database server port\n"
 msgstr "  -p, --port=PORT           port du serveur de bases de données\n"
 
-#: clusterdb.c:247 createlang.c:212 dropdb.c:156 droplang.c:329 vacuumdb.c:276
+#: clusterdb.c:247 createlang.c:212 dropdb.c:156 droplang.c:329
+#: reindexdb.c:347 vacuumdb.c:276
 msgid "  -U, --username=USERNAME   user name to connect as\n"
 msgstr "  -U, --username=NOMUTILISATEUR nom d'utilisateur pour la connexion\n"
 
-#: clusterdb.c:248 createlang.c:213 dropdb.c:157 droplang.c:330 vacuumdb.c:277
+#: clusterdb.c:248 createlang.c:213 dropdb.c:157 droplang.c:330
+#: reindexdb.c:348 vacuumdb.c:277
 msgid "  -W, --password            prompt for password\n"
 msgstr "  -W, --password            exige un mot de passe\n"
 
 #: clusterdb.c:242 createlang.c:214 createuser.c:324 dropdb.c:158
-#: droplang.c:331 dropuser.c:157
+#: droplang.c:331 dropuser.c:157 reindexdb.c:342
 msgid "  --help                    show this help, then exit\n"
 msgstr "  --help                    affiche cette aide puis quitte\n"
 
 #: clusterdb.c:243 createlang.c:215 createuser.c:325 dropdb.c:159
-#: droplang.c:332 dropuser.c:158
+#: droplang.c:332 dropuser.c:158 reindexdb.c:343
 msgid "  --version                 output version information, then exit\n"
 msgstr ""
 "  --version                 affiche les informations de version, puis "
@@ -295,8 +297,8 @@ msgstr ""
 
 #: createuser.c:305 dropuser.c:148
 #, c-format
-msgid "  %s [OPTION]... [USERNAME]\n"
-msgstr "  %s [OPTION]... [NOMUTILISATEUR]\n"
+msgid "  %s [OPTION]... [ROLENAME]\n"
+msgstr "  %s [OPTION]... [NOMROLE]\n"
 
 #: createuser.c:307
 msgid "  -s, --superuser           role will be superuser\n"
@@ -331,19 +333,19 @@ msgid "  -L, --no-login            role cannot login\n"
 msgstr "  -L, --no-login            le rôle ne peut pas se connecter\n"
 
 #: createuser.c:315
-msgid "  -i, --inherit             role inherits permissions of roles\n"
-msgstr "  -i, --inherit             le rôle hérite des droits des rôles\n"
-
-#: createuser.c:316
-msgid "                            it is a member of (default)\n"
-msgstr "                            il est un membre de (par défaut)\n"
+msgid ""
+"  -i, --inherit             role inherits privileges of roles it is a\n"
+"                            member of (default)\n"
+msgstr ""
+"  -i, --inherit             le rôle hérite des droits des rôles dont il est membre\n"
+"                            (valeur par défaut)\n"
 
 #: createuser.c:317
-msgid "  -I, --no-inherit          role does not inherit permissions\n"
+msgid "  -I, --no-inherit          role does not inherit privileges\n"
 msgstr "  -I, --no-inherit          le rôle n'hérite pas des droits\n"
 
 #: createuser.c:318
-msgid "  -c, --conn-limit=N        max connections for role (default: no limit)\n"
+msgid "  -c, --connection-limit=N  connection limit for role (default: no limit)\n"
 msgstr "  -c, --conn-limit=N        nombre maximum de connexions pour le rôle (par défaut sans limite)\n"
 
 #: createuser.c:319
@@ -359,6 +361,7 @@ msgid "  -N, --unencrypted         do not encrypt stored password\n"
 msgstr "  -N, --unencrypted         ne crypte pas le mot de passe stocké\n"
 
 #: clusterdb.c:241 createuser.c:323 dropdb.c:153 dropuser.c:152
+#: reindexdb.c:341
 msgid "  -q, --quiet               don't write any messages\n"
 msgstr "  -q, --quiet               n'écrit aucun message\n"
 
@@ -373,11 +376,11 @@ msgstr "  -W, --password            demander un mot de passe pour la connexion\n
 #: createuser.c:331
 msgid ""
 "\n"
-"If one of -s, -S, -d, -D, -r, -R and USERNAME is not specified,\n"
-"you will be prompted interactively.\n"
+"If one of -s, -S, -d, -D, -r, -R and ROLENAME is not specified, you will\n"
+"be prompted interactively.\n"
 msgstr ""
 "\n"
-"Si au moins une des options -s, -S, -d, -D, -r, -R and USERNAME n'est pas spécifié,\n"
+"Si au moins une des options -s, -S, -d, -D, -r, -R et NOMUTILISATEUR n'est pas spécifiée,\n"
 "cela vous sera demandé interactivement.\n"
 
 #: dropdb.c:92
@@ -464,10 +467,10 @@ msgstr "%s: échec lors de la suppression du rôle «%s» : %s"
 #: dropuser.c:146
 #, c-format
 msgid ""
-"%s removes a PostgreSQL user.\n"
+"%s removes a PostgreSQL role.\n"
 "\n"
 msgstr ""
-"%s supprime un utilisateur PostgreSQL.\n"
+"%s supprime un rôle PostgreSQL.\n"
 "\n"
 
 #: dropuser.c:155
@@ -688,56 +691,24 @@ msgstr ""
 "\n"
 
 #: reindexdb.c:335
-msgid "  -a, --all                reindex all databases\n"
+msgid "  -a, --all                 reindex all databases\n"
 msgstr "  -a, --all                 ré-indexe toutes les bases de données\n"
 
 #: reindexdb.c:336
-msgid "  -s, --system             reindex system catalogs\n"
+msgid "  -s, --system              reindex system catalogs\n"
 msgstr "  -s, --system             ré-indexe les catalogues système\n"
 
 #: reindexdb.c:337
-msgid "  -d, --dbname=DBNAME      database to reindex\n"
+msgid "  -d, --dbname=DBNAME       database to reindex\n"
 msgstr "  -d, --dbname=NOMBASE       base de données à ré-indexer\n"
 
 #: reindexdb.c:338
-msgid "  -t, --table=TABLE        reindex specific table only\n"
+msgid "  -t, --table=TABLE         reindex specific table only\n"
 msgstr "  -t, --table=TABLE         ré-indexe cette seule table\n"
 
 #: reindexdb.c:339
-msgid "  -i, --index=INDEX        recreate specific index only\n"
+msgid "  -i, --index=INDEX         recreate specific index only\n"
 msgstr "  -i, --index=INDEX        recrée cet index spécifique seulement\n"
-
-#: reindexdb.c:340
-msgid "  -e, --echo               show the commands sent to the server\n"
-msgstr "  -e, --echo                affiche les commandes envoyées au serveur\n"
-
-#: reindexdb.c:341
-msgid "  -q, --quiet              don't write any output\n"
-msgstr "  -q, --quiet               n'écrit aucun message\n"
-
-#: reindexdb.c:342
-msgid "  --help                   show this help, then exit\n"
-msgstr "  --help                    affiche cette aide puis quitte\n"
-
-#: reindexdb.c:343
-msgid "  --version                output version information, then exit\n"
-msgstr "  --version                 affiche les informations de version, puis quitte\n"
-
-#: reindexdb.c:345
-msgid "  -h, --host=HOSTNAME      database server host or socket direcotry\n"
-msgstr "  -h, --host=HOTE           hôte du serveur de bases de données ou répertoire des sockets\n"
-
-#: reindexdb.c:346
-msgid "  -p, --port=PORT          database server port\n"
-msgstr "  -p, --port=PORT           port du serveur de bases de données\n"
-
-#: reindexdb.c:347
-msgid "  -U, --username=NAME      user name to connect as\n"
-msgstr "  -U, --username=NOMUTILISATEUR nom d'utilisateur pour la connexion\n"
-
-#: reindexdb.c:348
-msgid "  -W, --password           prompt for password\n"
-msgstr "  -W, --password            exige un mot de passe\n"
 
 #: reindexdb.c:349
 msgid ""
