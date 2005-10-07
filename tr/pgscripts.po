@@ -1,4 +1,3 @@
-# translation of pgscripts-tr.po to 
 # translation of pgscripts-tr.po to Turkish
 # Devrim GUNDUZ <devrim@PostgreSQL.org>, 2004, 2005.
 # Nicolai Tufar <ntufar@gmail.org>, 2005.
@@ -7,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pgscripts-tr\n"
 "POT-Creation-Date: 2004-12-14 19:09+0000\n"
-"PO-Revision-Date: 2005-09-15 15:35+0200\n"
+"PO-Revision-Date: 2005-10-07 10:21+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
-"Language-Team:  Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
+"Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -262,6 +261,7 @@ msgstr "  -d, --dbname=VERİTABANI_ADI       dilin kurulacağı veritabanının 
 #: dropdb.c:151
 #: droplang.c:325
 #: dropuser.c:150
+#: reindexdb.c:340
 msgid "  -e, --echo                show the commands being sent to the server\n"
 msgstr "  -e, --echo                sunucuya gönderilen komutları göster\n"
 
@@ -276,6 +276,7 @@ msgstr "  -l, --list                Şu anda kurulu olan dilleri göster\n"
 #: dropdb.c:154
 #: droplang.c:327
 #: dropuser.c:153
+#: reindexdb.c:345
 #: vacuumdb.c:274
 msgid "  -h, --host=HOSTNAME       database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME       veritabanı sunucusu adresi ya da soket dizini\n"
@@ -286,6 +287,7 @@ msgstr "  -h, --host=HOSTNAME       veritabanı sunucusu adresi ya da soket dizi
 #: dropdb.c:155
 #: droplang.c:328
 #: dropuser.c:154
+#: reindexdb.c:346
 #: vacuumdb.c:275
 msgid "  -p, --port=PORT           database server port\n"
 msgstr "  -p, --port=PORT           veritabanı sunucusunun portu\n"
@@ -294,6 +296,7 @@ msgstr "  -p, --port=PORT           veritabanı sunucusunun portu\n"
 #: createlang.c:212
 #: dropdb.c:156
 #: droplang.c:329
+#: reindexdb.c:347
 #: vacuumdb.c:276
 msgid "  -U, --username=USERNAME   user name to connect as\n"
 msgstr "  -U, --username=KULLANICI_ADI   bağlanılacak kullanıcı adı\n"
@@ -302,6 +305,7 @@ msgstr "  -U, --username=KULLANICI_ADI   bağlanılacak kullanıcı adı\n"
 #: createlang.c:213
 #: dropdb.c:157
 #: droplang.c:330
+#: reindexdb.c:348
 #: vacuumdb.c:277
 msgid "  -W, --password            prompt for password\n"
 msgstr "  -W, --password            şifre sorulmasını sağla\n"
@@ -312,6 +316,7 @@ msgstr "  -W, --password            şifre sorulmasını sağla\n"
 #: dropdb.c:158
 #: droplang.c:331
 #: dropuser.c:157
+#: reindexdb.c:342
 msgid "  --help                    show this help, then exit\n"
 msgstr "  --help                    bu yardımı göster ve çık\n"
 
@@ -321,6 +326,7 @@ msgstr "  --help                    bu yardımı göster ve çık\n"
 #: dropdb.c:159
 #: droplang.c:332
 #: dropuser.c:158
+#: reindexdb.c:343
 msgid "  --version                 output version information, then exit\n"
 msgstr "  --version                 sürüm bilgisini göster ve çık\n"
 
@@ -369,8 +375,8 @@ msgstr ""
 #: createuser.c:305
 #: dropuser.c:148
 #, c-format
-msgid "  %s [OPTION]... [USERNAME]\n"
-msgstr "  %s [SEÇENEKLER]... [KULLANICI_ADI]\n"
+msgid "  %s [OPTION]... [ROLENAME]\n"
+msgstr "  %s [SEÇENEKLER]... [ROL_ADI]\n"
 
 #: createuser.c:307
 msgid "  -s, --superuser           role will be superuser\n"
@@ -405,20 +411,18 @@ msgid "  -L, --no-login            role cannot login\n"
 msgstr "  -L, --no-login            role giriş yapamaz\n"
 
 #: createuser.c:315
-msgid "  -i, --inherit             role inherits permissions of roles\n"
-msgstr "  -i, --inherit             rol, rollerin yetikelri inherit eder\n"
-
-#: createuser.c:316
-msgid "                            it is a member of (default)\n"
-msgstr "                            (default) rolün üyesidir\n"
+msgid ""
+"  -i, --inherit             role inherits privileges of roles it is a\n"
+"                            member of (default)\n"
+msgstr "  -i, --inherit             rol, üye olduğu rollerin (default) yetikelri inherit eder\n"
 
 #: createuser.c:317
-msgid "  -I, --no-inherit          role does not inherit permissions\n"
+msgid "  -I, --no-inherit          role does not inherit privileges\n"
 msgstr "  -I, --no-inherit          rol, hiçbir yetki inherit etmiyor\n"
 
 #: createuser.c:318
-msgid "  -c, --conn-limit=N        max connections for role (default: no limit)\n"
-msgstr "  -c, --conn-limit=N        rol için en yüksek bağlantı sayısın (varsayılan: sınırsız)\n"
+msgid "  -c, --connection-limit=N  connection limit for role (default: no limit)\n"
+msgstr "  -c, --connection-limit=N  rol için azami bağlantı sayısın (varsayılan: sınırsız)\n"
 
 #: createuser.c:319
 msgid "  -P, --pwprompt            assign a password to new role\n"
@@ -436,6 +440,7 @@ msgstr "  -N, --unencrypted         saklanmış şifreyi kriptolama\n"
 #: createuser.c:323
 #: dropdb.c:153
 #: dropuser.c:152
+#: reindexdb.c:341
 msgid "  -q, --quiet               don't write any messages\n"
 msgstr "  -q, --quiet               hiçbir ileti yazmaz\n"
 
@@ -451,12 +456,12 @@ msgstr "  -W, --password            bağlanmak için şifre sor\n"
 #: createuser.c:331
 msgid ""
 "\n"
-"If one of -s, -S, -d, -D, -r, -R and USERNAME is not specified,\n"
-"you will be prompted interactively.\n"
+"If one of -s, -S, -d, -D, -r, -R and ROLENAME is not specified, you will\n"
+"be prompted interactively.\n"
 msgstr ""
 "\n"
-"Eğer -s, -S, -d, -D, -r, -R gibi seçenekler ve USERNAME belirtilmemişse,\n"
-"irilmelerini çalıştırma zamanında istenecektir.\n"
+"Eğer -s, -S, -d, -D, -r, -R gibi seçenekler ve ROL_ADI belirtilmemişse,\n"
+"girilmesini çalıştırma zamanında istenecektir.\n"
 
 #: dropdb.c:92
 #, c-format
@@ -542,10 +547,10 @@ msgstr "%s: \"%s\" rolün silinmesi başarısız oldu: %s"
 #: dropuser.c:146
 #, c-format
 msgid ""
-"%s removes a PostgreSQL user.\n"
+"%s removes a PostgreSQL role.\n"
 "\n"
 msgstr ""
-"%s bir PostgreSQL kullanıcısını siler.\n"
+"%s bir PostgreSQL rolünü siler.\n"
 "\n"
 
 #: dropuser.c:155
@@ -760,56 +765,24 @@ msgstr ""
 "\n"
 
 #: reindexdb.c:335
-msgid "  -a, --all                reindex all databases\n"
+msgid "  -a, --all                 reindex all databases\n"
 msgstr "  -a, --all                tüm veritabanları yeniden indeksle\n"
 
 #: reindexdb.c:336
-msgid "  -s, --system             reindex system catalogs\n"
+msgid "  -s, --system              reindex system catalogs\n"
 msgstr "  -s, --system             sistem kataloğu yeniden indeksle\n"
 
 #: reindexdb.c:337
-msgid "  -d, --dbname=DBNAME      database to reindex\n"
-msgstr "  -d, --dbname=VERİTABANI_ADI      yeniden cluster edilecek veritabanı adı\n"
+msgid "  -d, --dbname=DBNAME       database to reindex\n"
+msgstr "  -d, --dbname=VERİTABANI_ADI      yeniden indekslenecek veritabanın adı\n"
 
 #: reindexdb.c:338
-msgid "  -t, --table=TABLE        reindex specific table only\n"
+msgid "  -t, --table=TABLE         reindex specific table only\n"
 msgstr "  -t, --table=TABLO_ADI        sadece belirli bir tablonun indexleri yeniden oluştur\n"
 
 #: reindexdb.c:339
-msgid "  -i, --index=INDEX        recreate specific index only\n"
+msgid "  -i, --index=INDEX         recreate specific index only\n"
 msgstr "  -i, --index=INDEX        sadece belirli bir indeksi yeniden oluştur\n"
-
-#: reindexdb.c:340
-msgid "  -e, --echo               show the commands sent to the server\n"
-msgstr "  -e, --echo               sunucuya gönderilen komutları göster\n"
-
-#: reindexdb.c:341
-msgid "  -q, --quiet              don't write any output\n"
-msgstr "  -q, --quiet              hiçbir ileti yazma\n"
-
-#: reindexdb.c:342
-msgid "  --help                   show this help, then exit\n"
-msgstr "  --help                   bu yardımı göster ve çık\n"
-
-#: reindexdb.c:343
-msgid "  --version                output version information, then exit\n"
-msgstr "  --version                sürüm bilgisini göster ve çık\n"
-
-#: reindexdb.c:345
-msgid "  -h, --host=HOSTNAME      database server host or socket direcotry\n"
-msgstr "  -h, --host=HOSTNAME      veritabanı sunucusu adresi ya da soket dizini\n"
-
-#: reindexdb.c:346
-msgid "  -p, --port=PORT          database server port\n"
-msgstr "  -p, --port=PORT          veritabanı sunucusunun portu\n"
-
-#: reindexdb.c:347
-msgid "  -U, --username=NAME      user name to connect as\n"
-msgstr "  -U, --username=KULLANICI_ADI      bağlanılacak kullanıcısının adı\n"
-
-#: reindexdb.c:348
-msgid "  -W, --password           prompt for password\n"
-msgstr "  -W, --password           şifre sor\n"
 
 #: reindexdb.c:349
 msgid ""
