@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postgres-fr\n"
-"POT-Creation-Date: 2005-10-15 18:59-0300\n"
-"PO-Revision-Date: 2005-10-16 18:54+0200\n"
+"POT-Creation-Date: 2005-10-19 00:59-0300\n"
+"PO-Revision-Date: 2005-10-19 09:02+0200\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -64,12 +64,12 @@ msgstr "l'index  %u/%u/%u a besoin d'un VACUUM ou d'un REINDEX pour terminer la 
 msgid "Incomplete insertion detected during crash replay."
 msgstr "Insertion incomplète détectée lors de la ré-exécution des requêtes suite à l'arrêt brutal."
 
-#: access/hash/hashinsert.c:89
+#: access/hash/hashinsert.c:87
 #, c-format
 msgid "index row size %lu exceeds hash maximum %lu"
 msgstr "la taille de la ligne index, %lu, dépasse le hachage maximum %lu"
 
-#: access/hash/hashinsert.c:92 access/rtree/rtree.c:733
+#: access/hash/hashinsert.c:90 access/rtree/rtree.c:733
 msgid "Values larger than a buffer page cannot be indexed."
 msgstr "Les valeurs plus larges qu'une page de tampon ne peuvent pas être indexées."
 
@@ -191,7 +191,7 @@ msgstr "n'a pas pu accéder au statut de la transaction %u"
 
 #: ../port/copydir.c:119 access/transam/slru.c:637 access/transam/xlog.c:1870
 #: access/transam/xlog.c:3074 access/transam/xlog.c:3164
-#: access/transam/xlog.c:3262 libpq/hba.c:946 postmaster/autovacuum.c:452
+#: access/transam/xlog.c:3262 libpq/hba.c:947 postmaster/autovacuum.c:452
 #: utils/error/elog.c:1116 utils/init/miscinit.c:990
 #: utils/init/miscinit.c:1096 utils/init/postinit.c:91
 #, c-format
@@ -1824,77 +1824,77 @@ msgstr "la colonne «%s» a le pseudo type %s"
 msgid "relation \"%s\" already exists"
 msgstr "la relation «%s» existe déjà"
 
-#: catalog/heap.c:1544
+#: catalog/heap.c:1537
 #, c-format
 msgid "only table \"%s\" can be referenced in check constraint"
 msgstr "seule la table «%s» peut être référencée dans la contrainte de vérification"
 
-#: catalog/heap.c:1553 commands/typecmds.c:1830
+#: catalog/heap.c:1546 commands/typecmds.c:1827
 msgid "cannot use subquery in check constraint"
 msgstr "impossible d'utiliser une sous-requête dans la contrainte de vérification"
 
-#: catalog/heap.c:1557
+#: catalog/heap.c:1550
 msgid "cannot use aggregate function in check constraint"
 msgstr "impossible d'utiliser la fonction d'aggrégat dans une contrainte de vérification"
 
-#: catalog/heap.c:1574 commands/tablecmds.c:3778
+#: catalog/heap.c:1567 commands/tablecmds.c:3778
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "la contrainte «%s» de la relation «%s» existe déjà"
 
-#: catalog/heap.c:1583
+#: catalog/heap.c:1576
 #, c-format
 msgid "check constraint \"%s\" already exists"
 msgstr "la contrainte de vérification «%s» existe déjà"
 
-#: catalog/heap.c:1731
+#: catalog/heap.c:1724
 msgid "cannot use column references in default expression"
 msgstr "n'a pas pu utiliser les références de colonnes dans l'expression par défaut"
 
-#: catalog/heap.c:1739
+#: catalog/heap.c:1732
 msgid "default expression must not return a set"
 msgstr "l'expression par défaut ne doit pas renvoyer un ensemble"
 
-#: catalog/heap.c:1747
+#: catalog/heap.c:1740
 msgid "cannot use subquery in default expression"
 msgstr "n'a pas pu utiliser une sous-requête dans l'expression par défaut"
 
-#: catalog/heap.c:1751
+#: catalog/heap.c:1744
 msgid "cannot use aggregate function in default expression"
 msgstr "n'a pas pu utiliser une fonction d'aggrégation dans l'expression par défaut"
 
-#: catalog/heap.c:1769 rewrite/rewriteHandler.c:832
+#: catalog/heap.c:1762 rewrite/rewriteHandler.c:832
 #, c-format
 msgid "column \"%s\" is of type %s but default expression is of type %s"
 msgstr "la colonne «%s» est de type %s alors que l'expression par défaut est de type %s"
 
-#: catalog/heap.c:1774 parser/analyze.c:2694 parser/parse_node.c:246
+#: catalog/heap.c:1767 parser/analyze.c:2694 parser/parse_node.c:246
 #: parser/parse_target.c:361 parser/parse_target.c:563
 #: parser/parse_target.c:572 rewrite/rewriteHandler.c:837
 msgid "You will need to rewrite or cast the expression."
 msgstr "Vous devez réécrire l'expression ou lui appliquer une transformation de type."
 
-#: catalog/heap.c:2062
+#: catalog/heap.c:2055
 msgid "unsupported ON COMMIT and foreign key combination"
 msgstr "combinaison ON COMMIT et clé étrangère non supportée"
 
-#: catalog/heap.c:2063
+#: catalog/heap.c:2056
 #, c-format
 msgid ""
 "Table \"%s\" references \"%s\" via foreign key constraint \"%s\", but they "
 "do not have the same ON COMMIT setting."
 msgstr "La table «%s» référence «%s» via la contrainte de clé étrangère «%s» mais elles n'ont pas la même valeur pour le paramètre ON COMMIT."
 
-#: catalog/heap.c:2070
+#: catalog/heap.c:2063
 msgid "cannot truncate a table referenced in a foreign key constraint"
 msgstr "n'a pas pu tronquer une table référencée dans une constrainte de clé étrangère"
 
-#: catalog/heap.c:2071
+#: catalog/heap.c:2064
 #, c-format
 msgid "Table \"%s\" references \"%s\" via foreign key constraint \"%s\"."
 msgstr "La table «%s» référence «%s» via la contrainte de clé étrangère «%s»."
 
-#: catalog/heap.c:2075
+#: catalog/heap.c:2068
 #, c-format
 msgid "Truncate table \"%s\" at the same time."
 msgstr "Tronquez la table «%s» au même moment."
@@ -1977,7 +1977,7 @@ msgstr "la conversion «%s» existe déjà"
 msgid "default conversion for %s to %s already exists"
 msgstr "la conversion par défaut de %s vers %s existe déjà"
 
-#: catalog/pg_conversion.c:310 commands/comment.c:944
+#: catalog/pg_conversion.c:308 commands/comment.c:944
 #: commands/conversioncmds.c:109 commands/conversioncmds.c:133
 #: commands/conversioncmds.c:192
 #, c-format
@@ -2153,8 +2153,8 @@ msgstr "le type «%s» existe déjà"
 
 #: catalog/pg_type.c:512 commands/functioncmds.c:112 commands/tablecmds.c:4728
 #: commands/typecmds.c:419 commands/typecmds.c:801 commands/typecmds.c:1123
-#: commands/typecmds.c:1246 commands/typecmds.c:1358 commands/typecmds.c:1445
-#: commands/typecmds.c:2033 commands/typecmds.c:2157 parser/parse_func.c:1227
+#: commands/typecmds.c:1246 commands/typecmds.c:1357 commands/typecmds.c:1442
+#: commands/typecmds.c:2030 commands/typecmds.c:2154 parser/parse_func.c:1227
 #: parser/parse_type.c:201 parser/parse_type.c:227 tcop/utility.c:97
 #: utils/adt/regproc.c:999
 #, c-format
@@ -2332,7 +2332,7 @@ msgstr "Il existe de nombreuses règles nommées «%s»"
 msgid "Specify a relation name as well as a rule name."
 msgstr "Spécifiez un nom de relation comme un nom de règle."
 
-#: commands/comment.c:617 rewrite/rewriteDefine.c:574
+#: commands/comment.c:617 rewrite/rewriteDefine.c:572
 #: rewrite/rewriteRemove.c:58
 #, c-format
 msgid "rule \"%s\" for relation \"%s\" does not exist"
@@ -2986,12 +2986,12 @@ msgid "function \"%s\" is already in schema \"%s\""
 msgstr "la fonction «%s» existe déjà dans le schéma «%s»"
 
 #: commands/functioncmds.c:1485 commands/tablecmds.c:6122
-#: commands/typecmds.c:2213
+#: commands/typecmds.c:2210
 msgid "cannot move objects into or out of temporary schemas"
 msgstr "n'a pas pu déplacer les objets dans ou à partir des schémas temporaires"
 
 #: commands/functioncmds.c:1491 commands/tablecmds.c:6128
-#: commands/typecmds.c:2219
+#: commands/typecmds.c:2216
 msgid "cannot move objects into or out of TOAST schema"
 msgstr "n'a pas pu déplacer les objets dans ou à partir des schémas TOAST"
 
@@ -3740,7 +3740,7 @@ msgstr "setval : la valeur %s est en dehors des limites de la séquence «%s» (%s.
 #: storage/file/fd.c:809 storage/ipc/procarray.c:514 utils/adt/cash.c:297
 #: utils/adt/cash.c:312 utils/adt/oracle_compat.c:74
 #: utils/adt/oracle_compat.c:126 utils/adt/oracle_compat.c:174
-#: utils/adt/regexp.c:168 utils/adt/varlena.c:2619 utils/adt/varlena.c:2642
+#: utils/adt/regexp.c:168 utils/adt/varlena.c:2643 utils/adt/varlena.c:2666
 #: utils/fmgr/dfmgr.c:127 utils/hash/dynahash.c:215 utils/hash/dynahash.c:273
 #: utils/hash/dynahash.c:659 utils/init/miscinit.c:233
 #: utils/init/miscinit.c:254 utils/init/miscinit.c:264 utils/misc/guc.c:2173
@@ -3846,7 +3846,7 @@ msgstr "les noms de domaine doivent avoir au plus %d caractères"
 msgid "\"%s\" is not a valid base type for a domain"
 msgstr "«%s» n'est pas un type de base valide pour un domaine"
 
-#: commands/typecmds.c:611 commands/typecmds.c:1462
+#: commands/typecmds.c:611 commands/typecmds.c:1459
 msgid "foreign key constraints not possible for domains"
 msgstr "contraintes de clé étrangère impossible pour les domaines"
 
@@ -3858,19 +3858,19 @@ msgstr "expressions multiples par défaut"
 msgid "conflicting NULL/NOT NULL constraints"
 msgstr "contraintes NULL/NOT NULL en conflit"
 
-#: commands/typecmds.c:689 commands/typecmds.c:1480
+#: commands/typecmds.c:689 commands/typecmds.c:1477
 msgid "unique constraints not possible for domains"
 msgstr "contraintes uniques impossible pour les domaines"
 
-#: commands/typecmds.c:695 commands/typecmds.c:1486
+#: commands/typecmds.c:695 commands/typecmds.c:1483
 msgid "primary key constraints not possible for domains"
 msgstr "contraintes de clé primaire impossible pour les domaines"
 
-#: commands/typecmds.c:704 commands/typecmds.c:1495
+#: commands/typecmds.c:704 commands/typecmds.c:1492
 msgid "specifying constraint deferrability not supported for domains"
 msgstr "spécifier des contraintes deferrantes n'est pas supporté par les domaines"
 
-#: commands/typecmds.c:823 commands/typecmds.c:1738
+#: commands/typecmds.c:823 commands/typecmds.c:1735
 #, c-format
 msgid "\"%s\" is not a domain"
 msgstr "«%s» n'est pas un domaine"
@@ -3899,45 +3899,45 @@ msgstr "le type composite doit avoir au moins un attribut"
 msgid "column \"%s\" of table \"%s\" contains null values"
 msgstr "la colonne «%s» de la table «%s» contient des valeurs NULL"
 
-#: commands/typecmds.c:1566
+#: commands/typecmds.c:1563
 #, c-format
 msgid "column \"%s\" of table \"%s\" contains values that violate the new constraint"
 msgstr "la colonne «%s» de la table «%s» contient des valeurs violant la nouvelle contrainte"
 
-#: commands/typecmds.c:1772
+#: commands/typecmds.c:1769
 #, c-format
 msgid "constraint \"%s\" for domain \"%s\" already exists"
 msgstr "la contrainte «%s» du domaine «%s» existe déjà"
 
-#: commands/typecmds.c:1813 commands/typecmds.c:1822
+#: commands/typecmds.c:1810 commands/typecmds.c:1819
 msgid "cannot use table references in domain check constraint"
 msgstr "n'a pas pu utiliser les références de table dans la contrainte de vérification de domaine"
 
-#: commands/typecmds.c:1834
+#: commands/typecmds.c:1831
 msgid "cannot use aggregate in check constraint"
 msgstr "n'a pas pu utiliser un aggrégat dans la contrainte de vérification"
 
-#: commands/typecmds.c:2052
+#: commands/typecmds.c:2049
 #, c-format
 msgid "\"%s\" is a table's row type"
 msgstr "«%s» est du type ligne de table"
 
-#: commands/typecmds.c:2205
+#: commands/typecmds.c:2202
 #, c-format
 msgid "type %s is already in schema \"%s\""
 msgstr "le type «%s» existe déjà dans le schéma «%s»"
 
-#: commands/typecmds.c:2228
+#: commands/typecmds.c:2225
 #, c-format
 msgid "type \"%s\" already exists in schema \"%s\""
 msgstr "Le type «%s» existe déjà dans le schéma «%s»"
 
-#: commands/typecmds.c:2241
+#: commands/typecmds.c:2238
 #, c-format
 msgid "%s is a table's row type"
 msgstr "«%s» est du type ligne de table"
 
-#: commands/typecmds.c:2243
+#: commands/typecmds.c:2240
 msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Utilisez ALTER TABLE SET SCHEMA à la place."
 
@@ -4656,19 +4656,19 @@ msgstr "A renvoyé le type %s à la position ordinale %d, mais la requête attend %
 msgid "Physical storage mismatch on dropped attribute at ordinal position %d."
 msgstr "Le stockage physique ne correspond pas à l'attribut supprimé à la position ordinale %d."
 
-#: executor/nodeHashjoin.c:677 executor/nodeHashjoin.c:713
+#: executor/nodeHashjoin.c:675 executor/nodeHashjoin.c:711
 #, c-format
 msgid "could not rewind hash-join temporary file: %m"
 msgstr "n'a pas pu revenir au début du fichier temporaire de la jointure hâchée : %m"
 
-#: executor/nodeHashjoin.c:748 executor/nodeHashjoin.c:754
-#: executor/nodeHashjoin.c:760
+#: executor/nodeHashjoin.c:746 executor/nodeHashjoin.c:752
+#: executor/nodeHashjoin.c:758
 #, c-format
 msgid "could not write to hash-join temporary file: %m"
 msgstr "n'a pas pu écrire le fichier temporaire de la jointure hâchée : %m"
 
-#: executor/nodeHashjoin.c:786 executor/nodeHashjoin.c:791
-#: executor/nodeHashjoin.c:801
+#: executor/nodeHashjoin.c:784 executor/nodeHashjoin.c:789
+#: executor/nodeHashjoin.c:799
 #, c-format
 msgid "could not read from hash-join temporary file: %m"
 msgstr "n'a pas pu lire le fichier temporaire contenant la jointure hâchée : %m"
@@ -5041,90 +5041,90 @@ msgstr "n'a pas pu ouvrir le fichier d'authentication secondaire «@%s» comme «%s
 msgid "invalid IP address \"%s\" in file \"%s\" line %d: %s"
 msgstr "adresse IP invalide «%s» dans le fichier «%s», ligne %d : %s"
 
-#: libpq/hba.c:799
+#: libpq/hba.c:800
 #, c-format
 msgid "invalid IP mask \"%s\" in file \"%s\" line %d: %s"
 msgstr "masque IP invalide «%s» dans le fichier «%s», ligne %d : %s"
 
-#: libpq/hba.c:814
+#: libpq/hba.c:815
 #, c-format
 msgid "IP address and mask do not match in file \"%s\" line %d"
 msgstr "L'adresse IP et le masque ne correspondent pas dans le fichier «%s», ligne %d"
 
-#: libpq/hba.c:872
+#: libpq/hba.c:873
 #, c-format
 msgid "invalid entry in file \"%s\" at line %d, token \"%s\""
 msgstr "entrée invalide dans le fichier «%s» à la ligne %d, jeton «%s»"
 
-#: libpq/hba.c:878
+#: libpq/hba.c:879
 #, c-format
 msgid "missing field in file \"%s\" at end of line %d"
 msgstr "champ manquant dans le fichier «%s» à la fin de la ligne %d"
 
-#: guc-file.l:152 libpq/hba.c:987
+#: guc-file.l:152 libpq/hba.c:988
 #, c-format
 msgid "could not open configuration file \"%s\": %m"
 msgstr "n'a pas pu ouvrir le fichier de configuration «%s» : %m"
 
-#: libpq/hba.c:1097
+#: libpq/hba.c:1098
 #, c-format
 msgid "missing entry in file \"%s\" at end of line %d"
 msgstr "entrée manquante dans le fichier «%s» à la fin de la ligne %d"
 
-#: libpq/hba.c:1127
+#: libpq/hba.c:1128
 msgid "cannot use Ident authentication without usermap field"
 msgstr "n'a pas pu utiliser l'authentication Ident sans le champ field"
 
-#: libpq/hba.c:1173
+#: libpq/hba.c:1174
 #, c-format
 msgid "could not open Ident usermap file \"%s\": %m"
 msgstr "n'a pas pu ouvrir Ident pour le fichier usermap «%s» : %m"
 
-#: libpq/hba.c:1347
+#: libpq/hba.c:1348
 #, c-format
 msgid "could not create socket for Ident connection: %m"
 msgstr "n'a pas pu créer le socket pour la connexion Ident : %m"
 
-#: libpq/hba.c:1362
+#: libpq/hba.c:1363
 #, c-format
 msgid "could not bind to local address \"%s\": %m"
 msgstr "n'a pas pu se lier à l'adresse locale «%s» : %m"
 
-#: libpq/hba.c:1374
+#: libpq/hba.c:1375
 #, c-format
 msgid "could not connect to Ident server at address \"%s\", port %s: %m"
 msgstr "n'a pas pu se connecter au serveur Ident à l'adresse «%s», port %s : %m"
 
-#: libpq/hba.c:1394
+#: libpq/hba.c:1395
 #, c-format
 msgid "could not send query to Ident server at address \"%s\", port %s: %m"
 msgstr "n'a pas pu envoyer la requête au serveur Ident à l'adresse «%s», port %s : %m"
 
-#: libpq/hba.c:1409
+#: libpq/hba.c:1410
 #, c-format
 msgid "could not receive response from Ident server at address \"%s\", port %s: %m"
 msgstr "n'a pas pu recevoir la réponse du serveur Ident à l'adresse «%s», port %s : %m"
 
-#: libpq/hba.c:1419
+#: libpq/hba.c:1420
 #, c-format
 msgid "invalidly formatted response from Ident server: \"%s\""
 msgstr "réponse invalide du serveur Ident : «%s»"
 
-#: libpq/hba.c:1454 libpq/hba.c:1484 libpq/hba.c:1551
+#: libpq/hba.c:1455 libpq/hba.c:1485 libpq/hba.c:1552
 #, c-format
 msgid "could not get peer credentials: %m"
 msgstr "n'a pas pu obtenir l'authentification de l'autre : %m"
 
-#: libpq/hba.c:1463 libpq/hba.c:1493 libpq/hba.c:1562
+#: libpq/hba.c:1464 libpq/hba.c:1494 libpq/hba.c:1563
 #, c-format
 msgid "local user with ID %d does not exist"
 msgstr "L'utilisateur local dont l'identifiant est %d n'existe pas"
 
-#: libpq/hba.c:1573
+#: libpq/hba.c:1574
 msgid "Ident authentication is not supported on local connections on this platform"
 msgstr "L'authentication Ident n'est pas supportée sur les connexions locales sur cette plateforme"
 
-#: libpq/hba.c:1616
+#: libpq/hba.c:1617
 #, c-format
 msgid "Ident protocol identifies remote user as \"%s\""
 msgstr "Le protocole Ident identifie l'utilisateur distant comme «%s»"
@@ -6943,11 +6943,6 @@ msgstr "n'a pas pu lancer le nouveau processus fils pour la connexion : %m"
 msgid "could not fork new process for connection: "
 msgstr "n'a pas pu lancer le nouveau processus fils pour la connexion : "
 
-#: postmaster/postmaster.c:2678
-#, c-format
-msgid "getnameinfo_all() failed: %s"
-msgstr "échec de getnameinfo_all() : %s"
-
 #: postmaster/postmaster.c:2687
 #, c-format
 msgid "connection received: host=%s%s%s"
@@ -7270,106 +7265,106 @@ msgstr "n'a pas pu ouvrir le nouveau journal de traces «%s» : %m"
 msgid "disabling automatic rotation (use SIGHUP to reenable)"
 msgstr "désactivation de la rotation automatique (utilisez SIGHUP pour la réactiver)"
 
-#: rewrite/rewriteDefine.c:104 rewrite/rewriteDefine.c:581
+#: rewrite/rewriteDefine.c:104 rewrite/rewriteDefine.c:579
 #, c-format
 msgid "rule \"%s\" for relation \"%s\" already exists"
 msgstr "La règle «%s» pour la relation «%s» existe déjà"
 
-#: rewrite/rewriteDefine.c:232
+#: rewrite/rewriteDefine.c:231
 msgid "rule actions on OLD are not implemented"
 msgstr "Les actions de la règle sur OLD ne sont pas implémentées"
 
-#: rewrite/rewriteDefine.c:233
+#: rewrite/rewriteDefine.c:232
 msgid "Use views or triggers instead."
 msgstr "Utilisez à la place des vues ou des déclencheurs."
 
-#: rewrite/rewriteDefine.c:237
+#: rewrite/rewriteDefine.c:236
 msgid "rule actions on NEW are not implemented"
 msgstr "Les actions de la règle sur NEW ne sont pas implémentées"
 
-#: rewrite/rewriteDefine.c:238
+#: rewrite/rewriteDefine.c:237
 msgid "Use triggers instead."
 msgstr "Utilisez des déclencheurs à la place."
 
-#: rewrite/rewriteDefine.c:255
+#: rewrite/rewriteDefine.c:254
 msgid "INSTEAD NOTHING rules on SELECT are not implemented"
 msgstr "Les règles INSTEAD NOTHING sur SELECT ne sont pas implémentées"
 
-#: rewrite/rewriteDefine.c:256
+#: rewrite/rewriteDefine.c:255
 msgid "Use views instead."
 msgstr "Utilisez les vues à la place."
 
-#: rewrite/rewriteDefine.c:264
+#: rewrite/rewriteDefine.c:263
 msgid "multiple actions for rules on SELECT are not implemented"
 msgstr "Les actions multiples pour les règles sur SELECT ne sont pas implémentées"
 
-#: rewrite/rewriteDefine.c:273
+#: rewrite/rewriteDefine.c:272
 msgid "rules on SELECT must have action INSTEAD SELECT"
 msgstr "Les règles sur SELECT doivent avoir une action INSTEAD SELECT"
 
-#: rewrite/rewriteDefine.c:281
+#: rewrite/rewriteDefine.c:280
 msgid "event qualifications are not implemented for rules on SELECT"
 msgstr "Les qualifications d'événements ne sont pas implémentées pour les règles sur SELECT"
 
-#: rewrite/rewriteDefine.c:301
+#: rewrite/rewriteDefine.c:300
 msgid "SELECT rule's target list has too many entries"
 msgstr "La liste cible de la règle SELECT a de trop nombreuses entrées"
 
-#: rewrite/rewriteDefine.c:316
+#: rewrite/rewriteDefine.c:315
 msgid "cannot convert relation containing dropped columns to view"
 msgstr "n'a pas pu convertir la relation contenant les colonnes supprimées de la vue"
 
-#: rewrite/rewriteDefine.c:321
+#: rewrite/rewriteDefine.c:320
 #, c-format
 msgid "SELECT rule's target entry %d has different column name from \"%s\""
 msgstr "L'entrée cible de la règle SELECT %d a des noms de colonnes différentes à partir de «%s»"
 
-#: rewrite/rewriteDefine.c:326
+#: rewrite/rewriteDefine.c:325
 #, c-format
 msgid "SELECT rule's target entry %d has different type from column \"%s\""
 msgstr "L'entrée cible de la règle SELECT %d a plusieurs types pour la colonne «%s»"
 
-#: rewrite/rewriteDefine.c:339
+#: rewrite/rewriteDefine.c:338
 #, c-format
 msgid "SELECT rule's target entry %d has different size from column \"%s\""
 msgstr "L'entrée cible de la règle SELECT %d a plusieurs tailles pour la colonne «%s»"
 
-#: rewrite/rewriteDefine.c:345
+#: rewrite/rewriteDefine.c:344
 msgid "SELECT rule's target list has too few entries"
 msgstr "L'entrée cible de la règle SELECT a trop d'entrées"
 
-#: rewrite/rewriteDefine.c:360
+#: rewrite/rewriteDefine.c:359
 #, c-format
 msgid "\"%s\" is already a view"
 msgstr "«%s» est déjà une vue"
 
-#: rewrite/rewriteDefine.c:384
+#: rewrite/rewriteDefine.c:383
 #, c-format
 msgid "view rule for \"%s\" must be named \"%s\""
 msgstr "La règle de la vue pour «%s» doit être nommée «%s»"
 
-#: rewrite/rewriteDefine.c:404
+#: rewrite/rewriteDefine.c:403
 #, c-format
 msgid "could not convert table \"%s\" to a view because it is not empty"
 msgstr "n'a pas pu convertir la table «%s» en une vue car elle n'est pas vide"
 
-#: rewrite/rewriteDefine.c:411
+#: rewrite/rewriteDefine.c:410
 #, c-format
 msgid "could not convert table \"%s\" to a view because it has triggers"
 msgstr "n'a pas pu convertir la table «%s» en une vue parce qu'elle a des déclencheurs"
 
-#: rewrite/rewriteDefine.c:413
+#: rewrite/rewriteDefine.c:412
 msgid ""
 "In particular, the table may not be involved in any foreign key "
 "relationships."
 msgstr "En particulier, la table pourrait ne pas être impliquée dans les relations des clés étrangères."
 
-#: rewrite/rewriteDefine.c:418
+#: rewrite/rewriteDefine.c:417
 #, c-format
 msgid "could not convert table \"%s\" to a view because it has indexes"
 msgstr "n'a pas pu convertir la table «%s» en une vue parce qu'elle a des index"
 
-#: rewrite/rewriteDefine.c:424
+#: rewrite/rewriteDefine.c:423
 #, c-format
 msgid "could not convert table \"%s\" to a view because it has child tables"
 msgstr "n'a pas pu convertir la table «%s» en une vue parce qu'elle a des tables filles"
@@ -8163,11 +8158,11 @@ msgstr "La fonction «%s» n'existe pas"
 msgid "must be member of role \"%s\""
 msgstr "doit être un membre du rôle «%s»"
 
-#: utils/adt/like.c:454 utils/adt/like_match.c:291 utils/adt/regexp.c:558
+#: utils/adt/like.c:454 utils/adt/like_match.c:291 utils/adt/regexp.c:548
 msgid "invalid escape string"
 msgstr "Chaîne d'échappement invalide"
 
-#: utils/adt/like.c:455 utils/adt/like_match.c:292 utils/adt/regexp.c:559
+#: utils/adt/like.c:455 utils/adt/like_match.c:292 utils/adt/regexp.c:549
 msgid "Escape string must be empty or one character."
 msgstr "La chaîne d'échappement doit être vide ou ne contenir qu'un caractère."
 
@@ -9001,12 +8996,12 @@ msgstr "Index %d en dehors des limites valides, 0..%d"
 msgid "new bit must be 0 or 1"
 msgstr "Le nouveau bit doit valoir soit 0 soit 1"
 
-#: utils/adt/regexp.c:244 utils/adt/varlena.c:2229
+#: utils/adt/regexp.c:243 utils/adt/varlena.c:2249
 #, c-format
 msgid "regular expression failed: %s"
 msgstr "l'expression rationnelle a échoué : %s"
 
-#: utils/adt/varlena.c:2315
+#: utils/adt/varlena.c:2339
 msgid "field position must be greater than zero"
 msgstr "La position du champ doit être plus grand que zéro"
 
@@ -9067,7 +9062,7 @@ msgstr "n'a pas pu afficher une valeur de type anyelement"
 msgid "invalid regular expression: %s"
 msgstr "Expression rationnelle invalide : %s"
 
-#: utils/adt/regexp.c:500
+#: utils/adt/regexp.c:494
 #, c-format
 msgid "invalid option of regexp_replace: %c"
 msgstr "option invalide pour regexp_replace : %c"
@@ -10121,7 +10116,7 @@ msgstr "Écrit des pages complètes dans les WAL lors d'une première modification 
 #: utils/misc/guc.c:528
 msgid ""
 "A page write in process during an operating system crash might be only "
-"partially written to disk.  During recovery, the row changesstored in WAL "
+"partially written to disk.  During recovery, the row changes stored in WAL "
 "are not enough to recover.  This option writes pages when first modified "
 "after a checkpoint to WAL so full recovery is possible."
 msgstr "Une page écrite au moment d'un arrêt brutal du système d'exploitation pourrait être seulement partiellement écrite sur le disque. Lors de la récupération, les modifications de la ligne, stockées dans le WAL, ne seront pas suffisantes pour terminer la récupération. Cette option écrit les pages lors de la première modification après un point de vérification des WAL pour que la récupération complète soit possible."
@@ -11225,11 +11220,11 @@ msgstr "Peut-être manquez-vous de place disque ?"
 msgid "could not read block %ld of temporary file: %m"
 msgstr "n'a pas pu lire le bloc %ld du fichier temporaire : %m"
 
-#: utils/sort/tuplesort.c:2138
+#: utils/sort/tuplesort.c:2161
 msgid "could not create unique index"
 msgstr "n'a pas pu créer l'index unique"
 
-#: utils/sort/tuplesort.c:2139
+#: utils/sort/tuplesort.c:2162
 msgid "Table contains duplicated values."
 msgstr "La table contient des valeurs dupliquées."
 
