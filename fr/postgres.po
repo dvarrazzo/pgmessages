@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postgres-fr\n"
-"POT-Creation-Date: 2005-11-05 13:01-0400\n"
-"PO-Revision-Date: 2005-11-05 19:58+0100\n"
+"POT-Creation-Date: 2005-11-07 01:00-0400\n"
+"PO-Revision-Date: 2005-11-07 09:14+0100\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "code de format non supporté : %d"
 msgid "column \"%s\" cannot be declared SETOF"
 msgstr "la colonne \"%s\" ne peut pas être déclarée SETOF"
 
-#: access/gist/gistvacuum.c:376
+#: access/gist/gistvacuum.c:381
 #, c-format
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
 msgstr "l'index  «%s» a besoin d'un VACUUM FULL ou d'un REINDEX pour terminer la récupération suite à l'arrêt brutal"
@@ -54,6 +54,25 @@ msgstr "l'index  «%s» a besoin d'un VACUUM FULL ou d'un REINDEX pour terminer la
 #, c-format
 msgid "index \"%s\" needs VACUUM or REINDEX to finish crash recovery"
 msgstr "l'index  «%s» a besoin d'un VACUUM ou d'un REINDEX pour terminer la récupération suite à l'arrêt brutal"
+
+#: access/gist/gistutil.c:887 access/hash/hashutil.c:125
+#: access/nbtree/nbtpage.c:422
+#, c-format
+msgid "index \"%s\" contains unexpected zero page at block %u"
+msgstr "l'index «%s» contient une page zéro inattendue au bloc %u"
+
+#: access/gist/gistutil.c:890 access/gist/gistutil.c:902
+#: access/hash/hashutil.c:128 access/hash/hashutil.c:140
+#: access/hash/hashutil.c:152 access/hash/hashutil.c:173
+#: access/nbtree/nbtpage.c:425 access/nbtree/nbtpage.c:437
+msgid "Please REINDEX it."
+msgstr "Merci de lancer REINDEX sur cet objet."
+
+#: access/gist/gistutil.c:899 access/hash/hashutil.c:137
+#: access/hash/hashutil.c:149 access/nbtree/nbtpage.c:434
+#, c-format
+msgid "index \"%s\" contains corrupted page at block %u"
+msgstr "l'index «%s» contient une page corrompue au bloc %u"
 
 #: access/gist/gistxlog.c:761
 #, c-format
@@ -86,19 +105,15 @@ msgstr "en dehors des pages surchargées dans l'index haché «%s»"
 msgid "hash indexes cannot contain null keys"
 msgstr "les index hachés ne peuvent pas contenir des clés nulles"
 
-#: access/hash/hashutil.c:127
+#: access/hash/hashutil.c:165
 #, c-format
 msgid "index \"%s\" is not a hash index"
 msgstr "l'index «%s» n'est pas un index haché"
 
-#: access/hash/hashutil.c:133
+#: access/hash/hashutil.c:171
 #, c-format
 msgid "index \"%s\" has wrong hash version"
 msgstr "l'index «%s» a la mauvaise version de hachage"
-
-#: access/hash/hashutil.c:134
-msgid "Please REINDEX it."
-msgstr "Merci de lancer REINDEX sur cet objet."
 
 #: access/heap/heapam.c:485
 #, c-format
@@ -157,12 +172,12 @@ msgstr ""
 "Les valeurs plus larges qu'un tiers d'une page de tampon ne peuvent pas être indexées.\n"
 "Considérez un index de fonction d'un hachage MD5 de la valeur ou utilisez l'indexation «full text »."
 
-#: access/nbtree/nbtpage.c:176 access/nbtree/nbtpage.c:357
+#: access/nbtree/nbtpage.c:176 access/nbtree/nbtpage.c:355
 #, c-format
 msgid "index \"%s\" is not a btree"
 msgstr "l'index «%s» n'est pas un btree"
 
-#: access/nbtree/nbtpage.c:182 access/nbtree/nbtpage.c:363
+#: access/nbtree/nbtpage.c:182 access/nbtree/nbtpage.c:361
 #, c-format
 msgid "version mismatch in index \"%s\": file version %d, code version %d"
 msgstr "la version ne correspond pas dans l'index «%s» : version du fichier %d, version du code %d"
@@ -176,20 +191,20 @@ msgstr "les clés rtree de longueur variable ne sont pas supportées"
 msgid "index row size %lu exceeds rtree maximum, %lu"
 msgstr "la taille de la ligne index %lu dépasse le maximum du rtree, %lu"
 
-#: access/transam/slru.c:461
+#: access/transam/slru.c:470
 #, c-format
 msgid "file \"%s\" doesn't exist, reading as zeroes"
 msgstr "le fichier «%s» n'existe pas, remplacé par des zéros"
 
-#: access/transam/slru.c:645 access/transam/slru.c:652
-#: access/transam/slru.c:659 access/transam/slru.c:666
-#: access/transam/slru.c:673 access/transam/slru.c:680
-#: access/transam/slru.c:687
+#: access/transam/slru.c:654 access/transam/slru.c:661
+#: access/transam/slru.c:668 access/transam/slru.c:675
+#: access/transam/slru.c:682 access/transam/slru.c:689
+#: access/transam/slru.c:696
 #, c-format
 msgid "could not access status of transaction %u"
 msgstr "n'a pas pu accéder au statut de la transaction %u"
 
-#: ../port/copydir.c:119 access/transam/slru.c:646 access/transam/xlog.c:1870
+#: ../port/copydir.c:119 access/transam/slru.c:655 access/transam/xlog.c:1870
 #: access/transam/xlog.c:3074 access/transam/xlog.c:3164
 #: access/transam/xlog.c:3262 libpq/hba.c:947 postmaster/autovacuum.c:452
 #: utils/error/elog.c:1117 utils/init/miscinit.c:990
@@ -198,7 +213,7 @@ msgstr "n'a pas pu accéder au statut de la transaction %u"
 msgid "could not open file \"%s\": %m"
 msgstr "n'a pas pu ouvrir le fichier «%s» : %m"
 
-#: ../port/copydir.c:126 access/transam/slru.c:653 access/transam/xlog.c:1763
+#: ../port/copydir.c:126 access/transam/slru.c:662 access/transam/xlog.c:1763
 #: access/transam/xlog.c:1885 access/transam/xlog.c:3243
 #: access/transam/xlog.c:5682 access/transam/xlog.c:5797
 #: postmaster/postmaster.c:2940
@@ -206,39 +221,39 @@ msgstr "n'a pas pu ouvrir le fichier «%s» : %m"
 msgid "could not create file \"%s\": %m"
 msgstr "n'a pas pu créer le fichier «%s» : %m"
 
-#: access/transam/slru.c:660
+#: access/transam/slru.c:669
 #, c-format
 msgid "could not seek in file \"%s\" to offset %u: %m"
 msgstr "n'a pas pu chercher dans le fichier «%s» pour le décalage %u : %m"
 
-#: access/transam/slru.c:667
+#: access/transam/slru.c:676
 #, c-format
 msgid "could not read from file \"%s\" at offset %u: %m"
 msgstr "n'a pas pu lire le fichier «%s» au décalage %u : %m"
 
-#: access/transam/slru.c:674
+#: access/transam/slru.c:683
 #, c-format
 msgid "could not write to file \"%s\" at offset %u: %m"
 msgstr "n'a pas pu écrire le fichier «%s» au décalage %u : %m"
 
-#: ../port/copydir.c:158 access/transam/slru.c:681 access/transam/xlog.c:1798
+#: ../port/copydir.c:158 access/transam/slru.c:690 access/transam/xlog.c:1798
 #: access/transam/xlog.c:1924 access/transam/xlog.c:3339
 #, c-format
 msgid "could not fsync file \"%s\": %m"
 msgstr "n'a pas pu synchroniser (fsync) le fichier «%s» : %m"
 
-#: ../port/copydir.c:163 access/transam/slru.c:688 access/transam/xlog.c:1803
+#: ../port/copydir.c:163 access/transam/slru.c:697 access/transam/xlog.c:1803
 #: access/transam/xlog.c:1929 access/transam/xlog.c:3344
 #, c-format
 msgid "could not close file \"%s\": %m"
 msgstr "n'a pas pu fermer le fichier «%s» : %m"
 
-#: access/transam/slru.c:874
+#: access/transam/slru.c:880
 #, c-format
 msgid "could not truncate directory \"%s\": apparent wraparound"
 msgstr "n'a pas pu tronquer «%s» : contournement apparent"
 
-#: access/transam/slru.c:957
+#: access/transam/slru.c:961
 #, c-format
 msgid "removing file \"%s\""
 msgstr "suppression du fichier «%s»"
