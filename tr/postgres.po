@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "POT-Creation-Date: 2005-01-04 18:59+0000\n"
-"PO-Revision-Date: 2005-11-05 16:15+0200\n"
+"PO-Revision-Date: 2005-11-07 06:57+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr "desteklenmeyen biçim kodu: %d"
 msgid "column \"%s\" cannot be declared SETOF"
 msgstr "\"%s\" kolonu SETOF olarak bildirilemez"
 
-#: access/gist/gistvacuum.c:376
+#: access/gist/gistvacuum.c:381
 #, c-format
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM FULL veya REINDEX işleminden geçmesi gerekir"
@@ -57,6 +57,32 @@ msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM FULL veya REINDEX
 #, c-format
 msgid "index \"%s\" needs VACUUM or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM veya REINDEX işleminden geçmesi gerekir"
+
+#: access/gist/gistutil.c:887
+#: access/hash/hashutil.c:125
+#: access/nbtree/nbtpage.c:422
+#, c-format
+msgid "index \"%s\" contains unexpected zero page at block %u"
+msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
+
+#: access/gist/gistutil.c:890
+#: access/gist/gistutil.c:902
+#: access/hash/hashutil.c:128
+#: access/hash/hashutil.c:140
+#: access/hash/hashutil.c:152
+#: access/hash/hashutil.c:173
+#: access/nbtree/nbtpage.c:425
+#: access/nbtree/nbtpage.c:437
+msgid "Please REINDEX it."
+msgstr "Lütfen onu REINDEX'leyin."
+
+#: access/gist/gistutil.c:899
+#: access/hash/hashutil.c:137
+#: access/hash/hashutil.c:149
+#: access/nbtree/nbtpage.c:434
+#, c-format
+msgid "index \"%s\" contains corrupted page at block %u"
+msgstr "\"%s\" indexnde %u bloğunda bozuk sayfa"
 
 #: access/gist/gistxlog.c:761
 #, c-format
@@ -90,19 +116,15 @@ msgstr " \"%s\" hash indexi içinde sayfa taşması hatası"
 msgid "hash indexes cannot contain null keys"
 msgstr "hash indeskler null kayıtları içeremez"
 
-#: access/hash/hashutil.c:127
+#: access/hash/hashutil.c:165
 #, c-format
 msgid "index \"%s\" is not a hash index"
 msgstr "\"%s\" indexi bir hash indexi değildir"
 
-#: access/hash/hashutil.c:133
+#: access/hash/hashutil.c:171
 #, c-format
 msgid "index \"%s\" has wrong hash version"
 msgstr "\"%s\" indexi yanlış hash sürümüne sahiptir"
-
-#: access/hash/hashutil.c:134
-msgid "Please REINDEX it."
-msgstr "Lütfen onu REINDEX'leyin."
 
 #: access/heap/heapam.c:485
 #, c-format
@@ -172,13 +194,13 @@ msgstr ""
 "Yerine değerinin MD5 hash'ı değeri üzerinde function index ya da full text indexing kullanabilirisiniz."
 
 #: access/nbtree/nbtpage.c:176
-#: access/nbtree/nbtpage.c:357
+#: access/nbtree/nbtpage.c:355
 #, c-format
 msgid "index \"%s\" is not a btree"
 msgstr "\"%s\" indexi btree değildir."
 
 #: access/nbtree/nbtpage.c:182
-#: access/nbtree/nbtpage.c:363
+#: access/nbtree/nbtpage.c:361
 #, c-format
 msgid "version mismatch in index \"%s\": file version %d, code version %d"
 msgstr "\"%s\" indexinde sürüm uyuşmazlığı: dosya sürümü %d, kod sürümü ise %d"
@@ -192,24 +214,24 @@ msgstr "değişken uzunluklu rtree kayıtları desteklenmemektedir"
 msgid "index row size %lu exceeds rtree maximum, %lu"
 msgstr "%lu index satır boyutu, rtree indexi için %lu olan en büyük satır büyüklüğünü aşmaktadır"
 
-#: access/transam/slru.c:461
+#: access/transam/slru.c:470
 #, c-format
 msgid "file \"%s\" doesn't exist, reading as zeroes"
 msgstr "\"%s\" dosyası mevcut değilr, sıfırlarla dolu dosya olarak okunuyor"
 
-#: access/transam/slru.c:645
-#: access/transam/slru.c:652
-#: access/transam/slru.c:659
-#: access/transam/slru.c:666
-#: access/transam/slru.c:673
-#: access/transam/slru.c:680
-#: access/transam/slru.c:687
+#: access/transam/slru.c:654
+#: access/transam/slru.c:661
+#: access/transam/slru.c:668
+#: access/transam/slru.c:675
+#: access/transam/slru.c:682
+#: access/transam/slru.c:689
+#: access/transam/slru.c:696
 #, c-format
 msgid "could not access status of transaction %u"
 msgstr "%u transactionunun durumuna erişilemiyor."
 
 #: ../port/copydir.c:119
-#: access/transam/slru.c:646
+#: access/transam/slru.c:655
 #: access/transam/xlog.c:1870
 #: access/transam/xlog.c:3074
 #: access/transam/xlog.c:3164
@@ -225,7 +247,7 @@ msgid "could not open file \"%s\": %m"
 msgstr "\"%s\" dosyası açılamıyor: %m"
 
 #: ../port/copydir.c:126
-#: access/transam/slru.c:653
+#: access/transam/slru.c:662
 #: access/transam/xlog.c:1763
 #: access/transam/xlog.c:1885
 #: access/transam/xlog.c:3243
@@ -236,23 +258,23 @@ msgstr "\"%s\" dosyası açılamıyor: %m"
 msgid "could not create file \"%s\": %m"
 msgstr "\"%s\" dosyası oluşturulamıyor: %m"
 
-#: access/transam/slru.c:660
+#: access/transam/slru.c:669
 #, c-format
 msgid "could not seek in file \"%s\" to offset %u: %m"
 msgstr "\"%s\" dosyası, offset %u imleç değiştirme hatası: %m"
 
-#: access/transam/slru.c:667
+#: access/transam/slru.c:676
 #, c-format
 msgid "could not read from file \"%s\" at offset %u: %m"
 msgstr "\"%s\" dosyası, offset %u okuma hatası: %m"
 
-#: access/transam/slru.c:674
+#: access/transam/slru.c:683
 #, c-format
 msgid "could not write to file \"%s\" at offset %u: %m"
 msgstr "\"%s\" dosyası, offset %u yazma hatası: %m"
 
 #: ../port/copydir.c:158
-#: access/transam/slru.c:681
+#: access/transam/slru.c:690
 #: access/transam/xlog.c:1798
 #: access/transam/xlog.c:1924
 #: access/transam/xlog.c:3339
@@ -261,7 +283,7 @@ msgid "could not fsync file \"%s\": %m"
 msgstr "\"%s\" dosyası fsync hatası: %m"
 
 #: ../port/copydir.c:163
-#: access/transam/slru.c:688
+#: access/transam/slru.c:697
 #: access/transam/xlog.c:1803
 #: access/transam/xlog.c:1929
 #: access/transam/xlog.c:3344
@@ -269,12 +291,12 @@ msgstr "\"%s\" dosyası fsync hatası: %m"
 msgid "could not close file \"%s\": %m"
 msgstr "\"%s\" dosyası kapatılamıyor: %m"
 
-#: access/transam/slru.c:874
+#: access/transam/slru.c:880
 #, c-format
 msgid "could not truncate directory \"%s\": apparent wraparound"
 msgstr "\"%s\" dizini küçültülemedi: başa sarma durumuna rastlandı"
 
-#: access/transam/slru.c:957
+#: access/transam/slru.c:961
 #, c-format
 msgid "removing file \"%s\""
 msgstr "\"%s\" dosyası siliniyor"
