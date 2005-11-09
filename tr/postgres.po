@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "POT-Creation-Date: 2005-01-04 18:59+0000\n"
-"PO-Revision-Date: 2005-11-07 06:57+0200\n"
+"PO-Revision-Date: 2005-11-09 13:35+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,6 @@ msgid "index row size %lu exceeds hash maximum %lu"
 msgstr "index satır boyutu %lu, %lu olan en yüksek hash boyutunu aşmaktadır"
 
 #: access/hash/hashinsert.c:90
-#: access/rtree/rtree.c:733
 msgid "Values larger than a buffer page cannot be indexed."
 msgstr "Bir buffer sayfası boyutundan yüksek değerler indekslenemz."
 
@@ -166,8 +165,8 @@ msgstr "satır çok büyük: boyutu %lu, olabileceği en fazla boyut %lu"
 #: access/index/indexam.c:149
 #: access/index/indexam.c:174
 #: commands/comment.c:332
-#: commands/indexcmds.c:885
-#: commands/indexcmds.c:915
+#: commands/indexcmds.c:902
+#: commands/indexcmds.c:932
 #: tcop/utility.c:93
 #, c-format
 msgid "\"%s\" is not an index"
@@ -204,15 +203,6 @@ msgstr "\"%s\" indexi btree değildir."
 #, c-format
 msgid "version mismatch in index \"%s\": file version %d, code version %d"
 msgstr "\"%s\" indexinde sürüm uyuşmazlığı: dosya sürümü %d, kod sürümü ise %d"
-
-#: access/rtree/rtree.c:593
-msgid "variable-length rtree keys are not supported"
-msgstr "değişken uzunluklu rtree kayıtları desteklenmemektedir"
-
-#: access/rtree/rtree.c:730
-#, c-format
-msgid "index row size %lu exceeds rtree maximum, %lu"
-msgstr "%lu index satır boyutu, rtree indexi için %lu olan en büyük satır büyüklüğünü aşmaktadır"
 
 #: access/transam/slru.c:470
 #, c-format
@@ -2453,7 +2443,7 @@ msgstr "\"%s\" bir sequence değildir"
 
 #: commands/comment.c:346
 #: commands/indexcmds.c:140
-#: commands/indexcmds.c:949
+#: commands/indexcmds.c:966
 #: commands/lockcmds.c:68
 #: commands/tablecmds.c:556
 #: commands/tablecmds.c:2654
@@ -2550,7 +2540,7 @@ msgid "must be superuser to comment on procedural language"
 msgstr "bir yordamsal dile açıklama eklemek için superuser olmalısınız"
 
 #: commands/comment.c:1026
-#: commands/indexcmds.c:231
+#: commands/indexcmds.c:247
 #: commands/opclasscmds.c:108
 #: commands/opclasscmds.c:650
 #: commands/opclasscmds.c:802
@@ -2561,8 +2551,8 @@ msgstr "\"%s\" erişim metodu mevcut değil"
 
 #: commands/comment.c:1055
 #: commands/comment.c:1065
-#: commands/indexcmds.c:613
-#: commands/indexcmds.c:623
+#: commands/indexcmds.c:630
+#: commands/indexcmds.c:640
 #: commands/opclasscmds.c:679
 #: commands/opclasscmds.c:689
 #: commands/opclasscmds.c:824
@@ -3386,108 +3376,112 @@ msgstr "en az bir sütun belirtmelisiniz"
 msgid "cannot use more than %d columns in an index"
 msgstr "bir index içinde %d sayısından fazla sütun kullanılamaz"
 
-#: commands/indexcmds.c:239
+#: commands/indexcmds.c:237
+msgid "substituting access method \"gist\" for obsolete method \"rtree\""
+msgstr "artık kullanılmayan \"rtree\" yöntemi yerine \"gist\" yöntemi kullanılacak"
+
+#: commands/indexcmds.c:256
 #, c-format
 msgid "access method \"%s\" does not support unique indexes"
 msgstr "\"%s\" erişim yöntemi tekil indexleri desteklemiyor"
 
-#: commands/indexcmds.c:244
+#: commands/indexcmds.c:261
 #, c-format
 msgid "access method \"%s\" does not support multicolumn indexes"
 msgstr "\"%s\" erişim yöntemi çoklu sütun indexleri desteklemiyor"
 
-#: commands/indexcmds.c:258
+#: commands/indexcmds.c:275
 msgid "index expressions and predicates may refer only to the table being indexed"
 msgstr "index ifade ve yüklemler sadece indexlenen tabloya referans edebilirler"
 
-#: commands/indexcmds.c:286
+#: commands/indexcmds.c:303
 #: parser/analyze.c:1204
 #, c-format
 msgid "multiple primary keys for table \"%s\" are not allowed"
 msgstr "\"%s\" tablosunda birden çok birincil anahtara izin verilmez"
 
-#: commands/indexcmds.c:303
+#: commands/indexcmds.c:320
 msgid "primary keys cannot be expressions"
 msgstr "birincil anahtar bir ifade olamaz"
 
-#: commands/indexcmds.c:333
-#: commands/indexcmds.c:470
+#: commands/indexcmds.c:350
+#: commands/indexcmds.c:487
 #: parser/analyze.c:1317
 #, c-format
 msgid "column \"%s\" named in key does not exist"
 msgstr "anahtar tanımında belirtilen \"%s\" sütunu mevcut değil"
 
-#: commands/indexcmds.c:378
+#: commands/indexcmds.c:395
 #, c-format
 msgid "%s %s will create implicit index \"%s\" for table \"%s\""
 msgstr "%1$s %2$s \"%4$s\" tablosu için \"%3$s\" indexi oluşturulacaktır"
 
-#: commands/indexcmds.c:420
+#: commands/indexcmds.c:437
 msgid "cannot use subquery in index predicate"
 msgstr "index tanımında subquery kullanılamaz"
 
-#: commands/indexcmds.c:424
+#: commands/indexcmds.c:441
 msgid "cannot use aggregate in index predicate"
 msgstr "index tanımında aggregate kullanılamaz"
 
-#: commands/indexcmds.c:433
+#: commands/indexcmds.c:450
 msgid "functions in index predicate must be marked IMMUTABLE"
 msgstr "index yüklemindeki kullanılacak fonksiyon IMMUTABLE olarak tanımlanmaıldır"
 
-#: commands/indexcmds.c:475
+#: commands/indexcmds.c:492
 #: commands/tablecmds.c:1351
 #: parser/parse_expr.c:395
 #, c-format
 msgid "column \"%s\" does not exist"
 msgstr "\"%s\" sütunu mevcut değil"
 
-#: commands/indexcmds.c:508
+#: commands/indexcmds.c:525
 msgid "cannot use subquery in index expression"
 msgstr "index ifadesinde subquery kullanılamaz"
 
-#: commands/indexcmds.c:512
+#: commands/indexcmds.c:529
 msgid "cannot use aggregate function in index expression"
 msgstr "index ifadesinde aggregate fonksiyonu kullanılamaz"
 
-#: commands/indexcmds.c:522
+#: commands/indexcmds.c:539
 msgid "functions in index expression must be marked IMMUTABLE"
 msgstr "index ifadesinde kullanılacak fonksiyon IMMUTABLE olarak tanımlanmaıldır"
 
-#: commands/indexcmds.c:581
+#: commands/indexcmds.c:598
 #, c-format
 msgid "data type %s has no default operator class for access method \"%s\""
 msgstr "%s veri tipinin \"%s\" erişim yöntemi için varsayılan operator sınıfı mevcut değil"
 
-#: commands/indexcmds.c:583
+#: commands/indexcmds.c:600
 msgid "You must specify an operator class for the index or define a default operator class for the data type."
 msgstr "Bu index için operator class belirtmeli veya bu veri tipi için varsayılan operator class tanımlamalısınız."
 
-#: commands/indexcmds.c:636
+#: commands/indexcmds.c:653
 #, c-format
 msgid "operator class \"%s\" does not accept data type %s"
 msgstr "\"%s\" operator sınıfı, %s veri tipini kabul etmiyor"
 
-#: commands/indexcmds.c:693
+#: commands/indexcmds.c:710
 #: utils/cache/typcache.c:363
 #, c-format
 msgid "there are multiple default operator classes for data type %s"
 msgstr "%s veri tipi için birden fazla varsayılan operator sınıfı mevcuttur"
 
-#: commands/indexcmds.c:961
+#: commands/indexcmds.c:978
 #, c-format
 msgid "shared table \"%s\" can only be reindexed in stand-alone mode"
 msgstr "\"%s\" ortak tablosuna sadece stand-alone modunda reindex işlemi uygulanabilir"
 
-#: commands/indexcmds.c:968
+#: commands/indexcmds.c:985
 #, c-format
 msgid "table \"%s\" has no indexes"
 msgstr "\"%s\" tablosunda hiçbir index yok"
 
-#: commands/indexcmds.c:995
+#: commands/indexcmds.c:1012
 msgid "can only reindex the currently open database"
 msgstr "ancak açık olan veritabanı üzerinde reindex işlemi yapılabilir"
 
-#: commands/indexcmds.c:1087
+#: commands/indexcmds.c:1104
 #, c-format
 msgid "table \"%s\" was reindexed"
 msgstr "\"%s\" tablosu yeniden indexlenmiştir"
