@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "POT-Creation-Date: 2005-01-04 18:59+0000\n"
-"PO-Revision-Date: 2005-11-09 13:35+0200\n"
+"PO-Revision-Date: 2005-11-20 10:08+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "kolonların sayısı (%d),  (%d) sınırını aşıyor"
 #: access/common/printtup.c:274
 #: tcop/fastpath.c:180
 #: tcop/fastpath.c:508
-#: tcop/postgres.c:1581
+#: tcop/postgres.c:1557
 #, c-format
 msgid "unsupported format code: %d"
 msgstr "desteklenmeyen biçim kodu: %d"
@@ -167,7 +167,7 @@ msgstr "satır çok büyük: boyutu %lu, olabileceği en fazla boyut %lu"
 #: commands/comment.c:332
 #: commands/indexcmds.c:902
 #: commands/indexcmds.c:932
-#: tcop/utility.c:93
+#: tcop/utility.c:98
 #, c-format
 msgid "\"%s\" is not an index"
 msgstr "\"%s\" bir index değildir"
@@ -470,8 +470,8 @@ msgstr "\"%s\" dosyası (log dosyası %u, segment %u) açma hatası: %m"
 #: postmaster/postmaster.c:2960
 #: utils/init/miscinit.c:1039
 #: utils/init/miscinit.c:1048
-#: utils/misc/guc.c:5065
-#: utils/misc/guc.c:5128
+#: utils/misc/guc.c:5075
+#: utils/misc/guc.c:5138
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "\"%s\" dosyası yazma hatası: %m"
@@ -1606,7 +1606,7 @@ msgstr "veritabanı için geçersiz hak tipi %s"
 #: commands/dbcommands.c:839
 #: commands/dbcommands.c:909
 #: commands/dbcommands.c:992
-#: utils/adt/acl.c:1712
+#: utils/adt/acl.c:1739
 #: utils/adt/dbsize.c:131
 #: utils/init/postinit.c:353
 #: utils/init/postinit.c:365
@@ -1629,7 +1629,7 @@ msgstr "dil için geçersiz hak tipi %s"
 #: commands/functioncmds.c:556
 #: commands/proclang.c:401
 #: commands/proclang.c:460
-#: utils/adt/acl.c:2130
+#: utils/adt/acl.c:2157
 #, c-format
 msgid "language \"%s\" does not exist"
 msgstr "\"%s\" dili mevcut değil"
@@ -1655,10 +1655,10 @@ msgstr "şema için geçersiz hak tipi %s"
 #: catalog/namespace.c:1329
 #: catalog/namespace.c:1933
 #: commands/comment.c:511
-#: commands/schemacmds.c:168
-#: commands/schemacmds.c:230
-#: commands/schemacmds.c:285
-#: utils/adt/acl.c:2334
+#: commands/schemacmds.c:171
+#: commands/schemacmds.c:243
+#: commands/schemacmds.c:298
+#: utils/adt/acl.c:2361
 #, c-format
 msgid "schema \"%s\" does not exist"
 msgstr "\"%s\" şeması mevcut değil"
@@ -1677,7 +1677,7 @@ msgstr "tablespace için geçersiz hak tipi %s"
 #: commands/tablespace.c:707
 #: commands/tablespace.c:774
 #: commands/tablespace.c:869
-#: utils/adt/acl.c:2540
+#: utils/adt/acl.c:2567
 #: utils/adt/dbsize.c:208
 #, c-format
 msgid "tablespace \"%s\" does not exist"
@@ -1868,7 +1868,7 @@ msgid "must not omit initial value when transition function is strict and transi
 msgstr "geçiş fonksiyonu strict olduğunda ve giriş parametresinin tipi uyumsuz olduğunda başlangıç değeri mutlaka verilmelidir"
 
 #: catalog/pg_aggregate.c:168
-#: catalog/pg_proc.c:183
+#: catalog/pg_proc.c:186
 #: executor/functions.c:1061
 msgid "cannot determine result data type"
 msgstr "sonuç veri tipi belirlenemiyor"
@@ -1878,11 +1878,11 @@ msgid "An aggregate returning \"anyarray\" or \"anyelement\" must have one of th
 msgstr "\"anyarray\" veya \"anyelement\" döndüren aggregatın temel tipi onlardan biri olmalıdır."
 
 #: catalog/pg_aggregate.c:299
-#: commands/typecmds.c:907
-#: commands/typecmds.c:958
-#: commands/typecmds.c:989
-#: commands/typecmds.c:1012
-#: commands/typecmds.c:1033
+#: commands/typecmds.c:933
+#: commands/typecmds.c:984
+#: commands/typecmds.c:1015
+#: commands/typecmds.c:1038
+#: commands/typecmds.c:1059
 #: parser/parse_func.c:213
 #: parser/parse_func.c:1191
 #, c-format
@@ -1954,7 +1954,7 @@ msgid "only table \"%s\" can be referenced in check constraint"
 msgstr "check constraint içerisinde sadece \"%s\" tablosu kullanılabilir"
 
 #: catalog/heap.c:1546
-#: commands/typecmds.c:1827
+#: commands/typecmds.c:1853
 msgid "cannot use subquery in check constraint"
 msgstr "check constraint içinde subquery kullanılamaz"
 
@@ -2078,7 +2078,7 @@ msgstr "veritabanı-arası referanslar oluşturulamaz: %s"
 #: parser/parse_expr.c:494
 #: parser/parse_target.c:729
 #: gram.y:2695
-#: gram.y:7871
+#: gram.y:7893
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "geçersiz qualified adı (çok fazla noktalı isim): %s"
@@ -2118,9 +2118,9 @@ msgstr "%s'dan %s'a öntanımlı dönüşüm zaten mevcut"
 
 #: catalog/pg_conversion.c:308
 #: commands/comment.c:944
-#: commands/conversioncmds.c:109
-#: commands/conversioncmds.c:133
-#: commands/conversioncmds.c:192
+#: commands/conversioncmds.c:112
+#: commands/conversioncmds.c:146
+#: commands/conversioncmds.c:205
 #, c-format
 msgid "conversion \"%s\" does not exist"
 msgstr "\"%s\" dönüşümü mevcut değil"
@@ -2167,76 +2167,76 @@ msgstr "%2$s veritabanında %1$d nesne"
 msgid "functions cannot have more than %d arguments"
 msgstr "bir fonksiyonun arguman sayısı %d sayısından büyük olamaz"
 
-#: catalog/pg_proc.c:184
+#: catalog/pg_proc.c:187
 #: executor/functions.c:1062
 msgid "A function returning \"anyarray\" or \"anyelement\" must have at least one argument of either type."
 msgstr "\"anyarray\" veya \"anyelement\" döndüren fonksiyonlar bu tiplerden en az birer argümana sahip olmalıdır."
 
-#: catalog/pg_proc.c:189
+#: catalog/pg_proc.c:192
 msgid "unsafe use of pseudo-type \"internal\""
 msgstr "\"internal\" pseudo-type'ın tehlikeli kullanışı"
 
-#: catalog/pg_proc.c:190
+#: catalog/pg_proc.c:193
 msgid "A function returning \"internal\" must have at least one \"internal\" argument."
 msgstr "\"internal\"  döndüren fonksiyonlar bu tiplerden en az bir argüman \"internal\" olmalıdır."
 
-#: catalog/pg_proc.c:202
+#: catalog/pg_proc.c:205
 #, c-format
 msgid "\"%s\" is already an attribute of type %s"
 msgstr "\"%s\" zanten %s tipinin özelliğidir"
 
-#: catalog/pg_proc.c:267
+#: catalog/pg_proc.c:270
 #, c-format
 msgid "function \"%s\" already exists with same argument types"
 msgstr "\"%s\" fonksiyonu aynı argüman veri tipleriyle zaten mevcut"
 
-#: catalog/pg_proc.c:281
-#: catalog/pg_proc.c:303
+#: catalog/pg_proc.c:284
+#: catalog/pg_proc.c:306
 msgid "cannot change return type of existing function"
 msgstr "var olan bir fonksiyonun döndürme tipi değiştirilemez"
 
-#: catalog/pg_proc.c:282
-#: catalog/pg_proc.c:305
+#: catalog/pg_proc.c:285
+#: catalog/pg_proc.c:308
 msgid "Use DROP FUNCTION first."
 msgstr "Önce DROP FUNCTION kullanın."
 
-#: catalog/pg_proc.c:304
+#: catalog/pg_proc.c:307
 msgid "Row type defined by OUT parameters is different."
 msgstr "OUT parametresinde tanımlanmış Row veri tipi farklıdır."
 
-#: catalog/pg_proc.c:314
+#: catalog/pg_proc.c:317
 #, c-format
 msgid "function \"%s\" is an aggregate"
 msgstr "\"%s\" fonksiyonu bir aggregate'tir"
 
-#: catalog/pg_proc.c:319
+#: catalog/pg_proc.c:322
 #, c-format
 msgid "function \"%s\" is not an aggregate"
 msgstr "\"%s\" fonksiyonu bir aggregate değildir"
 
-#: catalog/pg_proc.c:444
+#: catalog/pg_proc.c:447
 #, c-format
 msgid "there is no built-in function named \"%s\""
 msgstr "\"%s\" adlı gömülü bir fonksiyon yok"
 
-#: catalog/pg_proc.c:540
+#: catalog/pg_proc.c:543
 #, c-format
 msgid "SQL functions cannot return type %s"
 msgstr "SQL fonksiyonları %s tipini dündüremezler"
 
-#: catalog/pg_proc.c:556
+#: catalog/pg_proc.c:559
 #, c-format
 msgid "SQL functions cannot have arguments of type %s"
 msgstr "SQL fonksiyonları %s tipinde argümana sahip olamaz"
 
-#: catalog/pg_proc.c:627
+#: catalog/pg_proc.c:630
 #: executor/functions.c:805
 #, c-format
 msgid "SQL function \"%s\""
 msgstr " \"%s\" SQL fonksiyonu"
 
 #: catalog/pg_namespace.c:51
-#: commands/schemacmds.c:239
+#: commands/schemacmds.c:252
 #, c-format
 msgid "schema \"%s\" already exists"
 msgstr "\"%s\" şeması zaten mevcut"
@@ -2299,18 +2299,18 @@ msgstr "\"%s\" tipi zaten mevcut"
 #: catalog/pg_type.c:512
 #: commands/functioncmds.c:112
 #: commands/tablecmds.c:4728
-#: commands/typecmds.c:419
-#: commands/typecmds.c:801
-#: commands/typecmds.c:1123
-#: commands/typecmds.c:1246
-#: commands/typecmds.c:1357
-#: commands/typecmds.c:1442
-#: commands/typecmds.c:2030
-#: commands/typecmds.c:2154
+#: commands/typecmds.c:422
+#: commands/typecmds.c:817
+#: commands/typecmds.c:1149
+#: commands/typecmds.c:1272
+#: commands/typecmds.c:1383
+#: commands/typecmds.c:1468
+#: commands/typecmds.c:2056
+#: commands/typecmds.c:2180
 #: parser/parse_func.c:1227
 #: parser/parse_type.c:201
 #: parser/parse_type.c:227
-#: tcop/utility.c:97
+#: tcop/utility.c:102
 #: utils/adt/regproc.c:999
 #, c-format
 msgid "type \"%s\" does not exist"
@@ -2429,14 +2429,19 @@ msgstr "\"%s\" kaynak dil kodlaması mevcut değil"
 msgid "destination encoding \"%s\" does not exist"
 msgstr "\"%s\" hedef dil kodlaması mevcut değil"
 
-#: commands/conversioncmds.c:151
+#: commands/conversioncmds.c:118
+#, c-format
+msgid "conversion \"%s\" does not exist, skipping"
+msgstr "\"%s\" dönüşümü mevcut değil, atlanıyor"
+
+#: commands/conversioncmds.c:164
 #, c-format
 msgid "conversion \"%s\" already exists in schema \"%s\""
 msgstr "\"%s\" dönüşümü zaten \"%s\" şemasında mevcuttur"
 
 #: commands/comment.c:339
 #: commands/sequence.c:857
-#: tcop/utility.c:83
+#: tcop/utility.c:86
 #, c-format
 msgid "\"%s\" is not a sequence"
 msgstr "\"%s\" bir sequence değildir"
@@ -2449,14 +2454,14 @@ msgstr "\"%s\" bir sequence değildir"
 #: commands/tablecmds.c:2654
 #: commands/trigger.c:143
 #: commands/trigger.c:547
-#: tcop/utility.c:78
+#: tcop/utility.c:80
 #, c-format
 msgid "\"%s\" is not a table"
 msgstr "\"%s\" bir tablo değildir"
 
 #: commands/comment.c:353
 #: commands/view.c:164
-#: tcop/utility.c:88
+#: tcop/utility.c:92
 #, c-format
 msgid "\"%s\" is not a view"
 msgstr "\"%s\" bir view değildir"
@@ -2755,8 +2760,8 @@ msgstr "COPY dosyasından okuma hatası: %m"
 #: commands/copy.c:467
 #: commands/copy.c:471
 #: tcop/fastpath.c:289
-#: tcop/postgres.c:292
-#: tcop/postgres.c:315
+#: tcop/postgres.c:295
+#: tcop/postgres.c:318
 msgid "unexpected EOF on client connection"
 msgstr "istemci bağlantısında beklenmeyen EOF"
 
@@ -2832,7 +2837,7 @@ msgstr "NULL tanımında CVS quote ayracı belirtilmemelidir"
 
 #: commands/copy.c:865
 #: executor/execMain.c:439
-#: tcop/utility.c:324
+#: tcop/utility.c:352
 msgid "transaction is read-only"
 msgstr "transaction salt okunurdur"
 
@@ -3234,13 +3239,13 @@ msgstr "\"%s\" fonksiyonu \"%s\" şemasında zaten mevcut"
 
 #: commands/functioncmds.c:1485
 #: commands/tablecmds.c:6122
-#: commands/typecmds.c:2210
+#: commands/typecmds.c:2236
 msgid "cannot move objects into or out of temporary schemas"
 msgstr "geçici şemasına nesleri aktarılamaz ve içinden alınamaz"
 
 #: commands/functioncmds.c:1491
 #: commands/tablecmds.c:6128
-#: commands/typecmds.c:2216
+#: commands/typecmds.c:2242
 msgid "cannot move objects into or out of TOAST schema"
 msgstr "TOAST şemasına nesleri aktarılamaz ve içinden alınamaz"
 
@@ -3501,15 +3506,20 @@ msgid "operator procedure must be specified"
 msgstr "operatör yordamı belirtilmelidir"
 
 #: commands/schemacmds.c:77
-#: commands/schemacmds.c:255
+#: commands/schemacmds.c:268
 #, c-format
 msgid "unacceptable schema name \"%s\""
 msgstr "\"%s\" kabul edilemez şema adı"
 
 #: commands/schemacmds.c:78
-#: commands/schemacmds.c:256
+#: commands/schemacmds.c:269
 msgid "The prefix \"pg_\" is reserved for system schemas."
 msgstr "\"pg_\" ön eki, sistem şemaları için ayrılmıştır."
+
+#: commands/schemacmds.c:176
+#, c-format
+msgid "schema \"%s\" does not exist, skipping"
+msgstr "\"%s\" şeması mevcut değil, atlanıyor"
 
 #: commands/portalcmds.c:54
 #: commands/portalcmds.c:181
@@ -3629,8 +3639,8 @@ msgstr "mukerrer check constraint adı: \"%s\""
 #: commands/tablecmds.c:5579
 #: commands/trigger.c:149
 #: commands/trigger.c:553
-#: tcop/utility.c:182
-#: tcop/utility.c:217
+#: tcop/utility.c:208
+#: tcop/utility.c:245
 #, c-format
 msgid "permission denied: \"%s\" is a system catalog"
 msgstr "erişim engellendi: \"%s\" bir sistem kataloğudur"
@@ -4032,7 +4042,7 @@ msgstr "setval: %s değeri kapsam dışıdır, sequence \"%s\" (%s..%s)"
 #: postmaster/postmaster.c:1719
 #: postmaster/postmaster.c:2484
 #: storage/buffer/buf_init.c:162
-#: storage/buffer/localbuf.c:264
+#: storage/buffer/localbuf.c:310
 #: storage/file/fd.c:315
 #: storage/file/fd.c:674
 #: storage/file/fd.c:809
@@ -4043,8 +4053,8 @@ msgstr "setval: %s değeri kapsam dışıdır, sequence \"%s\" (%s..%s)"
 #: utils/adt/oracle_compat.c:126
 #: utils/adt/oracle_compat.c:174
 #: utils/adt/regexp.c:168
-#: utils/adt/varlena.c:2642
-#: utils/adt/varlena.c:2665
+#: utils/adt/varlena.c:2668
+#: utils/adt/varlena.c:2691
 #: utils/fmgr/dfmgr.c:127
 #: utils/hash/dynahash.c:215
 #: utils/hash/dynahash.c:273
@@ -4052,9 +4062,9 @@ msgstr "setval: %s değeri kapsam dışıdır, sequence \"%s\" (%s..%s)"
 #: utils/init/miscinit.c:233
 #: utils/init/miscinit.c:254
 #: utils/init/miscinit.c:264
-#: utils/misc/guc.c:2173
-#: utils/misc/guc.c:2186
-#: utils/misc/guc.c:2199
+#: utils/misc/guc.c:2183
+#: utils/misc/guc.c:2196
+#: utils/misc/guc.c:2209
 #: utils/mmgr/aset.c:343
 #: utils/mmgr/aset.c:520
 #: utils/mmgr/aset.c:719
@@ -4149,115 +4159,122 @@ msgstr " %s type receive function %s tipini döndürmelidir"
 msgid "type send function %s must return type \"bytea\""
 msgstr "%s type send fonksiyonu  \"cstring\" döndürmelidir"
 
-#: commands/typecmds.c:531
+#: commands/typecmds.c:428
+#: commands/typecmds.c:823
+#: tcop/utility.c:103
+#, c-format
+msgid "type \"%s\" does not exist, skipping"
+msgstr "\"%s\" tipi mevcut değil, atlanıyor"
+
+#: commands/typecmds.c:544
 #, c-format
 msgid "domain names must be %d characters or less"
 msgstr "domain adı %d veya daha az karakterden oluşmalıdır"
 
-#: commands/typecmds.c:551
+#: commands/typecmds.c:564
 #, c-format
 msgid "\"%s\" is not a valid base type for a domain"
 msgstr "\"%s\" tipi bir domain için geçerli bir tip değildir"
 
-#: commands/typecmds.c:611
-#: commands/typecmds.c:1459
+#: commands/typecmds.c:624
+#: commands/typecmds.c:1485
 msgid "foreign key constraints not possible for domains"
 msgstr "domainlerde için foreign key constraint kullanılamaz"
 
-#: commands/typecmds.c:631
+#: commands/typecmds.c:644
 msgid "multiple default expressions"
 msgstr "birden fazla varsayılan ifade"
 
-#: commands/typecmds.c:661
-#: commands/typecmds.c:670
+#: commands/typecmds.c:674
+#: commands/typecmds.c:683
 msgid "conflicting NULL/NOT NULL constraints"
 msgstr "çakışan NULL/NOT NULL constraint"
 
-#: commands/typecmds.c:689
-#: commands/typecmds.c:1477
+#: commands/typecmds.c:702
+#: commands/typecmds.c:1503
 msgid "unique constraints not possible for domains"
 msgstr "domainlerde için unique constraint kullanılamaz"
 
-#: commands/typecmds.c:695
-#: commands/typecmds.c:1483
+#: commands/typecmds.c:708
+#: commands/typecmds.c:1509
 msgid "primary key constraints not possible for domains"
 msgstr "domainlerde için primary key constraint kullanılamaz"
 
-#: commands/typecmds.c:704
-#: commands/typecmds.c:1492
+#: commands/typecmds.c:717
+#: commands/typecmds.c:1518
 msgid "specifying constraint deferrability not supported for domains"
 msgstr "constraint srtelenebirliği domainlerde belirtilemez"
 
-#: commands/typecmds.c:823
-#: commands/typecmds.c:1735
+#: commands/typecmds.c:849
+#: commands/typecmds.c:1761
 #, c-format
 msgid "\"%s\" is not a domain"
 msgstr "\"%s\" bir domain değildir"
 
-#: commands/typecmds.c:889
+#: commands/typecmds.c:915
 #, c-format
 msgid "changing argument type of function %s from \"opaque\" to \"cstring\""
 msgstr "%s fonksiyonunun argümanı \"opaque\"tan \"cstring\"e değiştiriliyor"
 
-#: commands/typecmds.c:940
+#: commands/typecmds.c:966
 #, c-format
 msgid "changing argument type of function %s from \"opaque\" to %s"
 msgstr "%s fonksiyonunun argümanı \"opaque\"tan \"%s\"e değiştiriliyor"
 
-#: commands/typecmds.c:1039
+#: commands/typecmds.c:1065
 #, c-format
 msgid "type analyze function %s must return type \"boolean\""
 msgstr "%s tipi analiz fonksiyonu \"boolean\" tipini döndürmelidir"
 
-#: commands/typecmds.c:1068
+#: commands/typecmds.c:1094
 msgid "composite type must have at least one attribute"
 msgstr "compisite tipinde en az bir öğe olmalıdır"
 
-#: commands/typecmds.c:1299
+#: commands/typecmds.c:1325
 #, c-format
 msgid "column \"%s\" of table \"%s\" contains null values"
 msgstr "\"%2$s\" tablosunun \"%1$s\" sütununda null değerler mevcut"
 
-#: commands/typecmds.c:1563
+#: commands/typecmds.c:1589
 #, c-format
 msgid "column \"%s\" of table \"%s\" contains values that violate the new constraint"
 msgstr "\"%2$s\" tablosunun \"%1$s\" sütununda yeni constrainti ihlal eden değerler mevcut"
 
-#: commands/typecmds.c:1769
+#: commands/typecmds.c:1795
 #, c-format
 msgid "constraint \"%s\" for domain \"%s\" already exists"
 msgstr "\"%2$s\" domain için \"%1$s\" constraint için zaten mevcut"
 
-#: commands/typecmds.c:1810
-#: commands/typecmds.c:1819
+#: commands/typecmds.c:1836
+#: commands/typecmds.c:1845
 msgid "cannot use table references in domain check constraint"
 msgstr "domain check constraintte tablo referansları kullanılamaz"
 
-#: commands/typecmds.c:1831
+#: commands/typecmds.c:1857
 msgid "cannot use aggregate in check constraint"
 msgstr "check constraint içinde aggregate kullanılamaz"
 
-#: commands/typecmds.c:2049
+#: commands/typecmds.c:2075
 #, c-format
 msgid "\"%s\" is a table's row type"
 msgstr "\"%s\" bir tablo satrır tipidir"
 
-#: commands/typecmds.c:2202
+#: commands/typecmds.c:2228
 #, c-format
 msgid "type %s is already in schema \"%s\""
 msgstr "%s tipi \"%s\" şemasında zaten mevcut"
 
-#: commands/typecmds.c:2225
+#: commands/typecmds.c:2251
 #, c-format
 msgid "type \"%s\" already exists in schema \"%s\""
 msgstr "\"%s\" tipi zaten \"%s\" şemasında mevcuttur"
 
-#: commands/typecmds.c:2238
+#: commands/typecmds.c:2264
 #, c-format
 msgid "%s is a table's row type"
 msgstr "%s bir tablo satır tipidir"
 
-#: commands/typecmds.c:2240
+#: commands/typecmds.c:2266
 msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Yerine ALTER TABLE SET SCHEMA kullanın."
 
@@ -4415,9 +4432,9 @@ msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "BEFORE STATEMENT tetikleyicisi bir değer döndüremez"
 
 #: commands/trigger.c:1730
-#: executor/execMain.c:1206
-#: executor/execMain.c:1507
-#: executor/execMain.c:1652
+#: executor/execMain.c:1214
+#: executor/execMain.c:1532
+#: executor/execMain.c:1684
 msgid "could not serialize access due to concurrent update"
 msgstr "eşzamanlı update nedeniyle erişim sıralanamıyor"
 
@@ -4608,7 +4625,7 @@ msgstr "\"%s\" rolü zaten mevcut"
 #: commands/user.c:976
 #: commands/variable.c:642
 #: commands/variable.c:755
-#: utils/cache/lsyscache.c:2047
+#: utils/cache/lsyscache.c:2048
 #: utils/init/miscinit.c:404
 #, c-format
 msgid "role \"%s\" does not exist"
@@ -4797,126 +4814,131 @@ msgstr "\"%s\" view sütununun tipi değiştirilemiyor"
 msgid "view \"%s\" will be a temporary view"
 msgstr "\"%s\" view, bir geçeci view olacaktır"
 
-#: executor/execMain.c:828
+#: executor/execMain.c:836
 #, c-format
 msgid "cannot change sequence \"%s\""
 msgstr "\"%s\" sequence değiştirilemez"
 
-#: executor/execMain.c:834
+#: executor/execMain.c:842
 #, c-format
 msgid "cannot change TOAST relation \"%s\""
 msgstr "\"%s\" TOAST objesi değiştirilemez"
 
-#: executor/execMain.c:840
+#: executor/execMain.c:848
 #, c-format
 msgid "cannot change view \"%s\""
 msgstr "\"%s\" view değiştirilemiyor"
 
-#: executor/execMain.c:1780
+#: executor/execMain.c:1822
 #, c-format
 msgid "null value in column \"%s\" violates not-null constraint"
 msgstr "\"%s\" sütununda null değeri not-null kısıtlamasını ihlal ediyor"
 
-#: executor/execMain.c:1792
+#: executor/execMain.c:1834
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
 msgstr "\"%s\" balosuna girilen yeni satır \"%s\" check kısıtlamasını ihlal ediyor"
 
-#: executor/execQual.c:266
-#: executor/execQual.c:294
-#: executor/execQual.c:2171
-#: utils/adt/array_userfuncs.c:361
-#: utils/adt/arrayfuncs.c:214
-#: utils/adt/arrayfuncs.c:470
-#: utils/adt/arrayfuncs.c:1147
-#: utils/adt/arrayfuncs.c:2405
+#: executor/execQual.c:258
+#: executor/execQual.c:286
+#: executor/execQual.c:2183
+#: utils/adt/array_userfuncs.c:431
+#: utils/adt/arrayfuncs.c:206
+#: utils/adt/arrayfuncs.c:458
+#: utils/adt/arrayfuncs.c:1199
+#: utils/adt/arrayfuncs.c:2790
 #, c-format
 msgid "number of array dimensions (%d) exceeds the maximum allowed (%d)"
 msgstr "dizin boyut sayısı (%d), izin verilern en yüksek değerini (%d) aşmaktadır"
 
-#: executor/execQual.c:808
+#: executor/execQual.c:271
+#: executor/execQual.c:299
+msgid "array subscript in assignment must not be NULL"
+msgstr "atamada array subscript NULL olamaz"
+
+#: executor/execQual.c:790
 #: parser/parse_func.c:85
 #: parser/parse_func.c:393
 #, c-format
 msgid "cannot pass more than %d arguments to a function"
 msgstr "bit fonksiyona %d sayısından fazla argüman gönderilemez"
 
-#: executor/execQual.c:871
+#: executor/execQual.c:853
 msgid "functions and operators can take at most one set argument"
 msgstr "fonksiyon ve operator en çok bir tane set parametresi alabiliyorlar"
 
-#: executor/execQual.c:924
-#: executor/execQual.c:967
-#: executor/execQual.c:1260
-#: executor/execQual.c:3681
+#: executor/execQual.c:906
+#: executor/execQual.c:949
+#: executor/execQual.c:1242
+#: executor/execQual.c:3709
 #: executor/functions.c:669
 #: executor/functions.c:708
 #: utils/fmgr/funcapi.c:59
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "set değerini kabul etmediği ortamda set değeri alan fonksiyon çağırılmış"
 
-#: executor/execQual.c:1341
+#: executor/execQual.c:1323
 msgid "function returning set of rows cannot return null value"
 msgstr "satır seti döndüren fonksiyon null değerini döndüremez"
 
-#: executor/execQual.c:1420
+#: executor/execQual.c:1402
 msgid "table-function protocol for materialize mode was not followed"
 msgstr "materialize biçimi için table-function protokolü izlenmemiş"
 
-#: executor/execQual.c:1427
+#: executor/execQual.c:1409
 #, c-format
 msgid "unrecognized table-function returnMode: %d"
 msgstr "belinmeyen table-function returnMode: %d"
 
-#: executor/execQual.c:1572
+#: executor/execQual.c:1554
 msgid "IS DISTINCT FROM does not support set arguments"
 msgstr "IS DISTINCT FROM ifadesi set parametreleri desteklememektedir"
 
-#: executor/execQual.c:1645
+#: executor/execQual.c:1629
 msgid "op ANY/ALL (array) does not support set arguments"
 msgstr "op ANY/ALL (array) set parametreleri desteklememektedir"
 
-#: executor/execQual.c:2157
+#: executor/execQual.c:2169
 msgid "cannot merge incompatible arrays"
 msgstr "uyumsuz dizinleri birleştirilemez"
 
-#: executor/execQual.c:2158
+#: executor/execQual.c:2170
 #, c-format
 msgid "Array with element type %s cannot be included in ARRAY construct with element type %s."
 msgstr "%s öğe tipi olan dizin, %s öğe tipi olan dizin ile aynı ARRAY içine eklenemez"
 
-#: executor/execQual.c:2191
-#: utils/adt/arrayfuncs.c:505
+#: executor/execQual.c:2203
+#: utils/adt/arrayfuncs.c:493
 msgid "multidimensional arrays must have array expressions with matching dimensions"
 msgstr "çok boyutlu dizinler boyut sayısı kadar dizin ifade sayısına sahip olmalıdırlar"
 
-#: executor/execQual.c:2411
+#: executor/execQual.c:2439
 msgid "NULLIF does not support set arguments"
 msgstr "NULLIF, set argümanları desteklememektedir"
 
-#: executor/execQual.c:2592
+#: executor/execQual.c:2620
 #, c-format
 msgid "domain %s does not allow null values"
 msgstr "%s domaini null değerleri almamaktadır"
 
-#: executor/execQual.c:2621
+#: executor/execQual.c:2649
 #, c-format
 msgid "value for domain %s violates check constraint \"%s\""
 msgstr "%s domaine kaydedilecek değer \"%s\" check kısıtlamasını desteklememektedir"
 
-#: executor/execQual.c:2968
+#: executor/execQual.c:2996
 #: optimizer/util/clauses.c:472
 #: parser/parse_agg.c:74
 msgid "aggregate function calls may not be nested"
 msgstr "aggregate fonksiyon çağırmaları içiçe olamaz"
 
-#: executor/execQual.c:3291
+#: executor/execQual.c:3319
 #, c-format
 msgid "ROW() column has type %s instead of type %s"
 msgstr "ROW() sütünü %2$s yerine %1$s tipine sahip"
 
-#: executor/execQual.c:3356
-#: utils/adt/arrayfuncs.c:2709
+#: executor/execQual.c:3384
+#: utils/adt/arrayfuncs.c:3210
 #, c-format
 msgid "could not identify a comparison function for type %s"
 msgstr "%s tipi için karşılaştırma fonksiyonu bulunamadı"
@@ -5644,7 +5666,7 @@ msgstr "bigint tipi için değer kapsam dışındadır"
 #: libpq/pqformat.c:594
 #: libpq/pqformat.c:612
 #: libpq/pqformat.c:633
-#: utils/adt/arrayfuncs.c:1274
+#: utils/adt/arrayfuncs.c:1354
 #: utils/adt/rowtypes.c:530
 msgid "insufficient data left in message"
 msgstr "mesajda yetersiz veri kaldı"
@@ -5730,12 +5752,12 @@ msgstr "UNION JOIN implemente edilmemiş"
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to the nullable side of an outer join"
 msgstr "null değerini alabilen join tarafına SELECT FOR UPDATE/SHARE uygulanamaz"
 
-#: optimizer/plan/initsplan.c:823
+#: optimizer/plan/initsplan.c:831
 #, c-format
 msgid "could not identify an equality operator for types %s and %s"
 msgstr "%s ve %s değerleri için eşitleme işlemi bulunamadı"
 
-#: optimizer/plan/initsplan.c:836
+#: optimizer/plan/initsplan.c:844
 #, c-format
 msgid "equality operator for types %s and %s should be merge-joinable, but isn't"
 msgstr "%s ve %s için eşitleme işlemi merge-join işleminde kullanılacak şeklinde düzenlenmelidir"
@@ -5762,7 +5784,7 @@ msgstr "bir sorgu içinde hem WAIT hem de NOWAIT kullanılamaz"
 msgid "SELECT FOR UPDATE/SHARE is not allowed in subqueries"
 msgstr "subquery sorgusunda SELECT FOR UPDATE/SHARE kullanılamaz"
 
-#: optimizer/util/clauses.c:2604
+#: optimizer/util/clauses.c:2605
 #, c-format
 msgid "SQL function \"%s\" during inlining"
 msgstr "satır içine alınma işlemi sırasında \"%s\" SQL fonksiyonu"
@@ -5773,7 +5795,7 @@ msgid "JOIN/ON clause refers to \"%s\", which is not part of JOIN"
 msgstr "JOIN/ON ifadesi, JOIN parçası olmayan \"%s\" öğesine referans etmektedir"
 
 #: parser/parse_clause.c:430
-#: gram.y:5615
+#: gram.y:5627
 msgid "subquery in FROM must have an alias"
 msgstr "FROM öğersindeki subquery bir aliası almalıdır"
 
@@ -6094,7 +6116,7 @@ msgid "there is no parameter $%d"
 msgstr "$%d parametresi yoktur"
 
 #: parser/analyze.c:3181
-#: tcop/postgres.c:1293
+#: tcop/postgres.c:1266
 #, c-format
 msgid "could not determine data type of parameter $%d"
 msgstr "$%d parametrenin veri tipini belirlenemiyor"
@@ -6200,7 +6222,7 @@ msgstr "$%d parametresi için geçersiz tip bulundu"
 #: parser/parse_coerce.c:728
 #: parser/parse_coerce.c:744
 #: parser/parse_coerce.c:758
-#: parser/parse_expr.c:1804
+#: parser/parse_expr.c:1812
 #, c-format
 msgid "cannot cast type %s to %s"
 msgstr "%s tipi %s tipine dökülemiyor"
@@ -6322,17 +6344,17 @@ msgstr "%s operatörü set döndürmemelidir"
 msgid "subquery has too few columns"
 msgstr "subquery'de yetersiz sütun sayısı"
 
-#: parser/parse_expr.c:1838
-#: parser/parse_expr.c:1917
+#: parser/parse_expr.c:1846
+#: parser/parse_expr.c:1925
 msgid "unequal number of entries in row expression"
 msgstr "satır ifadesinde eşitsiz öğe sayısı"
 
-#: parser/parse_expr.c:1859
+#: parser/parse_expr.c:1867
 #, c-format
 msgid "operator %s is not supported for row expressions"
 msgstr "satır ifadelerinde %s işlemi kullanılamaz"
 
-#: parser/parse_expr.c:1954
+#: parser/parse_expr.c:1962
 msgid "IS DISTINCT FROM requires = operator to yield boolean"
 msgstr "boolean değerini almak için IS DISTINCT FROM, = işlemini kullanmalıdır"
 
@@ -6423,7 +6445,7 @@ msgid "operator does not exist: %s"
 msgstr "operator mevcut değil: %s"
 
 #: parser/parse_oper.c:185
-#: utils/adt/arrayfuncs.c:2560
+#: utils/adt/arrayfuncs.c:3009
 #: utils/adt/ri_triggers.c:3641
 #, c-format
 msgid "could not identify an equality operator for type %s"
@@ -6618,7 +6640,7 @@ msgstr ""
 "Escape için standart sözdizimini kullanın, örneğin, E'\\r\\n"
 "'."
 
-#: y.tab.c:10429
+#: y.tab.c:10500
 msgid "syntax error: cannot back up"
 msgstr "sözdizimi hatası: geri diilemiyor"
 
@@ -6628,15 +6650,15 @@ msgid "time zone interval must be HOUR or HOUR TO MINUTE"
 msgstr "zaman dilimi aralığı  HOUR veya HOUR TO MINUTE olmalıdır"
 
 #: gram.y:1130
-#: gram.y:5923
-#: gram.y:7986
+#: gram.y:5935
+#: gram.y:8008
 #, c-format
 msgid "INTERVAL(%d) precision must not be negative"
 msgstr "INTEVRAL(%d) kesinliği sıfırdan küçük olamaz"
 
 #: gram.y:1136
-#: gram.y:5929
-#: gram.y:7992
+#: gram.y:5941
+#: gram.y:8014
 #, c-format
 msgid "INTERVAL(%d) precision reduced to maximum allowed, %d"
 msgstr "INTEVRAL(%d) kesinliği izin verilen en yüksek değerine (%d) düşürülmüştür"
@@ -6674,182 +6696,182 @@ msgid "DROP ASSERTION is not yet implemented"
 msgstr "DROP ASSERTION implemente edilmemiştir"
 
 #: utils/adt/regproc.c:637
-#: gram.y:3797
+#: gram.y:3809
 msgid "missing argument"
 msgstr "argüman eksik"
 
 #: utils/adt/regproc.c:638
-#: gram.y:3798
+#: gram.y:3810
 msgid "Use NONE to denote the missing argument of a unary operator."
 msgstr "Unary operator'un bir argümanı eksik olduğunu göstermek için NONE kullanın"
 
-#: gram.y:4981
+#: gram.y:4993
 msgid "column name list not allowed in CREATE TABLE / AS EXECUTE"
 msgstr "CREATE TABLE / AS EXECUTE işleminde sütun isim listesi verilmez"
 
-#: gram.y:5458
+#: gram.y:5470
 msgid "LIMIT #,# syntax is not supported"
 msgstr "LIMIT #,# sözdizimi desteklenmemektedir"
 
-#: gram.y:5459
+#: gram.y:5471
 msgid "Use separate LIMIT and OFFSET clauses."
 msgstr "Ayrı LIMIT ve OFFSET ifadeleri kullanın."
 
-#: gram.y:5616
+#: gram.y:5628
 msgid "For example, FROM (SELECT ...) [AS] foo."
 msgstr "Örneğin, FROM (SELECT ...) [AS] birşey."
 
-#: gram.y:6026
+#: gram.y:6038
 msgid "precision for type float must be at least 1 bit"
 msgstr "float veri tipinin kesinliği en az 1 bit olmalıdır"
 
-#: gram.y:6034
+#: gram.y:6046
 msgid "precision for type float must be less than 54 bits"
 msgstr "float veri tipinin kesinliği ne çok 54 bit olabilir"
 
-#: gram.y:6048
-#: gram.y:6063
+#: gram.y:6060
+#: gram.y:6075
 #, c-format
 msgid "NUMERIC precision %d must be between 1 and %d"
 msgstr "NUMERIC precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6053
+#: gram.y:6065
 #, c-format
 msgid "NUMERIC scale %d must be between 0 and precision %d"
 msgstr "NUMERIC %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6081
-#: gram.y:6096
+#: gram.y:6093
+#: gram.y:6108
 #, c-format
 msgid "DECIMAL precision %d must be between 1 and %d"
 msgstr "DECIMAL precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6086
+#: gram.y:6098
 #, c-format
 msgid "DECIMAL scale %d must be between 0 and precision %d"
 msgstr "DECIMAL %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6146
-#: gram.y:6224
+#: gram.y:6158
+#: gram.y:6236
 #, c-format
 msgid "length for type %s must be at least 1"
 msgstr "%s tipinin uzunluğu en az 1 olmalıdır"
 
-#: gram.y:6151
-#: gram.y:6229
+#: gram.y:6163
+#: gram.y:6241
 #, c-format
 msgid "length for type %s cannot exceed %d"
 msgstr "%s tipin uzunluğu %d değerini aşamaz"
 
-#: gram.y:6302
+#: gram.y:6314
 #, c-format
 msgid "TIMESTAMP(%d)%s precision must not be negative"
 msgstr "TIMESTAMP(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6308
+#: gram.y:6320
 #, c-format
 msgid "TIMESTAMP(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIMESTAMP(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6335
+#: gram.y:6347
 #, c-format
 msgid "TIME(%d)%s precision must not be negative"
 msgstr "TIME(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6341
+#: gram.y:6353
 #, c-format
 msgid "TIME(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIME(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6802
+#: gram.y:6814
 msgid "UNIQUE predicate is not yet implemented"
 msgstr "UNIQUE predicate implemente edilmemiştir"
 
-#: gram.y:7073
+#: gram.y:7085
 #, c-format
 msgid "CURRENT_TIME(%d) precision must not be negative"
 msgstr "CURRENT_TIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7079
+#: gram.y:7091
 #, c-format
 msgid "CURRENT_TIME(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7117
+#: gram.y:7129
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision must not be negative"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7123
+#: gram.y:7135
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7164
+#: gram.y:7176
 #, c-format
 msgid "LOCALTIME(%d) precision must not be negative"
 msgstr "LOCALTIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7170
+#: gram.y:7182
 #, c-format
 msgid "LOCALTIME(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7212
+#: gram.y:7224
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision must not be negative"
 msgstr "LOCALTIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7218
+#: gram.y:7230
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:8458
+#: gram.y:8481
 msgid "OLD used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda OLD kullanıldı"
 
-#: gram.y:8467
+#: gram.y:8490
 msgid "NEW used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda NEW kullanıldı"
 
-#: y.tab.c:20467
+#: y.tab.c:20560
 msgid "syntax error; also virtual memory exhausted"
 msgstr "parse hatası; ayrıca vertual bellek de dolmuştur"
 
-#: gram.y:8692
-#: gram.y:8694
-#: gram.y:8711
-#: gram.y:8713
-#: y.tab.c:20471
+#: gram.y:8715
+#: gram.y:8717
+#: gram.y:8734
+#: gram.y:8736
+#: y.tab.c:20564
 msgid "syntax error"
 msgstr "söz dizim hatası "
 
-#: y.tab.c:20585
+#: y.tab.c:20678
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
-#: gram.y:8666
+#: gram.y:8689
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sol tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8672
+#: gram.y:8695
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sağ tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8771
+#: gram.y:8794
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "birden çok ORDER BY ifadesi kullanılamaz"
 
-#: gram.y:8779
+#: gram.y:8802
 msgid "multiple FOR UPDATE/FOR SHARE clauses not allowed"
 msgstr "birden çok FOR UPDATE/FOR SHARE ifadesi kullanılamaz"
 
-#: gram.y:8787
+#: gram.y:8810
 msgid "multiple OFFSET clauses not allowed"
 msgstr "birden fazla OFFSET ifadesi desteklenmemektedir"
 
-#: gram.y:8795
+#: gram.y:8818
 msgid "multiple LIMIT clauses not allowed"
 msgstr "birden çok LIMIT ifadesi kullanılamaz"
 
@@ -7841,16 +7863,16 @@ msgstr "\"%2$s\" tablosunun %1$u bloğunda geçersiz sayfa başlığı; sayfa s�
 msgid "invalid page header in block %u of relation \"%s\""
 msgstr "\"%2$s\" tablosunun %1$u bloğunda geçersiz sayfa başlığı"
 
-#: storage/buffer/bufmgr.c:2067
+#: storage/buffer/bufmgr.c:2050
 #, c-format
 msgid "could not write block %u of %u/%u/%u"
 msgstr "%2$u/%3$u/%4$u nesnesinin %1$u bloku yazılamıyor"
 
-#: storage/buffer/bufmgr.c:2072
+#: storage/buffer/bufmgr.c:2055
 msgid "Multiple failures --- write error may be permanent."
 msgstr "Çoklu bozukluk --- yazma hatası kalıcı olabilir."
 
-#: storage/buffer/bufmgr.c:2089
+#: storage/buffer/bufmgr.c:2072
 #, c-format
 msgid "writing block %u of relation %u/%u/%u"
 msgstr "block: %u nesne %u/%u/%u yazılıyor"
@@ -8116,84 +8138,85 @@ msgstr "%u/%u/%u nesnesi %u blok botutuna kadar kesilemiyor: %m"
 msgid "could not sync relation %u/%u/%u: %m"
 msgstr "nesne %u/%u/%u sync hatası: %m"
 
-#: tcop/postgres.c:342
-#: tcop/postgres.c:354
-#: tcop/postgres.c:365
-#: tcop/postgres.c:377
+#: tcop/postgres.c:345
+#: tcop/postgres.c:357
+#: tcop/postgres.c:368
+#: tcop/postgres.c:380
 #: tcop/postgres.c:3379
 #, c-format
 msgid "invalid frontend message type %d"
 msgstr "geçersiz frontend mesaj tipi %d"
 
-#: tcop/postgres.c:599
+#: tcop/postgres.c:602
 #, c-format
 msgid "statement: %s%s"
 msgstr "komut: %s%s"
 
 #: tcop/fastpath.c:302
-#: tcop/postgres.c:936
-#: tcop/postgres.c:1265
-#: tcop/postgres.c:1792
+#: tcop/postgres.c:925
+#: tcop/postgres.c:1239
+#: tcop/postgres.c:1437
+#: tcop/postgres.c:1743
 msgid "current transaction is aborted, commands ignored until end of transaction block"
 msgstr "geçerli transaction durduruldu, transaction blokunun sonua kadar komutlar yok sayılacak"
 
-#: tcop/postgres.c:1097
-#: tcop/postgres.c:1862
+#: tcop/postgres.c:1085
+#: tcop/postgres.c:1812
 #, c-format
 msgid "duration: %ld.%03ld ms"
 msgstr "süre: %ld.%03ld milisaniye"
 
-#: tcop/postgres.c:1110
+#: tcop/postgres.c:1098
 #, c-format
 msgid "duration: %ld.%03ld ms  statement: %s%s"
 msgstr "süre: %ld.%03ld milisaniye  deyim: %s%s"
 
-#: tcop/postgres.c:1161
+#: tcop/postgres.c:1149
 #, c-format
 msgid "statement: PREPARE %s AS %s"
 msgstr "komut: PREPARE %s AS %s"
 
-#: tcop/postgres.c:1227
+#: tcop/postgres.c:1215
 msgid "cannot insert multiple commands into a prepared statement"
 msgstr "önceden hazırlanmış komuta çoklu komut eklenemez"
 
-#: tcop/postgres.c:1430
+#: tcop/postgres.c:1402
 #, c-format
 msgid "bind message has %d parameter formats but %d parameters"
 msgstr "bind mesajı %d argüman biçimi ve %d argüman içeriyor"
 
-#: tcop/postgres.c:1443
-#: tcop/postgres.c:1913
+#: tcop/postgres.c:1415
+#: tcop/postgres.c:1863
 msgid "unnamed prepared statement does not exist"
 msgstr "ismi verilmemiş hazırlamış komut mevcut değil"
 
-#: tcop/postgres.c:1449
+#: tcop/postgres.c:1421
 #, c-format
 msgid "bind message supplies %d parameters, but prepared statement \"%s\" requires %d"
 msgstr "bind mesajı   %d parametre veriyor ancak \"%s\" hazırlanmış deymi %d gerektirir"
 
-#: tcop/postgres.c:1464
+#: tcop/postgres.c:1452
 #, c-format
 msgid "statement: <BIND> %s"
 msgstr "komut: <BIND> %s"
 
-#: tcop/postgres.c:1574
+#: tcop/postgres.c:1550
 #, c-format
 msgid "incorrect binary data format in bind parameter %d"
 msgstr "bind parametresinde geçersiz ikili veri %d"
 
-#: tcop/postgres.c:1688
-#: tcop/postgres.c:1960
+#: tcop/postgres.c:1660
+#: tcop/postgres.c:1910
 #, c-format
 msgid "portal \"%s\" does not exist"
 msgstr "portal \"%s\" mevcut değildir"
 
-#: tcop/postgres.c:1744
+#: tcop/postgres.c:1716
 #, c-format
 msgid "statement: %sEXECUTE %s  [PREPARE:  %s]"
 msgstr "deyim: %sEXECUTE %s  [PREPARE:  %s]"
 
-#: tcop/postgres.c:1875
+#: tcop/postgres.c:1825
 #, c-format
 msgid "duration: %ld.%03ld ms  statement: %sEXECUTE %s  [PREPARE:  %s]"
 msgstr "süre: %ld.%03ld milisaniye  deyim: %sEXECUTE %s  [PREPARE:  %s]"
@@ -8387,56 +8410,76 @@ msgstr "fonksiyon çağırma mesajı %d argüman biçimi ve %d argüman içeriyo
 msgid "incorrect binary data format in function argument %d"
 msgstr "%d fonksiyon argümanında geçersiz ikili veri"
 
-#: tcop/utility.c:77
+#: tcop/utility.c:78
 #, c-format
 msgid "table \"%s\" does not exist"
 msgstr "tablo \"%s\" mevcut değil"
 
 #: tcop/utility.c:79
+#, c-format
+msgid "table \"%s\" does not exist, skipping"
+msgstr "tablo \"%s\" mevcut değil, atlanıyor"
+
+#: tcop/utility.c:81
 msgid "Use DROP TABLE to remove a table."
 msgstr "Bir tabloyu kaldırmak için DROP TABLE KULLANIN."
 
-#: tcop/utility.c:82
+#: tcop/utility.c:84
 #, c-format
 msgid "sequence \"%s\" does not exist"
 msgstr "sequence \"%s\" mevcut değil"
 
-#: tcop/utility.c:84
+#: tcop/utility.c:85
+#, c-format
+msgid "sequence \"%s\" does not exist, skipping"
+msgstr "sequence \"%s\" mevcut değil, atlanıyor"
+
+#: tcop/utility.c:87
 msgid "Use DROP SEQUENCE to remove a sequence."
 msgstr "Bir sequence kaldırmak için DROP SEQUENCE kullanın."
 
-#: tcop/utility.c:87
+#: tcop/utility.c:90
 #, c-format
 msgid "view \"%s\" does not exist"
 msgstr "view \"%s\" mevcut değil"
 
-#: tcop/utility.c:89
+#: tcop/utility.c:91
+#, c-format
+msgid "view \"%s\" does not exist, skipping"
+msgstr "view \"%s\" mevcut değil, atlanıyor"
+
+#: tcop/utility.c:93
 msgid "Use DROP VIEW to remove a view."
 msgstr "Bir view kaldırmak için DROP VIEW kullanın."
 
-#: tcop/utility.c:92
+#: tcop/utility.c:96
 #, c-format
 msgid "index \"%s\" does not exist"
 msgstr "\"%s\" indexi mevcut değil"
 
-#: tcop/utility.c:94
+#: tcop/utility.c:97
+#, c-format
+msgid "index \"%s\" does not exist, skipping"
+msgstr "\"%s\" indexi mevcut değil, atlanıyor"
+
+#: tcop/utility.c:99
 msgid "Use DROP INDEX to remove an index."
 msgstr "Bir index kaldırmak için DROP INDEX kullanın."
 
-#: tcop/utility.c:98
+#: tcop/utility.c:104
 #, c-format
 msgid "\"%s\" is not a type"
 msgstr "\"%s\" bir tip değildir"
 
-#: tcop/utility.c:99
+#: tcop/utility.c:105
 msgid "Use DROP TYPE to remove a type."
 msgstr "Bir tipi kaldırmak için DROP TYPE kullanın."
 
-#: tcop/utility.c:842
+#: tcop/utility.c:878
 msgid "must be superuser to do LOAD"
 msgstr "LOAD yapmak için superuser olmalısınız"
 
-#: tcop/utility.c:998
+#: tcop/utility.c:1034
 msgid "must be superuser to do CHECKPOINT"
 msgstr "CHECKPOINT yapmak için superuser olmalısınız"
 
@@ -8453,140 +8496,172 @@ msgstr "cursor sadece ileri doğru gidebilir"
 msgid "Declare it with SCROLL option to enable backward scan."
 msgstr "Geriye gitmesini sağlamak için SCROLL seçeneği ile bildirin."
 
-#: utils/adt/array_userfuncs.c:50
+#: utils/adt/array_userfuncs.c:51
 msgid "could not determine input data types"
 msgstr "giriş veri tipleri belirlenemiyor"
 
-#: utils/adt/array_userfuncs.c:72
+#: utils/adt/array_userfuncs.c:85
 msgid "neither input type is an array"
 msgstr "giriş tiplerinin hiçbiri array değildir"
 
-#: utils/adt/array_userfuncs.c:99
+#: utils/adt/array_userfuncs.c:106
+#: utils/adt/array_userfuncs.c:116
+#: utils/adt/float.c:1111
+#: utils/adt/float.c:1177
+#: utils/adt/int.c:669
+#: utils/adt/int.c:698
+#: utils/adt/int.c:719
+#: utils/adt/int.c:749
+#: utils/adt/int.c:775
+#: utils/adt/int.c:790
+#: utils/adt/int.c:924
+#: utils/adt/int.c:945
+#: utils/adt/int.c:972
+#: utils/adt/int.c:1007
+#: utils/adt/int.c:1028
+#: utils/adt/int.c:1055
+#: utils/adt/int.c:1081
+#: utils/adt/int.c:1160
+#: utils/adt/int8.c:986
+#: utils/adt/numeric.c:1780
+#: utils/adt/numeric.c:1789
+#: utils/adt/varbit.c:1291
+msgid "integer out of range"
+msgstr "integer sıra dışıdır"
+
+#: utils/adt/array_userfuncs.c:124
 msgid "argument must be empty or one-dimensional array"
 msgstr "argüman boş veya tek boyutlu dizi olmalıdır"
 
-#: utils/adt/array_userfuncs.c:175
-#: utils/adt/array_userfuncs.c:214
-#: utils/adt/array_userfuncs.c:247
-#: utils/adt/array_userfuncs.c:279
-#: utils/adt/array_userfuncs.c:307
+#: utils/adt/array_userfuncs.c:227
+#: utils/adt/array_userfuncs.c:266
+#: utils/adt/array_userfuncs.c:303
+#: utils/adt/array_userfuncs.c:332
+#: utils/adt/array_userfuncs.c:360
 msgid "cannot concatenate incompatible arrays"
 msgstr "uyumsuz arrayları birleştirilemez"
 
-#: utils/adt/array_userfuncs.c:176
+#: utils/adt/array_userfuncs.c:228
 #, c-format
 msgid "Arrays with element types %s and %s are not compatible for concatenation."
 msgstr "Öğe tipleri %s ve %s olan dizileri bitiştirmede kullanılamaz."
 
-#: utils/adt/array_userfuncs.c:215
+#: utils/adt/array_userfuncs.c:267
 #, c-format
 msgid "Arrays of %d and %d dimensions are not compatible for concatenation."
 msgstr "Bitiştirmede %d ve %d boyutlu dizileri kullanılamaz."
 
-#: utils/adt/array_userfuncs.c:248
+#: utils/adt/array_userfuncs.c:304
 msgid "Arrays with differing element dimensions are not compatible for concatenation."
 msgstr "Bitiştirmede öğeleri farklı boyutlu olan dizileri kullanılamaz."
 
-#: utils/adt/array_userfuncs.c:280
-#: utils/adt/array_userfuncs.c:308
+#: utils/adt/array_userfuncs.c:333
+#: utils/adt/array_userfuncs.c:361
 msgid "Arrays with differing dimensions are not compatible for concatenation."
 msgstr "Bitiştirmede farklı boyutlu dizileri kullanılamaz."
 
-#: utils/adt/array_userfuncs.c:353
-#, c-format
-msgid "invalid array element type OID: %u"
-msgstr "array öğenin tipi geçersiz OID: %u"
-
-#: utils/adt/array_userfuncs.c:357
-#: utils/adt/arrayfuncs.c:1143
-#: utils/adt/arrayfuncs.c:2401
+#: utils/adt/array_userfuncs.c:427
+#: utils/adt/arrayfuncs.c:1195
+#: utils/adt/arrayfuncs.c:2786
 #, c-format
 msgid "invalid number of dimensions: %d"
 msgstr "boyut sayısı geçersiz: %d"
 
-#: utils/adt/acl.c:145
+#: utils/adt/acl.c:146
 #: utils/adt/name.c:90
 msgid "identifier too long"
 msgstr "tanımlayıcı fazla uzun"
 
-#: utils/adt/acl.c:146
+#: utils/adt/acl.c:147
 #: utils/adt/name.c:91
 #, c-format
 msgid "Identifier must be less than %d characters."
 msgstr "Tamılayıcı %d karakterden daha küçük olmalı."
 
-#: utils/adt/acl.c:232
+#: utils/adt/acl.c:233
 #, c-format
 msgid "unrecognized key word: \"%s\""
 msgstr "anahtar kelimesi anlaşılamıyor: \"%s\""
 
-#: utils/adt/acl.c:233
+#: utils/adt/acl.c:234
 msgid "ACL key word must be \"group\" or \"user\"."
 msgstr "ACL anahtar kelimesi  \"group\" veya \"user\" olmalıdır."
 
-#: utils/adt/acl.c:238
+#: utils/adt/acl.c:239
 msgid "missing name"
 msgstr "isim eksik"
 
-#: utils/adt/acl.c:239
+#: utils/adt/acl.c:240
 msgid "A name must follow the \"group\" or \"user\" key word."
 msgstr "\"group\" veya \"user\" anahter kelimesini isim izlemelidir."
 
-#: utils/adt/acl.c:245
+#: utils/adt/acl.c:246
 msgid "missing \"=\" sign"
 msgstr "\"=\" işareti eksik"
 
-#: utils/adt/acl.c:292
+#: utils/adt/acl.c:293
 #, c-format
 msgid "invalid mode character: must be one of \"%s\""
 msgstr "geçersiz biçim karakteri: şunlardan biri olmalıdır: \"%s\""
 
-#: utils/adt/acl.c:314
+#: utils/adt/acl.c:315
 msgid "a name must follow the \"/\" sign"
 msgstr "\"/\" karakterini bir isim izlemelidir"
 
-#: utils/adt/acl.c:322
+#: utils/adt/acl.c:323
 #, c-format
 msgid "defaulting grantor to user ID %u"
 msgstr "varsayılan bağışlayıcı kullanıcı ID %u"
 
-#: utils/adt/acl.c:383
+#: utils/adt/acl.c:372
+msgid "ACL array contains wrong datatype"
+msgstr "ACL array yanlış veri tipini içermektedir"
+
+#: utils/adt/acl.c:376
+msgid "ACL arrays must be one-dimensional"
+msgstr "ACL array tek boyutlu olmalıdır"
+
+#: utils/adt/acl.c:380
+msgid "ACL arrays must not contain nulls"
+msgstr "ACL array null kayıtları içeremez"
+
+#: utils/adt/acl.c:404
 msgid "extra garbage at the end of the ACL specification"
 msgstr "ACL tanımının sonunda fuzuli karakterler"
 
-#: utils/adt/acl.c:886
+#: utils/adt/acl.c:904
 msgid "grant options cannot be granted back to your own grantor"
 msgstr "grant seçenekleri kendi kendine verilemez"
 
-#: utils/adt/acl.c:945
+#: utils/adt/acl.c:965
 msgid "dependent privileges exist"
 msgstr "bağlı haklar mevcut"
 
-#: utils/adt/acl.c:946
+#: utils/adt/acl.c:966
 msgid "Use CASCADE to revoke them too."
 msgstr "Onları da geri almak için CASCADE kullanın."
 
-#: utils/adt/acl.c:1219
+#: utils/adt/acl.c:1245
 msgid "aclinsert is no longer supported"
 msgstr "aclinsert artık desteklenmemktedir"
 
-#: utils/adt/acl.c:1229
+#: utils/adt/acl.c:1255
 msgid "aclremove is no longer supported"
 msgstr "aclremove artık desteklenmemktedir"
 
-#: utils/adt/acl.c:1313
-#: utils/adt/acl.c:1537
-#: utils/adt/acl.c:1749
-#: utils/adt/acl.c:1953
-#: utils/adt/acl.c:2157
-#: utils/adt/acl.c:2366
-#: utils/adt/acl.c:2567
-#: utils/adt/acl.c:2758
+#: utils/adt/acl.c:1340
+#: utils/adt/acl.c:1564
+#: utils/adt/acl.c:1776
+#: utils/adt/acl.c:1980
+#: utils/adt/acl.c:2184
+#: utils/adt/acl.c:2393
+#: utils/adt/acl.c:2594
+#: utils/adt/acl.c:2785
 #, c-format
 msgid "unrecognized privilege type: \"%s\""
 msgstr "bilinmeyen hak türü: \"%s\""
 
-#: utils/adt/acl.c:1926
+#: utils/adt/acl.c:1953
 #: utils/adt/regproc.c:116
 #: utils/adt/regproc.c:137
 #: utils/adt/regproc.c:289
@@ -8594,7 +8669,7 @@ msgstr "bilinmeyen hak türü: \"%s\""
 msgid "function \"%s\" does not exist"
 msgstr "\"%s\" fonksiyonu mevcut değil"
 
-#: utils/adt/acl.c:3066
+#: utils/adt/acl.c:3093
 #, c-format
 msgid "must be member of role \"%s\""
 msgstr "\"%s\" rolüne dahil olmalıdır"
@@ -8611,126 +8686,137 @@ msgstr "escape satırı geçersiz"
 msgid "Escape string must be empty or one character."
 msgstr "Kaçış dizisi boş veya bir karakter olmalıdır."
 
-#: utils/adt/arrayfuncs.c:221
-#: utils/adt/arrayfuncs.c:233
+#: utils/adt/arrayfuncs.c:213
+#: utils/adt/arrayfuncs.c:225
 msgid "missing dimension value"
 msgstr "boyut değeri eksik"
 
-#: utils/adt/arrayfuncs.c:243
+#: utils/adt/arrayfuncs.c:235
 msgid "missing \"]\" in array dimensions"
 msgstr "array tanımında \"]\" eksik"
 
-#: utils/adt/arrayfuncs.c:251
+#: utils/adt/arrayfuncs.c:243
 msgid "upper bound cannot be less than lower bound"
 msgstr "üst sınır alt sınırından düşük olamaz"
 
-#: utils/adt/arrayfuncs.c:263
-#: utils/adt/arrayfuncs.c:289
+#: utils/adt/arrayfuncs.c:255
+#: utils/adt/arrayfuncs.c:281
 msgid "array value must start with \"{\" or dimension information"
 msgstr "array değeri ya \"{\" ile ya da boyut bilgisi ile başlamalıdır"
 
-#: utils/adt/arrayfuncs.c:277
+#: utils/adt/arrayfuncs.c:269
 msgid "missing assignment operator"
 msgstr "atama işlemi eksik"
 
-#: utils/adt/arrayfuncs.c:294
-#: utils/adt/arrayfuncs.c:300
+#: utils/adt/arrayfuncs.c:286
+#: utils/adt/arrayfuncs.c:292
 msgid "array dimensions incompatible with array literal"
 msgstr "array boyutları array değişmezi ile uyumsuz"
 
-#: utils/adt/arrayfuncs.c:326
-msgid "missing left brace"
-msgstr "eksik sol parantez"
-
-#: utils/adt/arrayfuncs.c:407
-#: utils/adt/arrayfuncs.c:422
-#: utils/adt/arrayfuncs.c:431
-#: utils/adt/arrayfuncs.c:445
-#: utils/adt/arrayfuncs.c:465
-#: utils/adt/arrayfuncs.c:493
-#: utils/adt/arrayfuncs.c:498
-#: utils/adt/arrayfuncs.c:538
-#: utils/adt/arrayfuncs.c:559
-#: utils/adt/arrayfuncs.c:578
-#: utils/adt/arrayfuncs.c:671
-#: utils/adt/arrayfuncs.c:680
-#: utils/adt/arrayfuncs.c:708
-#: utils/adt/arrayfuncs.c:723
-#: utils/adt/arrayfuncs.c:776
+#: utils/adt/arrayfuncs.c:395
+#: utils/adt/arrayfuncs.c:410
+#: utils/adt/arrayfuncs.c:419
+#: utils/adt/arrayfuncs.c:433
+#: utils/adt/arrayfuncs.c:453
+#: utils/adt/arrayfuncs.c:481
+#: utils/adt/arrayfuncs.c:486
+#: utils/adt/arrayfuncs.c:526
+#: utils/adt/arrayfuncs.c:547
+#: utils/adt/arrayfuncs.c:566
+#: utils/adt/arrayfuncs.c:676
+#: utils/adt/arrayfuncs.c:685
+#: utils/adt/arrayfuncs.c:715
+#: utils/adt/arrayfuncs.c:730
+#: utils/adt/arrayfuncs.c:783
 #, c-format
 msgid "malformed array literal: \"%s\""
 msgstr "array literal bozuk: \"%s\""
 
-#: utils/adt/arrayfuncs.c:1154
+#: utils/adt/arrayfuncs.c:822
+#: utils/adt/arrayfuncs.c:1416
+#: utils/adt/arrayfuncs.c:2670
+#: utils/adt/arrayfuncs.c:2818
+#: utils/adt/arrayutils.c:91
+#: utils/adt/arrayutils.c:99
+#: utils/adt/arrayutils.c:106
+#, c-format
+msgid "array size exceeds the maximum allowed (%d)"
+msgstr "dizin boyutu izin verilern en yüksek değerini (%d) aşmaktadır"
+
+#: utils/adt/arrayfuncs.c:1206
 msgid "invalid array flags"
 msgstr "array flags geçersiz"
 
-#: utils/adt/arrayfuncs.c:1162
+#: utils/adt/arrayfuncs.c:1214
 msgid "wrong element type"
 msgstr "element tipi yanlış"
 
-#: utils/adt/arrayfuncs.c:1196
+#: utils/adt/arrayfuncs.c:1250
 #: utils/cache/lsyscache.c:1759
 #, c-format
 msgid "no binary input function available for type %s"
 msgstr "%s tipi için ikili giriş fonksiyonu mevcut değil"
 
-#: utils/adt/arrayfuncs.c:1302
+#: utils/adt/arrayfuncs.c:1390
 #, c-format
 msgid "improper binary format in array element %d"
 msgstr "%d dizi öğesi için geçersiz ikili biçimi"
 
-#: utils/adt/arrayfuncs.c:1380
+#: utils/adt/arrayfuncs.c:1472
 #: utils/cache/lsyscache.c:1794
 #, c-format
 msgid "no binary output function available for type %s"
 msgstr "%s tipi için ikili çıkış fonksiyonu mevcut değil"
 
-#: utils/adt/arrayfuncs.c:1652
+#: utils/adt/arrayfuncs.c:1811
 msgid "slices of fixed-length arrays not implemented"
 msgstr "sabit-uzunluklu dizinlerin dilimleri implemente edilmemiş"
 
-#: utils/adt/arrayfuncs.c:1789
-#: utils/adt/arrayfuncs.c:1794
-#: utils/adt/arrayfuncs.c:1834
-#: utils/adt/arrayfuncs.c:1856
-#: utils/adt/arrayfuncs.c:1868
-#: utils/adt/arrayfuncs.c:2029
-#: utils/adt/arrayfuncs.c:2045
-#: utils/adt/arrayfuncs.c:2056
-#: utils/adt/arrayfuncs.c:2065
-#: utils/adt/arrayfuncs.c:2076
+#: utils/adt/arrayfuncs.c:1982
+#: utils/adt/arrayfuncs.c:1987
+#: utils/adt/arrayfuncs.c:2004
+#: utils/adt/arrayfuncs.c:2038
+#: utils/adt/arrayfuncs.c:2060
+#: utils/adt/arrayfuncs.c:2072
+#: utils/adt/arrayfuncs.c:2308
+#: utils/adt/arrayfuncs.c:2324
+#: utils/adt/arrayfuncs.c:2335
+#: utils/adt/arrayfuncs.c:2344
+#: utils/adt/arrayfuncs.c:2355
 msgid "invalid array subscripts"
 msgstr "array subscript yanlış"
 
-#: utils/adt/arrayfuncs.c:1985
+#: utils/adt/arrayfuncs.c:1992
+msgid "cannot assign NULL to an element of a fixed-length array"
+msgstr "sabit uzunluklu array elementine NULL değeri atanamaz"
+
+#: utils/adt/arrayfuncs.c:2262
 msgid "updates on slices of fixed-length arrays not implemented"
 msgstr "sabit-uzunluklu dizinlerin dilimleri üzerinde update implemente edilmemiş"
 
-#: utils/adt/arrayfuncs.c:2020
-#: utils/adt/arrayfuncs.c:2088
+#: utils/adt/arrayfuncs.c:2298
+#: utils/adt/arrayfuncs.c:2370
 msgid "source array too small"
 msgstr "kaynak array küçük"
 
-#: utils/adt/arrayfuncs.c:2304
-#: utils/adt/arrayfuncs.c:3304
-msgid "null array elements not supported"
-msgstr "null array öğeleri desteklenmemektedir"
+#: utils/adt/arrayfuncs.c:2925
+msgid "NULL array element not allowed in this context"
+msgstr "bu ortamda NULL array elementi kabul edilmemektedir"
 
-#: utils/adt/arrayfuncs.c:2538
-#: utils/adt/arrayfuncs.c:2692
+#: utils/adt/arrayfuncs.c:2986
+#: utils/adt/arrayfuncs.c:3193
 msgid "cannot compare arrays of different element types"
 msgstr "farklı öğe tipli dizinleri karşılaştırılamaz"
 
-#: utils/adt/arrayfuncs.c:3107
+#: utils/adt/arrayfuncs.c:3918
 msgid "could not determine target array type"
 msgstr "hedef array tipini belirlenemiyor"
 
-#: utils/adt/arrayfuncs.c:3113
+#: utils/adt/arrayfuncs.c:3924
 msgid "target type is not an array"
 msgstr "hedef tipi array değildir"
 
-#: utils/adt/arrayfuncs.c:3125
+#: utils/adt/arrayfuncs.c:3936
 msgid "array coercion to domain type elements not currently supported"
 msgstr "dizin öğe tipi dimention tipine zorla dönüştürme şu an desteklenmiyor"
 
@@ -8755,8 +8841,8 @@ msgstr "money tipi için geçersiz giriş siz dizimi: \"%s\""
 #: utils/adt/cash.c:653
 #: utils/adt/float.c:775
 #: utils/adt/float.c:839
-#: utils/adt/float.c:2131
-#: utils/adt/float.c:2193
+#: utils/adt/float.c:2132
+#: utils/adt/float.c:2194
 #: utils/adt/geo_ops.c:3967
 #: utils/adt/int.c:763
 #: utils/adt/int.c:891
@@ -8770,7 +8856,7 @@ msgstr "money tipi için geçersiz giriş siz dizimi: \"%s\""
 #: utils/adt/int8.c:646
 #: utils/adt/int8.c:800
 #: utils/adt/int8.c:894
-#: utils/adt/numeric.c:3866
+#: utils/adt/numeric.c:3869
 #: utils/adt/timestamp.c:2386
 msgid "division by zero"
 msgstr "sıfırla bölüm"
@@ -8979,8 +9065,8 @@ msgstr "real tipi için kapsam dışı bir değer \"%s\""
 #: utils/adt/float.c:441
 #: utils/adt/float.c:482
 #: utils/adt/float.c:506
-#: utils/adt/numeric.c:3346
-#: utils/adt/numeric.c:3372
+#: utils/adt/numeric.c:3349
+#: utils/adt/numeric.c:3375
 #, c-format
 msgid "invalid input syntax for type double precision: \"%s\""
 msgstr "double precision tipi için geçersiz biçim: \"%s\""
@@ -8989,29 +9075,6 @@ msgstr "double precision tipi için geçersiz biçim: \"%s\""
 #, c-format
 msgid "\"%s\" is out of range for type double precision"
 msgstr "double precision tipi için kapsam dışı bir değer \"%s\""
-
-#: utils/adt/float.c:1111
-#: utils/adt/float.c:1177
-#: utils/adt/int.c:669
-#: utils/adt/int.c:698
-#: utils/adt/int.c:719
-#: utils/adt/int.c:749
-#: utils/adt/int.c:775
-#: utils/adt/int.c:790
-#: utils/adt/int.c:924
-#: utils/adt/int.c:945
-#: utils/adt/int.c:972
-#: utils/adt/int.c:1007
-#: utils/adt/int.c:1028
-#: utils/adt/int.c:1055
-#: utils/adt/int.c:1081
-#: utils/adt/int.c:1160
-#: utils/adt/int8.c:986
-#: utils/adt/numeric.c:1780
-#: utils/adt/numeric.c:1789
-#: utils/adt/varbit.c:1291
-msgid "integer out of range"
-msgstr "integer sıra dışıdır"
 
 #: utils/adt/float.c:1130
 #: utils/adt/float.c:1196
@@ -9029,7 +9092,7 @@ msgid "smallint out of range"
 msgstr "smallint sıra dışıdır"
 
 #: utils/adt/float.c:1432
-#: utils/adt/numeric.c:4268
+#: utils/adt/numeric.c:4271
 msgid "cannot take square root of a negative number"
 msgstr "sıfırdan küçük sayıdan kare kökü alınamaz"
 
@@ -9045,13 +9108,13 @@ msgstr "sonuç sıra dsışıdır"
 
 #: utils/adt/float.c:1541
 #: utils/adt/float.c:1571
-#: utils/adt/numeric.c:4486
+#: utils/adt/numeric.c:4489
 msgid "cannot take logarithm of zero"
 msgstr "sıfırın logaritması hesaplanamaz"
 
 #: utils/adt/float.c:1545
 #: utils/adt/float.c:1575
-#: utils/adt/numeric.c:4490
+#: utils/adt/numeric.c:4493
 msgid "cannot take logarithm of a negative number"
 msgstr "sıfırdan küçük sayıdan logaritması alınamaz"
 
@@ -9501,33 +9564,33 @@ msgstr "NaN tipinden bigint tipine dönüştürme hatası"
 msgid "cannot convert NaN to smallint"
 msgstr "NaN tipinden smallint tipine dönüştürme hatası"
 
-#: utils/adt/numeric.c:2769
-#: utils/adt/numeric.c:2792
-#: utils/adt/numeric.c:2816
-#: utils/adt/numeric.c:2823
-#: utils/adt/numeric.c:2837
+#: utils/adt/numeric.c:2772
+#: utils/adt/numeric.c:2795
+#: utils/adt/numeric.c:2819
+#: utils/adt/numeric.c:2826
+#: utils/adt/numeric.c:2840
 #, c-format
 msgid "invalid input syntax for type numeric: \"%s\""
 msgstr "numeric tipi için geçersiz biçim: \"%s\""
 
-#: utils/adt/numeric.c:3135
+#: utils/adt/numeric.c:3138
 msgid "value overflows numeric format"
 msgstr "değer, numerik biçiminin kapsamını taşımaktadır"
 
-#: utils/adt/numeric.c:3205
+#: utils/adt/numeric.c:3208
 msgid "numeric field overflow"
 msgstr "numerik alan kapsamını taşımaktadır"
 
-#: utils/adt/numeric.c:3206
+#: utils/adt/numeric.c:3209
 #, c-format
 msgid "The absolute value is greater than or equal to 10^%d for field with precision %d, scale %d."
 msgstr "Kesinliği %2$d ve ölçekliği %3$d olan alan için girilecek değer 10^%1$d sınırıa eşit veya daha büyüktür."
 
-#: utils/adt/numeric.c:4358
+#: utils/adt/numeric.c:4361
 msgid "argument for function \"exp\" too big"
 msgstr "\"exp\" fonksiyonu için argüman fazla büyük"
 
-#: utils/adt/numeric.c:4738
+#: utils/adt/numeric.c:4741
 msgid "zero raised to zero is undefined"
 msgstr "sıfırın sıfır katı belirsiz"
 
@@ -10219,16 +10282,16 @@ msgstr "TRAP: %s(\"%s\", Dosya: \"%s\",  Satır: %d)\n"
 msgid "could not determine actual result type for function \"%s\" declared to return type %s"
 msgstr "geri döndürme tipi %2$s olarak tanımlanmış \"%1$s\" fonksiyonunun gerçek döndürme tipi belirlenememektedir"
 
-#: utils/fmgr/funcapi.c:959
-#: utils/fmgr/funcapi.c:990
+#: utils/fmgr/funcapi.c:964
+#: utils/fmgr/funcapi.c:995
 msgid "number of aliases does not match number of columns"
 msgstr "Takma adların sayısı ile kolon satısı eşleşmiyor"
 
-#: utils/fmgr/funcapi.c:984
+#: utils/fmgr/funcapi.c:989
 msgid "no column alias was provided"
 msgstr "kolon takma adı verilmedi"
 
-#: utils/fmgr/funcapi.c:1008
+#: utils/fmgr/funcapi.c:1013
 msgid "could not determine row description for function returning record"
 msgstr "veri satırı döndüren fonksiyon için satır açıklaması bulunamadı"
 
@@ -10391,7 +10454,7 @@ msgid "could not write lock file \"%s\": %m"
 msgstr "\"%s\" lock dosyası yazma hatası: %m"
 
 #: utils/init/miscinit.c:999
-#: utils/misc/guc.c:5196
+#: utils/misc/guc.c:5206
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "\"%s\" dosyasından okuma hatası: %m"
@@ -10779,9 +10842,9 @@ msgstr "Bu bir debug yardımı."
 #: utils/misc/guc.c:751
 #: utils/misc/guc.c:760
 #: utils/misc/guc.c:769
-#: utils/misc/guc.c:1234
-#: utils/misc/guc.c:1243
-#: utils/misc/guc.c:1301
+#: utils/misc/guc.c:1244
+#: utils/misc/guc.c:1253
+#: utils/misc/guc.c:1311
 msgid "no description available"
 msgstr "açıklama yok."
 
@@ -10922,622 +10985,630 @@ msgid "Check function bodies during CREATE FUNCTION."
 msgstr "CREATE FUNCTION sırasında fonksiyon gövdelerini kontrol ediyor."
 
 #: utils/misc/guc.c:881
+msgid "Enable input of NULL elements in arrays."
+msgstr "Arrayların çıktılarında NULL elemntlerinin yansıtmasını etkinleştir."
+
+#: utils/misc/guc.c:882
+msgid "When turned on, unquoted NULL in an array input value means a NULL value; otherwise it is taken literally."
+msgstr "Açık olduğunda, array çıktısında tırnak içinde alınmamış NULL değeri NULL anlamına gelir; aksi taktirde değer, olduğu gibi kabul edilir."
+
+#: utils/misc/guc.c:891
 msgid "Create new tables with OIDs by default."
 msgstr "Varsayılan olarak yeni tabloları OID ile oluştur."
 
-#: utils/misc/guc.c:889
+#: utils/misc/guc.c:899
 msgid "Start a subprocess to capture stderr output into log files."
 msgstr "stderr çıktısını günlük dosyasın kaydetmek için bir alt sürecini çalıştırıyor"
 
-#: utils/misc/guc.c:897
+#: utils/misc/guc.c:907
 msgid "Truncate existing log files of same name during log rotation."
 msgstr "Günlük dosyaları döndürme sırasında aynı isimle var olan günlük dosyaları kesiyor."
 
-#: utils/misc/guc.c:907
+#: utils/misc/guc.c:917
 msgid "Emit information about resource usage in sorting."
 msgstr "Alfabetik sıralama sırasında kaynak kullanımı hakkında bilgi ver."
 
-#: utils/misc/guc.c:919
+#: utils/misc/guc.c:929
 msgid "Emit WAL-related debugging output."
 msgstr "WAL ile ilgili hata ayıklama çıktısını yayıyor."
 
-#: utils/misc/guc.c:930
+#: utils/misc/guc.c:940
 msgid "Datetimes are integer based."
 msgstr "Datetime veri tipleri tam sayı bazlıdır"
 
-#: utils/misc/guc.c:944
+#: utils/misc/guc.c:954
 msgid "Sets whether Kerberos user names should be treated as case-insensitive."
 msgstr "Kerberos kullanıcı adları büyük ve küçük harf duyarıl olup olmayacağını belirtiyor."
 
-#: utils/misc/guc.c:953
+#: utils/misc/guc.c:963
 msgid "Warn about backslash escapes in ordinary string literals."
 msgstr "Standart satırlarındaters taksimler kullanıldığında uyar."
 
-#: utils/misc/guc.c:962
+#: utils/misc/guc.c:972
 msgid "'...' strings treat backslashes literally."
 msgstr "'...' satırları ters taksimleri olduğu gibi algılıyor."
 
-#: utils/misc/guc.c:981
+#: utils/misc/guc.c:991
 msgid "Sets the default statistics target."
 msgstr "Varsayılan istatistik hedefi ayarlıyor."
 
-#: utils/misc/guc.c:982
+#: utils/misc/guc.c:992
 msgid "This applies to table columns that have not had a column-specific target set via ALTER TABLE SET STATISTICS."
 msgstr "ALTER TABLE SET STATISTICS komutuyla sütun bazlı hedef ayarlanmamışsa bu seçenek uygulanır."
 
-#: utils/misc/guc.c:990
+#: utils/misc/guc.c:1000
 msgid "Sets the FROM-list size beyond which subqueries are not collapsed."
 msgstr "FROM listesi bu boyuttan büyükse alt sorguları araltılmayacaktır."
 
-#: utils/misc/guc.c:992
+#: utils/misc/guc.c:1002
 msgid "The planner will merge subqueries into upper queries if the resulting FROM list would have no more than this many items."
 msgstr "FROM listesinde bu değerinden az öğe varse, planlayıcı alt sorgularını üst sorgu ile birleştirecek."
 
-#: utils/misc/guc.c:1001
+#: utils/misc/guc.c:1011
 msgid "Sets the FROM-list size beyond which JOIN constructs are not flattened."
 msgstr "FROM listesi uzunluğu bu değerden büyükse JOIN ifadeler düzleştirilmeyecektir."
 
-#: utils/misc/guc.c:1003
+#: utils/misc/guc.c:1013
 msgid "The planner will flatten explicit inner JOIN constructs into lists of FROM items whenever a list of no more than this many items would result."
 msgstr "JOIN ifadesini FROM öğelerine düzleşmesi sonucunda öğe sayısı bu sayıdan düşük olursa bu işlem yapılacaktır."
 
-#: utils/misc/guc.c:1012
+#: utils/misc/guc.c:1022
 msgid "Sets the threshold of FROM items beyond which GEQO is used."
 msgstr "FROM öğe sayısı bu eşiği geçince GEQO kullanılacaktır."
 
-#: utils/misc/guc.c:1020
+#: utils/misc/guc.c:1030
 msgid "GEQO: effort is used to set the default for other GEQO parameters."
 msgstr "GEQO: diğer GEQO parametreleri ayarlam için effort kullanılıyor."
 
-#: utils/misc/guc.c:1028
+#: utils/misc/guc.c:1038
 msgid "GEQO: number of individuals in the population."
 msgstr "GEQO: nüfusun içinde kişi sayısı."
 
-#: utils/misc/guc.c:1029
-#: utils/misc/guc.c:1037
+#: utils/misc/guc.c:1039
+#: utils/misc/guc.c:1047
 msgid "Zero selects a suitable default value."
 msgstr "Sıfır ise uygun bir varsayılan değer atanıyor."
 
-#: utils/misc/guc.c:1036
+#: utils/misc/guc.c:1046
 msgid "GEQO: number of iterations of the algorithm."
 msgstr "GEQO: algoritm döngü sayısı."
 
-#: utils/misc/guc.c:1045
+#: utils/misc/guc.c:1055
 msgid "The time in milliseconds to wait on lock before checking for deadlock."
 msgstr "Daynak bekleme durumu kontrol etmeden kilidin oş olmasını bu kadar milisaniye beklenecektir."
 
-#: utils/misc/guc.c:1065
+#: utils/misc/guc.c:1075
 msgid "Sets the maximum number of concurrent connections."
 msgstr "Maksimum bağlantı sayısını ayarlıyor."
 
-#: utils/misc/guc.c:1074
+#: utils/misc/guc.c:1084
 msgid "Sets the number of connection slots reserved for superusers."
 msgstr "Superuser için rezerve edilmiş bağlantı sayısını ayarlıyor."
 
-#: utils/misc/guc.c:1083
+#: utils/misc/guc.c:1093
 msgid "Sets the number of shared memory buffers used by the server."
 msgstr "Sunucu tarafıundan kullanılacak shared memory arabellek sayısını ayarlıyor."
 
-#: utils/misc/guc.c:1092
+#: utils/misc/guc.c:1102
 msgid "Sets the maximum number of temporary buffers used by each session."
 msgstr "Her oturumun kullanabileceği en yüksek geçici buffer sayısı"
 
-#: utils/misc/guc.c:1101
+#: utils/misc/guc.c:1111
 msgid "Sets the TCP port the server listens on."
 msgstr "Sunucun dinleyeceği TCP port numarasını ayarlıyor."
 
-#: utils/misc/guc.c:1110
+#: utils/misc/guc.c:1120
 msgid "Sets the access permissions of the Unix-domain socket."
 msgstr "Unix-domain socket erişim haklarını ayarlıyor."
 
-#: utils/misc/guc.c:1111
+#: utils/misc/guc.c:1121
 msgid "Unix-domain sockets use the usual Unix file system permission set. The parameter value is expected to be an numeric mode specification in the form accepted by the chmod and umask system calls. (To use the customary octal format the number must start with a 0 (zero).)"
 msgstr "Unix-domain yvaları, standart Unix dosya sistemi izin altyapısını kullanıyor. Parametresi chmod ve umask sistem çağırılarının kabul edeceği biçimde numerik bir değerdir. (Sekizli sayı sistemi ile bir değer girecekseniz onu 0 (sıfır) ile başlatmalısınız.)"
 
-#: utils/misc/guc.c:1123
+#: utils/misc/guc.c:1133
 msgid "Sets the maximum memory to be used for query workspaces."
 msgstr "Sorgu çalışma alanları için kullanılacak en büyük bellek boyutu belirliyor."
 
-#: utils/misc/guc.c:1124
+#: utils/misc/guc.c:1134
 msgid "This much memory may be used by each internal sort operation and hash table before switching to temporary disk files."
 msgstr "Geçici disk dosyalarına başvurmadan önce dahili sort ve hash tablo işlemleirinin kullanabileceği bellek boyutu ayarlar."
 
-#: utils/misc/guc.c:1134
+#: utils/misc/guc.c:1144
 msgid "Sets the maximum memory to be used for maintenance operations."
 msgstr "Bakım işlemleri için kullanılacak en büyük bellek boyutu belirler."
 
-#: utils/misc/guc.c:1135
+#: utils/misc/guc.c:1145
 msgid "This includes operations such as VACUUM and CREATE INDEX."
 msgstr "Bu değer VACUUM ve CREATE INDEX gibi işlemleri için de geçerlidir."
 
-#: utils/misc/guc.c:1143
+#: utils/misc/guc.c:1153
 msgid "Sets the maximum stack depth, in kilobytes."
 msgstr "Kilobay olarak en büyük yığın boyutu ayarlar."
 
-#: utils/misc/guc.c:1152
+#: utils/misc/guc.c:1162
 msgid "Vacuum cost for a page found in the buffer cache."
 msgstr "Buffer cache içinde bulunan bir sayfanın vacuum işleme masrafı."
 
-#: utils/misc/guc.c:1161
+#: utils/misc/guc.c:1171
 msgid "Vacuum cost for a page not found in the buffer cache."
 msgstr "Buffer cache içinde bulunamayan bir sayfanın vacuum işleme masrafı."
 
-#: utils/misc/guc.c:1170
+#: utils/misc/guc.c:1180
 msgid "Vacuum cost for a page dirtied by vacuum."
 msgstr "Vacuum tarafında değiştirilecek sayfanın işleme masrafı."
 
-#: utils/misc/guc.c:1179
+#: utils/misc/guc.c:1189
 msgid "Vacuum cost amount available before napping."
 msgstr "Vacuum işleminin uyku durumuna geçmeden önce ne kadar işlem yapması. Yani bir geçişte ne kadar işlem yapacağı."
 
-#: utils/misc/guc.c:1188
+#: utils/misc/guc.c:1198
 msgid "Vacuum cost delay in milliseconds."
 msgstr "Vacuum işleminin milisaniye değeri."
 
-#: utils/misc/guc.c:1197
+#: utils/misc/guc.c:1207
 msgid "Vacuum cost delay in milliseconds, for autovacuum."
 msgstr "Vacuum işleminin masrafının milisaniye değeri (autovacuum için)."
 
-#: utils/misc/guc.c:1206
+#: utils/misc/guc.c:1216
 msgid "Vacuum cost amount available before napping, for autovacuum."
 msgstr "Vacuum işleminin uyku durumuna geçmeden önce ne kadar işlem yapması. Yani bir geçişte ne kadar işlem yapacağı."
 
-#: utils/misc/guc.c:1215
+#: utils/misc/guc.c:1225
 msgid "Sets the maximum number of simultaneously open files for each server process."
 msgstr "Her sunucu süreci içi aynı anda olabilecek en büyük açık dosya sayısı."
 
-#: utils/misc/guc.c:1224
+#: utils/misc/guc.c:1234
 msgid "Sets the maximum number of simultaneously prepared transactions."
 msgstr "Aynı zamanda olabilecek en çok prepared transaction sayısı."
 
-#: utils/misc/guc.c:1254
+#: utils/misc/guc.c:1264
 msgid "Sets the maximum allowed duration (in milliseconds) of any statement."
 msgstr "Bir sorgunun en büyük çalışma zamanı (milisaniye olarak)."
 
-#: utils/misc/guc.c:1255
+#: utils/misc/guc.c:1265
 msgid "A value of 0 turns off the timeout."
 msgstr "0 (sıfır) değeri, zaman aşımını kapatıyor."
 
-#: utils/misc/guc.c:1263
+#: utils/misc/guc.c:1273
 msgid "Sets the maximum number of tables and indexes for which free space is tracked."
 msgstr "Boş alanı takibi yapılacak tabloların en büyük sayısı."
 
-#: utils/misc/guc.c:1271
+#: utils/misc/guc.c:1281
 msgid "Sets the maximum number of disk pages for which free space is tracked."
 msgstr "Boş alanı takibi yapılacak disk sayfaların en büyük sayısı."
 
-#: utils/misc/guc.c:1280
+#: utils/misc/guc.c:1290
 msgid "Sets the maximum number of locks per transaction."
 msgstr "Bir transaction içinde en yüksek olabilecek kilit sayısı."
 
-#: utils/misc/guc.c:1281
+#: utils/misc/guc.c:1291
 msgid "The shared lock table is sized on the assumption that at most max_locks_per_transaction * max_connections distinct objects will need to be locked at any one time."
 msgstr "Bu tablonun boyutu, max_locks_per_transaction * max_connections kadar ayrı nesneye bir anda kilit uygulamaya gerektiğini göz önünde bulundurarak ayarlanır."
 
-#: utils/misc/guc.c:1291
+#: utils/misc/guc.c:1301
 msgid "Sets the maximum time in seconds to complete client authentication."
 msgstr "İstemci kimlik doğrulamasını yapmak için zaman sınırı ayarlar."
 
-#: utils/misc/guc.c:1311
+#: utils/misc/guc.c:1321
 msgid "Sets the maximum distance in log segments between automatic WAL checkpoints."
 msgstr "Otomatic WAL denetim noktaları (checkpoint) arasında katedilecek log segment saytısı."
 
-#: utils/misc/guc.c:1320
+#: utils/misc/guc.c:1330
 msgid "Sets the maximum time in seconds between automatic WAL checkpoints."
 msgstr "Otomatic WAL denetim noktaları (checkpoint) arasında geçecek saniye saytısı."
 
-#: utils/misc/guc.c:1329
+#: utils/misc/guc.c:1339
 msgid "Logs if filling of checkpoint segments happens more frequently than this (in seconds)."
 msgstr "Eğer log denetim noktası (checkpoint) bu değerden (saniye olarak) daha sık oluyorsa günlüğüne bir not düş."
 
-#: utils/misc/guc.c:1331
+#: utils/misc/guc.c:1341
 msgid "Write a message to the server log if checkpoints caused by the filling of checkpoint segment files happens more frequently than this number of seconds. Zero turns off the warning."
 msgstr "Checkpoint segment dosyaların dolması nedeniyle denetim noktası (checkpoint) olayı bu değerdeki saniye sayısından daha sık oluyorsa sunucu günlük dosyasına not düş. Sıfır ise bu uyarıyı kapat."
 
-#: utils/misc/guc.c:1341
+#: utils/misc/guc.c:1351
 msgid "Sets the number of disk-page buffers in shared memory for WAL."
 msgstr "WAL için shared memory arabellek disk-sayfa sayısı."
 
-#: utils/misc/guc.c:1350
+#: utils/misc/guc.c:1360
 msgid "Sets the delay in microseconds between transaction commit and flushing WAL to disk."
 msgstr "Transaction commit ile WAL dosyaların diske yazılması arasında milisaniye olarak gecikme süresi ayarlar."
 
-#: utils/misc/guc.c:1360
+#: utils/misc/guc.c:1370
 msgid "Sets the minimum concurrent open transactions before performing commit_delay."
 msgstr "commit_delay uygulamadan önce en az bu değer koşutzamanlı transaction olacak."
 
-#: utils/misc/guc.c:1370
+#: utils/misc/guc.c:1380
 msgid "Sets the number of digits displayed for floating-point values."
 msgstr "Floating-point değerlerinde gösterilecek rakam asyısı ayarlar."
 
-#: utils/misc/guc.c:1371
+#: utils/misc/guc.c:1381
 msgid "This affects real, double precision, and geometric data types. The parameter value is added to the standard number of digits (FLT_DIG or DBL_DIG as appropriate)."
 msgstr "Bu ayar, real, double precision ve geometrik veri tiplerinde klullanılır. Bu değer, standart  rakam sayısına eklenmektedir (FLT_DIG veya DBL_DIG)."
 
-#: utils/misc/guc.c:1381
+#: utils/misc/guc.c:1391
 msgid "Sets the minimum execution time in milliseconds above which statements will be logged."
 msgstr "Milisaniye olarak verilen bu zamandan uzun süre çalışacak sorgular log dosyasına yazılacaktır."
 
-#: utils/misc/guc.c:1383
+#: utils/misc/guc.c:1393
 msgid "Zero prints all queries. The default is -1 (turning this feature off)."
 msgstr "Sifir ise tüm sorgular yazılacak. Varsayılan değer -1 (bu özellike kapalıdır)."
 
-#: utils/misc/guc.c:1391
+#: utils/misc/guc.c:1401
 msgid "Background writer sleep time between rounds in milliseconds"
 msgstr "Background writer'in seferleri arasında hareketsiz kalacağı milisaniye sayısı"
 
-#: utils/misc/guc.c:1400
+#: utils/misc/guc.c:1410
 msgid "Background writer maximum number of LRU pages to flush per round"
 msgstr "Her seferinde background writer'in diske yazaçağı LRU sayfaların maximum sayısı"
 
-#: utils/misc/guc.c:1409
+#: utils/misc/guc.c:1419
 msgid "Background writer maximum number of all pages to flush per round"
 msgstr "Her seferinde background writer'in diske yazaçağı tüm sayfaların maximum sayısı"
 
-#: utils/misc/guc.c:1418
+#: utils/misc/guc.c:1428
 msgid "Automatic log file rotation will occur after N minutes"
 msgstr "Otomatik olg dosya değişimi N dakika sonra gerçekleşecek."
 
-#: utils/misc/guc.c:1427
+#: utils/misc/guc.c:1437
 msgid "Automatic log file rotation will occur after N kilobytes"
 msgstr "Otomatik olg dosya değişimi N kilobayttan sonra gerçekleşecek."
 
-#: utils/misc/guc.c:1436
+#: utils/misc/guc.c:1446
 msgid "Shows the maximum number of function arguments."
 msgstr "Fonksiyon argünamlarının olabileceği en büyük sayısını gösteriyor."
 
-#: utils/misc/guc.c:1446
+#: utils/misc/guc.c:1456
 msgid "Shows the maximum number of index keys."
 msgstr "İndeks değerlerinin olabileceği en büyük sayısını gösteriyor."
 
-#: utils/misc/guc.c:1456
+#: utils/misc/guc.c:1466
 msgid "Shows the maximum identifier length"
 msgstr "İş değişken adının izin verilen an büyük uzunluğunu gösteriyor"
 
-#: utils/misc/guc.c:1466
+#: utils/misc/guc.c:1476
 msgid "Shows size of a disk block"
 msgstr "Bir disk blokunun boyutunu gösteriyor"
 
-#: utils/misc/guc.c:1476
+#: utils/misc/guc.c:1486
 msgid "Time to sleep between autovacuum runs, in seconds."
 msgstr "Autovacuum çalıştırmaları arasında bekleme zamanı, saniye."
 
-#: utils/misc/guc.c:1484
+#: utils/misc/guc.c:1494
 msgid "Minimum number of tuple updates or deletes prior to vacuum."
 msgstr "Vacuum işleminin başlaması için gereken düşük tuple update veya deleta sayısı."
 
-#: utils/misc/guc.c:1492
+#: utils/misc/guc.c:1502
 msgid "Minimum number of tuple inserts, updates or deletes prior to analyze."
 msgstr "Analyze işleminin başlaması için gereken düşük tuple insert, update veya deleta sayısı."
 
-#: utils/misc/guc.c:1501
+#: utils/misc/guc.c:1511
 msgid "Seconds between issuing TCP keepalives."
 msgstr "TCP keepalive göndermelerin arasında saniye sayısı"
 
-#: utils/misc/guc.c:1502
-#: utils/misc/guc.c:1511
+#: utils/misc/guc.c:1512
+#: utils/misc/guc.c:1521
 msgid "A value of 0 uses the system default."
 msgstr "0 (sıfır) değeri, sistem varsayılan değeri etkinleştirir."
 
-#: utils/misc/guc.c:1510
+#: utils/misc/guc.c:1520
 msgid "Seconds between TCP keepalive retransmits."
 msgstr "TCP keepalive mğkerrer göndermelerin arasında saniye sayısı."
 
-#: utils/misc/guc.c:1519
+#: utils/misc/guc.c:1529
 msgid "Maximum number of TCP keepalive retransmits."
 msgstr "En yüksek TCP keepalive gönderme sayısı."
 
-#: utils/misc/guc.c:1520
+#: utils/misc/guc.c:1530
 msgid "This controls the number of consecutive keepalive retransmits that can be lost before a connection is considered dead. A value of 0 uses the system default."
 msgstr "Keepalive açıkken, bir bağlantının kopmuş olmasını sayılamadan gönderilecek mükerrer paket sayısı. 0 (sıfır) değeri sistemdeki varsayılan eğerini alıyor."
 
-#: utils/misc/guc.c:1539
+#: utils/misc/guc.c:1549
 msgid "Sets the planner's assumption about size of the disk cache."
 msgstr "Disk cache boyutu hakkında tahmini değerini belirtiyor."
 
-#: utils/misc/guc.c:1540
+#: utils/misc/guc.c:1550
 msgid "That is, the portion of the kernel's disk cache that will be used for PostgreSQL data files. This is measured in disk pages, which are normally 8 kB each."
 msgstr "Yani kernel'in disk cache alanının PostgreSQL veri dosyaları için kullanılacak kısmının tahmini. Bu deşer, disk page birimleriyle giriliyor, bir disk page genellikle 8 kilobayttır."
 
-#: utils/misc/guc.c:1549
+#: utils/misc/guc.c:1559
 msgid "Sets the planner's estimate of the cost of a nonsequentially fetched disk page."
 msgstr "Nonsequential disk page getirme işlemlerin tahmini zamanı belirtiyor."
 
-#: utils/misc/guc.c:1551
+#: utils/misc/guc.c:1561
 msgid "This is measured as a multiple of the cost of a sequential page fetch. A higher value makes it more likely a sequential scan will be used, a lower value makes it more likely an index scan will be used."
 msgstr "Bu değer, squeantial getirme'nin bir bölümü olarak giriliyor. Yani daha yüksek değer, sequential scan işlemine öncelik öncelik verirken, daha düşük değer ise planer'in index scan yöntemine tercih vermesine sebep olur."
 
-#: utils/misc/guc.c:1561
+#: utils/misc/guc.c:1571
 msgid "Sets the planner's estimate of the cost of processing each tuple (row)."
 msgstr "Bir satır işlemek için harcanacak işlem zamanı tahminini belirtiyor."
 
-#: utils/misc/guc.c:1562
 #: utils/misc/guc.c:1572
-#: utils/misc/guc.c:1581
+#: utils/misc/guc.c:1582
+#: utils/misc/guc.c:1591
 msgid "This is measured as a fraction of the cost of a sequential page fetch."
 msgstr "Sequential page fetch işleme zamanının bir bölümü olarak çölçülüyor."
 
-#: utils/misc/guc.c:1570
+#: utils/misc/guc.c:1580
 msgid "Sets the planner's estimate of processing cost for each index tuple (row) during index scan."
 msgstr "İndeks satırı başına işleme zamanı belirityor."
 
-#: utils/misc/guc.c:1580
+#: utils/misc/guc.c:1590
 msgid "Sets the planner's estimate of processing cost of each operator in WHERE."
 msgstr "WHERE içinde her işlem için işleme gider tahminlerini belirtiyor."
 
-#: utils/misc/guc.c:1590
+#: utils/misc/guc.c:1600
 msgid "GEQO: selective pressure within the population."
 msgstr "GEQO: selective pressure within the population. Oha be, query'yi mi optimize ediyoruz, piliç mi yetiştiriyoruz, yuh."
 
-#: utils/misc/guc.c:1600
+#: utils/misc/guc.c:1610
 msgid "Background writer percentage of LRU buffers to flush per round"
 msgstr "Her seferinde background writer'in diske yazaçağı LRU bufferlerin yüzdesi"
 
-#: utils/misc/guc.c:1609
+#: utils/misc/guc.c:1619
 msgid "Background writer percentage of all buffers to flush per round"
 msgstr "Her seferinde background writer'in diske yazaçağı sayfaların yüzdesi"
 
-#: utils/misc/guc.c:1618
+#: utils/misc/guc.c:1628
 msgid "Sets the seed for random-number generation."
 msgstr "Random-number üretimi için seed değerini belirtiyor."
 
-#: utils/misc/guc.c:1628
+#: utils/misc/guc.c:1638
 msgid "Number of tuple updates or deletes prior to vacuum as a fraction of reltuples."
 msgstr "Vacuum işleminin başlaması için en düşük tuple update ve delete sayısı (retuple bölümü olarak)."
 
-#: utils/misc/guc.c:1636
+#: utils/misc/guc.c:1646
 msgid "Number of tuple inserts, updates or deletes prior to analyze as a fraction of reltuples."
 msgstr "Analyze işleminin başlaması için en düşük tuple insert, update ve delete sayısı (retuple bölümü olarak)."
 
-#: utils/misc/guc.c:1654
+#: utils/misc/guc.c:1664
 msgid "WAL archiving command."
 msgstr "WAL arşivleme komutu."
 
-#: utils/misc/guc.c:1655
+#: utils/misc/guc.c:1665
 msgid "The shell command that will be called to archive a WAL file."
 msgstr "WAL dosyasını arşivlemek için kabuk komutu çağırılacak."
 
-#: utils/misc/guc.c:1663
+#: utils/misc/guc.c:1673
 msgid "Sets the client's character set encoding."
 msgstr "İstemci karakter kodlamasını belirtiyor."
 
-#: utils/misc/guc.c:1673
+#: utils/misc/guc.c:1683
 msgid "Sets the message levels that are sent to the client."
 msgstr "İstemciye yollancak mesaj düzeylerini belirtiyor."
 
-#: utils/misc/guc.c:1674
+#: utils/misc/guc.c:1684
 msgid "Valid values are DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, LOG, NOTICE, WARNING, and ERROR. Each level includes all the levels that follow it. The later the level, the fewer messages are sent."
 msgstr "Geçerli değerler: DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, LOG, NOTICE, WARNING, and ERROR. Her düzey kendisinden daha büyük düzeyleri de kapsıyor. Düzey ne kadar yüksek ise o kadar az mesaj yollanıyor."
 
-#: utils/misc/guc.c:1685
+#: utils/misc/guc.c:1695
 msgid "Sets the message levels that are logged."
 msgstr "Log dosyasına yazılacak mesajlarının düzeylerini belirtiyor."
 
-#: utils/misc/guc.c:1686
+#: utils/misc/guc.c:1696
 msgid "Valid values are DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, INFO, NOTICE, WARNING, ERROR, LOG, FATAL, and PANIC. Each level includes all the levels that follow it."
 msgstr "Geçerli değerler: DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, INFO, NOTICE, WARNING, ERROR, LOG, FATAL, and PANIC. Her düzey kendisinden daha büyük düzeyleri de kapsıyor."
 
-#: utils/misc/guc.c:1696
+#: utils/misc/guc.c:1706
 msgid "Sets the verbosity of logged messages."
 msgstr "Log mesajlarının ayrıntı düzei belirtiyor."
 
-#: utils/misc/guc.c:1697
+#: utils/misc/guc.c:1707
 msgid "Valid values are \"terse\", \"default\", and \"verbose\"."
 msgstr "Geçerli değerler: \"terse\", \"default\", ve \"verbose\"."
 
-#: utils/misc/guc.c:1704
+#: utils/misc/guc.c:1714
 msgid "Sets the type of statements logged."
 msgstr "Log dosyasına yazılacak komutların tipini belirtiyor."
 
-#: utils/misc/guc.c:1705
+#: utils/misc/guc.c:1715
 msgid "Valid values are \"none\", \"ddl\", \"mod\", and \"all\"."
 msgstr "Geçerli değerler: \"none\", \"mod\", \"ddl\", ve \"all\"."
 
-#: utils/misc/guc.c:1713
+#: utils/misc/guc.c:1723
 msgid "Causes all statements generating error at or above this level to be logged."
 msgstr "Belirtilen ya da daha üst düzeyde hata yaratan komutlarının gol dosyasına yazılacağına sebep olur."
 
-#: utils/misc/guc.c:1714
+#: utils/misc/guc.c:1724
 msgid "All SQL statements that cause an error of the specified level or a higher level are logged."
 msgstr "Belirtilen ya da daha üst düzeyde hata yaratan SQL sorguları loglanacaktır."
 
-#: utils/misc/guc.c:1723
+#: utils/misc/guc.c:1733
 msgid "Controls information prefixed to each log line"
 msgstr "Log satırlarının başlarına eklenecek bilgiyi kontrol ediyor."
 
-#: utils/misc/guc.c:1724
+#: utils/misc/guc.c:1734
 msgid "if blank no prefix is used"
 msgstr "boş ise ön ek kullanlmayacak"
 
-#: utils/misc/guc.c:1733
+#: utils/misc/guc.c:1743
 msgid "Sets the display format for date and time values."
 msgstr "Tarih ve zaman girişleri için biçim maskesini belirtiyor."
 
-#: utils/misc/guc.c:1734
+#: utils/misc/guc.c:1744
 msgid "Also controls interpretation of ambiguous date inputs."
 msgstr "Ayrıca belirsiz tarih girişinin yorumlamasını belirtiyor."
 
-#: utils/misc/guc.c:1744
+#: utils/misc/guc.c:1754
 msgid "Sets the default tablespace to create tables and indexes in."
 msgstr "İndeksleri oluşturma işemi için varsayılan tablespace ayarlıyor"
 
-#: utils/misc/guc.c:1745
+#: utils/misc/guc.c:1755
 msgid "An empty string selects the database's default tablespace."
 msgstr "Boş değer, veritabanının varsayılan tablespace'ı seçmektedir."
 
-#: utils/misc/guc.c:1753
+#: utils/misc/guc.c:1763
 msgid "Sets the transaction isolation level of each new transaction."
 msgstr "Her yeni transaction için transaction isolation level belirtiypr."
 
-#: utils/misc/guc.c:1754
+#: utils/misc/guc.c:1764
 msgid "Each SQL transaction has an isolation level, which can be either \"read uncommitted\", \"read committed\", \"repeatable read\", or \"serializable\"."
 msgstr "Her SQL transaction bir isolation level'e sahiptir, geçerli değerler: \"read uncommitted\", \"read committed\", \"repeatable read\", \"serializable\"."
 
-#: utils/misc/guc.c:1763
+#: utils/misc/guc.c:1773
 msgid "Sets the path for dynamically loadable modules."
 msgstr "Dinamik yüklenebilen modülleri arama dizinlerini belirtiyor."
 
-#: utils/misc/guc.c:1764
+#: utils/misc/guc.c:1774
 msgid "If a dynamically loadable module needs to be opened and the specified name does not have a directory component (i.e., the name does not contain a slash), the system will search this path for the specified file."
 msgstr "Bir dinamik kütüphane açmak gerektiğinde dosya adında dizin kısmı yoksa (dosya adın içinde taksim kararkteri yoksa), sistem, kütüphaneleri bulmak için bu dizinleri arayacak."
 
-#: utils/misc/guc.c:1776
+#: utils/misc/guc.c:1786
 msgid "Sets the location of the Kerberos server key file."
 msgstr "Kerberos server key dosyasının yerini belirtiyor."
 
-#: utils/misc/guc.c:1786
+#: utils/misc/guc.c:1796
 msgid "Sets the name of the Kerberos service."
 msgstr "Kerberos sevice adını belirtiyor."
 
-#: utils/misc/guc.c:1795
+#: utils/misc/guc.c:1805
 msgid "Sets the hostname of the Kerberos server."
 msgstr "Kerberos sunucusunun bilgisayar adını belirtiyor."
 
-#: utils/misc/guc.c:1804
+#: utils/misc/guc.c:1814
 msgid "Sets the Bonjour broadcast service name."
 msgstr "Bonjour broadcast service adını belirtiyor."
 
-#: utils/misc/guc.c:1815
+#: utils/misc/guc.c:1825
 msgid "Shows the collation order locale."
 msgstr "Alfabetik sıralamasında kullanılacak locale ayarı gösteriyor."
 
-#: utils/misc/guc.c:1825
+#: utils/misc/guc.c:1835
 msgid "Shows the character classification and case conversion locale."
 msgstr "Karakter sınıflandırılması ve büyük/küçük çevirme işlemlerinde kullanıcak locale ayarı gösteriyor."
 
-#: utils/misc/guc.c:1835
+#: utils/misc/guc.c:1845
 msgid "Sets the language in which messages are displayed."
 msgstr "Mesajlarda kullanılacak dili belirtiyor."
 
-#: utils/misc/guc.c:1844
+#: utils/misc/guc.c:1854
 msgid "Sets the locale for formatting monetary amounts."
 msgstr "Parasal değerlerinin biçimlendirilmesinde kullanılacak locale ayarını belirtiyor."
 
-#: utils/misc/guc.c:1853
+#: utils/misc/guc.c:1863
 msgid "Sets the locale for formatting numbers."
 msgstr "Sayısal değerlerinin biçimlendirilmesinde kullanılacak locale ayarını belirtiyor."
 
-#: utils/misc/guc.c:1862
+#: utils/misc/guc.c:1872
 msgid "Sets the locale for formatting date and time values."
 msgstr "Tarih ve zaman değerlerinin biçimlendirilmesinde kullanılacak locale ayarını belirtiyor."
 
-#: utils/misc/guc.c:1871
+#: utils/misc/guc.c:1881
 msgid "Lists shared libraries to preload into server."
 msgstr "Sunucuya yüklenmiş ortak kütüphaneleri gösteriyor."
 
-#: utils/misc/guc.c:1881
+#: utils/misc/guc.c:1891
 msgid "Sets the regular expression \"flavor\"."
 msgstr "\"flavor\" regular expression belirtiyor."
 
-#: utils/misc/guc.c:1882
+#: utils/misc/guc.c:1892
 msgid "This can be set to advanced, extended, or basic."
 msgstr "Bu değer şunlardan biri olabilir: advanced, extended, or basic."
 
-#: utils/misc/guc.c:1890
+#: utils/misc/guc.c:1900
 msgid "Sets the schema search order for names that are not schema-qualified."
 msgstr "Şema belirtilmediği takdirde isimlerin hangi şemalarda aranacağını belirtir."
 
-#: utils/misc/guc.c:1901
+#: utils/misc/guc.c:1911
 msgid "Sets the server (database) character set encoding."
 msgstr "Sunucu (veritabanı) karakter seti kodlamasını belirtiyor."
 
-#: utils/misc/guc.c:1912
+#: utils/misc/guc.c:1922
 msgid "Shows the server version."
 msgstr "Sunucunun sürümünü gösteriyor."
 
-#: utils/misc/guc.c:1923
+#: utils/misc/guc.c:1933
 msgid "Sets the current role."
 msgstr "Geçerli rolü belirtiyor."
 
-#: utils/misc/guc.c:1934
+#: utils/misc/guc.c:1944
 msgid "Sets the session user name."
 msgstr "Oturum açan kullanıcının ismini gösterir."
 
-#: utils/misc/guc.c:1944
+#: utils/misc/guc.c:1954
 msgid "Sets the destination for server log output."
 msgstr "Log dosyaları için hedef dizini belirtiyor."
 
-#: utils/misc/guc.c:1945
+#: utils/misc/guc.c:1955
 msgid "Valid values are combinations of \"stderr\", \"syslog\", and \"eventlog\", depending on the platform."
 msgstr "Geçerli değerler, platforma bağlı olarak: \"stderr\", \"syslog\", and \"eventlog\"."
 
-#: utils/misc/guc.c:1954
+#: utils/misc/guc.c:1964
 msgid "Sets the destination directory for log files."
 msgstr "Log dosyaları için hedef dizini belirtiyor."
 
-#: utils/misc/guc.c:1955
+#: utils/misc/guc.c:1965
 msgid "May be specified as relative to the data directory or as absolute path."
 msgstr "Bu değer hem veri dizininden yola çıkarak hem de tam yol olabilir."
 
-#: utils/misc/guc.c:1964
+#: utils/misc/guc.c:1974
 msgid "Sets the file name pattern for log files."
 msgstr "Log dosyaları için kulanılacak şablonu belirtiyor."
 
-#: utils/misc/guc.c:1975
+#: utils/misc/guc.c:1985
 msgid "Sets the syslog \"facility\" to be used when syslog enabled."
 msgstr "Syslog aktif durumunda kullanılacak syslog \"facility\" değerini belirtiyor."
 
-#: utils/misc/guc.c:1976
+#: utils/misc/guc.c:1986
 msgid "Valid values are LOCAL0, LOCAL1, LOCAL2, LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7."
 msgstr "Geçerli değerler: LOCAL0, LOCAL1, LOCAL2, LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7."
 
-#: utils/misc/guc.c:1984
+#: utils/misc/guc.c:1994
 msgid "Sets the program name used to identify PostgreSQL messages in syslog."
 msgstr "Syslog içinde PostgreSQL mesajlarının kaynak olacağı program adını belirtiyor."
 
-#: utils/misc/guc.c:1995
+#: utils/misc/guc.c:2005
 msgid "Sets the time zone for displaying and interpreting time stamps."
 msgstr "Time stamp veri tipini çıktısında kullanılacak zaman dilimi belirtiyor."
 
-#: utils/misc/guc.c:2005
+#: utils/misc/guc.c:2015
 msgid "Sets the current transaction's isolation level."
 msgstr "Transaction isolation level belirtiyor."
 
-#: utils/misc/guc.c:2015
+#: utils/misc/guc.c:2025
 msgid "Sets the owning group of the Unix-domain socket."
 msgstr "Unix-domain socket grup sahipliğini belirtiyor."
 
-#: utils/misc/guc.c:2016
+#: utils/misc/guc.c:2026
 msgid "(The owning user of the socket is always the user that starts the server.)"
 msgstr "(Socket sahibi her zamn sunucu çalıştıran kullanıcıdır.)"
 
-#: utils/misc/guc.c:2025
+#: utils/misc/guc.c:2035
 msgid "Sets the directory where the Unix-domain socket will be created."
 msgstr "Unix-domain socket yarıtılacak dizinini belirtiyor."
 
-#: utils/misc/guc.c:2035
+#: utils/misc/guc.c:2045
 msgid "Sets the host name or IP address(es) to listen to."
 msgstr "Dinlenecek host adı veya IP adresleri belirtiyor."
 
-#: utils/misc/guc.c:2045
+#: utils/misc/guc.c:2055
 msgid "Selects the method used for forcing WAL updates out to disk."
 msgstr "WAL değikliklerinin diske yazılış yöntemini belirtiyor."
 
-#: utils/misc/guc.c:2054
+#: utils/misc/guc.c:2064
 msgid "Sets the list of known custom variable classes."
 msgstr "Bilinen custom variable classes listesini belirtiyor."
 
-#: utils/misc/guc.c:2064
+#: utils/misc/guc.c:2074
 msgid "Sets the server's data directory."
 msgstr "Sunucusunun veri dizini belirtiyor."
 
-#: utils/misc/guc.c:2074
+#: utils/misc/guc.c:2084
 msgid "Sets the server's main configuration file."
 msgstr "Sunucunun ana konfigorasyon dosyasının yerini belirtiyor."
 
-#: utils/misc/guc.c:2084
+#: utils/misc/guc.c:2094
 msgid "Sets the server's \"hba\" configuration file"
 msgstr "Sunucusunun \"hba\" konfigurasyon dosyasını belirtiyor"
 
-#: utils/misc/guc.c:2094
+#: utils/misc/guc.c:2104
 msgid "Sets the server's \"ident\" configuration file"
 msgstr "Sunucusunun \"ident\" konfigurasyon dosyasını belirtiyor"
 
-#: utils/misc/guc.c:2104
+#: utils/misc/guc.c:2114
 msgid "Writes the postmaster PID to the specified file."
 msgstr "postmaster PID numarası belirtilen dosyaya yazar."
 
-#: utils/misc/guc.c:2744
+#: utils/misc/guc.c:2754
 #, c-format
 msgid ""
 "%s does not know where to find the server configuration file.\n"
@@ -11546,12 +11617,12 @@ msgstr ""
 "%s, greken konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın --config-file veya -D başlatma parametresi veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:2763
+#: utils/misc/guc.c:2773
 #, c-format
 msgid "%s cannot access the server configuration file \"%s\": %s\n"
 msgstr "%s sunucu konfigurasyon dosyasına \"%s\" erişilemiyor: %s\n"
 
-#: utils/misc/guc.c:2783
+#: utils/misc/guc.c:2793
 #, c-format
 msgid ""
 "%s does not know where to find the database system data.\n"
@@ -11560,7 +11631,7 @@ msgstr ""
 "%s, greken veritabanı dosyaları bulamamaktadır.\n"
 "Dizinin yeri \"%s\" dosyasında \"data_directory\" değişkeninde, -D başlatma parametresi veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:2814
+#: utils/misc/guc.c:2824
 #, c-format
 msgid ""
 "%s does not know where to find the \"hba\" configuration file.\n"
@@ -11569,7 +11640,7 @@ msgstr ""
 "%s, greken \"hba\" konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın yeri \"%s\" dosyasında \"hba_file\" değişkeninde, -D başlatma parametresi veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:2837
+#: utils/misc/guc.c:2847
 #, c-format
 msgid ""
 "%s does not know where to find the \"ident\" configuration file.\n"
@@ -11578,135 +11649,135 @@ msgstr ""
 "%s, greken \"ident\" konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın yeri \"%s\" dosyasında \"ident_file\" değişkeninde, başlatma parametresi -D veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:3563
-#: utils/misc/guc.c:4080
-#: utils/misc/guc.c:4120
-#: utils/misc/guc.c:4195
-#: utils/misc/guc.c:4532
-#: utils/misc/guc.c:4690
+#: utils/misc/guc.c:3573
+#: utils/misc/guc.c:4090
+#: utils/misc/guc.c:4130
+#: utils/misc/guc.c:4205
+#: utils/misc/guc.c:4542
+#: utils/misc/guc.c:4700
 #, c-format
 msgid "unrecognized configuration parameter \"%s\""
 msgstr "\"%s\" bilinmeyen konfigurasyon parametresi"
 
-#: utils/misc/guc.c:3581
+#: utils/misc/guc.c:3591
 #, c-format
 msgid "parameter \"%s\" cannot be changed"
 msgstr "\"%s\" parametresi değiştirilemez"
 
-#: utils/misc/guc.c:3593
+#: utils/misc/guc.c:3603
 #, c-format
 msgid "parameter \"%s\" cannot be changed after server start"
 msgstr "\"%s\" parametresi, sunucu başlatıldıktan sonra değiştirilemez"
 
-#: utils/misc/guc.c:3603
+#: utils/misc/guc.c:3613
 #, c-format
 msgid "parameter \"%s\" cannot be changed now"
 msgstr "\"%s\" parametresi şu anda değiştirilemez"
 
-#: utils/misc/guc.c:3633
+#: utils/misc/guc.c:3643
 #, c-format
 msgid "parameter \"%s\" cannot be set after connection start"
 msgstr "\"%s\" parametresi bağlantı başlatıldıktan sonra değiştirilemez"
 
-#: utils/misc/guc.c:3643
+#: utils/misc/guc.c:3653
 #, c-format
 msgid "permission denied to set parameter \"%s\""
 msgstr "\"%s\" parametresi değiştirmek için erişim hatası"
 
-#: utils/misc/guc.c:3693
+#: utils/misc/guc.c:3703
 #, c-format
 msgid "parameter \"%s\" requires a Boolean value"
 msgstr "\"%s\" seçeneği boolean değerini alır"
 
-#: utils/misc/guc.c:3709
-#: utils/misc/guc.c:3793
+#: utils/misc/guc.c:3719
+#: utils/misc/guc.c:3803
 #, c-format
 msgid "invalid value for parameter \"%s\": %d"
 msgstr "\"%s\" seçeneği için geçersiz değer: %d"
 
-#: utils/misc/guc.c:3769
+#: utils/misc/guc.c:3779
 #, c-format
 msgid "parameter \"%s\" requires an integer value"
 msgstr "\"%s\" seçeneği bir tamsayı değerini alır"
 
-#: utils/misc/guc.c:3777
+#: utils/misc/guc.c:3787
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "\"%2$s\" parametresi için %1$d değer sıra dışıdır (%3$d .. %4$d)"
 
-#: utils/misc/guc.c:3853
+#: utils/misc/guc.c:3863
 #, c-format
 msgid "parameter \"%s\" requires a numeric value"
 msgstr "\"%s\" seçeneği numeric değerini alır"
 
-#: utils/misc/guc.c:3861
+#: utils/misc/guc.c:3871
 #, c-format
 msgid "%g is outside the valid range for parameter \"%s\" (%g .. %g)"
 msgstr "\"%2$s\" parametresi için %1$g değer sıra dışıdır (%3$g .. %4$g)"
 
-#: utils/misc/guc.c:3877
+#: utils/misc/guc.c:3887
 #, c-format
 msgid "invalid value for parameter \"%s\": %g"
 msgstr "\"%s\" seçeneği için geçersiz değer: %g"
 
-#: utils/misc/guc.c:3971
+#: utils/misc/guc.c:3981
 #, c-format
 msgid "invalid value for parameter \"%s\": \"%s\""
 msgstr "\"%s\" seçeneği için geçersiz değer: \"%s\""
 
-#: utils/misc/guc.c:4084
-#: utils/misc/guc.c:4124
-#: utils/misc/guc.c:4694
+#: utils/misc/guc.c:4094
+#: utils/misc/guc.c:4134
+#: utils/misc/guc.c:4704
 #, c-format
 msgid "must be superuser to examine \"%s\""
 msgstr "\"%s\" değişkeninin değerini sorgulamak için superuser haklarına sahip olmalısınız"
 
-#: utils/misc/guc.c:4204
+#: utils/misc/guc.c:4214
 #, c-format
 msgid "SET %s takes only one argument"
 msgstr "SET %s tek bir argüman alır"
 
-#: utils/misc/guc.c:4306
+#: utils/misc/guc.c:4316
 msgid "SET requires parameter name"
 msgstr "SET komutu patametre adını gerektirir"
 
-#: utils/misc/guc.c:4370
+#: utils/misc/guc.c:4380
 #, c-format
 msgid "attempt to redefine parameter \"%s\""
 msgstr "\"%s\" parametresinin yeniden tanımlanma denemesi"
 
-#: utils/misc/guc.c:5306
+#: utils/misc/guc.c:5316
 #, c-format
 msgid "could not parse setting for parameter \"%s\""
 msgstr "\"%s\" parametresi için verilen değer çözümlenemiyor"
 
-#: utils/misc/guc.c:5504
+#: utils/misc/guc.c:5512
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "\"log_destination\" parametresi için dözdizimi geçersiz"
 
-#: utils/misc/guc.c:5527
+#: utils/misc/guc.c:5535
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "\"log_destination\" anahtar kelimesi anlaşılamıyor: \"%s\""
 
-#: utils/misc/guc.c:5789
+#: utils/misc/guc.c:5797
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF artık desteklenmiyor"
 
-#: utils/misc/guc.c:5837
+#: utils/misc/guc.c:5845
 #, c-format
 msgid "invalid syntax for \"custom_variable_classes\": \"%s\""
 msgstr "\"custom_variable_classes\" için söz dizim hatası: \"%s\""
 
-#: utils/misc/guc.c:5866
+#: utils/misc/guc.c:5874
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "\"log_statement_stats\" tue iken değer aktif olamaz"
 
-#: utils/misc/guc.c:5883
+#: utils/misc/guc.c:5891
 msgid "cannot enable \"log_statement_stats\" when \"log_parser_stats\", \"log_planner_stats\", or \"log_executor_stats\" is true"
 msgstr "\"log_parser_stats\", \"log_planner_stats\", veya \"log_executor_stats\" değerleri true iken  \"log_statement_stats\" aktif edilemiyor"
 
-#: utils/misc/guc.c:5902
+#: utils/misc/guc.c:5910
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr "salt okunur transaction okuma-yazma mosunda geçirilemiyor"
 
