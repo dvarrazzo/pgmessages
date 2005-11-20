@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psql-tr\n"
 "POT-Creation-Date: 2004-11-05 07:30+0000\n"
-"PO-Revision-Date: 2005-11-05 16:18+0200\n"
+"PO-Revision-Date: 2005-11-20 10:12+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -972,12 +972,12 @@ msgstr "Şifre: "
 msgid "Password for user %s: "
 msgstr "%s kulalnıcısının şifresi: "
 
-#: startup.c:254
+#: startup.c:255
 #, c-format
 msgid "%s: could not open log file \"%s\": %s\n"
 msgstr "%s: \"%s\" kayıti dosyası açılamıyor: %s\n"
 
-#: startup.c:335
+#: startup.c:336
 #, c-format
 msgid ""
 "Welcome to %s %s (server %s), the PostgreSQL interactive terminal.\n"
@@ -986,7 +986,7 @@ msgstr ""
 "PostgreSQL etkilişimli arayüzü %s %s(server %s).\n"
 "\n"
 
-#: startup.c:339
+#: startup.c:340
 #, c-format
 msgid ""
 "Welcome to %s %s, the PostgreSQL interactive terminal.\n"
@@ -995,7 +995,7 @@ msgstr ""
 "PostgreSQL etkilişimli arayüzü %s %s.\n"
 "\n"
 
-#: startup.c:342
+#: startup.c:343
 msgid ""
 "Type:  \\copyright for distribution terms\n"
 "       \\h for help with SQL commands\n"
@@ -1011,7 +1011,7 @@ msgstr ""
 "       \\q çıkmak için\n"
 "\n"
 
-#: startup.c:349
+#: startup.c:350
 #, c-format
 msgid ""
 "WARNING:  You are connected to a server with major version %d.%d,\n"
@@ -1023,42 +1023,42 @@ msgstr ""
 "ancak %s istemcinizin sürümü %d.%d. \\d gibi bazı backslash ile başlayan komutlar düzgün çalışmayabilir\n"
 "\n"
 
-#: startup.c:531
+#: startup.c:532
 #, c-format
 msgid "%s: could not set printing parameter \"%s\"\n"
 msgstr "%s: \"%s\" yazdırma parametrlesi ayarlanamıyor\n"
 
-#: startup.c:577
+#: startup.c:578
 #, c-format
 msgid "%s: could not delete variable \"%s\"\n"
 msgstr "%s: \"%s\" değişkeni silinemiyor\n"
 
-#: startup.c:587
+#: startup.c:588
 #, c-format
 msgid "%s: could not set variable \"%s\"\n"
 msgstr "%s: \"%s\" değişkeni atanamıyor\n"
 
-#: startup.c:618
-#: startup.c:624
+#: startup.c:619
+#: startup.c:625
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
 msgstr "Daha fazla bilgi için  \"%s --help\" yazın.\n"
 
-#: startup.c:641
+#: startup.c:642
 #, c-format
 msgid "%s: warning: extra command-line argument \"%s\" ignored\n"
 msgstr "%s: uyarı: \"%s\" fazla argümanı atlanmıştır\n"
 
-#: startup.c:648
+#: startup.c:649
 #, c-format
 msgid "%s: Warning: The -u option is deprecated. Use -U.\n"
 msgstr "%s: Uyarı: -u parametresi kullanımdan kalkmıştır. -U kullanın.\n"
 
-#: startup.c:710
+#: startup.c:711
 msgid "contains support for command-line editing"
 msgstr "komut satırı düzenleme desteği mevcuttur"
 
-#: startup.c:733
+#: startup.c:734
 #, c-format
 msgid ""
 "SSL connection (cipher: %s, bits: %i)\n"
@@ -1067,7 +1067,7 @@ msgstr ""
 "SSL bağlantı (cipher: %s, bit sayısı: %i)\n"
 "\n"
 
-#: startup.c:756
+#: startup.c:757
 #, c-format
 msgid ""
 "Warning: Console code page (%u) differs from Windows code page (%u)\n"
@@ -2736,8 +2736,8 @@ msgid "remove a conversion"
 msgstr "conversion kaldır"
 
 #: sql_help.h:250
-msgid "DROP CONVERSION name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION name [ CASCADE | RESTRICT ]"
+msgid "DROP CONVERSION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
+msgstr "DROP CONVERSION [ IF EXISTS ] conversion_adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:253
 msgid "remove a database"
@@ -2752,8 +2752,8 @@ msgid "remove a domain"
 msgstr "domain kaldır"
 
 #: sql_help.h:258
-msgid "DROP DOMAIN name [, ...]  [ CASCADE | RESTRICT ]"
-msgstr "DROP DOMAIN domain_adı [, ...]  [ CASCADE | RESTRICT ]"
+msgid "DROP DOMAIN [IF EXISTS ] name [, ...]  [ CASCADE | RESTRICT ]"
+msgstr "DROP DOMAIN [IF EXISTS ] domain_adı [, ...]  [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:261
 msgid "remove a function"
@@ -2782,8 +2782,8 @@ msgid "remove an index"
 msgstr "indeks kaldır"
 
 #: sql_help.h:270
-msgid "DROP INDEX name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP INDEX index_adı [, ...] [ CASCADE | RESTRICT ]"
+msgid "DROP INDEX [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP INDEX [ IF EXISTS ] index_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:273
 msgid "remove a procedural language"
@@ -2826,24 +2826,24 @@ msgid "remove a schema"
 msgstr "şema kaldır"
 
 #: sql_help.h:294
-msgid "DROP SCHEMA name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP SCHEMA şema_adı [, ...] [ CASCADE | RESTRICT ]"
+msgid "DROP SCHEMA [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP SCHEMA [ IF EXISTS ] şema_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:297
 msgid "remove a sequence"
 msgstr "sequence kaldır"
 
 #: sql_help.h:298
-msgid "DROP SEQUENCE name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP SEQUENCE sequence_adı [, ...] [ CASCADE | RESTRICT ]"
+msgid "DROP SEQUENCE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP SEQUENCE [ IF EXISTS ] sequence_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:301
 msgid "remove a table"
 msgstr "tablo kaldır"
 
 #: sql_help.h:302
-msgid "DROP TABLE name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP TABLE tablo_adı [, ...] [ CASCADE | RESTRICT ]"
+msgid "DROP TABLE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP TABLE [ IF EXISTS ] tablo_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:305
 msgid "remove a tablespace"
@@ -2866,8 +2866,8 @@ msgid "remove a data type"
 msgstr "veri tipi kaldır"
 
 #: sql_help.h:314
-msgid "DROP TYPE name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP TYPE tip_adı [, ...] [ CASCADE | RESTRICT ]"
+msgid "DROP TYPE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP TYPE [ IF EXISTS ] tip_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:318
 msgid "DROP USER name [, ...]"
@@ -2878,8 +2878,8 @@ msgid "remove a view"
 msgstr "view kaldır"
 
 #: sql_help.h:322
-msgid "DROP VIEW name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP VIEW view_adı [, ...] [ CASCADE | RESTRICT ]"
+msgid "DROP VIEW [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP VIEW [ IF EXISTS ] view_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:326
 msgid "END [ WORK | TRANSACTION ]"
