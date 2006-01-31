@@ -4,8 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: psql-tr\n"
-"POT-Creation-Date: 2004-11-05 07:30+0000\n"
-"PO-Revision-Date: 2005-11-27 18:47+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-01-06 01:27-0400\n"
+"PO-Revision-Date: 2006-01-06 16:44+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +44,7 @@ msgid "\\%s: could not change directory to \"%s\": %s\n"
 msgstr "\\%s: \"%s\" dizinine geçiş yapılamamıştır: %s\n"
 
 #: command.c:389
-#: command.c:782
+#: command.c:836
 msgid "no query buffer\n"
 msgstr "sorgu tamponu mevcut değil\n"
 
@@ -56,9 +57,9 @@ msgstr "%s: dil kodlama adı geçersiz ya da dönüştürme fonksiyonu bulunamad
 #: command.c:554
 #: command.c:568
 #: command.c:585
-#: command.c:631
-#: command.c:762
-#: command.c:793
+#: command.c:685
+#: command.c:816
+#: command.c:847
 #, c-format
 msgid "\\%s: missing required argument\n"
 msgstr "\\%s: zorunlu argüman eksik\n"
@@ -67,16 +68,34 @@ msgstr "\\%s: zorunlu argüman eksik\n"
 msgid "Query buffer is empty."
 msgstr "Sorgu tamponu boş."
 
-#: command.c:651
+#: command.c:627
+msgid "Enter new password: "
+msgstr "Yeni şifre girin:"
+
+#: command.c:628
+msgid "Enter it again: "
+msgstr "Yıneden girin:"
+
+#: command.c:632
+#, c-format
+msgid "Passwords didn't match.\n"
+msgstr "Şifreler uyuşmıyor.\n"
+
+#: command.c:650
+#, c-format
+msgid "Password encryption failed.\n"
+msgstr "Parola şifrleme hatası.\n"
+
+#: command.c:705
 msgid "Query buffer reset (cleared)."
 msgstr "Sorgu tamponu sıfırlanmış."
 
-#: command.c:665
+#: command.c:719
 #, c-format
 msgid "Wrote history to file \"%s/%s\".\n"
 msgstr "Geçmiş, \"%s/%s\" dosyasına yazılmış.\n"
 
-#: command.c:703
+#: command.c:757
 #: common.c:83
 #: common.c:97
 #: mainloop.c:71
@@ -91,33 +110,34 @@ msgstr "Geçmiş, \"%s/%s\" dosyasına yazılmış.\n"
 #: print.c:1631
 #: print.c:1652
 #: print.c:1669
+#, c-format
 msgid "out of memory\n"
 msgstr "yetersiz bellek\n"
 
-#: command.c:718
-#: command.c:767
+#: command.c:772
+#: command.c:821
 #, c-format
 msgid "\\%s: error\n"
 msgstr "\\%s: hata\n"
 
-#: command.c:748
+#: command.c:802
 msgid "Timing is on."
 msgstr "Zamanlama açık."
 
-#: command.c:750
+#: command.c:804
 msgid "Timing is off."
 msgstr "Zamanlama kapalı."
 
-#: command.c:810
-#: command.c:830
-#: command.c:1224
-#: command.c:1231
-#: command.c:1241
-#: command.c:1253
-#: command.c:1266
-#: command.c:1280
-#: command.c:1302
+#: command.c:864
+#: command.c:884
+#: command.c:1278
+#: command.c:1285
+#: command.c:1295
+#: command.c:1307
+#: command.c:1320
 #: command.c:1334
+#: command.c:1356
+#: command.c:1388
 #: common.c:168
 #: copy.c:535
 #: copy.c:580
@@ -125,7 +145,15 @@ msgstr "Zamanlama kapalı."
 msgid "%s: %s\n"
 msgstr "%s: %s\n"
 
-#: command.c:984
+#: command.c:992
+#: command.c:994
+#: startup.c:196
+#: startup.c:198
+#, c-format
+msgid "Password for user %s: "
+msgstr "%s kulalnıcısının şifresi: "
+
+#: command.c:1038
 #: common.c:214
 #: common.c:692
 #: common.c:756
@@ -136,150 +164,155 @@ msgstr "%s: %s\n"
 msgid "%s"
 msgstr "%s"
 
-#: command.c:988
+#: command.c:1042
 msgid "Previous connection kept\n"
 msgstr "Önceki bağlantı kullanılıyor\n"
 
-#: command.c:999
+#: command.c:1053
 #, c-format
 msgid "\\connect: %s"
 msgstr "\\connect: %s"
 
-#: command.c:1011
+#: command.c:1065
 #, c-format
 msgid "You are now connected to database \"%s\".\n"
 msgstr "Şu an \"%s\" veritabanına bağlısınız.\n"
 
-#: command.c:1013
+#: command.c:1067
 #, c-format
 msgid "You are now connected as new user \"%s\".\n"
 msgstr "Şu an kullanıcı \"%s\" olarak bağlısınız.\n"
 
-#: command.c:1016
+#: command.c:1070
 #, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\".\n"
 msgstr "Şu an \"%s\" veritabanına \"%s\" kullanıcısı olarak bağlısınız.\n"
 
-#: command.c:1141
+#: command.c:1195
 #, c-format
 msgid "could not start editor \"%s\"\n"
 msgstr "\"%s\" metin düzenleyicisi çalıştırılamadı\n"
 
-#: command.c:1143
+#: command.c:1197
 msgid "could not start /bin/sh\n"
 msgstr "/bin/sh başlatılamıyor\n"
 
-#: command.c:1182
+#: command.c:1236
 #, c-format
 msgid "cannot locate temporary directory: %s"
 msgstr "geçici dizin bulunamıyor: %s"
 
-#: command.c:1209
+#: command.c:1263
 #, c-format
 msgid "could not open temporary file \"%s\": %s\n"
 msgstr "\"%s\" geçici dosya açılamıyor: %s\n"
 
-#: command.c:1407
+#: command.c:1461
 msgid "\\pset: allowed formats are unaligned, aligned, html, latex, troff-ms\n"
 msgstr "\\pset: izin verilen biçimler: unaligned, aligned, html, latex, troff-ms\n"
 
-#: command.c:1412
+#: command.c:1466
 #, c-format
 msgid "Output format is %s.\n"
 msgstr "Çıktı formatı: %s.\n"
 
-#: command.c:1422
+#: command.c:1476
 #, c-format
 msgid "Border style is %d.\n"
 msgstr "Kenar stili: %d.\n"
 
-#: command.c:1431
+#: command.c:1485
+#, c-format
 msgid "Expanded display is on.\n"
 msgstr "Geniş gösterme açık.\n"
 
-#: command.c:1432
+#: command.c:1486
+#, c-format
 msgid "Expanded display is off.\n"
 msgstr "Geniş gösterme kapalı.\n"
 
-#: command.c:1442
+#: command.c:1496
 msgid "Showing locale-adjusted numeric output."
 msgstr "Yerel duyarlı sayısal çıktı gösteriliyor."
 
-#: command.c:1444
+#: command.c:1498
 msgid "Locale-adjusted numeric output is off."
 msgstr "Yerel duyarlı sayısıal çıktı biçimlendirme kapalı."
 
-#: command.c:1457
+#: command.c:1511
 #, c-format
 msgid "Null display is \"%s\".\n"
 msgstr "Null display is \"%s\".\n"
 
-#: command.c:1469
+#: command.c:1523
 #, c-format
 msgid "Field separator is \"%s\".\n"
 msgstr "Alan ayracı: \"%s\".\n"
 
-#: command.c:1483
+#: command.c:1537
+#, c-format
 msgid "Record separator is <newline>."
 msgstr "Kayıt ayracı <newline>."
 
-#: command.c:1485
+#: command.c:1539
 #, c-format
 msgid "Record separator is \"%s\".\n"
 msgstr "Kayıt ayracı \"%s\".\n"
 
-#: command.c:1496
+#: command.c:1550
 msgid "Showing only tuples."
 msgstr "Sadece kayıtlar gösteriliyor."
 
-#: command.c:1498
+#: command.c:1552
 msgid "Tuples only is off."
 msgstr "Sadece kayıtları gösterme kapalı."
 
-#: command.c:1514
+#: command.c:1568
 #, c-format
 msgid "Title is \"%s\".\n"
 msgstr "Başlık \"%s\".\n"
 
-#: command.c:1516
+#: command.c:1570
+#, c-format
 msgid "Title is unset.\n"
 msgstr "Başlık kaldırıldı\n"
 
-#: command.c:1532
+#: command.c:1586
 #, c-format
 msgid "Table attribute is \"%s\".\n"
 msgstr "Tablo özelliği: \"%s\".\n"
 
-#: command.c:1534
+#: command.c:1588
+#, c-format
 msgid "Table attributes unset.\n"
 msgstr "Tablo özellikleri kaldırıldı.\n"
 
-#: command.c:1550
+#: command.c:1604
 msgid "Pager is used for long output."
 msgstr "Uzun çıktı için sayfalama kullanıacaktır."
 
-#: command.c:1552
+#: command.c:1606
 msgid "Pager is always used."
 msgstr "Sayfalama her zaman kullanılacak."
 
-#: command.c:1554
+#: command.c:1608
 msgid "Pager usage is off."
 msgstr "Sayfalama kullanımı kapalı."
 
-#: command.c:1565
+#: command.c:1619
 msgid "Default footer is on."
 msgstr "Varsayılan alt başlık açık."
 
-#: command.c:1567
+#: command.c:1621
 msgid "Default footer is off."
 msgstr "Varsayılan alt başlık kapalı."
 
-#: command.c:1573
+#: command.c:1627
 #, c-format
 msgid "\\pset: unknown option: %s\n"
 msgstr "\\pset: bilinmeyen seçenek: %s\n"
 
-#: command.c:1628
+#: command.c:1682
 msgid "\\!: failed\n"
 msgstr "\\!: başarısız\n"
 
@@ -605,6 +638,7 @@ msgstr ""
 "Hataları <pgsql-bugs@postgresql.org> adresine bildirin."
 
 #: help.c:174
+#, c-format
 msgid "General\n"
 msgstr "Genel\n"
 
@@ -618,14 +652,17 @@ msgstr ""
 "                 yeni veritabanına bağlan (geçerli veritabanı \"%s\")\n"
 
 #: help.c:178
+#, c-format
 msgid "  \\cd [DIR]      change the current working directory\n"
 msgstr "  \\cd [DIR]      geçerli dizini değiştir\n"
 
 #: help.c:179
+#, c-format
 msgid "  \\copyright     show PostgreSQL usage and distribution terms\n"
 msgstr "  \\copyright     PostgreSQL kullanım ve dağıtım şartlarını göster\n"
 
 #: help.c:180
+#, c-format
 msgid ""
 "  \\encoding [ENCODING]\n"
 "                 show or set client encoding\n"
@@ -634,14 +671,17 @@ msgstr ""
 "                 istemci dil kodlamasını göster\n"
 
 #: help.c:182
+#, c-format
 msgid "  \\h [NAME]      help on syntax of SQL commands, * for all commands\n"
 msgstr "  \\h [NAME]      SQL komutları hakkında yardım göster, tüm komutlar için *\n"
 
 #: help.c:183
+#, c-format
 msgid "  \\q             quit psql\n"
 msgstr "  \\q             psql'den çık\n"
 
 #: help.c:184
+#, c-format
 msgid ""
 "  \\set [NAME [VALUE]]\n"
 "                 set internal variable, or list all if no parameters\n"
@@ -655,58 +695,72 @@ msgid "  \\timing        toggle timing of commands (currently %s)\n"
 msgstr "  \\timing        komutların zamanlamasını göster (şu an %s)\n"
 
 #: help.c:188
+#, c-format
 msgid "  \\unset NAME    unset (delete) internal variable\n"
 msgstr "  \\unset NAME    dahili değişkenini sıfırla (sil)\n"
 
 #: help.c:189
+#, c-format
 msgid "  \\! [COMMAND]   execute command in shell or start interactive shell\n"
 msgstr "  \\! [COMMAND]   kabukta komut çalıştır ya da etkileşimli kabuğu başlar\n"
 
 #: help.c:192
+#, c-format
 msgid "Query Buffer\n"
 msgstr "Sorgu tamponu\n"
 
 #: help.c:193
+#, c-format
 msgid "  \\e [FILE]      edit the query buffer (or file) with external editor\n"
 msgstr "  \\e [FILE]      sorgu tamponunu (ya da dosyasını) harici bir metin düzenleyici ile düzenle\n"
 
 #: help.c:194
+#, c-format
 msgid "  \\g [FILE]      send query buffer to server (and results to file or |pipe)\n"
 msgstr "  \\g [FILE]      sorgu tamponundaki sorguyu sunucuya gönder (ve sonuçları dosyaya ya da |pipe'e gönder)\n"
 
 #: help.c:195
+#, c-format
 msgid "  \\p             show the contents of the query buffer\n"
 msgstr "  \\p             sorgu tamponunun içeriğini göster\n"
 
 #: help.c:196
+#, c-format
 msgid "  \\r             reset (clear) the query buffer\n"
 msgstr "  \\r             sorgu tamponunu sıfırla (temizle)\n"
 
 #: help.c:198
+#, c-format
 msgid "  \\s [FILE]      display history or save it to file\n"
 msgstr "  \\s [FILE]      geçmişi göster ya da  dosyaya kaydet\n"
 
 #: help.c:200
+#, c-format
 msgid "  \\w FILE        write query buffer to file\n"
 msgstr "  \\w FILE        sorgu tamponunu dosyaya kaydet\n"
 
 #: help.c:203
+#, c-format
 msgid "Input/Output\n"
 msgstr "Giriş/Çıkış\n"
 
 #: help.c:204
+#, c-format
 msgid "  \\echo [STRING] write string to standard output\n"
 msgstr "  \\echo [STRING] standart çıktıya bir satır gönder\n"
 
 #: help.c:205
+#, c-format
 msgid "  \\i FILE        execute commands from file\n"
 msgstr "  \\i FILE        dosyadaki komutları çalıştır\n"
 
 #: help.c:206
+#, c-format
 msgid "  \\o [FILE]      send all query results to file or |pipe\n"
 msgstr "  \\o [FILE]      tüm sorgu sonuçlarını dosyaya ya da |pipe'e gönder\n"
 
 #: help.c:207
+#, c-format
 msgid ""
 "  \\qecho [STRING]\n"
 "                 write string to query output stream (see \\o)\n"
@@ -715,14 +769,17 @@ msgstr ""
 "                 sorgu çıkış akımına satır yaz (bk. \\o)\n"
 
 #: help.c:211
+#, c-format
 msgid "Informational\n"
 msgstr "Bilgi edinme\n"
 
 #: help.c:212
+#, c-format
 msgid "  \\d [NAME]      describe table, index, sequence, or view\n"
 msgstr "  \\d [NAME]      tablo, indeks, sequence, ya da view hakkında bilgi ver\n"
 
 #: help.c:213
+#, c-format
 msgid ""
 "  \\d{t|i|s|v|S} [PATTERN] (add \"+\" for more detail)\n"
 "                 list tables/indexes/sequences/views/system tables\n"
@@ -731,82 +788,102 @@ msgstr ""
 "                 tablolar/indeksler/sequenceler/viewlar/system tablolarını listele\n"
 
 #: help.c:215
+#, c-format
 msgid "  \\da [PATTERN]  list aggregate functions\n"
 msgstr "  \\da [PATTERN]  aggregate fonksiyonları listele\n"
 
 #: help.c:216
+#, c-format
 msgid "  \\db [PATTERN]  list tablespaces (add \"+\" for more detail)\n"
 msgstr "  \\db [PATTERN]  tablespaceleri listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:217
+#, c-format
 msgid "  \\dc [PATTERN]  list conversions\n"
 msgstr "  \\dc [PATTERN]  dönüşümleri listele\n"
 
 #: help.c:218
+#, c-format
 msgid "  \\dC            list casts\n"
 msgstr "  \\dC            castları listele\n"
 
 #: help.c:219
+#, c-format
 msgid "  \\dd [PATTERN]  show comment for object\n"
 msgstr "  \\dd [PATTERN]  nesne yorumunu göster\n"
 
 #: help.c:220
+#, c-format
 msgid "  \\dD [PATTERN]  list domains\n"
 msgstr "  \\dD [PATTERN]  domainleri göster\n"
 
 #: help.c:221
+#, c-format
 msgid "  \\df [PATTERN]  list functions (add \"+\" for more detail)\n"
 msgstr "  \\df [PATTERN]  fonksiyonları göster (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:222
+#, c-format
 msgid "  \\dg [PATTERN]  list groups\n"
 msgstr "  \\dg [PATTERN]  grupları göster\n"
 
 #: help.c:223
+#, c-format
 msgid "  \\dn [PATTERN]  list schemas (add \"+\" for more detail)\n"
 msgstr "  \\dn [PATTERN]  şemaları göster (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:224
+#, c-format
 msgid "  \\do [NAME]     list operators\n"
 msgstr "  \\do [NAME]     operatörleri göster\n"
 
 #: help.c:225
+#, c-format
 msgid "  \\dl            list large objects, same as \\lo_list\n"
 msgstr "  \\dl            large objectleri göster, \\lo_list ile aynı\n"
 
 #: help.c:226
+#, c-format
 msgid "  \\dp [PATTERN]  list table, view, and sequence access privileges\n"
 msgstr "  \\dp [PATTERN]  tablo, view, ve sequence erişim haklarını göster\n"
 
 #: help.c:227
+#, c-format
 msgid "  \\dT [PATTERN]  list data types (add \"+\" for more detail)\n"
 msgstr "  \\dT [PATTERN]  veri tipleri listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:228
+#, c-format
 msgid "  \\du [PATTERN]  list users\n"
 msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
 
 #: help.c:229
+#, c-format
 msgid "  \\l             list all databases (add \"+\" for more detail)\n"
 msgstr "  \\l             tüm veritabanlarını listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:230
+#, c-format
 msgid "  \\z [PATTERN]   list table, view, and sequence access privileges (same as \\dp)\n"
 msgstr "  \\z [PATTERN]   tablo, view, ve sequence erişim haklarını listele (\\dp ile aynı)\n"
 
 #: help.c:233
+#, c-format
 msgid "Formatting\n"
 msgstr "Biçimlendirme:\n"
 
 #: help.c:234
+#, c-format
 msgid "  \\a             toggle between unaligned and aligned output mode\n"
 msgstr "  \\a             düzenli ve düzensiz biçim arasında geçiş yap\n"
 
 #: help.c:235
+#, c-format
 msgid "  \\C [STRING]    set table title, or unset if none\n"
 msgstr "  \\C [STRING]    tablo başlığını ayarla, kaldırmak için boş bırakın\n"
 
 #: help.c:236
+#, c-format
 msgid "  \\f [STRING]    show or set field separator for unaligned query output\n"
 msgstr "  \\f [STRING]    sorgunun düzensiz çıkışı için alan ayracı tanımla\n"
 
@@ -816,6 +893,7 @@ msgid "  \\H             toggle HTML output mode (currently %s)\n"
 msgstr "  \\H             HTML çıktı biçimini etkinleştir (şu an %s)\n"
 
 #: help.c:239
+#, c-format
 msgid ""
 "  \\pset NAME [VALUE]\n"
 "                 set table output option\n"
@@ -833,6 +911,7 @@ msgid "  \\t             show only rows (currently %s)\n"
 msgstr "  \\t             sadece satırları göster (şu an %s)\n"
 
 #: help.c:245
+#, c-format
 msgid "  \\T [STRING]    set HTML <table> tag attributes, or unset if none\n"
 msgstr "  \\T [STRING]    HTML <table> tag parametrelerini tanımla, boş ise tüm parametrelerini kaldır\n"
 
@@ -842,14 +921,17 @@ msgid "  \\x             toggle expanded output (currently %s)\n"
 msgstr "  \\x             geniş çıktı ayarla (şu an %s)\n"
 
 #: help.c:250
+#, c-format
 msgid "Copy, Large Object\n"
 msgstr "Copy, Large Object\n"
 
 #: help.c:251
+#, c-format
 msgid "  \\copy ...      perform SQL COPY with data stream to the client host\n"
 msgstr "  \\copy ...      istemci sisteminden veri akımı ile SQL COPY komutunu çalıştır\n"
 
 #: help.c:252
+#, c-format
 msgid ""
 "  \\lo_export LOBOID FILE\n"
 "  \\lo_import FILE [COMMENT]\n"
@@ -913,6 +995,7 @@ msgstr "%s: geçerli transaction iptal edildi\n"
 msgid "%s: unknown transaction status\n"
 msgstr "%s: bilinmeyen transaction durumu\n"
 
+#: large_obj.c:260
 #: describe.c:81
 #: describe.c:185
 #: describe.c:258
@@ -922,7 +1005,6 @@ msgstr "%s: bilinmeyen transaction durumu\n"
 #: describe.c:758
 #: describe.c:1478
 #: describe.c:1721
-#: large_obj.c:260
 msgid "Description"
 msgstr "Açıklama"
 
@@ -936,6 +1018,7 @@ msgid "Use \"\\q\" to leave %s.\n"
 msgstr "%s'den çıkmak için \"\\q\" kullanın.\n"
 
 #: print.c:574
+#, c-format
 msgid "(No rows)\n"
 msgstr "(Satır yok)\n"
 
@@ -945,6 +1028,7 @@ msgid "invalid output format (internal error): %d"
 msgstr "geçersiz çıktı biçimi (iç hata): %d"
 
 #: print.c:1658
+#, c-format
 msgid "(1 row)"
 msgstr "(1 satır)"
 
@@ -965,12 +1049,6 @@ msgstr "Kullanıcı adı: "
 #: startup.c:193
 msgid "Password: "
 msgstr "Şifre: "
-
-#: startup.c:196
-#: startup.c:198
-#, c-format
-msgid "Password for user %s: "
-msgstr "%s kulalnıcısının şifresi: "
 
 #: startup.c:255
 #, c-format
@@ -996,6 +1074,7 @@ msgstr ""
 "\n"
 
 #: startup.c:343
+#, c-format
 msgid ""
 "Type:  \\copyright for distribution terms\n"
 "       \\h for help with SQL commands\n"
@@ -1467,10 +1546,12 @@ msgid "Table"
 msgstr "Tablo"
 
 #: describe.c:1527
+#, c-format
 msgid "No matching relations found.\n"
 msgstr "Eşleşen nesne bulunamadı.\n"
 
 #: describe.c:1529
+#, c-format
 msgid "No relations found.\n"
 msgstr "Nesne bulunamadı.\n"
 
@@ -2224,7 +2305,7 @@ msgstr "yeni domaın tanımla"
 
 #: sql_help.h:158
 msgid ""
-"CREATE DOMAIN name [AS] data_type\n"
+"CREATE DOMAIN name [ AS ] data_type\n"
 "    [ DEFAULT expression ]\n"
 "    [ constraint [ ... ] ]\n"
 "\n"
@@ -2233,11 +2314,11 @@ msgid ""
 "[ CONSTRAINT constraint_name ]\n"
 "{ NOT NULL | NULL | CHECK (expression) }"
 msgstr ""
-"CREATE DOMAIN name [AS] data_type\n"
+"CREATE DOMAIN name [ AS ] data_type\n"
 "    [ DEFAULT expression ]\n"
 "    [ constraint [ ... ] ]\n"
 "\n"
-"constraint aşağıdakilerden birisi olabilir::\n"
+"constraint aşağıdakilerden birisi olabilir:\n"
 "\n"
 "[ CONSTRAINT constraint_name ]\n"
 "{ NOT NULL | NULL | CHECK (expression) }"
