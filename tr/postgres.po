@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-02-14 20:07+0200\n"
+"PO-Revision-Date: 2006-02-20 10:03+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgid "number of columns (%d) exceeds limit (%d)"
 msgstr "kolonların sayısı (%d),  (%d) sınırını aşıyor"
 
 #: access/common/printtup.c:274
-#: tcop/postgres.c:1565
+#: tcop/postgres.c:1567
 #: tcop/fastpath.c:180
 #: tcop/fastpath.c:508
 #, c-format
@@ -49,7 +49,7 @@ msgstr "desteklenmeyen biçim kodu: %d"
 msgid "column \"%s\" cannot be declared SETOF"
 msgstr "\"%s\" kolonu SETOF olarak bildirilemez"
 
-#: access/gist/gistvacuum.c:386
+#: access/gist/gistvacuum.c:388
 #, c-format
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM FULL veya REINDEX işleminden geçmesi gerekir"
@@ -1332,14 +1332,14 @@ msgstr "bir transaction içinde 2^32-1 subtransactiondan fazla olamaz"
 
 #: bootstrap/bootstrap.c:305
 #: postmaster/postmaster.c:589
-#: tcop/postgres.c:2749
+#: tcop/postgres.c:2751
 #, c-format
 msgid "--%s requires a value"
 msgstr "--%s bir değer gerektirir"
 
 #: bootstrap/bootstrap.c:310
 #: postmaster/postmaster.c:594
-#: tcop/postgres.c:2754
+#: tcop/postgres.c:2756
 #, c-format
 msgid "-c %s requires a value"
 msgstr "-c %s bir değer gerektirir"
@@ -1366,21 +1366,21 @@ msgstr ""
 
 #: bootstrap/bootstrap.c:504
 #: postmaster/postmaster.c:1144
-#: tcop/postgres.c:2351
+#: tcop/postgres.c:2353
 #, c-format
 msgid "Options:\n"
 msgstr "Seçenekler:\n"
 
 #: bootstrap/bootstrap.c:505
 #: postmaster/postmaster.c:1148
-#: tcop/postgres.c:2355
+#: tcop/postgres.c:2357
 #, c-format
 msgid "  -B NBUFFERS     number of shared buffers\n"
 msgstr "  -B NBUFFERS     shared buffer sayısı\n"
 
 #: bootstrap/bootstrap.c:506
 #: postmaster/postmaster.c:1149
-#: tcop/postgres.c:2356
+#: tcop/postgres.c:2358
 #, c-format
 msgid "  -c NAME=VALUE   set run-time parameter\n"
 msgstr "  -c NAME=VALUE   çalıştırma zamanı parametresini ayarla\n"
@@ -1393,20 +1393,20 @@ msgstr "  -d 1-5          debug düzeyi\n"
 
 #: bootstrap/bootstrap.c:508
 #: postmaster/postmaster.c:1151
-#: tcop/postgres.c:2358
+#: tcop/postgres.c:2360
 #, c-format
 msgid "  -D DATADIR      database directory\n"
 msgstr "  -D DATADIR      veritabanı dizini\n"
 
 #: bootstrap/bootstrap.c:509
 #: postmaster/postmaster.c:1153
-#: tcop/postgres.c:2361
+#: tcop/postgres.c:2363
 #, c-format
 msgid "  -F              turn fsync off\n"
 msgstr "  -F              fsync etkisizleştir\n"
 
 #: bootstrap/bootstrap.c:510
-#: tcop/postgres.c:2363
+#: tcop/postgres.c:2365
 #, c-format
 msgid "  -r FILENAME     send stdout and stderr to given file\n"
 msgstr "  -r FILENAME     stdout ve stderr çıktılarını belirtilen dosyaya gönder\n"
@@ -1705,6 +1705,7 @@ msgstr "\"%s\" şeması mevcut değil"
 #: commands/tablespace.c:709
 #: commands/tablespace.c:776
 #: commands/tablespace.c:871
+#: executor/execMain.c:769
 #: utils/adt/acl.c:2571
 #: utils/adt/dbsize.c:208
 #, c-format
@@ -2064,7 +2065,7 @@ msgid "column \"%s\" is of type %s but default expression is of type %s"
 msgstr "\"%s\" kolonunun tipi %s'dır, ancak öntanımlı ifadenin tipi %s'dir."
 
 #: catalog/heap.c:1768
-#: parser/analyze.c:2713
+#: parser/analyze.c:2717
 #: parser/parse_node.c:246
 #: parser/parse_target.c:361
 #: parser/parse_target.c:563
@@ -2145,8 +2146,8 @@ msgstr "veritabanı-arası referanslar oluşturulamaz: %s"
 #: catalog/namespace.c:1120
 #: parser/parse_expr.c:497
 #: parser/parse_target.c:729
-#: gram.y:2728
-#: gram.y:7995
+#: gram.y:2719
+#: gram.y:7991
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "geçersiz qualified adı (çok fazla noktalı isim): %s"
@@ -2840,8 +2841,8 @@ msgstr "COPY dosyasından okuma hatası: %m"
 #: commands/copy.c:512
 #: commands/copy.c:531
 #: commands/copy.c:535
-#: tcop/postgres.c:300
-#: tcop/postgres.c:323
+#: tcop/postgres.c:302
+#: tcop/postgres.c:325
 #: tcop/fastpath.c:289
 msgid "unexpected EOF on client connection"
 msgstr "istemci bağlantısında beklenmeyen EOF"
@@ -2929,7 +2930,7 @@ msgid "CSV quote character must not appear in the NULL specification"
 msgstr "NULL tanımında CVS quote ayracı belirtilmemelidir"
 
 #: commands/copy.c:948
-#: executor/execMain.c:432
+#: executor/execMain.c:433
 #: tcop/utility.c:354
 msgid "transaction is read-only"
 msgstr "transaction salt okunurdur"
@@ -3651,16 +3652,16 @@ msgstr "yardımcı program statementları hazırlanamaz"
 
 #: commands/prepare.c:192
 #: commands/prepare.c:197
-#: commands/prepare.c:638
+#: commands/prepare.c:642
 msgid "prepared statement is not a SELECT"
 msgstr "hazırlanmış (prepared) sorgu SELECT değildir"
 
-#: commands/prepare.c:331
+#: commands/prepare.c:335
 #, c-format
 msgid "prepared statement \"%s\" already exists"
 msgstr "\"%s\" hazırlanmış sorgusu zaten mevcut"
 
-#: commands/prepare.c:412
+#: commands/prepare.c:416
 #, c-format
 msgid "prepared statement \"%s\" does not exist"
 msgstr "hazırlanmış sorgu \"%s\" mevcut değil"
@@ -3708,6 +3709,7 @@ msgid "must be superuser to rename procedural language"
 msgstr "yordamsal dilin adını değiştirmek için superuser olmalısınız"
 
 #: commands/tablecmds.c:294
+#: executor/execMain.c:745
 msgid "ON COMMIT can only be used on temporary tables"
 msgstr "ON COMMIT sadece geçici tablolarda kullanılabilir"
 
@@ -4509,9 +4511,9 @@ msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "BEFORE STATEMENT tetikleyicisi bir değer döndüremez"
 
 #: commands/trigger.c:1730
-#: executor/execMain.c:1208
-#: executor/execMain.c:1517
-#: executor/execMain.c:1670
+#: executor/execMain.c:1249
+#: executor/execMain.c:1558
+#: executor/execMain.c:1711
 msgid "could not serialize access due to concurrent update"
 msgstr "eşzamanlı update nedeniyle erişim sıralanamıyor"
 
@@ -4750,7 +4752,7 @@ msgstr "diğer nesnelerin ona bağlı olması nedeniyle \"%s\" rolü kaldırıla
 #: commands/user.c:899
 #: nodes/print.c:86
 #: storage/lmgr/deadlock.c:933
-#: tcop/postgres.c:3561
+#: tcop/postgres.c:3563
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -4905,27 +4907,27 @@ msgstr "\"%s\" view sütununun tipi değiştirilemiyor"
 msgid "view \"%s\" will be a temporary view"
 msgstr "\"%s\" view, bir geçeci view olacaktır"
 
-#: executor/execMain.c:829
+#: executor/execMain.c:870
 #, c-format
 msgid "cannot change sequence \"%s\""
 msgstr "\"%s\" sequence değiştirilemez"
 
-#: executor/execMain.c:835
+#: executor/execMain.c:876
 #, c-format
 msgid "cannot change TOAST relation \"%s\""
 msgstr "\"%s\" TOAST objesi değiştirilemez"
 
-#: executor/execMain.c:841
+#: executor/execMain.c:882
 #, c-format
 msgid "cannot change view \"%s\""
 msgstr "\"%s\" view değiştirilemiyor"
 
-#: executor/execMain.c:1799
+#: executor/execMain.c:1840
 #, c-format
 msgid "null value in column \"%s\" violates not-null constraint"
 msgstr "\"%s\" sütununda null değeri not-null kısıtlamasını ihlal ediyor"
 
-#: executor/execMain.c:1811
+#: executor/execMain.c:1852
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
 msgstr "\"%s\" balosuna girilen yeni satır \"%s\" check kısıtlamasını ihlal ediyor"
@@ -5850,19 +5852,19 @@ msgid "equality operator for types %s and %s should be merge-joinable, but isn't
 msgstr "%s ve %s için eşitleme işlemi merge-join işleminde kullanılacak şeklinde düzenlenmelidir"
 
 #: optimizer/plan/planner.c:693
-#: parser/analyze.c:1944
-#: parser/analyze.c:2108
+#: parser/analyze.c:1946
+#: parser/analyze.c:2110
 msgid "SELECT FOR UPDATE/SHARE is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "UNION/INTERSECT/EXCEPT içeren sorguda SELECT FOR UPDATE/SHARE kullanılamaz"
 
 #: optimizer/prep/prepjointree.c:433
-#: parser/analyze.c:2782
+#: parser/analyze.c:2786
 #: rewrite/rewriteHandler.c:995
 msgid "cannot use both FOR UPDATE and FOR SHARE in one query"
 msgstr "bir sorguda FOR UPDATE ve FOR SHARE aynı zamanda kullanılamaz"
 
 #: optimizer/prep/prepjointree.c:437
-#: parser/analyze.c:2786
+#: parser/analyze.c:2790
 #: rewrite/rewriteHandler.c:999
 msgid "cannot use both wait and NOWAIT in one query"
 msgstr "bir sorgu içinde hem WAIT hem de NOWAIT kullanılamaz"
@@ -5882,7 +5884,7 @@ msgid "JOIN/ON clause refers to \"%s\", which is not part of JOIN"
 msgstr "JOIN/ON ifadesi, JOIN parçası olmayan \"%s\" öğesine referans etmektedir"
 
 #: parser/parse_clause.c:430
-#: gram.y:5714
+#: gram.y:5710
 msgid "subquery in FROM must have an alias"
 msgstr "FROM öğersindeki subquery bir aliası almalıdır"
 
@@ -6061,147 +6063,147 @@ msgstr "ON INSERT rule OLD tanımını kullanamaz"
 msgid "ON DELETE rule may not use NEW"
 msgstr "ON DELETE rule NEW tanımını kullanamaz"
 
-#: parser/analyze.c:2065
+#: parser/analyze.c:2067
 msgid "ORDER BY on a UNION/INTERSECT/EXCEPT result must be on one of the result columns"
 msgstr "UNION/INTERSECT/EXCEPT sonucunda ORDER BY ifadesi, sorgu sonucunda ver olan sütunları içermelidir"
 
-#: parser/analyze.c:2103
+#: parser/analyze.c:2105
 msgid "INTO is only allowed on first SELECT of UNION/INTERSECT/EXCEPT"
 msgstr "INTO, sadece UNION/INTERSECT/EXCEPT işleminin ilk SELECT ifadesinde kullanılabilir"
 
-#: parser/analyze.c:2164
+#: parser/analyze.c:2166
 msgid "UNION/INTERSECT/EXCEPT member statement may not refer to other relations of same query level"
 msgstr "UNION/INTERSECT/EXCEPT öğesinin üye somutu aynı seviyedeki diğer tabloya erişilemez"
 
-#: parser/analyze.c:2218
+#: parser/analyze.c:2220
 #, c-format
 msgid "each %s query must have the same number of columns"
 msgstr "her %s sorgusu ayını sütun sayısına sahip olmalıdır"
 
-#: parser/analyze.c:2289
+#: parser/analyze.c:2291
 msgid "CREATE TABLE AS specifies too many column names"
 msgstr "CREATE TABLE AS işleminde belirtilen sütun sayısı çok fazla"
 
-#: parser/analyze.c:2570
+#: parser/analyze.c:2572
 msgid "cannot specify both SCROLL and NO SCROLL"
 msgstr "hem SCROLL hem de NO SCROLL aynı yerde kullanılamaz"
 
-#: parser/analyze.c:2643
-#: parser/analyze.c:3200
-#: tcop/postgres.c:1273
+#: parser/analyze.c:2645
+#: parser/analyze.c:3204
+#: tcop/postgres.c:1275
 #, c-format
 msgid "could not determine data type of parameter $%d"
 msgstr "$%d parametrenin veri tipini belirlenemiyor"
 
-#: parser/analyze.c:2676
+#: parser/analyze.c:2680
 #, c-format
 msgid "wrong number of parameters for prepared statement \"%s\""
 msgstr "\"%s\" hazırlanmış sorgusunda parametre sayısı fazla"
 
-#: parser/analyze.c:2678
+#: parser/analyze.c:2682
 #, c-format
 msgid "Expected %d parameters but got %d."
 msgstr "%d beklenirken %d alındı."
 
-#: parser/analyze.c:2693
+#: parser/analyze.c:2697
 msgid "cannot use subquery in EXECUTE parameter"
 msgstr "EXECUTE parametresinde subquery kullanılamaz"
 
-#: parser/analyze.c:2697
+#: parser/analyze.c:2701
 msgid "cannot use aggregate function in EXECUTE parameter"
 msgstr "EXECUTE parametresinde aggregate fonksiyon kullanılamaz"
 
-#: parser/analyze.c:2709
+#: parser/analyze.c:2713
 #, c-format
 msgid "parameter $%d of type %s cannot be coerced to the expected type %s"
 msgstr "%2$s tipinde $%1$d parametresi %3$s beklenen tipine zorla dönüştürülemez"
 
 #. translator: %s is a SQL command, like SELECT FOR UPDATE
-#: parser/analyze.c:2738
+#: parser/analyze.c:2742
 #, c-format
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "%s UNION/INTERSECT/EXCEPT ile kullanılamaz"
 
 #. translator: %s is a SQL command, like SELECT FOR UPDATE
-#: parser/analyze.c:2743
+#: parser/analyze.c:2747
 #, c-format
 msgid "%s is not allowed with DISTINCT clause"
 msgstr "%s DISTINCT ile kullanılamaz"
 
 #. translator: %s is a SQL command, like SELECT FOR UPDATE
-#: parser/analyze.c:2748
+#: parser/analyze.c:2752
 #, c-format
 msgid "%s is not allowed with GROUP BY clause"
 msgstr "%s GROUP BY ile kullanılamaz"
 
 #. translator: %s is a SQL command, like SELECT FOR UPDATE
-#: parser/analyze.c:2753
+#: parser/analyze.c:2757
 #, c-format
 msgid "%s is not allowed with HAVING clause"
 msgstr "%s HAVING ile kullanılamaz"
 
 #. translator: %s is a SQL command, like SELECT FOR UPDATE
-#: parser/analyze.c:2758
+#: parser/analyze.c:2762
 #, c-format
 msgid "%s is not allowed with aggregate functions"
 msgstr "%s aggregate fonksiyonu ile kullanılamaz"
 
-#: parser/analyze.c:2864
+#: parser/analyze.c:2868
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a join"
 msgstr "SELECT FOR UPDATE/SHARE joine uygulanamaz"
 
-#: parser/analyze.c:2869
+#: parser/analyze.c:2873
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to NEW or OLD"
 msgstr "SELECT FOR UPDATE/SHARE, NEW veya OLD tanımlarına uygulanamaz"
 
-#: parser/analyze.c:2874
+#: parser/analyze.c:2878
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a function"
 msgstr "SELECT FOR UPDATE/SHARE, bir fonksiyonuna uygulanamaz"
 
-#: parser/analyze.c:2887
+#: parser/analyze.c:2891
 #, c-format
 msgid "relation \"%s\" in FOR UPDATE/SHARE clause not found in FROM clause"
 msgstr "FOR UPDATE/SHARE ifadesinde belirtilen \"%s\" tablosu FROM ifadesinde bulunamadı"
 
-#: parser/analyze.c:2934
+#: parser/analyze.c:2938
 msgid "misplaced DEFERRABLE clause"
 msgstr "DEFERRABLE ifadesi burada kullanılamaz"
 
-#: parser/analyze.c:2938
-#: parser/analyze.c:2951
+#: parser/analyze.c:2942
+#: parser/analyze.c:2955
 msgid "multiple DEFERRABLE/NOT DEFERRABLE clauses not allowed"
 msgstr "birden fazla DEFERRABLE/NOT DEFERRABLE tanımına izin verilmez"
 
-#: parser/analyze.c:2947
+#: parser/analyze.c:2951
 msgid "misplaced NOT DEFERRABLE clause"
 msgstr "NOT DEFERRABLE yanlış yerde kullanılmış"
 
-#: parser/analyze.c:2958
-#: parser/analyze.c:2981
-#: gram.y:2581
-#: gram.y:2596
+#: parser/analyze.c:2962
+#: parser/analyze.c:2985
+#: gram.y:2572
+#: gram.y:2587
 msgid "constraint declared INITIALLY DEFERRED must be DEFERRABLE"
 msgstr "INITIALLY DEFERRED olarak tanımlanan kısıtlayıcı DEFERRABLE özelliğine sahip olmalıdır"
 
-#: parser/analyze.c:2965
+#: parser/analyze.c:2969
 msgid "misplaced INITIALLY DEFERRED clause"
 msgstr "INITIALLY DEFERRED yanlış yerde kullanılmış"
 
-#: parser/analyze.c:2969
-#: parser/analyze.c:2992
+#: parser/analyze.c:2973
+#: parser/analyze.c:2996
 msgid "multiple INITIALLY IMMEDIATE/DEFERRED clauses not allowed"
 msgstr "birden fazla INITIALLY IMMEDIATE/DEFERRED kullanılamaz"
 
-#: parser/analyze.c:2988
+#: parser/analyze.c:2992
 msgid "misplaced INITIALLY IMMEDIATE clause"
 msgstr "INITIALLY IMMEDIATE yanlış yerde kullanılmış"
 
-#: parser/analyze.c:3041
+#: parser/analyze.c:3045
 #, c-format
 msgid "CREATE specifies a schema (%s) different from the one being created (%s)"
 msgstr "CREATE işleminin belirttiği şema (%s) yaratılacak (%s) olanından farklı"
 
-#: parser/analyze.c:3195
+#: parser/analyze.c:3199
 #: parser/parse_coerce.c:222
 #: parser/parse_expr.c:524
 #: parser/parse_expr.c:530
@@ -6754,7 +6756,7 @@ msgstr ""
 "Escape için standart sözdizimini kullanın, örneğin, E'\\r\\n"
 "'."
 
-#: y.tab.c:11027
+#: y.tab.c:10955
 msgid "syntax error: cannot back up"
 msgstr "sözdizimi hatası: geri diilemiyor"
 
@@ -6764,15 +6766,15 @@ msgid "time zone interval must be HOUR or HOUR TO MINUTE"
 msgstr "zaman dilimi aralığı  HOUR veya HOUR TO MINUTE olmalıdır"
 
 #: gram.y:1163
-#: gram.y:6052
-#: gram.y:8110
+#: gram.y:6048
+#: gram.y:8106
 #, c-format
 msgid "INTERVAL(%d) precision must not be negative"
 msgstr "INTEVRAL(%d) kesinliği sıfırdan küçük olamaz"
 
 #: gram.y:1169
-#: gram.y:6058
-#: gram.y:8116
+#: gram.y:6054
+#: gram.y:8112
 #, c-format
 msgid "INTERVAL(%d) precision reduced to maximum allowed, %d"
 msgstr "INTEVRAL(%d) kesinliği izin verilen en yüksek değerine (%d) düşürülmüştür"
@@ -6797,195 +6799,195 @@ msgstr "INTEVRAL(%d) kesinliği izin verilen en yüksek değerine (%d) düşür�
 msgid "MATCH PARTIAL not yet implemented"
 msgstr "MATCH PARTIAL implemente edilmemiştir"
 
-#: gram.y:2187
+#: gram.y:2188
 msgid "CREATE TABLE AS may not specify INTO"
 msgstr "CREATE TABLE AS işleminde INTO kullanılamaz"
 
-#: gram.y:2648
+#: gram.y:2639
 msgid "CREATE ASSERTION is not yet implemented"
 msgstr "CREATE ASSERTION implemente edilmemiştir"
 
-#: gram.y:2664
+#: gram.y:2655
 msgid "DROP ASSERTION is not yet implemented"
 msgstr "DROP ASSERTION implemente edilmemiştir"
 
-#: gram.y:3887
+#: gram.y:3878
 #: utils/adt/regproc.c:637
 msgid "missing argument"
 msgstr "argüman eksik"
 
-#: gram.y:3888
+#: gram.y:3879
 #: utils/adt/regproc.c:638
 msgid "Use NONE to denote the missing argument of a unary operator."
 msgstr "Unary operator'un bir argümanı eksik olduğunu göstermek için NONE kullanın"
 
-#: gram.y:5079
+#: gram.y:5075
 msgid "column name list not allowed in CREATE TABLE / AS EXECUTE"
 msgstr "CREATE TABLE / AS EXECUTE işleminde sütun isim listesi verilmez"
 
-#: gram.y:5557
+#: gram.y:5553
 msgid "LIMIT #,# syntax is not supported"
 msgstr "LIMIT #,# sözdizimi desteklenmemektedir"
 
-#: gram.y:5558
+#: gram.y:5554
 msgid "Use separate LIMIT and OFFSET clauses."
 msgstr "Ayrı LIMIT ve OFFSET ifadeleri kullanın."
 
-#: gram.y:5715
+#: gram.y:5711
 msgid "For example, FROM (SELECT ...) [AS] foo."
 msgstr "Örneğin, FROM (SELECT ...) [AS] birşey."
 
-#: gram.y:6155
+#: gram.y:6151
 msgid "precision for type float must be at least 1 bit"
 msgstr "float veri tipinin kesinliği en az 1 bit olmalıdır"
 
-#: gram.y:6163
+#: gram.y:6159
 msgid "precision for type float must be less than 54 bits"
 msgstr "float veri tipinin kesinliği ne çok 54 bit olabilir"
 
-#: gram.y:6177
-#: gram.y:6192
+#: gram.y:6173
+#: gram.y:6188
 #, c-format
 msgid "NUMERIC precision %d must be between 1 and %d"
 msgstr "NUMERIC precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6182
+#: gram.y:6178
 #, c-format
 msgid "NUMERIC scale %d must be between 0 and precision %d"
 msgstr "NUMERIC %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6210
-#: gram.y:6225
+#: gram.y:6206
+#: gram.y:6221
 #, c-format
 msgid "DECIMAL precision %d must be between 1 and %d"
 msgstr "DECIMAL precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6215
+#: gram.y:6211
 #, c-format
 msgid "DECIMAL scale %d must be between 0 and precision %d"
 msgstr "DECIMAL %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6275
-#: gram.y:6353
+#: gram.y:6271
+#: gram.y:6349
 #, c-format
 msgid "length for type %s must be at least 1"
 msgstr "%s tipinin uzunluğu en az 1 olmalıdır"
 
-#: gram.y:6280
-#: gram.y:6358
+#: gram.y:6276
+#: gram.y:6354
 #, c-format
 msgid "length for type %s cannot exceed %d"
 msgstr "%s tipin uzunluğu %d değerini aşamaz"
 
-#: gram.y:6431
+#: gram.y:6427
 #, c-format
 msgid "TIMESTAMP(%d)%s precision must not be negative"
 msgstr "TIMESTAMP(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6437
+#: gram.y:6433
 #, c-format
 msgid "TIMESTAMP(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIMESTAMP(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6464
+#: gram.y:6460
 #, c-format
 msgid "TIME(%d)%s precision must not be negative"
 msgstr "TIME(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6470
+#: gram.y:6466
 #, c-format
 msgid "TIME(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIME(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6911
+#: gram.y:6907
 msgid "UNIQUE predicate is not yet implemented"
 msgstr "UNIQUE predicate implemente edilmemiştir"
 
-#: gram.y:7187
+#: gram.y:7183
 #, c-format
 msgid "CURRENT_TIME(%d) precision must not be negative"
 msgstr "CURRENT_TIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7193
+#: gram.y:7189
 #, c-format
 msgid "CURRENT_TIME(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7231
+#: gram.y:7227
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision must not be negative"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7237
+#: gram.y:7233
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7278
+#: gram.y:7274
 #, c-format
 msgid "LOCALTIME(%d) precision must not be negative"
 msgstr "LOCALTIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7284
+#: gram.y:7280
 #, c-format
 msgid "LOCALTIME(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7326
+#: gram.y:7322
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision must not be negative"
 msgstr "LOCALTIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7332
+#: gram.y:7328
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:8585
+#: gram.y:8581
 msgid "OLD used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda OLD kullanıldı"
 
-#: gram.y:8594
+#: gram.y:8590
 msgid "NEW used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda NEW kullanıldı"
 
-#: y.tab.c:21207
+#: y.tab.c:21125
 msgid "syntax error; also virtual memory exhausted"
 msgstr "parse hatası; ayrıca vertual bellek de dolmuştur"
 
-#: y.tab.c:21211
-#: gram.y:8819
-#: gram.y:8821
-#: gram.y:8838
-#: gram.y:8840
+#: y.tab.c:21129
+#: gram.y:8815
+#: gram.y:8817
+#: gram.y:8834
+#: gram.y:8836
 msgid "syntax error"
 msgstr "söz dizim hatası "
 
-#: y.tab.c:21325
+#: y.tab.c:21243
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
-#: gram.y:8793
+#: gram.y:8789
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sol tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8799
+#: gram.y:8795
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sağ tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8898
+#: gram.y:8894
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "birden çok ORDER BY ifadesi kullanılamaz"
 
-#: gram.y:8906
+#: gram.y:8902
 msgid "multiple FOR UPDATE/FOR SHARE clauses not allowed"
 msgstr "birden çok FOR UPDATE/FOR SHARE ifadesi kullanılamaz"
 
-#: gram.y:8914
+#: gram.y:8910
 msgid "multiple OFFSET clauses not allowed"
 msgstr "birden fazla OFFSET ifadesi desteklenmemektedir"
 
-#: gram.y:8922
+#: gram.y:8918
 msgid "multiple LIMIT clauses not allowed"
 msgstr "birden çok LIMIT ifadesi kullanılamaz"
 
@@ -7257,13 +7259,13 @@ msgstr ""
 "\n"
 
 #: postmaster/postmaster.c:1146
-#: tcop/postgres.c:2353
+#: tcop/postgres.c:2355
 #, c-format
 msgid "  -A 1|0          enable/disable run-time assert checking\n"
 msgstr "  -A 1|0          run-time assert kontrolü etkinleştir/etkisizleştir\n"
 
 #: postmaster/postmaster.c:1152
-#: tcop/postgres.c:2359
+#: tcop/postgres.c:2361
 #, c-format
 msgid "  -e              use European date input format (DMY)\n"
 msgstr "  -e              tarih veri girişi için avrupa biçimini kullan (DMY)\n"
@@ -7304,37 +7306,37 @@ msgid "  -p PORT         port number to listen on\n"
 msgstr "  -p PORT         dinlenecek port numarası\n"
 
 #: postmaster/postmaster.c:1163
-#: tcop/postgres.c:2364
+#: tcop/postgres.c:2366
 #, c-format
 msgid "  -s              show statistics after each query\n"
 msgstr "  -s              her sorgudan sonra istatistikleri göster\n"
 
 #: postmaster/postmaster.c:1164
-#: tcop/postgres.c:2365
+#: tcop/postgres.c:2367
 #, c-format
 msgid "  -S WORK-MEM     set amount of memory for sorts (in kB)\n"
 msgstr "  -S WORK-MEM     alfabetik sıralama işlemi için kullanılacak bellek (kilobayt bazında)\n"
 
 #: postmaster/postmaster.c:1165
-#: tcop/postgres.c:2366
+#: tcop/postgres.c:2368
 #, c-format
 msgid "  --NAME=VALUE    set run-time parameter\n"
 msgstr "  --NAME=VALUE    çalıştırma zamanı parametresini ayarla\n"
 
 #: postmaster/postmaster.c:1166
-#: tcop/postgres.c:2368
+#: tcop/postgres.c:2370
 #, c-format
 msgid "  --help          show this help, then exit\n"
 msgstr "  --help          bu yardım ekranını yaz ve çık\n"
 
 #: postmaster/postmaster.c:1167
-#: tcop/postgres.c:2369
+#: tcop/postgres.c:2371
 #, c-format
 msgid "  --version       output version information, then exit\n"
 msgstr "  --version       sürüm bilgisini yaz ve çık\n"
 
 #: postmaster/postmaster.c:1169
-#: tcop/postgres.c:2370
+#: tcop/postgres.c:2372
 #, c-format
 msgid ""
 "\n"
@@ -7344,7 +7346,7 @@ msgstr ""
 "Program geliştirici Seçenekleri:\n"
 
 #: postmaster/postmaster.c:1170
-#: tcop/postgres.c:2371
+#: tcop/postgres.c:2373
 #, c-format
 msgid "  -f s|i|n|m|h    forbid use of some plan types\n"
 msgstr "  -f s|i|n|m|h    bazı plan yöntemlerinin kullanımı yasakla\n"
@@ -7355,19 +7357,19 @@ msgid "  -n              do not reinitialize shared memory after abnormal exit\n
 msgstr "  -n              normal olmayan sonladırmadan sonra shared memory yeniden sıfırlamayı engelle\n"
 
 #: postmaster/postmaster.c:1172
-#: tcop/postgres.c:2372
+#: tcop/postgres.c:2374
 #, c-format
 msgid "  -O              allow system table structure changes\n"
 msgstr "  -O              sistem tabloların yapı değişikliğine izin ver\n"
 
 #: postmaster/postmaster.c:1173
-#: tcop/postgres.c:2373
+#: tcop/postgres.c:2375
 #, c-format
 msgid "  -P              disable system indexes\n"
 msgstr "  -P              sistem indeksleri etkisizleştir\n"
 
 #: postmaster/postmaster.c:1174
-#: tcop/postgres.c:2374
+#: tcop/postgres.c:2376
 #, c-format
 msgid "  -t pa|pl|ex     show timings after each query\n"
 msgstr "  -t pa|pl|ex     her sorgudan sonra harcanan zamanı göster\n"
@@ -7378,7 +7380,7 @@ msgid "  -T              send SIGSTOP to all backend servers if one dies\n"
 msgstr "  -T              biri sonlandırdığında ümü backend süreçlerine SIGSTOP mesajını gönder\n"
 
 #: postmaster/postmaster.c:1176
-#: tcop/postgres.c:2375
+#: tcop/postgres.c:2377
 #, c-format
 msgid "  -W NUM          wait NUM seconds to allow attach from a debugger\n"
 msgstr "  -W NUM          debuggerin başlanması için NUM daniye bekle\n"
@@ -8304,132 +8306,132 @@ msgstr "%u/%u/%u nesnesi %u blok botutuna kadar kesilemiyor: %m"
 msgid "could not sync relation %u/%u/%u: %m"
 msgstr "nesne %u/%u/%u sync hatası: %m"
 
-#: tcop/postgres.c:350
-#: tcop/postgres.c:362
-#: tcop/postgres.c:373
-#: tcop/postgres.c:385
-#: tcop/postgres.c:3440
+#: tcop/postgres.c:352
+#: tcop/postgres.c:364
+#: tcop/postgres.c:375
+#: tcop/postgres.c:387
+#: tcop/postgres.c:3442
 #, c-format
 msgid "invalid frontend message type %d"
 msgstr "geçersiz frontend mesaj tipi %d"
 
-#: tcop/postgres.c:607
+#: tcop/postgres.c:609
 #, c-format
 msgid "statement: %s%s"
 msgstr "komut: %s%s"
 
-#: tcop/postgres.c:930
-#: tcop/postgres.c:1246
-#: tcop/postgres.c:1446
-#: tcop/postgres.c:1751
-#: tcop/postgres.c:1896
-#: tcop/postgres.c:1966
+#: tcop/postgres.c:932
+#: tcop/postgres.c:1248
+#: tcop/postgres.c:1448
+#: tcop/postgres.c:1753
+#: tcop/postgres.c:1898
+#: tcop/postgres.c:1968
 #: tcop/fastpath.c:302
 msgid "current transaction is aborted, commands ignored until end of transaction block"
 msgstr "geçerli transaction durduruldu, transaction blokunun sonua kadar komutlar yok sayılacak"
 
-#: tcop/postgres.c:1092
-#: tcop/postgres.c:1820
+#: tcop/postgres.c:1094
+#: tcop/postgres.c:1822
 #, c-format
 msgid "duration: %ld.%03ld ms"
 msgstr "süre: %ld.%03ld milisaniye"
 
-#: tcop/postgres.c:1105
+#: tcop/postgres.c:1107
 #, c-format
 msgid "duration: %ld.%03ld ms  statement: %s%s"
 msgstr "süre: %ld.%03ld milisaniye  deyim: %s%s"
 
-#: tcop/postgres.c:1156
+#: tcop/postgres.c:1158
 #, c-format
 msgid "statement: [protocol] PREPARE %s AS %s"
 msgstr "komut: [protocol] PREPARE %s AS %s"
 
-#: tcop/postgres.c:1222
+#: tcop/postgres.c:1224
 msgid "cannot insert multiple commands into a prepared statement"
 msgstr "önceden hazırlanmış komuta çoklu komut eklenemez"
 
-#: tcop/postgres.c:1411
+#: tcop/postgres.c:1413
 #, c-format
 msgid "bind message has %d parameter formats but %d parameters"
 msgstr "bind mesajı %d argüman biçimi ve %d argüman içeriyor"
 
-#: tcop/postgres.c:1424
-#: tcop/postgres.c:1880
+#: tcop/postgres.c:1426
+#: tcop/postgres.c:1882
 msgid "unnamed prepared statement does not exist"
 msgstr "ismi verilmemiş hazırlamış komut mevcut değil"
 
-#: tcop/postgres.c:1430
+#: tcop/postgres.c:1432
 #, c-format
 msgid "bind message supplies %d parameters, but prepared statement \"%s\" requires %d"
 msgstr "bind mesajı   %d parametre veriyor ancak \"%s\" hazırlanmış deymi %d gerektirir"
 
-#: tcop/postgres.c:1461
+#: tcop/postgres.c:1463
 #, c-format
 msgid "statement: [protocol] <BIND> %s"
 msgstr "komut: [protocol] <BIND> %s"
 
-#: tcop/postgres.c:1558
+#: tcop/postgres.c:1560
 #, c-format
 msgid "incorrect binary data format in bind parameter %d"
 msgstr "bind parametresinde geçersiz ikili veri %d"
 
-#: tcop/postgres.c:1668
-#: tcop/postgres.c:1952
+#: tcop/postgres.c:1670
+#: tcop/postgres.c:1954
 #, c-format
 msgid "portal \"%s\" does not exist"
 msgstr "portal \"%s\" mevcut değildir"
 
-#: tcop/postgres.c:1724
+#: tcop/postgres.c:1726
 #, c-format
 msgid "statement: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 msgstr "deyim: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 
-#: tcop/postgres.c:1833
+#: tcop/postgres.c:1835
 #, c-format
 msgid "duration: %ld.%03ld ms  statement: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 msgstr "süre: %ld.%03ld milisaniye  deyim: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 
-#: tcop/postgres.c:2106
+#: tcop/postgres.c:2108
 msgid "terminating connection because of crash of another server process"
 msgstr "diğer aktif sunucu sürecinin durması nedeniyle bağlantı kapatılmıştır"
 
-#: tcop/postgres.c:2107
+#: tcop/postgres.c:2109
 msgid "The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory."
 msgstr "Başka bir sürecin olağandışı çıkışı nedeniyle shared memory bozulmuş ihtimali var. Dolayısıyla tüm süreçlerine tüm aktif işlemlerini rollback edip çıkmak komutu verilmiş."
 
-#: tcop/postgres.c:2111
+#: tcop/postgres.c:2113
 msgid "In a moment you should be able to reconnect to the database and repeat your command."
 msgstr "Birkaç saniye sonra veritabana bağlanıp işlemlerine devam edebilirisiniz."
 
-#: tcop/postgres.c:2227
+#: tcop/postgres.c:2229
 msgid "floating-point exception"
 msgstr "gerçel sayı istisnası"
 
-#: tcop/postgres.c:2228
+#: tcop/postgres.c:2230
 msgid "An invalid floating-point operation was signaled. This probably means an out-of-range result or an invalid operation, such as division by zero."
 msgstr "Geçersiz floatin-point işteri sinyali alındı. Bu, matimatiksel sıfıra bölme gibi geçersiz işlem ya da kapsam dışı sonucun gçstergesidir."
 
-#: tcop/postgres.c:2264
+#: tcop/postgres.c:2266
 msgid "terminating connection due to administrator command"
 msgstr "yoniticisi talimatı doğrultusunda bağlantı kesildi"
 
-#: tcop/postgres.c:2275
+#: tcop/postgres.c:2277
 msgid "canceling statement due to statement timeout"
 msgstr "sorgu zaman aşımına uğradı ve iptal edildi"
 
-#: tcop/postgres.c:2279
+#: tcop/postgres.c:2281
 msgid "canceling statement due to user request"
 msgstr "kullanıcı isteği ile sorgu iptal edildi"
 
-#: tcop/postgres.c:2329
+#: tcop/postgres.c:2331
 msgid "stack depth limit exceeded"
 msgstr "stack derinliği sınırı aşıldı"
 
-#: tcop/postgres.c:2330
+#: tcop/postgres.c:2332
 msgid "Increase the configuration parameter \"max_stack_depth\"."
 msgstr "\"max_stack_depth\" konfigurasyon parametresini artırın."
 
-#: tcop/postgres.c:2348
+#: tcop/postgres.c:2350
 #, c-format
 msgid ""
 "%s is the PostgreSQL stand-alone backend.  It is not\n"
@@ -8440,7 +8442,7 @@ msgstr ""
 "kullanımı için değildir.\n"
 "\n"
 
-#: tcop/postgres.c:2350
+#: tcop/postgres.c:2352
 #, c-format
 msgid ""
 "Usage:\n"
@@ -8451,27 +8453,27 @@ msgstr ""
 "  %s [OPTION]... DBNAME\n"
 "\n"
 
-#: tcop/postgres.c:2357
+#: tcop/postgres.c:2359
 #, c-format
 msgid "  -d 0-5          debugging level\n"
 msgstr "  -d 0-5          debug düzeyi\n"
 
-#: tcop/postgres.c:2360
+#: tcop/postgres.c:2362
 #, c-format
 msgid "  -E              echo statement before execution\n"
 msgstr "  -E              çalıştırmadan sorguyu ekrana yaz\n"
 
-#: tcop/postgres.c:2362
+#: tcop/postgres.c:2364
 #, c-format
 msgid "  -j              do not use newline as interactive query delimiter\n"
 msgstr "  -j              yeni satı işareti sorgunun sonu olarak algılama\n"
 
-#: tcop/postgres.c:2367
+#: tcop/postgres.c:2369
 #, c-format
 msgid "  --describe-config  describe configuration parameters, then exit\n"
 msgstr "  --describe-config  ayar parametresini açıklama ve çık\n"
 
-#: tcop/postgres.c:2376
+#: tcop/postgres.c:2378
 #, c-format
 msgid ""
 "\n"
@@ -8480,37 +8482,37 @@ msgstr ""
 "\n"
 "Hata raporarı <pgsql-bugs@postgresql.org> adresine gönderin.\n"
 
-#: tcop/postgres.c:2870
+#: tcop/postgres.c:2872
 msgid "invalid command-line arguments for server process"
 msgstr "sunucu süreci için geçersiz komut satırı parametreleri"
 
-#: tcop/postgres.c:2871
-#: tcop/postgres.c:2885
+#: tcop/postgres.c:2873
+#: tcop/postgres.c:2887
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "Daha fazla bilgi için \"%s --help\" yazın."
 
-#: tcop/postgres.c:2883
+#: tcop/postgres.c:2885
 #, c-format
 msgid "%s: invalid command-line arguments"
 msgstr "%s: komut satırı parametresi yanlış"
 
-#: tcop/postgres.c:2893
+#: tcop/postgres.c:2895
 #, c-format
 msgid "%s: no database nor user name specified"
 msgstr ":%s: ne veritabanı ne de kullanıcı adı belirtilmemiştir"
 
-#: tcop/postgres.c:3353
+#: tcop/postgres.c:3355
 #, c-format
 msgid "invalid CLOSE message subtype %d"
 msgstr "geçersiz CLOSE mesaj alt tipi %d"
 
-#: tcop/postgres.c:3383
+#: tcop/postgres.c:3385
 #, c-format
 msgid "invalid DESCRIBE message subtype %d"
 msgstr "geçersiz DESCRIBE mesaj alt tipi %d"
 
-#: tcop/postgres.c:3594
+#: tcop/postgres.c:3596
 #, c-format
 msgid "disconnection: session time: %d:%02d:%02d.%02d user=%s database=%s host=%s%s%s"
 msgstr "bağlantı bitti: oturum zamanı: %d:%02d:%02d.%02d user=%s database=%s host=%s%s%s"
@@ -10856,6 +10858,12 @@ msgstr "ISO-8859 karakter kümesi için beklemnmeyen kodlama: %d"
 msgid "ignoring unconvertible UTF-8 character 0x%04x"
 msgstr "dönüştürülemeyen UTF-8 karakteri 0x%04x yok sayıldı"
 
+#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:125
+#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:153
+#, c-format
+msgid "unexpected encoding id %d for WIN charsets"
+msgstr "WIN karakter kümeleri için beklemnmeyen kodlama: %d"
+
 #: utils/mb/conv.c:410
 #, c-format
 msgid "invalid encoding number: %d"
@@ -10866,17 +10874,17 @@ msgstr "kodlama numarası geçersiz: %d"
 msgid "ignoring unconvertible %s character 0x%04x"
 msgstr "dönüştürülemeyen %s karakter 0x%04x yok sayıldı"
 
-#: utils/mb/wchar.c:1038
+#: utils/mb/wchar.c:1042
 #, c-format
 msgid "invalid UTF-8 byte sequence detected near byte 0x%02x"
 msgstr "0x%02x baytında geçersiz UTF-8 bayt satırı"
 
-#: utils/mb/wchar.c:1068
+#: utils/mb/wchar.c:1072
 #, c-format
 msgid "invalid byte sequence for encoding \"%s\": 0x%s"
 msgstr "\"%s\" dil kodlaması için geçersiz bayt dizisi: 0x%s"
 
-#: utils/mb/encnames.c:460
+#: utils/mb/encnames.c:496
 msgid "encoding name too long"
 msgstr "kodlama ismi çok uzun"
 
@@ -12179,11 +12187,11 @@ msgstr "Disk dolu mu?"
 msgid "could not read block %ld of temporary file: %m"
 msgstr "geçici dosyasının %ld bloku okunamıyor: %m"
 
-#: utils/sort/tuplesort.c:2161
+#: utils/sort/tuplesort.c:2258
 msgid "could not create unique index"
 msgstr "unique dizin yaratılamadı"
 
-#: utils/sort/tuplesort.c:2162
+#: utils/sort/tuplesort.c:2259
 msgid "Table contains duplicated values."
 msgstr "Tabloda mukerrer değerler mevcut."
 

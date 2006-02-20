@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: psql-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:27-0400\n"
-"PO-Revision-Date: 2006-02-13 09:21+0200\n"
+"PO-Revision-Date: 2006-02-20 10:04+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -972,12 +972,12 @@ msgstr ""
 "\"%-.*s\" için yardım bulunmamaktadır.\n"
 "\\h yazarak yardım konularının listesini görüntüleyin.\n"
 
-#: input.c:304
+#: input.c:310
 #, c-format
 msgid "could not save history to file \"%s\": %s\n"
 msgstr "İşlem geçmişi \"%s\" dosyasına kaydedilemiyor: %s\n"
 
-#: input.c:307
+#: input.c:313
 msgid "history is not supported by this installation\n"
 msgstr "bu kurulum işlem geçmişini desteklemiyor\n"
 
@@ -1025,17 +1025,17 @@ msgstr "%s'den çıkmak için \"\\q\" kullanın.\n"
 msgid "(No rows)\n"
 msgstr "(Satır yok)\n"
 
-#: print.c:1733
+#: print.c:1730
 #, c-format
 msgid "invalid output format (internal error): %d"
 msgstr "geçersiz çıktı biçimi (iç hata): %d"
 
-#: print.c:1793
+#: print.c:1790
 #, c-format
 msgid "(1 row)"
 msgstr "(1 satır)"
 
-#: print.c:1795
+#: print.c:1792
 #, c-format
 msgid "(%d rows)"
 msgstr "(%d satır)"
@@ -2642,11 +2642,17 @@ msgstr "sorgu sonuçlarından yeni tablo tanımla"
 #: sql_help.h:206
 msgid ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name\n"
-"    [ (column_name [, ...] ) ] [ [ WITH | WITHOUT ] OIDS ]\n"
+"    [ (column_name [, ...] ) ]\n"
+"    [ WITH OIDS | WITHOUT OIDS ]\n"
+"    [ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
+"    [ TABLESPACE tablespace ]\n"
 "    AS query"
 msgstr ""
-"CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE tablo_adı\n"
-"    [ (kolon_adı [, ...] ) ] [ [ WITH | WITHOUT ] OIDS ]\n"
+"CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name\n"
+"    [ (column_name [, ...] ) ]\n"
+"    [ WITH OIDS | WITHOUT OIDS ]\n"
+"    [ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
+"    [ TABLESPACE tablespace ]\n"
 "    AS query"
 
 #: sql_help.h:209
