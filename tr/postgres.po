@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-02-20 10:03+0200\n"
+"PO-Revision-Date: 2006-03-01 08:49+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -122,34 +122,34 @@ msgstr "\"%s\" indexi bir hash indexi değildir"
 msgid "index \"%s\" has wrong hash version"
 msgstr "\"%s\" indexi yanlış hash sürümüne sahiptir"
 
-#: access/heap/heapam.c:742
+#: access/heap/heapam.c:728
 #, c-format
 msgid "could not obtain lock on relation \"%s\""
 msgstr "\"%s\" tablosu için lock alınamadı"
 
-#: access/heap/heapam.c:825
-#: access/heap/heapam.c:860
+#: access/heap/heapam.c:811
+#: access/heap/heapam.c:846
 #: catalog/aclchk.c:585
 #, c-format
 msgid "\"%s\" is an index"
 msgstr "\"%s\" bir indextir"
 
-#: access/heap/heapam.c:830
-#: access/heap/heapam.c:865
+#: access/heap/heapam.c:816
+#: access/heap/heapam.c:851
 #, c-format
 msgid "\"%s\" is a special relation"
 msgstr "\"%s\" nesnesi özel bir nesnedir"
 
-#: access/heap/heapam.c:835
-#: access/heap/heapam.c:870
+#: access/heap/heapam.c:821
+#: access/heap/heapam.c:856
 #: catalog/aclchk.c:592
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" bir birleşik tiptir"
 
-#: access/heap/heapam.c:2389
-#: access/heap/heapam.c:2420
-#: access/heap/heapam.c:2455
+#: access/heap/heapam.c:2371
+#: access/heap/heapam.c:2402
+#: access/heap/heapam.c:2437
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "\"%s\" tablosundaki satır için lock alınamadı"
@@ -1705,7 +1705,7 @@ msgstr "\"%s\" şeması mevcut değil"
 #: commands/tablespace.c:709
 #: commands/tablespace.c:776
 #: commands/tablespace.c:871
-#: executor/execMain.c:769
+#: executor/execMain.c:768
 #: utils/adt/acl.c:2571
 #: utils/adt/dbsize.c:208
 #, c-format
@@ -1947,11 +1947,11 @@ msgid "An aggregate returning \"anyarray\" or \"anyelement\" must have one of th
 msgstr "\"anyarray\" veya \"anyelement\" döndüren aggregatın temel tipi onlardan biri olmalıdır."
 
 #: catalog/pg_aggregate.c:299
-#: commands/typecmds.c:957
-#: commands/typecmds.c:1008
-#: commands/typecmds.c:1039
-#: commands/typecmds.c:1062
-#: commands/typecmds.c:1083
+#: commands/typecmds.c:972
+#: commands/typecmds.c:1023
+#: commands/typecmds.c:1054
+#: commands/typecmds.c:1077
+#: commands/typecmds.c:1098
 #: parser/parse_func.c:213
 #: parser/parse_func.c:1191
 #, c-format
@@ -2023,7 +2023,7 @@ msgid "only table \"%s\" can be referenced in check constraint"
 msgstr "check constraint içerisinde sadece \"%s\" tablosu kullanılabilir"
 
 #: catalog/heap.c:1547
-#: commands/typecmds.c:1877
+#: commands/typecmds.c:1892
 msgid "cannot use subquery in check constraint"
 msgstr "check constraint içinde subquery kullanılamaz"
 
@@ -2146,8 +2146,8 @@ msgstr "veritabanı-arası referanslar oluşturulamaz: %s"
 #: catalog/namespace.c:1120
 #: parser/parse_expr.c:497
 #: parser/parse_target.c:729
-#: gram.y:2719
-#: gram.y:7991
+#: gram.y:2728
+#: gram.y:8000
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "geçersiz qualified adı (çok fazla noktalı isim): %s"
@@ -2351,37 +2351,38 @@ msgstr "%s operatörü zaten mevcut"
 msgid "operator cannot be its own negator or sort operator"
 msgstr "bir işlem, kendisinin zıttı veya kendisinin sort operatörü olamaz"
 
-#: catalog/pg_type.c:195
+#: catalog/pg_type.c:203
 #, c-format
 msgid "invalid type internal size %d"
 msgstr "tip dahili boyutu geçersiz :%d"
 
-#: catalog/pg_type.c:201
+#: catalog/pg_type.c:209
 #, c-format
 msgid "internal size %d is invalid for passed-by-value type"
 msgstr "passed-by-value tipler için %d dahili tip geçersizdir"
 
-#: catalog/pg_type.c:208
+#: catalog/pg_type.c:216
 msgid "fixed-size types must have storage PLAIN"
 msgstr "sabit-boyutlu tipler PLAIN storage özelliği ile tanımlanmalıdır"
 
-#: catalog/pg_type.c:289
-#: catalog/pg_type.c:520
+#: catalog/pg_type.c:297
+#: catalog/pg_type.c:532
+#: commands/typecmds.c:169
 #, c-format
 msgid "type \"%s\" already exists"
 msgstr "\"%s\" tipi zaten mevcut"
 
-#: catalog/pg_type.c:512
+#: catalog/pg_type.c:524
 #: commands/functioncmds.c:113
 #: commands/tablecmds.c:4727
-#: commands/typecmds.c:446
-#: commands/typecmds.c:841
-#: commands/typecmds.c:1173
-#: commands/typecmds.c:1296
-#: commands/typecmds.c:1407
-#: commands/typecmds.c:1492
-#: commands/typecmds.c:2080
-#: commands/typecmds.c:2205
+#: commands/typecmds.c:461
+#: commands/typecmds.c:856
+#: commands/typecmds.c:1188
+#: commands/typecmds.c:1311
+#: commands/typecmds.c:1422
+#: commands/typecmds.c:1507
+#: commands/typecmds.c:2095
+#: commands/typecmds.c:2220
 #: parser/parse_func.c:1227
 #: parser/parse_type.c:201
 #: parser/parse_type.c:227
@@ -2930,7 +2931,7 @@ msgid "CSV quote character must not appear in the NULL specification"
 msgstr "NULL tanımında CVS quote ayracı belirtilmemelidir"
 
 #: commands/copy.c:948
-#: executor/execMain.c:433
+#: executor/execMain.c:432
 #: tcop/utility.c:354
 msgid "transaction is read-only"
 msgstr "transaction salt okunurdur"
@@ -3326,13 +3327,13 @@ msgstr "\"%s\" fonksiyonu \"%s\" şemasında zaten mevcut"
 
 #: commands/functioncmds.c:1522
 #: commands/tablecmds.c:6149
-#: commands/typecmds.c:2261
+#: commands/typecmds.c:2276
 msgid "cannot move objects into or out of temporary schemas"
 msgstr "geçici şemasına nesleri aktarılamaz ve içinden alınamaz"
 
 #: commands/functioncmds.c:1528
 #: commands/tablecmds.c:6155
-#: commands/typecmds.c:2267
+#: commands/typecmds.c:2282
 msgid "cannot move objects into or out of TOAST schema"
 msgstr "TOAST şemasına nesleri aktarılamaz ve içinden alınamaz"
 
@@ -3632,8 +3633,8 @@ msgid "cursor \"%s\" does not exist"
 msgstr "\"%s\" imleci mevcut değil"
 
 #: commands/portalcmds.c:349
-#: tcop/pquery.c:573
-#: tcop/pquery.c:1149
+#: tcop/pquery.c:583
+#: tcop/pquery.c:1159
 #, c-format
 msgid "portal \"%s\" cannot be run"
 msgstr "\"%s\" portalı çalıştırılamıyor"
@@ -3709,7 +3710,7 @@ msgid "must be superuser to rename procedural language"
 msgstr "yordamsal dilin adını değiştirmek için superuser olmalısınız"
 
 #: commands/tablecmds.c:294
-#: executor/execMain.c:745
+#: executor/execMain.c:744
 msgid "ON COMMIT can only be used on temporary tables"
 msgstr "ON COMMIT sadece geçici tablolarda kullanılabilir"
 
@@ -4180,180 +4181,180 @@ msgstr "CACHE (%s) sıfırdan büyük olmalıdır"
 msgid "type names must be %d characters or less"
 msgstr "tip adı %d veya daha az karakterden oluşmalıdır"
 
-#: commands/typecmds.c:173
+#: commands/typecmds.c:204
 #, c-format
 msgid "array element type cannot be %s"
 msgstr "array element veri tipi %s olamaz"
 
-#: commands/typecmds.c:205
+#: commands/typecmds.c:236
 #, c-format
 msgid "alignment \"%s\" not recognized"
 msgstr "alignment \"%s\" tanınmamaktadır"
 
-#: commands/typecmds.c:222
+#: commands/typecmds.c:253
 #, c-format
 msgid "storage \"%s\" not recognized"
 msgstr "storage \"%s\" tanınmamaktadır"
 
-#: commands/typecmds.c:227
+#: commands/typecmds.c:258
 #, c-format
 msgid "type attribute \"%s\" not recognized"
 msgstr "\"%s\" type attribute bulunamadı"
 
-#: commands/typecmds.c:237
+#: commands/typecmds.c:268
 msgid "type input function must be specified"
 msgstr "tipin giriş fonksiyonu belirtilmelidir"
 
-#: commands/typecmds.c:241
+#: commands/typecmds.c:272
 msgid "type output function must be specified"
 msgstr "tipin çıkış fonksiyonu belirtilmelidir"
 
-#: commands/typecmds.c:280
+#: commands/typecmds.c:295
 #, c-format
 msgid "changing return type of function %s from \"opaque\" to %s"
 msgstr "%s fonksiyonunun döndürme değeri \"opaque\"tan \"%s\"e değiştiriliyor"
 
-#: commands/typecmds.c:287
+#: commands/typecmds.c:302
 #, c-format
 msgid "type input function %s must return type %s"
 msgstr " %s type input function %s tipini döndürmelidir"
 
-#: commands/typecmds.c:297
+#: commands/typecmds.c:312
 #, c-format
 msgid "changing return type of function %s from \"opaque\" to \"cstring\""
 msgstr "%s fonksiyonunun döndürme değeri \"opaque\"tan \"cstring\"e değiştiriliyor"
 
-#: commands/typecmds.c:304
+#: commands/typecmds.c:319
 #, c-format
 msgid "type output function %s must return type \"cstring\""
 msgstr "%s type output fonksiyonu  \"cstring\" döndürmelidir"
 
-#: commands/typecmds.c:313
+#: commands/typecmds.c:328
 #, c-format
 msgid "type receive function %s must return type %s"
 msgstr " %s type receive function %s tipini döndürmelidir"
 
-#: commands/typecmds.c:322
+#: commands/typecmds.c:337
 #, c-format
 msgid "type send function %s must return type \"bytea\""
 msgstr "%s type send fonksiyonu  \"cstring\" döndürmelidir"
 
-#: commands/typecmds.c:452
-#: commands/typecmds.c:847
+#: commands/typecmds.c:467
+#: commands/typecmds.c:862
 #: tcop/utility.c:103
 #, c-format
 msgid "type \"%s\" does not exist, skipping"
 msgstr "\"%s\" tipi mevcut değil, atlanıyor"
 
-#: commands/typecmds.c:568
+#: commands/typecmds.c:583
 #, c-format
 msgid "domain names must be %d characters or less"
 msgstr "domain adı %d veya daha az karakterden oluşmalıdır"
 
-#: commands/typecmds.c:588
+#: commands/typecmds.c:603
 #, c-format
 msgid "\"%s\" is not a valid base type for a domain"
 msgstr "\"%s\" tipi bir domain için geçerli bir tip değildir"
 
-#: commands/typecmds.c:648
-#: commands/typecmds.c:1509
+#: commands/typecmds.c:663
+#: commands/typecmds.c:1524
 msgid "foreign key constraints not possible for domains"
 msgstr "domainlerde için foreign key constraint kullanılamaz"
 
-#: commands/typecmds.c:668
+#: commands/typecmds.c:683
 msgid "multiple default expressions"
 msgstr "birden fazla varsayılan ifade"
 
-#: commands/typecmds.c:698
-#: commands/typecmds.c:707
+#: commands/typecmds.c:713
+#: commands/typecmds.c:722
 msgid "conflicting NULL/NOT NULL constraints"
 msgstr "çakışan NULL/NOT NULL constraint"
 
-#: commands/typecmds.c:726
-#: commands/typecmds.c:1527
+#: commands/typecmds.c:741
+#: commands/typecmds.c:1542
 msgid "unique constraints not possible for domains"
 msgstr "domainlerde için unique constraint kullanılamaz"
 
-#: commands/typecmds.c:732
-#: commands/typecmds.c:1533
+#: commands/typecmds.c:747
+#: commands/typecmds.c:1548
 msgid "primary key constraints not possible for domains"
 msgstr "domainlerde için primary key constraint kullanılamaz"
 
-#: commands/typecmds.c:741
-#: commands/typecmds.c:1542
+#: commands/typecmds.c:756
+#: commands/typecmds.c:1557
 msgid "specifying constraint deferrability not supported for domains"
 msgstr "constraint srtelenebirliği domainlerde belirtilemez"
 
-#: commands/typecmds.c:873
-#: commands/typecmds.c:1785
+#: commands/typecmds.c:888
+#: commands/typecmds.c:1800
 #, c-format
 msgid "\"%s\" is not a domain"
 msgstr "\"%s\" bir domain değildir"
 
-#: commands/typecmds.c:939
+#: commands/typecmds.c:954
 #, c-format
 msgid "changing argument type of function %s from \"opaque\" to \"cstring\""
 msgstr "%s fonksiyonunun argümanı \"opaque\"tan \"cstring\"e değiştiriliyor"
 
-#: commands/typecmds.c:990
+#: commands/typecmds.c:1005
 #, c-format
 msgid "changing argument type of function %s from \"opaque\" to %s"
 msgstr "%s fonksiyonunun argümanı \"opaque\"tan \"%s\"e değiştiriliyor"
 
-#: commands/typecmds.c:1089
+#: commands/typecmds.c:1104
 #, c-format
 msgid "type analyze function %s must return type \"boolean\""
 msgstr "%s tipi analiz fonksiyonu \"boolean\" tipini döndürmelidir"
 
-#: commands/typecmds.c:1118
+#: commands/typecmds.c:1133
 msgid "composite type must have at least one attribute"
 msgstr "compisite tipinde en az bir öğe olmalıdır"
 
-#: commands/typecmds.c:1349
+#: commands/typecmds.c:1364
 #, c-format
 msgid "column \"%s\" of table \"%s\" contains null values"
 msgstr "\"%2$s\" tablosunun \"%1$s\" sütununda null değerler mevcut"
 
-#: commands/typecmds.c:1613
+#: commands/typecmds.c:1628
 #, c-format
 msgid "column \"%s\" of table \"%s\" contains values that violate the new constraint"
 msgstr "\"%2$s\" tablosunun \"%1$s\" sütununda yeni constrainti ihlal eden değerler mevcut"
 
-#: commands/typecmds.c:1819
+#: commands/typecmds.c:1834
 #, c-format
 msgid "constraint \"%s\" for domain \"%s\" already exists"
 msgstr "\"%2$s\" domain için \"%1$s\" constraint için zaten mevcut"
 
-#: commands/typecmds.c:1860
-#: commands/typecmds.c:1869
+#: commands/typecmds.c:1875
+#: commands/typecmds.c:1884
 msgid "cannot use table references in domain check constraint"
 msgstr "domain check constraintte tablo referansları kullanılamaz"
 
-#: commands/typecmds.c:1881
+#: commands/typecmds.c:1896
 msgid "cannot use aggregate in check constraint"
 msgstr "check constraint içinde aggregate kullanılamaz"
 
-#: commands/typecmds.c:2099
+#: commands/typecmds.c:2114
 #, c-format
 msgid "\"%s\" is a table's row type"
 msgstr "\"%s\" bir tablo satrır tipidir"
 
-#: commands/typecmds.c:2253
+#: commands/typecmds.c:2268
 #, c-format
 msgid "type %s is already in schema \"%s\""
 msgstr "%s tipi \"%s\" şemasında zaten mevcut"
 
-#: commands/typecmds.c:2276
+#: commands/typecmds.c:2291
 #, c-format
 msgid "type \"%s\" already exists in schema \"%s\""
 msgstr "\"%s\" tipi zaten \"%s\" şemasında mevcuttur"
 
-#: commands/typecmds.c:2289
+#: commands/typecmds.c:2304
 #, c-format
 msgid "%s is a table's row type"
 msgstr "%s bir tablo satır tipidir"
 
-#: commands/typecmds.c:2291
+#: commands/typecmds.c:2306
 msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Yerine ALTER TABLE SET SCHEMA kullanın."
 
@@ -4511,9 +4512,9 @@ msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "BEFORE STATEMENT tetikleyicisi bir değer döndüremez"
 
 #: commands/trigger.c:1730
-#: executor/execMain.c:1249
-#: executor/execMain.c:1558
-#: executor/execMain.c:1711
+#: executor/execMain.c:1248
+#: executor/execMain.c:1557
+#: executor/execMain.c:1710
 msgid "could not serialize access due to concurrent update"
 msgstr "eşzamanlı update nedeniyle erişim sıralanamıyor"
 
@@ -4907,27 +4908,27 @@ msgstr "\"%s\" view sütununun tipi değiştirilemiyor"
 msgid "view \"%s\" will be a temporary view"
 msgstr "\"%s\" view, bir geçeci view olacaktır"
 
-#: executor/execMain.c:870
+#: executor/execMain.c:869
 #, c-format
 msgid "cannot change sequence \"%s\""
 msgstr "\"%s\" sequence değiştirilemez"
 
-#: executor/execMain.c:876
+#: executor/execMain.c:875
 #, c-format
 msgid "cannot change TOAST relation \"%s\""
 msgstr "\"%s\" TOAST objesi değiştirilemez"
 
-#: executor/execMain.c:882
+#: executor/execMain.c:881
 #, c-format
 msgid "cannot change view \"%s\""
 msgstr "\"%s\" view değiştirilemiyor"
 
-#: executor/execMain.c:1840
+#: executor/execMain.c:1839
 #, c-format
 msgid "null value in column \"%s\" violates not-null constraint"
 msgstr "\"%s\" sütununda null değeri not-null kısıtlamasını ihlal ediyor"
 
-#: executor/execMain.c:1852
+#: executor/execMain.c:1851
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
 msgstr "\"%s\" balosuna girilen yeni satır \"%s\" check kısıtlamasını ihlal ediyor"
@@ -5117,7 +5118,7 @@ msgstr "Son SELECT az satır döndürüyor."
 msgid "return type %s is not supported for SQL functions"
 msgstr "SQL fonksiyonların içinde %s dönüş tipi desteklenmemektedir"
 
-#: executor/nodeAgg.c:1361
+#: executor/nodeAgg.c:1369
 #, c-format
 msgid "aggregate %u needs to have compatible input type and transition type"
 msgstr "%u aggregate fonksiyonu uyumlu giriş ve geçiş tiplerine sahip olmalıdır"
@@ -5143,38 +5144,38 @@ msgstr "Sorgu, %2$d adresine döndürme tipi %1$s iken,  %3$s bekliyor."
 msgid "Physical storage mismatch on dropped attribute at ordinal position %d."
 msgstr "%d adresinde düşürülmüş sütunda fiziksel saklam uyuşmazlığı."
 
-#: executor/nodeHashjoin.c:692
-#: executor/nodeHashjoin.c:728
+#: executor/nodeHashjoin.c:699
+#: executor/nodeHashjoin.c:735
 #, c-format
 msgid "could not rewind hash-join temporary file: %m"
 msgstr "geçici hash-join dosyasına başa alma işlemi başarısız: %m"
 
-#: executor/nodeHashjoin.c:763
-#: executor/nodeHashjoin.c:769
-#: executor/nodeHashjoin.c:775
+#: executor/nodeHashjoin.c:770
+#: executor/nodeHashjoin.c:776
+#: executor/nodeHashjoin.c:782
 #, c-format
 msgid "could not write to hash-join temporary file: %m"
 msgstr "geçici hash-join dosyasına yazma başarısız: %m"
 
-#: executor/nodeHashjoin.c:801
-#: executor/nodeHashjoin.c:806
-#: executor/nodeHashjoin.c:815
+#: executor/nodeHashjoin.c:808
+#: executor/nodeHashjoin.c:813
+#: executor/nodeHashjoin.c:822
 #, c-format
 msgid "could not read from hash-join temporary file: %m"
 msgstr "geçici hash-join dosyasına okuma başarısız: %m"
 
-#: executor/nodeMergejoin.c:1559
+#: executor/nodeMergejoin.c:1565
 msgid "RIGHT JOIN is only supported with merge-joinable join conditions"
 msgstr "RIGHT JOIN ancak merge-join işlemine uygun şartlarında desteklenmektedir"
 
-#: executor/nodeMergejoin.c:1577
+#: executor/nodeMergejoin.c:1583
 #: optimizer/path/joinpath.c:939
 msgid "FULL JOIN is only supported with merge-joinable join conditions"
 msgstr "FULL JOIN ancak merge-join işlemine uygun şartlarında desteklenmektedir"
 
 #: executor/nodeSubplan.c:288
 #: executor/nodeSubplan.c:329
-#: executor/nodeSubplan.c:947
+#: executor/nodeSubplan.c:959
 msgid "more than one row returned by a subquery used as an expression"
 msgstr "ifade içinde kullanılan alt sorgusu birden fazla satır döndürüldü"
 
@@ -5884,7 +5885,7 @@ msgid "JOIN/ON clause refers to \"%s\", which is not part of JOIN"
 msgstr "JOIN/ON ifadesi, JOIN parçası olmayan \"%s\" öğesine referans etmektedir"
 
 #: parser/parse_clause.c:430
-#: gram.y:5710
+#: gram.y:5719
 msgid "subquery in FROM must have an alias"
 msgstr "FROM öğersindeki subquery bir aliası almalıdır"
 
@@ -6766,15 +6767,15 @@ msgid "time zone interval must be HOUR or HOUR TO MINUTE"
 msgstr "zaman dilimi aralığı  HOUR veya HOUR TO MINUTE olmalıdır"
 
 #: gram.y:1163
-#: gram.y:6048
-#: gram.y:8106
+#: gram.y:6057
+#: gram.y:8115
 #, c-format
 msgid "INTERVAL(%d) precision must not be negative"
 msgstr "INTEVRAL(%d) kesinliği sıfırdan küçük olamaz"
 
 #: gram.y:1169
-#: gram.y:6054
-#: gram.y:8112
+#: gram.y:6063
+#: gram.y:8121
 #, c-format
 msgid "INTERVAL(%d) precision reduced to maximum allowed, %d"
 msgstr "INTEVRAL(%d) kesinliği izin verilen en yüksek değerine (%d) düşürülmüştür"
@@ -6811,183 +6812,183 @@ msgstr "CREATE ASSERTION implemente edilmemiştir"
 msgid "DROP ASSERTION is not yet implemented"
 msgstr "DROP ASSERTION implemente edilmemiştir"
 
-#: gram.y:3878
+#: gram.y:3887
 #: utils/adt/regproc.c:637
 msgid "missing argument"
 msgstr "argüman eksik"
 
-#: gram.y:3879
+#: gram.y:3888
 #: utils/adt/regproc.c:638
 msgid "Use NONE to denote the missing argument of a unary operator."
 msgstr "Unary operator'un bir argümanı eksik olduğunu göstermek için NONE kullanın"
 
-#: gram.y:5075
+#: gram.y:5084
 msgid "column name list not allowed in CREATE TABLE / AS EXECUTE"
 msgstr "CREATE TABLE / AS EXECUTE işleminde sütun isim listesi verilmez"
 
-#: gram.y:5553
+#: gram.y:5562
 msgid "LIMIT #,# syntax is not supported"
 msgstr "LIMIT #,# sözdizimi desteklenmemektedir"
 
-#: gram.y:5554
+#: gram.y:5563
 msgid "Use separate LIMIT and OFFSET clauses."
 msgstr "Ayrı LIMIT ve OFFSET ifadeleri kullanın."
 
-#: gram.y:5711
+#: gram.y:5720
 msgid "For example, FROM (SELECT ...) [AS] foo."
 msgstr "Örneğin, FROM (SELECT ...) [AS] birşey."
 
-#: gram.y:6151
+#: gram.y:6160
 msgid "precision for type float must be at least 1 bit"
 msgstr "float veri tipinin kesinliği en az 1 bit olmalıdır"
 
-#: gram.y:6159
+#: gram.y:6168
 msgid "precision for type float must be less than 54 bits"
 msgstr "float veri tipinin kesinliği ne çok 54 bit olabilir"
 
-#: gram.y:6173
-#: gram.y:6188
+#: gram.y:6182
+#: gram.y:6197
 #, c-format
 msgid "NUMERIC precision %d must be between 1 and %d"
 msgstr "NUMERIC precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6178
+#: gram.y:6187
 #, c-format
 msgid "NUMERIC scale %d must be between 0 and precision %d"
 msgstr "NUMERIC %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6206
-#: gram.y:6221
+#: gram.y:6215
+#: gram.y:6230
 #, c-format
 msgid "DECIMAL precision %d must be between 1 and %d"
 msgstr "DECIMAL precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6211
+#: gram.y:6220
 #, c-format
 msgid "DECIMAL scale %d must be between 0 and precision %d"
 msgstr "DECIMAL %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6271
-#: gram.y:6349
+#: gram.y:6280
+#: gram.y:6358
 #, c-format
 msgid "length for type %s must be at least 1"
 msgstr "%s tipinin uzunluğu en az 1 olmalıdır"
 
-#: gram.y:6276
-#: gram.y:6354
+#: gram.y:6285
+#: gram.y:6363
 #, c-format
 msgid "length for type %s cannot exceed %d"
 msgstr "%s tipin uzunluğu %d değerini aşamaz"
 
-#: gram.y:6427
+#: gram.y:6436
 #, c-format
 msgid "TIMESTAMP(%d)%s precision must not be negative"
 msgstr "TIMESTAMP(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6433
+#: gram.y:6442
 #, c-format
 msgid "TIMESTAMP(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIMESTAMP(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6460
+#: gram.y:6469
 #, c-format
 msgid "TIME(%d)%s precision must not be negative"
 msgstr "TIME(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6466
+#: gram.y:6475
 #, c-format
 msgid "TIME(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIME(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6907
+#: gram.y:6916
 msgid "UNIQUE predicate is not yet implemented"
 msgstr "UNIQUE predicate implemente edilmemiştir"
 
-#: gram.y:7183
+#: gram.y:7192
 #, c-format
 msgid "CURRENT_TIME(%d) precision must not be negative"
 msgstr "CURRENT_TIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7189
+#: gram.y:7198
 #, c-format
 msgid "CURRENT_TIME(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7227
+#: gram.y:7236
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision must not be negative"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7233
+#: gram.y:7242
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7274
+#: gram.y:7283
 #, c-format
 msgid "LOCALTIME(%d) precision must not be negative"
 msgstr "LOCALTIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7280
+#: gram.y:7289
 #, c-format
 msgid "LOCALTIME(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7322
+#: gram.y:7331
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision must not be negative"
 msgstr "LOCALTIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7328
+#: gram.y:7337
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:8581
+#: gram.y:8590
 msgid "OLD used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda OLD kullanıldı"
 
-#: gram.y:8590
+#: gram.y:8599
 msgid "NEW used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda NEW kullanıldı"
 
-#: y.tab.c:21125
+#: y.tab.c:21137
 msgid "syntax error; also virtual memory exhausted"
 msgstr "parse hatası; ayrıca vertual bellek de dolmuştur"
 
-#: y.tab.c:21129
-#: gram.y:8815
-#: gram.y:8817
-#: gram.y:8834
-#: gram.y:8836
+#: y.tab.c:21141
+#: gram.y:8824
+#: gram.y:8826
+#: gram.y:8843
+#: gram.y:8845
 msgid "syntax error"
 msgstr "söz dizim hatası "
 
-#: y.tab.c:21243
+#: y.tab.c:21255
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
-#: gram.y:8789
+#: gram.y:8798
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sol tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8795
+#: gram.y:8804
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sağ tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8894
+#: gram.y:8903
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "birden çok ORDER BY ifadesi kullanılamaz"
 
-#: gram.y:8902
+#: gram.y:8911
 msgid "multiple FOR UPDATE/FOR SHARE clauses not allowed"
 msgstr "birden çok FOR UPDATE/FOR SHARE ifadesi kullanılamaz"
 
-#: gram.y:8910
+#: gram.y:8919
 msgid "multiple OFFSET clauses not allowed"
 msgstr "birden fazla OFFSET ifadesi desteklenmemektedir"
 
-#: gram.y:8918
+#: gram.y:8927
 msgid "multiple LIMIT clauses not allowed"
 msgstr "birden çok LIMIT ifadesi kullanılamaz"
 
@@ -8614,16 +8615,16 @@ msgstr "LOAD yapmak için superuser olmalısınız"
 msgid "must be superuser to do CHECKPOINT"
 msgstr "CHECKPOINT yapmak için superuser olmalısınız"
 
-#: tcop/pquery.c:498
+#: tcop/pquery.c:508
 #, c-format
 msgid "bind message has %d result formats but query has %d columns"
 msgstr "bind mesajı ında %d sonuç biçimi verilmişken sorguda %d sütun belirtilmiş"
 
-#: tcop/pquery.c:819
+#: tcop/pquery.c:829
 msgid "cursor can only scan forward"
 msgstr "cursor sadece ileri doğru gidebilir"
 
-#: tcop/pquery.c:820
+#: tcop/pquery.c:830
 msgid "Declare it with SCROLL option to enable backward scan."
 msgstr "Geriye gitmesini sağlamak için SCROLL seçeneği ile bildirin."
 
@@ -10032,6 +10033,14 @@ msgstr "anyelement tipinde değer alınamaz"
 #: utils/adt/pseudotypes.c:320
 msgid "cannot display a value of type anyelement"
 msgstr "anyelement tipinde değer gösterilemez"
+
+#: utils/adt/pseudotypes.c:333
+msgid "cannot accept a value of a shell type"
+msgstr "shell tipinde değer alınamaz"
+
+#: utils/adt/pseudotypes.c:346
+msgid "cannot display a value of a shell type"
+msgstr "shell tipinde değer gösterilemez"
 
 #: utils/adt/regexp.c:155
 #, c-format
@@ -12187,11 +12196,11 @@ msgstr "Disk dolu mu?"
 msgid "could not read block %ld of temporary file: %m"
 msgstr "geçici dosyasının %ld bloku okunamıyor: %m"
 
-#: utils/sort/tuplesort.c:2258
+#: utils/sort/tuplesort.c:2418
 msgid "could not create unique index"
 msgstr "unique dizin yaratılamadı"
 
-#: utils/sort/tuplesort.c:2259
+#: utils/sort/tuplesort.c:2419
 msgid "Table contains duplicated values."
 msgstr "Tabloda mukerrer değerler mevcut."
 
