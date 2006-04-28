@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-04-26 13:05+0200\n"
+"PO-Revision-Date: 2006-04-28 08:32+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -1450,17 +1450,17 @@ msgid "  -x NUM          internal use\n"
 msgstr "  -x NUM          iç kullanım\n"
 
 #: y.tab.c:617
-#: y.tab.c:11098
+#: y.tab.c:11060
 msgid "syntax error: cannot back up"
 msgstr "sözdizimi hatası: geri diilemiyor"
 
 #: y.tab.c:1528
-#: y.tab.c:21386
+#: y.tab.c:21348
 msgid "syntax error; also virtual memory exhausted"
 msgstr "parse hatası; ayrıca vertual bellek de dolmuştur"
 
 #: y.tab.c:1532
-#: y.tab.c:21390
+#: y.tab.c:21352
 #: gram.y:8912
 #: gram.y:8914
 #: gram.y:8931
@@ -1469,7 +1469,7 @@ msgid "syntax error"
 msgstr "söz dizim hatası "
 
 #: y.tab.c:1646
-#: y.tab.c:21506
+#: y.tab.c:21468
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
@@ -2169,6 +2169,7 @@ msgstr "\"%s\" shared indexe sadece stand-alone modunda reindex işlemi uygulana
 
 #: catalog/namespace.c:172
 #: catalog/namespace.c:227
+#: commands/trigger.c:2940
 #, c-format
 msgid "cross-database references are not implemented: \"%s.%s.%s\""
 msgstr "veritabanı-arası referanslar oluşturulamaz: \"%s.%s.%s\""
@@ -2683,8 +2684,8 @@ msgstr "diğer oturumların geçici tabloları üzerinde cluster yapılamaz"
 #: commands/lockcmds.c:68
 #: commands/tablecmds.c:654
 #: commands/tablecmds.c:2703
-#: commands/trigger.c:143
-#: commands/trigger.c:547
+#: commands/trigger.c:145
+#: commands/trigger.c:549
 #: tcop/utility.c:80
 #, c-format
 msgid "\"%s\" is not a table"
@@ -2741,9 +2742,9 @@ msgid "rule \"%s\" for relation \"%s\" does not exist"
 msgstr "\"%s\" rule'u \"%s\" tablosunda mevcut değil"
 
 #: commands/comment.c:1011
-#: commands/trigger.c:484
-#: commands/trigger.c:696
-#: commands/trigger.c:805
+#: commands/trigger.c:486
+#: commands/trigger.c:698
+#: commands/trigger.c:807
 #, c-format
 msgid "trigger \"%s\" for table \"%s\" does not exist"
 msgstr "\"%s\" triggeri \"%s\" tablosunda mevcut değil"
@@ -3958,8 +3959,8 @@ msgstr "truncate işlemi , cascade neticesinde %s' tablosuna varıyor"
 #: commands/tablecmds.c:2715
 #: commands/tablecmds.c:3903
 #: commands/tablecmds.c:5652
-#: commands/trigger.c:149
-#: commands/trigger.c:553
+#: commands/trigger.c:151
+#: commands/trigger.c:555
 #: tcop/utility.c:208
 #: tcop/utility.c:245
 #, c-format
@@ -4210,7 +4211,7 @@ msgid "there is no unique constraint matching given keys for referenced table \"
 msgstr "\"%s\" referans edilen tablosunda belirtilen anahtarlara uyan bir unique constraint yok"
 
 #: commands/tablecmds.c:4720
-#: commands/trigger.c:2991
+#: commands/trigger.c:3061
 #, c-format
 msgid "constraint \"%s\" does not exist"
 msgstr "constraint \"%s\" mevcut değil"
@@ -4470,67 +4471,63 @@ msgstr ""
 "%u index sayfa silinmiştir, %u şu an kullanılabilir.\n"
 "%s"
 
-#: commands/trigger.c:136
+#: commands/trigger.c:138
 #, c-format
 msgid "could not determine referenced table for constraint \"%s\""
 msgstr "\"%s\" bütünlük kısıtlaması için referans tablosu bulunamıyor"
 
-#: commands/trigger.c:222
+#: commands/trigger.c:224
 msgid "multiple INSERT events specified"
 msgstr "birden fazla INSERT olayı belirtilmiştir"
 
-#: commands/trigger.c:229
+#: commands/trigger.c:231
 msgid "multiple DELETE events specified"
 msgstr "birden fazla DELETE olayı belirtilmiştir"
 
-#: commands/trigger.c:236
+#: commands/trigger.c:238
 msgid "multiple UPDATE events specified"
 msgstr "birden fazla UPDATE olayı belirtilmiştir"
 
-#: commands/trigger.c:268
-#: commands/trigger.c:654
+#: commands/trigger.c:270
+#: commands/trigger.c:656
 #, c-format
 msgid "trigger \"%s\" for relation \"%s\" already exists"
 msgstr "\"%2$s\" nesnesi için \"%1$s\" tetikleyicisi (trigger) zaten mevcut"
 
-#: commands/trigger.c:288
+#: commands/trigger.c:290
 #, c-format
 msgid "changing return type of function %s from \"opaque\" to \"trigger\""
 msgstr "%s fonksiyonunun döndürme değeri \"opaque\"tan \"trigger\"e değiştiriliyor"
 
-#: commands/trigger.c:295
+#: commands/trigger.c:297
 #, c-format
 msgid "function %s must return type \"trigger\""
 msgstr "%s fonksiyonu \"trigger\" tipini döndürmelidir"
 
-#: commands/trigger.c:773
+#: commands/trigger.c:775
 #, c-format
 msgid "permission denied: \"%s\" is a system trigger"
 msgstr "erişim engellendi: \"%s\" bir sistem tetikleyicisidir"
 
-#: commands/trigger.c:1299
+#: commands/trigger.c:1301
 #, c-format
 msgid "trigger function %u returned null value"
 msgstr "%u trigger fonksiyonu null değerini döndürdü"
 
-#: commands/trigger.c:1357
-#: commands/trigger.c:1468
-#: commands/trigger.c:1599
+#: commands/trigger.c:1359
+#: commands/trigger.c:1470
+#: commands/trigger.c:1601
 msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "BEFORE STATEMENT tetikleyicisi bir değer döndüremez"
 
-#: commands/trigger.c:1730
+#: commands/trigger.c:1732
 #: executor/execMain.c:1248
 #: executor/execMain.c:1557
 #: executor/execMain.c:1710
 msgid "could not serialize access due to concurrent update"
 msgstr "eşzamanlı update nedeniyle erişim sıralanamıyor"
 
-#: commands/trigger.c:2937
-msgid "unnamed constraints cannot be set explicitly"
-msgstr "isimsiz bütünlük kısıtlayıcıları açık olarak belirtilemez"
-
-#: commands/trigger.c:2976
+#: commands/trigger.c:3035
 #, c-format
 msgid "constraint \"%s\" is not deferrable"
 msgstr "\"%s\" constrainti ertelenebilir constraint değildir"
@@ -5501,109 +5498,118 @@ msgstr "geçersiz password paket boyutu"
 msgid "received password packet"
 msgstr "password paketi alınmıştır"
 
-#: libpq/be-secure.c:285
-#: libpq/be-secure.c:384
+#: libpq/be-secure.c:286
+#: libpq/be-secure.c:385
 #, c-format
 msgid "SSL SYSCALL error: %m"
 msgstr "SSL SYSCALL hatası: %m"
 
-#: libpq/be-secure.c:290
-#: libpq/be-secure.c:389
+#: libpq/be-secure.c:291
+#: libpq/be-secure.c:390
 msgid "SSL SYSCALL error: EOF detected"
 msgstr "SSL SYSCALL hatası: EOF (dosyasonu)"
 
-#: libpq/be-secure.c:298
-#: libpq/be-secure.c:397
+#: libpq/be-secure.c:299
+#: libpq/be-secure.c:398
 #, c-format
 msgid "SSL error: %s"
 msgstr "SSL hatası: %s"
 
-#: libpq/be-secure.c:307
-#: libpq/be-secure.c:406
-#: libpq/be-secure.c:888
+#: libpq/be-secure.c:308
+#: libpq/be-secure.c:407
+#: libpq/be-secure.c:911
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "bilinmeyan SSL hata kodu: %d"
 
-#: libpq/be-secure.c:346
-#: libpq/be-secure.c:350
-#: libpq/be-secure.c:360
+#: libpq/be-secure.c:347
+#: libpq/be-secure.c:351
+#: libpq/be-secure.c:361
 msgid "SSL renegotiation failure"
 msgstr "SSL yeniden görüşme hatası"
 
-#: libpq/be-secure.c:354
+#: libpq/be-secure.c:355
 msgid "SSL failed to send renegotiation request"
 msgstr "SSL görüşme cevabı gönderme başarısız"
 
-#: libpq/be-secure.c:725
+#: libpq/be-secure.c:726
 #, c-format
 msgid "could not create SSL context: %s"
 msgstr "SSL context oluşturma hatası: %s"
 
-#: libpq/be-secure.c:736
+#: libpq/be-secure.c:737
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "sunucu srtifika dosyası \"%s\" yükleme başarısız: %s"
 
-#: libpq/be-secure.c:742
+#: libpq/be-secure.c:743
 #, c-format
 msgid "could not access private key file \"%s\": %m"
 msgstr "private key dosyası \"%s\" okunamıyor: %m"
 
-#: libpq/be-secure.c:758
+#: libpq/be-secure.c:759
 #, c-format
 msgid "unsafe permissions on private key file \"%s\""
 msgstr "private key dosyası \"%s\" sakıncalı erişim haklarına sahip"
 
-#: libpq/be-secure.c:760
+#: libpq/be-secure.c:761
 msgid "File must be owned by the database user and must have no permissions for \"group\" or \"other\"."
 msgstr "Dosya, veritabanı sahibi kullanıcısına ait olmalı ve \"group\" ya da \"other\" kullanıcılarına erişim hakları verilmemelidir."
 
-#: libpq/be-secure.c:767
+#: libpq/be-secure.c:768
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "private key dosyası \"%s\" okunamıyor: %s"
 
-#: libpq/be-secure.c:772
+#: libpq/be-secure.c:773
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "private key denetlemesi başarısız: %s"
 
-#: libpq/be-secure.c:791
+#: libpq/be-secure.c:792
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "ana sertifika dosyası \"%s\" okunaıyor: %s"
 
-#: libpq/be-secure.c:793
+#: libpq/be-secure.c:794
 msgid "Will not verify client certificates."
 msgstr "Istemci sertifikası denetlenmeyecek."
 
-#: libpq/be-secure.c:834
+#: libpq/be-secure.c:814
+#, c-format
+msgid "SSL Certificate Revocation List (CRL) file \"%s\" not found, skipping: %s"
+msgstr "SSL Geçersiz Sertifika Listesi [Certificate Revocation List (CRL)] dosyası \"%s\" bulunmadı, atlanıyor: %s"
+
+#: libpq/be-secure.c:816
+msgid "Will not check certificates against CRL."
+msgstr "Sertifika CRL ile karşılaştırılmayacak."
+
+#: libpq/be-secure.c:857
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "SSL bağlantısı oluşturulamıyor: %s"
 
-#: libpq/be-secure.c:843
+#: libpq/be-secure.c:866
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "SSL socket kurulamıyor: %s"
 
-#: libpq/be-secure.c:868
+#: libpq/be-secure.c:891
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "SSL bağlantı alınamıyor: %m"
 
-#: libpq/be-secure.c:872
-#: libpq/be-secure.c:883
+#: libpq/be-secure.c:895
+#: libpq/be-secure.c:906
 msgid "could not accept SSL connection: EOF detected"
 msgstr "SSL bağlantı alınamıyor: EOF algılandı"
 
-#: libpq/be-secure.c:877
+#: libpq/be-secure.c:900
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "SSL bağlantı alınamıyor: %s"
 
-#: libpq/be-secure.c:915
+#: libpq/be-secure.c:938
 #, c-format
 msgid "SSL connection from \"%s\""
 msgstr "\"%s\" adresinden SSL bağşantısı"
@@ -7702,168 +7708,172 @@ msgstr "arşivlenen transaction kayıt dosyası \"%s\""
 msgid "could not open archive status directory \"%s\": %m"
 msgstr "arşiv durum dizini \"%s\" açılamıyor: %m"
 
-#: postmaster/pgstat.c:259
+#: postmaster/pgstat.c:264
 #, c-format
 msgid "could not resolve \"localhost\": %s"
 msgstr "\"localhost\" adresi çözümlenemedi: %s"
 
-#: postmaster/pgstat.c:282
+#: postmaster/pgstat.c:287
 msgid "trying another address for the statistics collector"
 msgstr "istatistik toplayıcı sürecinin başka bir adresi deneneiyor"
 
-#: postmaster/pgstat.c:291
+#: postmaster/pgstat.c:296
 #, c-format
 msgid "could not create socket for statistics collector: %m"
 msgstr "istatistik toplayıcı socket oluşturma hatası: %m"
 
-#: postmaster/pgstat.c:303
+#: postmaster/pgstat.c:308
 #, c-format
 msgid "could not bind socket for statistics collector: %m"
 msgstr "istatistik toplayıcı soket bind hatası: %m"
 
-#: postmaster/pgstat.c:314
+#: postmaster/pgstat.c:319
 #, c-format
 msgid "could not get address of socket for statistics collector: %m"
 msgstr "istatistik toplayıcı sürecinin soket adresi alınamadı: %m"
 
-#: postmaster/pgstat.c:330
+#: postmaster/pgstat.c:335
 #, c-format
 msgid "could not connect socket for statistics collector: %m"
 msgstr "statistic collectror soket bağlama hatası: %m"
 
-#: postmaster/pgstat.c:347
+#: postmaster/pgstat.c:352
 #, c-format
 msgid "could not send test message on socket for statistics collector: %m"
 msgstr "istatistik toplayıcı sürecine test mesajı gönderme hatası: %m"
 
-#: postmaster/pgstat.c:372
-#: postmaster/pgstat.c:1656
+#: postmaster/pgstat.c:377
+#: postmaster/pgstat.c:1682
 #, c-format
 msgid "select() failed in statistics collector: %m"
 msgstr "istatistik toplayıcı sürecinde select() hatası: %m"
 
-#: postmaster/pgstat.c:387
+#: postmaster/pgstat.c:392
 msgid "test message did not get through on socket for statistics collector"
 msgstr "istatistik toplayıcı sürecine test mesajı gönderilemedi"
 
-#: postmaster/pgstat.c:399
+#: postmaster/pgstat.c:404
 #, c-format
 msgid "could not receive test message on socket for statistics collector: %m"
 msgstr "istatistik toplayıcı süreci deneme mesajı alma hatası: %m"
 
-#: postmaster/pgstat.c:409
+#: postmaster/pgstat.c:414
 msgid "incorrect test message transmission on socket for statistics collector"
 msgstr "istatistik toplayıcı sokket aracılığı ile mesaj gönderme hatası"
 
-#: postmaster/pgstat.c:433
+#: postmaster/pgstat.c:438
 #, c-format
 msgid "could not set statistics collector socket to nonblocking mode: %m"
 msgstr "istatistik toplayıcı soketi nonblocking durumuna getirilemedi: %m"
 
-#: postmaster/pgstat.c:443
+#: postmaster/pgstat.c:448
 msgid "disabling statistics collector for lack of working socket"
 msgstr "çalışan socket olmadığından istatistik toplayıcı iptal edildi"
 
-#: postmaster/pgstat.c:580
+#: postmaster/pgstat.c:585
 msgid "statistics collector startup skipped"
 msgstr "istatistik toplama süreci başlatılmayacak"
 
-#: postmaster/pgstat.c:601
+#: postmaster/pgstat.c:606
 #, c-format
 msgid "could not fork statistics buffer: %m"
 msgstr "istatistik tampon süreci başlatılamıyor: %m"
 
-#: postmaster/pgstat.c:1076
+#: postmaster/pgstat.c:1081
 msgid "must be superuser to reset statistics counters"
 msgstr "istatistik sayaçlarını sadece veritabanı superuserı sıfırlayabilir"
 
-#: postmaster/pgstat.c:1506
+#: postmaster/pgstat.c:1529
 #, c-format
 msgid "could not create pipe for statistics buffer: %m"
 msgstr "istatistik tamponu için pipe oluşturma hatası: %m"
 
-#: postmaster/pgstat.c:1518
+#: postmaster/pgstat.c:1541
 #, c-format
 msgid "could not fork statistics collector: %m"
 msgstr "istatistik toplayıcı başlatılamıyor: %m"
 
-#: postmaster/pgstat.c:1685
+#: postmaster/pgstat.c:1711
 #, c-format
 msgid "could not read from statistics collector pipe: %m"
 msgstr "istatistik toplayıcı pipe okuma hatası: %m"
 
-#: postmaster/pgstat.c:1706
+#: postmaster/pgstat.c:1732
 msgid "invalid statistics message length"
 msgstr "geçersiz istatistik mesaj uzunluğu "
 
-#: postmaster/pgstat.c:1785
+#: postmaster/pgstat.c:1817
 #, c-format
 msgid "could not set statistics collector timer: %m"
 msgstr "statistics collector zamanlayıcısı ayarlama hatası: %m"
 
-#: postmaster/pgstat.c:1869
+#: postmaster/pgstat.c:1901
 #, c-format
 msgid "could not set statistics collector pipe to nonblocking mode: %m"
 msgstr "istatistik toplayıcı pipe nonblocking durumuna getirilemedi: %m"
 
-#: postmaster/pgstat.c:1900
+#: postmaster/pgstat.c:1932
 msgid "statistics buffer is full"
 msgstr "istatistik tamponu dolsu"
 
-#: postmaster/pgstat.c:1933
+#: postmaster/pgstat.c:1965
 #, c-format
 msgid "select() failed in statistics buffer: %m"
 msgstr "istatistik toplama süreci içerisinde select() hatası: %m"
 
-#: postmaster/pgstat.c:1947
+#: postmaster/pgstat.c:1979
 #, c-format
 msgid "could not read statistics message: %m"
 msgstr "istatistik mesajı okunamadı: %m"
 
-#: postmaster/pgstat.c:2010
+#: postmaster/pgstat.c:2042
 #, c-format
 msgid "could not write to statistics collector pipe: %m"
 msgstr "statistics collector pipe yazma hatası: %m"
 
-#: postmaster/pgstat.c:2082
+#: postmaster/pgstat.c:2114
 #, c-format
 msgid "invalid server process ID %d"
 msgstr "geçersiz sunucu süreci ID %d"
 
-#: postmaster/pgstat.c:2228
+#: postmaster/pgstat.c:2260
 #, c-format
 msgid "could not open temporary statistics file \"%s\": %m"
 msgstr "geçici istatistik dosyası \"%s\" açılamıyor: %m"
 
-#: postmaster/pgstat.c:2303
+#: postmaster/pgstat.c:2335
 #, c-format
 msgid "could not write temporary statistics file \"%s\": %m"
 msgstr "geçici istatistik dosyasına \"%s\" yazılamıyor: %m"
 
-#: postmaster/pgstat.c:2312
+#: postmaster/pgstat.c:2344
 #, c-format
 msgid "could not close temporary statistics file \"%s\": %m"
 msgstr "geçici istatistik dosyası \"%s\" açılamıyor: %m"
 
-#: postmaster/pgstat.c:2320
+#: postmaster/pgstat.c:2352
 #, c-format
 msgid "could not rename temporary statistics file \"%s\" to \"%s\": %m"
 msgstr "geçici istatistik dosyasının adı değiştirilemiyor eski: \"%s\" yeni: \"%s\": %m"
 
-#: postmaster/pgstat.c:2429
-#: postmaster/pgstat.c:2451
-#: postmaster/pgstat.c:2465
-#: postmaster/pgstat.c:2516
-#: postmaster/pgstat.c:2533
-#: postmaster/pgstat.c:2550
-#: postmaster/pgstat.c:2583
-#: postmaster/pgstat.c:2590
-#: postmaster/pgstat.c:2602
-#: postmaster/pgstat.c:2653
+#: postmaster/pgstat.c:2459
+msgid "pgstat update timeout"
+msgstr "pgstat update timeout"
+
+#: postmaster/pgstat.c:2526
+#: postmaster/pgstat.c:2548
+#: postmaster/pgstat.c:2562
+#: postmaster/pgstat.c:2613
+#: postmaster/pgstat.c:2630
+#: postmaster/pgstat.c:2647
+#: postmaster/pgstat.c:2680
+#: postmaster/pgstat.c:2687
+#: postmaster/pgstat.c:2699
+#: postmaster/pgstat.c:2750
 msgid "corrupted pgstat.stat file"
 msgstr "bozuk pgstat.stat dosyası"
 
-#: postmaster/pgstat.c:3017
+#: postmaster/pgstat.c:3114
 msgid "database hash table corrupted during cleanup --- abort"
 msgstr "veritabanı %d için tablolar hash tablosu temizleme sırasında bozulmuştur --- iptal"
 
@@ -10324,13 +10334,13 @@ msgstr "yeni bit 0 veya 1 olmalıdır"
 msgid "field position must be greater than zero"
 msgstr "alan yeri sıfırdan büyük olmalıdır"
 
-#: utils/adt/selfuncs.c:3727
-#: utils/adt/selfuncs.c:4107
+#: utils/adt/selfuncs.c:3696
+#: utils/adt/selfuncs.c:4076
 msgid "case insensitive matching not supported on type bytea"
 msgstr "bytea veri tipi için büyük ve küçük harf duyarsız karşılaştırma desteklenmemektedir"
 
-#: utils/adt/selfuncs.c:3826
-#: utils/adt/selfuncs.c:4267
+#: utils/adt/selfuncs.c:3795
+#: utils/adt/selfuncs.c:4236
 msgid "regular-expression matching not supported on type bytea"
 msgstr "bytea tipi için regular-expression karşılaştırma desteklenmemektedir"
 
