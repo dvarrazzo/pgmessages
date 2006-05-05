@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-05-02 11:28+0200\n"
+"PO-Revision-Date: 2006-05-05 08:48+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr "desteklenmeyen biçim kodu: %d"
 msgid "column \"%s\" cannot be declared SETOF"
 msgstr "\"%s\" kolonu SETOF olarak bildirilemez"
 
-#: access/gist/gistvacuum.c:387
+#: access/gist/gistvacuum.c:400
 #, c-format
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM FULL veya REINDEX işleminden geçmesi gerekir"
@@ -130,7 +130,7 @@ msgstr "\"%s\" tablosu için lock alınamadı"
 
 #: access/heap/heapam.c:811
 #: access/heap/heapam.c:846
-#: catalog/aclchk.c:585
+#: catalog/aclchk.c:571
 #, c-format
 msgid "\"%s\" is an index"
 msgstr "\"%s\" bir indextir"
@@ -143,7 +143,7 @@ msgstr "\"%s\" nesnesi özel bir nesnedir"
 
 #: access/heap/heapam.c:821
 #: access/heap/heapam.c:856
-#: catalog/aclchk.c:592
+#: catalog/aclchk.c:578
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" bir birleşik tiptir"
@@ -399,14 +399,14 @@ msgstr "postmaster sürecini kapatın ve \"%s\" veritabanına VACUUM uygulamak i
 
 #: access/transam/varsup.c:75
 #: access/transam/varsup.c:238
-#: commands/vacuum.c:923
+#: commands/vacuum.c:929
 #, c-format
 msgid "database \"%s\" must be vacuumed within %u transactions"
 msgstr "\"%s\" veritabanına transaction sayısı %u geçmeden vacuum işlemi uygulanmalıdır"
 
 #: access/transam/varsup.c:78
 #: access/transam/varsup.c:241
-#: commands/vacuum.c:926
+#: commands/vacuum.c:932
 #, c-format
 msgid "To avoid a database shutdown, execute a full-database VACUUM in \"%s\"."
 msgstr "Veritabanı kapanmasını önlemek için \"%s\" veritabanında full-database VACUUM çalıştırın"
@@ -525,8 +525,8 @@ msgstr "\"%s\" dosyası oluşturulamıyor: %m"
 #: postmaster/postmaster.c:3023
 #: utils/init/miscinit.c:1016
 #: utils/init/miscinit.c:1025
-#: utils/misc/guc.c:5167
-#: utils/misc/guc.c:5230
+#: utils/misc/guc.c:5177
+#: utils/misc/guc.c:5240
 #: ../port/copydir.c:148
 #, c-format
 msgid "could not write to file \"%s\": %m"
@@ -553,9 +553,9 @@ msgstr "\"%s\" dosyası kapatılamıyor: %m"
 #: access/transam/xlog.c:3231
 #: access/transam/xlog.c:3329
 #: libpq/hba.c:951
-#: postmaster/autovacuum.c:461
+#: postmaster/autovacuum.c:462
 #: utils/error/elog.c:1117
-#: utils/init/postinit.c:91
+#: utils/init/postinit.c:86
 #: utils/init/miscinit.c:967
 #: utils/init/miscinit.c:1073
 #: ../port/copydir.c:119
@@ -1363,6 +1363,29 @@ msgstr "\"%s\" dosyasında geçersiz veri"
 msgid "xlog redo %s"
 msgstr "xlog redo %s"
 
+#: access/gin/ginarrayproc.c:36
+msgid "array must not contain nulls"
+msgstr "array null kayıtları içeremez"
+
+#: access/gin/ginarrayproc.c:41
+msgid "array must be one-dimensional"
+msgstr "array tek boyutlu olmalıdır"
+
+#: access/gin/ginarrayproc.c:112
+#: parser/parse_oper.c:178
+#: utils/adt/arrayfuncs.c:3006
+#: utils/adt/ri_triggers.c:3641
+#, c-format
+msgid "could not identify an equality operator for type %s"
+msgstr "%s tipi için eşitleme işlemi bulunamadı "
+
+#: access/gin/ginarrayproc.c:137
+#: access/gin/ginarrayproc.c:179
+#: utils/adt/arrayfuncs.c:2983
+#: utils/adt/arrayfuncs.c:3190
+msgid "cannot compare arrays of different element types"
+msgstr "farklı öğe tipli dizinleri karşılaştırılamaz"
+
 #: y.tab.c:623
 #: y.tab.c:11049
 msgid "syntax error: cannot back up"
@@ -1485,7 +1508,7 @@ msgstr "%s nesnesine bağlı nesnelerinin kaldırma işlemi başarısız oldu"
 
 #: catalog/dependency.c:330
 #: catalog/dependency.c:742
-#: catalog/pg_shdepend.c:517
+#: catalog/pg_shdepend.c:516
 #, c-format
 msgid "cannot drop %s because it is required by the database system"
 msgstr "veritabanı sistemi tarafından kullanıldığı için %s kaldırılamıyor"
@@ -1649,81 +1672,82 @@ msgstr "%s composite type"
 msgid "relation %s"
 msgstr "%s nesnesi"
 
-#: catalog/aclchk.c:121
+#: catalog/aclchk.c:122
 msgid "grant options can only be granted to roles"
 msgstr "grant opsiyonu, sadece rollere atanabilir"
 
-#: catalog/aclchk.c:218
+#: catalog/aclchk.c:219
 #, c-format
 msgid "no privileges were granted for \"%s\""
 msgstr "\"%s\" nesnesine hiçbir hak verilemedi"
 
-#: catalog/aclchk.c:222
+#: catalog/aclchk.c:223
 #, c-format
 msgid "not all privileges were granted for \"%s\""
 msgstr "\"%s\" nesnesine bazı hakları verilemedi"
 
-#: catalog/aclchk.c:229
+#: catalog/aclchk.c:230
 #, c-format
 msgid "no privileges could be revoked for \"%s\""
 msgstr "\"%s\" nesnesinin hiçbir hakkı geri alınamadı"
 
-#: catalog/aclchk.c:233
+#: catalog/aclchk.c:234
 #, c-format
 msgid "not all privileges could be revoked for \"%s\""
 msgstr "\"%s\" nesnesinin bazı hakları geri alınamadı"
 
-#: catalog/aclchk.c:295
+#: catalog/aclchk.c:296
 #, c-format
 msgid "invalid privilege type %s for relation"
 msgstr "nesne için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:299
+#: catalog/aclchk.c:300
 #, c-format
 msgid "invalid privilege type %s for sequence"
 msgstr "sequence için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:303
+#: catalog/aclchk.c:304
 #, c-format
 msgid "invalid privilege type %s for database"
 msgstr "veritabanı için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:307
+#: catalog/aclchk.c:308
 #, c-format
 msgid "invalid privilege type %s for function"
 msgstr "fonksiyon için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:311
+#: catalog/aclchk.c:312
 #, c-format
 msgid "invalid privilege type %s for language"
 msgstr "dil için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:315
+#: catalog/aclchk.c:316
 #, c-format
 msgid "invalid privilege type %s for namespace"
 msgstr "namespace için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:319
+#: catalog/aclchk.c:320
 #, c-format
 msgid "invalid privilege type %s for tablespace"
 msgstr "tablespace için geçersiz hak tipi %s"
 
-#: catalog/aclchk.c:446
+#: catalog/aclchk.c:433
 #: commands/comment.c:599
-#: commands/dbcommands.c:593
-#: commands/dbcommands.c:735
-#: commands/dbcommands.c:853
-#: commands/dbcommands.c:923
-#: commands/dbcommands.c:1006
+#: commands/dbcommands.c:572
+#: commands/dbcommands.c:693
+#: commands/dbcommands.c:811
+#: commands/dbcommands.c:883
+#: commands/dbcommands.c:968
 #: utils/adt/acl.c:1749
 #: utils/adt/dbsize.c:131
-#: utils/init/postinit.c:372
-#: utils/init/postinit.c:384
+#: utils/init/postinit.c:317
+#: utils/init/postinit.c:424
+#: utils/init/postinit.c:440
 #, c-format
 msgid "database \"%s\" does not exist"
 msgstr "\"%s\" veritabanı mevcut değil"
 
-#: catalog/aclchk.c:477
+#: catalog/aclchk.c:461
 #: commands/comment.c:1170
 #: commands/functioncmds.c:557
 #: commands/proclang.c:401
@@ -1733,7 +1757,7 @@ msgstr "\"%s\" veritabanı mevcut değil"
 msgid "language \"%s\" does not exist"
 msgstr "\"%s\" dili mevcut değil"
 
-#: catalog/aclchk.c:496
+#: catalog/aclchk.c:481
 #: catalog/namespace.c:254
 #: catalog/namespace.c:1224
 #: catalog/namespace.c:1252
@@ -1748,11 +1772,11 @@ msgstr "\"%s\" dili mevcut değil"
 msgid "schema \"%s\" does not exist"
 msgstr "\"%s\" şeması mevcut değil"
 
-#: catalog/aclchk.c:524
+#: catalog/aclchk.c:510
 #: commands/tablecmds.c:325
 #: commands/tablecmds.c:5660
 #: commands/comment.c:638
-#: commands/dbcommands.c:291
+#: commands/dbcommands.c:282
 #: commands/indexcmds.c:171
 #: commands/tablespace.c:408
 #: commands/tablespace.c:714
@@ -1765,7 +1789,7 @@ msgstr "\"%s\" şeması mevcut değil"
 msgid "tablespace \"%s\" does not exist"
 msgstr "\"%s\" tablespace'i mevcut değil"
 
-#: catalog/aclchk.c:600
+#: catalog/aclchk.c:586
 #: commands/comment.c:482
 #: commands/sequence.c:855
 #: tcop/utility.c:86
@@ -1773,35 +1797,35 @@ msgstr "\"%s\" tablespace'i mevcut değil"
 msgid "\"%s\" is not a sequence"
 msgstr "\"%s\" bir sequence değildir"
 
-#: catalog/aclchk.c:638
+#: catalog/aclchk.c:624
 #, c-format
 msgid "sequence \"%s\" only supports USAGE, SELECT, and UPDATE"
 msgstr "\"%s\" sequence nesnesi sadece USAGE, SELECT, ve UPDATE desteklemektedir"
 
-#: catalog/aclchk.c:654
+#: catalog/aclchk.c:640
 msgid "invalid privilege type USAGE for table"
 msgstr "tablo için geçersiz hak tipi kullanımı"
 
-#: catalog/aclchk.c:1021
+#: catalog/aclchk.c:998
 #, c-format
 msgid "language \"%s\" is not trusted"
 msgstr "\"%s\" dili güvenilir bir dil değildir"
 
-#: catalog/aclchk.c:1023
+#: catalog/aclchk.c:1000
 msgid "Only superusers may use untrusted languages."
 msgstr "Güvenilir olmayan dilleri sadece superuser kullanabilir."
 
-#: catalog/aclchk.c:1375
+#: catalog/aclchk.c:1352
 #, c-format
 msgid "unrecognized privilege type \"%s\""
 msgstr "bilinmeyen hak türü \"%s\""
 
-#: catalog/aclchk.c:1424
+#: catalog/aclchk.c:1401
 #, c-format
 msgid "permission denied for relation %s"
 msgstr "%s nesnesine erişim engellendi"
 
-#: catalog/aclchk.c:1426
+#: catalog/aclchk.c:1403
 #: commands/sequence.c:424
 #: commands/sequence.c:616
 #: commands/sequence.c:661
@@ -1810,165 +1834,164 @@ msgstr "%s nesnesine erişim engellendi"
 msgid "permission denied for sequence %s"
 msgstr "%s sequence'ine erişim izni verilmedi"
 
-#: catalog/aclchk.c:1428
-#: utils/init/postinit.c:209
+#: catalog/aclchk.c:1405
 #, c-format
 msgid "permission denied for database %s"
 msgstr "%s veritabanına erişim engellendi"
 
-#: catalog/aclchk.c:1430
+#: catalog/aclchk.c:1407
 #, c-format
 msgid "permission denied for function %s"
 msgstr "%s fonksiyonuna erişim engellendi"
 
-#: catalog/aclchk.c:1432
+#: catalog/aclchk.c:1409
 #, c-format
 msgid "permission denied for operator %s"
 msgstr "%s operatorüne erişim engellendi"
 
-#: catalog/aclchk.c:1434
+#: catalog/aclchk.c:1411
 #, c-format
 msgid "permission denied for type %s"
 msgstr "%s tipine erişim engellendi"
 
-#: catalog/aclchk.c:1436
+#: catalog/aclchk.c:1413
 #, c-format
 msgid "permission denied for language %s"
 msgstr "%s diline erişim engellendi"
 
-#: catalog/aclchk.c:1438
+#: catalog/aclchk.c:1415
 #, c-format
 msgid "permission denied for schema %s"
 msgstr "%s şemasına erişim engellendi"
 
-#: catalog/aclchk.c:1440
+#: catalog/aclchk.c:1417
 #, c-format
 msgid "permission denied for operator class %s"
 msgstr "%s operatör sınıfına erişim engellendi"
 
-#: catalog/aclchk.c:1442
+#: catalog/aclchk.c:1419
 #, c-format
 msgid "permission denied for conversion %s"
 msgstr "%s dönüşümüne erişim engellendi"
 
-#: catalog/aclchk.c:1444
+#: catalog/aclchk.c:1421
 #, c-format
 msgid "permission denied for tablespace %s"
 msgstr "%s tablespace'ine erişim engellendi"
 
-#: catalog/aclchk.c:1450
+#: catalog/aclchk.c:1427
 #, c-format
 msgid "must be owner of relation %s"
 msgstr "%s nesnesinin sahibi olmalısınız"
 
-#: catalog/aclchk.c:1452
+#: catalog/aclchk.c:1429
 #, c-format
 msgid "must be owner of sequence %s"
 msgstr "%s sequence'ın sahibi olmalısınız"
 
-#: catalog/aclchk.c:1454
+#: catalog/aclchk.c:1431
 #, c-format
 msgid "must be owner of database %s"
 msgstr "%s veritabanının sahibi olmalısınız"
 
-#: catalog/aclchk.c:1456
+#: catalog/aclchk.c:1433
 #, c-format
 msgid "must be owner of function %s"
 msgstr "%s fonksiyonunun sahibi olmalısınız"
 
-#: catalog/aclchk.c:1458
+#: catalog/aclchk.c:1435
 #, c-format
 msgid "must be owner of operator %s"
 msgstr "%s operatörünün sahibi olmalısınız"
 
-#: catalog/aclchk.c:1460
+#: catalog/aclchk.c:1437
 #, c-format
 msgid "must be owner of type %s"
 msgstr "%s tipinin sahibi olmalısınız"
 
-#: catalog/aclchk.c:1462
+#: catalog/aclchk.c:1439
 #, c-format
 msgid "must be owner of language %s"
 msgstr "%s dilinin sahibi olmalısınız"
 
-#: catalog/aclchk.c:1464
+#: catalog/aclchk.c:1441
 #, c-format
 msgid "must be owner of schema %s"
 msgstr "%s şemasının sahibi olmalısınız"
 
-#: catalog/aclchk.c:1466
+#: catalog/aclchk.c:1443
 #, c-format
 msgid "must be owner of operator class %s"
 msgstr "%s operatör sınıfının sahibi olmalısınız"
 
-#: catalog/aclchk.c:1468
+#: catalog/aclchk.c:1445
 #, c-format
 msgid "must be owner of conversion %s"
 msgstr "%s dönüşümünün sahibi olmalısınız"
 
-#: catalog/aclchk.c:1470
+#: catalog/aclchk.c:1447
 #, c-format
 msgid "must be owner of tablespace %s"
 msgstr "%s tablespace'inin sahibi olmalısınız"
 
-#: catalog/aclchk.c:1513
+#: catalog/aclchk.c:1490
 #, c-format
 msgid "role with OID %u does not exist"
 msgstr "OID %u olan rol mevcut değil"
 
-#: catalog/aclchk.c:1583
-#: catalog/aclchk.c:2105
+#: catalog/aclchk.c:1560
+#: catalog/aclchk.c:2054
 #, c-format
 msgid "relation with OID %u does not exist"
 msgstr "%u OID'li nesne mevcut değil"
 
-#: catalog/aclchk.c:1685
-#: catalog/aclchk.c:2325
+#: catalog/aclchk.c:1656
+#: catalog/aclchk.c:2263
 #: utils/adt/dbsize.c:109
 #, c-format
 msgid "database with OID %u does not exist"
 msgstr "%u OID'li veritabanı mevcut değil"
 
-#: catalog/aclchk.c:1763
-#: catalog/aclchk.c:2189
+#: catalog/aclchk.c:1712
+#: catalog/aclchk.c:2138
 #: tcop/fastpath.c:220
 #, c-format
 msgid "function with OID %u does not exist"
 msgstr "%u OID'li fonksiyon mevcut değil"
 
-#: catalog/aclchk.c:1819
+#: catalog/aclchk.c:1768
 #, c-format
 msgid "language with OID %u does not exist"
 msgstr "%u OID'li dil mevcut değil"
 
-#: catalog/aclchk.c:1904
-#: catalog/aclchk.c:2217
+#: catalog/aclchk.c:1853
+#: catalog/aclchk.c:2166
 #, c-format
 msgid "schema with OID %u does not exist"
 msgstr "%u OID'li şema mevcut değil"
 
-#: catalog/aclchk.c:1977
-#: catalog/aclchk.c:2256
+#: catalog/aclchk.c:1926
+#: catalog/aclchk.c:2205
 #, c-format
 msgid "tablespace with OID %u does not exist"
 msgstr "%u OID'li tablespace mevcut değil"
 
-#: catalog/aclchk.c:2133
+#: catalog/aclchk.c:2082
 #, c-format
 msgid "type with OID %u does not exist"
 msgstr "%u OID'li tip mevcut değil"
 
-#: catalog/aclchk.c:2161
+#: catalog/aclchk.c:2110
 #, c-format
 msgid "operator with OID %u does not exist"
 msgstr "%u OID'li operatör mevcut değil"
 
-#: catalog/aclchk.c:2285
+#: catalog/aclchk.c:2234
 #, c-format
 msgid "operator class with OID %u does not exist"
 msgstr "%u OID'li operatör sınıfı mevcut değil"
 
-#: catalog/aclchk.c:2354
+#: catalog/aclchk.c:2291
 #, c-format
 msgid "conversion with OID %u does not exist"
 msgstr "%u OID'li dönüşüm mevcut değil"
@@ -2365,44 +2388,44 @@ msgstr "SQL fonksiyonları %s tipinde argümana sahip olamaz"
 msgid "SQL function \"%s\""
 msgstr " \"%s\" SQL fonksiyonu"
 
-#: catalog/pg_shdepend.c:596
+#: catalog/pg_shdepend.c:595
 #, c-format
 msgid "%d objects in this database"
 msgstr "bu veritabanında %d nesnesi vardır"
 
-#: catalog/pg_shdepend.c:602
+#: catalog/pg_shdepend.c:601
 #, c-format
 msgid "%d shared objects"
 msgstr "%d shared objects"
 
-#: catalog/pg_shdepend.c:928
+#: catalog/pg_shdepend.c:921
 #, c-format
 msgid "role %u was concurrently dropped"
 msgstr "%u rolü eşzamanlı kaldırıldı"
 
-#: catalog/pg_shdepend.c:947
+#: catalog/pg_shdepend.c:940
 #, c-format
 msgid "tablespace %u was concurrently dropped"
 msgstr "%u tablespace eşzamanlı kaldırıldı"
 
-#: catalog/pg_shdepend.c:991
+#: catalog/pg_shdepend.c:984
 #, c-format
 msgid "owner of %s"
 msgstr "%s nesnesinin sahibi"
 
-#: catalog/pg_shdepend.c:993
+#: catalog/pg_shdepend.c:986
 #, c-format
 msgid "access to %s"
 msgstr "erişim: %s"
 
 #. translator: %s will always be "database %s"
-#: catalog/pg_shdepend.c:1001
+#: catalog/pg_shdepend.c:994
 #, c-format
 msgid "%d objects in %s"
 msgstr "%2$s veritabanında %1$d nesne"
 
-#: catalog/pg_shdepend.c:1096
-#: catalog/pg_shdepend.c:1244
+#: catalog/pg_shdepend.c:1089
+#: catalog/pg_shdepend.c:1237
 #, c-format
 msgid "cannot drop objects owned by %s because they are required by the database system"
 msgstr "veritabanı sistemi tarafından ihtiyaç duyulduğu için %s kaldırılamıyor"
@@ -2888,6 +2911,191 @@ msgstr "TOAST şemasına nesleri aktarılamaz ve içinden alınamaz"
 msgid "relation \"%s\" already exists in schema \"%s\""
 msgstr "\"%s\" nesnesi zaten \"%s\" şemasında mevcuttur"
 
+#: commands/user.c:132
+#: commands/user.c:149
+#: commands/user.c:157
+#: commands/user.c:165
+#: commands/user.c:173
+#: commands/user.c:181
+#: commands/user.c:189
+#: commands/user.c:197
+#: commands/user.c:205
+#: commands/user.c:213
+#: commands/user.c:221
+#: commands/user.c:443
+#: commands/user.c:455
+#: commands/user.c:463
+#: commands/user.c:471
+#: commands/user.c:479
+#: commands/user.c:487
+#: commands/user.c:495
+#: commands/user.c:504
+#: commands/user.c:512
+#: commands/copy.c:743
+#: commands/copy.c:751
+#: commands/copy.c:759
+#: commands/copy.c:767
+#: commands/copy.c:775
+#: commands/copy.c:783
+#: commands/copy.c:791
+#: commands/copy.c:799
+#: commands/copy.c:807
+#: commands/copy.c:815
+#: commands/dbcommands.c:113
+#: commands/dbcommands.c:121
+#: commands/dbcommands.c:129
+#: commands/dbcommands.c:137
+#: commands/dbcommands.c:145
+#: commands/dbcommands.c:784
+#: commands/functioncmds.c:310
+#: commands/functioncmds.c:360
+#: commands/functioncmds.c:368
+#: commands/sequence.c:956
+#: commands/sequence.c:969
+#: commands/sequence.c:977
+#: commands/sequence.c:985
+#: commands/sequence.c:993
+#: commands/sequence.c:1001
+msgid "conflicting or redundant options"
+msgstr "çakışan veya artık opsiyon"
+
+#: commands/user.c:142
+msgid "SYSID can no longer be specified"
+msgstr "SYSID artık belirtilemez"
+
+#: commands/user.c:258
+msgid "must be superuser to create superusers"
+msgstr "superuser kullanıcısını oluşturmak için superuser olmalısınız"
+
+#: commands/user.c:265
+msgid "permission denied to create role"
+msgstr "rol oluşturılmasına izin verilmedi."
+
+#: commands/user.c:272
+#: commands/user.c:1027
+#, c-format
+msgid "role name \"%s\" is reserved"
+msgstr "\"%s\" rol adı sistem tarafından kullanılmaktadır"
+
+#: commands/user.c:288
+#: commands/user.c:1021
+#, c-format
+msgid "role \"%s\" already exists"
+msgstr "\"%s\" rolü zaten mevcut"
+
+#: commands/user.c:551
+#: commands/user.c:734
+#: commands/user.c:842
+#: commands/user.c:994
+#: commands/variable.c:644
+#: commands/variable.c:757
+#: utils/cache/lsyscache.c:2181
+#: utils/init/miscinit.c:384
+#, c-format
+msgid "role \"%s\" does not exist"
+msgstr "\"%s\" rol'ü mevcut değil"
+
+#: commands/user.c:564
+#: commands/user.c:745
+#: commands/user.c:1265
+#: commands/user.c:1404
+msgid "must be superuser to alter superusers"
+msgstr "superuserleri değiştirmek için superuser olmalısınız"
+
+#: commands/user.c:579
+#: commands/user.c:753
+msgid "permission denied"
+msgstr "erişim engellendi"
+
+#: commands/user.c:814
+msgid "permission denied to drop role"
+msgstr "rol kaldırılmasına izin verilmedi"
+
+#: commands/user.c:847
+#, c-format
+msgid "role \"%s\" does not exist, skipping"
+msgstr "rol \"%s\" mevcut değil, atlanıyor"
+
+#: commands/user.c:859
+#: commands/user.c:863
+msgid "current user cannot be dropped"
+msgstr "geçerli kullanıcı kaldıramaz"
+
+#: commands/user.c:867
+msgid "session user cannot be dropped"
+msgstr "oturum kullanıcısı kaldıramaz"
+
+#: commands/user.c:878
+msgid "must be superuser to drop superusers"
+msgstr "superuser kullanıcıları drop etmek için superuser olmalısınız"
+
+#: commands/user.c:890
+#, c-format
+msgid "role \"%s\" cannot be dropped because some objects depend on it"
+msgstr "diğer nesnelerin ona bağlı olması nedeniyle \"%s\" rolü kaldırılamıyor"
+
+#: commands/user.c:892
+#: nodes/print.c:86
+#: storage/lmgr/deadlock.c:933
+#: tcop/postgres.c:3619
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: commands/user.c:1009
+msgid "session user may not be renamed"
+msgstr "oturum kullanıcısının adı değiştirilemez"
+
+#: commands/user.c:1013
+msgid "current user may not be renamed"
+msgstr "geçerli kullanıcının adı değiştirilemez"
+
+#: commands/user.c:1038
+msgid "must be superuser to rename superusers"
+msgstr "superuser kullanıcıların adlarını değiştirmek için superuser olmalısınız"
+
+#: commands/user.c:1045
+msgid "permission denied to rename role"
+msgstr "rol adını değiştirilmesine izin verilmedi"
+
+#: commands/user.c:1066
+msgid "MD5 password cleared because of role rename"
+msgstr "rol adı değiştirildiği için MD5 şifresi sıfırlanmıştır"
+
+#: commands/user.c:1164
+msgid "permission denied to drop objects"
+msgstr "nesne düşürülmesine izin verilmedi"
+
+#: commands/user.c:1191
+#: commands/user.c:1200
+msgid "permission denied to reassign objects"
+msgstr "nesne sahipliğini değiştirmeye izin verilmedi"
+
+#: commands/user.c:1273
+#: commands/user.c:1412
+#, c-format
+msgid "must have admin option on role \"%s\""
+msgstr "\"%s\" rolünde admin opsiyonuna sahip olmalıdır"
+
+#: commands/user.c:1281
+msgid "must be superuser to set grantor"
+msgstr "atama etkisine sahipliğini dağıtmak için superuser olmalısınız"
+
+#: commands/user.c:1306
+#, c-format
+msgid "role \"%s\" is a member of role \"%s\""
+msgstr "\"%s\" rolü, \"%s\" rolüne dahildir"
+
+#: commands/user.c:1322
+#, c-format
+msgid "role \"%s\" is already a member of role \"%s\""
+msgstr "\"%s\" rolü zaten \"%s\" rolüne dahildir"
+
+#: commands/user.c:1435
+#, c-format
+msgid "role \"%s\" is not a member of role \"%s\""
+msgstr "\"%s\" rolü, \"%s\" rolüne dahil değildir"
+
 #: commands/aggregatecmds.c:103
 #, c-format
 msgid "aggregate attribute \"%s\" not recognized"
@@ -2959,32 +3167,37 @@ msgstr "\"%s\", \"%s\" tablosunun indexi değildir"
 msgid "cannot cluster on partial index \"%s\""
 msgstr "\"%s\" partial index üzerinde cluster yapılamaz"
 
-#: commands/cluster.c:359
+#: commands/cluster.c:345
+#, c-format
+msgid "cannot cluster on index \"%s\" because access method does not support clustering"
+msgstr "\"%s\" indexin erişim yöntemi clustering desteklemediği için cluster yapılamaz"
+
+#: commands/cluster.c:365
 #, c-format
 msgid "cannot cluster on index \"%s\" because access method does not handle null values"
 msgstr "\"%s\" indexin erişim yöntemi null değerleri desteklemediği için cluster yapılamaz"
 
-#: commands/cluster.c:362
+#: commands/cluster.c:368
 #, c-format
 msgid "You may be able to work around this by marking column \"%s\" NOT NULL, or use ALTER TABLE ... SET WITHOUT CLUSTER to remove the cluster specification from the table."
 msgstr "Bunu önlemek için \"%s\" sütunu NOT NULL yaparak ya da tablodan cluser tanımlarını kaldırmak için ALTER TABLE ... SET WITHOUT CLUSTER kullanabilirsiniz"
 
-#: commands/cluster.c:364
+#: commands/cluster.c:370
 #, c-format
 msgid "You may be able to work around this by marking column \"%s\" NOT NULL."
 msgstr "\"%s\" sütununu NOT NULL olarak tanımlamakla bu sorunu çözebilirsiniz"
 
-#: commands/cluster.c:375
+#: commands/cluster.c:381
 #, c-format
 msgid "cannot cluster on expressional index \"%s\" because its index access method does not handle null values"
 msgstr "\"%s\" ifadesel indexin erişim yöntemi null değerleri desteklemediği için cluster yapılamaz"
 
-#: commands/cluster.c:389
+#: commands/cluster.c:395
 #, c-format
 msgid "\"%s\" is a system catalog"
 msgstr "\"%s\" bir sistem kataloğudur"
 
-#: commands/cluster.c:399
+#: commands/cluster.c:405
 msgid "cannot cluster temporary tables of other sessions"
 msgstr "diğer oturumların geçici tabloları üzerinde cluster yapılamaz"
 
@@ -3066,10 +3279,10 @@ msgstr "bir yordamsal dile açıklama eklemek için superuser olmalısınız"
 
 #: commands/comment.c:1213
 #: commands/indexcmds.c:245
-#: commands/opclasscmds.c:110
-#: commands/opclasscmds.c:680
-#: commands/opclasscmds.c:832
-#: commands/opclasscmds.c:952
+#: commands/opclasscmds.c:112
+#: commands/opclasscmds.c:676
+#: commands/opclasscmds.c:828
+#: commands/opclasscmds.c:948
 #, c-format
 msgid "access method \"%s\" does not exist"
 msgstr "\"%s\" erişim metodu mevcut değil"
@@ -3078,12 +3291,12 @@ msgstr "\"%s\" erişim metodu mevcut değil"
 #: commands/comment.c:1252
 #: commands/indexcmds.c:628
 #: commands/indexcmds.c:638
-#: commands/opclasscmds.c:709
-#: commands/opclasscmds.c:719
-#: commands/opclasscmds.c:854
-#: commands/opclasscmds.c:865
-#: commands/opclasscmds.c:976
-#: commands/opclasscmds.c:987
+#: commands/opclasscmds.c:705
+#: commands/opclasscmds.c:715
+#: commands/opclasscmds.c:850
+#: commands/opclasscmds.c:861
+#: commands/opclasscmds.c:972
+#: commands/opclasscmds.c:983
 #, c-format
 msgid "operator class \"%s\" does not exist for access method \"%s\""
 msgstr "\"%s\" erişim yöntemi için \"%s\" operatör sınıfı mevcut değil"
@@ -3160,54 +3373,6 @@ msgstr "stdin'den COPY başarısız: %s"
 #, c-format
 msgid "unexpected message type 0x%02X during COPY from stdin"
 msgstr "stdin akımından COPY işlemi sırasında beklenmeyen mesaj tipi 0x%02X"
-
-#: commands/copy.c:743
-#: commands/copy.c:751
-#: commands/copy.c:759
-#: commands/copy.c:767
-#: commands/copy.c:775
-#: commands/copy.c:783
-#: commands/copy.c:791
-#: commands/copy.c:799
-#: commands/copy.c:807
-#: commands/copy.c:815
-#: commands/dbcommands.c:115
-#: commands/dbcommands.c:123
-#: commands/dbcommands.c:131
-#: commands/dbcommands.c:139
-#: commands/dbcommands.c:147
-#: commands/dbcommands.c:828
-#: commands/functioncmds.c:310
-#: commands/functioncmds.c:360
-#: commands/functioncmds.c:368
-#: commands/sequence.c:956
-#: commands/sequence.c:969
-#: commands/sequence.c:977
-#: commands/sequence.c:985
-#: commands/sequence.c:993
-#: commands/sequence.c:1001
-#: commands/user.c:132
-#: commands/user.c:149
-#: commands/user.c:157
-#: commands/user.c:165
-#: commands/user.c:173
-#: commands/user.c:181
-#: commands/user.c:189
-#: commands/user.c:197
-#: commands/user.c:205
-#: commands/user.c:213
-#: commands/user.c:221
-#: commands/user.c:444
-#: commands/user.c:456
-#: commands/user.c:464
-#: commands/user.c:472
-#: commands/user.c:480
-#: commands/user.c:488
-#: commands/user.c:496
-#: commands/user.c:505
-#: commands/user.c:513
-msgid "conflicting or redundant options"
-msgstr "çakışan veya artık opsiyon"
 
 #: commands/copy.c:827
 msgid "cannot specify DELIMITER in BINARY mode"
@@ -3511,99 +3676,98 @@ msgstr "ikili veri biçimi hatası"
 msgid "column \"%s\" specified more than once"
 msgstr "\"%s\" sütunu birden fazla belirtilmiş"
 
-#: commands/dbcommands.c:154
+#: commands/dbcommands.c:152
 msgid "LOCATION is not supported anymore"
 msgstr "LOCATION artık desteklenmiyor"
 
-#: commands/dbcommands.c:155
+#: commands/dbcommands.c:153
 msgid "Consider using tablespaces instead."
 msgstr "Onun yerine tablespace kullanabilirsiniz."
 
-#: commands/dbcommands.c:178
+#: commands/dbcommands.c:176
 #, c-format
 msgid "%d is not a valid encoding code"
 msgstr "%d geçerli bir dil kodlaması değildir"
 
-#: commands/dbcommands.c:187
+#: commands/dbcommands.c:185
 #, c-format
 msgid "%s is not a valid encoding name"
 msgstr "%s geçerli bir dil kodlaması adı değildir"
 
-#: commands/dbcommands.c:214
+#: commands/dbcommands.c:212
 msgid "permission denied to create database"
 msgstr "veritabanı oluşturma izin verilmedi."
 
-#: commands/dbcommands.c:230
-#: commands/dbcommands.c:447
-#: commands/dbcommands.c:768
-#, c-format
-msgid "database \"%s\" already exists"
-msgstr "\"%s\" veritabanı zaten mevcut"
-
-#: commands/dbcommands.c:243
+#: commands/dbcommands.c:234
 #, c-format
 msgid "template database \"%s\" does not exist"
 msgstr "\"%s\" şablon veritabanı mevcut değil"
 
-#: commands/dbcommands.c:254
+#: commands/dbcommands.c:246
 #, c-format
 msgid "permission denied to copy database \"%s\""
 msgstr "\"%s\" veritabanını kopyalama engellendi"
 
-#: commands/dbcommands.c:267
+#: commands/dbcommands.c:258
 #, c-format
 msgid "source database \"%s\" is being accessed by other users"
 msgstr "\"%s\" kaynak veritabanı başka bir kullanıcı tarafından kullanılmaktadır"
 
-#: commands/dbcommands.c:278
+#: commands/dbcommands.c:269
 #, c-format
 msgid "invalid server encoding %d"
 msgstr "%d sunucu dil kodlaması geçersiz"
 
-#: commands/dbcommands.c:324
+#: commands/dbcommands.c:315
 #, c-format
 msgid "cannot assign new default tablespace \"%s\""
 msgstr "yeni varsayılan tablespace \"%s\"  atanamıyor"
 
-#: commands/dbcommands.c:326
+#: commands/dbcommands.c:317
 #, c-format
 msgid "There is a conflict because database \"%s\" already has some tables in this tablespace."
 msgstr "Bir  çakışma var, çünkü \"%s\" veritabanının bulunduğu tablespace içinde başka tablolar var."
 
-#: commands/dbcommands.c:570
+#: commands/dbcommands.c:347
+#: commands/dbcommands.c:720
+#, c-format
+msgid "database \"%s\" already exists"
+msgstr "\"%s\" veritabanı zaten mevcut"
+
+#: commands/dbcommands.c:554
 msgid "cannot drop the currently open database"
 msgstr "şu anda açık olan veritabanı kaldırılamaz"
 
-#: commands/dbcommands.c:601
+#: commands/dbcommands.c:579
 #, c-format
 msgid "database \"%s\" does not exist, skipping"
 msgstr "\"%s\" veritabanı mevcut değil, atlanıyor"
 
-#: commands/dbcommands.c:620
+#: commands/dbcommands.c:600
 msgid "cannot drop a template database"
 msgstr "template veritabanı kaldırılamaz"
 
-#: commands/dbcommands.c:628
-#: commands/dbcommands.c:755
+#: commands/dbcommands.c:609
+#: commands/dbcommands.c:713
 #, c-format
 msgid "database \"%s\" is being accessed by other users"
 msgstr "\"%s\" veritabanına başka kullanıcılar tarafından erişilmektedir"
 
-#: commands/dbcommands.c:746
+#: commands/dbcommands.c:704
 msgid "current database may not be renamed"
 msgstr "geçerli veritabanının adı değiştirilemez"
 
-#: commands/dbcommands.c:780
+#: commands/dbcommands.c:731
 msgid "permission denied to rename database"
 msgstr "veritabanı adı değiştirilmesine izin verilmedi"
 
-#: commands/dbcommands.c:1045
+#: commands/dbcommands.c:1007
 msgid "permission denied to change owner of database"
 msgstr "veritabanı sahipliğini değiştirilmesine izin verilmedi"
 
-#: commands/dbcommands.c:1222
-#: commands/dbcommands.c:1355
-#: commands/dbcommands.c:1392
+#: commands/dbcommands.c:1239
+#: commands/dbcommands.c:1359
+#: commands/dbcommands.c:1396
 #, c-format
 msgid "could not remove database directory \"%s\""
 msgstr "\"%s\" veritabanı dizini kaldırılamıyor"
@@ -3923,79 +4087,79 @@ msgstr "ancak açık olan veritabanı üzerinde reindex işlemi yapılabilir"
 msgid "table \"%s\" was reindexed"
 msgstr "\"%s\" tablosu yeniden indexlenmiştir"
 
-#: commands/opclasscmds.c:144
+#: commands/opclasscmds.c:148
 msgid "must be superuser to create an operator class"
 msgstr "operator sınıfı yaratmak için superuser olmalısınız"
 
-#: commands/opclasscmds.c:180
+#: commands/opclasscmds.c:184
 #, c-format
 msgid "invalid operator number %d, must be between 1 and %d"
 msgstr "%d geçersiz operatör numarası, 0 ile %d arasında olmalıdır"
 
-#: commands/opclasscmds.c:224
+#: commands/opclasscmds.c:228
 #, c-format
 msgid "invalid procedure number %d, must be between 1 and %d"
 msgstr "%d geçersiz procedure numarası, 0 ile %d arasında olmalıdır"
 
-#: commands/opclasscmds.c:248
+#: commands/opclasscmds.c:252
 msgid "storage type specified more than once"
 msgstr "depolama tipi birden fazla kez belirtilmiştir"
 
-#: commands/opclasscmds.c:283
+#: commands/opclasscmds.c:280
 #, c-format
 msgid "storage type may not be different from data type for access method \"%s\""
 msgstr "depolama yönteminin veri tipi \"%s\", erişim metodu ile aynı olmalıdır"
 
-#: commands/opclasscmds.c:301
+#: commands/opclasscmds.c:297
 #, c-format
 msgid "operator class \"%s\" for access method \"%s\" already exists"
 msgstr "\"%2$s\" erişim metodu için \"%1$s\" operator sınıfı zaten mevcut"
 
-#: commands/opclasscmds.c:329
+#: commands/opclasscmds.c:325
 #, c-format
 msgid "could not make operator class \"%s\" be default for type %s"
 msgstr "%2$s veri tipinie \"%1$s\" operator sınıfı varsayılan olarak atanamıyor"
 
-#: commands/opclasscmds.c:332
+#: commands/opclasscmds.c:328
 #, c-format
 msgid "Operator class \"%s\" already is the default."
 msgstr "\"%s\" operatör sınıfı zaten varsayılandır."
 
-#: commands/opclasscmds.c:462
+#: commands/opclasscmds.c:458
 msgid "btree operators must be binary"
 msgstr "btree işlemleri ikili olmalıdır"
 
-#: commands/opclasscmds.c:466
+#: commands/opclasscmds.c:462
 msgid "btree operators must return boolean"
 msgstr "btree işlemleri boolean tipini döndürmelidir"
 
-#: commands/opclasscmds.c:470
+#: commands/opclasscmds.c:466
 msgid "btree operators must have index type as left input"
 msgstr "btree işlemleri sol girdi olarak index tipini kullanmalıdır"
 
-#: commands/opclasscmds.c:516
+#: commands/opclasscmds.c:512
 msgid "btree procedures must have two arguments"
 msgstr "btree kümesi iki argüman almalıdır"
 
-#: commands/opclasscmds.c:520
+#: commands/opclasscmds.c:516
 msgid "btree procedures must return integer"
 msgstr "btree yordamları tamsayı döndürmelidir"
 
-#: commands/opclasscmds.c:524
+#: commands/opclasscmds.c:520
 msgid "btree procedures must have index type as first input"
 msgstr "btree yordamları sol girdi olarak index tipini kullanmalıdır"
 
-#: commands/opclasscmds.c:557
+#: commands/opclasscmds.c:553
 #, c-format
 msgid "procedure number %d appears more than once"
 msgstr "%d yordam numarasına birden fazla kez rastlanıyor"
 
-#: commands/opclasscmds.c:562
+#: commands/opclasscmds.c:558
 #, c-format
 msgid "operator number %d appears more than once"
 msgstr "%d operator numarasına birden fazla kez rastlanıyor"
 
-#: commands/opclasscmds.c:886
+#: commands/opclasscmds.c:882
 #, c-format
 msgid "operator class \"%s\" for access method \"%s\" already exists in schema \"%s\""
 msgstr "\"%2$s\" erişim yöntemi için kullanılacak \"%1$s\" operator classı zaten \"%3$s\" şemasında mevcuttur"
@@ -4182,9 +4346,9 @@ msgstr "setval: %s değeri kapsam dışıdır, sequence \"%s\" (%s..%s)"
 #: utils/init/miscinit.c:213
 #: utils/init/miscinit.c:234
 #: utils/init/miscinit.c:244
-#: utils/misc/guc.c:2222
-#: utils/misc/guc.c:2235
-#: utils/misc/guc.c:2248
+#: utils/misc/guc.c:2232
+#: utils/misc/guc.c:2245
+#: utils/misc/guc.c:2258
 #: utils/mmgr/aset.c:343
 #: utils/mmgr/aset.c:520
 #: utils/mmgr/aset.c:719
@@ -4215,6 +4379,153 @@ msgstr "START değeri (%s) MAXVALUE değerinden (%s) büyük olamaz"
 #, c-format
 msgid "CACHE (%s) must be greater than zero"
 msgstr "CACHE (%s) sıfırdan büyük olmalıdır"
+
+#: commands/vacuum.c:324
+msgid "VACUUM FULL FREEZE is not supported"
+msgstr "VACUUM FULL FREEZE desteklenmiyor"
+
+#: commands/vacuum.c:325
+msgid "Use VACUUM FULL, then VACUUM FREEZE."
+msgstr "Önce VACUUM FULL, sonra VACUUM FREEZE kullanın."
+
+#: commands/vacuum.c:659
+msgid "oldest xmin is far in the past"
+msgstr "en eski xmin uzun zaman önce yaratılmıştır"
+
+#: commands/vacuum.c:660
+msgid "Close open transactions soon to avoid wraparound problems."
+msgstr "Başa dönme sorununu yaşamamak için aktif transactionları kapatın."
+
+#: commands/vacuum.c:902
+msgid "some databases have not been vacuumed in over 2 billion transactions"
+msgstr "bazı veritabanlaı iki milyarı aşkın transaction vacuum işlemi yapılmadan işlemişler"
+
+#: commands/vacuum.c:903
+msgid "You may have already suffered transaction-wraparound data loss."
+msgstr "Hatta transaction-wraparound veri kaybını yaşamış olabilirsiniz."
+
+#: commands/vacuum.c:917
+msgid "some databases have not been vacuumed in over 1 billion transactions"
+msgstr "bazı veritabanlaı bir milyarı aşkın transaction vacuum işlemi yapılmadan işlemişler"
+
+#: commands/vacuum.c:918
+msgid "Better vacuum them soon, or you may have a wraparound failure."
+msgstr "Wraparound sorunu yaşamadan kısa sürede vacuum işlemini yaptırmalısınız."
+
+#: commands/vacuum.c:1023
+#, c-format
+msgid "skipping \"%s\" --- only table or database owner can vacuum it"
+msgstr "\"%s\" atlanıyor --- sadece tablo veya veritabanı sahibi onu vacuum edebilir"
+
+#: commands/vacuum.c:1038
+#, c-format
+msgid "skipping \"%s\" --- cannot vacuum indexes, views, or special system tables"
+msgstr "\"%s\" atlanıyor --- indesk, view ve sistem tablolaları vacuum edilemez"
+
+#: commands/vacuum.c:1254
+#: commands/vacuumlazy.c:218
+#, c-format
+msgid "vacuuming \"%s.%s\""
+msgstr "\"%s.%s\" veritabanına vacuum yapılıyor"
+
+#: commands/vacuum.c:1306
+#: commands/vacuumlazy.c:302
+#, c-format
+msgid "relation \"%s\" page %u is uninitialized --- fixing"
+msgstr "\"%s\" nesnesi, %u, sayfası sıfırlanmamış --- düzeltiyorum"
+
+#: commands/vacuum.c:1428
+#, c-format
+msgid "relation \"%s\" TID %u/%u: InsertTransactionInProgress %u --- can't shrink relation"
+msgstr "\"%s\" tablosu TID %u/%u: InsertTransactionInProgress %u --- nesne küçültülemiyor"
+
+#: commands/vacuum.c:1441
+#, c-format
+msgid "relation \"%s\" TID %u/%u: DeleteTransactionInProgress %u --- can't shrink relation"
+msgstr "\"%s\" tablosu TID %u/%u: DeleteTransactionInProgress %u --- nesne küçültülemiyor"
+
+#: commands/vacuum.c:1592
+#: commands/vacuumlazy.c:457
+#, c-format
+msgid "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
+msgstr "\"%s\": bulunan %.0f kaldırılabilen, %.0f sabit satır sürümleril, toplam %u sayfa"
+
+#: commands/vacuum.c:1595
+#, c-format
+msgid ""
+"%.0f dead row versions cannot be removed yet.\n"
+"Nonremovable row versions range from %lu to %lu bytes long.\n"
+"There were %.0f unused item pointers.\n"
+"Total free space (including removable row versions) is %.0f bytes.\n"
+"%u pages are or will become empty, including %u at the end of the table.\n"
+"%u pages containing %.0f free bytes are potential move destinations.\n"
+"%s."
+msgstr ""
+"%.0f ölü satır şımdilik kaldırılamıyor.\n"
+"Kaldırılamayacak satır sürümleri %lu ile %lu bayt uzunukta.\n"
+"%.0f öğe göstergesi kullanılmadı.\n"
+"Topleam boş alan (kaldırılacak satır sürümleri dahil) %.0f bayttır.\n"
+"%u sayfa boş ya da boşaltılacak, tablonun sonunda %u tane buna dahildir.\n"
+"%u sayfa toplam %.0f boş bayt içeriği ile potansiyel taşıma hedefidir.\n"
+"%s."
+
+#: commands/vacuum.c:2352
+#, c-format
+msgid "\"%s\": moved %u row versions, truncated %u to %u pages"
+msgstr "\"%s\": %u satır sürümü taşınmış, %u sayfa sayısından %u sayfaya düşürülmüştür"
+
+#: commands/vacuum.c:2355
+#: commands/vacuumlazy.c:517
+#: commands/vacuumlazy.c:626
+#: commands/vacuumlazy.c:780
+#, c-format
+msgid "%s."
+msgstr "%s."
+
+#: commands/vacuum.c:2885
+#: commands/vacuumlazy.c:777
+#, c-format
+msgid "\"%s\": truncated %u to %u pages"
+msgstr "\"%s\":  %u sayfadan  %u sayfaya düşürülmüştür"
+
+#: commands/vacuum.c:2971
+#: commands/vacuum.c:3040
+#: commands/vacuumlazy.c:676
+#, c-format
+msgid "index \"%s\" now contains %.0f row versions in %u pages"
+msgstr "\"%s\" indexi %.0f satır sürümü, %u sayfa"
+
+#: commands/vacuum.c:2975
+#, c-format
+msgid ""
+"%u index pages have been deleted, %u are currently reusable.\n"
+"%s."
+msgstr ""
+"%u index sayfası silinmiş, %u kullanılabilir.\n"
+"%s."
+
+#: commands/vacuum.c:2989
+#: commands/vacuum.c:3060
+#, c-format
+msgid "index \"%s\" contains %.0f row versions, but table contains %.0f row versions"
+msgstr "\"%s\" indexi %.0f satır sürümü içeriyor, ancak tablo %.0f satır versiyonu içeriyor"
+
+#: commands/vacuum.c:2992
+#: commands/vacuum.c:3063
+msgid "Rebuild the index with REINDEX."
+msgstr "REINDEX işemiyle index yeniden oluşturuluyor."
+
+#: commands/vacuum.c:3044
+#: commands/vacuumlazy.c:680
+#, c-format
+msgid ""
+"%.0f index row versions were removed.\n"
+"%u index pages have been deleted, %u are currently reusable.\n"
+"%s."
+msgstr ""
+"%.0f index sürüm satırı kaldırılmış.\n"
+"%u index sayfa silinmiştir, %u şu an kullanılabilir.\n"
+"%s"
 
 #: commands/tablespace.c:142
 #: commands/tablespace.c:150
@@ -4563,292 +4874,7 @@ msgstr "%s bir tablo satır tipidir"
 msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Yerine ALTER TABLE SET SCHEMA kullanın."
 
-#: commands/user.c:142
-msgid "SYSID can no longer be specified"
-msgstr "SYSID artık belirtilemez"
-
-#: commands/user.c:258
-msgid "must be superuser to create superusers"
-msgstr "superuser kullanıcısını oluşturmak için superuser olmalısınız"
-
-#: commands/user.c:265
-msgid "permission denied to create role"
-msgstr "rol oluşturılmasına izin verilmedi."
-
-#: commands/user.c:272
-#: commands/user.c:1035
-#, c-format
-msgid "role name \"%s\" is reserved"
-msgstr "\"%s\" rol adı sistem tarafından kullanılmaktadır"
-
-#: commands/user.c:289
-#: commands/user.c:1029
-#, c-format
-msgid "role \"%s\" already exists"
-msgstr "\"%s\" rolü zaten mevcut"
-
-#: commands/user.c:553
-#: commands/user.c:740
-#: commands/user.c:849
-#: commands/user.c:1002
-#: commands/variable.c:644
-#: commands/variable.c:757
-#: utils/cache/lsyscache.c:2181
-#: utils/init/miscinit.c:384
-#, c-format
-msgid "role \"%s\" does not exist"
-msgstr "\"%s\" rol'ü mevcut değil"
-
-#: commands/user.c:566
-#: commands/user.c:751
-#: commands/user.c:1268
-#: commands/user.c:1409
-msgid "must be superuser to alter superusers"
-msgstr "superuserleri değiştirmek için superuser olmalısınız"
-
-#: commands/user.c:581
-#: commands/user.c:759
-msgid "permission denied"
-msgstr "erişim engellendi"
-
-#: commands/user.c:819
-msgid "permission denied to drop role"
-msgstr "rol kaldırılmasına izin verilmedi"
-
-#: commands/user.c:854
-#, c-format
-msgid "role \"%s\" does not exist, skipping"
-msgstr "rol \"%s\" mevcut değil, atlanıyor"
-
-#: commands/user.c:866
-#: commands/user.c:870
-msgid "current user cannot be dropped"
-msgstr "geçerli kullanıcı kaldıramaz"
-
-#: commands/user.c:874
-msgid "session user cannot be dropped"
-msgstr "oturum kullanıcısı kaldıramaz"
-
-#: commands/user.c:885
-msgid "must be superuser to drop superusers"
-msgstr "superuser kullanıcıları drop etmek için superuser olmalısınız"
-
-#: commands/user.c:897
-#, c-format
-msgid "role \"%s\" cannot be dropped because some objects depend on it"
-msgstr "diğer nesnelerin ona bağlı olması nedeniyle \"%s\" rolü kaldırılamıyor"
-
-#: commands/user.c:899
-#: nodes/print.c:86
-#: storage/lmgr/deadlock.c:933
-#: tcop/postgres.c:3619
-#, c-format
-msgid "%s"
-msgstr "%s"
-
-#: commands/user.c:1017
-msgid "session user may not be renamed"
-msgstr "oturum kullanıcısının adı değiştirilemez"
-
-#: commands/user.c:1021
-msgid "current user may not be renamed"
-msgstr "geçerli kullanıcının adı değiştirilemez"
-
-#: commands/user.c:1046
-msgid "must be superuser to rename superusers"
-msgstr "superuser kullanıcıların adlarını değiştirmek için superuser olmalısınız"
-
-#: commands/user.c:1053
-msgid "permission denied to rename role"
-msgstr "rol adını değiştirilmesine izin verilmedi"
-
-#: commands/user.c:1074
-msgid "MD5 password cleared because of role rename"
-msgstr "rol adı değiştirildiği için MD5 şifresi sıfırlanmıştır"
-
-#: commands/user.c:1166
-msgid "permission denied to drop objects"
-msgstr "nesne düşürülmesine izin verilmedi"
-
-#: commands/user.c:1193
-#: commands/user.c:1202
-msgid "permission denied to reassign objects"
-msgstr "nesne sahipliğini değiştirmeye izin verilmedi"
-
-#: commands/user.c:1276
-#: commands/user.c:1417
-#, c-format
-msgid "must have admin option on role \"%s\""
-msgstr "\"%s\" rolünde admin opsiyonuna sahip olmalıdır"
-
-#: commands/user.c:1284
-msgid "must be superuser to set grantor"
-msgstr "atama etkisine sahipliğini dağıtmak için superuser olmalısınız"
-
-#: commands/user.c:1310
-#, c-format
-msgid "role \"%s\" is a member of role \"%s\""
-msgstr "\"%s\" rolü, \"%s\" rolüne dahildir"
-
-#: commands/user.c:1326
-#, c-format
-msgid "role \"%s\" is already a member of role \"%s\""
-msgstr "\"%s\" rolü zaten \"%s\" rolüne dahildir"
-
-#: commands/user.c:1441
-#, c-format
-msgid "role \"%s\" is not a member of role \"%s\""
-msgstr "\"%s\" rolü, \"%s\" rolüne dahil değildir"
-
-#: commands/vacuum.c:324
-msgid "VACUUM FULL FREEZE is not supported"
-msgstr "VACUUM FULL FREEZE desteklenmiyor"
-
-#: commands/vacuum.c:325
-msgid "Use VACUUM FULL, then VACUUM FREEZE."
-msgstr "Önce VACUUM FULL, sonra VACUUM FREEZE kullanın."
-
-#: commands/vacuum.c:659
-msgid "oldest xmin is far in the past"
-msgstr "en eski xmin uzun zaman önce yaratılmıştır"
-
-#: commands/vacuum.c:660
-msgid "Close open transactions soon to avoid wraparound problems."
-msgstr "Başa dönme sorununu yaşamamak için aktif transactionları kapatın."
-
-#: commands/vacuum.c:896
-msgid "some databases have not been vacuumed in over 2 billion transactions"
-msgstr "bazı veritabanlaı iki milyarı aşkın transaction vacuum işlemi yapılmadan işlemişler"
-
-#: commands/vacuum.c:897
-msgid "You may have already suffered transaction-wraparound data loss."
-msgstr "Hatta transaction-wraparound veri kaybını yaşamış olabilirsiniz."
-
-#: commands/vacuum.c:911
-msgid "some databases have not been vacuumed in over 1 billion transactions"
-msgstr "bazı veritabanlaı bir milyarı aşkın transaction vacuum işlemi yapılmadan işlemişler"
-
-#: commands/vacuum.c:912
-msgid "Better vacuum them soon, or you may have a wraparound failure."
-msgstr "Wraparound sorunu yaşamadan kısa sürede vacuum işlemini yaptırmalısınız."
-
-#: commands/vacuum.c:1017
-#, c-format
-msgid "skipping \"%s\" --- only table or database owner can vacuum it"
-msgstr "\"%s\" atlanıyor --- sadece tablo veya veritabanı sahibi onu vacuum edebilir"
-
-#: commands/vacuum.c:1032
-#, c-format
-msgid "skipping \"%s\" --- cannot vacuum indexes, views, or special system tables"
-msgstr "\"%s\" atlanıyor --- indesk, view ve sistem tablolaları vacuum edilemez"
-
-#: commands/vacuum.c:1248
-#: commands/vacuumlazy.c:220
-#, c-format
-msgid "vacuuming \"%s.%s\""
-msgstr "\"%s.%s\" veritabanına vacuum yapılıyor"
-
-#: commands/vacuum.c:1300
-#: commands/vacuumlazy.c:313
-#, c-format
-msgid "relation \"%s\" page %u is uninitialized --- fixing"
-msgstr "\"%s\" nesnesi, %u, sayfası sıfırlanmamış --- düzeltiyorum"
-
-#: commands/vacuum.c:1422
-#, c-format
-msgid "relation \"%s\" TID %u/%u: InsertTransactionInProgress %u --- can't shrink relation"
-msgstr "\"%s\" tablosu TID %u/%u: InsertTransactionInProgress %u --- nesne küçültülemiyor"
-
-#: commands/vacuum.c:1435
-#, c-format
-msgid "relation \"%s\" TID %u/%u: DeleteTransactionInProgress %u --- can't shrink relation"
-msgstr "\"%s\" tablosu TID %u/%u: DeleteTransactionInProgress %u --- nesne küçültülemiyor"
-
-#: commands/vacuum.c:1586
-#: commands/vacuumlazy.c:471
-#, c-format
-msgid "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
-msgstr "\"%s\": bulunan %.0f kaldırılabilen, %.0f sabit satır sürümleril, toplam %u sayfa"
-
-#: commands/vacuum.c:1589
-#, c-format
-msgid ""
-"%.0f dead row versions cannot be removed yet.\n"
-"Nonremovable row versions range from %lu to %lu bytes long.\n"
-"There were %.0f unused item pointers.\n"
-"Total free space (including removable row versions) is %.0f bytes.\n"
-"%u pages are or will become empty, including %u at the end of the table.\n"
-"%u pages containing %.0f free bytes are potential move destinations.\n"
-"%s."
-msgstr ""
-"%.0f ölü satır şımdilik kaldırılamıyor.\n"
-"Kaldırılamayacak satır sürümleri %lu ile %lu bayt uzunukta.\n"
-"%.0f öğe göstergesi kullanılmadı.\n"
-"Topleam boş alan (kaldırılacak satır sürümleri dahil) %.0f bayttır.\n"
-"%u sayfa boş ya da boşaltılacak, tablonun sonunda %u tane buna dahildir.\n"
-"%u sayfa toplam %.0f boş bayt içeriği ile potansiyel taşıma hedefidir.\n"
-"%s."
-
-#: commands/vacuum.c:2346
-#, c-format
-msgid "\"%s\": moved %u row versions, truncated %u to %u pages"
-msgstr "\"%s\": %u satır sürümü taşınmış, %u sayfa sayısından %u sayfaya düşürülmüştür"
-
-#: commands/vacuum.c:2349
-#: commands/vacuumlazy.c:531
-#: commands/vacuumlazy.c:832
-#, c-format
-msgid "%s."
-msgstr "%s."
-
-#: commands/vacuum.c:2879
-#: commands/vacuumlazy.c:829
-#, c-format
-msgid "\"%s\": truncated %u to %u pages"
-msgstr "\"%s\":  %u sayfadan  %u sayfaya düşürülmüştür"
-
-#: commands/vacuum.c:2973
-#: commands/vacuum.c:3041
-#: commands/vacuumlazy.c:649
-#: commands/vacuumlazy.c:728
-#, c-format
-msgid "index \"%s\" now contains %.0f row versions in %u pages"
-msgstr "\"%s\" indexi %.0f satır sürümü, %u sayfa"
-
-#: commands/vacuum.c:2977
-#: commands/vacuumlazy.c:653
-#, c-format
-msgid ""
-"%u index pages have been deleted, %u are currently reusable.\n"
-"%s."
-msgstr ""
-"%u index sayfası silinmiş, %u kullanılabilir.\n"
-"%s."
-
-#: commands/vacuum.c:2991
-#: commands/vacuum.c:3061
-#, c-format
-msgid "index \"%s\" contains %.0f row versions, but table contains %.0f row versions"
-msgstr "\"%s\" indexi %.0f satır sürümü içeriyor, ancak tablo %.0f satır versiyonu içeriyor"
-
-#: commands/vacuum.c:2994
-#: commands/vacuum.c:3064
-msgid "Rebuild the index with REINDEX."
-msgstr "REINDEX işemiyle index yeniden oluşturuluyor."
-
-#: commands/vacuum.c:3045
-#: commands/vacuumlazy.c:732
-#, c-format
-msgid ""
-"%.0f index row versions were removed.\n"
-"%u index pages have been deleted, %u are currently reusable.\n"
-"%s."
-msgstr ""
-"%.0f index sürüm satırı kaldırılmış.\n"
-"%u index sayfa silinmiştir, %u şu an kullanılabilir.\n"
-"%s"
-
-#: commands/vacuumlazy.c:474
+#: commands/vacuumlazy.c:460
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -4861,10 +4887,15 @@ msgstr ""
 "%u sayfa tamamen boş.\n"
 "%s"
 
-#: commands/vacuumlazy.c:528
+#: commands/vacuumlazy.c:514
 #, c-format
 msgid "\"%s\": removed %d row versions in %d pages"
 msgstr "\"%1$s\": %3$d sayfada %2$d satır sürümü kaldırılmış"
+
+#: commands/vacuumlazy.c:623
+#, c-format
+msgid "scanned index \"%s\" to remove %d row versions"
+msgstr "\"%s\" indeksi tarandı, %d satır sürümü kaldırıldı"
 
 #: commands/variable.c:66
 msgid "invalid list syntax for parameter \"datestyle\""
@@ -6680,13 +6711,6 @@ msgstr "array ataması %s tipini gerektirmektedir ancak ifade %s tipindedir"
 msgid "operator does not exist: %s"
 msgstr "operator mevcut değil: %s"
 
-#: parser/parse_oper.c:178
-#: utils/adt/arrayfuncs.c:3006
-#: utils/adt/ri_triggers.c:3641
-#, c-format
-msgid "could not identify an equality operator for type %s"
-msgstr "%s tipi için eşitleme işlemi bulunamadı "
-
 #: parser/parse_oper.c:242
 #: parser/parse_oper.c:307
 #, c-format
@@ -7152,21 +7176,21 @@ msgstr "unlock semaphore başarısız: hata kodu %d"
 msgid "could not try-lock semaphore: error code %d"
 msgstr "try-lock semaphore başarısız: hata kodu %d"
 
-#: postmaster/autovacuum.c:161
+#: postmaster/autovacuum.c:162
 #, c-format
 msgid "could not fork autovacuum process: %m"
 msgstr "Otomatik vacuum süreci fork edilemedi: %m"
 
-#: postmaster/autovacuum.c:416
+#: postmaster/autovacuum.c:417
 #, c-format
 msgid "autovacuum: processing database \"%s\""
 msgstr "autovacuum: \"%s\" veritabanı işleniyor"
 
-#: postmaster/autovacuum.c:962
+#: postmaster/autovacuum.c:949
 msgid "autovacuum not started because of misconfiguration"
 msgstr "geçersiz ayarlarından dolayı autovacuum çalıştırılamadı"
 
-#: postmaster/autovacuum.c:963
+#: postmaster/autovacuum.c:950
 msgid "Enable options \"stats_start_collector\" and \"stats_row_level\"."
 msgstr "\"stats_start_collector\" ve \"stats_row_level\" seçeneklerini etkinleşitirin."
 
@@ -8983,11 +9007,6 @@ msgstr "kaynak array küçük"
 msgid "NULL array element not allowed in this context"
 msgstr "bu ortamda NULL array elementi kabul edilmemektedir"
 
-#: utils/adt/arrayfuncs.c:2983
-#: utils/adt/arrayfuncs.c:3190
-msgid "cannot compare arrays of different element types"
-msgstr "farklı öğe tipli dizinleri karşılaştırılamaz"
-
 #: utils/adt/arrayfuncs.c:3915
 msgid "could not determine target array type"
 msgstr "hedef array tipini belirlenemiyor"
@@ -10308,13 +10327,13 @@ msgstr "%d kayıt sütununda uygunsuz ikili biçimi"
 msgid "invalid input syntax for type tid: \"%s\""
 msgstr "tid veri tipi için geersiz söz dizimi: \"%s\""
 
-#: utils/adt/selfuncs.c:3696
-#: utils/adt/selfuncs.c:4076
+#: utils/adt/selfuncs.c:3704
+#: utils/adt/selfuncs.c:4084
 msgid "case insensitive matching not supported on type bytea"
 msgstr "bytea veri tipi için büyük ve küçük harf duyarsız karşılaştırma desteklenmemektedir"
 
-#: utils/adt/selfuncs.c:3795
-#: utils/adt/selfuncs.c:4236
+#: utils/adt/selfuncs.c:3803
+#: utils/adt/selfuncs.c:4244
 msgid "regular-expression matching not supported on type bytea"
 msgstr "bytea tipi için regular-expression karşılaştırma desteklenmemektedir"
 
@@ -10527,12 +10546,12 @@ msgstr "%s tipi için giriş fonksiyonu mevcut değil"
 msgid "no output function available for type %s"
 msgstr "%s tipi için çıkış fonksiyonu mevcut değil"
 
-#: utils/cache/relcache.c:3239
+#: utils/cache/relcache.c:3243
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "relation-cache tanımlama dosyası \"%s\" açılamadı: %m"
 
-#: utils/cache/relcache.c:3241
+#: utils/cache/relcache.c:3245
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Devam ediyorum, ama bu işlem yanlıştır."
 
@@ -10714,45 +10733,59 @@ msgstr "kolon takma adı verilmedi"
 msgid "could not determine row description for function returning record"
 msgstr "veri satırı döndüren fonksiyon için satır açıklaması bulunamadı"
 
-#: utils/init/postinit.c:173
+#: utils/init/postinit.c:126
 #, c-format
-msgid "database \"%s\", OID %u, has disappeared from pg_database"
-msgstr "\"%s\" veritabanı, OID %u, pg_database tablosundan yok olmuş"
+msgid "database \"%s\" has disappeared from pg_database"
+msgstr "\"%s\" veritabanı pg_database tablosundan yok olmuş"
 
-#: utils/init/postinit.c:194
+#: utils/init/postinit.c:128
+#, c-format
+msgid "Database OID %u now seems to belong to \"%s\"."
+msgstr "OID %u olan veritabanı \"%s\" kullanıcıya aittir."
+
+#: utils/init/postinit.c:148
 #, c-format
 msgid "database \"%s\" is not currently accepting connections"
 msgstr "\"%s\" veritabanı şu anda bağlatı kabul etmiyor"
 
-#: utils/init/postinit.c:211
+#: utils/init/postinit.c:161
+#, c-format
+msgid "permission denied for database \"%s\""
+msgstr "\"%s\" veritabanına erişim engellendi"
+
+#: utils/init/postinit.c:162
 msgid "User does not have CONNECT privilege."
 msgstr "Kullanicinin CONNECT yetkisi verilmemiştir."
 
-#: utils/init/postinit.c:228
+#: utils/init/postinit.c:179
 #, c-format
 msgid "too many connections for database \"%s\""
 msgstr "\"%s\" veritabanı bağlantı sayısı aşılmıştır"
 
-#: utils/init/postinit.c:386
+#: utils/init/postinit.c:426
+msgid "It seems to have just been dropped or renamed."
+msgstr "Az önce kaldırılmış veya adını değiştirilmiştir."
+
+#: utils/init/postinit.c:442
 #, c-format
 msgid "The database subdirectory \"%s\" is missing."
 msgstr "Veritabanı alt dizini \"%s\" eksik."
 
-#: utils/init/postinit.c:391
+#: utils/init/postinit.c:447
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "\"%s\" dizine erişim hatası: %m"
 
-#: utils/init/postinit.c:494
+#: utils/init/postinit.c:480
 msgid "no roles are defined in this database system"
 msgstr "bu veritabanı sisteminde tanımlanmış rol bulunamadı"
 
-#: utils/init/postinit.c:495
+#: utils/init/postinit.c:481
 #, c-format
 msgid "You should immediately run CREATE USER \"%s\" CREATEUSER;."
 msgstr "Hemen CREATE USER \"%s\" CREATEUSER; komutunu çalıştırmalısınız."
 
-#: utils/init/postinit.c:532
+#: utils/init/postinit.c:511
 msgid "connection limit exceeded for non-superusers"
 msgstr "superuser olmayan kullanıcı bağlantı sayısı sınırı aşıldı"
 
@@ -10869,7 +10902,7 @@ msgid "could not write lock file \"%s\": %m"
 msgstr "\"%s\" lock dosyası yazma hatası: %m"
 
 #: utils/init/miscinit.c:976
-#: utils/misc/guc.c:5298
+#: utils/misc/guc.c:5308
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "\"%s\" dosyasından okuma hatası: %m"
@@ -10979,21 +11012,6 @@ msgstr "\"%s\" dil kodlaması için geçersiz bayt dizisi: 0x%s"
 #: utils/misc/help_config.c:125
 msgid "internal error: unrecognized run-time parameter type\n"
 msgstr "dahili hata: tanınmayan çalıştırma zamanı parametre tipi\n"
-
-#: guc-file.l:207
-#, c-format
-msgid "could not open configuration file \"%s\": maximum nesting depth exceeded"
-msgstr "yapılandırma dosyası \"%s\" açılamadı: en yüksek içiçe yuvalama derinliği aşılmıştır"
-
-#: guc-file.l:348
-#, c-format
-msgid "syntax error in file \"%s\" line %u, near end of line"
-msgstr "\"%s\" dosyası, %u satırınıda, satır sonunda sözdizimi hatası"
-
-#: guc-file.l:353
-#, c-format
-msgid "syntax error in file \"%s\" line %u, near token \"%s\""
-msgstr "\"%s\" dosyası, %u satırınıda, \"%s\" ifadesi yakınında sözdizimi hatası"
 
 #: utils/misc/guc.c:276
 msgid "Ungrouped"
@@ -11733,313 +11751,317 @@ msgstr "En yüksek TCP keepalive gönderme sayısı."
 msgid "This controls the number of consecutive keepalive retransmits that can be lost before a connection is considered dead. A value of 0 uses the system default."
 msgstr "Keepalive açıkken, bir bağlantının kopmuş olmasını sayılamadan gönderilecek mükerrer paket sayısı. 0 (sıfır) değeri sistemdeki varsayılan eğerini alıyor."
 
-#: utils/misc/guc.c:1586
+#: utils/misc/guc.c:1577
+msgid "Sets the maximum allowed result for exact search by gin."
+msgstr "gin sorgulaması için izin verilen en yüksek sonuç sayısı."
+
+#: utils/misc/guc.c:1596
 msgid "Sets the planner's assumption about size of the disk cache."
 msgstr "Disk cache boyutu hakkında tahmini değerini belirtiyor."
 
-#: utils/misc/guc.c:1587
+#: utils/misc/guc.c:1597
 msgid "That is, the portion of the kernel's disk cache that will be used for PostgreSQL data files. This is measured in disk pages, which are normally 8 kB each."
 msgstr "Yani kernel'in disk cache alanının PostgreSQL veri dosyaları için kullanılacak kısmının tahmini. Bu deşer, disk page birimleriyle giriliyor, bir disk page genellikle 8 kilobayttır."
 
-#: utils/misc/guc.c:1596
+#: utils/misc/guc.c:1606
 msgid "Sets the planner's estimate of the cost of a nonsequentially fetched disk page."
 msgstr "Nonsequential disk page getirme işlemlerin tahmini zamanı belirtiyor."
 
-#: utils/misc/guc.c:1598
+#: utils/misc/guc.c:1608
 msgid "This is measured as a multiple of the cost of a sequential page fetch. A higher value makes it more likely a sequential scan will be used, a lower value makes it more likely an index scan will be used."
 msgstr "Bu değer, squeantial getirme'nin bir bölümü olarak giriliyor. Yani daha yüksek değer, sequential scan işlemine öncelik öncelik verirken, daha düşük değer ise planer'in index scan yöntemine tercih vermesine sebep olur."
 
-#: utils/misc/guc.c:1608
+#: utils/misc/guc.c:1618
 msgid "Sets the planner's estimate of the cost of processing each tuple (row)."
 msgstr "Bir satır işlemek için harcanacak işlem zamanı tahminini belirtiyor."
 
-#: utils/misc/guc.c:1609
 #: utils/misc/guc.c:1619
-#: utils/misc/guc.c:1628
+#: utils/misc/guc.c:1629
+#: utils/misc/guc.c:1638
 msgid "This is measured as a fraction of the cost of a sequential page fetch."
 msgstr "Sequential page fetch işleme zamanının bir bölümü olarak çölçülüyor."
 
-#: utils/misc/guc.c:1617
+#: utils/misc/guc.c:1627
 msgid "Sets the planner's estimate of processing cost for each index tuple (row) during index scan."
 msgstr "İndeks satırı başına işleme zamanı belirityor."
 
-#: utils/misc/guc.c:1627
+#: utils/misc/guc.c:1637
 msgid "Sets the planner's estimate of processing cost of each operator in WHERE."
 msgstr "WHERE içinde her işlem için işleme gider tahminlerini belirtiyor."
 
-#: utils/misc/guc.c:1637
+#: utils/misc/guc.c:1647
 msgid "GEQO: selective pressure within the population."
 msgstr "GEQO: selective pressure within the population. Oha be, query'yi mi optimize ediyoruz, piliç mi yetiştiriyoruz, yuh."
 
-#: utils/misc/guc.c:1647
+#: utils/misc/guc.c:1657
 msgid "Background writer percentage of LRU buffers to flush per round"
 msgstr "Her seferinde background writer'in diske yazaçağı LRU bufferlerin yüzdesi"
 
-#: utils/misc/guc.c:1656
+#: utils/misc/guc.c:1666
 msgid "Background writer percentage of all buffers to flush per round"
 msgstr "Her seferinde background writer'in diske yazaçağı sayfaların yüzdesi"
 
-#: utils/misc/guc.c:1665
+#: utils/misc/guc.c:1675
 msgid "Sets the seed for random-number generation."
 msgstr "Random-number üretimi için seed değerini belirtiyor."
 
-#: utils/misc/guc.c:1675
+#: utils/misc/guc.c:1685
 msgid "Number of tuple updates or deletes prior to vacuum as a fraction of reltuples."
 msgstr "Vacuum işleminin başlaması için en düşük tuple update ve delete sayısı (retuple bölümü olarak)."
 
-#: utils/misc/guc.c:1683
+#: utils/misc/guc.c:1693
 msgid "Number of tuple inserts, updates or deletes prior to analyze as a fraction of reltuples."
 msgstr "Analyze işleminin başlaması için en düşük tuple insert, update ve delete sayısı (retuple bölümü olarak)."
 
-#: utils/misc/guc.c:1701
+#: utils/misc/guc.c:1711
 msgid "WAL archiving command."
 msgstr "WAL arşivleme komutu."
 
-#: utils/misc/guc.c:1702
+#: utils/misc/guc.c:1712
 msgid "The shell command that will be called to archive a WAL file."
 msgstr "WAL dosyasını arşivlemek için kabuk komutu çağırılacak."
 
-#: utils/misc/guc.c:1710
+#: utils/misc/guc.c:1720
 msgid "Sets the client's character set encoding."
 msgstr "İstemci karakter kodlamasını belirtiyor."
 
-#: utils/misc/guc.c:1720
+#: utils/misc/guc.c:1730
 msgid "Sets the message levels that are sent to the client."
 msgstr "İstemciye yollancak mesaj düzeylerini belirtiyor."
 
-#: utils/misc/guc.c:1721
+#: utils/misc/guc.c:1731
 msgid "Valid values are DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, LOG, NOTICE, WARNING, and ERROR. Each level includes all the levels that follow it. The later the level, the fewer messages are sent."
 msgstr "Geçerli değerler: DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, LOG, NOTICE, WARNING, and ERROR. Her düzey kendisinden daha büyük düzeyleri de kapsıyor. Düzey ne kadar yüksek ise o kadar az mesaj yollanıyor."
 
-#: utils/misc/guc.c:1732
+#: utils/misc/guc.c:1742
 msgid "Sets the message levels that are logged."
 msgstr "Log dosyasına yazılacak mesajlarının düzeylerini belirtiyor."
 
-#: utils/misc/guc.c:1733
+#: utils/misc/guc.c:1743
 msgid "Valid values are DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, INFO, NOTICE, WARNING, ERROR, LOG, FATAL, and PANIC. Each level includes all the levels that follow it."
 msgstr "Geçerli değerler: DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, INFO, NOTICE, WARNING, ERROR, LOG, FATAL, and PANIC. Her düzey kendisinden daha büyük düzeyleri de kapsıyor."
 
-#: utils/misc/guc.c:1743
+#: utils/misc/guc.c:1753
 msgid "Sets the verbosity of logged messages."
 msgstr "Log mesajlarının ayrıntı düzei belirtiyor."
 
-#: utils/misc/guc.c:1744
+#: utils/misc/guc.c:1754
 msgid "Valid values are \"terse\", \"default\", and \"verbose\"."
 msgstr "Geçerli değerler: \"terse\", \"default\", ve \"verbose\"."
 
-#: utils/misc/guc.c:1751
+#: utils/misc/guc.c:1761
 msgid "Sets the type of statements logged."
 msgstr "Log dosyasına yazılacak komutların tipini belirtiyor."
 
-#: utils/misc/guc.c:1752
+#: utils/misc/guc.c:1762
 msgid "Valid values are \"none\", \"ddl\", \"mod\", and \"all\"."
 msgstr "Geçerli değerler: \"none\", \"mod\", \"ddl\", ve \"all\"."
 
-#: utils/misc/guc.c:1760
+#: utils/misc/guc.c:1770
 msgid "Causes all statements generating error at or above this level to be logged."
 msgstr "Belirtilen ya da daha üst düzeyde hata yaratan komutlarının gol dosyasına yazılacağına sebep olur."
 
-#: utils/misc/guc.c:1761
+#: utils/misc/guc.c:1771
 msgid "All SQL statements that cause an error of the specified level or a higher level are logged."
 msgstr "Belirtilen ya da daha üst düzeyde hata yaratan SQL sorguları loglanacaktır."
 
-#: utils/misc/guc.c:1770
+#: utils/misc/guc.c:1780
 msgid "Controls information prefixed to each log line"
 msgstr "Log satırlarının başlarına eklenecek bilgiyi kontrol ediyor."
 
-#: utils/misc/guc.c:1771
+#: utils/misc/guc.c:1781
 msgid "if blank no prefix is used"
 msgstr "boş ise ön ek kullanlmayacak"
 
-#: utils/misc/guc.c:1780
+#: utils/misc/guc.c:1790
 msgid "Sets the display format for date and time values."
 msgstr "Tarih ve zaman girişleri için biçim maskesini belirtiyor."
 
-#: utils/misc/guc.c:1781
+#: utils/misc/guc.c:1791
 msgid "Also controls interpretation of ambiguous date inputs."
 msgstr "Ayrıca belirsiz tarih girişinin yorumlamasını belirtiyor."
 
-#: utils/misc/guc.c:1791
+#: utils/misc/guc.c:1801
 msgid "Sets the default tablespace to create tables and indexes in."
 msgstr "İndeksleri oluşturma işemi için varsayılan tablespace ayarlıyor"
 
-#: utils/misc/guc.c:1792
+#: utils/misc/guc.c:1802
 msgid "An empty string selects the database's default tablespace."
 msgstr "Boş değer, veritabanının varsayılan tablespace'ı seçmektedir."
 
-#: utils/misc/guc.c:1801
+#: utils/misc/guc.c:1811
 msgid "Sets the transaction isolation level of each new transaction."
 msgstr "Her yeni transaction için transaction isolation level belirtiypr."
 
-#: utils/misc/guc.c:1802
+#: utils/misc/guc.c:1812
 msgid "Each SQL transaction has an isolation level, which can be either \"read uncommitted\", \"read committed\", \"repeatable read\", or \"serializable\"."
 msgstr "Her SQL transaction bir isolation level'e sahiptir, geçerli değerler: \"read uncommitted\", \"read committed\", \"repeatable read\", \"serializable\"."
 
-#: utils/misc/guc.c:1811
+#: utils/misc/guc.c:1821
 msgid "Sets the path for dynamically loadable modules."
 msgstr "Dinamik yüklenebilen modülleri arama dizinlerini belirtiyor."
 
-#: utils/misc/guc.c:1812
+#: utils/misc/guc.c:1822
 msgid "If a dynamically loadable module needs to be opened and the specified name does not have a directory component (i.e., the name does not contain a slash), the system will search this path for the specified file."
 msgstr "Bir dinamik kütüphane açmak gerektiğinde dosya adında dizin kısmı yoksa (dosya adın içinde taksim kararkteri yoksa), sistem, kütüphaneleri bulmak için bu dizinleri arayacak."
 
-#: utils/misc/guc.c:1824
+#: utils/misc/guc.c:1834
 msgid "Sets the location of the Kerberos server key file."
 msgstr "Kerberos server key dosyasının yerini belirtiyor."
 
-#: utils/misc/guc.c:1834
+#: utils/misc/guc.c:1844
 msgid "Sets the name of the Kerberos service."
 msgstr "Kerberos sevice adını belirtiyor."
 
-#: utils/misc/guc.c:1843
+#: utils/misc/guc.c:1853
 msgid "Sets the hostname of the Kerberos server."
 msgstr "Kerberos sunucusunun bilgisayar adını belirtiyor."
 
-#: utils/misc/guc.c:1852
+#: utils/misc/guc.c:1862
 msgid "Sets the Bonjour broadcast service name."
 msgstr "Bonjour broadcast service adını belirtiyor."
 
-#: utils/misc/guc.c:1863
+#: utils/misc/guc.c:1873
 msgid "Shows the collation order locale."
 msgstr "Alfabetik sıralamasında kullanılacak locale ayarı gösteriyor."
 
-#: utils/misc/guc.c:1873
+#: utils/misc/guc.c:1883
 msgid "Shows the character classification and case conversion locale."
 msgstr "Karakter sınıflandırılması ve büyük/küçük çevirme işlemlerinde kullanıcak locale ayarı gösteriyor."
 
-#: utils/misc/guc.c:1883
+#: utils/misc/guc.c:1893
 msgid "Sets the language in which messages are displayed."
 msgstr "Mesajlarda kullanılacak dili belirtiyor."
 
-#: utils/misc/guc.c:1892
+#: utils/misc/guc.c:1902
 msgid "Sets the locale for formatting monetary amounts."
 msgstr "Parasal değerlerinin biçimlendirilmesinde kullanılacak locale ayarını belirtiyor."
 
-#: utils/misc/guc.c:1901
+#: utils/misc/guc.c:1911
 msgid "Sets the locale for formatting numbers."
 msgstr "Sayısal değerlerinin biçimlendirilmesinde kullanılacak locale ayarını belirtiyor."
 
-#: utils/misc/guc.c:1910
+#: utils/misc/guc.c:1920
 msgid "Sets the locale for formatting date and time values."
 msgstr "Tarih ve zaman değerlerinin biçimlendirilmesinde kullanılacak locale ayarını belirtiyor."
 
-#: utils/misc/guc.c:1919
+#: utils/misc/guc.c:1929
 msgid "Lists shared libraries to preload into server."
 msgstr "Sunucuya yüklenmiş ortak kütüphaneleri gösteriyor."
 
-#: utils/misc/guc.c:1929
+#: utils/misc/guc.c:1939
 msgid "Sets the regular expression \"flavor\"."
 msgstr "\"flavor\" regular expression belirtiyor."
 
-#: utils/misc/guc.c:1930
+#: utils/misc/guc.c:1940
 msgid "This can be set to advanced, extended, or basic."
 msgstr "Bu değer şunlardan biri olabilir: advanced, extended, or basic."
 
-#: utils/misc/guc.c:1938
+#: utils/misc/guc.c:1948
 msgid "Sets the schema search order for names that are not schema-qualified."
 msgstr "Şema belirtilmediği takdirde isimlerin hangi şemalarda aranacağını belirtir."
 
-#: utils/misc/guc.c:1949
+#: utils/misc/guc.c:1959
 msgid "Sets the server (database) character set encoding."
 msgstr "Sunucu (veritabanı) karakter seti kodlamasını belirtiyor."
 
-#: utils/misc/guc.c:1960
+#: utils/misc/guc.c:1970
 msgid "Shows the server version."
 msgstr "Sunucunun sürümünü gösteriyor."
 
-#: utils/misc/guc.c:1971
+#: utils/misc/guc.c:1981
 msgid "Sets the current role."
 msgstr "Geçerli rolü belirtiyor."
 
-#: utils/misc/guc.c:1982
+#: utils/misc/guc.c:1992
 msgid "Sets the session user name."
 msgstr "Oturum açan kullanıcının ismini gösterir."
 
-#: utils/misc/guc.c:1992
+#: utils/misc/guc.c:2002
 msgid "Sets the destination for server log output."
 msgstr "Log dosyaları için hedef dizini belirtiyor."
 
-#: utils/misc/guc.c:1993
+#: utils/misc/guc.c:2003
 msgid "Valid values are combinations of \"stderr\", \"syslog\", and \"eventlog\", depending on the platform."
 msgstr "Geçerli değerler, platforma bağlı olarak: \"stderr\", \"syslog\", and \"eventlog\"."
 
-#: utils/misc/guc.c:2002
+#: utils/misc/guc.c:2012
 msgid "Sets the destination directory for log files."
 msgstr "Log dosyaları için hedef dizini belirtiyor."
 
-#: utils/misc/guc.c:2003
+#: utils/misc/guc.c:2013
 msgid "May be specified as relative to the data directory or as absolute path."
 msgstr "Bu değer hem veri dizininden yola çıkarak hem de tam yol olabilir."
 
-#: utils/misc/guc.c:2012
+#: utils/misc/guc.c:2022
 msgid "Sets the file name pattern for log files."
 msgstr "Log dosyaları için kulanılacak şablonu belirtiyor."
 
-#: utils/misc/guc.c:2023
+#: utils/misc/guc.c:2033
 msgid "Sets the syslog \"facility\" to be used when syslog enabled."
 msgstr "Syslog aktif durumunda kullanılacak syslog \"facility\" değerini belirtiyor."
 
-#: utils/misc/guc.c:2024
+#: utils/misc/guc.c:2034
 msgid "Valid values are LOCAL0, LOCAL1, LOCAL2, LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7."
 msgstr "Geçerli değerler: LOCAL0, LOCAL1, LOCAL2, LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7."
 
-#: utils/misc/guc.c:2032
+#: utils/misc/guc.c:2042
 msgid "Sets the program name used to identify PostgreSQL messages in syslog."
 msgstr "Syslog içinde PostgreSQL mesajlarının kaynak olacağı program adını belirtiyor."
 
-#: utils/misc/guc.c:2043
+#: utils/misc/guc.c:2053
 msgid "Sets the time zone for displaying and interpreting time stamps."
 msgstr "Time stamp veri tipini çıktısında kullanılacak zaman dilimi belirtiyor."
 
-#: utils/misc/guc.c:2053
+#: utils/misc/guc.c:2063
 msgid "Sets the current transaction's isolation level."
 msgstr "Transaction isolation level belirtiyor."
 
-#: utils/misc/guc.c:2063
+#: utils/misc/guc.c:2073
 msgid "Sets the owning group of the Unix-domain socket."
 msgstr "Unix-domain socket grup sahipliğini belirtiyor."
 
-#: utils/misc/guc.c:2064
+#: utils/misc/guc.c:2074
 msgid "(The owning user of the socket is always the user that starts the server.)"
 msgstr "(Socket sahibi her zamn sunucu çalıştıran kullanıcıdır.)"
 
-#: utils/misc/guc.c:2073
+#: utils/misc/guc.c:2083
 msgid "Sets the directory where the Unix-domain socket will be created."
 msgstr "Unix-domain socket yarıtılacak dizinini belirtiyor."
 
-#: utils/misc/guc.c:2083
+#: utils/misc/guc.c:2093
 msgid "Sets the host name or IP address(es) to listen to."
 msgstr "Dinlenecek host adı veya IP adresleri belirtiyor."
 
-#: utils/misc/guc.c:2093
+#: utils/misc/guc.c:2103
 msgid "Selects the method used for forcing WAL updates out to disk."
 msgstr "WAL değikliklerinin diske yazılış yöntemini belirtiyor."
 
-#: utils/misc/guc.c:2102
+#: utils/misc/guc.c:2112
 msgid "Sets the list of known custom variable classes."
 msgstr "Bilinen custom variable classes listesini belirtiyor."
 
-#: utils/misc/guc.c:2112
+#: utils/misc/guc.c:2122
 msgid "Sets the server's data directory."
 msgstr "Sunucusunun veri dizini belirtiyor."
 
-#: utils/misc/guc.c:2122
+#: utils/misc/guc.c:2132
 msgid "Sets the server's main configuration file."
 msgstr "Sunucunun ana konfigorasyon dosyasının yerini belirtiyor."
 
-#: utils/misc/guc.c:2132
+#: utils/misc/guc.c:2142
 msgid "Sets the server's \"hba\" configuration file"
 msgstr "Sunucusunun \"hba\" konfigurasyon dosyasını belirtiyor"
 
-#: utils/misc/guc.c:2142
+#: utils/misc/guc.c:2152
 msgid "Sets the server's \"ident\" configuration file"
 msgstr "Sunucusunun \"ident\" konfigurasyon dosyasını belirtiyor"
 
-#: utils/misc/guc.c:2152
+#: utils/misc/guc.c:2162
 msgid "Writes the postmaster PID to the specified file."
 msgstr "postmaster PID numarası belirtilen dosyaya yazar."
 
-#: utils/misc/guc.c:2793
+#: utils/misc/guc.c:2803
 #, c-format
 msgid ""
 "%s does not know where to find the server configuration file.\n"
@@ -12048,12 +12070,12 @@ msgstr ""
 "%s, greken konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın --config-file veya -D başlatma parametresi veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:2812
+#: utils/misc/guc.c:2822
 #, c-format
 msgid "%s cannot access the server configuration file \"%s\": %s\n"
 msgstr "%s sunucu konfigurasyon dosyasına \"%s\" erişilemiyor: %s\n"
 
-#: utils/misc/guc.c:2832
+#: utils/misc/guc.c:2842
 #, c-format
 msgid ""
 "%s does not know where to find the database system data.\n"
@@ -12062,7 +12084,7 @@ msgstr ""
 "%s, greken veritabanı dosyaları bulamamaktadır.\n"
 "Dizinin yeri \"%s\" dosyasında \"data_directory\" değişkeninde, -D başlatma parametresi veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:2863
+#: utils/misc/guc.c:2873
 #, c-format
 msgid ""
 "%s does not know where to find the \"hba\" configuration file.\n"
@@ -12071,7 +12093,7 @@ msgstr ""
 "%s, greken \"hba\" konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın yeri \"%s\" dosyasında \"hba_file\" değişkeninde, -D başlatma parametresi veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:2886
+#: utils/misc/guc.c:2896
 #, c-format
 msgid ""
 "%s does not know where to find the \"ident\" configuration file.\n"
@@ -12080,150 +12102,165 @@ msgstr ""
 "%s, greken \"ident\" konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın yeri \"%s\" dosyasında \"ident_file\" değişkeninde, başlatma parametresi -D veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:3613
-#: utils/misc/guc.c:4144
-#: utils/misc/guc.c:4184
-#: utils/misc/guc.c:4259
-#: utils/misc/guc.c:4596
-#: utils/misc/guc.c:4754
+#: utils/misc/guc.c:3623
+#: utils/misc/guc.c:4154
+#: utils/misc/guc.c:4194
+#: utils/misc/guc.c:4269
+#: utils/misc/guc.c:4606
+#: utils/misc/guc.c:4764
 #, c-format
 msgid "unrecognized configuration parameter \"%s\""
 msgstr "\"%s\" bilinmeyen konfigurasyon parametresi"
 
-#: utils/misc/guc.c:3631
+#: utils/misc/guc.c:3641
 #, c-format
 msgid "parameter \"%s\" cannot be changed"
 msgstr "\"%s\" parametresi değiştirilemez"
 
-#: utils/misc/guc.c:3642
+#: utils/misc/guc.c:3652
 #, c-format
 msgid "parameter \"%s\" cannot be changed after server start; configuration file change ignored"
 msgstr "\"%s\" parametresi, sunucu başlatıldıktan sonra değiştirilemez; yapılandırma dosyası yok sayıldı"
 
-#: utils/misc/guc.c:3651
+#: utils/misc/guc.c:3661
 #, c-format
 msgid "parameter \"%s\" cannot be changed after server start"
 msgstr "\"%s\" parametresi, sunucu başlatıldıktan sonra değiştirilemez"
 
-#: utils/misc/guc.c:3661
+#: utils/misc/guc.c:3671
 #, c-format
 msgid "parameter \"%s\" cannot be changed now"
 msgstr "\"%s\" parametresi şu anda değiştirilemez"
 
-#: utils/misc/guc.c:3691
+#: utils/misc/guc.c:3701
 #, c-format
 msgid "parameter \"%s\" cannot be set after connection start"
 msgstr "\"%s\" parametresi bağlantı başlatıldıktan sonra değiştirilemez"
 
-#: utils/misc/guc.c:3701
+#: utils/misc/guc.c:3711
 #, c-format
 msgid "permission denied to set parameter \"%s\""
 msgstr "\"%s\" parametresi değiştirmek için erişim hatası"
 
-#: utils/misc/guc.c:3751
+#: utils/misc/guc.c:3761
 #, c-format
 msgid "parameter \"%s\" requires a Boolean value"
 msgstr "\"%s\" seçeneği boolean değerini alır"
 
-#: utils/misc/guc.c:3767
-#: utils/misc/guc.c:3851
+#: utils/misc/guc.c:3777
+#: utils/misc/guc.c:3861
 #, c-format
 msgid "invalid value for parameter \"%s\": %d"
 msgstr "\"%s\" seçeneği için geçersiz değer: %d"
 
-#: utils/misc/guc.c:3827
+#: utils/misc/guc.c:3837
 #, c-format
 msgid "parameter \"%s\" requires an integer value"
 msgstr "\"%s\" seçeneği bir tamsayı değerini alır"
 
-#: utils/misc/guc.c:3835
+#: utils/misc/guc.c:3845
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "\"%2$s\" parametresi için %1$d değer sıra dışıdır (%3$d .. %4$d)"
 
-#: utils/misc/guc.c:3911
+#: utils/misc/guc.c:3921
 #, c-format
 msgid "parameter \"%s\" requires a numeric value"
 msgstr "\"%s\" seçeneği numeric değerini alır"
 
-#: utils/misc/guc.c:3919
+#: utils/misc/guc.c:3929
 #, c-format
 msgid "%g is outside the valid range for parameter \"%s\" (%g .. %g)"
 msgstr "\"%2$s\" parametresi için %1$g değer sıra dışıdır (%3$g .. %4$g)"
 
-#: utils/misc/guc.c:3935
+#: utils/misc/guc.c:3945
 #, c-format
 msgid "invalid value for parameter \"%s\": %g"
 msgstr "\"%s\" seçeneği için geçersiz değer: %g"
 
-#: utils/misc/guc.c:4035
+#: utils/misc/guc.c:4045
 #, c-format
 msgid "invalid value for parameter \"%s\": \"%s\""
 msgstr "\"%s\" seçeneği için geçersiz değer: \"%s\""
 
-#: utils/misc/guc.c:4148
-#: utils/misc/guc.c:4188
-#: utils/misc/guc.c:4758
+#: utils/misc/guc.c:4158
+#: utils/misc/guc.c:4198
+#: utils/misc/guc.c:4768
 #, c-format
 msgid "must be superuser to examine \"%s\""
 msgstr "\"%s\" değişkeninin değerini sorgulamak için superuser haklarına sahip olmalısınız"
 
-#: utils/misc/guc.c:4268
+#: utils/misc/guc.c:4278
 #, c-format
 msgid "SET %s takes only one argument"
 msgstr "SET %s tek bir argüman alır"
 
-#: utils/misc/guc.c:4370
+#: utils/misc/guc.c:4380
 msgid "SET requires parameter name"
 msgstr "SET komutu patametre adını gerektirir"
 
-#: utils/misc/guc.c:4434
+#: utils/misc/guc.c:4444
 #, c-format
 msgid "attempt to redefine parameter \"%s\""
 msgstr "\"%s\" parametresinin yeniden tanımlanma denemesi"
 
-#: utils/misc/guc.c:5408
+#: utils/misc/guc.c:5418
 #, c-format
 msgid "could not parse setting for parameter \"%s\""
 msgstr "\"%s\" parametresi için verilen değer çözümlenemiyor"
 
-#: utils/misc/guc.c:5604
+#: utils/misc/guc.c:5614
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "\"log_destination\" parametresi için dözdizimi geçersiz"
 
-#: utils/misc/guc.c:5627
+#: utils/misc/guc.c:5637
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "\"log_destination\" anahtar kelimesi anlaşılamıyor: \"%s\""
 
-#: utils/misc/guc.c:5889
+#: utils/misc/guc.c:5899
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF artık desteklenmiyor"
 
-#: utils/misc/guc.c:5937
+#: utils/misc/guc.c:5947
 #, c-format
 msgid "invalid syntax for \"custom_variable_classes\": \"%s\""
 msgstr "\"custom_variable_classes\" için söz dizim hatası: \"%s\""
 
-#: utils/misc/guc.c:5965
+#: utils/misc/guc.c:5975
 msgid "assertion checking is not supported by this build"
 msgstr "assert checking desteği derlenmemiş"
 
-#: utils/misc/guc.c:5977
+#: utils/misc/guc.c:5987
 msgid "SSL is not supported by this build"
 msgstr "SSL desteği derlenmemiş"
 
-#: utils/misc/guc.c:5990
+#: utils/misc/guc.c:6000
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "\"log_statement_stats\" tue iken değer aktif olamaz"
 
-#: utils/misc/guc.c:6007
+#: utils/misc/guc.c:6017
 msgid "cannot enable \"log_statement_stats\" when \"log_parser_stats\", \"log_planner_stats\", or \"log_executor_stats\" is true"
 msgstr "\"log_parser_stats\", \"log_planner_stats\", veya \"log_executor_stats\" değerleri true iken  \"log_statement_stats\" aktif edilemiyor"
 
-#: utils/misc/guc.c:6026
+#: utils/misc/guc.c:6036
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr "salt okunur transaction okuma-yazma mosunda geçirilemiyor"
+
+#: guc-file.l:207
+#, c-format
+msgid "could not open configuration file \"%s\": maximum nesting depth exceeded"
+msgstr "yapılandırma dosyası \"%s\" açılamadı: en yüksek içiçe yuvalama derinliği aşılmıştır"
+
+#: guc-file.l:348
+#, c-format
+msgid "syntax error in file \"%s\" line %u, near end of line"
+msgstr "\"%s\" dosyası, %u satırınıda, satır sonunda sözdizimi hatası"
+
+#: guc-file.l:353
+#, c-format
+msgid "syntax error in file \"%s\" line %u, near token \"%s\""
+msgstr "\"%s\" dosyası, %u satırınıda, \"%s\" ifadesi yakınında sözdizimi hatası"
 
 #: utils/mmgr/aset.c:344
 #, c-format
