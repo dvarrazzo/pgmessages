@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-05-05 08:48+0200\n"
+"PO-Revision-Date: 2006-05-08 14:41+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM veya REINDEX işl
 
 #: access/gist/gistutil.c:888
 #: access/hash/hashutil.c:125
-#: access/nbtree/nbtpage.c:427
+#: access/nbtree/nbtpage.c:428
 #, c-format
 msgid "index \"%s\" contains unexpected zero page at block %u"
 msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
@@ -73,15 +73,15 @@ msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
 #: access/hash/hashutil.c:140
 #: access/hash/hashutil.c:152
 #: access/hash/hashutil.c:173
-#: access/nbtree/nbtpage.c:430
-#: access/nbtree/nbtpage.c:442
+#: access/nbtree/nbtpage.c:431
+#: access/nbtree/nbtpage.c:443
 msgid "Please REINDEX it."
 msgstr "Lütfen onu REINDEX'leyin."
 
 #: access/gist/gistutil.c:900
 #: access/hash/hashutil.c:137
 #: access/hash/hashutil.c:149
-#: access/nbtree/nbtpage.c:439
+#: access/nbtree/nbtpage.c:440
 #, c-format
 msgid "index \"%s\" contains corrupted page at block %u"
 msgstr "\"%s\" indexnde %u bloğunda bozuk sayfa"
@@ -176,13 +176,13 @@ msgid "duplicate key violates unique constraint \"%s\""
 msgstr "mükerrer kayıt \"%s\" tekil kısıtlamasını ihlal etmektedir"
 
 #: access/nbtree/nbtinsert.c:391
-#: access/nbtree/nbtsort.c:492
+#: access/nbtree/nbtsort.c:493
 #, c-format
 msgid "index row size %lu exceeds btree maximum, %lu"
 msgstr "%lu index satır boyutu, btree indexi için %lu olan en büyük satır büyüklüğünü aşmaktadır"
 
 #: access/nbtree/nbtinsert.c:394
-#: access/nbtree/nbtsort.c:495
+#: access/nbtree/nbtsort.c:496
 msgid ""
 "Values larger than 1/3 of a buffer page cannot be indexed.\n"
 "Consider a function index of an MD5 hash of the value, or use full text indexing."
@@ -191,13 +191,13 @@ msgstr ""
 "Yerine değerinin MD5 hash'ı değeri üzerinde function index ya da full text indexing kullanabilirisiniz."
 
 #: access/nbtree/nbtpage.c:156
-#: access/nbtree/nbtpage.c:359
+#: access/nbtree/nbtpage.c:360
 #, c-format
 msgid "index \"%s\" is not a btree"
 msgstr "\"%s\" indexi btree değildir."
 
 #: access/nbtree/nbtpage.c:162
-#: access/nbtree/nbtpage.c:365
+#: access/nbtree/nbtpage.c:366
 #, c-format
 msgid "version mismatch in index \"%s\": file version %d, code version %d"
 msgstr "\"%s\" indexinde sürüm uyuşmazlığı: dosya sürümü %d, kod sürümü ise %d"
@@ -4998,7 +4998,7 @@ msgstr "\"%s\" sütununda null değeri not-null kısıtlamasını ihlal ediyor"
 #: executor/execMain.c:1846
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
-msgstr "\"%s\" balosuna girilen yeni satır \"%s\" check kısıtlamasını ihlal ediyor"
+msgstr "\"%s\" tablosuna girilen yeni satır \"%s\" check kısıtlamasını ihlal ediyor"
 
 #: executor/execQual.c:262
 #: executor/execQual.c:290
@@ -5545,7 +5545,7 @@ msgstr "SSL hatası: %s"
 
 #: libpq/be-secure.c:308
 #: libpq/be-secure.c:407
-#: libpq/be-secure.c:911
+#: libpq/be-secure.c:919
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "bilinmeyan SSL hata kodu: %d"
@@ -5605,39 +5605,48 @@ msgstr "Istemci sertifikası denetlenmeyecek."
 
 #: libpq/be-secure.c:814
 #, c-format
+msgid "SSL Certificate Revocation List (CRL) file \"%s\" ignored"
+msgstr "SSL Geçersiz Sertifika Listesi [Certificate Revocation List (CRL)] dosyası \"%s\" yoksayıldı"
+
+#: libpq/be-secure.c:816
+msgid "Installed SSL library does not support CRL."
+msgstr "Kurulu SSL kütüphanesi CRL desteklemiyor."
+
+#: libpq/be-secure.c:822
+#, c-format
 msgid "SSL Certificate Revocation List (CRL) file \"%s\" not found, skipping: %s"
 msgstr "SSL Geçersiz Sertifika Listesi [Certificate Revocation List (CRL)] dosyası \"%s\" bulunmadı, atlanıyor: %s"
 
-#: libpq/be-secure.c:816
+#: libpq/be-secure.c:824
 msgid "Will not check certificates against CRL."
 msgstr "Sertifika CRL ile karşılaştırılmayacak."
 
-#: libpq/be-secure.c:857
+#: libpq/be-secure.c:865
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "SSL bağlantısı oluşturulamıyor: %s"
 
-#: libpq/be-secure.c:866
+#: libpq/be-secure.c:874
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "SSL socket kurulamıyor: %s"
 
-#: libpq/be-secure.c:891
+#: libpq/be-secure.c:899
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "SSL bağlantı alınamıyor: %m"
 
-#: libpq/be-secure.c:895
-#: libpq/be-secure.c:906
+#: libpq/be-secure.c:903
+#: libpq/be-secure.c:914
 msgid "could not accept SSL connection: EOF detected"
 msgstr "SSL bağlantı alınamıyor: EOF algılandı"
 
-#: libpq/be-secure.c:900
+#: libpq/be-secure.c:908
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "SSL bağlantı alınamıyor: %s"
 
-#: libpq/be-secure.c:938
+#: libpq/be-secure.c:946
 #, c-format
 msgid "SSL connection from \"%s\""
 msgstr "\"%s\" adresinden SSL bağşantısı"
@@ -10546,12 +10555,12 @@ msgstr "%s tipi için giriş fonksiyonu mevcut değil"
 msgid "no output function available for type %s"
 msgstr "%s tipi için çıkış fonksiyonu mevcut değil"
 
-#: utils/cache/relcache.c:3243
+#: utils/cache/relcache.c:3236
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "relation-cache tanımlama dosyası \"%s\" açılamadı: %m"
 
-#: utils/cache/relcache.c:3245
+#: utils/cache/relcache.c:3238
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Devam ediyorum, ama bu işlem yanlıştır."
 
