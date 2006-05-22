@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpq-tr\n"
 "POT-Creation-Date: 2005-04-02 07:16+0100\n"
-"PO-Revision-Date: 2006-05-12 09:02+0200\n"
+"PO-Revision-Date: 2006-05-22 10:18+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,11 +35,12 @@ msgstr "SCM_CRED yetkilendirme yöntemi desteklenmiyor.\n"
 
 #: fe-auth.c:397
 #: fe-connect.c:1269
-#: fe-connect.c:2517
-#: fe-connect.c:2526
-#: fe-connect.c:2663
-#: fe-connect.c:2703
-#: fe-connect.c:2721
+#: fe-connect.c:2518
+#: fe-connect.c:2527
+#: fe-connect.c:2664
+#: fe-connect.c:2704
+#: fe-connect.c:2722
+#: fe-exec.c:2550
 #: fe-lobj.c:597
 #: fe-protocol2.c:1029
 #: fe-protocol3.c:1210
@@ -170,131 +171,135 @@ msgstr "başlangıç sırasında sunucudan beklenmeyen bir mesaj alındı\n"
 msgid "invalid connection state %c, probably indicative of memory corruption\n"
 msgstr "%c - geçersiz bağlantı durumu, bellek zarar görmüş olabilir\n"
 
-#: fe-connect.c:2384
+#: fe-connect.c:2385
 #, c-format
 msgid "ERROR: service file \"%s\" not found\n"
 msgstr "HATA: \"%s\" servis dosyası bulunamadı\n"
 
-#: fe-connect.c:2397
+#: fe-connect.c:2398
 #, c-format
 msgid "ERROR: line %d too long in service file \"%s\"\n"
 msgstr "HATA: \"%2$s\" servis dosyasında %1$d no'lu satır çok uzun \n"
 
-#: fe-connect.c:2448
-#: fe-connect.c:2475
+#: fe-connect.c:2449
+#: fe-connect.c:2476
 #, c-format
 msgid "ERROR: syntax error in service file \"%s\", line %d\n"
 msgstr "ERROR: \"%s\" servis dosyasında yazım hatası, satır no %d\n"
 
-#: fe-connect.c:2565
+#: fe-connect.c:2566
 #, c-format
 msgid "missing \"=\" after \"%s\" in connection info string\n"
 msgstr "bağlantı bilgi katarında \"%s\" bilgisinden sonra \"=\" işareti eksik\n"
 
-#: fe-connect.c:2614
+#: fe-connect.c:2615
 msgid "unterminated quoted string in connection info string\n"
 msgstr "bağlantı bilgi katarında sonlandırılmamış tırnaklı katar\n"
 
-#: fe-connect.c:2647
+#: fe-connect.c:2648
 #, c-format
 msgid "invalid connection option \"%s\"\n"
 msgstr "geçersiz bağlantı seçeneği \"%s\"\n"
 
-#: fe-connect.c:2890
+#: fe-connect.c:2891
 msgid "connection pointer is NULL\n"
 msgstr "bağlantı belirteci NULL'dur\n"
 
-#: fe-connect.c:3136
+#: fe-connect.c:3152
 #, c-format
 msgid "WARNING: password file \"%s\" is not a plain file\n"
 msgstr "UYARI: \"%s\" password dosyası düz metin dosyası değildir\n"
 
-#: fe-connect.c:3146
+#: fe-connect.c:3162
 #, c-format
 msgid "WARNING: password file \"%s\" has world or group read access; permission should be u=rw (0600)\n"
 msgstr "UYARI: \"%s\" şifre dosyası herkes ya da grup tarafından erişilebilir durumda; dosyanın izinleri u=rw olmalı (0600)\n"
 
-#: fe-exec.c:481
+#: fe-exec.c:487
 msgid "NOTICE"
 msgstr "BİLGİ"
 
-#: fe-exec.c:654
-#: fe-exec.c:711
-#: fe-exec.c:751
+#: fe-exec.c:671
+#: fe-exec.c:728
+#: fe-exec.c:768
 msgid "command string is a null pointer\n"
 msgstr "komut katarı null belirteçtir\n"
 
-#: fe-exec.c:744
-#: fe-exec.c:839
+#: fe-exec.c:761
+#: fe-exec.c:856
 msgid "statement name is a null pointer\n"
 msgstr "durum adı null belirteçtir\n"
 
-#: fe-exec.c:759
-#: fe-exec.c:913
-#: fe-exec.c:1602
+#: fe-exec.c:776
+#: fe-exec.c:930
+#: fe-exec.c:1619
 msgid "function requires at least protocol version 3.0\n"
 msgstr "fonksiyon en az 3.0 prokolüne gereksinim duyar.\n"
 
-#: fe-exec.c:870
+#: fe-exec.c:887
 msgid "no connection to the server\n"
 msgstr "sunucuya bağlantı yok\n"
 
-#: fe-exec.c:877
+#: fe-exec.c:894
 msgid "another command is already in progress\n"
 msgstr "şu anda işlenen başka bir komut var\n"
 
-#: fe-exec.c:984
+#: fe-exec.c:1001
 msgid "length must be given for binary parameter\n"
 msgstr "binary parametresinin uzunluğu belirtilmelidir\n"
 
-#: fe-exec.c:1231
+#: fe-exec.c:1248
 #, c-format
 msgid "unexpected asyncStatus: %d\n"
 msgstr "beklenmeyen asyncStatus: %d\n"
 
-#: fe-exec.c:1357
+#: fe-exec.c:1374
 msgid "COPY terminated by new PQexec"
 msgstr "COPY, yeni PQexec tarafından sonlandırıldı"
 
-#: fe-exec.c:1365
+#: fe-exec.c:1382
 msgid "COPY IN state must be terminated first\n"
 msgstr "Öncelikle COPY IN durumu sonlandırılmalıdır\n"
 
-#: fe-exec.c:1385
+#: fe-exec.c:1402
 msgid "COPY OUT state must be terminated first\n"
 msgstr "Öncelikle COPY OUT durumu sonlandırılmalıdır\n"
 
-#: fe-exec.c:1494
-#: fe-exec.c:1559
-#: fe-exec.c:1644
+#: fe-exec.c:1511
+#: fe-exec.c:1576
+#: fe-exec.c:1661
 #: fe-protocol2.c:1174
 #: fe-protocol3.c:1366
 msgid "no COPY in progress\n"
 msgstr "çalışan COPY süreci yok\n"
 
-#: fe-exec.c:1836
+#: fe-exec.c:1853
 msgid "connection in wrong state\n"
 msgstr "bağlantı yanlış durumda\n"
 
-#: fe-exec.c:1867
+#: fe-exec.c:1884
 msgid "invalid ExecStatusType code"
 msgstr "geçersizExecStatusType kodu"
 
-#: fe-exec.c:1931
-#: fe-exec.c:1954
+#: fe-exec.c:1948
+#: fe-exec.c:1971
 #, c-format
 msgid "column number %d is out of range 0..%d"
 msgstr "%d kolon numarası, 0..%d sınırının dışında"
 
-#: fe-exec.c:1947
+#: fe-exec.c:1964
 #, c-format
 msgid "row number %d is out of range 0..%d"
 msgstr "%d satır numarası, 0..%d sınırının dışında"
 
-#: fe-exec.c:2239
+#: fe-exec.c:2256
 #, c-format
 msgid "could not interpret result from server: %s"
 msgstr "sunucudan gelen yanıt yorumlanamadı: %s"
+
+#: fe-exec.c:2458
+msgid "incomplete multibyte character\n"
+msgstr "tamamlanmamış çoklu bayt karakteri\n"
 
 #: fe-lobj.c:326
 msgid "cannot determine OID of function lo_create\n"
