@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-05-22 10:26+0200\n"
+"PO-Revision-Date: 2006-05-25 09:36+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,20 +55,20 @@ msgstr "\"%s\" kolonu SETOF olarak bildirilemez"
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM FULL veya REINDEX işleminden geçmesi gerekir"
 
-#: access/gist/gistutil.c:689
+#: access/gist/gistutil.c:601
 #, c-format
 msgid "index \"%s\" needs VACUUM or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM veya REINDEX işleminden geçmesi gerekir"
 
-#: access/gist/gistutil.c:928
+#: access/gist/gistutil.c:848
 #: access/hash/hashutil.c:125
 #: access/nbtree/nbtpage.c:428
 #, c-format
 msgid "index \"%s\" contains unexpected zero page at block %u"
 msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
 
-#: access/gist/gistutil.c:931
-#: access/gist/gistutil.c:943
+#: access/gist/gistutil.c:851
+#: access/gist/gistutil.c:863
 #: access/hash/hashutil.c:128
 #: access/hash/hashutil.c:140
 #: access/hash/hashutil.c:152
@@ -78,7 +78,7 @@ msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
 msgid "Please REINDEX it."
 msgstr "Lütfen onu REINDEX'leyin."
 
-#: access/gist/gistutil.c:940
+#: access/gist/gistutil.c:860
 #: access/hash/hashutil.c:137
 #: access/hash/hashutil.c:149
 #: access/nbtree/nbtpage.c:440
@@ -1472,23 +1472,27 @@ msgstr "  -r FILENAME     stdout ve stderr çıktılarını belirtilen dosyaya g
 msgid "  -x NUM          internal use\n"
 msgstr "  -x NUM          iç kullanım\n"
 
-#: y.tab.c:623
-#: y.tab.c:11049
+#: y.tab.c:617
+#: y.tab.c:11055
 msgid "syntax error: cannot back up"
 msgstr "sözdizimi hatası: geri diilemiyor"
 
-#: y.tab.c:1484
-#: y.tab.c:21301
-msgid "parse error; also virtual memory exhausted"
-msgstr "parse hatası; ayrıca sanal bellek de dolmuştur"
+#: y.tab.c:1528
+#: y.tab.c:21358
+msgid "syntax error; also virtual memory exhausted"
+msgstr "sözdizimi hatası; ayrıca sanal bellek de dolmuştur"
 
-#: y.tab.c:1488
-#: y.tab.c:21305
-msgid "parse error"
-msgstr "söz dizim hatası"
+#: y.tab.c:1532
+#: y.tab.c:21362
+#: gram.y:8922
+#: gram.y:8924
+#: gram.y:8941
+#: gram.y:8943
+msgid "syntax error"
+msgstr "söz dizim hatası "
 
-#: y.tab.c:1603
-#: y.tab.c:21420
+#: y.tab.c:1646
+#: y.tab.c:21478
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
@@ -7039,13 +7043,6 @@ msgstr "OVERLAPS ifadesinin sol tarafında yanlış parametre sayısı kullanıl
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sağ tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8922
-#: gram.y:8924
-#: gram.y:8941
-#: gram.y:8943
-msgid "syntax error"
-msgstr "söz dizim hatası "
-
 #: gram.y:9001
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "birden çok ORDER BY ifadesi kullanılamaz"
@@ -12315,11 +12312,11 @@ msgstr "Disk dolu mu?"
 msgid "could not read block %ld of temporary file: %m"
 msgstr "geçici dosyasının %ld bloku okunamıyor: %m"
 
-#: utils/sort/tuplesort.c:2473
+#: utils/sort/tuplesort.c:2540
 msgid "could not create unique index"
 msgstr "unique dizin yaratılamadı"
 
-#: utils/sort/tuplesort.c:2474
+#: utils/sort/tuplesort.c:2541
 msgid "Table contains duplicated values."
 msgstr "Tabloda mukerrer değerler mevcut."
 
