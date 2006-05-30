@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-05-25 09:36+0200\n"
+"PO-Revision-Date: 2006-05-30 08:35+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,20 +55,20 @@ msgstr "\"%s\" kolonu SETOF olarak bildirilemez"
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM FULL veya REINDEX işleminden geçmesi gerekir"
 
-#: access/gist/gistutil.c:601
+#: access/gist/gistutil.c:591
 #, c-format
 msgid "index \"%s\" needs VACUUM or REINDEX to finish crash recovery"
 msgstr "crash recovery bitirmesi için  \"%s\" indeksin VACUUM veya REINDEX işleminden geçmesi gerekir"
 
-#: access/gist/gistutil.c:848
+#: access/gist/gistutil.c:857
 #: access/hash/hashutil.c:125
 #: access/nbtree/nbtpage.c:428
 #, c-format
 msgid "index \"%s\" contains unexpected zero page at block %u"
 msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
 
-#: access/gist/gistutil.c:851
-#: access/gist/gistutil.c:863
+#: access/gist/gistutil.c:860
+#: access/gist/gistutil.c:872
 #: access/hash/hashutil.c:128
 #: access/hash/hashutil.c:140
 #: access/hash/hashutil.c:152
@@ -78,7 +78,7 @@ msgstr "\"%s\" indexnde %u bloğunda beklenmeyen boş sayfa"
 msgid "Please REINDEX it."
 msgstr "Lütfen onu REINDEX'leyin."
 
-#: access/gist/gistutil.c:860
+#: access/gist/gistutil.c:869
 #: access/hash/hashutil.c:137
 #: access/hash/hashutil.c:149
 #: access/nbtree/nbtpage.c:440
@@ -129,28 +129,22 @@ msgid "could not obtain lock on relation \"%s\""
 msgstr "\"%s\" tablosu için lock alınamadı"
 
 #: access/heap/heapam.c:811
-#: access/heap/heapam.c:846
+#: access/heap/heapam.c:841
 #: catalog/aclchk.c:571
 #, c-format
 msgid "\"%s\" is an index"
 msgstr "\"%s\" bir indextir"
 
 #: access/heap/heapam.c:816
-#: access/heap/heapam.c:851
-#, c-format
-msgid "\"%s\" is a special relation"
-msgstr "\"%s\" nesnesi özel bir nesnedir"
-
-#: access/heap/heapam.c:821
-#: access/heap/heapam.c:856
+#: access/heap/heapam.c:846
 #: catalog/aclchk.c:578
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" bir birleşik tiptir"
 
-#: access/heap/heapam.c:2369
-#: access/heap/heapam.c:2400
-#: access/heap/heapam.c:2435
+#: access/heap/heapam.c:2359
+#: access/heap/heapam.c:2390
+#: access/heap/heapam.c:2425
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "\"%s\" tablosundaki satır için lock alınamadı"
@@ -518,7 +512,7 @@ msgstr "\"%s\" dosyası oluşturulamıyor: %m"
 #: access/transam/xlog.c:1955
 #: access/transam/xlog.c:3362
 #: access/transam/xlog.c:3400
-#: commands/copy.c:1161
+#: commands/copy.c:1151
 #: commands/tablespace.c:650
 #: commands/tablespace.c:656
 #: postmaster/postmaster.c:3016
@@ -1473,26 +1467,26 @@ msgid "  -x NUM          internal use\n"
 msgstr "  -x NUM          iç kullanım\n"
 
 #: y.tab.c:617
-#: y.tab.c:11055
+#: y.tab.c:11200
 msgid "syntax error: cannot back up"
 msgstr "sözdizimi hatası: geri diilemiyor"
 
 #: y.tab.c:1528
-#: y.tab.c:21358
+#: y.tab.c:21535
 msgid "syntax error; also virtual memory exhausted"
 msgstr "sözdizimi hatası; ayrıca sanal bellek de dolmuştur"
 
 #: y.tab.c:1532
-#: y.tab.c:21362
-#: gram.y:8922
-#: gram.y:8924
-#: gram.y:8941
-#: gram.y:8943
+#: y.tab.c:21539
+#: gram.y:8963
+#: gram.y:8965
+#: gram.y:8982
+#: gram.y:8984
 msgid "syntax error"
 msgstr "söz dizim hatası "
 
 #: y.tab.c:1646
-#: y.tab.c:21478
+#: y.tab.c:21655
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
@@ -1643,35 +1637,30 @@ msgstr "%s indeksi"
 
 #: catalog/dependency.c:1902
 #, c-format
-msgid "special system relation %s"
-msgstr "%s sistem nesnesi"
-
-#: catalog/dependency.c:1906
-#, c-format
 msgid "sequence %s"
 msgstr "%s sequence"
 
-#: catalog/dependency.c:1910
+#: catalog/dependency.c:1906
 #, c-format
 msgid "uncataloged table %s"
 msgstr "%s katalog edilemeiş tablo"
 
-#: catalog/dependency.c:1914
+#: catalog/dependency.c:1910
 #, c-format
 msgid "toast table %s"
 msgstr "%s toast tablosu"
 
-#: catalog/dependency.c:1918
+#: catalog/dependency.c:1914
 #, c-format
 msgid "view %s"
 msgstr "%s view"
 
-#: catalog/dependency.c:1922
+#: catalog/dependency.c:1918
 #, c-format
 msgid "composite type %s"
 msgstr "%s composite type"
 
-#: catalog/dependency.c:1927
+#: catalog/dependency.c:1923
 #, c-format
 msgid "relation %s"
 msgstr "%s nesnesi"
@@ -2228,8 +2217,8 @@ msgstr "veritabanı-arası referanslar oluşturulamaz: %s"
 #: catalog/namespace.c:1196
 #: parser/parse_expr.c:513
 #: parser/parse_target.c:762
-#: gram.y:2754
-#: gram.y:8095
+#: gram.y:2767
+#: gram.y:8135
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "geçersiz qualified adı (çok fazla noktalı isim): %s"
@@ -2663,13 +2652,13 @@ msgstr "\"%s\" sütunun tanımı \"%s\" alt tablo için birleştiriliyor"
 #: commands/tablecmds.c:4886
 #: commands/analyze.c:222
 #: commands/comment.c:552
-#: commands/copy.c:3060
+#: commands/copy.c:3103
 #: parser/analyze.c:2393
 #: parser/parse_relation.c:1493
 #: parser/parse_relation.c:1548
 #: parser/parse_type.c:98
 #: parser/parse_target.c:657
-#: utils/adt/ruleutils.c:1235
+#: utils/adt/ruleutils.c:1241
 #: utils/adt/not_in.c:78
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
@@ -2935,16 +2924,16 @@ msgstr "\"%s\" nesnesi zaten \"%s\" şemasında mevcuttur"
 #: commands/user.c:495
 #: commands/user.c:504
 #: commands/user.c:512
-#: commands/copy.c:743
-#: commands/copy.c:751
-#: commands/copy.c:759
-#: commands/copy.c:767
-#: commands/copy.c:775
-#: commands/copy.c:783
-#: commands/copy.c:791
-#: commands/copy.c:799
-#: commands/copy.c:807
-#: commands/copy.c:815
+#: commands/copy.c:733
+#: commands/copy.c:741
+#: commands/copy.c:749
+#: commands/copy.c:757
+#: commands/copy.c:765
+#: commands/copy.c:773
+#: commands/copy.c:781
+#: commands/copy.c:789
+#: commands/copy.c:797
+#: commands/copy.c:805
 #: commands/dbcommands.c:113
 #: commands/dbcommands.c:121
 #: commands/dbcommands.c:129
@@ -3345,289 +3334,289 @@ msgstr "\"%s\" dönüşümü zaten \"%s\" şemasında mevcuttur"
 msgid "COPY BINARY is not supported to stdout or from stdin"
 msgstr "stdin'den stdout'e COPY BINARY desteklenmemektedir"
 
-#: commands/copy.c:407
+#: commands/copy.c:432
 #, c-format
 msgid "could not write to COPY file: %m"
 msgstr "COPY dosyasına yazma hatası: %m"
 
-#: commands/copy.c:415
+#: commands/copy.c:444
 msgid "connection lost during COPY to stdout"
 msgstr "stdout akımına COPY işlemi sırasında bağlantı kesildi"
 
-#: commands/copy.c:497
+#: commands/copy.c:487
 #, c-format
 msgid "could not read from COPY file: %m"
 msgstr "COPY dosyasından okuma hatası: %m"
 
-#: commands/copy.c:513
-#: commands/copy.c:532
-#: commands/copy.c:536
+#: commands/copy.c:503
+#: commands/copy.c:522
+#: commands/copy.c:526
 #: tcop/fastpath.c:286
 #: tcop/postgres.c:310
 #: tcop/postgres.c:333
 msgid "unexpected EOF on client connection"
 msgstr "istemci bağlantısında beklenmeyen EOF"
 
-#: commands/copy.c:548
+#: commands/copy.c:538
 #, c-format
 msgid "COPY from stdin failed: %s"
 msgstr "stdin'den COPY başarısız: %s"
 
-#: commands/copy.c:564
+#: commands/copy.c:554
 #, c-format
 msgid "unexpected message type 0x%02X during COPY from stdin"
 msgstr "stdin akımından COPY işlemi sırasında beklenmeyen mesaj tipi 0x%02X"
 
-#: commands/copy.c:827
+#: commands/copy.c:817
 msgid "cannot specify DELIMITER in BINARY mode"
 msgstr "BINARY biçiminde DELIMITER belirtilemez"
 
-#: commands/copy.c:832
+#: commands/copy.c:822
 msgid "cannot specify CSV in BINARY mode"
 msgstr "BINARY biçiminde CSV belirtilemez"
 
-#: commands/copy.c:837
+#: commands/copy.c:827
 msgid "cannot specify NULL in BINARY mode"
 msgstr "BINARY biçiminde NULL belirtilemez"
 
-#: commands/copy.c:859
+#: commands/copy.c:849
 msgid "COPY delimiter must be a single character"
 msgstr "COPY ayıracı bir karakter uzunluğunda olmalıdır"
 
-#: commands/copy.c:866
+#: commands/copy.c:856
 msgid "COPY delimiter cannot be newline or carriage return"
 msgstr "COPY ayıracı yeni satır ya da satırbaşı karakteri olamaz"
 
-#: commands/copy.c:872
+#: commands/copy.c:862
 msgid "COPY null cannot use newline or carriage return"
 msgstr "COPY null yeni satır veya satırbaşı karakteri kullanamaz"
 
-#: commands/copy.c:878
+#: commands/copy.c:868
 msgid "COPY delimiter cannot be backslash"
 msgstr "COPY ayıracı backslash olamaz"
 
-#: commands/copy.c:884
+#: commands/copy.c:874
 msgid "COPY HEADER available only in CSV mode"
 msgstr "COPY HEADER sadece CSV modunda geçerli"
 
-#: commands/copy.c:890
+#: commands/copy.c:880
 msgid "COPY quote available only in CSV mode"
 msgstr "COPY quote sadece CSV modunda etkin"
 
-#: commands/copy.c:895
+#: commands/copy.c:885
 msgid "COPY quote must be a single character"
 msgstr "COPY quote bir karakter uzunluğunda olmalıdır"
 
-#: commands/copy.c:901
+#: commands/copy.c:891
 msgid "COPY escape available only in CSV mode"
 msgstr "COPY escape sadece CSV modunda etkin"
 
-#: commands/copy.c:906
+#: commands/copy.c:896
 msgid "COPY escape must be a single character"
 msgstr "COPY escape bir karakter uzunluğunda olmalıdır"
 
-#: commands/copy.c:912
+#: commands/copy.c:902
 msgid "COPY force quote available only in CSV mode"
 msgstr "COPY force quote sadece CSV modunda etkin"
 
-#: commands/copy.c:916
+#: commands/copy.c:906
 msgid "COPY force quote only available using COPY TO"
 msgstr "COPY force quote sadece COPY TO içerisinde kullanılabilir"
 
-#: commands/copy.c:922
+#: commands/copy.c:912
 msgid "COPY force not null available only in CSV mode"
 msgstr "COPY force not null sadece CSV modunda etkin"
 
-#: commands/copy.c:926
+#: commands/copy.c:916
 msgid "COPY force not null only available using COPY FROM"
 msgstr "COPY force quote sadece COPY FROM içerisinde kullanılabilir"
 
-#: commands/copy.c:932
+#: commands/copy.c:922
 msgid "COPY delimiter must not appear in the NULL specification"
 msgstr "NULL tanımında COPY ayracı belirtilmemelidir"
 
-#: commands/copy.c:939
+#: commands/copy.c:929
 msgid "CSV quote character must not appear in the NULL specification"
 msgstr "NULL tanımında CVS quote ayracı belirtilmemelidir"
 
-#: commands/copy.c:950
+#: commands/copy.c:940
 #: executor/execMain.c:432
 #: tcop/utility.c:352
 msgid "transaction is read-only"
 msgstr "transaction salt okunurdur"
 
-#: commands/copy.c:961
+#: commands/copy.c:951
 msgid "must be superuser to COPY to or from a file"
 msgstr "bir dosyadan veya bir dosyaya COPY işlemi yapmak için superuser haklarına sahip olmalısınız"
 
-#: commands/copy.c:962
+#: commands/copy.c:952
 msgid "Anyone can COPY to stdout or from stdin. psql's \\copy command also works for anyone."
 msgstr "Stdout'e ve stdin'e her kullanıcı COPY işlemi yapabilir. Ayrıca her kullanıcı psql'in \\copy komutunu kullanabilir."
 
-#: commands/copy.c:969
+#: commands/copy.c:959
 #, c-format
 msgid "table \"%s\" does not have OIDs"
 msgstr "\"%s\" tablosunda OID yoktur"
 
-#: commands/copy.c:991
+#: commands/copy.c:981
 #, c-format
 msgid "FORCE QUOTE column \"%s\" not referenced by COPY"
 msgstr "FORCE UNIQUE \"%s\" sütunu COPY tarafından referans edilmemiştir"
 
-#: commands/copy.c:1013
+#: commands/copy.c:1003
 #, c-format
 msgid "FORCE NOT NULL column \"%s\" not referenced by COPY"
 msgstr "FORCE NOT NULL \"%s\" sütunu COPY tarafından referans edilmemiştir"
 
-#: commands/copy.c:1047
+#: commands/copy.c:1037
 #, c-format
 msgid "cannot copy to view \"%s\""
 msgstr "\"%s\" view'ina kopyalanamıyor"
 
-#: commands/copy.c:1052
+#: commands/copy.c:1042
 #, c-format
 msgid "cannot copy to sequence \"%s\""
 msgstr "\"%s\" sequence'ine kopyalanamıyor"
 
-#: commands/copy.c:1057
+#: commands/copy.c:1047
 #, c-format
 msgid "cannot copy to non-table relation \"%s\""
 msgstr "tablo olmayan \"%s\" nesnesi kopyalanamaz"
 
-#: commands/copy.c:1076
+#: commands/copy.c:1066
 #: utils/adt/genfile.c:113
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
 msgstr "\"%s\" dosyası, okunmak için açılamadı: %m"
 
-#: commands/copy.c:1085
-#: commands/copy.c:1148
+#: commands/copy.c:1075
+#: commands/copy.c:1138
 #, c-format
 msgid "\"%s\" is a directory"
 msgstr "\"%s\" bir dizindir"
 
-#: commands/copy.c:1098
+#: commands/copy.c:1088
 #, c-format
 msgid "cannot copy from view \"%s\""
 msgstr "\"%s\" view'undan kopyalanamıyor"
 
-#: commands/copy.c:1103
+#: commands/copy.c:1093
 #, c-format
 msgid "cannot copy from sequence \"%s\""
 msgstr "\"%s\" sequence'inden kopyalanamıyor"
 
-#: commands/copy.c:1108
+#: commands/copy.c:1098
 #, c-format
 msgid "cannot copy from non-table relation \"%s\""
 msgstr "\"%s\" tablo olmayan nesnesinden copy yapılamıyor"
 
-#: commands/copy.c:1130
+#: commands/copy.c:1120
 msgid "relative path not allowed for COPY to file"
 msgstr "COPY işlemi ile dosyaya yazarken dosyanın tam yolunu belirtmelisiniz"
 
-#: commands/copy.c:1139
+#: commands/copy.c:1129
 #, c-format
 msgid "could not open file \"%s\" for writing: %m"
 msgstr "\"%s\" dosyası, yazmak için açılamadı: %m"
 
-#: commands/copy.c:1447
+#: commands/copy.c:1442
 #, c-format
 msgid "COPY %s, line %d, column %s"
 msgstr "COPY %s, satır %d, sütun %s"
 
-#: commands/copy.c:1451
-#: commands/copy.c:1496
+#: commands/copy.c:1446
+#: commands/copy.c:1491
 #, c-format
 msgid "COPY %s, line %d"
 msgstr "COPY %s, satır %d"
 
-#: commands/copy.c:1462
+#: commands/copy.c:1457
 #, c-format
 msgid "COPY %s, line %d, column %s: \"%s\""
 msgstr "COPY %s, satır %d, sütun %s: \"%s\""
 
-#: commands/copy.c:1470
+#: commands/copy.c:1465
 #, c-format
 msgid "COPY %s, line %d, column %s: NULL input"
 msgstr "COPY %s, satır %d, sütun %s: NULL girdi"
 
-#: commands/copy.c:1482
+#: commands/copy.c:1477
 #, c-format
 msgid "COPY %s, line %d: \"%s\""
 msgstr "COPY %s, satır %d: \"%s\""
 
-#: commands/copy.c:1678
+#: commands/copy.c:1673
 msgid "COPY file signature not recognized"
 msgstr "COPY dosya imzası tanınmamaktadır"
 
-#: commands/copy.c:1683
+#: commands/copy.c:1678
 msgid "invalid COPY file header (missing flags)"
 msgstr "COPY dosya başlığı geçersiz (flagler eksik)"
 
-#: commands/copy.c:1689
+#: commands/copy.c:1684
 msgid "unrecognized critical flags in COPY file header"
 msgstr "COPY dosya başlığında tanınmayan flag"
 
-#: commands/copy.c:1695
+#: commands/copy.c:1690
 msgid "invalid COPY file header (missing length)"
 msgstr "COPY dosya başlığı geçersiz (uzunluklar eksik)"
 
-#: commands/copy.c:1702
+#: commands/copy.c:1697
 msgid "invalid COPY file header (wrong length)"
 msgstr "geçersiz COPY dosya başlığı (yanlış uzunluk)"
 
-#: commands/copy.c:1791
+#: commands/copy.c:1786
 msgid "missing data for OID column"
 msgstr "OID sütunu için veri eksik"
 
-#: commands/copy.c:1797
+#: commands/copy.c:1792
 msgid "null OID in COPY data"
 msgstr "COPY verisinde null OID"
 
-#: commands/copy.c:1807
-#: commands/copy.c:1878
+#: commands/copy.c:1802
+#: commands/copy.c:1873
 msgid "invalid OID in COPY data"
 msgstr "COPY verisinde geçersiz OID"
 
-#: commands/copy.c:1822
+#: commands/copy.c:1817
 #, c-format
 msgid "missing data for column \"%s\""
 msgstr "\"%s\" sütunu için veri eksik"
 
-#: commands/copy.c:1862
+#: commands/copy.c:1857
 #, c-format
 msgid "row field count is %d, expected %d"
 msgstr "satır alanı sayısı %d, beklenen %d"
 
-#: commands/copy.c:2264
-#: commands/copy.c:2280
+#: commands/copy.c:2259
+#: commands/copy.c:2275
 msgid "literal carriage return found in data"
 msgstr "veride satır sonu karakterine rastlanmıştır"
 
-#: commands/copy.c:2265
-#: commands/copy.c:2281
+#: commands/copy.c:2260
+#: commands/copy.c:2276
 msgid "unquoted carriage return found in data"
 msgstr "veri içerisinde tırnak içinde olmayan satır sonu karakteri bulundu"
 
-#: commands/copy.c:2267
-#: commands/copy.c:2283
+#: commands/copy.c:2262
+#: commands/copy.c:2278
 msgid "Use \"\\r\" to represent carriage return."
 msgstr "Satır sonu karakteri için \"\\r\" kullanın."
 
-#: commands/copy.c:2268
-#: commands/copy.c:2284
+#: commands/copy.c:2263
+#: commands/copy.c:2279
 msgid "Use quoted CSV field to represent carriage return."
 msgstr "Satır sonunu göstermek için tırnak içinde CSV değerini kullanın."
 
-#: commands/copy.c:2296
+#: commands/copy.c:2291
 msgid "literal newline found in data"
 msgstr "veri içerisinde yeni satır karakteri bulundu"
 
-#: commands/copy.c:2297
+#: commands/copy.c:2292
 msgid "unquoted newline found in data"
 msgstr "veri içerisinde tırnak içinde olmayan yeni satır karakteri bulundu"
 
-#: commands/copy.c:2299
+#: commands/copy.c:2294
 msgid ""
 "Use \"\\n"
 "\" to represent newline."
@@ -3635,45 +3624,45 @@ msgstr ""
 "Yeni satır karakteri için \"\\n"
 "\" kullanın."
 
-#: commands/copy.c:2300
+#: commands/copy.c:2295
 msgid "Use quoted CSV field to represent newline."
 msgstr "Yeni satırı göstermek için tırnak içinde CSV değerini kullanın."
 
-#: commands/copy.c:2346
-#: commands/copy.c:2382
+#: commands/copy.c:2341
+#: commands/copy.c:2377
 msgid "end-of-copy marker does not match previous newline style"
 msgstr "end-of-copy göstergesi önceki yeni satır stiline uymuyor"
 
-#: commands/copy.c:2355
-#: commands/copy.c:2371
+#: commands/copy.c:2350
+#: commands/copy.c:2366
 msgid "end-of-copy marker corrupt"
 msgstr "end-of-copy göstergesi zarar görmüş"
 
-#: commands/copy.c:2497
-#: commands/copy.c:2533
-#: commands/copy.c:2697
-#: commands/copy.c:2735
+#: commands/copy.c:2492
+#: commands/copy.c:2528
+#: commands/copy.c:2692
+#: commands/copy.c:2730
 msgid "extra data after last expected column"
 msgstr "son beklenen sütundan sonra fazladan veri bulundu"
 
-#: commands/copy.c:2805
+#: commands/copy.c:2800
 msgid "unterminated CSV quoted field"
 msgstr "sonlandırılmamış CSV quoted alanı"
 
-#: commands/copy.c:2843
-#: commands/copy.c:2865
+#: commands/copy.c:2838
+#: commands/copy.c:2860
 msgid "unexpected EOF in COPY data"
 msgstr "COPY verisinde beklenmeyen dosya sonu"
 
-#: commands/copy.c:2852
+#: commands/copy.c:2847
 msgid "invalid field size"
 msgstr "geçersiz alan boyutu"
 
-#: commands/copy.c:2878
+#: commands/copy.c:2873
 msgid "incorrect binary data format"
 msgstr "ikili veri biçimi hatası"
 
-#: commands/copy.c:3066
+#: commands/copy.c:3109
 #: parser/parse_target.c:673
 #: parser/parse_target.c:684
 #, c-format
@@ -5990,7 +5979,7 @@ msgid "JOIN/ON clause refers to \"%s\", which is not part of JOIN"
 msgstr "JOIN/ON ifadesi, JOIN parçası olmayan \"%s\" öğesine referans etmektedir"
 
 #: parser/parse_clause.c:432
-#: gram.y:5777
+#: gram.y:5817
 msgid "subquery in FROM must have an alias"
 msgstr "FROM öğersindeki subquery bir aliası almalıdır"
 
@@ -6272,8 +6261,8 @@ msgstr "NOT DEFERRABLE yanlış yerde kullanılmış"
 
 #: parser/analyze.c:2990
 #: parser/analyze.c:3013
-#: gram.y:2579
-#: gram.y:2594
+#: gram.y:2592
+#: gram.y:2607
 msgid "constraint declared INITIALLY DEFERRED must be DEFERRABLE"
 msgstr "INITIALLY DEFERRED olarak tanımlanan kısıtlayıcı DEFERRABLE özelliğine sahip olmalıdır"
 
@@ -6844,26 +6833,26 @@ msgstr ""
 "Escape için standart sözdizimini kullanın, örneğin, E'\\r\\n"
 "'."
 
-#: gram.y:1159
-#: gram.y:1185
+#: gram.y:1172
+#: gram.y:1198
 msgid "time zone interval must be HOUR or HOUR TO MINUTE"
 msgstr "zaman dilimi aralığı  HOUR veya HOUR TO MINUTE olmalıdır"
 
-#: gram.y:1170
-#: gram.y:6101
-#: gram.y:8210
+#: gram.y:1183
+#: gram.y:6141
+#: gram.y:8250
 #, c-format
 msgid "INTERVAL(%d) precision must not be negative"
 msgstr "INTEVRAL(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:1176
-#: gram.y:6107
-#: gram.y:8216
+#: gram.y:1189
+#: gram.y:6147
+#: gram.y:8256
 #, c-format
 msgid "INTERVAL(%d) precision reduced to maximum allowed, %d"
 msgstr "INTEVRAL(%d) kesinliği izin verilen en yüksek değerine (%d) düşürülmüştür"
 
-#: gram.y:2104
+#: gram.y:2117
 #: utils/adt/ri_triggers.c:301
 #: utils/adt/ri_triggers.c:363
 #: utils/adt/ri_triggers.c:525
@@ -6883,175 +6872,181 @@ msgstr "INTEVRAL(%d) kesinliği izin verilen en yüksek değerine (%d) düşür�
 msgid "MATCH PARTIAL not yet implemented"
 msgstr "MATCH PARTIAL implemente edilmemiştir"
 
-#: gram.y:2195
+#: gram.y:2208
 msgid "CREATE TABLE AS may not specify INTO"
 msgstr "CREATE TABLE AS işleminde INTO kullanılamaz"
 
-#: gram.y:2646
+#: gram.y:2659
 msgid "CREATE ASSERTION is not yet implemented"
 msgstr "CREATE ASSERTION implemente edilmemiştir"
 
-#: gram.y:2662
+#: gram.y:2675
 msgid "DROP ASSERTION is not yet implemented"
 msgstr "DROP ASSERTION implemente edilmemiştir"
 
-#: gram.y:3935
+#: gram.y:3948
 #: utils/adt/regproc.c:635
 msgid "missing argument"
 msgstr "argüman eksik"
 
-#: gram.y:3936
+#: gram.y:3949
 #: utils/adt/regproc.c:636
 msgid "Use NONE to denote the missing argument of a unary operator."
 msgstr "Unary operator'un bir argümanı eksik olduğunu göstermek için NONE kullanın"
 
-#: gram.y:5132
+#: gram.y:4672
+#: gram.y:4678
+#: gram.y:4684
+msgid "WITH CHECK OPTION is not implemented"
+msgstr "WITH CHECK OPTION gerçekleştirilmemiştir"
+
+#: gram.y:5172
 msgid "column name list not allowed in CREATE TABLE / AS EXECUTE"
 msgstr "CREATE TABLE / AS EXECUTE işleminde sütun isim listesi verilmez"
 
-#: gram.y:5611
+#: gram.y:5651
 msgid "LIMIT #,# syntax is not supported"
 msgstr "LIMIT #,# sözdizimi desteklenmemektedir"
 
-#: gram.y:5612
+#: gram.y:5652
 msgid "Use separate LIMIT and OFFSET clauses."
 msgstr "Ayrı LIMIT ve OFFSET ifadeleri kullanın."
 
-#: gram.y:5778
+#: gram.y:5818
 msgid "For example, FROM (SELECT ...) [AS] foo."
 msgstr "Örneğin, FROM (SELECT ...) [AS] birşey."
 
-#: gram.y:6206
+#: gram.y:6246
 msgid "precision for type float must be at least 1 bit"
 msgstr "float veri tipinin kesinliği en az 1 bit olmalıdır"
 
-#: gram.y:6214
+#: gram.y:6254
 msgid "precision for type float must be less than 54 bits"
 msgstr "float veri tipinin kesinliği ne çok 54 bit olabilir"
 
-#: gram.y:6228
-#: gram.y:6243
+#: gram.y:6268
+#: gram.y:6283
 #, c-format
 msgid "NUMERIC precision %d must be between 1 and %d"
 msgstr "NUMERIC precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6233
+#: gram.y:6273
 #, c-format
 msgid "NUMERIC scale %d must be between 0 and precision %d"
 msgstr "NUMERIC %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6261
-#: gram.y:6276
+#: gram.y:6301
+#: gram.y:6316
 #, c-format
 msgid "DECIMAL precision %d must be between 1 and %d"
 msgstr "DECIMAL precision %d, 1 ile %d arasında olmalıdır"
 
-#: gram.y:6266
+#: gram.y:6306
 #, c-format
 msgid "DECIMAL scale %d must be between 0 and precision %d"
 msgstr "DECIMAL %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
-#: gram.y:6326
-#: gram.y:6404
+#: gram.y:6366
+#: gram.y:6444
 #, c-format
 msgid "length for type %s must be at least 1"
 msgstr "%s tipinin uzunluğu en az 1 olmalıdır"
 
-#: gram.y:6331
-#: gram.y:6409
+#: gram.y:6371
+#: gram.y:6449
 #, c-format
 msgid "length for type %s cannot exceed %d"
 msgstr "%s tipin uzunluğu %d değerini aşamaz"
 
-#: gram.y:6482
+#: gram.y:6522
 #, c-format
 msgid "TIMESTAMP(%d)%s precision must not be negative"
 msgstr "TIMESTAMP(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6488
+#: gram.y:6528
 #, c-format
 msgid "TIMESTAMP(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIMESTAMP(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6515
+#: gram.y:6555
 #, c-format
 msgid "TIME(%d)%s precision must not be negative"
 msgstr "TIME(%d)%s kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:6521
+#: gram.y:6561
 #, c-format
 msgid "TIME(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIME(%d)%s kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:6980
+#: gram.y:7020
 msgid "UNIQUE predicate is not yet implemented"
 msgstr "UNIQUE predicate implemente edilmemiştir"
 
-#: gram.y:7261
+#: gram.y:7301
 #, c-format
 msgid "CURRENT_TIME(%d) precision must not be negative"
 msgstr "CURRENT_TIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7267
+#: gram.y:7307
 #, c-format
 msgid "CURRENT_TIME(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7306
+#: gram.y:7346
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision must not be negative"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7312
+#: gram.y:7352
 #, c-format
 msgid "CURRENT_TIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "CURRENT_TIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7353
+#: gram.y:7393
 #, c-format
 msgid "LOCALTIME(%d) precision must not be negative"
 msgstr "LOCALTIME(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7359
+#: gram.y:7399
 #, c-format
 msgid "LOCALTIME(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIME(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:7401
+#: gram.y:7441
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision must not be negative"
 msgstr "LOCALTIMESTAMP(%d) kesinliği sıfırdan küçük olamaz"
 
-#: gram.y:7407
+#: gram.y:7447
 #, c-format
 msgid "LOCALTIMESTAMP(%d) precision reduced to maximum allowed, %d"
 msgstr "LOCALTIMESTAMP(%d) kesinliği en yüksek değerine (%d) kadar düşürüldü"
 
-#: gram.y:8685
+#: gram.y:8726
 msgid "OLD used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda OLD kullanıldı"
 
-#: gram.y:8694
+#: gram.y:8735
 msgid "NEW used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda NEW kullanıldı"
 
-#: gram.y:8895
+#: gram.y:8936
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sol tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:8901
+#: gram.y:8942
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sağ tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:9001
+#: gram.y:9042
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "birden çok ORDER BY ifadesi kullanılamaz"
 
-#: gram.y:9011
+#: gram.y:9052
 msgid "multiple OFFSET clauses not allowed"
 msgstr "birden fazla OFFSET ifadesi desteklenmemektedir"
 
-#: gram.y:9019
+#: gram.y:9060
 msgid "multiple LIMIT clauses not allowed"
 msgstr "birden çok LIMIT ifadesi kullanılamaz"
 
@@ -7741,172 +7736,168 @@ msgstr "arşivlenen transaction kayıt dosyası \"%s\""
 msgid "could not open archive status directory \"%s\": %m"
 msgstr "arşiv durum dizini \"%s\" açılamıyor: %m"
 
-#: postmaster/pgstat.c:264
+#: postmaster/pgstat.c:259
 #, c-format
 msgid "could not resolve \"localhost\": %s"
 msgstr "\"localhost\" adresi çözümlenemedi: %s"
 
-#: postmaster/pgstat.c:287
+#: postmaster/pgstat.c:282
 msgid "trying another address for the statistics collector"
 msgstr "istatistik toplayıcı sürecinin başka bir adresi deneneiyor"
 
-#: postmaster/pgstat.c:296
+#: postmaster/pgstat.c:291
 #, c-format
 msgid "could not create socket for statistics collector: %m"
 msgstr "istatistik toplayıcı socket oluşturma hatası: %m"
 
-#: postmaster/pgstat.c:308
+#: postmaster/pgstat.c:303
 #, c-format
 msgid "could not bind socket for statistics collector: %m"
 msgstr "istatistik toplayıcı soket bind hatası: %m"
 
-#: postmaster/pgstat.c:319
+#: postmaster/pgstat.c:314
 #, c-format
 msgid "could not get address of socket for statistics collector: %m"
 msgstr "istatistik toplayıcı sürecinin soket adresi alınamadı: %m"
 
-#: postmaster/pgstat.c:335
+#: postmaster/pgstat.c:330
 #, c-format
 msgid "could not connect socket for statistics collector: %m"
 msgstr "statistic collectror soket bağlama hatası: %m"
 
-#: postmaster/pgstat.c:352
+#: postmaster/pgstat.c:347
 #, c-format
 msgid "could not send test message on socket for statistics collector: %m"
 msgstr "istatistik toplayıcı sürecine test mesajı gönderme hatası: %m"
 
-#: postmaster/pgstat.c:377
-#: postmaster/pgstat.c:1686
+#: postmaster/pgstat.c:372
+#: postmaster/pgstat.c:1660
 #, c-format
 msgid "select() failed in statistics collector: %m"
 msgstr "istatistik toplayıcı sürecinde select() hatası: %m"
 
-#: postmaster/pgstat.c:392
+#: postmaster/pgstat.c:387
 msgid "test message did not get through on socket for statistics collector"
 msgstr "istatistik toplayıcı sürecine test mesajı gönderilemedi"
 
-#: postmaster/pgstat.c:404
+#: postmaster/pgstat.c:399
 #, c-format
 msgid "could not receive test message on socket for statistics collector: %m"
 msgstr "istatistik toplayıcı süreci deneme mesajı alma hatası: %m"
 
-#: postmaster/pgstat.c:414
+#: postmaster/pgstat.c:409
 msgid "incorrect test message transmission on socket for statistics collector"
 msgstr "istatistik toplayıcı sokket aracılığı ile mesaj gönderme hatası"
 
-#: postmaster/pgstat.c:438
+#: postmaster/pgstat.c:433
 #, c-format
 msgid "could not set statistics collector socket to nonblocking mode: %m"
 msgstr "istatistik toplayıcı soketi nonblocking durumuna getirilemedi: %m"
 
-#: postmaster/pgstat.c:448
+#: postmaster/pgstat.c:443
 msgid "disabling statistics collector for lack of working socket"
 msgstr "çalışan socket olmadığından istatistik toplayıcı iptal edildi"
 
-#: postmaster/pgstat.c:585
+#: postmaster/pgstat.c:580
 msgid "statistics collector startup skipped"
 msgstr "istatistik toplama süreci başlatılmayacak"
 
-#: postmaster/pgstat.c:606
+#: postmaster/pgstat.c:601
 #, c-format
 msgid "could not fork statistics buffer: %m"
 msgstr "istatistik tampon süreci başlatılamıyor: %m"
 
-#: postmaster/pgstat.c:1085
+#: postmaster/pgstat.c:1080
 msgid "must be superuser to reset statistics counters"
 msgstr "istatistik sayaçlarını sadece veritabanı superuserı sıfırlayabilir"
 
-#: postmaster/pgstat.c:1533
+#: postmaster/pgstat.c:1510
 #, c-format
 msgid "could not create pipe for statistics buffer: %m"
 msgstr "istatistik tamponu için pipe oluşturma hatası: %m"
 
-#: postmaster/pgstat.c:1545
+#: postmaster/pgstat.c:1522
 #, c-format
 msgid "could not fork statistics collector: %m"
 msgstr "istatistik toplayıcı başlatılamıyor: %m"
 
-#: postmaster/pgstat.c:1715
+#: postmaster/pgstat.c:1689
 #, c-format
 msgid "could not read from statistics collector pipe: %m"
 msgstr "istatistik toplayıcı pipe okuma hatası: %m"
 
-#: postmaster/pgstat.c:1736
+#: postmaster/pgstat.c:1710
 msgid "invalid statistics message length"
 msgstr "geçersiz istatistik mesaj uzunluğu "
 
-#: postmaster/pgstat.c:1821
+#: postmaster/pgstat.c:1789
 #, c-format
 msgid "could not set statistics collector timer: %m"
 msgstr "statistics collector zamanlayıcısı ayarlama hatası: %m"
 
-#: postmaster/pgstat.c:1905
+#: postmaster/pgstat.c:1873
 #, c-format
 msgid "could not set statistics collector pipe to nonblocking mode: %m"
 msgstr "istatistik toplayıcı pipe nonblocking durumuna getirilemedi: %m"
 
-#: postmaster/pgstat.c:1936
+#: postmaster/pgstat.c:1904
 msgid "statistics buffer is full"
 msgstr "istatistik tamponu dolsu"
 
-#: postmaster/pgstat.c:1969
+#: postmaster/pgstat.c:1937
 #, c-format
 msgid "select() failed in statistics buffer: %m"
 msgstr "istatistik toplama süreci içerisinde select() hatası: %m"
 
-#: postmaster/pgstat.c:1983
+#: postmaster/pgstat.c:1951
 #, c-format
 msgid "could not read statistics message: %m"
 msgstr "istatistik mesajı okunamadı: %m"
 
-#: postmaster/pgstat.c:2046
+#: postmaster/pgstat.c:2014
 #, c-format
 msgid "could not write to statistics collector pipe: %m"
 msgstr "statistics collector pipe yazma hatası: %m"
 
-#: postmaster/pgstat.c:2118
+#: postmaster/pgstat.c:2086
 #, c-format
 msgid "invalid server process ID %d"
 msgstr "geçersiz sunucu süreci ID %d"
 
-#: postmaster/pgstat.c:2264
+#: postmaster/pgstat.c:2232
 #, c-format
 msgid "could not open temporary statistics file \"%s\": %m"
 msgstr "geçici istatistik dosyası \"%s\" açılamıyor: %m"
 
-#: postmaster/pgstat.c:2339
+#: postmaster/pgstat.c:2307
 #, c-format
 msgid "could not write temporary statistics file \"%s\": %m"
 msgstr "geçici istatistik dosyasına \"%s\" yazılamıyor: %m"
 
-#: postmaster/pgstat.c:2348
+#: postmaster/pgstat.c:2316
 #, c-format
 msgid "could not close temporary statistics file \"%s\": %m"
 msgstr "geçici istatistik dosyası \"%s\" açılamıyor: %m"
 
-#: postmaster/pgstat.c:2356
+#: postmaster/pgstat.c:2324
 #, c-format
 msgid "could not rename temporary statistics file \"%s\" to \"%s\": %m"
 msgstr "geçici istatistik dosyasının adı değiştirilemiyor eski: \"%s\" yeni: \"%s\": %m"
 
-#: postmaster/pgstat.c:2463
-msgid "pgstat update timeout"
-msgstr "pgstat update timeout"
-
-#: postmaster/pgstat.c:2530
-#: postmaster/pgstat.c:2552
-#: postmaster/pgstat.c:2566
-#: postmaster/pgstat.c:2617
-#: postmaster/pgstat.c:2634
-#: postmaster/pgstat.c:2651
-#: postmaster/pgstat.c:2684
-#: postmaster/pgstat.c:2691
-#: postmaster/pgstat.c:2703
-#: postmaster/pgstat.c:2754
+#: postmaster/pgstat.c:2433
+#: postmaster/pgstat.c:2455
+#: postmaster/pgstat.c:2469
+#: postmaster/pgstat.c:2520
+#: postmaster/pgstat.c:2537
+#: postmaster/pgstat.c:2554
+#: postmaster/pgstat.c:2587
+#: postmaster/pgstat.c:2594
+#: postmaster/pgstat.c:2606
+#: postmaster/pgstat.c:2657
 msgid "corrupted pgstat.stat file"
 msgstr "bozuk pgstat.stat dosyası"
 
-#: postmaster/pgstat.c:3136
+#: postmaster/pgstat.c:3039
 msgid "database hash table corrupted during cleanup --- abort"
 msgstr "veritabanı %d için tablolar hash tablosu temizleme sırasında bozulmuştur --- iptal"
 
@@ -8893,12 +8884,12 @@ msgstr "\"%s\" fonksiyonu mevcut değil"
 msgid "must be member of role \"%s\""
 msgstr "\"%s\" rolüne dahil olmalıdır"
 
-#: utils/adt/ruleutils.c:1548
+#: utils/adt/ruleutils.c:1554
 #, c-format
 msgid "rule \"%s\" has unsupported event type %d"
 msgstr "\"%s\" rule desteklenmeyen veri tipine sahip %d"
 
-#: utils/adt/ruleutils.c:3838
+#: utils/adt/ruleutils.c:3844
 #: utils/adt/regproc.c:640
 #: utils/adt/regproc.c:1272
 msgid "too many arguments"

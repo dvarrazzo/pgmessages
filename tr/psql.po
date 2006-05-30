@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: psql-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:27-0400\n"
-"PO-Revision-Date: 2006-05-02 11:31+0200\n"
+"PO-Revision-Date: 2006-05-30 08:36+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "Zamanlama kapalı."
 #: command.c:1405
 #: command.c:1438
 #: common.c:168
-#: copy.c:535
+#: copy.c:534
 #: copy.c:582
 #, c-format
 msgid "%s: %s\n"
@@ -146,11 +146,11 @@ msgstr "Şifre: "
 #: common.c:214
 #: common.c:477
 #: common.c:543
-#: common.c:805
-#: common.c:832
-#: common.c:886
-#: copy.c:642
-#: copy.c:751
+#: common.c:806
+#: common.c:833
+#: common.c:887
+#: copy.c:653
+#: copy.c:790
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -338,13 +338,13 @@ msgid "Succeeded.\n"
 msgstr "Başarılı.\n"
 
 #: common.c:511
-#: common.c:762
+#: common.c:763
 msgid "You are currently not connected to a database.\n"
 msgstr "Şu anda bir veritabanına bağlı değilsiniz.\n"
 
 #: common.c:518
 #: common.c:525
-#: common.c:788
+#: common.c:789
 #, c-format
 msgid ""
 "********* QUERY **********\n"
@@ -362,7 +362,7 @@ msgstr ""
 msgid "Asynchronous notification \"%s\" received from server process with PID %d.\n"
 msgstr "PID %2$d olan sunucu sürecinden \"%1$s\" asenkon bildiri alınmış.\n"
 
-#: common.c:770
+#: common.c:771
 #, c-format
 msgid ""
 "***(Single step mode: verify command)*******************************************\n"
@@ -373,30 +373,30 @@ msgstr ""
 "%s\n"
 "***(devam etmek için return, durdurmak için x ve return'e basınız)********************\n"
 
-#: common.c:823
+#: common.c:824
 #, c-format
 msgid "The server version (%d) does not support savepoints for ON_ERROR_ROLLBACK.\n"
 msgstr "Sunucunu sürümü (%d) ON_ERROR_ROLLBACK biçiminde tablespace desteklememektedir.\n"
 
-#: common.c:896
+#: common.c:897
 #, c-format
 msgid "Time: %.3f ms\n"
 msgstr "Süre: %.3f milisaniye\n"
 
-#: copy.c:123
+#: copy.c:121
 msgid "\\copy: arguments required\n"
 msgstr "\\copy: parametre eksik\n"
 
-#: copy.c:410
+#: copy.c:406
 #, c-format
 msgid "\\copy: parse error at \"%s\"\n"
 msgstr "\\copy: \"%s\" ifadesinde ayrıştırma hatası\n"
 
-#: copy.c:412
+#: copy.c:408
 msgid "\\copy: parse error at end of line\n"
 msgstr "\\copy: satır sonunda ayrıştırma hatası\n"
 
-#: copy.c:546
+#: copy.c:545
 #, c-format
 msgid "%s: cannot copy from/to a directory\n"
 msgstr "%s: dizinden ya da dizine kopyalanamıyor\n"
@@ -411,12 +411,18 @@ msgstr "\\copy: %s"
 msgid "\\copy: unexpected response (%d)\n"
 msgstr "\\copy: beklenmeyen yanıt (%d)\n"
 
-#: copy.c:634
+#: copy.c:628
+#: copy.c:638
+#, c-format
+msgid "could not write COPY data: %s\n"
+msgstr "COPY verisi yazılamadı: %s\n"
+
+#: copy.c:645
 #, c-format
 msgid "COPY data transfer failed: %s"
 msgstr "COPY veri aktarımı başarısız: %s"
 
-#: copy.c:682
+#: copy.c:691
 msgid ""
 "Enter data to be copied followed by a newline.\n"
 "End with a backslash and a period on a line by itself."
@@ -424,7 +430,7 @@ msgstr ""
 "Kopyalanacak veriyi girin ve ardından entera basın.\n"
 "Sonuçlandırmak için yeni satırda ters taksim işareti ve nokta girin."
 
-#: copy.c:744
+#: copy.c:783
 msgid "aborted due to read failure"
 msgstr "okuma hatası nedeniyle kesildi"
 
@@ -988,22 +994,22 @@ msgstr "%s: geçerli transaction iptal edildi\n"
 msgid "%s: unknown transaction status\n"
 msgstr "%s: bilinmeyen transaction durumu\n"
 
-#: large_obj.c:260
-#: describe.c:81
-#: describe.c:132
-#: describe.c:186
-#: describe.c:259
-#: describe.c:320
-#: describe.c:371
-#: describe.c:473
-#: describe.c:766
+#: large_obj.c:248
+#: describe.c:80
+#: describe.c:131
+#: describe.c:185
+#: describe.c:258
+#: describe.c:319
+#: describe.c:370
+#: describe.c:472
+#: describe.c:765
 #: describe.c:1419
-#: describe.c:1491
-#: describe.c:1734
+#: describe.c:1495
+#: describe.c:1738
 msgid "Description"
 msgstr "Açıklama"
 
-#: large_obj.c:268
+#: large_obj.c:256
 msgid "Large objects"
 msgstr "Large objectler"
 
@@ -1156,233 +1162,233 @@ msgstr ""
 "         sokümanlarında \"Notes for Windows users\" bölümüne bakın.\n"
 "\n"
 
-#: describe.c:80
-#: describe.c:176
-#: describe.c:246
-#: describe.c:318
-#: describe.c:419
-#: describe.c:473
-#: describe.c:1479
-#: describe.c:1585
-#: describe.c:1634
+#: describe.c:79
+#: describe.c:175
+#: describe.c:245
+#: describe.c:317
+#: describe.c:418
+#: describe.c:472
+#: describe.c:1483
+#: describe.c:1589
+#: describe.c:1638
 msgid "Schema"
 msgstr "Şema"
 
-#: describe.c:80
-#: describe.c:126
-#: describe.c:176
-#: describe.c:246
-#: describe.c:318
-#: describe.c:360
-#: describe.c:419
-#: describe.c:473
-#: describe.c:1479
-#: describe.c:1586
-#: describe.c:1635
-#: describe.c:1728
+#: describe.c:79
+#: describe.c:125
+#: describe.c:175
+#: describe.c:245
+#: describe.c:317
+#: describe.c:359
+#: describe.c:418
+#: describe.c:472
+#: describe.c:1483
+#: describe.c:1590
+#: describe.c:1639
+#: describe.c:1732
 msgid "Name"
 msgstr "Adı"
 
-#: describe.c:80
+#: describe.c:79
 msgid "(all types)"
 msgstr "(tüm tipler)"
 
-#: describe.c:81
+#: describe.c:80
 msgid "Data type"
 msgstr "Veri tipi"
 
-#: describe.c:95
+#: describe.c:94
 msgid "List of aggregate functions"
 msgstr "Aggregate fonksiyonların listesi"
 
-#: describe.c:115
+#: describe.c:114
 #, c-format
 msgid "The server version (%d) does not support tablespaces.\n"
 msgstr "Sunucunu sürümü (%d) tablespace desteklememektedir.\n"
 
-#: describe.c:126
-#: describe.c:185
-#: describe.c:360
-#: describe.c:1481
-#: describe.c:1728
+#: describe.c:125
+#: describe.c:184
+#: describe.c:359
+#: describe.c:1485
+#: describe.c:1732
 msgid "Owner"
 msgstr "Sahibi"
 
-#: describe.c:126
+#: describe.c:125
 msgid "Location"
 msgstr "Yer"
 
-#: describe.c:132
-#: describe.c:419
-#: describe.c:1734
+#: describe.c:131
+#: describe.c:418
+#: describe.c:1738
 msgid "Access privileges"
 msgstr "Erişim hakları"
 
-#: describe.c:149
+#: describe.c:148
 msgid "List of tablespaces"
 msgstr "Tablespace listesi"
 
-#: describe.c:176
+#: describe.c:175
 msgid "Result data type"
 msgstr "Sonuç veri tipi"
 
-#: describe.c:177
+#: describe.c:176
 msgid "Argument data types"
 msgstr "Argüman veri tipi"
 
-#: describe.c:185
+#: describe.c:184
 msgid "Language"
 msgstr "Dil"
 
-#: describe.c:186
+#: describe.c:185
 msgid "Source code"
 msgstr "Kaynak kodu"
 
-#: describe.c:220
+#: describe.c:219
 msgid "List of functions"
 msgstr "Fonksiyonların listesi"
 
-#: describe.c:256
+#: describe.c:255
 msgid "Internal name"
 msgstr "Dahili adı"
 
-#: describe.c:256
+#: describe.c:255
 msgid "Size"
 msgstr "Boyut"
 
-#: describe.c:287
+#: describe.c:286
 msgid "List of data types"
 msgstr "Veri tiplerinin listesi"
 
-#: describe.c:319
+#: describe.c:318
 msgid "Left arg type"
 msgstr "Sol argüman veri tipi"
 
-#: describe.c:319
+#: describe.c:318
 msgid "Right arg type"
 msgstr "Sağ argüman veri tipi"
 
-#: describe.c:320
+#: describe.c:319
 msgid "Result type"
 msgstr "Sonuç veri tipi"
 
-#: describe.c:334
+#: describe.c:333
 msgid "List of operators"
 msgstr "Operatörlerin listesi"
 
-#: describe.c:363
+#: describe.c:362
 msgid "Encoding"
 msgstr "Dil Kodlaması"
 
-#: describe.c:368
+#: describe.c:367
 msgid "Tablespace"
 msgstr "Tablespace"
 
-#: describe.c:386
+#: describe.c:385
 msgid "List of databases"
 msgstr "Veritabanlarının listesi"
 
-#: describe.c:419
-#: describe.c:548
-#: describe.c:1480
+#: describe.c:418
+#: describe.c:547
+#: describe.c:1484
 msgid "table"
 msgstr "tablo"
 
-#: describe.c:419
-#: describe.c:548
-#: describe.c:1480
+#: describe.c:418
+#: describe.c:547
+#: describe.c:1484
 msgid "view"
 msgstr "view"
 
-#: describe.c:419
-#: describe.c:548
-#: describe.c:1480
+#: describe.c:418
+#: describe.c:547
+#: describe.c:1484
 msgid "sequence"
 msgstr "sequence"
 
-#: describe.c:419
-#: describe.c:753
-#: describe.c:1481
-#: describe.c:1587
+#: describe.c:418
+#: describe.c:752
+#: describe.c:1485
+#: describe.c:1591
 msgid "Type"
 msgstr "Veri tipi"
 
-#: describe.c:441
+#: describe.c:440
 #, c-format
 msgid "Access privileges for database \"%s\""
 msgstr "\"%s\" veritabanının erişim hakları"
 
-#: describe.c:473
+#: describe.c:472
 msgid "Object"
 msgstr "Nesne"
 
-#: describe.c:484
+#: describe.c:483
 msgid "aggregate"
 msgstr "aggregate"
 
-#: describe.c:503
+#: describe.c:502
 msgid "function"
 msgstr "fonksiyon"
 
-#: describe.c:517
+#: describe.c:516
 msgid "operator"
 msgstr "operatör"
 
-#: describe.c:531
+#: describe.c:530
 msgid "data type"
 msgstr "veri tipi"
 
-#: describe.c:548
-#: describe.c:1480
+#: describe.c:547
+#: describe.c:1484
 msgid "index"
 msgstr "indeks"
 
-#: describe.c:564
+#: describe.c:563
 msgid "rule"
 msgstr "rule"
 
-#: describe.c:580
+#: describe.c:579
 msgid "trigger"
 msgstr "tetikleyici (trigger)"
 
-#: describe.c:598
+#: describe.c:597
 msgid "Object descriptions"
 msgstr "Nesne açıklamaları"
 
-#: describe.c:646
+#: describe.c:645
 #, c-format
 msgid "Did not find any relation named \"%s\".\n"
 msgstr "\"%s\" adında nesne bulunamadı.\n"
 
-#: describe.c:736
+#: describe.c:735
 #, c-format
 msgid "Did not find any relation with OID %s.\n"
 msgstr "OID %s olan nesne bulunamadı.\n"
 
-#: describe.c:752
+#: describe.c:751
 msgid "Column"
 msgstr "Kolon"
 
-#: describe.c:760
+#: describe.c:759
 msgid "Modifiers"
 msgstr "Modifiers"
 
-#: describe.c:868
+#: describe.c:867
 #, c-format
 msgid "Table \"%s.%s\""
 msgstr "Tablo \"%s.%s\""
 
-#: describe.c:872
+#: describe.c:871
 #, c-format
 msgid "View \"%s.%s\""
 msgstr "View \"%s.%s\""
 
-#: describe.c:876
+#: describe.c:875
 #, c-format
 msgid "Sequence \"%s.%s\""
 msgstr "Sequence \"%s.%s\""
 
-#: describe.c:880
+#: describe.c:879
 #, c-format
 msgid "Index \"%s.%s\""
 msgstr "İndex \"%s.%s\""
@@ -1482,8 +1488,8 @@ msgstr " OIDleri var"
 #: describe.c:1411
 #: describe.c:1412
 #: describe.c:1413
-#: describe.c:1638
-#: describe.c:1695
+#: describe.c:1642
+#: describe.c:1699
 msgid "yes"
 msgstr "evet"
 
@@ -1491,8 +1497,8 @@ msgstr "evet"
 #: describe.c:1411
 #: describe.c:1412
 #: describe.c:1413
-#: describe.c:1639
-#: describe.c:1693
+#: describe.c:1643
+#: describe.c:1697
 msgid "no"
 msgstr "hayır"
 
@@ -1538,85 +1544,85 @@ msgstr "Üyesidir"
 msgid "List of roles"
 msgstr "Veritabanı rolleri listesi"
 
-#: describe.c:1481
+#: describe.c:1485
 msgid "special"
 msgstr "özel"
 
-#: describe.c:1486
+#: describe.c:1490
 msgid "Table"
 msgstr "Tablo"
 
-#: describe.c:1540
+#: describe.c:1544
 #, c-format
 msgid "No matching relations found.\n"
 msgstr "Eşleşen nesne bulunamadı.\n"
 
-#: describe.c:1542
+#: describe.c:1546
 #, c-format
 msgid "No relations found.\n"
 msgstr "Nesne bulunamadı.\n"
 
-#: describe.c:1547
+#: describe.c:1551
 msgid "List of relations"
 msgstr "Nesnelerin listesi"
 
-#: describe.c:1588
+#: describe.c:1592
 msgid "Modifier"
 msgstr "Düzenleyici"
 
-#: describe.c:1589
+#: describe.c:1593
 msgid "Check"
 msgstr "Check"
 
-#: describe.c:1603
+#: describe.c:1607
 msgid "List of domains"
 msgstr "Domainlerin listesi"
 
-#: describe.c:1636
+#: describe.c:1640
 msgid "Source"
 msgstr "Kaynak"
 
-#: describe.c:1637
+#: describe.c:1641
 msgid "Destination"
 msgstr "Hedef"
 
-#: describe.c:1640
+#: describe.c:1644
 msgid "Default?"
 msgstr "Varsayılan?"
 
-#: describe.c:1654
+#: describe.c:1658
 msgid "List of conversions"
 msgstr "Dönüşümlerin listesi"
 
-#: describe.c:1689
+#: describe.c:1693
 msgid "Source type"
 msgstr "Kaynak tipi"
 
-#: describe.c:1690
+#: describe.c:1694
 msgid "Target type"
 msgstr "Hedef tipi"
 
-#: describe.c:1691
+#: describe.c:1695
 msgid "(binary compatible)"
 msgstr "(ikili (binary) uyumlu)"
 
-#: describe.c:1692
+#: describe.c:1696
 msgid "Function"
 msgstr "Fonksiyon"
 
-#: describe.c:1694
+#: describe.c:1698
 msgid "in assignment"
 msgstr "in assignment"
 
-#: describe.c:1696
+#: describe.c:1700
 msgid "Implicit?"
 msgstr "Örtülü mü?"
 
-#: describe.c:1704
+#: describe.c:1708
 msgid "List of casts"
 msgstr "Castlerin listesi"
 
-#: describe.c:1754
+#: describe.c:1758
 msgid "List of schemas"
 msgstr "Şemaların listesi"
 
