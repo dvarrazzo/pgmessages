@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-05-30 08:35+0200\n"
+"PO-Revision-Date: 2006-06-03 10:37+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -794,7 +794,7 @@ msgstr "\"%s\" dosyası \"%s\" dosyasına bağlanamadı: %m"
 #: access/transam/xlog.c:3435
 #: access/transam/xlog.c:4242
 #: access/transam/xlog.c:4283
-#: postmaster/pgarch.c:560
+#: postmaster/pgarch.c:564
 #: utils/init/flatfiles.c:271
 #: utils/init/flatfiles.c:658
 #, c-format
@@ -2246,17 +2246,17 @@ msgstr "sistem nesnesi tarafından kullanıldığı için %s kaldırılamıyor"
 msgid "large object %u does not exist"
 msgstr "large object %u mevcut değil"
 
-#: catalog/pg_conversion.c:65
+#: catalog/pg_conversion.c:66
 #, c-format
 msgid "conversion \"%s\" already exists"
 msgstr "conversion \"%s\" zaten mevcut"
 
-#: catalog/pg_conversion.c:78
+#: catalog/pg_conversion.c:79
 #, c-format
 msgid "default conversion for %s to %s already exists"
 msgstr "%s'dan %s'a öntanımlı dönüşüm zaten mevcut"
 
-#: catalog/pg_conversion.c:308
+#: catalog/pg_conversion.c:315
 #: commands/comment.c:1131
 #: commands/conversioncmds.c:114
 #: commands/conversioncmds.c:148
@@ -4332,7 +4332,7 @@ msgstr "setval: %s değeri kapsam dışıdır, sequence \"%s\" (%s..%s)"
 #: utils/adt/regexp.c:168
 #: utils/adt/varlena.c:2679
 #: utils/adt/varlena.c:2702
-#: utils/fmgr/dfmgr.c:127
+#: utils/fmgr/dfmgr.c:131
 #: utils/hash/dynahash.c:215
 #: utils/hash/dynahash.c:273
 #: utils/hash/dynahash.c:659
@@ -7221,7 +7221,7 @@ msgid "checkpoint request failed"
 msgstr "checkpoint isteği başarısız"
 
 #: postmaster/bgwriter.c:616
-msgid "Consult the server log for details."
+msgid "Consult recent messages in the server log for details."
 msgstr "Ayrıntılar için sunucu günlük dosyasına bakın."
 
 #: postmaster/postmaster.c:481
@@ -7716,22 +7716,22 @@ msgstr "çocuk süreç handle bekleme hatası: error kodu: %d\n"
 msgid "could not fork archiver: %m"
 msgstr "archiver başlatılamadı: %m"
 
-#: postmaster/pgarch.c:372
+#: postmaster/pgarch.c:376
 #, c-format
 msgid "transaction log file \"%s\" could not be archived: too many failures"
 msgstr "transaction log dosyası \"%s\" arşivlenemedi: çok fazla başarısız işlem"
 
-#: postmaster/pgarch.c:455
+#: postmaster/pgarch.c:459
 #, c-format
 msgid "archive command \"%s\" failed: return code %d"
 msgstr "arşiv komutu \"%s\" başarısız: döndürülen kod %d"
 
-#: postmaster/pgarch.c:460
+#: postmaster/pgarch.c:464
 #, c-format
 msgid "archived transaction log file \"%s\""
 msgstr "arşivlenen transaction kayıt dosyası \"%s\""
 
-#: postmaster/pgarch.c:506
+#: postmaster/pgarch.c:510
 #, c-format
 msgid "could not open archive status directory \"%s\": %m"
 msgstr "arşiv durum dizini \"%s\" açılamıyor: %m"
@@ -10674,33 +10674,57 @@ msgstr "ÖLÜMCÜL"
 msgid "PANIC"
 msgstr "KRİTİK"
 
-#: utils/fmgr/dfmgr.c:107
-#: utils/fmgr/dfmgr.c:209
-#: utils/fmgr/dfmgr.c:263
+#: utils/fmgr/dfmgr.c:111
+#: utils/fmgr/dfmgr.c:261
+#: utils/fmgr/dfmgr.c:315
 #, c-format
 msgid "could not access file \"%s\": %m"
 msgstr "\"%s\" dosyası erişim hatası: %m"
 
-#: utils/fmgr/dfmgr.c:145
+#: utils/fmgr/dfmgr.c:149
 #, c-format
 msgid "could not load library \"%s\": %s"
 msgstr "\"%s\" kütüphanesi yüklenemedi: %s"
 
-#: utils/fmgr/dfmgr.c:175
+#: utils/fmgr/dfmgr.c:177
+#, c-format
+msgid "incompatible library \"%s\": version mismatch"
+msgstr "uyumsuz kütüphane \"%s\": sürüm uyumsuz"
+
+#: utils/fmgr/dfmgr.c:179
+#, c-format
+msgid "Server is version %d.%d, library is version %d.%d."
+msgstr "Sunucu sürümü: %d.%d, kütüphane sürümü: %d.%d."
+
+#: utils/fmgr/dfmgr.c:185
+#, c-format
+msgid "incompatible library \"%s\": magic block mismatch"
+msgstr "uyumsuz kütüphane \"%s\": magic block uyumsuz"
+
+#: utils/fmgr/dfmgr.c:196
+#, c-format
+msgid "incompatible library \"%s\": missing magic block"
+msgstr "uyumsuz kütüphane \"%s\": magic block eksik"
+
+#: utils/fmgr/dfmgr.c:198
+msgid "Extension libraries are now required to use the PG_MODULE_MAGIC macro."
+msgstr "PG_MODULE_MAGIC kullanımı için extension kütüphaneleri kullanmak artık zorunludur."
+
+#: utils/fmgr/dfmgr.c:227
 #, c-format
 msgid "could not find function \"%s\" in file \"%s\""
 msgstr "\"%2$s\" dosyasında \"%1$s\" fonksiyonu bulunamadı"
 
-#: utils/fmgr/dfmgr.c:354
+#: utils/fmgr/dfmgr.c:406
 #, c-format
 msgid "invalid macro name in dynamic library path: %s"
 msgstr "dinamik kütüphane yolunda geçersiz makro adı: %s"
 
-#: utils/fmgr/dfmgr.c:398
+#: utils/fmgr/dfmgr.c:450
 msgid "zero-length component in parameter \"dynamic_library_path\""
 msgstr "\"dynamic_library_path\" parametresinde sıfır uzunluklu bileşen"
 
-#: utils/fmgr/dfmgr.c:418
+#: utils/fmgr/dfmgr.c:470
 msgid "component in parameter \"dynamic_library_path\" is not an absolute path"
 msgstr "\"dynamic_library_path\" parametresine bileşen kesin bir yol değildir"
 
@@ -10951,14 +10975,14 @@ msgstr "\"%2$s\" sıfırlama fonkiyonu içeren \"%1$s\" kutüphanesi"
 msgid "preloaded library \"%s\""
 msgstr "\"%s\" kütüphanesi yüklendi"
 
-#: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:135
-#: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:163
+#: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:137
+#: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:165
 #, c-format
 msgid "unexpected encoding id %d for ISO-8859 charsets"
 msgstr "ISO-8859 karakter kümesi için beklemnmeyen kodlama: %d"
 
-#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:125
-#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:153
+#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:127
+#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:155
 #, c-format
 msgid "unexpected encoding id %d for WIN charsets"
 msgstr "WIN karakter kümeleri için beklemnmeyen kodlama: %d"
