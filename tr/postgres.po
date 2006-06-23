@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-06-23 00:09+0200\n"
+"PO-Revision-Date: 2006-06-24 00:37+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmaill.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -1400,9 +1400,9 @@ msgid "Try \"%s --help\" for more information.\n"
 msgstr "Daha fazla bilgi için \"%s --help\" yazın\n"
 
 #: bootstrap/bootstrap.c:333
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid command-line arguments\n"
-msgstr "%s: komut satırı parametresi yanlış"
+msgstr "%s: geçersiz komut satırı parametresi\n"
 
 #: y.tab.c:617
 #: y.tab.c:11714
@@ -3059,9 +3059,9 @@ msgid "aggregate transition data type cannot be %s"
 msgstr "aggregate transaction veri tipi %s olamaz"
 
 #: commands/aggregatecmds.c:220
-#, fuzzy, c-format
+#, c-format
 msgid "aggregate %s does not exist ... skipping"
-msgstr "aggregate %s mevcut değil"
+msgstr "aggregate %s mevcut değil ... atlanıyor"
 
 #: commands/aggregatecmds.c:286
 #: commands/functioncmds.c:838
@@ -3822,9 +3822,9 @@ msgid "function result type must be specified"
 msgstr "fonksiyonun döndürme tipi belirtilmelidir"
 
 #: commands/functioncmds.c:694
-#, fuzzy, c-format
+#, c-format
 msgid "function %s(%s) does not exist ... skipping"
-msgstr "%s fonksiyonu mevcut değildir"
+msgstr "%s(%s) fonksiyonu mevcut değildir ... atlanıyor"
 
 #: commands/functioncmds.c:717
 #: commands/functioncmds.c:823
@@ -3911,9 +3911,9 @@ msgid "cast from type %s to type %s already exists"
 msgstr "%s tipinden %s tipini cast etme zaten mevcut"
 
 #: commands/functioncmds.c:1407
-#, fuzzy, c-format
+#, c-format
 msgid "cast from type %s to type %s does not exist ... skipping"
-msgstr "%s tipinden %s tipine cast mevcut değildir"
+msgstr "%s tipinden %s tipine cast mevcut değildir ... atlanıyor"
 
 #: commands/functioncmds.c:1508
 #, c-format
@@ -4128,9 +4128,9 @@ msgid "operator procedure must be specified"
 msgstr "operatör yordamı belirtilmelidir"
 
 #: commands/operatorcmds.c:221
-#, fuzzy, c-format
+#, c-format
 msgid "operator %s does not exist ... skipping"
-msgstr "rol \"%s\" mevcut değil, atlanıyor"
+msgstr "\"%s\" operatorü mevcut değil ... atlanıyor"
 
 #: commands/portalcmds.c:55
 #: commands/portalcmds.c:186
@@ -4230,9 +4230,9 @@ msgid "must be superuser to drop procedural language"
 msgstr "yordamsal dili kaldırmak için superuser olmalısınız"
 
 #: commands/proclang.c:406
-#, fuzzy, c-format
+#, c-format
 msgid "language \"%s\" does not exist ... skipping"
-msgstr "rol \"%s\" mevcut değil, atlanıyor"
+msgstr "\"%s\" dili mevcut değil ... atlanıyor"
 
 #: commands/proclang.c:483
 msgid "must be superuser to rename procedural language"
@@ -4566,9 +4566,9 @@ msgid "tablespaces are not supported on this platform"
 msgstr "bu platformda tablespace desteklenmiyor"
 
 #: commands/tablespace.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "tablespace \"%s\" does not exist ... skipping"
-msgstr "tablo \"%s\" mevcut değil, atlanıyor"
+msgstr "tabloaralışı \"%s\" mevcut değil ... atlanıyor"
 
 #: commands/tablespace.c:468
 #, c-format
@@ -4629,9 +4629,9 @@ msgid "function %s must return type \"trigger\""
 msgstr "%s fonksiyonu \"trigger\" tipini döndürmelidir"
 
 #: commands/trigger.c:493
-#, fuzzy, c-format
+#, c-format
 msgid "trigger \"%s\" for table \"%s\" does not exist ...skipping"
-msgstr "\"%s\" triggeri \"%s\" tablosunda mevcut değil"
+msgstr "\"%s\" triggeri \"%s\" tablosunda mevcut değil ...atlanıyor"
 
 #: commands/trigger.c:787
 #, c-format
@@ -6050,21 +6050,23 @@ msgid ""
 "\n"
 "Options for single-user mode:\n"
 msgstr ""
+"\n"
+"Tek kullanıcılı biçimi seçenekleri:\n"
 
 #: main/main.c:306
 #, c-format
 msgid "  --single        selects single-user mode (must be first argument)\n"
-msgstr ""
+msgstr "  --single        tek kullanıcılı biçini seçiyor (ilk argüman olmalı)\n"
 
 #: main/main.c:307
 #, c-format
 msgid "  DBNAME          database name (defaults to user name)\n"
-msgstr ""
+msgstr "  DBNAME          veritabanı adı (varsayılan, kullanıcı adı)\n"
 
 #: main/main.c:308
-#, fuzzy, c-format
+#, c-format
 msgid "  -d 0-5          override debugging level\n"
-msgstr "  -d 0-5          debug düzeyi\n"
+msgstr "  -d 0-5          debug düzeyi değiştir\n"
 
 #: main/main.c:309
 #, c-format
@@ -6088,16 +6090,18 @@ msgid ""
 "\n"
 "Options for bootstrapping mode:\n"
 msgstr ""
+"\n"
+"Bootstrapping biçimi seçenekleri:\n"
 
 #: main/main.c:314
 #, c-format
 msgid "  --boot          selects bootstrapping mode (must be first argument)\n"
-msgstr ""
+msgstr "  --boot          bootstrapping biçimini seçiyor (mutlaka ilk argüman olmalı)\n"
 
 #: main/main.c:315
 #, c-format
 msgid "  DBNAME          database name (mandatory argument in bootstrapping mode)\n"
-msgstr ""
+msgstr "  DBNAME          veritabanı adı (bootstrapping biçimi için zorunlu argüman)\n"
 
 #: main/main.c:317
 #, c-format
@@ -6346,9 +6350,8 @@ msgid "rule WHERE condition may not contain references to other relations"
 msgstr "rule tanımının WHERE öğesinde başka tablolara referans rastlanmamalıdır"
 
 #: parser/analyze.c:1616
-#, fuzzy
 msgid "cannot use aggregate function in rule WHERE condition"
-msgstr "check constraint içinde aggregate function kullanılamaz"
+msgstr "WHERE şart ifadelerinde aggregate function kullanılamaz"
 
 #: parser/analyze.c:1685
 msgid "rules with WHERE conditions may only have SELECT, INSERT, UPDATE, or DELETE actions"
@@ -6399,9 +6402,8 @@ msgid "CREATE TABLE AS specifies too many column names"
 msgstr "CREATE TABLE AS işleminde belirtilen sütun sayısı çok fazla"
 
 #: parser/analyze.c:2358
-#, fuzzy
 msgid "cannot use aggregate function in UPDATE"
-msgstr "EXECUTE parametresinde aggregate fonksiyon kullanılamaz"
+msgstr "UPDATE parametresinde aggregate fonksiyon kullanılamaz"
 
 #: parser/analyze.c:2601
 msgid "cannot specify both SCROLL and NO SCROLL"
@@ -8146,9 +8148,9 @@ msgid "conditional utility statements are not implemented"
 msgstr "Conditional utility statements implement edilmemiş"
 
 #: rewrite/rewriteRemove.c:65
-#, fuzzy, c-format
+#, c-format
 msgid "rule \"%s\" for relation \"%s\" does not exist ... skipping"
-msgstr "\"%s\" rule'u \"%s\" tablosunda mevcut değil"
+msgstr "\"%s\" rule'u \"%s\" tablosunda mevcut değil ... atlanıyor"
 
 #: storage/buffer/bufmgr.c:249
 #, c-format
@@ -8528,7 +8530,7 @@ msgstr "geçerli transaction durduruldu, transaction blokunun sonua kadar komutl
 #: tcop/fastpath.c:319
 #, c-format
 msgid "fastpath function call: function OID %u"
-msgstr ""
+msgstr "fastpath function çağırımı: function OID %u"
 
 #: tcop/fastpath.c:423
 #: tcop/fastpath.c:553
@@ -8563,14 +8565,14 @@ msgstr "komut: %s%s"
 
 #: tcop/postgres.c:1100
 #: tcop/postgres.c:1830
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %ld.%03d ms"
-msgstr "süre: %ld.%03ld milisaniye"
+msgstr "süre: %ld.%03d milisaniye"
 
 #: tcop/postgres.c:1104
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %ld.%03d ms  statement: %s%s"
-msgstr "süre: %ld.%03ld milisaniye  deyim: %s%s"
+msgstr "süre: %ld.%03d milisaniye  deyim: %s%s"
 
 #: tcop/postgres.c:1154
 #, c-format
@@ -8618,9 +8620,9 @@ msgid "statement: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 msgstr "deyim: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 
 #: tcop/postgres.c:1834
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %ld.%03d ms  statement: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
-msgstr "süre: %ld.%03ld milisaniye  deyim: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
+msgstr "süre: %ld.%03d milisaniye  deyim: [protocol] %sEXECUTE %s  [PREPARE:  %s]"
 
 #: tcop/postgres.c:2107
 msgid "terminating connection because of crash of another server process"
@@ -8693,9 +8695,9 @@ msgid "invalid DESCRIBE message subtype %d"
 msgstr "geçersiz DESCRIBE mesaj alt tipi %d"
 
 #: tcop/postgres.c:3569
-#, fuzzy, c-format
+#, c-format
 msgid "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%s"
-msgstr "bağlantı bitti: oturum zamanı: %d:%02d:%02d.%02d user=%s database=%s host=%s%s%s"
+msgstr "bağlantı bitti: oturum zamanı: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%s"
 
 #: tcop/pquery.c:508
 #, c-format
@@ -11357,14 +11359,12 @@ msgid "Collects block-level statistics on database activity."
 msgstr "Veritabanı etkinliği istatistikleri blok düzeyinde toplar."
 
 #: utils/misc/guc.c:722
-#, fuzzy
 msgid "Collects information about executing commands."
 msgstr "Yürütülen komutların istatistik bilgilerini topluyor."
 
 #: utils/misc/guc.c:723
-#, fuzzy
 msgid "Enables the collection of information on the currently executing command of each session, along with the time at which that command began execution."
-msgstr "Her oturumunun şu anda yürütülen komutlarının istatistik toplamayı etkinleştir, ayrıca komutun yürütme başlama zamanı da günlüğe kaydet."
+msgstr "Her oturumunun şu anda yürütülen komutlarının bilgi ve komutun başlatma zamanı toplamayı etkinleştir."
 
 #: utils/misc/guc.c:733
 msgid "Starts the autovacuum subprocess."
@@ -12445,7 +12445,7 @@ msgstr "bilinmeyen hata %d"
 #: ../port/win32error.c:184
 #, c-format
 msgid "mapped win32 error code %lu to %d"
-msgstr ""
+msgstr "%lu win32 hata kodu %d koduna adreslendi"
 
 #: ../port/win32error.c:195
 #, c-format
