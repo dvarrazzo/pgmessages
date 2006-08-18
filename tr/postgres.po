@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:01-0400\n"
-"PO-Revision-Date: 2006-08-12 23:57+0200\n"
+"PO-Revision-Date: 2006-08-18 22:54+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-Country: TURKEY\n"
-"X-Poedit-Basepath: D:\\pg\\pgsql\\src\\backend\n"
+"X-Poedit-Basepath: /home/ntufar/pg/pgsql/src/backend\n"
 "X-Poedit-SearchPath-0: /home/ntufar/pg/pgsql/src/backend\n"
 
 #: access/common/indextuple.c:56
@@ -149,9 +149,9 @@ msgid "could not obtain lock on relation \"%s\""
 msgstr "\"%s\" tablosu için lock alınamadı"
 
 #: access/heap/heapam.c:736
-#, fuzzy, c-format
+#, c-format
 msgid "could not obtain lock on relation with OID %u"
-msgstr "\"%s\" tablosu için lock alınamadı"
+msgstr "OID %u olan tablosu için lock alınamadı"
 
 #: access/heap/heapam.c:828
 #: access/heap/heapam.c:858
@@ -621,9 +621,9 @@ msgid "contrecord is requested by %X/%X"
 msgstr "contrecord %X/%X tarafından talep edilmiştir"
 
 #: access/transam/xlog.c:2979
-#, fuzzy, c-format
+#, c-format
 msgid "invalid xlog switch record at %X/%X"
-msgstr "%X/%X adresinde geçersiz kayıt offseti"
+msgstr "%X/%X adresinde geçersiz xlog switch kaydı"
 
 #: access/transam/xlog.c:2987
 #, c-format
@@ -1048,9 +1048,9 @@ msgid "This probably means that some data is corrupted and you will have to use 
 msgstr "Büyük ihtimalle veri bozulmuştur, kurtarmak için en son yedeğinizi kullanın."
 
 #: access/transam/xlog.c:4641
-#, fuzzy, c-format
+#, c-format
 msgid "database system was interrupted while in recovery at log time %s"
-msgstr "%s'da recovery sırasında veritabanı sistemi durduruldu"
+msgstr "log time %s'da recovery sırasında veritabanı sistemi kesildi"
 
 #: access/transam/xlog.c:4643
 msgid "If this has occurred more than once some data may be corrupted and you may need to choose an earlier recovery target."
@@ -1238,9 +1238,9 @@ msgid "checkpoint complete; %d transaction log file(s) added, %d removed, %d rec
 msgstr "checkpoint tamamlandı; %d tane transaction log dosyası eklendi, %d tane kaldırıldı, %d tane yeniden kullanıma alındı"
 
 #: access/transam/xlog.c:5693
-#, fuzzy, c-format
+#, c-format
 msgid "recovery restart point at %X/%X"
-msgstr "redo başlangıcı %X/%X"
+msgstr "recoveri yeniden başlangıç noktası: %X/%X"
 
 #: access/transam/xlog.c:5788
 #, c-format
@@ -1315,15 +1315,14 @@ msgid "invalid data in file \"%s\""
 msgstr "\"%s\" dosyasında geçersiz veri"
 
 #: access/transam/xlog.c:6323
-#, fuzzy
 msgid "must be superuser to switch xlog files"
-msgstr "log dosyaları göndürmek için superuser olmalısınız"
+msgstr "log dosyaları değiştirmek için superuser olmalısınız"
 
 #: access/transam/xlog.c:6391
 #: access/transam/xlog.c:6434
-#, fuzzy, c-format
+#, c-format
 msgid "could not parse xlog location \"%s\""
-msgstr "\"%s\" tablosu için lock alınamadı"
+msgstr "\"%s\" xlog konumu ayrıştıramadı"
 
 #: access/transam/xlog.c:6580
 #, c-format
@@ -1986,9 +1985,8 @@ msgid "cannot determine transition data type"
 msgstr "geçiş veri tipi belirlenemedi"
 
 #: catalog/pg_aggregate.c:100
-#, fuzzy
 msgid "An aggregate using \"anyarray\" or \"anyelement\" as transition type must have at least one argument of either type."
-msgstr "Transition tipi \"anyarray\" ya da \"anyelement\" olan aggregatın temel tipi onlardan biri olmalıdır."
+msgstr "Transition tipi \"anyarray\" ya da \"anyelement\" olan aggregate'ın argüman tiplerinden en az biri onlardan biri olmalıdır."
 
 #: catalog/pg_aggregate.c:123
 #, c-format
@@ -2006,9 +2004,8 @@ msgid "cannot determine result data type"
 msgstr "sonuç veri tipi belirlenemiyor"
 
 #: catalog/pg_aggregate.c:178
-#, fuzzy
 msgid "An aggregate returning \"anyarray\" or \"anyelement\" must have at least one argument of either type."
-msgstr "\"anyarray\" veya \"anyelement\" döndüren fonksiyonlar bu tiplerden en az birer argümana sahip olmalıdır."
+msgstr "\"anyarray\" veya \"anyelement\" döndüren aggregateler bu tiplerden en az birer argümana sahip olmalıdır."
 
 #: catalog/pg_aggregate.c:187
 msgid "sort operator can only be specified for single-argument aggregates"
@@ -2147,18 +2144,18 @@ msgid "unsupported ON COMMIT and foreign key combination"
 msgstr "desteklenmeyen ON COMMIT ve foreign key birleştirmesi"
 
 #: catalog/heap.c:2140
-#, fuzzy, c-format
+#, c-format
 msgid "Table \"%s\" references \"%s\", but they do not have the same ON COMMIT setting."
-msgstr "\"%s\" tablosu \"%s\" tablosunu, \"%s\" bütünlük kısıtlayıcısı ile referans ediyor, ancak bu iki tablonun ON COMMIT ayarı farklıdır."
+msgstr "\"%s\" tablosu \"%s\" tablosuna başvuruyor ancak ikisi aynı ON COMMIT ayarına sahip değildir."
 
 #: catalog/heap.c:2145
 msgid "cannot truncate a table referenced in a foreign key constraint"
 msgstr "ikincil anahtar bütünlük kısıtlamasının refere ettiği tabloyu truncate edemezsiniz"
 
 #: catalog/heap.c:2146
-#, fuzzy, c-format
+#, c-format
 msgid "Table \"%s\" references \"%s\"."
-msgstr "\"%s\" tablo referanslı iki anlamlı"
+msgstr "\"%s\" tablosu \"%s\" tablosuna başvuruyor."
 
 #: catalog/heap.c:2148
 #, c-format
@@ -2861,9 +2858,9 @@ msgid "cannot have multiple SET TABLESPACE subcommands"
 msgstr "birden fazla SET TABLESPACE alt komutu veremezsiniz"
 
 #: commands/tablecmds.c:5815
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a table, index, or TOAST table"
-msgstr "\"%s\", \"%s\" tablosunun indexi değildir"
+msgstr "\"%s\" bir tablo, dizin, veya TOAST tablosu değildir"
 
 #: commands/tablecmds.c:5878
 #, c-format
@@ -2884,9 +2881,9 @@ msgid "circular inheritance structure found"
 msgstr "çevrimsel inheritance yapısı bulundu"
 
 #: commands/tablecmds.c:6159
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is already a child of \"%s\"."
-msgstr "\"%s\" zanten %s tipinin özelliğidir"
+msgstr "\"%s\" zaten \"%s\" nesnesinin alt nesnesidir"
 
 #: commands/tablecmds.c:6236
 #, c-format
@@ -2894,29 +2891,29 @@ msgid "column \"%s\" in child table must be NOT NULL"
 msgstr "al tablosundaki \"%s\" sütunu NOT NULL olmalıdır"
 
 #: commands/tablecmds.c:6258
-#, fuzzy, c-format
+#, c-format
 msgid "child table missing column \"%s\""
-msgstr "\"%s\" alt tablosundaki  \"%s\" sütununun tipi farklıdır"
+msgstr "alt tablosunda  \"%s\" sütunu eksiktir"
 
 #: commands/tablecmds.c:6350
 #, c-format
 msgid "child table missing constraint matching parent table constraint \"%s\""
-msgstr ""
+msgstr "üst tabloda var olan \"%s\" kısıtlaması alt tabloda eksiktir"
 
 #: commands/tablecmds.c:6360
-#, fuzzy, c-format
+#, c-format
 msgid "constraint definition for CHECK constraint \"%s\" doesn't match"
-msgstr "\"%2$s\" tablosu için \"%1$s\" bütünlük kısıtlaması mevcut değil"
+msgstr "CHECK kısıtlamasının \"%s\" kısıtlama tanımı uyuşmamaktadır"
 
 #: commands/tablecmds.c:6436
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s.%s\" is not a parent of relation \"%s\""
-msgstr "\"%s\" rolü, \"%s\" rolüne dahil değildir"
+msgstr "\"%s.%s\" nesnesi \"%s\" nesnesinin üst nesnesi değildir"
 
 #: commands/tablecmds.c:6441
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" is not a parent of relation \"%s\""
-msgstr "\"%s\" rolü, \"%s\" rolüne dahil değildir"
+msgstr "\"%s\" nesnesi \"%s\" nesnesinin üst nesnesi değildir"
 
 #: commands/tablecmds.c:6556
 #, c-format
@@ -3826,9 +3823,9 @@ msgid "%s requires a numeric value"
 msgstr "%s seçeneği sayısal değer gerektirir"
 
 #: commands/define.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "%s requires a boolean value"
-msgstr "--%s bir değer gerektirir"
+msgstr "%s, bir boole değeri gerektirir"
 
 #: commands/define.c:226
 #, c-format
@@ -5262,7 +5259,7 @@ msgstr "%u aggregate fonksiyonu uyumlu giriş ve geçiş tiplerine sahip olmalı
 
 #: executor/nodeAgg.c:1515
 msgid "DISTINCT is supported only for single-argument aggregates"
-msgstr ""
+msgstr "DISTINCT sace tek arümanlı aggregatelerde desteklenmektedir"
 
 #: executor/nodeFunctionscan.c:360
 #: executor/nodeFunctionscan.c:374
@@ -6303,7 +6300,7 @@ msgstr "JOIN/ON ifadesi, JOIN parçası olmayan \"%s\" öğesine referans etmekt
 #: parser/parse_clause.c:430
 #: gram.y:5968
 msgid "subquery in FROM must have an alias"
-msgstr "FROM öğersindeki subquery bir aliası almalıdır"
+msgstr "FROM öğesindeki subquery bir aliası almalıdır"
 
 #: parser/parse_clause.c:453
 msgid "subquery in FROM may not have SELECT INTO"
@@ -6410,29 +6407,27 @@ msgstr "INSERT ... SELECT ifadesinde INTO öğesi kullanılamaz"
 #: parser/analyze.c:724
 #: parser/analyze.c:2189
 msgid "VALUES lists must all be the same length"
-msgstr ""
+msgstr "VALUES listesi eşit uzunlukta olmalıdır"
 
 #: parser/analyze.c:743
 #: parser/analyze.c:2280
-#, fuzzy
 msgid "VALUES must not contain table references"
-msgstr "ACL array null kayıtları içeremez"
+msgstr "VALUES, tablo başvuruları içeremez"
 
 #: parser/analyze.c:755
 #: parser/analyze.c:2292
 msgid "VALUES must not contain OLD or NEW references"
-msgstr ""
+msgstr "VALUES kısmında OLD veya NEW başvurular bulunmamalıdır"
 
 #: parser/analyze.c:756
 #: parser/analyze.c:2293
 msgid "Use SELECT ... UNION ALL ... instead."
-msgstr ""
+msgstr "Onun yerine SELECT ... UNION ALL ... kullanın"
 
 #: parser/analyze.c:850
 #: parser/analyze.c:2303
-#, fuzzy
 msgid "cannot use aggregate function in VALUES"
-msgstr "UPDATE parametresinde aggregate fonksiyon kullanılamaz"
+msgstr "VALUES kısmında aggregate fonksiyonları kullanılamaz"
 
 #: parser/analyze.c:880
 msgid "INSERT has more expressions than target columns"
@@ -6509,13 +6504,12 @@ msgstr "ON DELETE rule NEW tanımını kullanamaz"
 
 #: parser/analyze.c:2202
 msgid "DEFAULT can only appear in a VALUES list within INSERT"
-msgstr ""
+msgstr "DEFAUL sadece INSERT içinde yer alan VALUES listesinde yer alabilir"
 
 #: parser/analyze.c:2269
 #: parser/analyze.c:3393
-#, fuzzy
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to VALUES"
-msgstr "SELECT FOR UPDATE/SHARE joine uygulanamaz"
+msgstr "SELECT FOR UPDATE/SHARE ifadesi VALUES kısmına uygulanamaz"
 
 #: parser/analyze.c:2504
 msgid "ORDER BY on a UNION/INTERSECT/EXCEPT result must be on one of the result columns"
@@ -6543,14 +6537,12 @@ msgid "cannot use aggregate function in UPDATE"
 msgstr "UPDATE parametresinde aggregate fonksiyon kullanılamaz"
 
 #: parser/analyze.c:2910
-#, fuzzy
 msgid "cannot use aggregate function in RETURNING"
-msgstr "UPDATE parametresinde aggregate fonksiyon kullanılamaz"
+msgstr "RETURNING parametresinde aggregate fonksiyon kullanılamaz"
 
 #: parser/analyze.c:2916
-#, fuzzy
 msgid "RETURNING may not contain references to other relations"
-msgstr "rule tanımının WHERE öğesinde başka tablolara referans rastlanmamalıdır"
+msgstr "RETURNING, başka nesnelere başvuru içeremez"
 
 #: parser/analyze.c:3111
 msgid "cannot specify both SCROLL and NO SCROLL"
@@ -6733,9 +6725,9 @@ msgid "function \"%s\" in FROM has unsupported return type %s"
 msgstr "FROM ifadesinde kullanılan \"%s\" fonksiyonu %s desteklenmeyen döndürme tipini kullanıyor"
 
 #: parser/parse_relation.c:983
-#, fuzzy, c-format
+#, c-format
 msgid "VALUES lists \"%s\" have %d columns available but %d columns specified"
-msgstr "\"%s\" tablosuna %d sütun bulunmakta ancak sorguda %d sütun belirtilmiş"
+msgstr "\"%s\" VALUES lıstesinde %d sütun varken %d sütun belirtilmiştir"
 
 #: parser/parse_relation.c:1639
 #, c-format
@@ -6829,9 +6821,9 @@ msgstr "%s'ın argümanları %s değil, tamsayı tipinde olamalıdır"
 
 #. translator: first %s is name of a SQL construct, eg LIMIT
 #: parser/parse_coerce.c:889
-#, fuzzy, c-format
+#, c-format
 msgid "argument of %s must be type bigint, not type %s"
-msgstr "%s'ın argümanları %s değil, tamsayı tipinde olamalıdır"
+msgstr "%s'ın argümanı %s değil, bigint tipinde olamalıdır"
 
 #: parser/parse_coerce.c:949
 #, c-format
@@ -6964,9 +6956,9 @@ msgid "No function matches the given name and argument types. You may need to ad
 msgstr "Verilmiş ad ve argüman tiplerine uyan fonksiyon bulunamamış. Explicit type cast eklemeniz gerekebilir."
 
 #: parser/parse_func.c:273
-#, fuzzy, c-format
+#, c-format
 msgid "%s(*) must be used to call a parameterless aggregate function"
-msgstr "%s(*) belirtilmiş, ancak %s bir aggregate fonksiyonu değildir"
+msgstr "%s(*) olmadan parametre olmayan aggregate çağırılamaz"
 
 #: parser/parse_func.c:285
 msgid "aggregates may not return sets"
@@ -7308,14 +7300,12 @@ msgid "Use separate LIMIT and OFFSET clauses."
 msgstr "Ayrı LIMIT ve OFFSET ifadeleri kullanın."
 
 #: gram.y:5963
-#, fuzzy
 msgid "VALUES in FROM must have an alias"
-msgstr "FROM öğersindeki subquery bir aliası almalıdır"
+msgstr "FROM öğesindeki VALUES'ler bir alias almalıdır"
 
 #: gram.y:5964
-#, fuzzy
 msgid "For example, FROM (VALUES ...) [AS] foo."
-msgstr "Örneğin, FROM (SELECT ...) [AS] birşey."
+msgstr "Örneğin, FROM (VALUES ...) [AS] birşey."
 
 #: gram.y:5969
 msgid "For example, FROM (SELECT ...) [AS] foo."
@@ -8042,9 +8032,9 @@ msgid "must be superuser to reset statistics counters"
 msgstr "istatistik sayaçlarını sadece veritabanı superuserı sıfırlayabilir"
 
 #: postmaster/pgstat.c:1696
-#, fuzzy, c-format
+#, c-format
 msgid "poll() failed in statistics collector: %m"
-msgstr "istatistik toplayıcı sürecinde select() hatası: %m"
+msgstr "istatistik toplayıcı sürecinde poll() hatası: %m"
 
 #: postmaster/pgstat.c:1739
 #, c-format
@@ -8399,9 +8389,9 @@ msgstr "\"max_fsm_pages\" yapılandırma parametresini %.0f değerine kadar yük
 
 #: storage/ipc/shmem.c:239
 #: storage/ipc/shmem.c:285
-#, fuzzy, c-format
+#, c-format
 msgid "cannot reset unknown shared memory context %s"
-msgstr "shared memory segment oluşturulamıyor: %m"
+msgstr "bilinmeyen shared memory context %s yeniden sıfırlanamıyor"
 
 #: storage/ipc/shmem.c:319
 #: storage/ipc/shmem.c:508
@@ -8724,7 +8714,7 @@ msgstr "süre: %ld.%03d milisaniye  deyim: %s%s"
 #: tcop/postgres.c:1150
 #, c-format
 msgid "prepare %s:  %s"
-msgstr ""
+msgstr "prepare %s:  %s"
 
 #: tcop/postgres.c:1216
 msgid "cannot insert multiple commands into a prepared statement"
@@ -8754,7 +8744,7 @@ msgstr "bind parametresinde geçersiz ikili veri %d"
 #: tcop/postgres.c:1613
 #, c-format
 msgid "bind %s%s%s:  %s"
-msgstr ""
+msgstr "bind %s%s%s:  %s"
 
 #: tcop/postgres.c:1700
 #: tcop/postgres.c:1981
@@ -8765,12 +8755,12 @@ msgstr "portal \"%s\" mevcut değildir"
 #: tcop/postgres.c:1751
 #, c-format
 msgid "execute %s%s%s%s:  %s"
-msgstr ""
+msgstr "execute %s%s%s%s:  %s"
 
 #: tcop/postgres.c:1861
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %ld.%03d ms  execute %s%s%s%s:  %s"
-msgstr "süre: %ld.%03d milisaniye  deyim: %s%s"
+msgstr "süre: %ld.%03d milisaniye  deyim %s%s%s%s:  %s"
 
 #: tcop/postgres.c:2136
 msgid "terminating connection because of crash of another server process"
@@ -11512,11 +11502,11 @@ msgstr "Her oturumunun şu anda yürütülen komutlarının bilgi ve komutun ba�
 
 #: utils/misc/guc.c:734
 msgid "Updates the process title to show the active SQL command."
-msgstr ""
+msgstr "Sürecin başlığında işlemede olan SQL komutu gösterilecek."
 
 #: utils/misc/guc.c:735
 msgid "Enables updating of the process title every time a new SQL command is received by the server."
-msgstr ""
+msgstr "Sunucu tarafından her yeni SQL komutu alındığında sürecin başlığı güncellenecektir."
 
 #: utils/misc/guc.c:743
 msgid "Starts the autovacuum subprocess."
@@ -12186,7 +12176,7 @@ msgstr "Time stamp veri tipini çıktısında kullanılacak zaman dilimi belirti
 
 #: utils/misc/guc.c:2101
 msgid "Selects a file of timezone abbreviations"
-msgstr ""
+msgstr "Timezone kısaltmaların olduğu dosyayı seçer"
 
 #: utils/misc/guc.c:2110
 msgid "Sets the current transaction's isolation level."
@@ -12425,73 +12415,73 @@ msgstr "salt okunur transaction okuma-yazma mosunda geçirilemiyor"
 #: utils/misc/tzparser.c:62
 #, c-format
 msgid "time zone abbreviation \"%s\" is too long (maximum %d characters) in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "\"%3$s\" timezone dosyasında, %4$d satırında, timezone kısaltması \"%1$s\" çok uzundur (en çok %2$d karakter olabilr) "
 
 #: utils/misc/tzparser.c:71
 #, c-format
 msgid "time zone offset %d is not a multiple of 900 sec (15 min) in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "\"%2$s\" timezone dosyasında, %3$d satırında, %1$d timezone offset 900 san. (15 dk.) veya katları değildir"
 
 #: utils/misc/tzparser.c:85
 #, c-format
 msgid "time zone offset %d is out of range in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "\"%2$s\" timezone dosyasında, %3$d satırında, %1$d timezone offset kapsam dışıdır"
 
 #: utils/misc/tzparser.c:122
-#, fuzzy, c-format
+#, c-format
 msgid "missing time zone abbreviation in time zone file \"%s\", line %d"
-msgstr "\"%s\" dosyasında %d satırın sonunda eksik giriş"
+msgstr "\"%s\" time zone dosyasında, %d satırında time zone kısaltması eksik"
 
 #: utils/misc/tzparser.c:133
-#, fuzzy, c-format
+#, c-format
 msgid "missing time zone offset in time zone file \"%s\", line %d"
-msgstr "\"%s\" dosyasında %d satırın sonunda eksik giriş"
+msgstr "\"%s\" time zone dosyasında, %d satırında time zone offset eksik"
 
 #: utils/misc/tzparser.c:142
 #, c-format
 msgid "invalid number for time zone offset in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "\"%s\" timezone dosyasında, %d satırında, time zone offset için geçersiz numara"
 
 #: utils/misc/tzparser.c:167
-#, fuzzy, c-format
+#, c-format
 msgid "invalid syntax in time zone file \"%s\", line %d"
-msgstr "\"%2$s\" dosyasında  %3$d satırında geçersiz IP maskesi \"%1$s\" : %4$s"
+msgstr "\"%s\" time zone dosyasında, %d satırında söz dizimi hatası"
 
 #: utils/misc/tzparser.c:233
 #, c-format
 msgid "time zone abbreviation \"%s\" is multiply defined"
-msgstr ""
+msgstr "\"%s\" time zone kısatması birden çok kez tanımlanmış"
 
 #: utils/misc/tzparser.c:235
 #, c-format
 msgid "Time zone file \"%s\", line %d conflicts with file \"%s\", line %d."
-msgstr ""
+msgstr "\"%s\" timezone dosyası, %d satırı, \"%s\" timezone dosyası, %d satırı ile çakışmaktadır"
 
 #: utils/misc/tzparser.c:302
-#, fuzzy, c-format
+#, c-format
 msgid "invalid time zone file name \"%s\""
-msgstr "geçersiz zaman dilimi adı: \"%s\""
+msgstr "geçersiz zaman dilimi dosyası adı: \"%s\""
 
 #: utils/misc/tzparser.c:317
-#, fuzzy, c-format
+#, c-format
 msgid "time zone file recursion limit exceeded in file \"%s\""
-msgstr "\"%s\" tablosuna bağlı rule'de sonsuz özyineleme bulundu"
+msgstr "\"%s\" dosyasında derinlik sınırı aşılmıştır. (DİKKAT: Bu hatayı gördüyseniz pgsql-hackers@postgresql.org listesine rapor gönderin)"
 
 #: utils/misc/tzparser.c:332
 #: utils/misc/tzparser.c:346
-#, fuzzy, c-format
+#, c-format
 msgid "could not read time zone file \"%s\": %m"
-msgstr "\"%s\" günlük dosyası oluşturma hatası: %m"
+msgstr "\"%s\" time zone dosyası okuma hatası: %m"
 
 #: utils/misc/tzparser.c:358
 #, c-format
 msgid "line is too long in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "\"%s\" timezone dosyası, %d satırında, satır çok uzundur"
 
 #: utils/misc/tzparser.c:383
 #, c-format
 msgid "@INCLUDE without filename in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "\"%s\" timezone dosyası, %d satırında @INCLUDE komutu dosya adını içermemktedir"
 
 #: guc-file.l:209
 #, c-format
