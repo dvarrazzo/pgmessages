@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpq-tr\n"
 "POT-Creation-Date: 2005-04-02 07:16+0100\n"
-"PO-Revision-Date: 2006-08-12 23:23+0200\n"
+"PO-Revision-Date: 2006-08-20 22:22+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <pgsql-tr-genel@PostgreSQL.org>\n"
 "MIME-Version: 1.0\n"
@@ -42,10 +42,10 @@ msgstr "SCM_CRED yetkilendirme yöntemi desteklenmiyor.\n"
 #: fe-connect.c:3098
 #: fe-connect.c:3138
 #: fe-connect.c:3156
-#: fe-exec.c:2570
+#: fe-exec.c:2750
 #: fe-lobj.c:616
 #: fe-protocol2.c:1027
-#: fe-protocol3.c:1210
+#: fe-protocol3.c:1307
 msgid "out of memory\n"
 msgstr "yetersiz bellek\n"
 
@@ -276,89 +276,95 @@ msgstr "UYARI: \"%s\" password dosyası düz metin dosyası değildir\n"
 msgid "WARNING: password file \"%s\" has world or group read access; permission should be u=rw (0600)\n"
 msgstr "UYARI: \"%s\" şifre dosyası herkes ya da grup tarafından erişilebilir durumda; dosyanın izinleri u=rw olmalı (0600)\n"
 
-#: fe-exec.c:493
+#: fe-exec.c:498
 msgid "NOTICE"
 msgstr "BİLGİ"
 
-#: fe-exec.c:677
-#: fe-exec.c:734
-#: fe-exec.c:774
+#: fe-exec.c:682
+#: fe-exec.c:739
+#: fe-exec.c:779
 msgid "command string is a null pointer\n"
 msgstr "komut katarı null belirteçtir\n"
 
-#: fe-exec.c:767
-#: fe-exec.c:862
+#: fe-exec.c:772
+#: fe-exec.c:867
 msgid "statement name is a null pointer\n"
 msgstr "durum adı null belirteçtir\n"
 
-#: fe-exec.c:782
-#: fe-exec.c:936
-#: fe-exec.c:1628
+#: fe-exec.c:787
+#: fe-exec.c:941
+#: fe-exec.c:1570
+#: fe-exec.c:1766
 msgid "function requires at least protocol version 3.0\n"
 msgstr "fonksiyon en az 3.0 prokolüne gereksinim duyar.\n"
 
-#: fe-exec.c:893
+#: fe-exec.c:898
 msgid "no connection to the server\n"
 msgstr "sunucuya bağlantı yok\n"
 
-#: fe-exec.c:900
+#: fe-exec.c:905
 msgid "another command is already in progress\n"
 msgstr "şu anda işlenen başka bir komut var\n"
 
-#: fe-exec.c:1010
+#: fe-exec.c:1015
 msgid "length must be given for binary parameter\n"
 msgstr "binary parametresinin uzunluğu belirtilmelidir\n"
 
-#: fe-exec.c:1257
+#: fe-exec.c:1262
 #, c-format
 msgid "unexpected asyncStatus: %d\n"
 msgstr "beklenmeyen asyncStatus: %d\n"
 
-#: fe-exec.c:1383
+#: fe-exec.c:1388
 msgid "COPY terminated by new PQexec"
 msgstr "COPY, yeni PQexec tarafından sonlandırıldı"
 
-#: fe-exec.c:1391
+#: fe-exec.c:1396
 msgid "COPY IN state must be terminated first\n"
 msgstr "Öncelikle COPY IN durumu sonlandırılmalıdır\n"
 
-#: fe-exec.c:1411
+#: fe-exec.c:1416
 msgid "COPY OUT state must be terminated first\n"
 msgstr "Öncelikle COPY OUT durumu sonlandırılmalıdır\n"
 
-#: fe-exec.c:1520
-#: fe-exec.c:1585
-#: fe-exec.c:1670
+#: fe-exec.c:1658
+#: fe-exec.c:1723
+#: fe-exec.c:1808
 #: fe-protocol2.c:1172
-#: fe-protocol3.c:1366
+#: fe-protocol3.c:1463
 msgid "no COPY in progress\n"
 msgstr "çalışan COPY süreci yok\n"
 
-#: fe-exec.c:1862
+#: fe-exec.c:2000
 msgid "connection in wrong state\n"
 msgstr "bağlantı yanlış durumda\n"
 
-#: fe-exec.c:1893
+#: fe-exec.c:2031
 msgid "invalid ExecStatusType code"
 msgstr "geçersizExecStatusType kodu"
 
-#: fe-exec.c:1957
-#: fe-exec.c:1980
+#: fe-exec.c:2095
+#: fe-exec.c:2118
 #, c-format
 msgid "column number %d is out of range 0..%d"
 msgstr "%d kolon numarası, 0..%d sınırının dışında"
 
-#: fe-exec.c:1973
+#: fe-exec.c:2111
 #, c-format
 msgid "row number %d is out of range 0..%d"
 msgstr "%d satır numarası, 0..%d sınırının dışında"
 
-#: fe-exec.c:2265
+#: fe-exec.c:2133
+#, c-format
+msgid "parameter number %d is out of range 0..%d"
+msgstr "%d parametre sıra şıdı: 0..%d"
+
+#: fe-exec.c:2419
 #, c-format
 msgid "could not interpret result from server: %s"
 msgstr "sunucudan gelen yanıt yorumlanamadı: %s"
 
-#: fe-exec.c:2478
+#: fe-exec.c:2658
 msgid "incomplete multibyte character\n"
 msgstr "tamamlanmamış çoklu bayt karakteri\n"
 
@@ -480,7 +486,7 @@ msgid "invalid state %c, probably indicative of memory corruption\n"
 msgstr "Geçersiz %c durumu, belleğin zarar görmesinin bir işareti olabilir\n"
 
 #: fe-protocol2.c:419
-#: fe-protocol3.c:184
+#: fe-protocol3.c:185
 #, c-format
 msgid "message type 0x%02x arrived from server while idle"
 msgstr "Sunucu boş durumdayken sunucudan 0x%02x ileti tipi geldi"
@@ -499,18 +505,18 @@ msgid "server sent binary data (\"B\" message) without prior row description (\"
 msgstr "Sunucu öncelikli satır tanımı olmadan ikili veri (\"D\" ileti) gönderdi (\"T\" ileti)"
 
 #: fe-protocol2.c:547
-#: fe-protocol3.c:356
+#: fe-protocol3.c:374
 #, c-format
 msgid "unexpected response from server; first received character was \"%c\"\n"
 msgstr "sunucudan beklenmeyen bir yanıt alındı; alınan ilk karakter\"%c\" idi\n"
 
 #: fe-protocol2.c:768
-#: fe-protocol3.c:595
+#: fe-protocol3.c:692
 msgid "out of memory for query result\n"
 msgstr "Sorgu sonucu için yetersiz bellek\n"
 
 #: fe-protocol2.c:1215
-#: fe-protocol3.c:1434
+#: fe-protocol3.c:1531
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -521,76 +527,76 @@ msgstr "sunucu ile eşzamanlama kayboldu, bağlantı yeniden açılıyor"
 
 #: fe-protocol2.c:1361
 #: fe-protocol2.c:1393
-#: fe-protocol3.c:1636
+#: fe-protocol3.c:1733
 #, c-format
 msgid "protocol error: id=0x%x\n"
 msgstr "protokol hatası: id=0x%x\n"
 
-#: fe-protocol3.c:318
+#: fe-protocol3.c:336
 msgid "server sent data (\"D\" message) without prior row description (\"T\" message)\n"
 msgstr "Sunucu öncelikli satır tanımı olmadan veri (\"D\" ileti) gönderdi (\"T\" ileti)\n"
 
-#: fe-protocol3.c:377
+#: fe-protocol3.c:395
 #, c-format
 msgid "message contents do not agree with length in message type \"%c\"\n"
 msgstr "İleti içeriği,\"%c\" ileti tipinin içindeki uzunlukla aynı değil\n"
 
-#: fe-protocol3.c:398
+#: fe-protocol3.c:416
 #, c-format
 msgid "lost synchronization with server: got message type \"%c\", length %d\n"
 msgstr "sunucu ile eşzamanlılık kayboldu: \"%c\" ileti tipi alındı, uzunluğu %d\n"
 
-#: fe-protocol3.c:540
+#: fe-protocol3.c:637
 msgid "unexpected field count in \"D\" message\n"
 msgstr "\"D\" iletisinde beklenmeyen alan sayısı\n"
 
 #. translator: %s represents a digit string
-#: fe-protocol3.c:682
-#: fe-protocol3.c:701
+#: fe-protocol3.c:779
+#: fe-protocol3.c:798
 #, c-format
 msgid " at character %s"
 msgstr "at character %s"
 
-#: fe-protocol3.c:714
+#: fe-protocol3.c:811
 #, c-format
 msgid "DETAIL:  %s\n"
 msgstr "AYRINTI:  %s\n"
 
-#: fe-protocol3.c:717
+#: fe-protocol3.c:814
 #, c-format
 msgid "HINT:  %s\n"
 msgstr "İPUCU:  %s\n"
 
-#: fe-protocol3.c:720
+#: fe-protocol3.c:817
 #, c-format
 msgid "QUERY:  %s\n"
 msgstr "SORGU:  %s\n"
 
-#: fe-protocol3.c:723
+#: fe-protocol3.c:820
 #, c-format
 msgid "CONTEXT:  %s\n"
 msgstr "CONTEXT:  %s\n"
 
-#: fe-protocol3.c:735
+#: fe-protocol3.c:832
 msgid "LOCATION:  "
 msgstr "YER:  "
 
-#: fe-protocol3.c:737
+#: fe-protocol3.c:834
 #, c-format
 msgid "%s, "
 msgstr "%s, "
 
-#: fe-protocol3.c:739
+#: fe-protocol3.c:836
 #, c-format
 msgid "%s:%s"
 msgstr "%s:%s"
 
-#: fe-protocol3.c:945
+#: fe-protocol3.c:1042
 #, c-format
 msgid "LINE %d: "
 msgstr "SATIR %d: "
 
-#: fe-protocol3.c:1252
+#: fe-protocol3.c:1349
 msgid "PQgetline: not doing text COPY OUT\n"
 msgstr "PQgetline: COPY OUT metnini yapmıyor\n"
 
