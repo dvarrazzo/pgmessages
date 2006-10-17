@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: psql-fr-81\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-10-16 01:16-0300\n"
-"PO-Revision-Date: 2006-10-16 22:32+0100\n"
+"PO-Revision-Date: 2006-10-17 23:10+0100\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -1660,15 +1660,14 @@ msgid "change the definition of an aggregate function"
 msgstr "modifier la définition d'une fonction d'agrégation"
 
 #: sql_help.h:30
-#, fuzzy
 msgid ""
 "ALTER AGGREGATE name ( type [ , ... ] ) RENAME TO new_name\n"
 "ALTER AGGREGATE name ( type [ , ... ] ) OWNER TO new_owner\n"
 "ALTER AGGREGATE name ( type [ , ... ] ) SET SCHEMA new_schema"
 msgstr ""
-"ALTER AGGREGATE nom ( type ) RENAME TO nouveau_nom\n"
-"ALTER AGGREGATE nom ( type ) OWNER TO nouveau_propriétaire\n"
-"ALTER AGGREGATE nom ( type ) SET SCHEMA nouveau_schéma"
+"ALTER AGGREGATE nom ( type [ , ... ] ) RENAME TO nouveau_nom\n"
+"ALTER AGGREGATE nom ( type [ , ... ] ) OWNER TO nouveau_propriétaire\n"
+"ALTER AGGREGATE nom ( type [ , ... ] ) SET SCHEMA nouveau_schéma"
 
 #: sql_help.h:33
 msgid "change the definition of a conversion"
@@ -1848,7 +1847,6 @@ msgid "change a database role"
 msgstr "modifie un rôle de la base de données"
 
 #: sql_help.h:70
-#, fuzzy
 msgid ""
 "ALTER ROLE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -1879,9 +1877,9 @@ msgstr ""
 "    | CREATEUSER | NOCREATEUSER\n"
 "    | INHERIT | NOINHERIT\n"
 "    | LOGIN | NOLOGIN\n"
-"    | CONNECTION LIMIT connlimit\n"
-"    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password'\n"
-"    | VALID UNTIL 'timestamp' \n"
+"    | CONNECTION LIMIT limite_connexions\n"
+"    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'mot de passe'\n"
+"    | VALID UNTIL 'date/heure' \n"
 "\n"
 "ALTER ROLE nom RENAME TO nouveau_nom\n"
 "\n"
@@ -1905,7 +1903,6 @@ msgid "change the definition of a sequence generator"
 msgstr "modifier la définition d'un générateur de séquence"
 
 #: sql_help.h:78
-#, fuzzy
 msgid ""
 "ALTER SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
@@ -1916,6 +1913,7 @@ msgstr ""
 "ALTER SEQUENCE nom [ INCREMENT [ BY ] incrément ]\n"
 "    [ MINVALUE valeur_min | NO MINVALUE ] [ MAXVALUE valeur_max | NO MAXVALUE ]\n"
 "    [ RESTART [ WITH ] début ] [ CACHE cache ] [ [ NO ] CYCLE ]\n"
+"    [ OWNED BY { table.colonne | NONE } ]\n"
 "ALTER SEQUENCE nom SET SCHEMA nouveau_schéma"
 
 #: sql_help.h:81
@@ -1923,7 +1921,6 @@ msgid "change the definition of a table"
 msgstr "modifier la définition d'une table"
 
 #: sql_help.h:82
-#, fuzzy
 msgid ""
 "ALTER TABLE [ ONLY ] name [ * ]\n"
 "    action [, ... ]\n"
@@ -1975,7 +1972,7 @@ msgstr ""
 "    ALTER [ COLUMN ] colonne SET DEFAULT expression\n"
 "    ALTER [ COLUMN ] colonne DROP DEFAULT\n"
 "    ALTER [ COLUMN ] colonne { SET | DROP } NOT NULL\n"
-"    ALTER [ COLUMN ] colonne SET STATISTICS integer\n"
+"    ALTER [ COLUMN ] colonne SET STATISTICS entier\n"
 "    ALTER [ COLUMN ] colonne SET STORAGE { PLAIN | EXTERNAL | EXTENDED | MAIN }\n"
 "    ADD contrainte_table\n"
 "    DROP CONSTRAINT nom_contrainte [ RESTRICT | CASCADE ]\n"
@@ -1984,6 +1981,10 @@ msgstr ""
 "    CLUSTER ON nom_index\n"
 "    SET WITHOUT CLUSTER\n"
 "    SET WITHOUT OIDS\n"
+"    SET ( paramètre_stockage = valeur [, ... ] )\n"
+"    RESET ( paramètre_stockage [, ... ] )\n"
+"    INHERIT table_parent\n"
+"    NO INHERIT table_parent\n"
 "    OWNER TO nouveau_propriétaire\n"
 "    SET TABLESPACE nouvel_espacelogique"
 
@@ -2020,7 +2021,6 @@ msgstr ""
 "ALTER TYPE nom SET SCHEMA nouveau_schéma"
 
 #: sql_help.h:98
-#, fuzzy
 msgid ""
 "ALTER USER name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2124,7 +2124,6 @@ msgid "define or change the comment of an object"
 msgstr "définir ou modifier les commentaires d'un objet"
 
 #: sql_help.h:122
-#, fuzzy
 msgid ""
 "COMMENT ON\n"
 "{\n"
@@ -2155,22 +2154,24 @@ msgstr ""
 "COMMENT ON\n"
 "{\n"
 "  TABLE nom_objet |\n"
-"  COLUMN nom_table.nmo_colonnne |\n"
+"  COLUMN nom_table.nom_colonnne |\n"
 "  AGGREGATE nom_agg (type_agg) |\n"
 "  CAST (type_source AS type_cible) |\n"
 "  CONSTRAINT nom_contrainte ON nom_table |\n"
 "  CONVERSION nom_objet |\n"
 "  DATABASE nom_objet |\n"
 "  DOMAIN nom_objet |\n"
-"  FUNCTION nom_fonc ( [ [ mode_arg ] [ nom_arg ] type_arg [, ...] ] ) |\n"
+"  FUNCTION nom_fonction ( [ [ mode_arg ] [ nom_arg ] type_arg [, ...] ] ) |\n"
 "  INDEX nom_objet |\n"
 "  LARGE OBJECT oid_large_objet |\n"
 "  OPERATOR op (type_opérande_gauche, type_opérande_droit) |\n"
-"  OPERATOR CLASS nom_objet USING méthod_indexation |\n"
+"  OPERATOR CLASS nom_objet USING méthod_indexage |\n"
 "  [ PROCEDURAL ] LANGUAGE nom_objet |\n"
+"  ROLE nom_objet |\n"
 "  RULE nom_règle ON nom_table |\n"
 "  SCHEMA nom_objet |\n"
 "  SEQUENCE nom_objet |\n"
+"  TABLESPACE nom_objet |\n"
 "  TRIGGER nom_déclencheur ON nom_table |\n"
 "  TYPE nom_objet |\n"
 "  VIEW nom_objet\n"
@@ -2198,7 +2199,6 @@ msgid "copy data between a file and a table"
 msgstr "copier des données entre un fichier et une table"
 
 #: sql_help.h:134
-#, fuzzy
 msgid ""
 "COPY tablename [ ( column [, ...] ) ]\n"
 "    FROM { 'filename' | STDIN }\n"
@@ -2237,7 +2237,7 @@ msgstr ""
 "                [ ESCAPE [ AS ] 'échappement' ]\n"
 "                [ FORCE NOT NULL colonne [, ...] ]\n"
 "\n"
-"COPY tablename [ ( colonne [, ...] ) ]\n"
+"COPY { nom_table [ ( colonne [, ...] ) ] | ( requête ) }\n"
 "    TO { 'nom_fichier' | STDOUT }\n"
 "    [ [ WITH ] \n"
 "          [ BINARY ]\n"
@@ -2255,7 +2255,6 @@ msgid "define a new aggregate function"
 msgstr "définir une nouvelle fonction d'agrégation"
 
 #: sql_help.h:138
-#, fuzzy
 msgid ""
 "CREATE AGGREGATE name ( input_data_type [ , ... ] ) (\n"
 "    SFUNC = sfunc,\n"
@@ -2276,6 +2275,16 @@ msgid ""
 "    [ , SORTOP = sort_operator ]\n"
 ")"
 msgstr ""
+"CREATE AGGREGATE nom ( input_data_type [ , ... ] ) (\n"
+"    SFUNC = sfonction,\n"
+"    STYPE = type_données_en_entrée\n"
+"    [ , FINALFUNC = fonction_f ]\n"
+"    [ , INITCOND = condition_initiale ]\n"
+"    [ , SORTOP = opérateur_tri ]\n"
+")\n"
+"\n"
+"ou l'ancienne syntaxe\n"
+"\n"
 "CREATE AGGREGATE nom (\n"
 "    BASETYPE = type_données_en_entrée,\n"
 "    SFUNC = fonction_s,\n"
@@ -2328,13 +2337,12 @@ msgid "define a new encoding conversion"
 msgstr "définir une nouvelle conversion de codage"
 
 #: sql_help.h:150
-#, fuzzy
 msgid ""
 "CREATE [ DEFAULT ] CONVERSION name\n"
 "    FOR source_encoding TO dest_encoding FROM funcname"
 msgstr ""
 "CREATE [DEFAULT] CONVERSION nom\n"
-"    FOR encodage_source TO encodage_cible FROM nom_fonction"
+"    FOR codage_source TO codage_cible FROM nom_fonction"
 
 #: sql_help.h:153
 msgid "create a new database"
@@ -2361,7 +2369,6 @@ msgid "define a new domain"
 msgstr "définir un nouveau domaine"
 
 #: sql_help.h:158
-#, fuzzy
 msgid ""
 "CREATE DOMAIN name [ AS ] data_type\n"
 "    [ DEFAULT expression ]\n"
@@ -2462,7 +2469,6 @@ msgid "define a new index"
 msgstr "définir un nouvel index"
 
 #: sql_help.h:170
-#, fuzzy
 msgid ""
 "CREATE [ UNIQUE ] INDEX [ CONCURRENTLY ] name ON table [ USING method ]\n"
 "    ( { column | ( expression ) } [ opclass ] [, ...] )\n"
@@ -2470,8 +2476,9 @@ msgid ""
 "    [ TABLESPACE tablespace ]\n"
 "    [ WHERE predicate ]"
 msgstr ""
-"CREATE [ UNIQUE ] INDEX nom ON table [ USING méthode ]\n"
+"CREATE [ UNIQUE ] INDEX [ CONCURRENTLY ] nom ON table [ USING méthode ]\n"
 "    ( { colonne | ( expression ) } [ classe_opérateur ] [, ...] )\n"
+"    [ WITH ( paramètre_stockage = valeur [, ... ] ) ]\n"
 "    [ TABLESPACE espacelogique ]\n"
 "    [ WHERE prédicat ]"
 
@@ -2606,7 +2613,6 @@ msgid "define a new sequence generator"
 msgstr "définir un nouveau générateur de séquence"
 
 #: sql_help.h:198
-#, fuzzy
 msgid ""
 "CREATE [ TEMPORARY | TEMP ] SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
@@ -2615,14 +2621,14 @@ msgid ""
 msgstr ""
 "CREATE [ TEMPORARY | TEMP ] SEQUENCE nom [ INCREMENT [ BY ] incrémentation ]\n"
 "    [ MINVALUE valeur_mini | NO MINVALUE ] [ MAXVALUE valeur_maxi | NO MAXVALUE ]\n"
-"    [ START [ WITH ] valeur_départ ] [ CACHE en_cache ] [ [ NO ] CYCLE ]"
+"    [ START [ WITH ] valeur_départ ] [ CACHE en_cache ] [ [ NO ] CYCLE ]\n"
+"    [ OWNED BY { table.colonne | NONE } ]"
 
 #: sql_help.h:201
 msgid "define a new table"
 msgstr "définir une nouvelle table"
 
 #: sql_help.h:202
-#, fuzzy
 msgid ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name ( [\n"
 "  { column_name data_type [ DEFAULT default_expr ] [ column_constraint [ ... ] ]\n"
@@ -2665,11 +2671,11 @@ msgstr ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE nom_table ( [\n"
 "  { nom_colonne type_données [ DEFAULT expr_par_défaut ] [ contrainte_colonne [ ... ] ]\n"
 "    | contrainte_table\n"
-"    | LIKE table_parent [ { INCLUDING | EXCLUDING } DEFAULTS ] }\n"
+"    | LIKE table_parent [ { INCLUDING | EXCLUDING } { DEFAULTS | CONSTRAINTS } ] ... }\n"
 "    [, ... ]\n"
 "] )\n"
 "[ INHERITS ( table_parent [, ... ] ) ]\n"
-"[ WITH OIDS | WITHOUT OIDS ]\n"
+"[ WITH ( paramètre_stockage [= valeur] [, ... ] ) | WITH OIDS | WITHOUT OIDS ]\n"
 "[ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
 "[ TABLESPACE espace_logique ]\n"
 "\n"
@@ -2678,8 +2684,8 @@ msgstr ""
 "[ CONSTRAINT nom_contrainte ]\n"
 "{ NOT NULL | \n"
 "  NULL | \n"
-"  UNIQUE [ USING INDEX TABLESPACE espace_logique ] |\n"
-"  PRIMARY KEY [ USING INDEX TABLESPACE espace_logique ] |\n"
+"  UNIQUE paramètres_index |\n"
+"  PRIMARY KEY paramètres_index |\n"
 "  CHECK (expression) |\n"
 "  REFERENCES table_référante [ ( colonne_referrante ) ] [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ]\n"
 "    [ ON DELETE action ] [ ON UPDATE action ] }\n"
@@ -2687,13 +2693,18 @@ msgstr ""
 "\n"
 "et contrainte_table fait partie de :\n"
 "\n"
-"[ CONSTRAINT nmo_contrainte ]\n"
-"{ UNIQUE ( nom_colonne [, ... ] ) [ USING INDEX TABLESPACE espace_logique ] |\n"
-"  PRIMARY KEY ( nom_colonne [, ... ] ) [ USING INDEX TABLESPACE espace_logique ] |\n"
+"[ CONSTRAINT nom_contrainte ]\n"
+"{ UNIQUE ( nom_colonne [, ... ] ) paramètres_index |\n"
+"  PRIMARY KEY ( nom_colonne [, ... ] ) paramètres_index |\n"
 "  CHECK ( expression ) |\n"
 "  FOREIGN KEY ( nom_colonne [, ... ] ) REFERENCES table_référante [ ( colonne_référante [, ... ] ) ]\n"
 "    [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ] [ ON DELETE action ] [ ON UPDATE action ] }\n"
-"[ DEFERRABLE | NOT DEFERRABLE ] [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ]"
+"[ DEFERRABLE | NOT DEFERRABLE ] [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ]\n"
+"\n"
+"paramètres_index dans les contraintes UNIQUE et PRIMARY KEY sont :\n"
+"\n"
+"[ WITH ( paramètre_stockage [= valeur] [, ... ] ) ]\n"
+"[ USING INDEX TABLESPACE espace_logique ]"
 
 #: sql_help.h:205
 #: sql_help.h:421
@@ -2701,7 +2712,6 @@ msgid "define a new table from the results of a query"
 msgstr "définir une nouvelle table à partir des résultats d'une requête"
 
 #: sql_help.h:206
-#, fuzzy
 msgid ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name\n"
 "    [ (column_name [, ...] ) ]\n"
@@ -2711,7 +2721,10 @@ msgid ""
 "    AS query"
 msgstr ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE nom_table\n"
-"    [ (nom_colonne [, ...] ) ] [ [ WITH | WITHOUT ] OIDS ]\n"
+"    [ (nom_colonne [, ...] ) ]\n"
+"    [ WITH ( paramètre_stockage [= valeur] [, ... ] ) | WITH OIDS | WITHOUT OIDS ]\n"
+"    [ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
+"    [ TABLESPACE espace_logique ]\n"
 "    AS requête"
 
 #: sql_help.h:209
@@ -2741,7 +2754,6 @@ msgid "define a new data type"
 msgstr "définir un nouveau type de données"
 
 #: sql_help.h:218
-#, fuzzy
 msgid ""
 "CREATE TYPE name AS\n"
 "    ( attribute_name data_type [, ... ] )\n"
@@ -2778,8 +2790,10 @@ msgstr ""
 "    [ , STORAGE = stockage ]\n"
 "    [ , DEFAULT = valeur_par_défaut ]\n"
 "    [ , ELEMENT = élément ]\n"
-"    [ , DELIMITER = sépérateur ]\n"
-")"
+"    [ , DELIMITER = délimiteur ]\n"
+")\n"
+"\n"
+"CREATE TYPE nom"
 
 #: sql_help.h:222
 msgid ""
@@ -2840,7 +2854,6 @@ msgid "deallocate a prepared statement"
 msgstr "désactiver une expression préparée à l'avance"
 
 #: sql_help.h:230
-#, fuzzy
 msgid "DEALLOCATE [ PREPARE ] name"
 msgstr "DEALLOCATE [ PREPARE ] nom_plan"
 
@@ -2863,73 +2876,67 @@ msgid "delete rows of a table"
 msgstr "supprimer des lignes dans une table"
 
 #: sql_help.h:238
-#, fuzzy
 msgid ""
 "DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
 "    [ USING usinglist ]\n"
 "    [ WHERE condition ]\n"
 "    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
 msgstr ""
-"DELETE FROM [ ONLY ] table\n"
+"DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
 "    [ USING liste_using ]\n"
-"    [ WHERE condition ]"
+"    [ WHERE condition ]\n"
+"    [ RETURNING * | expression_sortie [ AS nom_sortie ] [, ...] ]"
 
 #: sql_help.h:241
 msgid "remove an aggregate function"
 msgstr "supprimer une fonction d'agrégation"
 
 #: sql_help.h:242
-#, fuzzy
 msgid "DROP AGGREGATE [ IF EXISTS ] name ( type [ , ... ] ) [ CASCADE | RESTRICT ]"
-msgstr "DROP AGGREGATE nom ( type ) [ CASCADE | RESTRICT ]"
+msgstr "DROP AGGREGATE [ IF EXISTS ] nom ( type [ , ... ] ) [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:245
 msgid "remove a cast"
 msgstr "supprimer une conversion explicite"
 
 #: sql_help.h:246
-#, fuzzy
 msgid "DROP CAST [ IF EXISTS ] (sourcetype AS targettype) [ CASCADE | RESTRICT ]"
-msgstr "DROP CAST (type_source AS type_cible) [ CASCADE | RESTRICT ]"
+msgstr "DROP CAST [ IF EXISTS ] (type_source AS type_cible) [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:249
 msgid "remove a conversion"
 msgstr "supprimer une conversion"
 
 #: sql_help.h:250
-#, fuzzy
 msgid "DROP CONVERSION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION nom [ CASCADE | RESTRICT ]"
+msgstr "DROP CONVERSION [ IF EXISTS ] nom [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:253
 msgid "remove a database"
 msgstr "supprimer une base de données"
 
 #: sql_help.h:254
-#, fuzzy
 msgid "DROP DATABASE [ IF EXISTS ] name"
-msgstr "DROP DATABASE nom"
+msgstr "DROP DATABASE [ IF EXISTS ] nom"
 
 #: sql_help.h:257
 msgid "remove a domain"
 msgstr "supprimer un domaine"
 
 #: sql_help.h:258
-#, fuzzy
 msgid "DROP DOMAIN [IF EXISTS ] name [, ...]  [ CASCADE | RESTRICT ]"
-msgstr "DROP DOMAIN nom [, ...]  [ CASCADE | RESTRICT ]"
+msgstr "DROP DOMAIN [IF EXISTS ] nom [, ...]  [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:261
 msgid "remove a function"
 msgstr "supprimer une fonction"
 
 #: sql_help.h:262
-#, fuzzy
 msgid ""
 "DROP FUNCTION [ IF EXISTS ] name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
 "    [ CASCADE | RESTRICT ]"
 msgstr ""
-"DROP FUNCTION nom ( [ [ mode_arg ] [ nom_arg ] type_arg [, ...] ] )\n"
+"DROP FUNCTION [IF EXISTS ] nom ( [ [ mode_arg ] [ nom_arg ] type_arg [, ...] ] )\n"
 "    [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:265
@@ -2939,137 +2946,120 @@ msgid "remove a database role"
 msgstr "supprimer un rôle de la base de données"
 
 #: sql_help.h:266
-#, fuzzy
 msgid "DROP GROUP [ IF EXISTS ] name [, ...]"
-msgstr "DROP GROUP nom [, ...]"
+msgstr "DROP GROUP [IF EXISTS ] nom [, ...]"
 
 #: sql_help.h:269
 msgid "remove an index"
 msgstr "supprimer un index"
 
 #: sql_help.h:270
-#, fuzzy
 msgid "DROP INDEX [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP INDEX nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP INDEX [IF EXISTS ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:273
 msgid "remove a procedural language"
 msgstr "supprimer un langage procédural"
 
 #: sql_help.h:274
-#, fuzzy
 msgid "DROP [ PROCEDURAL ] LANGUAGE [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP [ PROCEDURAL ] LANGUAGE nom [ CASCADE | RESTRICT ]"
+msgstr "DROP [ PROCEDURAL ] LANGUAGE [IF EXISTS ] nom [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:277
 msgid "remove an operator class"
 msgstr "supprimer une classe d'opérateur"
 
 #: sql_help.h:278
-#, fuzzy
 msgid "DROP OPERATOR CLASS [ IF EXISTS ] name USING index_method [ CASCADE | RESTRICT ]"
-msgstr "DROP OPERATOR CLASS nom USING méthode_indexation [ CASCADE | RESTRICT ]"
+msgstr "DROP OPERATOR CLASS [IF EXISTS ] nom USING méthode_indexage [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:281
 msgid "remove an operator"
 msgstr "supprimer un opérateur"
 
 #: sql_help.h:282
-#, fuzzy
 msgid "DROP OPERATOR [ IF EXISTS ] name ( { lefttype | NONE } , { righttype | NONE } ) [ CASCADE | RESTRICT ]"
-msgstr "DROP OPERATOR nom ( { type_gauche | NONE } , { type_droit | NONE } ) [ CASCADE | RESTRICT ]"
+msgstr "DROP OPERATOR [IF EXISTS ] nom ( { type_gauche | NONE } , { type_droit | NONE } ) [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:285
-#, fuzzy
 msgid "remove database objects owned by a database role"
-msgstr "supprimer un rôle de la base de données"
+msgstr "supprimer les objets de la base appartenant à un rôle de la base de données"
 
 #: sql_help.h:286
-#, fuzzy
 msgid "DROP OWNED BY name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP INDEX nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP OWNED BY nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:290
-#, fuzzy
 msgid "DROP ROLE [ IF EXISTS ] name [, ...]"
-msgstr "DROP ROLE nom [, ...]"
+msgstr "DROP ROLE [IF EXISTS ] nom [, ...]"
 
 #: sql_help.h:293
 msgid "remove a rewrite rule"
 msgstr "supprimer une règle de réécriture"
 
 #: sql_help.h:294
-#, fuzzy
 msgid "DROP RULE [ IF EXISTS ] name ON relation [ CASCADE | RESTRICT ]"
-msgstr "DROP RULE nom ON relation [ CASCADE | RESTRICT ]"
+msgstr "DROP RULE [IF EXISTS ] nom ON relation [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:297
 msgid "remove a schema"
 msgstr "supprimer un schéma"
 
 #: sql_help.h:298
-#, fuzzy
 msgid "DROP SCHEMA [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP SCHEMA nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP SCHEMA [IF EXISTS ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:301
 msgid "remove a sequence"
 msgstr "supprimer une séquence"
 
 #: sql_help.h:302
-#, fuzzy
 msgid "DROP SEQUENCE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP SEQUENCE nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP SEQUENCE [IF EXISTS ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:305
 msgid "remove a table"
 msgstr "supprimer une table"
 
 #: sql_help.h:306
-#, fuzzy
 msgid "DROP TABLE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP TABLE nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP TABLE [IF EXISTS ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:309
 msgid "remove a tablespace"
 msgstr "supprimer un espace logique"
 
 #: sql_help.h:310
-#, fuzzy
 msgid "DROP TABLESPACE [ IF EXISTS ] tablespacename"
-msgstr "DROP TABLESPACE espacelogique"
+msgstr "DROP TABLESPACE [IF EXISTS ] espacelogique"
 
 #: sql_help.h:313
 msgid "remove a trigger"
 msgstr "supprimer un déclencheur"
 
 #: sql_help.h:314
-#, fuzzy
 msgid "DROP TRIGGER [ IF EXISTS ] name ON table [ CASCADE | RESTRICT ]"
-msgstr "DROP TRIGGER nom ON table [ CASCADE | RESTRICT ]"
+msgstr "DROP TRIGGER [IF EXISTS ] nom ON table [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:317
 msgid "remove a data type"
 msgstr "supprimer un type de données"
 
 #: sql_help.h:318
-#, fuzzy
 msgid "DROP TYPE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP TYPE nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP TYPE [IF EXISTS ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:322
-#, fuzzy
 msgid "DROP USER [ IF EXISTS ] name [, ...]"
-msgstr "DROP USER nom [, ...]"
+msgstr "DROP USER [IF EXISTS ] nom [, ...]"
 
 #: sql_help.h:325
 msgid "remove a view"
 msgstr "supprimer une vue"
 
 #: sql_help.h:326
-#, fuzzy
 msgid "DROP VIEW [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP VIEW nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP VIEW [IF EXISTS ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:330
 msgid "END [ WORK | TRANSACTION ]"
@@ -3080,7 +3070,6 @@ msgid "execute a prepared statement"
 msgstr "exécuter une expression préparée à l'avance"
 
 #: sql_help.h:334
-#, fuzzy
 msgid "EXECUTE name [ (parameter [, ...] ) ]"
 msgstr "EXECUTE nom_plan [ (paramètre [, ...] ) ]"
 
@@ -3141,7 +3130,6 @@ msgid "define access privileges"
 msgstr "définir des privilèges d'accès"
 
 #: sql_help.h:346
-#, fuzzy
 msgid ""
 "GRANT { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
@@ -3175,12 +3163,17 @@ msgid ""
 "\n"
 "GRANT role [, ...] TO username [, ...] [ WITH ADMIN OPTION ]"
 msgstr ""
-"GRANT { { SELECT | INSERT | UPDATE | DELETE | RULE | REFERENCES | TRIGGER }\n"
+"GRANT { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
 "    ON [ TABLE ] nom_table [, ...]\n"
 "    TO { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
-"GRANT { { CREATE | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
+"GRANT { { USAGE | SELECT | UPDATE }\n"
+"    [,...] | ALL [ PRIVILEGES ] }\n"
+"    ON SEQUENCE nom_séquence [, ...]\n"
+"    TO { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
 "    ON DATABASE nom_base [, ...]\n"
 "    TO { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
@@ -3200,22 +3193,21 @@ msgstr ""
 "    ON TABLESPACE nom_espacelogique [, ...]\n"
 "    TO { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
-"GRANT role [, ...]\n"
-"    TO { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...] [ WITH ADMIN OPTION ]"
+"GRANT role [, ...] TO nom_utilisateur [, ...] [ WITH ADMIN OPTION ]"
 
 #: sql_help.h:349
 msgid "create new rows in a table"
 msgstr "créer de nouvelles lignes dans une table"
 
 #: sql_help.h:350
-#, fuzzy
 msgid ""
 "INSERT INTO table [ ( column [, ...] ) ]\n"
 "    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) [, ...] | query }\n"
 "    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
 msgstr ""
 "INSERT INTO table [ ( colonne [, ...] ) ]\n"
-"    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) | requête }"
+"    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) [, ...] | requête }\n"
+"    [ RETURNING * | expression_sortie [ AS nom_sortie ] [, ...] ]"
 
 #: sql_help.h:353
 msgid "listen for a notification"
@@ -3274,9 +3266,8 @@ msgid "prepare a statement for execution"
 msgstr "préparer à l'avance l'exécution d'une expression"
 
 #: sql_help.h:374
-#, fuzzy
 msgid "PREPARE name [ (datatype [, ...] ) ] AS statement"
-msgstr "PREPARE nom_plan [ (type_données [, ...] ) ] AS expression"
+msgstr "PREPARE nom_plan [ (type_données [, ...] ) ] AS instruction"
 
 #: sql_help.h:377
 msgid "prepare the current transaction for two-phase commit"
@@ -3315,12 +3306,11 @@ msgid "restore the value of a run-time parameter to the default value"
 msgstr "réinitialiser un paramètre run-time à sa valeur par défaut"
 
 #: sql_help.h:394
-#, fuzzy
 msgid ""
 "RESET configuration_parameter\n"
 "RESET ALL"
 msgstr ""
-"RESET nom\n"
+"RESET paramètre\n"
 "RESET ALL"
 
 #: sql_help.h:397
@@ -3328,7 +3318,6 @@ msgid "remove access privileges"
 msgstr "supprimer des privilèges d'accès"
 
 #: sql_help.h:398
-#, fuzzy
 msgid ""
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
@@ -3379,14 +3368,21 @@ msgid ""
 "    [ CASCADE | RESTRICT ]"
 msgstr ""
 "REVOKE [ GRANT OPTION FOR ]\n"
-"    { { SELECT | INSERT | UPDATE | DELETE | RULE | REFERENCES | TRIGGER }\n"
+"    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
 "    ON [ TABLE ] nom_table [, ...]\n"
 "    FROM { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
-"    { { CREATE | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
+"    { { USAGE | SELECT | UPDATE }\n"
+"    [,...] | ALL [ PRIVILEGES ] }\n"
+"    ON SEQUENCE nom_séquence [, ...]\n"
+"    FROM { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
 "    ON DATABASE nom_base [, ...]\n"
 "    FROM { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
@@ -3416,8 +3412,7 @@ msgstr ""
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ ADMIN OPTION FOR ]\n"
-"    rôle [, ...]\n"
-"    FROM { nom_utilisateur | GROUP nom_groupe | PUBLIC } [, ...]\n"
+"    rôle [, ...] FROM nom_utilisateur [, ...]\n"
 "    [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:402
@@ -3453,7 +3448,6 @@ msgid "retrieve rows from a table or view"
 msgstr "extraire des lignes d'une table ou d'une vue"
 
 #: sql_help.h:418
-#, fuzzy
 msgid ""
 "SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]\n"
 "    * | expression [ AS output_name ] [, ...]\n"
@@ -3476,7 +3470,7 @@ msgid ""
 "    from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]"
 msgstr ""
 "SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]\n"
-"    * | expression [ AS nom_affichage ] [, ...]\n"
+"    * | expression [ AS nom_sortie ] [, ...]\n"
 "    [ FROM élément_from [, ...] ]\n"
 "    [ WHERE condition ]\n"
 "    [ GROUP BY expression [, ...] ]\n"
@@ -3496,7 +3490,6 @@ msgstr ""
 "    élément_from [ NATURAL ] type_jointure élément_from [ ON condition_jointure | USING ( colonne_jointure [, ...] ) ]"
 
 #: sql_help.h:422
-#, fuzzy
 msgid ""
 "SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]\n"
 "    * | expression [ AS output_name ] [, ...]\n"
@@ -3512,14 +3505,14 @@ msgid ""
 "    [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]"
 msgstr ""
 "SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]\n"
-"    * | expression [ AS nom_affichage ] [, ...]\n"
+"    * | expression [ AS nom_sortie ] [, ...]\n"
 "    INTO [ TEMPORARY | TEMP ] [ TABLE ] nouvelle_table\n"
 "    [ FROM élément_from [, ...] ]\n"
 "    [ WHERE condition ]\n"
 "    [ GROUP BY expression [, ...] ]\n"
 "    [ HAVING condition [, ...] ]\n"
 "    [ { UNION | INTERSECT | EXCEPT } [ ALL ] sélection ]\n"
-"    [ ORDER BY expression [ ASC | DESC | USING opérateurr ] [, ...] ]\n"
+"    [ ORDER BY expression [ ASC | DESC | USING opérateur ] [, ...] ]\n"
 "    [ LIMIT { nombre | ALL } ]\n"
 "    [ OFFSET début ]\n"
 "    [ FOR { UPDATE | SHARE } [ OF nom_table [, ...] ] [ NOWAIT ] ]"
@@ -3529,12 +3522,11 @@ msgid "change a run-time parameter"
 msgstr "modifier un paramètre run-time"
 
 #: sql_help.h:426
-#, fuzzy
 msgid ""
 "SET [ SESSION | LOCAL ] configuration_parameter { TO | = } { value | 'value' | DEFAULT }\n"
 "SET [ SESSION | LOCAL ] TIME ZONE { timezone | LOCAL | DEFAULT }"
 msgstr ""
-"SET [ SESSION | LOCAL ] nom { TO | = } { value | 'valeur' | DEFAULT }\n"
+"SET [ SESSION | LOCAL ] paramètre { TO | = } { valeur | 'valeur' | DEFAULT }\n"
 "SET [ SESSION | LOCAL ] TIME ZONE { zone_horaire | LOCAL | DEFAULT }"
 
 #: sql_help.h:429
@@ -3628,9 +3620,8 @@ msgid "empty a table or set of tables"
 msgstr "vider une table ou un ensemble de tables"
 
 #: sql_help.h:454
-#, fuzzy
 msgid "TRUNCATE [ TABLE ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP TABLE nom [, ...] [ CASCADE | RESTRICT ]"
+msgstr "TRUNCATE [ TABLE ] nom [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:457
 msgid "stop listening for a notification"
