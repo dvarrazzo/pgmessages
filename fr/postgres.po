@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: postgres-fr-8.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-10-16 01:02-0300\n"
-"PO-Revision-Date: 2006-10-29 11:30+0100\n"
+"PO-Revision-Date: 2006-10-29 20:45+0100\n"
 "Last-Translator: Guillaume Lelarge <gleu@wanadoo.fr>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -7743,14 +7743,14 @@ msgid "Consult recent messages in the server log for details."
 msgstr "Consultez les messages récents du serveur dans les journaux pour plus de détails."
 
 #: postmaster/postmaster.c:446
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid argument for option -f: \"%s\"\n"
-msgstr "%s: argument invalide : «%s»\n"
+msgstr "%s : argument invalide pour l'option -f : « %s »\n"
 
 #: postmaster/postmaster.c:532
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid argument for option -t: \"%s\"\n"
-msgstr "%s: argument invalide : «%s»\n"
+msgstr "%s : argument invalide pour l'option -t : « %s »\n"
 
 #: postmaster/postmaster.c:583
 #, c-format
@@ -8090,9 +8090,8 @@ msgid "could not resolve \"localhost\": %s"
 msgstr "n'a pas pu résoudre «localhost»: %s"
 
 #: postmaster/pgstat.c:265
-#, fuzzy
 msgid "trying another address for the statistics collector"
-msgstr "n'a pas pu obtenir l'adresse de la socket du récupérateur de statistiques : %m"
+msgstr "nouvelle tentative avec une autre adresse pour le récupérateur de statistiques"
 
 #: postmaster/pgstat.c:274
 #, c-format
@@ -8161,9 +8160,9 @@ msgid "must be superuser to reset statistics counters"
 msgstr "doit être super-utilisateur pour réinitialiser les compteurs statistiques"
 
 #: postmaster/pgstat.c:1721
-#, fuzzy, c-format
+#, c-format
 msgid "poll() failed in statistics collector: %m"
-msgstr "Échec du select() dans le récupérateur de statistiques : %m"
+msgstr "échec du poll() dans le récupérateur de statistiques : %m"
 
 #: postmaster/pgstat.c:1762
 #, c-format
@@ -8171,9 +8170,9 @@ msgid "could not read statistics message: %m"
 msgstr "n'a pas pu lire le message des statistiques : %m"
 
 #: postmaster/pgstat.c:1827
-#, fuzzy, c-format
+#, c-format
 msgid "could not set statistics collector timer: %m"
-msgstr "n'a pas pu écrire dans le tube du collecteur de statistiques : %m"
+msgstr "n'a pas pu configurer le timer du collecteur de statistiques : %m"
 
 #: postmaster/pgstat.c:1936
 #, c-format
@@ -8357,9 +8356,8 @@ msgid "SELECT rule's target list has too many entries"
 msgstr "La liste cible de la règle SELECT a de trop nombreuses entrées"
 
 #: rewrite/rewriteDefine.c:482
-#, fuzzy
 msgid "RETURNING list has too many entries"
-msgstr "La liste cible de la règle SELECT a de trop nombreuses entrées"
+msgstr "la liste RETURNING a trop d'entrées"
 
 #: rewrite/rewriteDefine.c:498
 msgid "cannot convert relation containing dropped columns to view"
@@ -8376,9 +8374,9 @@ msgid "SELECT rule's target entry %d has different type from column \"%s\""
 msgstr "L'entrée cible de la règle SELECT %d a plusieurs types pour la colonne «%s»"
 
 #: rewrite/rewriteDefine.c:511
-#, fuzzy, c-format
+#, c-format
 msgid "RETURNING list's entry %d has different type from column \"%s\""
-msgstr "L'entrée cible de la règle SELECT %d a plusieurs types pour la colonne «%s»"
+msgstr "l'entrée %d de la liste RETURNING a un type différent de la colonne « %s »"
 
 #: rewrite/rewriteDefine.c:526
 #, c-format
@@ -8386,18 +8384,17 @@ msgid "SELECT rule's target entry %d has different size from column \"%s\""
 msgstr "L'entrée cible de la règle SELECT %d a plusieurs tailles pour la colonne «%s»"
 
 #: rewrite/rewriteDefine.c:528
-#, fuzzy, c-format
+#, c-format
 msgid "RETURNING list's entry %d has different size from column \"%s\""
-msgstr "L'entrée cible de la règle SELECT %d a plusieurs tailles pour la colonne «%s»"
+msgstr "l'entrée %d de la liste RETURNING a une taille différente de la colonne « %s »"
 
 #: rewrite/rewriteDefine.c:536
 msgid "SELECT rule's target list has too few entries"
 msgstr "L'entrée cible de la règle SELECT a trop d'entrées"
 
 #: rewrite/rewriteDefine.c:537
-#, fuzzy
 msgid "RETURNING list has too few entries"
-msgstr "L'entrée cible de la règle SELECT a trop d'entrées"
+msgstr "la liste RETURNING a trop peu d'entrées"
 
 #: rewrite/rewriteHandler.c:446
 msgid "cannot have RETURNING lists in multiple rules"
@@ -8416,34 +8413,31 @@ msgid "infinite recursion detected in rules for relation \"%s\""
 msgstr "Récursion infinie détectée dans les règles de la relation «%s»"
 
 #: rewrite/rewriteHandler.c:1656
-#, fuzzy, c-format
+#, c-format
 msgid "cannot perform INSERT RETURNING on relation \"%s\""
-msgstr "n'a pas pu copier à partir de la relation «%s», qui n'est pas une table"
+msgstr "n'a pas pu exécuter INSERT RETURNING sur la relation « %s »"
 
 #: rewrite/rewriteHandler.c:1658
-#, fuzzy
 msgid "You need an unconditional ON INSERT DO INSTEAD rule with a RETURNING clause."
-msgstr "Vous avez besoin d'une règle ON INSERT DO INSTEAD."
+msgstr "Vous avez besoin d'une règle ON INSERT DO INSTEAD sans condition avec une clause RETURNING."
 
 #: rewrite/rewriteHandler.c:1663
-#, fuzzy, c-format
+#, c-format
 msgid "cannot perform UPDATE RETURNING on relation \"%s\""
-msgstr "n'a pas pu copier à partir de la relation «%s», qui n'est pas une table"
+msgstr "n'a pas pu exécuter UPDATE RETURNING sur la relation « %s »"
 
 #: rewrite/rewriteHandler.c:1665
-#, fuzzy
 msgid "You need an unconditional ON UPDATE DO INSTEAD rule with a RETURNING clause."
-msgstr "Vous avez besoin d'une règle non conditionnelle ON UPDATE DO INSTEAD."
+msgstr "Vous avez besoin d'une règle ON UPDATE DO INSTEAD sans condition avec une clause RETURNING."
 
 #: rewrite/rewriteHandler.c:1670
-#, fuzzy, c-format
+#, c-format
 msgid "cannot perform DELETE RETURNING on relation \"%s\""
-msgstr "n'a pas pu copier à partir de la relation «%s», qui n'est pas une table"
+msgstr "n'a pas pu exécuter DELETE RETURNING sur la relation « %s »"
 
 #: rewrite/rewriteHandler.c:1672
-#, fuzzy
 msgid "You need an unconditional ON DELETE DO INSTEAD rule with a RETURNING clause."
-msgstr "Vous avez besoin d'une règle inconditionnelle ON DELETE DO INSTEAD."
+msgstr "Vous avez besoin d'une règle ON DELETE DO INSTEAD sans condition avec une clause RETURNING."
 
 #: rewrite/rewriteHandler.c:1770
 msgid "cannot insert into a view"
@@ -8474,14 +8468,14 @@ msgid "conditional utility statements are not implemented"
 msgstr "Les instructions conditionnelles ne sont pas implémentées"
 
 #: rewrite/rewriteRemove.c:64
-#, fuzzy, c-format
+#, c-format
 msgid "rule \"%s\" for relation \"%s\" does not exist, skipping"
-msgstr "La règle \"%s\" de la relation \"%s\" n'existe pas"
+msgstr "la règle « %s » de la relation « %s » n'existe pas, poursuite du traitement"
 
 #: storage/buffer/bufmgr.c:192
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected data beyond EOF in block %u of relation \"%s\""
-msgstr "En-tête de page invalide dans le bloc %u de la relation «%s»"
+msgstr "données inattendues après la fin de fichier dans le bloc %u de la relation « %s »"
 
 #: storage/buffer/bufmgr.c:194
 msgid "This has been seen to occur with buggy kernels; consider updating your system."
@@ -8649,14 +8643,14 @@ msgid "object %u of class %u of database %u"
 msgstr "objet %u de la classe %u de la base de données %u"
 
 #: storage/lmgr/deadlock.c:877
-#, fuzzy, c-format
+#, c-format
 msgid "user lock [%u,%u,%u]"
-msgstr "verrou utilisateur [%u,%u]"
+msgstr "verrou utilisateur [%u,%u,%u]"
 
 #: storage/lmgr/deadlock.c:884
-#, fuzzy, c-format
+#, c-format
 msgid "advisory lock [%u,%u,%u,%u]"
-msgstr "verrou utilisateur [%u,%u]"
+msgstr "verrou informatif [%u,%u,%u,%u]"
 
 #: storage/lmgr/deadlock.c:892
 #, c-format
@@ -8783,9 +8777,9 @@ msgid "table \"%s\" does not exist"
 msgstr "La table «%s» n'existe pas"
 
 #: tcop/utility.c:76
-#, fuzzy, c-format
+#, c-format
 msgid "table \"%s\" does not exist, skipping"
-msgstr "La table «%s» n'existe pas"
+msgstr "la table « %s » n'existe pas, poursuite du traitement"
 
 #: tcop/utility.c:78
 msgid "Use DROP TABLE to remove a table."
@@ -8797,9 +8791,9 @@ msgid "sequence \"%s\" does not exist"
 msgstr "La séquence «%s» n'existe pas"
 
 #: tcop/utility.c:82
-#, fuzzy, c-format
+#, c-format
 msgid "sequence \"%s\" does not exist, skipping"
-msgstr "La séquence «%s» n'existe pas"
+msgstr "la séquence « %s » n'existe pas, poursuite du traitement"
 
 #: tcop/utility.c:84
 msgid "Use DROP SEQUENCE to remove a sequence."
@@ -8811,9 +8805,9 @@ msgid "view \"%s\" does not exist"
 msgstr "La vue «%s» n'existe pas"
 
 #: tcop/utility.c:88
-#, fuzzy, c-format
+#, c-format
 msgid "view \"%s\" does not exist, skipping"
-msgstr "La vue «%s» n'existe pas"
+msgstr "la vue « %s » n'existe pas, poursuite du traitement"
 
 #: tcop/utility.c:90
 msgid "Use DROP VIEW to remove a view."
@@ -8825,9 +8819,9 @@ msgid "index \"%s\" does not exist"
 msgstr "L'index «%s» n'existe pas"
 
 #: tcop/utility.c:94
-#, fuzzy, c-format
+#, c-format
 msgid "index \"%s\" does not exist, skipping"
-msgstr "L'index «%s» n'existe pas"
+msgstr "l'index « %s » n'existe pas, poursuite du traitement"
 
 #: tcop/utility.c:96
 msgid "Use DROP INDEX to remove an index."
@@ -8873,14 +8867,14 @@ msgstr "appel de fonction fastpath : OID de fonction %u"
 #: tcop/postgres.c:1263
 #: tcop/postgres.c:1619
 #: tcop/postgres.c:1830
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %s ms"
-msgstr "durée : %ld.%03ld ms"
+msgstr "durée : %s ms"
 
 #: tcop/fastpath.c:407
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %s ms  fastpath function call: function OID %u"
-msgstr "appel de fonction fastpath : OID de fonction %u"
+msgstr "durée : %s ms, appel de fonction fastpath : OID de fonction %u"
 
 #: tcop/fastpath.c:445
 #: tcop/fastpath.c:575
@@ -8909,14 +8903,14 @@ msgid "invalid frontend message type %d"
 msgstr "Type %d du message de l'interface invalide"
 
 #: tcop/postgres.c:810
-#, fuzzy, c-format
+#, c-format
 msgid "statement: %s"
-msgstr "instruction : %s%s"
+msgstr "instruction : %s"
 
 #: tcop/postgres.c:1013
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %s ms  statement: %s"
-msgstr "durée : %ld.%03ld ms  instruction : %s%s"
+msgstr "durée : %s ms, instruction : %s"
 
 #: tcop/postgres.c:1059
 #, c-format
@@ -8928,9 +8922,9 @@ msgid "cannot insert multiple commands into a prepared statement"
 msgstr "n'a pas pu insérer les commandes multiples dans une instruction préparée"
 
 #: tcop/postgres.c:1267
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %s ms  parse %s: %s"
-msgstr "durée : %ld.%03ld ms  instruction : %s%s"
+msgstr "durée : %s ms, analyse %s : %s"
 
 #: tcop/postgres.c:1309
 #, c-format
@@ -8958,9 +8952,9 @@ msgid "incorrect binary data format in bind parameter %d"
 msgstr "Format de données binaires incorrect dans le paramètre bind %d"
 
 #: tcop/postgres.c:1623
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %s ms  bind %s%s%s: %s"
-msgstr "durée : %ld.%03ld ms  instruction : %s%s"
+msgstr "durée : %s ms, lien %s%s%s : %s"
 
 #: tcop/postgres.c:1670
 #: tcop/postgres.c:2162
@@ -8984,19 +8978,19 @@ msgid "execute"
 msgstr "exécute"
 
 #: tcop/postgres.c:1834
-#, fuzzy, c-format
+#, c-format
 msgid "duration: %s ms  %s %s%s%s%s%s"
-msgstr "durée : %ld.%03ld ms  instruction : %s%s"
+msgstr "durée : %s ms  %s %s%s%s%s%s"
 
 #: tcop/postgres.c:1985
-#, fuzzy, c-format
+#, c-format
 msgid "prepare: %s"
-msgstr "opérateur %s"
+msgstr "préparation : %s"
 
 #: tcop/postgres.c:2048
-#, fuzzy, c-format
+#, c-format
 msgid "parameters: %s"
-msgstr "opérateur %s"
+msgstr "paramètres : %s"
 
 #: tcop/postgres.c:2317
 msgid "terminating connection because of crash of another server process"
@@ -9035,14 +9029,13 @@ msgid "stack depth limit exceeded"
 msgstr "dépassement de limite (en profondeur) de la pile"
 
 #: tcop/postgres.c:2535
-#, fuzzy
 msgid "Increase the configuration parameter \"max_stack_depth\", after ensuring the platform's stack depth limit is adequate."
-msgstr "Augmenter le paramètre «max_stack_depth»."
+msgstr "Augmenter le paramètre « max_stack_depth » après vous avoir assuré que la limite de profondeur de la pile de la plateforme est adéquate."
 
 #: tcop/postgres.c:2551
-#, fuzzy, c-format
+#, c-format
 msgid "\"max_stack_depth\" must not exceed %ldkB"
-msgstr "dépassement de limite (en profondeur) de la pile"
+msgstr "« max_stack_depth » ne doit pas dépasser %ld Ko"
 
 #: tcop/postgres.c:2553
 msgid "Increase the platform's stack depth limit via \"ulimit -s\" or local equivalent."
@@ -9079,9 +9072,9 @@ msgid "invalid DESCRIBE message subtype %d"
 msgstr "Sous-type %d du message DESCRIBE invalide"
 
 #: tcop/postgres.c:3826
-#, fuzzy, c-format
+#, c-format
 msgid "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%s"
-msgstr "déconnexion : durée de la session : %d:%02d:%02d.%02d utilisateur=%s base=%s hôte=%s%s%s"
+msgstr "déconnexion : durée de la session : %d:%02d:%02d.%03d utilisateur=%s base=%s hôte=%s%s%s"
 
 #: tcop/pquery.c:543
 #, c-format
@@ -9220,14 +9213,12 @@ msgid "ACL array contains wrong data type"
 msgstr "le tableau ACL contient un type de données incorrect"
 
 #: utils/adt/acl.c:378
-#, fuzzy
 msgid "ACL arrays must be one-dimensional"
-msgstr "L'argument doit être vide ou doit être un tableau à une dimension"
+msgstr "les tableaux d'ACL doivent avoir une dimension"
 
 #: utils/adt/acl.c:382
-#, fuzzy
 msgid "ACL arrays must not contain null values"
-msgstr "L'argument de «%s» ne contient pas de variables"
+msgstr "les tableaux d'ACL ne doivent pas contenir de valeurs NULL"
 
 #: utils/adt/acl.c:406
 msgid "extra garbage at the end of the ACL specification"
@@ -9346,9 +9337,9 @@ msgstr "Tableau littéral mal formé : «%s»"
 #: utils/adt/arrayutils.c:91
 #: utils/adt/arrayutils.c:100
 #: utils/adt/arrayutils.c:107
-#, fuzzy, c-format
+#, c-format
 msgid "array size exceeds the maximum allowed (%d)"
-msgstr "Le nombre de dimensions du tableau (%d) dépasse le maximum autorisé (%d)"
+msgstr "la taille du tableau dépasse le maximum permis (%d)"
 
 #: utils/adt/arrayfuncs.c:1202
 msgid "invalid array flags"
@@ -9383,16 +9374,14 @@ msgstr "Les morceaux des tableaux à longueur fixe ne sont pas implémentés"
 #: utils/adt/arrayfuncs.c:1999
 #: utils/adt/arrayfuncs.c:2033
 #: utils/adt/arrayfuncs.c:2319
-#, fuzzy
 msgid "wrong number of array subscripts"
-msgstr "Indices de tableau invalides"
+msgstr "mauvais nombre d'indices du tableau"
 
 #: utils/adt/arrayfuncs.c:1982
 #: utils/adt/arrayfuncs.c:2075
 #: utils/adt/arrayfuncs.c:2370
-#, fuzzy
 msgid "array subscript out of range"
-msgstr "L'indice d'un tableau doit être de type entier"
+msgstr "indice du tableau en dehors de l'échelle"
 
 #: utils/adt/arrayfuncs.c:1987
 msgid "cannot assign null value to an element of a fixed-length array"
@@ -9408,9 +9397,8 @@ msgid "source array too small"
 msgstr "Tableau source trop petit"
 
 #: utils/adt/arrayfuncs.c:2947
-#, fuzzy
 msgid "null array element not allowed in this context"
-msgstr "les éléments de tableau NULL ne sont pas supportés"
+msgstr "élément NULL de tableau interdit dans ce contexte"
 
 #: utils/adt/arrayfuncs.c:3008
 #: utils/adt/arrayfuncs.c:3215
@@ -9622,9 +9610,9 @@ msgid "could not open tablespace directory \"%s\": %m"
 msgstr "n'a pas pu ouvrir le répertoire de l'espace logique «%s» : %m"
 
 #: utils/adt/domains.c:79
-#, fuzzy, c-format
+#, c-format
 msgid "type %s is not a domain"
-msgstr "«%s» n'est pas un domaine"
+msgstr "le type %s n'est pas un domaine"
 
 #: utils/adt/encode.c:55
 #: utils/adt/encode.c:91
@@ -10296,21 +10284,21 @@ msgstr "n'a pas pu formater la valeur inet : %m"
 
 #. translator: %s is inet or cidr
 #: utils/adt/network.c:205
-#, fuzzy, c-format
+#, c-format
 msgid "invalid address family in external \"%s\" value"
-msgstr "Famille d'adresses invalide dans la valeur externe «inet»"
+msgstr "famille d'adresses invalide dans la valeur externe « %s »"
 
 #. translator: %s is inet or cidr
 #: utils/adt/network.c:212
-#, fuzzy, c-format
+#, c-format
 msgid "invalid bits in external \"%s\" value"
-msgstr "Bits invalides dans la valeur externe «inet»"
+msgstr "bits invalides dans la valeur externe « %s »"
 
 #. translator: %s is inet or cidr
 #: utils/adt/network.c:221
-#, fuzzy, c-format
+#, c-format
 msgid "invalid length in external \"%s\" value"
-msgstr "Longueur invalide dans la valeur externe «inet»"
+msgstr "longueur invalide dans la valeur externe « %s »"
 
 #: utils/adt/network.c:239
 msgid "invalid external \"cidr\" value"
@@ -10323,30 +10311,26 @@ msgid "invalid mask length: %d"
 msgstr "Longueur de masque invalide : %d"
 
 #: utils/adt/network.c:715
-#, fuzzy, c-format
+#, c-format
 msgid "could not format cidr value: %m"
-msgstr "n'a pas pu formater la valeur inet : %m"
+msgstr "n'a pas pu formater la valeur cidr : %m"
 
 #: utils/adt/network.c:1295
-#, fuzzy
 msgid "cannot AND inet values of different sizes"
-msgstr "n'a pas pu utiliser l'opérateur AND sur des chaînes bit de tailles différentes"
+msgstr "n'a pas pu utiliser l'opérateur AND sur des champs de type inet de tailles différentes"
 
 #: utils/adt/network.c:1329
-#, fuzzy
 msgid "cannot OR inet values of different sizes"
-msgstr "n'a pas pu utiliser l'opérateur OR sur des chaînes bit de tailles différentes"
+msgstr "n'a pas pu utiliser l'opérateur OR sur des champs de type inet de tailles différentes"
 
 #: utils/adt/network.c:1392
 #: utils/adt/network.c:1470
-#, fuzzy
 msgid "result out of range"
-msgstr "Le résultat est hors des limites"
+msgstr "résultat hors des limites"
 
 #: utils/adt/network.c:1435
-#, fuzzy
 msgid "cannot subtract inet values of different sizes"
-msgstr "n'a pas pu utiliser l'opérateur OR sur des chaînes bit de tailles différentes"
+msgstr "n'a pas pu soustraire des valeurs inet de tailles différentes"
 
 #: utils/adt/not_in.c:64
 #: utils/adt/regproc.c:1105
@@ -10530,14 +10514,12 @@ msgid "cannot display a value of type anyelement"
 msgstr "n'a pas pu afficher une valeur de type anyelement"
 
 #: utils/adt/pseudotypes.c:333
-#, fuzzy
 msgid "cannot accept a value of a shell type"
-msgstr "n'a pas pu accepter une valeur de type any"
+msgstr "n'a pas pu accepter une valeur de type shell"
 
 #: utils/adt/pseudotypes.c:346
-#, fuzzy
 msgid "cannot display a value of a shell type"
-msgstr "n'a pas pu afficher une valeur de type any"
+msgstr "n'a pas pu afficher une valeur de type shell"
 
 #: utils/adt/regexp.c:154
 #, c-format
@@ -10677,9 +10659,9 @@ msgid "Key (%s)=(%s) is not present in table \"%s\"."
 msgstr "La clé (%s)=(%s) n'est pas présente dans la table «%s»."
 
 #: utils/adt/ri_triggers.c:3302
-#, fuzzy, c-format
+#, c-format
 msgid "update or delete on table \"%s\" violates foreign key constraint \"%s\" on table \"%s\""
-msgstr "Les instructions update ou delete sur «%s» viole la contrainte de clé étrangère «%s» sur «%s»"
+msgstr "UPDATE ou DELETE sur « %s » viole la contrainte de clé étrangère « %s » de la table « %s »"
 
 #: utils/adt/ri_triggers.c:3305
 #, c-format
@@ -11128,9 +11110,9 @@ msgid "Extension libraries are required to use the PG_MODULE_MAGIC macro."
 msgstr "Les bibliothèques étendues nécessitent l'utilisation de la macro PG_MODULE_MAGIC."
 
 #: utils/fmgr/dfmgr.c:462
-#, fuzzy, c-format
+#, c-format
 msgid "access to library \"%s\" is not allowed"
-msgstr "la méthode d'accès «%s» n'existe pas"
+msgstr "l'accès à la bibliothèque «%s» n'est pas autorisé"
 
 #: utils/fmgr/dfmgr.c:489
 #, c-format
@@ -11180,9 +11162,9 @@ msgid "could not determine row description for function returning record"
 msgstr "n'a pas pu déterminer la description de la ligne pour la fonction renvoyant l'enregistrement"
 
 #: utils/init/postinit.c:127
-#, fuzzy, c-format
+#, c-format
 msgid "database \"%s\" has disappeared from pg_database"
-msgstr "La base de données «%s», OID %u, a disparu de pg_database"
+msgstr "la base de données « %s » a disparu de pg_database"
 
 #: utils/init/postinit.c:129
 #, c-format
@@ -11195,9 +11177,9 @@ msgid "database \"%s\" is not currently accepting connections"
 msgstr "La base de données «%s» n'accepte plus les connexions"
 
 #: utils/init/postinit.c:162
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied for database \"%s\""
-msgstr "droit refusé pour la base de données %s"
+msgstr "droit refusé pour la base de données « %s »"
 
 #: utils/init/postinit.c:163
 msgid "User does not have CONNECT privilege."
@@ -11373,19 +11355,19 @@ msgid "The data directory was initialized by PostgreSQL version %ld.%ld, which i
 msgstr "Le répertoire des données a été initialisé avec PostgreSQL version %ld.%ld, qui est non compatible avec cette version %s."
 
 #: utils/init/miscinit.c:1134
-#, fuzzy, c-format
+#, c-format
 msgid "invalid list syntax in parameter \"%s\""
-msgstr "Syntaxe de liste invalide pour le paramètre «datestyle»"
+msgstr "syntaxe de liste invalide pour le paramètre « %s »"
 
 #: utils/init/miscinit.c:1159
-#, fuzzy, c-format
+#, c-format
 msgid "loaded library \"%s\""
-msgstr "Bibliothèque préchargée «%s»"
+msgstr "bibliothèque « %s » chargée"
 
 #: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:137
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected encoding ID %d for ISO 8859 character sets"
-msgstr "id de codage %d inattendu pour des ensembles de caractères ISO-8859"
+msgstr "ID de codage %d inattendu pour les jeux de caractères ISO-8859"
 
 #: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:165
 #, c-format
@@ -11393,14 +11375,14 @@ msgid "unexpected encoding id %d for ISO-8859 charsets"
 msgstr "id de codage %d inattendu pour des ensembles de caractères ISO-8859"
 
 #: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:127
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected encoding ID %d for WIN character sets"
-msgstr "id de codage %d inattendu pour des ensembles de caractères ISO-8859"
+msgstr "ID de codage %d inattendu pour les jeux de caractères WIN"
 
 #: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:155
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected encoding id %d for WIN charsets"
-msgstr "id de codage %d inattendu pour des ensembles de caractères ISO-8859"
+msgstr "ID de codage %d inattendu pour les jeux de caractères WIN"
 
 #: utils/mb/conv.c:371
 #, c-format
@@ -11546,9 +11528,8 @@ msgid "Statistics / Query and Index Statistics Collector"
 msgstr "Statistiques / Collecteur des statistiques sur les requêtes et sur les index"
 
 #: utils/misc/guc.c:330
-#, fuzzy
 msgid "Autovacuum"
-msgstr "Auto Vacuum"
+msgstr "Autovacuum"
 
 #: utils/misc/guc.c:332
 msgid "Client Connection Defaults"
@@ -11771,14 +11752,12 @@ msgid "Collects block-level statistics on database activity."
 msgstr "Récupère les statistiques au niveau bloc sur l'activité de la base de données."
 
 #: utils/misc/guc.c:725
-#, fuzzy
 msgid "Collects information about executing commands."
-msgstr "Collectionne les statistiques sur les commandes en exécution."
+msgstr "Récupère les statistiques sur les commandes en exécution."
 
 #: utils/misc/guc.c:726
-#, fuzzy
 msgid "Enables the collection of information on the currently executing command of each session, along with the time at which that command began execution."
-msgstr "Active la récupération de statistiquessur la commande en cours d'exécution sur chaque session, avec l'heure de commencement de l'exécution de la commande."
+msgstr "Active la récupération d'informations sur la commande en cours d'exécution pour chaque session, avec l'heure de début de l'exécution de la commande."
 
 #: utils/misc/guc.c:736
 msgid "Updates the process title to show the active SQL command."
@@ -11913,9 +11892,8 @@ msgid "Forces a switch to the next xlog file if a new file has not been started 
 msgstr "Force un changement du journal de transaction si un nouveau fichier n'a pas été créé depuis N secondes."
 
 #: utils/misc/guc.c:1036
-#, fuzzy
 msgid "Waits N seconds on connection startup after authentication."
-msgstr "Initialise le temps maximum en secondes pour terminer l'authentification du client."
+msgstr "Attends N secondes après l'authentification."
 
 #: utils/misc/guc.c:1037
 msgid "This allows attaching a debugger to the process."
@@ -11942,9 +11920,8 @@ msgid "Sets the FROM-list size beyond which JOIN constructs are not flattened."
 msgstr "Initialise la taille de la liste FROM en dehors de laquelle les contructions JOIN ne sont pas aplanies."
 
 #: utils/misc/guc.c:1067
-#, fuzzy
 msgid "The planner will flatten explicit JOIN constructs into lists of FROM items whenever a list of no more than this many items would result."
-msgstr "La plannificateur applanira les constructions INNER JOIN explicites dans des des listes d'éléments FROM lorsqu'une liste d'au plus ce nombre d'éléments en résulterait."
+msgstr "La planificateur applanira les constructions JOIN explicites dans des listes d'éléments FROM lorsqu'une liste d'au plus ce nombre d'éléments en résulterait."
 
 #: utils/misc/guc.c:1076
 msgid "Sets the threshold of FROM items beyond which GEQO is used."
@@ -12209,14 +12186,12 @@ msgid "That is, the portion of the kernel's disk cache that will be used for Pos
 msgstr "C'est-à-dire, la portion du cache disque du noyau qui sera utilisé pour les fichiers de données de PostgreSQL. C'est mesuré en pages disque, qui font normalement 8 Ko chaque."
 
 #: utils/misc/guc.c:1637
-#, fuzzy
 msgid "Shows the server version as an integer."
-msgstr "Affiche la version du serveur."
+msgstr "Affiche la version du serveur sous la forme d'un entier."
 
 #: utils/misc/guc.c:1656
-#, fuzzy
 msgid "Sets the planner's estimate of the cost of a sequentially fetched disk page."
-msgstr "Initialise l'estimation du plannificateur pour le coût d'une page disque récupérée non séquentiellement."
+msgstr "Initialise l'estimation du planificateur pour le coût d'une page disque récupérée séquentiellement."
 
 #: utils/misc/guc.c:1665
 msgid "Sets the planner's estimate of the cost of a nonsequentially fetched disk page."
@@ -12227,9 +12202,8 @@ msgid "Sets the planner's estimate of the cost of processing each tuple (row)."
 msgstr "Initialise l'estimation du plannificateur pour le coût d'exécution sur chaque ligne."
 
 #: utils/misc/guc.c:1683
-#, fuzzy
 msgid "Sets the planner's estimate of the cost of processing each index entry during an index scan."
-msgstr "Initialise l'estimation du plannification pour le coût de récupération pour chaque ligne indexée lors du parcours d'index."
+msgstr "Initialise l'estimation du planificateur pour le coût de traitement de chaque ligne indexée lors d'un parcours d'index."
 
 #: utils/misc/guc.c:1692
 msgid "Sets the planner's estimate of the cost of processing each operator or function call."
