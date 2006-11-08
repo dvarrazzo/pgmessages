@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-06 19:00-0400\n"
-"PO-Revision-Date: 2006-11-08 08:46+0100\n"
+"PO-Revision-Date: 2006-11-08 11:30+0100\n"
 "Last-Translator: Dennis Björklund <db@zigo.dhs.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -57,23 +57,23 @@ msgstr "okänd parameter \"%s\""
 #: access/common/reloptions.c:264
 #, c-format
 msgid "fillfactor=%d is out of range (should be between %d and 100)"
-msgstr ""
+msgstr "fillfactor=%d är utanför giltigt intervall (skall vara mellan %d och 100)"
 
 #: access/gist/gistvacuum.c:570
 #, c-format
 msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
-msgstr ""
+msgstr "index \"%s\" behöver VACUUM FULL eller REINDEX för att slutföra krashåterställning"
 
 #: access/gist/gistutil.c:405
 #, c-format
 msgid "index \"%s\" needs VACUUM or REINDEX to finish crash recovery"
-msgstr ""
+msgstr "index \"%s\" behöver VACUUM eller REINDEX för att slutföra krashåterställning"
 
 #: access/gist/gistutil.c:585 access/hash/hashutil.c:126
 #: access/nbtree/nbtpage.c:429
 #, c-format
 msgid "index \"%s\" contains unexpected zero page at block %u"
-msgstr ""
+msgstr "index \"%s\" innehåller en oväntad nollställd sida vid block %u"
 
 #: access/gist/gistutil.c:588 access/gist/gistutil.c:600
 #: access/hash/hashutil.c:129 access/hash/hashutil.c:141
@@ -91,11 +91,11 @@ msgstr "index \"%s\" har en trasig sida vid block %u"
 #: access/gist/gistxlog.c:797
 #, c-format
 msgid "index %u/%u/%u needs VACUUM FULL or REINDEX to finish crash recovery"
-msgstr ""
+msgstr "index %u/%u/%u behöver VACUUM FULL eller REINDEX för att slutföra krashåterställning"
 
 #: access/gist/gistxlog.c:799
 msgid "Incomplete insertion detected during crash replay."
-msgstr ""
+msgstr "Ofullständig insert upptäckt vid krashåteruppspelning."
 
 #: access/hash/hashinsert.c:81
 #, c-format
@@ -668,7 +668,7 @@ msgstr "felaktig data i history-fil \"%s\""
 
 #: access/transam/xlog.c:3394
 msgid "Timeline IDs must be less than child timeline's ID."
-msgstr ""
+msgstr "Tidslinje-ID:er måste vara mindre än barnens tidslinje-ID:er."
 
 #: access/transam/xlog.c:3631
 #, c-format
@@ -908,7 +908,7 @@ msgstr "kunde inte öppna återställningskommandofil \"%s\": %m"
 
 #: access/transam/xlog.c:4225
 msgid "starting archive recovery"
-msgstr ""
+msgstr "Startar arkivåterställning"
 
 #: access/transam/xlog.c:4270
 #, c-format
@@ -957,7 +957,7 @@ msgstr "okänd återställningsparameter \"%s\""
 #: access/transam/xlog.c:4357
 #, c-format
 msgid "syntax error in recovery command file: %s"
-msgstr ""
+msgstr "syntaxfel i återställningskommandofil: %s"
 
 #: access/transam/xlog.c:4359
 msgid "Lines should have the format parameter = 'value'."
@@ -975,7 +975,7 @@ msgstr "recovery_target_timeline %u finns inte"
 
 #: access/transam/xlog.c:4491
 msgid "archive recovery complete"
-msgstr ""
+msgstr "arkivåterställning klar"
 
 #: access/transam/xlog.c:4575
 #, c-format
@@ -1034,6 +1034,8 @@ msgid ""
 "If this has occurred more than once some data may be corrupted and you may "
 "need to choose an earlier recovery target."
 msgstr ""
+"Om detta har hänt mer än en gång så kan data vara korrupt och du kanske\n"
+"måste återställa till ett tidigare återställningsmål."
 
 #: access/transam/xlog.c:4659
 #, c-format
@@ -1043,7 +1045,7 @@ msgstr "databassystemet avbröts vid %s"
 #: access/transam/xlog.c:4691
 #, c-format
 msgid "requested timeline %u is not a child of database system timeline %u"
-msgstr ""
+msgstr "efterfrågad tidslinje %u är inte ett barn till databasens systemtidslinje %u"
 
 #: access/transam/xlog.c:4705 access/transam/xlog.c:4729
 #, c-format
@@ -1134,7 +1136,7 @@ msgstr ""
 #: access/transam/xlog.c:5009
 #, c-format
 msgid "selected new timeline ID: %u"
-msgstr ""
+msgstr "valt nytt tidslinje-ID: %u"
 
 #: access/transam/xlog.c:5156
 msgid "database system is ready"
@@ -1304,14 +1306,14 @@ msgid "must be superuser to switch transaction log files"
 msgstr "måste vara superanvändare för att skapa grupper"
 
 #: access/transam/xlog.c:6512
-#, fuzzy, c-format
+#, c-format
 msgid "could not parse transaction log location \"%s\""
-msgstr "kunde inte öppna katalog för transaktionslogg \"%s\": %m"
+msgstr "kunde inte tolka transaktionsloggposition \"%s\""
 
 #: access/transam/xlog.c:6581
-#, fuzzy, c-format
+#, c-format
 msgid "could not parse xlog location \"%s\""
-msgstr "kunde inte låsa relationen \"%s\""
+msgstr "kunde inte tolka xlog position \"%s\""
 
 #: access/transam/xlog.c:6727
 #, c-format
@@ -1394,14 +1396,12 @@ msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "kan inte ha mer än 2^32-1 subtransaktioner i en transaktion"
 
 #: access/gin/ginarrayproc.c:30
-#, fuzzy
 msgid "array must not contain null values"
-msgstr "kolumn \"%s\" innehåller null-värden"
+msgstr "arrayen får inte innehålla null-värden"
 
 #: access/gin/ginscan.c:146
-#, fuzzy
 msgid "GIN indexes do not support whole-index scans"
-msgstr "hash-index stöder inte hela-index-scans"
+msgstr "GIN-index stöder inte hela-index-scan"
 
 #: access/gin/ginscan.c:179
 msgid "GIN index does not support search with void query"
@@ -1424,9 +1424,9 @@ msgid "Try \"%s --help\" for more information.\n"
 msgstr "Försök med \"%s --help\" för mer information.\n"
 
 #: bootstrap/bootstrap.c:328
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid command-line arguments\n"
-msgstr "%s: ogiltigt kommandoradsargument"
+msgstr "%s: ogiltigt kommandoradsargument\n"
 
 #: y.tab.c:626 y.tab.c:11865
 msgid "syntax error: cannot back up"
@@ -1904,13 +1904,10 @@ msgid "cannot determine transition data type"
 msgstr "kan inte lista ut övergångsdatatyp"
 
 #: catalog/pg_aggregate.c:100
-#, fuzzy
 msgid ""
 "An aggregate using \"anyarray\" or \"anyelement\" as transition type must "
 "have at least one argument of either type."
-msgstr ""
-"En aggregatfunktion som använder \"anyarray\" eller \"anyelement\" som "
-"övergångstyp måste ha en av dem som bastyp."
+msgstr "En aggregatfunktion som använder \"anyarray\" eller \"anyelement\" som övergångstyp måste ha minst ett argument med sådan typ."
 
 #: catalog/pg_aggregate.c:123
 #, c-format
@@ -1930,7 +1927,6 @@ msgid "cannot determine result data type"
 msgstr "kan inte lista ut resultatdatatypen"
 
 #: catalog/pg_aggregate.c:178
-#, fuzzy
 msgid ""
 "An aggregate returning \"anyarray\" or \"anyelement\" must have at least one "
 "argument of either type."
@@ -2058,13 +2054,11 @@ msgid "unsupported ON COMMIT and foreign key combination"
 msgstr "inget stöd för kombinationen ON COMMIT och främmande nyckel"
 
 #: catalog/heap.c:2135
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Table \"%s\" references \"%s\", but they do not have the same ON COMMIT "
 "setting."
-msgstr ""
-"Tabell \"%s\" refererar till \"%s\" via främmande nyckel-villkor \"%s\", men "
-"de har inte samma ON COMMIT-inställning."
+msgstr "Tabell \"%s\" refererar till \"%s\", men de har inte samma ON COMMIT-inställning."
 
 #: catalog/heap.c:2140
 msgid "cannot truncate a table referenced in a foreign key constraint"
@@ -2072,9 +2066,9 @@ msgstr ""
 "kan inte trunkera en tabell som refererars till i ett främmande nyckelvillkor"
 
 #: catalog/heap.c:2141
-#, fuzzy, c-format
+#, c-format
 msgid "Table \"%s\" references \"%s\"."
-msgstr "tabellreferens \"%s\" är tvetydig"
+msgstr "Tabell \"%s\" refererar till \"%s\"."
 
 #: catalog/heap.c:2143
 #, c-format
@@ -2224,9 +2218,8 @@ msgstr ""
 "ett argument med sådan typ."
 
 #: catalog/pg_proc.c:189
-#, fuzzy
 msgid "unsafe use of pseudo-type \"internal\""
-msgstr "osäker använding av INTERN pseudotyp"
+msgstr "osäker använding av pseudo-typ \"internal\""
 
 #: catalog/pg_proc.c:190
 msgid ""
@@ -2325,11 +2318,11 @@ msgid "%d objects in %s"
 msgstr "%d objekt i %s"
 
 #: catalog/pg_shdepend.c:1085 catalog/pg_shdepend.c:1212
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "cannot drop objects owned by %s because they are required by the database "
 "system"
-msgstr "kan inte ta bort %s eftersom den krävs av databassystemet"
+msgstr "kan inte ta bort objekt ägda av %s eftersom de krävs av databassystemet"
 
 #: catalog/pg_type.c:202
 #, c-format
@@ -2722,9 +2715,9 @@ msgid "cannot change owner of sequence \"%s\""
 msgstr "kan inte byta ägare på sekvens \"%s\""
 
 #: commands/tablecmds.c:5539 commands/tablecmds.c:6619
-#, fuzzy, c-format
+#, c-format
 msgid "Sequence \"%s\" is linked to table \"%s\"."
-msgstr "\"%s\" är inte ett index för tabell \"%s\""
+msgstr "Sekvens \"%s\" är länkad till tabell \"%s\""
 
 #: commands/tablecmds.c:5551
 #, c-format
@@ -2738,7 +2731,7 @@ msgstr "index \"%s\" för tabell \"%s\" finns inte"
 
 #: commands/tablecmds.c:5801
 msgid "cannot have multiple SET TABLESPACE subcommands"
-msgstr ""
+msgstr "kan inte ha flera underkommandon SET TABLESPACE"
 
 #: commands/tablecmds.c:5854
 #, c-format
@@ -2769,19 +2762,19 @@ msgid "table \"%s\" without OIDs cannot inherit from table \"%s\" with OIDs"
 msgstr ""
 
 #: commands/tablecmds.c:6300
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" in child table must be marked NOT NULL"
-msgstr "funktioner i indexpredikat måste vara markerade IMMUTABLE"
+msgstr "kolumn \"%s\" i barntabell måste vara markerad NOT NULL"
 
 #: commands/tablecmds.c:6316
-#, fuzzy, c-format
+#, c-format
 msgid "child table is missing column \"%s\""
-msgstr "barntabell \"%s\" har annan typ på kolumn \"%s\""
+msgstr "barntabell saknar kolumn \"%s\""
 
 #: commands/tablecmds.c:6408
-#, fuzzy, c-format
+#, c-format
 msgid "child table is missing constraint \"%s\""
-msgstr "tabellen \"%s\" har flera integritetsvillkor med namn \"%s\""
+msgstr "barntabell saknar riktighetsvillkor \"%s\""
 
 #: commands/tablecmds.c:6417
 #, fuzzy, c-format
@@ -2789,9 +2782,9 @@ msgid "constraint definition for check constraint \"%s\" does not match"
 msgstr "integritetsvillkor \"%s\" för tabell \"%s\" existerar inte"
 
 #: commands/tablecmds.c:6498
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" is not a parent of relation \"%s\""
-msgstr "roll \"%s\" är inte en medlem i rollen \"%s\""
+msgstr "relationen \"%s\" är inte en förälder till relationen \"%s\""
 
 #: commands/tablecmds.c:6606
 #, c-format
@@ -3046,16 +3039,14 @@ msgid "cannot cluster on partial index \"%s\""
 msgstr "kan inte klustra på partiellt index \"%s\""
 
 #: commands/cluster.c:356
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "cannot cluster on index \"%s\" because access method does not support "
 "clustering"
-msgstr ""
-"kan inte klustra på index \"%s\" eftersom accessmetoden inte kan hantera "
-"null-värden"
+msgstr "kan inte klustra på index \"%s\" eftersom accessmetoden inte stödjer klustring"
 
 #: commands/cluster.c:376
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "cannot cluster on index \"%s\" because access method does not handle null "
 "values"
@@ -3072,18 +3063,16 @@ msgid ""
 msgstr ""
 
 #: commands/cluster.c:381
-#, fuzzy, c-format
+#, c-format
 msgid "You may be able to work around this by marking column \"%s\" NOT NULL."
-msgstr "Du kan gå förbi detta genom att markera kolumn \"%s\" som NOT NULL%s"
+msgstr "Du kanske kan gå förbi detta genom att markera kolumn \"%s\" som NOT NULL."
 
 #: commands/cluster.c:392
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "cannot cluster on expressional index \"%s\" because its index access method "
 "does not handle null values"
-msgstr ""
-"kan inte klusta ett uttrycksindex när indexets accessmetod inte kan hantera "
-"null-värden"
+msgstr "kan inte klusta på uttrycksindex \"%s\" eftersom indexets accessmetod inte kan hantera null-värden"
 
 #: commands/cluster.c:406
 #, c-format
@@ -3104,14 +3093,12 @@ msgid "database name may not be qualified"
 msgstr "databasnamn får inte vara kvalificerade"
 
 #: commands/comment.c:630
-#, fuzzy
 msgid "tablespace name may not be qualified"
-msgstr "databasnamn får inte vara kvalificerade"
+msgstr "tabellutrymmesnamn får inte vara kvalificerade"
 
 #: commands/comment.c:667
-#, fuzzy
 msgid "role name may not be qualified"
-msgstr "språknamnet får inte vara kvalificerat (qualified)"
+msgstr "rollnamn får inte vara kvalificerade"
 
 #: commands/comment.c:676
 #, fuzzy, c-format
@@ -3265,18 +3252,16 @@ msgid "COPY delimiter must be a single character"
 msgstr "COPY-avdelaren måste vara exakt ett tecken"
 
 #: commands/copy.c:869
-#, fuzzy
 msgid "COPY delimiter cannot be newline or carriage return"
-msgstr "COPY-avdelaren måste vara exakt ett tecken"
+msgstr "COPY-avdelaren kan inte vara nyradstecken eller vagnretur"
 
 #: commands/copy.c:875
 msgid "COPY null representation cannot use newline or carriage return"
 msgstr ""
 
 #: commands/copy.c:881
-#, fuzzy
 msgid "COPY delimiter cannot be backslash"
-msgstr "COPY-avdelaren måste vara exakt ett tecken"
+msgstr "COPY-avdelaren kan inte vara \"backslash\""
 
 #: commands/copy.c:887
 msgid "COPY HEADER available only in CSV mode"
@@ -4266,7 +4251,7 @@ msgstr "ogiltigt alternativ till OWNED BY"
 
 #: commands/sequence.c:1183
 msgid "Specify OWNED BY table.column or OWNED BY NONE."
-msgstr ""
+msgstr "Ange OWNED BY tabell.kolumn eller OWNED BY NONE."
 
 #: commands/sequence.c:1212
 msgid "sequence must have same owner as table it is linked to"
@@ -4518,7 +4503,7 @@ msgstr "tabellutrymme %u är inte tomt"
 #: commands/trigger.c:135
 #, c-format
 msgid "could not determine referenced table for constraint \"%s\""
-msgstr ""
+msgstr "kunde inte bestämma refererad tabell för riktighetsvillkor \"%s\""
 
 #: commands/trigger.c:221
 msgid "multiple INSERT events specified"
@@ -4618,7 +4603,7 @@ msgstr ""
 #: commands/typecmds.c:292
 #, c-format
 msgid "changing return type of function %s from \"opaque\" to %s"
-msgstr ""
+msgstr "ändrar returtyp för funktion %s från \"opaque\" till %s"
 
 #: commands/typecmds.c:299
 #, c-format
@@ -4628,7 +4613,7 @@ msgstr ""
 #: commands/typecmds.c:309
 #, c-format
 msgid "changing return type of function %s from \"opaque\" to \"cstring\""
-msgstr ""
+msgstr "ändrar returtyp för funktion %s från \"opaque\" till \"cstring\""
 
 #: commands/typecmds.c:316
 #, c-format
@@ -4755,12 +4740,12 @@ msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Använd ALTER TABLE SET SCHEMA istället."
 
 #: commands/vacuumlazy.c:492
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\": removed %.0f row versions in %u pages"
-msgstr "\"%s\": tog bort %d radversioner i %d sidor"
+msgstr "\"%s\": tog bort %.0f radversioner i %u sidor"
 
 #: commands/vacuumlazy.c:500
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
 "There were %.0f unused item pointers.\n"
@@ -4770,6 +4755,7 @@ msgid ""
 msgstr ""
 "%.0f döda radversioner kan inte tas bort ännu.\n"
 "Det fanns %.0f oanvända \"item\"-pekare.\n"
+"%u sidor innehåller användbar tom plats.\n"
 "%u sidor är helt tomma.\n"
 "%s."
 
@@ -4778,7 +4764,7 @@ msgstr ""
 msgid ""
 "relation \"%s.%s\" contains more than \"max_fsm_pages\" pages with useful "
 "free space"
-msgstr ""
+msgstr "relation \"%s.%s\" innehåller mer än \"max_fsm_pages\" sidor med användbart tomt utrymme"
 
 #: commands/vacuumlazy.c:516
 msgid ""
@@ -4792,9 +4778,9 @@ msgid "\"%s\": removed %d row versions in %d pages"
 msgstr "\"%s\": tog bort %d radversioner i %d sidor"
 
 #: commands/vacuumlazy.c:655
-#, fuzzy, c-format
+#, c-format
 msgid "scanned index \"%s\" to remove %d row versions"
-msgstr "\"%s\": tog bort %d radversioner i %d sidor"
+msgstr "genomsökte index \"%s\" och tog bort %d radversioner"
 
 #: commands/view.c:137
 msgid "view must have at least one column"
@@ -5154,9 +5140,9 @@ msgstr ""
 
 #. translator: %s is name of a SQL command, eg INSERT
 #: executor/spi.c:850
-#, fuzzy, c-format
+#, c-format
 msgid "cannot open %s query as cursor"
-msgstr "kan inte ta bort %s eftersom %s behöver den"
+msgstr "kan inte öppna %s-fråga som markör"
 
 #: executor/spi.c:1634
 #, c-format
