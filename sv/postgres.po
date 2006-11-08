@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-06 19:00-0400\n"
-"PO-Revision-Date: 2006-11-07 16:04+0100\n"
+"PO-Revision-Date: 2006-11-08 08:46+0100\n"
 "Last-Translator: Dennis Björklund <db@zigo.dhs.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -6757,14 +6757,13 @@ msgid "unequal number of entries in row expressions"
 msgstr ""
 
 #: parser/parse_expr.c:1977
-#, fuzzy
 msgid "cannot compare rows of zero length"
-msgstr "kan inte ta logartimen av noll"
+msgstr "kan inte jämföra rader med längden noll"
 
 #: parser/parse_expr.c:2002
-#, fuzzy, c-format
+#, c-format
 msgid "row comparison operator must yield type boolean, not type %s"
-msgstr "operator %s måste returnera boolean, inte typ %s"
+msgstr "operator för radjämförelse måste resultera i typen boolean, inte %s"
 
 #: parser/parse_expr.c:2009
 #, fuzzy
@@ -6809,13 +6808,13 @@ msgstr "funktionen %s är inte unik"
 msgid ""
 "Could not choose a best candidate function. You may need to add explicit "
 "type casts."
-msgstr ""
+msgstr "Kunde inte välja en bästa kandidatfunktion: Du kan behöva lägga till explicita typomvandlingar."
 
 #: parser/parse_func.c:224
 msgid ""
 "No function matches the given name and argument types. You may need to add "
 "explicit type casts."
-msgstr ""
+msgstr "Ingen funktion matchar det angivna namnet och argumenttyperna. Du kan behöva lägga till explicita typomvandlingar."
 
 #: parser/parse_func.c:273
 #, fuzzy, c-format
@@ -7364,12 +7363,12 @@ msgstr ""
 #: port/sysv_shmem.c:99 port/pg_shmem.c:99
 #, c-format
 msgid "could not create shared memory segment: %m"
-msgstr ""
+msgstr "kunde inte skapa delat minnessegment: %m"
 
 #: port/sysv_shmem.c:100 port/pg_shmem.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "Failed system call was shmget(key=%lu, size=%lu, 0%o)."
-msgstr "Misslyckade systemanropet var semget(%lu, %d, 0%o)."
+msgstr "Misslyckade systemanropet var semget(key=%lu, size=%lu, 0%o)."
 
 #: port/sysv_shmem.c:104 port/pg_shmem.c:104
 #, c-format
@@ -7428,14 +7427,14 @@ msgid "could not lock semaphore: error code %d"
 msgstr "kunde inte låsa semafor: felkod %d"
 
 #: port/win32_sema.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "could not unlock semaphore: error code %d"
-msgstr "kunde inte starta process: %m"
+msgstr "kunde inte låsa upp semafor: felkod %d"
 
 #: port/win32_sema.c:197
-#, fuzzy, c-format
+#, c-format
 msgid "could not try-lock semaphore: error code %d"
-msgstr "kunde inte starta process: %m"
+msgstr "kunde inte utföra \"try-lock\" på semafor: felkod %d"
 
 #: postmaster/autovacuum.c:166
 #, c-format
@@ -7668,11 +7667,11 @@ msgstr ""
 
 #: postmaster/postmaster.c:2030
 msgid "startup process"
-msgstr "starta process"
+msgstr "startprocess"
 
 #: postmaster/postmaster.c:2033
 msgid "aborting startup due to startup process failure"
-msgstr ""
+msgstr "avbryter uppstart på grund av fel i startprocessen"
 
 #: postmaster/postmaster.c:2102
 msgid "background writer process"
@@ -7696,7 +7695,7 @@ msgstr "system-logg-process"
 
 #: postmaster/postmaster.c:2183
 msgid "all server processes terminated; reinitializing"
-msgstr ""
+msgstr "alla serverprocesser är avslutade; initierar på nytt"
 
 #: postmaster/postmaster.c:2229 postmaster/postmaster.c:2239
 msgid "server process"
@@ -7704,7 +7703,7 @@ msgstr "serverprocess"
 
 #: postmaster/postmaster.c:2281
 msgid "terminating any other active server processes"
-msgstr ""
+msgstr "avslutar andra aktiva serverprocesser"
 
 #: postmaster/postmaster.c:2388
 #, c-format
@@ -7806,9 +7805,9 @@ msgid "could not fork archiver: %m"
 msgstr "kunde inte fork():a arkiveraren: %m"
 
 #: postmaster/pgarch.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "transaction log file \"%s\" could not be archived: too many failures"
-msgstr "tar bort transaktionsloggfil \"%s\""
+msgstr "transaktionsloggfil \"%s\" kunde inte arkiveras: för många fel"
 
 #: postmaster/pgarch.c:460
 #, c-format
@@ -7949,14 +7948,14 @@ msgid "database hash table corrupted during cleanup --- abort"
 msgstr ""
 
 #: postmaster/syslogger.c:314
-#, fuzzy, c-format
+#, c-format
 msgid "select() failed in logger process: %m"
-msgstr "select() misslyckades i statistikinsamlaren: %m"
+msgstr "select() misslyckades i loggprocess: %m"
 
 #: postmaster/syslogger.c:326 postmaster/syslogger.c:705
-#, fuzzy, c-format
+#, c-format
 msgid "could not read from logger pipe: %m"
-msgstr "kunde inte läsa från kontrollfil: %m"
+msgstr "kunde inte läsa från loggrör (pipe): %m"
 
 #: postmaster/syslogger.c:357
 msgid "logger shutting down"
@@ -7973,14 +7972,14 @@ msgid "could not create log file \"%s\": %m"
 msgstr "kunde inte skapa loggfil \"%s\": %m"
 
 #: postmaster/syslogger.c:450
-#, fuzzy, c-format
+#, c-format
 msgid "could not fork system logger: %m"
-msgstr "kunde inte starta startup-processen: %m"
+msgstr "kunde inte fork:a systemloggaren: %m"
 
 #: postmaster/syslogger.c:481
-#, fuzzy, c-format
+#, c-format
 msgid "could not redirect stdout: %m"
-msgstr "kunde inte läsa katalog \"%s\": %m"
+msgstr "kunde inte omdirigera stdout: %m"
 
 #: postmaster/syslogger.c:486 postmaster/syslogger.c:499
 #, c-format
@@ -8050,7 +8049,7 @@ msgstr "\"%s\" är redan en vy"
 #: rewrite/rewriteDefine.c:323
 #, c-format
 msgid "view rule for \"%s\" must be named \"%s\""
-msgstr ""
+msgstr "vy-regel (rule) för \"%s\" måste ha namnet \"%s\""
 
 #: rewrite/rewriteDefine.c:343
 #, c-format
@@ -8227,12 +8226,12 @@ msgstr ""
 #: storage/buffer/bufmgr.c:264
 #, c-format
 msgid "invalid page header in block %u of relation \"%s\"; zeroing out page"
-msgstr ""
+msgstr "felaktigt sidhuvud i block %u relation \"%s\"; nollställer sidan"
 
 #: storage/buffer/bufmgr.c:271
 #, c-format
 msgid "invalid page header in block %u of relation \"%s\""
-msgstr ""
+msgstr "felaktigt sidhuvud i block %u relation \"%s\""
 
 #: storage/buffer/bufmgr.c:2124
 #, c-format
@@ -9106,12 +9105,12 @@ msgstr "kodningskonvertering från %s till ASCII stöds inte"
 #: utils/adt/bool.c:80
 #, c-format
 msgid "invalid input syntax for type boolean: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen boolean: \"%s\""
 
 #: utils/adt/cash.c:196
 #, c-format
 msgid "invalid input syntax for type money: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen money: \"%s\""
 
 #: utils/adt/cash.c:487 utils/adt/cash.c:539 utils/adt/cash.c:592
 #: utils/adt/cash.c:644 utils/adt/float.c:827 utils/adt/float.c:891
@@ -9159,7 +9158,7 @@ msgstr "smallint utanför sitt intervall"
 #: utils/adt/timestamp.c:4370 utils/adt/timestamp.c:4374
 #: utils/adt/timestamp.c:4415
 msgid "timestamp out of range"
-msgstr ""
+msgstr "timestamp utanför giltigt intervall"
 
 #: utils/adt/date.c:804
 msgid "cannot convert reserved abstime value to date"
@@ -9168,7 +9167,7 @@ msgstr ""
 #: utils/adt/date.c:865
 #, c-format
 msgid "invalid input syntax for type date: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen date: \"%s\""
 
 #: utils/adt/date.c:1592
 #, c-format
@@ -9237,14 +9236,14 @@ msgid "invalid Datum pointer"
 msgstr ""
 
 #: utils/adt/dbsize.c:90 utils/adt/dbsize.c:163
-#, fuzzy, c-format
+#, c-format
 msgid "could not open tablespace directory \"%s\": %m"
-msgstr "kunde inte öppna katalog \"%s\": %m"
+msgstr "kunde inte öppna tabellutrymmeskatalog \"%s\": %m"
 
 #: utils/adt/domains.c:79
-#, fuzzy, c-format
+#, c-format
 msgid "type %s is not a domain"
-msgstr "\"%s\" är inte en domän"
+msgstr "typen %s är inte en domän"
 
 #: utils/adt/encode.c:55 utils/adt/encode.c:91
 #, c-format
@@ -9275,7 +9274,7 @@ msgstr ""
 #: utils/adt/encode.c:436 utils/adt/encode.c:501 utils/adt/varlena.c:120
 #: utils/adt/varlena.c:159
 msgid "invalid input syntax for type bytea"
-msgstr ""
+msgstr "felaktig indatasyntax för typen bytea"
 
 #: utils/adt/float.c:219
 msgid "type \"real\" value out of range: overflow"
@@ -9296,23 +9295,23 @@ msgstr ""
 #: utils/adt/float.c:274 utils/adt/float.c:315 utils/adt/float.c:365
 #, c-format
 msgid "invalid input syntax for type real: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen real: \"%s\""
 
 #: utils/adt/float.c:310
 #, c-format
 msgid "\"%s\" is out of range for type real"
-msgstr ""
+msgstr "\"%s\" är utanför giltigt intervall för typen real"
 
 #: utils/adt/float.c:467 utils/adt/float.c:508 utils/adt/float.c:558
 #: utils/adt/numeric.c:3363 utils/adt/numeric.c:3389
 #, c-format
 msgid "invalid input syntax for type double precision: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen double precision: \"%s\""
 
 #: utils/adt/float.c:503
 #, c-format
 msgid "\"%s\" is out of range for type double precision"
-msgstr ""
+msgstr "\"%s\" är utanför giltigt intervall för typen double precision"
 
 #: utils/adt/float.c:1182 utils/adt/float.c:1248 utils/adt/int.c:341
 #: utils/adt/int.c:838 utils/adt/int.c:867 utils/adt/int.c:888
@@ -9373,7 +9372,7 @@ msgstr "kan inte använda \"V\" ach decimalpunkt tillsammans"
 
 #: utils/adt/formatting.c:1085
 msgid "not unique \"S\""
-msgstr ""
+msgstr "inte unik \"S\""
 
 #: utils/adt/formatting.c:1092
 msgid "cannot use \"S\" and \"PL\"/\"MI\"/\"SG\"/\"PR\" together"
@@ -9419,151 +9418,151 @@ msgstr "ogiltigt värde för %s"
 
 #: utils/adt/formatting.c:2871
 msgid "January"
-msgstr ""
+msgstr "Januari"
 
 #: utils/adt/formatting.c:2874
 msgid "February"
-msgstr ""
+msgstr "Februari"
 
 #: utils/adt/formatting.c:2877
 msgid "March"
-msgstr ""
+msgstr "Mars"
 
 #: utils/adt/formatting.c:2880
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: utils/adt/formatting.c:2883 utils/adt/formatting.c:2931
 msgid "May"
-msgstr ""
+msgstr "Maj"
 
 #: utils/adt/formatting.c:2886
 msgid "June"
-msgstr ""
+msgstr "Juni"
 
 #: utils/adt/formatting.c:2889
 msgid "July"
-msgstr ""
+msgstr "Juli"
 
 #: utils/adt/formatting.c:2892
 msgid "August"
-msgstr ""
+msgstr "Augusti"
 
 #: utils/adt/formatting.c:2895
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: utils/adt/formatting.c:2898
 msgid "October"
-msgstr ""
+msgstr "Oktober"
 
 #: utils/adt/formatting.c:2901
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: utils/adt/formatting.c:2904
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: utils/adt/formatting.c:2919
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 #: utils/adt/formatting.c:2922
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 #: utils/adt/formatting.c:2925
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 #: utils/adt/formatting.c:2928
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 #: utils/adt/formatting.c:2934
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 #: utils/adt/formatting.c:2937
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
 #: utils/adt/formatting.c:2940
 msgid "Aug"
-msgstr ""
+msgstr "Aug"
 
 #: utils/adt/formatting.c:2943
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 #: utils/adt/formatting.c:2946
 msgid "Oct"
-msgstr ""
+msgstr "Okt"
 
 #: utils/adt/formatting.c:2949
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 #: utils/adt/formatting.c:2952
 msgid "Dec"
-msgstr ""
+msgstr "Dec"
 
 #: utils/adt/formatting.c:2967
 msgid "Sunday"
-msgstr ""
+msgstr "Söndag"
 
 #: utils/adt/formatting.c:2970
 msgid "Monday"
-msgstr ""
+msgstr "Måndag"
 
 #: utils/adt/formatting.c:2973
 msgid "Tuesday"
-msgstr ""
+msgstr "Tisdag"
 
 #: utils/adt/formatting.c:2976
 msgid "Wednesday"
-msgstr ""
+msgstr "Onsdag"
 
 #: utils/adt/formatting.c:2979
 msgid "Thursday"
-msgstr ""
+msgstr "Torsdag"
 
 #: utils/adt/formatting.c:2982
 msgid "Friday"
-msgstr ""
+msgstr "Fredag"
 
 #: utils/adt/formatting.c:2985
 msgid "Saturday"
-msgstr ""
+msgstr "Lördag"
 
 #: utils/adt/formatting.c:3000
 msgid "Sun"
-msgstr ""
+msgstr "Sön"
 
 #: utils/adt/formatting.c:3003
 msgid "Mon"
-msgstr ""
+msgstr "Mån"
 
 #: utils/adt/formatting.c:3006
 msgid "Tue"
-msgstr ""
+msgstr "Tis"
 
 #: utils/adt/formatting.c:3009
 msgid "Wed"
-msgstr ""
+msgstr "Ons"
 
 #: utils/adt/formatting.c:3012
 msgid "Thu"
-msgstr ""
+msgstr "Tors"
 
 #: utils/adt/formatting.c:3015
 msgid "Fri"
-msgstr ""
+msgstr "Fre"
 
 #: utils/adt/formatting.c:3018
 msgid "Sat"
-msgstr ""
+msgstr "Lör"
 
 #: utils/adt/formatting.c:3314
 msgid "AM/PM hour must be between 1 and 12"
@@ -9595,7 +9594,6 @@ msgid "could not seek in file \"%s\": %m"
 msgstr "kunde inte söka (seek) i fil \"%s\": %m"
 
 #: utils/adt/genfile.c:121
-#, fuzzy
 msgid "requested length may not be negative"
 msgstr "efterfrågad längd får inte vara negativ"
 
@@ -9605,14 +9603,12 @@ msgid "requested length too large"
 msgstr "efterfrågad längd är för lång"
 
 #: utils/adt/genfile.c:163
-#, fuzzy
 msgid "must be superuser to get file information"
-msgstr "måste vara superanvändare för att skapa en operatorklass"
+msgstr "måste vara superanvändare för att hämta filinformation"
 
 #: utils/adt/genfile.c:227
-#, fuzzy
 msgid "must be superuser to get directory listings"
-msgstr "måste vara superanvändare för att slänga användare"
+msgstr "måste vara superanvändare för att lista kataloger"
 
 #: utils/adt/geo_ops.c:292 utils/adt/geo_ops.c:4078 utils/adt/geo_ops.c:4995
 msgid "too many points requested"
@@ -9625,12 +9621,12 @@ msgstr "kunde inte formattera \"path\"-värde"
 #: utils/adt/geo_ops.c:390
 #, c-format
 msgid "invalid input syntax for type box: \"%s\""
-msgstr ""
+msgstr "ogiltig indatassyntax för typen box: \"%s\""
 
 #: utils/adt/geo_ops.c:954
 #, c-format
 msgid "invalid input syntax for type line: \"%s\""
-msgstr ""
+msgstr "ogiltig indatassyntax för typen line: \"%s\""
 
 #: utils/adt/geo_ops.c:961 utils/adt/geo_ops.c:1028 utils/adt/geo_ops.c:1043
 #: utils/adt/geo_ops.c:1055
@@ -9720,9 +9716,8 @@ msgid "int2vector has too many elements"
 msgstr "int2vector har för många element"
 
 #: utils/adt/int.c:236
-#, fuzzy
 msgid "invalid int2vector data"
-msgstr "ogiltig primär checkpoint-post"
+msgstr "ogiltig int2vector-data"
 
 #: utils/adt/int.c:1395 utils/adt/int8.c:1212
 msgid "step size may not equal zero"
@@ -9732,7 +9727,7 @@ msgstr ""
 #: utils/adt/numutils.c:63 utils/adt/numutils.c:105
 #, c-format
 msgid "invalid input syntax for integer: \"%s\""
-msgstr "ogiltig indatasyntax för heltal: \"%s\""
+msgstr "felaktig indatasyntax för heltal: \"%s\""
 
 #: utils/adt/int8.c:117
 #, c-format
@@ -9746,9 +9741,8 @@ msgstr "värdet \"%s\" är utanför intervallet för typen bigint"
 #: utils/adt/int8.c:855 utils/adt/int8.c:876 utils/adt/int8.c:903
 #: utils/adt/int8.c:1071 utils/adt/int8.c:1110 utils/adt/numeric.c:1835
 #: utils/adt/varbit.c:1366
-#, fuzzy
 msgid "bigint out of range"
-msgstr "OID utanför sitt intervall"
+msgstr "bigint utanför sitt intervall"
 
 #: utils/adt/int8.c:1127
 msgid "OID out of range"
@@ -9774,7 +9768,7 @@ msgstr ""
 
 #: utils/adt/mac.c:190
 msgid "text too long to convert to MAC address"
-msgstr ""
+msgstr "texten är för lång för att konvertera till en MAC-adress"
 
 #: utils/adt/misc.c:83
 #, fuzzy
@@ -9782,31 +9776,27 @@ msgid "must be superuser to signal other server processes"
 msgstr "måste vara superanvändare för att ändra grupper"
 
 #: utils/adt/misc.c:92
-#, fuzzy, c-format
+#, c-format
 msgid "PID %d is not a PostgreSQL server process"
-msgstr ""
-"%s är PostgreSQL-servern.\n"
-"\n"
+msgstr "PID %d är inte en PostgreSQL serverprocess"
 
 #: utils/adt/misc.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "could not send signal to process %d: %m"
-msgstr "kunde inte skicka data till klient: %m"
+msgstr "kunde inte skicka signal till process %d: %m"
 
 #: utils/adt/misc.c:118
-#, fuzzy
 msgid "must be superuser to signal the postmaster"
-msgstr "måste vara superanvändare för att ändra grupper"
+msgstr "måste vara superanvändare för att signalera till postmaster"
 
 #: utils/adt/misc.c:123
-#, fuzzy, c-format
+#, c-format
 msgid "failed to send signal to postmaster: %m"
-msgstr "kunde inte signalera backend %i: %m"
+msgstr "misslyckades med att sända en signal till postmaster: %m"
 
 #: utils/adt/misc.c:140
-#, fuzzy
 msgid "must be superuser to rotate log files"
-msgstr "måste vara superanvändare för att skapa grupper"
+msgstr "måste vara superanvändare för att rotera loggfiler"
 
 #: utils/adt/misc.c:145
 msgid "rotation not possible because log redirection not active"
@@ -9841,12 +9831,12 @@ msgstr ""
 #: utils/adt/nabstime.c:1564
 #, c-format
 msgid "invalid input syntax for type tinterval: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen tinterval: \"%s\""
 
 #: utils/adt/network.c:104
 #, c-format
 msgid "invalid cidr value: \"%s\""
-msgstr ""
+msgstr "ogiltigt cidr-värde: \"%s\""
 
 #: utils/adt/network.c:105 utils/adt/network.c:240
 msgid "Value has bits set to right of mask."
@@ -9886,9 +9876,9 @@ msgid "invalid mask length: %d"
 msgstr ""
 
 #: utils/adt/network.c:715
-#, fuzzy, c-format
+#, c-format
 msgid "could not format cidr value: %m"
-msgstr "kunde inte formattera \"path\"-värde"
+msgstr "kunde inte formattera \"cidr\"-värde"
 
 #: utils/adt/network.c:1295
 #, fuzzy
@@ -9929,7 +9919,7 @@ msgstr ""
 
 #: utils/adt/numeric.c:424
 msgid "invalid digit in external \"numeric\" value"
-msgstr ""
+msgstr "felaktig siffra i externt numeriskt (\"numeric\") värde "
 
 #: utils/adt/numeric.c:841
 msgid "count must be greater than zero"
@@ -9937,7 +9927,7 @@ msgstr "antal måste vara större än noll"
 
 #: utils/adt/numeric.c:854
 msgid "lower bound cannot equal upper bound"
-msgstr ""
+msgstr "lägre gräns kan inte vara samma som övre gräns"
 
 #: utils/adt/numeric.c:1758
 msgid "cannot convert NaN to integer"
@@ -9974,7 +9964,7 @@ msgstr ""
 
 #: utils/adt/numeric.c:4395
 msgid "argument for function \"exp\" too big"
-msgstr ""
+msgstr "argument till funktionen \"exp\" är för stort"
 
 #: utils/adt/numeric.c:4775
 msgid "zero raised to zero is undefined"
@@ -9998,12 +9988,12 @@ msgstr "värdet \"%s\" är utanför intervallet för ett 8-bitars heltal"
 #: utils/adt/oid.c:43 utils/adt/oid.c:57 utils/adt/oid.c:63 utils/adt/oid.c:84
 #, c-format
 msgid "invalid input syntax for type oid: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen oid: \"%s\""
 
 #: utils/adt/oid.c:69 utils/adt/oid.c:107
 #, c-format
 msgid "value \"%s\" is out of range for type oid"
-msgstr ""
+msgstr "värdet \"%s\" är utanför giltigt intervall för typen oid"
 
 #: utils/adt/oid.c:212
 msgid "oidvector has too many elements"
@@ -10027,7 +10017,7 @@ msgstr ""
 #: utils/adt/oracle_compat.c:217 utils/adt/oracle_compat.c:227
 #, c-format
 msgid "UTF-16 to UTF-8 translation failed: %lu"
-msgstr ""
+msgstr "översättning från UTF-16 till UTF-8 misslyckades: %lu"
 
 #: utils/adt/pseudotypes.c:94
 msgid "cannot accept a value of type any"
@@ -10082,14 +10072,12 @@ msgid "cannot display a value of type anyelement"
 msgstr "kan inte visa ett värde av typen anyelement"
 
 #: utils/adt/pseudotypes.c:333
-#, fuzzy
 msgid "cannot accept a value of a shell type"
-msgstr "kan inte acceptera ett värde av typen any"
+msgstr "kan inte acceptera ett värde av typen shell"
 
 #: utils/adt/pseudotypes.c:346
-#, fuzzy
 msgid "cannot display a value of a shell type"
-msgstr "kan inte visa ett värde av typen any"
+msgstr "kan inte visa ett värde av typen shell"
 
 #: utils/adt/regexp.c:154
 #, c-format
@@ -10140,7 +10128,7 @@ msgstr "olämpligt typnamn"
 #: utils/adt/ri_triggers.c:3257 utils/adt/ri_triggers.c:3294
 #, c-format
 msgid "insert or update on table \"%s\" violates foreign key constraint \"%s\""
-msgstr ""
+msgstr "insert eller update på tabell \"%s\" bryter mot främmande nyckel-villkoret \"%s\""
 
 #: utils/adt/ri_triggers.c:345 utils/adt/ri_triggers.c:2756
 msgid "MATCH FULL does not allow mixing of null and nonnull key values."
@@ -10202,7 +10190,7 @@ msgstr ""
 #: utils/adt/ri_triggers.c:2968
 #, c-format
 msgid "function \"%s\" must be fired for DELETE"
-msgstr ""
+msgstr "funktionen \"%s\" måste köras för DELETE"
 
 #: utils/adt/ri_triggers.c:3224
 #, c-format
@@ -10223,20 +10211,19 @@ msgstr "Inga rader hittades i \"%s\"."
 #: utils/adt/ri_triggers.c:3296
 #, c-format
 msgid "Key (%s)=(%s) is not present in table \"%s\"."
-msgstr ""
+msgstr "Nyckel (%s)=(%s) finns inte i tabellen \"%s\"."
 
 #: utils/adt/ri_triggers.c:3302
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "update or delete on table \"%s\" violates foreign key constraint \"%s\" on "
 "table \"%s\""
-msgstr ""
-"Tabell \"%s\" refererar till \"%s\" via främmande nyckel-villkor \"%s\""
+msgstr "update eller delete på tabell \"%s\" bryter mot främmande nyckel-villkoret \"%s\" för tabell \"%s\""
 
 #: utils/adt/ri_triggers.c:3305
 #, c-format
 msgid "Key (%s)=(%s) is still referenced from table \"%s\"."
-msgstr ""
+msgstr "Nyckel (%s)=(%s) refereras fortfarande till från tabell \"%s\"."
 
 #: utils/adt/rowtypes.c:81 utils/adt/rowtypes.c:451
 msgid "input of anonymous composite types is not implemented"
@@ -10286,7 +10273,7 @@ msgstr ""
 #: utils/adt/tid.c:65 utils/adt/tid.c:73 utils/adt/tid.c:81
 #, c-format
 msgid "invalid input syntax for type tid: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för type tid: \"%s\""
 
 #: utils/adt/selfuncs.c:3830 utils/adt/selfuncs.c:4210
 msgid "case insensitive matching not supported on type bytea"
@@ -10309,7 +10296,7 @@ msgstr "värdet för långt för typen character varying(%d)"
 #: utils/adt/timestamp.c:100 utils/adt/timestamp.c:343
 #, c-format
 msgid "timestamp out of range: \"%s\""
-msgstr ""
+msgstr "timestamp utanför giltigt intervall: \"%s\""
 
 #: utils/adt/timestamp.c:118 utils/adt/timestamp.c:361
 #: utils/adt/timestamp.c:543
@@ -10325,7 +10312,7 @@ msgstr "timestamp(%d)-precision måste vara mellan %d och %d"
 #: utils/adt/timestamp.c:537 utils/adt/timestamp.c:2799
 #: utils/adt/timestamp.c:2917 utils/adt/timestamp.c:3483
 msgid "interval out of range"
-msgstr ""
+msgstr "interval utanför giltigt intervall"
 
 #: utils/adt/timestamp.c:862
 #, c-format
@@ -10339,17 +10326,17 @@ msgstr ""
 #: utils/adt/timestamp.c:2977
 #, c-format
 msgid "invalid input syntax for type timestamp: \"%s\""
-msgstr "ogiltig indatasyntax för typen timestamp: \"%s\""
+msgstr "felaktig indatasyntax för typen timestamp: \"%s\""
 
 #: utils/adt/timestamp.c:3037
 #, c-format
 msgid "invalid input syntax for type timestamp with time zone: \"%s\""
-msgstr "ogiltig indatasyntax för typen timestamp with time zone: \"%s\""
+msgstr "felaktig indatasyntax för typen timestamp with time zone: \"%s\""
 
 #: utils/adt/timestamp.c:3098
 #, c-format
 msgid "invalid input syntax for type interval: \"%s\""
-msgstr ""
+msgstr "felaktig indatasyntax för typen interval: \"%s\""
 
 #: utils/adt/timestamp.c:3224 utils/adt/timestamp.c:3787
 #: utils/adt/timestamp.c:3843
@@ -10608,7 +10595,7 @@ msgstr "kunde inte komma åt filen \"%s\": %m"
 #: utils/fmgr/dfmgr.c:239
 #, c-format
 msgid "could not load library \"%s\": %s"
-msgstr "kunde inte ladda bibliotek \"%s\": %s"
+msgstr "kunde inte ladda länkbibliotek \"%s\": %s"
 
 #: utils/fmgr/dfmgr.c:267
 #, c-format
@@ -10618,7 +10605,7 @@ msgstr ""
 #: utils/fmgr/dfmgr.c:269
 #, c-format
 msgid "Server is version %d.%d, library is version %d.%d."
-msgstr ""
+msgstr "Servern är version %d.%d, biblioteket är version %d.%d."
 
 #: utils/fmgr/dfmgr.c:275
 #, c-format
@@ -10688,14 +10675,14 @@ msgid "could not determine row description for function returning record"
 msgstr "kunde inte få radbeskrivning för funktion som returnerar en record"
 
 #: utils/init/postinit.c:126
-#, fuzzy, c-format
+#, c-format
 msgid "database \"%s\" has disappeared from pg_database"
-msgstr "databasen \"%s\", OID %u, har försvunnit från pg_database"
+msgstr "databasen \"%s\" har försvunnit från pg_database"
 
 #: utils/init/postinit.c:128
 #, c-format
 msgid "Database OID %u now seems to belong to \"%s\"."
-msgstr ""
+msgstr "Databasen med OID %u verkar nu höra till \"%s\"."
 
 #: utils/init/postinit.c:148
 #, c-format
@@ -10974,23 +10961,23 @@ msgstr "internt fel: okänd parametertyp\n"
 
 #: utils/misc/guc.c:281
 msgid "Ungrouped"
-msgstr ""
+msgstr "Ej grupperad"
 
 #: utils/misc/guc.c:283
 msgid "File Locations"
-msgstr ""
+msgstr "Filplatser"
 
 #: utils/misc/guc.c:285
 msgid "Connections and Authentication"
-msgstr ""
+msgstr "Uppkopplingar och Autentisering"
 
 #: utils/misc/guc.c:287
 msgid "Connections and Authentication / Connection Settings"
-msgstr ""
+msgstr "Uppkopplingar och Autentisering / Uppkopplingsinställningar"
 
 #: utils/misc/guc.c:289
 msgid "Connections and Authentication / Security and Authentication"
-msgstr ""
+msgstr "Uppkopplingar och Autentisering / Säkerhet och Autentisering"
 
 #: utils/misc/guc.c:291
 msgid "Resource Usage"
@@ -11010,35 +10997,35 @@ msgstr "Resursanvändning / Kärnresurser"
 
 #: utils/misc/guc.c:299
 msgid "Write-Ahead Log"
-msgstr ""
+msgstr "Write-Ahead Log"
 
 #: utils/misc/guc.c:301
 msgid "Write-Ahead Log / Settings"
-msgstr ""
+msgstr "Write-Ahead Log / Inställningar"
 
 #: utils/misc/guc.c:303
 msgid "Write-Ahead Log / Checkpoints"
-msgstr ""
+msgstr "Write-Ahead Log / Checkpoint:er"
 
 #: utils/misc/guc.c:305
 msgid "Query Tuning"
-msgstr ""
+msgstr "Frågeoptimering"
 
 #: utils/misc/guc.c:307
 msgid "Query Tuning / Planner Method Configuration"
-msgstr ""
+msgstr "Frågeoptimering / Planeringsmetodinställningar"
 
 #: utils/misc/guc.c:309
 msgid "Query Tuning / Planner Cost Constants"
-msgstr ""
+msgstr "Frågeoptimering / Plannerarens kostnadskonstanter"
 
 #: utils/misc/guc.c:311
 msgid "Query Tuning / Genetic Query Optimizer"
-msgstr ""
+msgstr "Frågeoptimering / Genetisk frågeoptimerare"
 
 #: utils/misc/guc.c:313
 msgid "Query Tuning / Other Planner Options"
-msgstr ""
+msgstr "Frågeoptimering / Andra planeringsinställningar"
 
 #: utils/misc/guc.c:315
 msgid "Reporting and Logging"
@@ -11062,16 +11049,15 @@ msgstr "Statistik"
 
 #: utils/misc/guc.c:325
 msgid "Statistics / Monitoring"
-msgstr ""
+msgstr "Statistik / Övervakning"
 
 #: utils/misc/guc.c:327
 msgid "Statistics / Query and Index Statistics Collector"
-msgstr ""
+msgstr "Statistik / Insamlare av fråge- och index-statistik"
 
 #: utils/misc/guc.c:329
-#, fuzzy
 msgid "Autovacuum"
-msgstr "starta process"
+msgstr "Autovacuum"
 
 #: utils/misc/guc.c:331
 msgid "Client Connection Defaults"
