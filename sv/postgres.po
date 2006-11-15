@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-11 01:00-0400\n"
-"PO-Revision-Date: 2006-11-13 15:26+0100\n"
+"PO-Revision-Date: 2006-11-15 16:15+0100\n"
 "Last-Translator: Dennis Björklund <db@zigo.dhs.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -3281,7 +3281,7 @@ msgstr "COPY-avdelaren kan inte vara nyradstecken eller vagnretur"
 
 #: commands/copy.c:875
 msgid "COPY null representation cannot use newline or carriage return"
-msgstr ""
+msgstr "null-representationen för COPY kan inte använda tecknen för nyrad eller vagnretur"
 
 #: commands/copy.c:881
 msgid "COPY delimiter cannot be backslash"
@@ -4655,12 +4655,12 @@ msgstr "typens utdata-funktion %s måste returnera typen \"cstring\""
 #: commands/typecmds.c:325
 #, c-format
 msgid "type receive function %s must return type %s"
-msgstr ""
+msgstr "typens receive-funktion %s måste returnera typen %s"
 
 #: commands/typecmds.c:334
 #, c-format
 msgid "type send function %s must return type \"bytea\""
-msgstr ""
+msgstr "typens send-funktion %s måste returnera typen \"bytea\""
 
 #: commands/typecmds.c:461 commands/typecmds.c:849 tcop/utility.c:100
 #, c-format
@@ -4697,9 +4697,10 @@ msgstr "unik-villkor går inte att ha på domäner"
 msgid "primary key constraints not possible for domains"
 msgstr "primärnyckelvillkor går inte att ha på domäner"
 
+# FIXME: svengelska (mer än normalt)
 #: commands/typecmds.c:746 commands/typecmds.c:1503
 msgid "specifying constraint deferrability not supported for domains"
-msgstr ""
+msgstr "att ange constraint-deferrability stöds inte för domäner"
 
 #: commands/typecmds.c:875 commands/typecmds.c:1747
 #, c-format
@@ -4709,7 +4710,7 @@ msgstr "\"%s\" är inte en domän"
 #: commands/typecmds.c:941
 #, c-format
 msgid "changing argument type of function %s from \"opaque\" to \"cstring\""
-msgstr ""
+msgstr "ändrar argumenttyp på funktion %s från \"opaque\" till \"cstring\""
 
 #: commands/typecmds.c:992
 #, c-format
@@ -4745,7 +4746,7 @@ msgstr "integritetsvillkor \"%s\" för domän \"%s\" existerar redan"
 
 #: commands/typecmds.c:1822 commands/typecmds.c:1831
 msgid "cannot use table references in domain check constraint"
-msgstr ""
+msgstr "kan inte använda tabellreferenser i domänens check-villkor"
 
 #: commands/typecmds.c:2058
 #, c-format
@@ -4804,7 +4805,7 @@ msgstr ""
 msgid ""
 "Consider compacting this relation or increasing the configuration parameter "
 "\"max_fsm_pages\"."
-msgstr ""
+msgstr "Överväg att kompakta denna relation eller öka konfigurationsparametern \"max_fsm_pages\"."
 
 #: commands/vacuumlazy.c:563
 #, c-format
@@ -4854,11 +4855,11 @@ msgstr "motstridiga \"datestyle\"-specifikationer"
 
 #: commands/variable.c:289
 msgid "invalid interval value for time zone: month not allowed"
-msgstr ""
+msgstr "felaktigt intervallvärde för tidszon: månad tillåts inte"
 
 #: commands/variable.c:298
 msgid "invalid interval value for time zone: day not allowed"
-msgstr ""
+msgstr "felaktigt intervallvärde för tidszon: dag tillåts inte"
 
 #: commands/variable.c:366
 #, c-format
@@ -4923,7 +4924,7 @@ msgstr "ny rad för relation \"%s\" bryter mot check-villkor \"%s\""
 #: utils/adt/arrayfuncs.c:2812
 #, c-format
 msgid "number of array dimensions (%d) exceeds the maximum allowed (%d)"
-msgstr ""
+msgstr "antalet array-dimensioner (%d) överskrider det maximalt tillåtna (%d)"
 
 #: executor/execQual.c:277
 msgid "array subscript in assignment must not be null"
@@ -4951,11 +4952,11 @@ msgstr "funktioner och operatorer kan ta som mest ett argument av mängd-typ"
 #: executor/execQual.c:3992 executor/functions.c:680 executor/functions.c:719
 #: utils/fmgr/funcapi.c:59
 msgid "set-valued function called in context that cannot accept a set"
-msgstr ""
+msgstr "funktion som returnerar en mängd anropas i ett kontext som inte accepterar en mängd"
 
 #: executor/execQual.c:1393
 msgid "function returning set of rows cannot return null value"
-msgstr ""
+msgstr "funktion som returnerar en mängd av rader kan inte returnera värdet null"
 
 #: executor/execQual.c:1471
 msgid "table-function protocol for materialize mode was not followed"
@@ -4976,20 +4977,20 @@ msgstr "operatorerna ANY/ALL (array) stödjer inte mängd-argument"
 
 #: executor/execQual.c:2317
 msgid "cannot merge incompatible arrays"
-msgstr ""
+msgstr "kan inte göra merge på inkompatibla arrayer"
 
 #: executor/execQual.c:2318
 #, c-format
 msgid ""
 "Array with element type %s cannot be included in ARRAY construct with "
 "element type %s."
-msgstr ""
+msgstr "Array med elementtyp %s kan inte inkluderas i ARRAY-konstruktion med elementtyp %s."
 
 #: executor/execQual.c:2359 executor/execQual.c:2386
 #: utils/adt/arrayfuncs.c:489
 msgid ""
 "multidimensional arrays must have array expressions with matching dimensions"
-msgstr ""
+msgstr "multidimensionella arrayer måste ha array-uttryck med matchande dimensioner"
 
 #: executor/execQual.c:2681
 msgid "NULLIF does not support set arguments"
@@ -5036,12 +5037,12 @@ msgstr "%s tillåts inte i en icke-volatile-funktion"
 msgid ""
 "could not determine actual result type for function declared to return type %"
 "s"
-msgstr ""
+msgstr "kunde inte bestämma den verkliga typen för funktion deklarerad att returnera typen %s"
 
 #: executor/functions.c:244
 #, c-format
 msgid "could not determine actual type of argument declared %s"
-msgstr ""
+msgstr "kunde inte bestämma den verkliga typen för argument deklarerat som %s"
 
 #: executor/functions.c:803
 #, c-format
@@ -5098,11 +5099,11 @@ msgstr "returtup %s stöds inte för SQL-funktioner"
 #: executor/nodeAgg.c:1495
 #, c-format
 msgid "aggregate %u needs to have compatible input type and transition type"
-msgstr ""
+msgstr "aggregat %u måste ha kompatibel indatatyp och övergångstyp"
 
 #: executor/nodeAgg.c:1515
 msgid "DISTINCT is supported only for single-argument aggregates"
-msgstr ""
+msgstr "DISTINCT stöds enbart för aggregatfunktioner med ett argument"
 
 #: executor/nodeFunctionscan.c:360 executor/nodeFunctionscan.c:374
 #: executor/nodeFunctionscan.c:384
@@ -5162,7 +5163,7 @@ msgstr ""
 
 #: executor/spi.c:255
 msgid "subtransaction left non-empty SPI stack"
-msgstr ""
+msgstr "undertransaktion lämnade en icke-tom SPI-stack"
 
 #: executor/spi.c:841
 msgid "cannot open multi-query plan as cursor"
@@ -5170,7 +5171,7 @@ msgstr ""
 
 #: executor/spi.c:846
 msgid "cannot open empty query as cursor"
-msgstr ""
+msgstr "kan inte öppna tom fråga som markör"
 
 #. translator: %s is name of a SQL command, eg INSERT
 #: executor/spi.c:850
