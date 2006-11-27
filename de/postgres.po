@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2006.
 #
-# $Id: postgres.po,v 1.10 2006/11/24 16:42:56 petere Exp $
+# $Id: postgres.po,v 1.11 2006/11/27 15:50:43 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-23 19:00-0400\n"
-"PO-Revision-Date: 2006-11-24 17:41+0100\n"
+"POT-Creation-Date: 2006-11-26 19:00-0400\n"
+"PO-Revision-Date: 2006-11-27 16:49+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -252,7 +252,7 @@ msgstr "Konnte Datei »%s« nicht schließen: %m."
 #: access/transam/slru.c:1017
 #, c-format
 msgid "could not truncate directory \"%s\": apparent wraparound"
-msgstr "konnte Verzeichnis »%s« nicht stutzen: anscheinender Überlauf"
+msgstr "konnte Verzeichnis »%s« nicht leeren: anscheinender Überlauf"
 
 #: access/transam/slru.c:1098
 #, c-format
@@ -1058,7 +1058,10 @@ msgstr ""
 msgid ""
 "If this has occurred more than once some data may be corrupted and you may "
 "need to choose an earlier recovery target."
-msgstr "Wenn dies mehr als einmal vorgekommen ist, dann sind einige Daten möglicherweise verfälscht und Sie müssen ein früheres Wiederherstellungsziel wählen."
+msgstr ""
+"Wenn dies mehr als einmal vorgekommen ist, dann sind einige Daten "
+"möglicherweise verfälscht und Sie müssen ein früheres Wiederherstellungsziel "
+"wählen."
 
 #: access/transam/xlog.c:4693
 #, c-format
@@ -1972,7 +1975,9 @@ msgstr ""
 
 #: catalog/pg_aggregate.c:187
 msgid "sort operator can only be specified for single-argument aggregates"
-msgstr "Sortieroperator kann nur für Aggregatfunktionen mit einem Argument angegeben werden"
+msgstr ""
+"Sortieroperator kann nur für Aggregatfunktionen mit einem Argument angegeben "
+"werden"
 
 #: catalog/pg_aggregate.c:316 commands/typecmds.c:959 commands/typecmds.c:1010
 #: commands/typecmds.c:1041 commands/typecmds.c:1064 commands/typecmds.c:1085
@@ -2100,9 +2105,7 @@ msgstr ""
 
 #: catalog/heap.c:2140
 msgid "cannot truncate a table referenced in a foreign key constraint"
-msgstr ""
-"kann eine Tabelle, die in einen Fremdschlüssel-Constraint eingebunden ist, "
-"nicht leeren"
+msgstr "kann eine Tabelle, die in einen Fremdschlüssel-Constraint eingebunden ist, nicht leeren"
 
 #: catalog/heap.c:2141
 #, c-format
@@ -2366,7 +2369,9 @@ msgstr "%d Objekte in %s"
 msgid ""
 "cannot drop objects owned by %s because they are required by the database "
 "system"
-msgstr "kann Objekte, die %s gehören, nicht löschen, weil sie vom Datenbanksystem benötigt werden"
+msgstr ""
+"kann Objekte, die %s gehören, nicht löschen, weil sie vom Datenbanksystem "
+"benötigt werden"
 
 #: catalog/pg_type.c:202
 #, c-format
@@ -2428,7 +2433,7 @@ msgstr "keine Berechtigung: »%s« ist ein Systemkatalog"
 #: commands/tablecmds.c:677
 #, c-format
 msgid "cannot truncate system relation \"%s\""
-msgstr "Systemrelation »%s« kann nicht abgeschnitten werden"
+msgstr "Systemrelation »%s« kann nicht geleert werden"
 
 #: commands/tablecmds.c:687
 msgid "cannot truncate temporary tables of other sessions"
@@ -3025,9 +3030,8 @@ msgid "aggregate sfunc must be specified"
 msgstr "»sfunc« für Aggregatfunktion muss angegeben werden"
 
 #: commands/aggregatecmds.c:134
-#, fuzzy
 msgid "aggregate input type must be specified"
-msgstr "»stype« für Aggregatfunktion muss angegeben werden"
+msgstr "Eingabetyp für Aggregatfunktion muss angegeben werden"
 
 #: commands/aggregatecmds.c:159
 msgid "basetype is redundant with aggregate input type specification"
@@ -3093,13 +3097,11 @@ msgid "cannot cluster on partial index \"%s\""
 msgstr "kann nicht anhand des partiellen Index »%s« clustern"
 
 #: commands/cluster.c:356
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "cannot cluster on index \"%s\" because access method does not support "
 "clustering"
-msgstr ""
-"kann nicht anhand des Index »%s« clustern, weil die Indexmethode keine NULL-"
-"Werte verarbeiten kann"
+msgstr "kann nicht anhand des Index »%s« clustern, weil die Indexmethode Clustern nicht unterstützt"
 
 #: commands/cluster.c:376
 #, c-format
@@ -3156,19 +3158,17 @@ msgid "database name may not be qualified"
 msgstr "Datenbankname kann nicht qualifiziert werden"
 
 #: commands/comment.c:630
-#, fuzzy
 msgid "tablespace name may not be qualified"
-msgstr "Datenbankname kann nicht qualifiziert werden"
+msgstr "Tablespace-Name kann nicht qualifiziert werden"
 
 #: commands/comment.c:667
-#, fuzzy
 msgid "role name may not be qualified"
-msgstr "Sprachname kann nicht qualifiziert werden"
+msgstr "Rollenname kann nicht qualifiziert werden"
 
 #: commands/comment.c:676
-#, fuzzy, c-format
+#, c-format
 msgid "must be member of role \"%s\" to comment upon it"
-msgstr "Berechtigung nur für Mitglied von Rolle »%s«"
+msgstr "nur für Mitglieder der Rolle »%s« können einen Kommentar für sie erstellen"
 
 #: commands/comment.c:700 commands/schemacmds.c:162
 msgid "schema name may not be qualified"
@@ -3317,13 +3317,12 @@ msgid "COPY delimiter must be a single character"
 msgstr "DELIMITER für COPY muss ein einzelnes Zeichen sein"
 
 #: commands/copy.c:869
-#, fuzzy
 msgid "COPY delimiter cannot be newline or carriage return"
-msgstr "DELIMITER für COPY muss ein einzelnes Zeichen sein"
+msgstr "COPY-Trennzeichen kann nicht Newline oder Carriage Return sein"
 
 #: commands/copy.c:875
 msgid "COPY null representation cannot use newline or carriage return"
-msgstr ""
+msgstr "COPY NULL-Darstellung kann nicht Newline oder Carriage Return enthalten"
 
 #: commands/copy.c:881
 msgid "COPY delimiter cannot be backslash"
@@ -3395,14 +3394,12 @@ msgid "table \"%s\" does not have OIDs"
 msgstr "Tabelle »%s« hat keine OIDs"
 
 #: commands/copy.c:1000
-#, fuzzy
 msgid "COPY (SELECT) WITH OIDS is not supported"
-msgstr "LOCATION wird nicht mehr unterstützt"
+msgstr "COPY (SELECT) WITH OIDS wird nicht unterstützt"
 
 #: commands/copy.c:1005
-#, fuzzy
 msgid "COPY (SELECT INTO) is not supported"
-msgstr "»E« wird nicht unterstützt"
+msgstr "COPY (SELECT INTO) wird nicht unterstützt"
 
 #: commands/copy.c:1089
 #, c-format
@@ -3718,9 +3715,9 @@ msgid "%s requires a numeric value"
 msgstr "%s erfordert einen numerischen Wert"
 
 #: commands/define.c:166
-#, fuzzy, c-format
+#, c-format
 msgid "%s requires a Boolean value"
-msgstr "Parameter »%s« erfordert einen Boole'schen Wert"
+msgstr "%s erfordert einen Boole'schen Wert"
 
 #: commands/define.c:227
 #, c-format
@@ -3929,9 +3926,8 @@ msgid "cannot use more than %d columns in an index"
 msgstr "Index kann nicht mehr als %d Spalten enthalten"
 
 #: commands/indexcmds.c:173
-#, fuzzy
 msgid "cannot create indexes on temporary tables of other sessions"
-msgstr "kann temporäre Tabellen anderer Sitzungen nicht neu schreiben"
+msgstr "kann keine Indexe für temporäre Tabellen anderer Sitzungen erzeugen"
 
 #: commands/indexcmds.c:266
 msgid "substituting access method \"gist\" for obsolete method \"rtree\""
@@ -4277,9 +4273,7 @@ msgstr "lastval ist in dieser Sitzung noch nicht definiert"
 #: commands/sequence.c:729
 #, c-format
 msgid "setval: value %s is out of bounds for sequence \"%s\" (%s..%s)"
-msgstr ""
-"setval: Wert %s ist außerhalb des gültigen Bereiches von Sequenz »%s« (%s..%"
-"s)"
+msgstr "setval: Wert %s ist außerhalb des gültigen Bereichs von Sequenz »%s« (%s..%s)"
 
 #: commands/sequence.c:892 lib/dllist.c:43 lib/dllist.c:88 libpq/auth.c:597
 #: postmaster/postmaster.c:848 postmaster/postmaster.c:1702
@@ -4648,9 +4642,9 @@ msgid "constraint \"%s\" is not deferrable"
 msgstr "Constraint »%s« ist nicht verschiebbar"
 
 #: commands/trigger.c:3204 commands/trigger.c:3225
-#, fuzzy, c-format
+#, c-format
 msgid "cannot truncate table \"%s\" because it has pending trigger events"
-msgstr "konnte Tabelle »%s« nicht in Sicht umwandeln, weil sie Trigger hat"
+msgstr "kann Tabelle »%s« nicht leeren, weil sie anstehende Trigger-Ereignisse hat"
 
 #: commands/typecmds.c:135
 #, c-format
@@ -4826,12 +4820,12 @@ msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Verwenden Sie stattdessen ALTER TABLE SET SCHEMA."
 
 #: commands/vacuumlazy.c:492
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\": removed %.0f row versions in %u pages"
-msgstr "»%s«: %d Zeilenversionen in %d Seiten entfernt"
+msgstr "»%s«: %.0f Zeilenversionen in %u Seiten entfernt"
 
 #: commands/vacuumlazy.c:500
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
 "There were %.0f unused item pointers.\n"
@@ -4841,6 +4835,7 @@ msgid ""
 msgstr ""
 "%.0f tote Zeilenversionen können noch nicht entfernt werden.\n"
 "Es gibt %.0f unbenutzte Itemzeiger.\n"
+"%u Seiten enthalten nützlichen freien Platz.\n"
 "%u Seiten sind vollkommen leer.\n"
 "%s."
 
@@ -4986,7 +4981,7 @@ msgstr "Anzahl der Arraydimensionen (%d) überschreitet erlaubtes Maximum (%d)"
 
 #: executor/execQual.c:277 executor/execQual.c:305
 msgid "array subscript in assignment must not be null"
-msgstr ""
+msgstr "Arrayindex in Zuweisung darf nicht NULL sein"
 
 #: executor/execQual.c:651
 #, c-format
@@ -5168,7 +5163,8 @@ msgstr "Aggregatfunktion %u muss kompatiblen Eingabe- und Übergangstyp haben"
 
 #: executor/nodeAgg.c:1515
 msgid "DISTINCT is supported only for single-argument aggregates"
-msgstr "DISTINCT wird nur für Aggregatfunktionen mit einem Argument unterstützt"
+msgstr ""
+"DISTINCT wird nur für Aggregatfunktionen mit einem Argument unterstützt"
 
 #: executor/nodeFunctionscan.c:360 executor/nodeFunctionscan.c:374
 #: executor/nodeFunctionscan.c:384
@@ -5240,18 +5236,17 @@ msgstr "Subtransaktion ließ nicht-leeren SPI-Stack zurück"
 
 #: executor/spi.c:854
 msgid "cannot open multi-query plan as cursor"
-msgstr "kann Plan mit mehreren Anfragen nicht als Cursor öffnen"
+msgstr "Plan mit mehreren Anfragen kann nicht als Cursor geöffnet werden"
 
 #: executor/spi.c:859
-#, fuzzy
 msgid "cannot open empty query as cursor"
-msgstr "kann Plan mit mehreren Anfragen nicht als Cursor öffnen"
+msgstr "leere Anfrage kann nicht als Cursor geöffnet werden"
 
 #. translator: %s is name of a SQL command, eg INSERT
 #: executor/spi.c:863
-#, fuzzy, c-format
+#, c-format
 msgid "cannot open %s query as cursor"
-msgstr "kann Nicht-SELECT-Anfrage nicht als Cursor öffnen"
+msgstr "%s kann nicht als Cursor geöffnet werden"
 
 #: executor/spi.c:1647
 #, c-format
@@ -5892,7 +5887,7 @@ msgstr "keine Daten in Message übrig"
 
 #: libpq/pqformat.c:507
 msgid "binary value is out of range for type bigint"
-msgstr "binärer Wert ist außerhalb des gültigen Bereiches für Typ bigint"
+msgstr "binärer Wert ist außerhalb des gültigen Bereichs für Typ bigint"
 
 #: libpq/pqformat.c:593 libpq/pqformat.c:611 libpq/pqformat.c:632
 #: utils/adt/arrayfuncs.c:1350 utils/adt/rowtypes.c:535
@@ -6720,9 +6715,9 @@ msgid "function \"%s\" in FROM has unsupported return type %s"
 msgstr "Funktion »%s« in FROM hat nicht unterstützten Rückgabetyp %s"
 
 #: parser/parse_relation.c:983
-#, fuzzy, c-format
+#, c-format
 msgid "VALUES lists \"%s\" have %d columns available but %d columns specified"
-msgstr "Tabelle »%s« hat %d Spalten, aber %d Spalten wurden angegeben"
+msgstr "VALUES-Liste »%s« hat %d Spalten verfügbar, aber %d Spalten wurden angegeben"
 
 #: parser/parse_relation.c:1640
 #, c-format
@@ -6730,15 +6725,14 @@ msgid "column %d of relation \"%s\" does not exist"
 msgstr "Spalte %d von Relation »%s« existiert nicht"
 
 #: parser/parse_relation.c:1992
-#, fuzzy, c-format
+#, c-format
 msgid "invalid reference to FROM-clause entry for table \"%s\""
-msgstr "fehlender Eintrag in FROM-Klausel für Tabelle »%s«"
+msgstr "ungültiger Verweis auf FROM-Klausel-Eintrag für Tabelle »%s«"
 
 #: parser/parse_relation.c:1995 parser/parse_relation.c:2021
-#, fuzzy, c-format
+#, c-format
 msgid "Perhaps you meant to reference the table alias \"%s\"."
-msgstr ""
-"in Tabelle »%s«, auf die verwiesen wird, gibt es keinen Primärschlüssel"
+msgstr "Vielleicht wurde beabsichtigt, auf den Tabellenalias »%s« zu verweisen."
 
 #: parser/parse_relation.c:1997 parser/parse_relation.c:2024
 #, c-format
@@ -6913,19 +6907,18 @@ msgid "row comparison operator must not return a set"
 msgstr "Zeilenvergleichsoperator darf keine Ergebnismenge zurückgeben"
 
 #: parser/parse_expr.c:2062 parser/parse_expr.c:2111 parser/parse_expr.c:2163
-#, fuzzy, c-format
+#, c-format
 msgid "could not determine interpretation of row comparison operator %s"
-msgstr "konnte Datentyp von Parameter $%d nicht ermitteln"
+msgstr "konnte Interpretation des Zeilenvergleichsoperators %s nicht bestimmten"
 
 #: parser/parse_expr.c:2064
 msgid ""
 "Row comparison operators must be associated with btree operator classes."
-msgstr ""
+msgstr "Zeilenvergleichsoperatoren müssen einer »btree«-Operatorklasse zugeordnet sein."
 
 #: parser/parse_expr.c:2113 parser/parse_expr.c:2165
-#, fuzzy
 msgid "There are multiple equally-plausible candidates."
-msgstr "es gibt mehrere Regeln namens »%s«"
+msgstr "Es gibt mehrere gleichermaßen plausible Kandidaten."
 
 #: parser/parse_expr.c:2255
 msgid "IS DISTINCT FROM requires = operator to yield boolean"
@@ -6965,7 +6958,8 @@ msgstr ""
 #: parser/parse_func.c:273
 #, c-format
 msgid "%s(*) must be used to call a parameterless aggregate function"
-msgstr "beim Aufruf einer parameterlosen Aggregatfunktion muss %s(*) angegeben werden"
+msgstr ""
+"beim Aufruf einer parameterlosen Aggregatfunktion muss %s(*) angegeben werden"
 
 #: parser/parse_func.c:285
 msgid "aggregates may not return sets"
@@ -7184,7 +7178,9 @@ msgstr "unsichere Verwendung von \\' in Zeichenkettenkonstante"
 #: scan.l:467
 msgid ""
 "Use '' to write quotes in strings. \\' is insecure in client-only encodings."
-msgstr "Verwenden Sie '' um Quotes in Zeichenketten zu schreiben. \\' ist in bestimmten Client-seitigen Kodierungen unsicher."
+msgstr ""
+"Verwenden Sie '' um Quotes in Zeichenketten zu schreiben. \\' ist in "
+"bestimmten Client-seitigen Kodierungen unsicher."
 
 #: scan.l:492
 msgid "unterminated quoted string"
@@ -7616,24 +7612,24 @@ msgid "could not stat data directory \"%s\": %m"
 msgstr "konnte »stat« für Datenverzeichnis »%s« nicht ausführen: %m"
 
 #: port/win32_sema.c:94
-#, fuzzy, c-format
+#, c-format
 msgid "could not create semaphore: error code %d"
-msgstr "konnte Semaphore nicht erzeugen: %m"
+msgstr "konnte Semaphore nicht erzeugen: Fehlercode %d"
 
 #: port/win32_sema.c:155
-#, fuzzy, c-format
+#, c-format
 msgid "could not lock semaphore: error code %d"
-msgstr "konnte Prozess-Token nicht öffnen: Fehlercode %d\n"
+msgstr "konnte Semaphore nicht sperren: Fehlercode %d"
 
 #: port/win32_sema.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "could not unlock semaphore: error code %d"
-msgstr "konnte Prozess-Token nicht öffnen: Fehlercode %d\n"
+msgstr "konnte Semaphore nicht entsperren: Fehlercode %d"
 
 #: port/win32_sema.c:197
-#, fuzzy, c-format
+#, c-format
 msgid "could not try-lock semaphore: error code %d"
-msgstr "konnte Prozess-Token nicht öffnen: Fehlercode %d\n"
+msgstr "konnte Semaphore nicht versuchsweise sperren: Fehlercode %d"
 
 #: postmaster/autovacuum.c:166
 #, c-format
@@ -7679,19 +7675,18 @@ msgid "checkpoint request failed"
 msgstr "Checkpoint-Anforderung fehlgeschlagen"
 
 #: postmaster/bgwriter.c:677
-#, fuzzy
 msgid "Consult recent messages in the server log for details."
-msgstr "Einzelheiten finden Sie im Serverlog."
+msgstr "Einzelheiten finden Sie in den letzten Meldungen im Serverlog."
 
 #: postmaster/postmaster.c:453
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid argument for option -f: \"%s\"\n"
-msgstr "%s: ungültiges Argument: »%s«\n"
+msgstr "%s: ungültiges Argument für Option -f: »%s«\n"
 
 #: postmaster/postmaster.c:539
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid argument for option -t: \"%s\"\n"
-msgstr "%s: ungültiges Argument: »%s«\n"
+msgstr "%s: ungültiges Argument für Option -t: »%s«\n"
 
 #: postmaster/postmaster.c:590
 #, c-format
@@ -8038,10 +8033,8 @@ msgid "could not resolve \"localhost\": %s"
 msgstr "konnte »localhost« nicht auflösen: %s"
 
 #: postmaster/pgstat.c:265
-#, fuzzy
 msgid "trying another address for the statistics collector"
-msgstr ""
-"konnte Adresse für Socket für Statistiksammelprozess nicht ermitteln: %m"
+msgstr "andere Adresse für Statistiksammelprozess wird versucht"
 
 #: postmaster/pgstat.c:274
 #, c-format
@@ -8117,9 +8110,9 @@ msgid "must be superuser to reset statistics counters"
 msgstr "nur Superuser können Statistikzähler zurücksetzen"
 
 #: postmaster/pgstat.c:1732
-#, fuzzy, c-format
+#, c-format
 msgid "poll() failed in statistics collector: %m"
-msgstr "select() im Statistiksammelprozess fehlgeschlagen: %m"
+msgstr "poll() im Statistiksammelprozess fehlgeschlagen: %m"
 
 #: postmaster/pgstat.c:1773
 #, c-format
@@ -8137,9 +8130,9 @@ msgid "could not open temporary statistics file \"%s\": %m"
 msgstr "konnte temporäre Statistikdatei »%s« nicht öffnen: %m"
 
 #: postmaster/pgstat.c:1999
-#, fuzzy, c-format
+#, c-format
 msgid "could not write temporary statistics file \"%s\": %m"
-msgstr "konnte temporäre Statistikdatei »%s« nicht öffnen: %m"
+msgstr "konnte temporäre Statistikdatei »%s« nicht schreiben: %m"
 
 #: postmaster/pgstat.c:2008
 #, c-format
@@ -8378,7 +8371,9 @@ msgstr "INSERT RETURNING kann in Relation »%s« nicht ausgeführt werden"
 #: rewrite/rewriteHandler.c:1658
 msgid ""
 "You need an unconditional ON INSERT DO INSTEAD rule with a RETURNING clause."
-msgstr "Sie benötigen eine ON INSERT DO INSTEAD Regel ohne Bedingung, mit RETURNING-Klausel."
+msgstr ""
+"Sie benötigen eine ON INSERT DO INSTEAD Regel ohne Bedingung, mit RETURNING-"
+"Klausel."
 
 #: rewrite/rewriteHandler.c:1663
 #, c-format
@@ -8388,7 +8383,9 @@ msgstr "UPDATE RETURNING kann in Relation »%s« nicht ausgeführt werden"
 #: rewrite/rewriteHandler.c:1665
 msgid ""
 "You need an unconditional ON UPDATE DO INSTEAD rule with a RETURNING clause."
-msgstr "Sie benötigen eine ON UPDATE DO INSTEAD Regel ohne Bedingung, mit RETURNING-Klausel."
+msgstr ""
+"Sie benötigen eine ON UPDATE DO INSTEAD Regel ohne Bedingung, mit RETURNING-"
+"Klausel."
 
 #: rewrite/rewriteHandler.c:1670
 #, c-format
@@ -8398,7 +8395,9 @@ msgstr "DELETE RETURNING kann in Relation »%s« nicht ausgeführt werden"
 #: rewrite/rewriteHandler.c:1672
 msgid ""
 "You need an unconditional ON DELETE DO INSTEAD rule with a RETURNING clause."
-msgstr "Sie benötigen eine ON DELETE DO INSTEAD Regel ohne Bedingung, mit RETURNING-Klausel."
+msgstr ""
+"Sie benötigen eine ON DELETE DO INSTEAD Regel ohne Bedingung, mit RETURNING-"
+"Klausel."
 
 #: rewrite/rewriteHandler.c:1770
 msgid "cannot insert into a view"
@@ -8442,7 +8441,9 @@ msgstr "unerwartete Daten hinter Dateiende in Block %u von Relation »%s«"
 msgid ""
 "This has been seen to occur with buggy kernels; consider updating your "
 "system."
-msgstr "Das scheint mit fehlerhaften Kernels vorzukommen; Sie sollten eine Systemaktualisierung in Betracht ziehen."
+msgstr ""
+"Das scheint mit fehlerhaften Kernels vorzukommen; Sie sollten eine "
+"Systemaktualisierung in Betracht ziehen."
 
 #: storage/buffer/bufmgr.c:264
 #, c-format
@@ -8518,13 +8519,11 @@ msgstr "Free-Space-Map enthält %d Seiten in %d Relationen"
 msgid ""
 "A total of %.0f page slots are in use (including overhead).\n"
 "%.0f page slots are required to track all free space.\n"
-"Current limits are:  %d page slots, %d relations, using %.0f KB."
+"Current limits are:  %d page slots, %d relations, using %.0f kB."
 msgstr ""
 "Es sind insgesamt %.0f Page-Slots in Benutzung (einschließlich Overhead).\n"
-"%.0f Page-Slots werden benötigt, um den gesamten freien Platz verwalten zu "
-"können.\n"
-"Aktuelle Begrenzungen sind:  %d Page-Slots, %d Relationen, %.0f KB in "
-"Benutzung."
+"%.0f Page-Slots werden benötigt, um den gesamten freien Platz verwalten zu können.\n"
+"Aktuelle Begrenzungen sind:  %d Page-Slots, %d Relationen, ergibt %.0f kB Speicherverbrauch."
 
 #: storage/freespace/freespace.c:644
 #, c-format
@@ -8975,10 +8974,7 @@ msgstr "Fließkommafehler"
 msgid ""
 "An invalid floating-point operation was signaled. This probably means an out-"
 "of-range result or an invalid operation, such as division by zero."
-msgstr ""
-"Eine ungültige Fließkommaoperation wurde signalisiert. Das bedeutet "
-"wahrscheinlich ein Ergebnis außerhalb des gültigen Bereiches oder eine "
-"ungültige Operation, zum Beispiel Division durch null."
+msgstr "Eine ungültige Fließkommaoperation wurde signalisiert. Das bedeutet wahrscheinlich ein Ergebnis außerhalb des gültigen Bereichs oder eine ungültige Operation, zum Beispiel Division durch null."
 
 #: tcop/postgres.c:2475
 msgid "terminating connection due to administrator command"
@@ -9000,7 +8996,10 @@ msgstr "Grenze für Stacktiefe überschritten"
 msgid ""
 "Increase the configuration parameter \"max_stack_depth\", after ensuring the "
 "platform's stack depth limit is adequate."
-msgstr "Erhöhen Sie den Konfigurationsparameter »max_stack_depth«, nachdem Sie sichergestellt haben, dass die Stacktiefenbegrenzung Ihrer Plattform ausreichend ist."
+msgstr ""
+"Erhöhen Sie den Konfigurationsparameter »max_stack_depth«, nachdem Sie "
+"sichergestellt haben, dass die Stacktiefenbegrenzung Ihrer Plattform "
+"ausreichend ist."
 
 #: tcop/postgres.c:2551
 #, c-format
@@ -9011,7 +9010,9 @@ msgstr "»max_stack_depth« darf %ldkB nicht überschreiten"
 msgid ""
 "Increase the platform's stack depth limit via \"ulimit -s\" or local "
 "equivalent."
-msgstr "Erhöhen Sie die Stacktiefenbegrenzung Ihrer Plattform mit »ulimit -s« oder der lokalen Entsprechung."
+msgstr ""
+"Erhöhen Sie die Stacktiefenbegrenzung Ihrer Plattform mit »ulimit -s« oder "
+"der lokalen Entsprechung."
 
 #: tcop/postgres.c:3051
 msgid "invalid command-line arguments for server process"
@@ -9043,13 +9044,11 @@ msgid "invalid DESCRIBE message subtype %d"
 msgstr "ungültiger Subtyp %d von DESCRIBE-Message"
 
 #: tcop/postgres.c:3831
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%"
 "s"
-msgstr ""
-"Verbindungsende: Sitzungszeit: %d:%02d:%02d.%02d Benutzer=%s Datenbank=%s "
-"Host=%s%s%s"
+msgstr "Verbindungsende: Sitzungszeit: %d:%02d:%02d.%03d Benutzer=%s Datenbank=%s Host=%s%s%s"
 
 #: tcop/pquery.c:543
 #, c-format
@@ -9083,7 +9082,7 @@ msgstr "keiner der Eingabedatentypen ist ein Array"
 #: utils/adt/int8.c:1008 utils/adt/numeric.c:1782 utils/adt/numeric.c:1791
 #: utils/adt/varbit.c:1287
 msgid "integer out of range"
-msgstr "integer ist außerhalb des gültigen Bereiches"
+msgstr "integer ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/array_userfuncs.c:121
 msgid "argument must be empty or one-dimensional array"
@@ -9316,9 +9315,8 @@ msgstr "falsche Anzahl Arrayindizes"
 
 #: utils/adt/arrayfuncs.c:1982 utils/adt/arrayfuncs.c:2075
 #: utils/adt/arrayfuncs.c:2370
-#, fuzzy
 msgid "array subscript out of range"
-msgstr "Arrayindex muss Typ integer haben"
+msgstr "Arrayindex außerhalb des gültigen Bereichs"
 
 #: utils/adt/arrayfuncs.c:1987
 msgid "cannot assign null value to an element of a fixed-length array"
@@ -9334,9 +9332,8 @@ msgid "source array too small"
 msgstr "Quellarray ist zu klein"
 
 #: utils/adt/arrayfuncs.c:2947
-#, fuzzy
 msgid "null array element not allowed in this context"
-msgstr "NULL-Werte im Array werden nicht unterstützt"
+msgstr "NULL-Werte im Array sind in diesem Zusammenhang nicht erlaubt"
 
 #: utils/adt/arrayfuncs.c:3008 utils/adt/arrayfuncs.c:3215
 #: utils/adt/arrayfuncs.c:3415
@@ -9385,16 +9382,16 @@ msgstr "Division durch Null"
 
 #: utils/adt/char.c:169
 msgid "\"char\" out of range"
-msgstr "\"char\" ist außerhalb des gültigen Bereiches"
+msgstr "\"char\" ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/date.c:85 utils/adt/datetime.c:1047 utils/adt/datetime.c:1836
 msgid "date/time value \"current\" is no longer supported"
 msgstr "Datum/Zeitwert »current« wird nicht mehr unterstützt"
 
 #: utils/adt/date.c:102
-#, fuzzy, c-format
+#, c-format
 msgid "date out of range: \"%s\""
-msgstr "timestamp ist außerhalb des gültigen Bereiches: »%s«"
+msgstr "date ist außerhalb des gültigen Bereichs: »%s«"
 
 #: utils/adt/date.c:734 utils/adt/date.c:777 utils/adt/date.c:1348
 #: utils/adt/date.c:1385 utils/adt/date.c:2284 utils/adt/formatting.c:3052
@@ -9418,7 +9415,7 @@ msgstr "timestamp ist außerhalb des gültigen Bereiches: »%s«"
 #: utils/adt/timestamp.c:4379 utils/adt/timestamp.c:4383
 #: utils/adt/timestamp.c:4424
 msgid "timestamp out of range"
-msgstr "timestamp ist außerhalb des gültigen Bereiches"
+msgstr "timestamp ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/date.c:804
 msgid "cannot convert reserved abstime value to date"
@@ -9469,7 +9466,7 @@ msgstr "inkonsistente Verwendung von Jahr %04d und »BC«"
 #: utils/adt/datetime.c:3088 utils/adt/datetime.c:3095
 #, c-format
 msgid "date/time field value out of range: \"%s\""
-msgstr "Datum/Zeit-Feldwert ist außerhalb des gültigen Bereiches: »%s«"
+msgstr "Datum/Zeit-Feldwert ist außerhalb des gültigen Bereichs: »%s«"
 
 #: utils/adt/datetime.c:3097
 msgid "Perhaps you need a different \"datestyle\" setting."
@@ -9478,12 +9475,12 @@ msgstr "Möglicherweise benötigen Sie eine andere »datestyle«-Einstellung."
 #: utils/adt/datetime.c:3102
 #, c-format
 msgid "interval field value out of range: \"%s\""
-msgstr "»interval«-Feldwert ist außerhalb des gültigen Bereiches: »%s«"
+msgstr "»interval«-Feldwert ist außerhalb des gültigen Bereichs: »%s«"
 
 #: utils/adt/datetime.c:3108
 #, c-format
 msgid "time zone displacement out of range: \"%s\""
-msgstr "Zeitzonenunterschied ist außerhalb des gültigen Bereiches: »%s«"
+msgstr "Zeitzonenunterschied ist außerhalb des gültigen Bereichs: »%s«"
 
 #. translator: first %s is inet or cidr
 #: utils/adt/datetime.c:3115 utils/adt/network.c:93
@@ -9538,23 +9535,19 @@ msgstr "ungültige Eingabesyntax für Typ bytea"
 
 #: utils/adt/float.c:219
 msgid "type \"real\" value out of range: overflow"
-msgstr "Wert ist außerhalb des gültigen Bereiches für Typ »real«: Überlauf"
+msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »real«: Überlauf"
 
 #: utils/adt/float.c:223
 msgid "type \"real\" value out of range: underflow"
-msgstr "Wert ist außerhalb des gültigen Bereiches für Typ »real«: Unterlauf"
+msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »real«: Unterlauf"
 
 #: utils/adt/float.c:238
 msgid "type \"double precision\" value out of range: overflow"
-msgstr ""
-"Wert ist außerhalb des gültigen Bereiches für Typ »double precision«: "
-"Überlauf"
+msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: Überlauf"
 
 #: utils/adt/float.c:242
 msgid "type \"double precision\" value out of range: underflow"
-msgstr ""
-"Wert ist außerhalb des gültigen Bereiches für Typ »double precision«: "
-"Unterlauf"
+msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: Unterlauf"
 
 #: utils/adt/float.c:274 utils/adt/float.c:315 utils/adt/float.c:365
 #, c-format
@@ -9564,7 +9557,7 @@ msgstr "ungültige Eingabesyntax für Typ real: »%s«"
 #: utils/adt/float.c:310
 #, c-format
 msgid "\"%s\" is out of range for type real"
-msgstr "»%s« ist außerhalb des gültigen Bereiches für Typ real"
+msgstr "»%s« ist außerhalb des gültigen Bereichs für Typ real"
 
 #: utils/adt/float.c:467 utils/adt/float.c:508 utils/adt/float.c:558
 #: utils/adt/numeric.c:3363 utils/adt/numeric.c:3389
@@ -9575,14 +9568,14 @@ msgstr "ungültige Eingabesyntax für Typ double precision: »%s«"
 #: utils/adt/float.c:503
 #, c-format
 msgid "\"%s\" is out of range for type double precision"
-msgstr "»%s« ist außerhalb des gültigen Bereiches für Typ double precision"
+msgstr "»%s« ist außerhalb des gültigen Bereichs für Typ double precision"
 
 #: utils/adt/float.c:1182 utils/adt/float.c:1248 utils/adt/int.c:341
 #: utils/adt/int.c:838 utils/adt/int.c:867 utils/adt/int.c:888
 #: utils/adt/int.c:908 utils/adt/int.c:935 utils/adt/int.c:1207
 #: utils/adt/int8.c:1033 utils/adt/numeric.c:1883 utils/adt/numeric.c:1894
 msgid "smallint out of range"
-msgstr "smallint ist außerhalb des gültigen Bereiches"
+msgstr "smallint ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/float.c:1484 utils/adt/numeric.c:4305
 msgid "cannot take square root of a negative number"
@@ -9594,7 +9587,7 @@ msgstr "ungültiges Argument für power-Funktion"
 
 #: utils/adt/float.c:1540 utils/adt/float.c:1570
 msgid "result is out of range"
-msgstr "Ergebnis ist außerhalb des gültigen Bereiches"
+msgstr "Ergebnis ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/float.c:1593 utils/adt/float.c:1623 utils/adt/numeric.c:4523
 msgid "cannot take logarithm of zero"
@@ -9608,7 +9601,7 @@ msgstr "Logarithmus negativer Zahlen kann nicht ermittelt werden"
 #: utils/adt/float.c:1730 utils/adt/float.c:1755 utils/adt/float.c:1780
 #: utils/adt/float.c:1806 utils/adt/float.c:1831
 msgid "input is out of range"
-msgstr "Eingabe ist außerhalb des gültigen Bereiches"
+msgstr "Eingabe ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/formatting.c:454
 msgid "invalid format specification for an interval value"
@@ -9682,151 +9675,151 @@ msgstr "ungültiger Wert für %s"
 
 #: utils/adt/formatting.c:2871
 msgid "January"
-msgstr ""
+msgstr "Januar"
 
 #: utils/adt/formatting.c:2874
 msgid "February"
-msgstr ""
+msgstr "Februar"
 
 #: utils/adt/formatting.c:2877
 msgid "March"
-msgstr ""
+msgstr "März"
 
 #: utils/adt/formatting.c:2880
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: utils/adt/formatting.c:2883 utils/adt/formatting.c:2931
 msgid "May"
-msgstr ""
+msgstr "Mai"
 
 #: utils/adt/formatting.c:2886
 msgid "June"
-msgstr ""
+msgstr "Juni"
 
 #: utils/adt/formatting.c:2889
 msgid "July"
-msgstr ""
+msgstr "Juli"
 
 #: utils/adt/formatting.c:2892
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: utils/adt/formatting.c:2895
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: utils/adt/formatting.c:2898
 msgid "October"
-msgstr ""
+msgstr "Oktober"
 
 #: utils/adt/formatting.c:2901
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: utils/adt/formatting.c:2904
 msgid "December"
-msgstr ""
+msgstr "Dezember"
 
 #: utils/adt/formatting.c:2919
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 #: utils/adt/formatting.c:2922
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 #: utils/adt/formatting.c:2925
 msgid "Mar"
-msgstr ""
+msgstr "Mär"
 
 #: utils/adt/formatting.c:2928
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 #: utils/adt/formatting.c:2934
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 #: utils/adt/formatting.c:2937
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
 #: utils/adt/formatting.c:2940
 msgid "Aug"
-msgstr ""
+msgstr "Aug"
 
 #: utils/adt/formatting.c:2943
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 #: utils/adt/formatting.c:2946
 msgid "Oct"
-msgstr ""
+msgstr "Okt"
 
 #: utils/adt/formatting.c:2949
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 #: utils/adt/formatting.c:2952
 msgid "Dec"
-msgstr ""
+msgstr "Dez"
 
 #: utils/adt/formatting.c:2967
 msgid "Sunday"
-msgstr ""
+msgstr "Sonntag"
 
 #: utils/adt/formatting.c:2970
 msgid "Monday"
-msgstr ""
+msgstr "Montag"
 
 #: utils/adt/formatting.c:2973
 msgid "Tuesday"
-msgstr ""
+msgstr "Dienstag"
 
 #: utils/adt/formatting.c:2976
 msgid "Wednesday"
-msgstr ""
+msgstr "Mittwoch"
 
 #: utils/adt/formatting.c:2979
 msgid "Thursday"
-msgstr ""
+msgstr "Donnerstag"
 
 #: utils/adt/formatting.c:2982
 msgid "Friday"
-msgstr ""
+msgstr "Freitag"
 
 #: utils/adt/formatting.c:2985
 msgid "Saturday"
-msgstr ""
+msgstr "Samstag"
 
 #: utils/adt/formatting.c:3000
 msgid "Sun"
-msgstr ""
+msgstr "So"
 
 #: utils/adt/formatting.c:3003
 msgid "Mon"
-msgstr ""
+msgstr "Mo"
 
 #: utils/adt/formatting.c:3006
 msgid "Tue"
-msgstr ""
+msgstr "Di"
 
 #: utils/adt/formatting.c:3009
 msgid "Wed"
-msgstr ""
+msgstr "Mi"
 
 #: utils/adt/formatting.c:3012
 msgid "Thu"
-msgstr ""
+msgstr "Do"
 
 #: utils/adt/formatting.c:3015
 msgid "Fri"
-msgstr ""
+msgstr "Fr"
 
 #: utils/adt/formatting.c:3018
 msgid "Sat"
-msgstr ""
+msgstr "Sa"
 
 #: utils/adt/formatting.c:3314
 msgid "AM/PM hour must be between 1 and 12"
@@ -9996,7 +9989,7 @@ msgstr "ungültige Eingabesyntax für ganze Zahl: »%s«"
 #: utils/adt/int8.c:117
 #, c-format
 msgid "value \"%s\" is out of range for type bigint"
-msgstr "Wert »%s« ist außerhalb des gültigen Bereiches für Typ bigint"
+msgstr "Wert »%s« ist außerhalb des gültigen Bereichs für Typ bigint"
 
 #: utils/adt/int8.c:506 utils/adt/int8.c:535 utils/adt/int8.c:556
 #: utils/adt/int8.c:586 utils/adt/int8.c:612 utils/adt/int8.c:630
@@ -10006,11 +9999,11 @@ msgstr "Wert »%s« ist außerhalb des gültigen Bereiches für Typ bigint"
 #: utils/adt/int8.c:1071 utils/adt/int8.c:1110 utils/adt/numeric.c:1835
 #: utils/adt/varbit.c:1366
 msgid "bigint out of range"
-msgstr "bigint ist außerhalb des gültigen Bereiches"
+msgstr "bigint ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/int8.c:1127
 msgid "OID out of range"
-msgstr "OID ist außerhalb des gültigen Bereiches"
+msgstr "OID ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/like.c:491 utils/adt/like_match.c:291 utils/adt/regexp.c:547
 msgid "invalid escape string"
@@ -10113,21 +10106,21 @@ msgstr "konnte inet-Wert nicht formatieren: %m"
 
 #. translator: %s is inet or cidr
 #: utils/adt/network.c:205
-#, fuzzy, c-format
+#, c-format
 msgid "invalid address family in external \"%s\" value"
-msgstr "ungültige Adressfamilie in externem »inet«-Wert"
+msgstr "ungültige Adressfamilie in externem »%s«-Wert"
 
 #. translator: %s is inet or cidr
 #: utils/adt/network.c:212
-#, fuzzy, c-format
+#, c-format
 msgid "invalid bits in external \"%s\" value"
-msgstr "ungültige Bits in externem »inet«-Wert"
+msgstr "ungültige Bits in externem »%s«-Wert"
 
 #. translator: %s is inet or cidr
 #: utils/adt/network.c:221
-#, fuzzy, c-format
+#, c-format
 msgid "invalid length in external \"%s\" value"
-msgstr "ungültige Länge in externem »inet«-Wert"
+msgstr "ungültige Länge in externem »%s«-Wert"
 
 #: utils/adt/network.c:239
 msgid "invalid external \"cidr\" value"
@@ -10144,24 +10137,20 @@ msgid "could not format cidr value: %m"
 msgstr "konnte cidr-Wert nicht formatieren: %m"
 
 #: utils/adt/network.c:1295
-#, fuzzy
 msgid "cannot AND inet values of different sizes"
-msgstr "binäres »Und« nicht mit Bitketten unterschiedlicher Länge möglich"
+msgstr "binäres »Und« nicht mit »inet«-Werten unterschiedlicher Größe möglich"
 
 #: utils/adt/network.c:1329
-#, fuzzy
 msgid "cannot OR inet values of different sizes"
-msgstr "binäres »Oder« nicht mit Bitketten unterschiedlicher Länge möglich"
+msgstr "binäres »Oder« nicht mit »inet«-Werten unterschiedlicher Größe möglich"
 
 #: utils/adt/network.c:1392 utils/adt/network.c:1470
-#, fuzzy
 msgid "result out of range"
-msgstr "Ergebnis ist außerhalb des gültigen Bereiches"
+msgstr "Ergebnis ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/network.c:1435
-#, fuzzy
 msgid "cannot subtract inet values of different sizes"
-msgstr "binäres »Oder« nicht mit Bitketten unterschiedlicher Länge möglich"
+msgstr "Subtraktion von »inet«-Werten unterschiedlicher Größe nicht möglich"
 
 #: utils/adt/not_in.c:64 utils/adt/regproc.c:1105 utils/adt/regproc.c:1110
 #: utils/adt/varlena.c:1795 utils/adt/varlena.c:1800
@@ -10236,12 +10225,12 @@ msgstr "null hoch null ist undefiniert"
 #: utils/adt/numutils.c:77
 #, c-format
 msgid "value \"%s\" is out of range for type integer"
-msgstr "Wert »%s« ist außerhalb des gültigen Bereiches für Typ integer"
+msgstr "Wert »%s« ist außerhalb des gültigen Bereichs für Typ integer"
 
 #: utils/adt/numutils.c:83
 #, c-format
 msgid "value \"%s\" is out of range for type smallint"
-msgstr "Wert »%s« ist außerhalb des gültigen Bereiches für Typ smallint"
+msgstr "Wert »%s« ist außerhalb des gültigen Bereichs für Typ smallint"
 
 #: utils/adt/numutils.c:89
 #, c-format
@@ -10489,13 +10478,11 @@ msgid "Key (%s)=(%s) is not present in table \"%s\"."
 msgstr "Schlüssel (%s)=(%s) ist nicht in Tabelle »%s« vorhanden."
 
 #: utils/adt/ri_triggers.c:3302
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "update or delete on table \"%s\" violates foreign key constraint \"%s\" on "
 "table \"%s\""
-msgstr ""
-"Aktualisieren oder Löschen in Tabelle »%s« verletzt Fremdschlüssel-"
-"Constraint »%s« von Tabelle »%s«"
+msgstr "Aktualisieren oder Löschen in Tabelle »%s« verletzt Fremdschlüssel-Constraint »%s« von Tabelle »%s«"
 
 #: utils/adt/ri_triggers.c:3305
 #, c-format
@@ -10576,7 +10563,7 @@ msgstr "Wert zu lang für Typ character varying(%d)"
 #: utils/adt/timestamp.c:100 utils/adt/timestamp.c:343
 #, c-format
 msgid "timestamp out of range: \"%s\""
-msgstr "timestamp ist außerhalb des gültigen Bereiches: »%s«"
+msgstr "timestamp ist außerhalb des gültigen Bereichs: »%s«"
 
 #: utils/adt/timestamp.c:118 utils/adt/timestamp.c:361
 #: utils/adt/timestamp.c:543
@@ -10592,7 +10579,7 @@ msgstr "Präzision von timestamp(%d) muss zwischen %d und %d sein"
 #: utils/adt/timestamp.c:537 utils/adt/timestamp.c:2808
 #: utils/adt/timestamp.c:2926 utils/adt/timestamp.c:3492
 msgid "interval out of range"
-msgstr "interval-Wert ist außerhalb des gültigen Bereiches"
+msgstr "interval-Wert ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/timestamp.c:862
 #, c-format
@@ -10904,9 +10891,9 @@ msgid "Extension libraries are required to use the PG_MODULE_MAGIC macro."
 msgstr "Erweiterungsbibliotheken müssen das Makro PG_MODULE_MAGIC verwenden."
 
 #: utils/fmgr/dfmgr.c:462
-#, fuzzy, c-format
+#, c-format
 msgid "access to library \"%s\" is not allowed"
-msgstr "Zugriffsmethode »%s« existiert nicht"
+msgstr "Zugriff auf Bibliothek »%s« ist nicht erlaubt"
 
 #: utils/fmgr/dfmgr.c:489
 #, c-format
@@ -10991,7 +10978,7 @@ msgstr "zu viele Verbindungen für Datenbank »%s«"
 
 #: utils/init/postinit.c:425
 msgid "It seems to have just been dropped or renamed."
-msgstr ""
+msgstr "Sie wurde anscheinend gerade gelöscht oder umbenannt."
 
 #: utils/init/postinit.c:441
 #, c-format
@@ -11134,7 +11121,10 @@ msgstr "konnte alte Sperrdatei »%s« nicht löschen: %m"
 msgid ""
 "The file seems accidentally left over, but it could not be removed. Please "
 "remove the file by hand and try again."
-msgstr "Die Datei ist anscheinend aus Versehen übrig geblieben, konnte aber nicht gelöscht werden. Bitte entfernen Sie die Datei von Hand und versuchen Sie es erneut."
+msgstr ""
+"Die Datei ist anscheinend aus Versehen übrig geblieben, konnte aber nicht "
+"gelöscht werden. Bitte entfernen Sie die Datei von Hand und versuchen Sie es "
+"erneut."
 
 #: utils/init/miscinit.c:856 utils/init/miscinit.c:866
 #, c-format
@@ -11182,7 +11172,7 @@ msgstr "Bibliothek »%s« geladen"
 #: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:137
 #, c-format
 msgid "unexpected encoding ID %d for ISO 8859 character sets"
-msgstr ""
+msgstr "unerwartete Kodierungs-ID %d für ISO-8859-Zeichensatz"
 
 #: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:165
 #, c-format
@@ -11192,7 +11182,7 @@ msgstr ""
 #: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:127
 #, c-format
 msgid "unexpected encoding ID %d for WIN character sets"
-msgstr ""
+msgstr "unerwartete Kodierungs-ID %d für WIN-Zeichensatz"
 
 #: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:155
 #, c-format
@@ -11213,12 +11203,12 @@ msgstr "ungültige Byte-Sequenz für Kodierung »%s«: 0x%s"
 msgid ""
 "This error can also happen if the byte sequence does not match the encoding "
 "expected by the server, which is controlled by \"client_encoding\"."
-msgstr ""
+msgstr "Dieser Fehler kann auch auftreten, wenn die Bytesequenz nicht mit der Kodierung übereinstimmt, die der Server erwartet, welche durch »client_encoding« bestimmt wird."
 
 #: utils/mb/wchar.c:1535
 #, c-format
 msgid "character 0x%s of encoding \"%s\" has no equivalent in \"%s\""
-msgstr ""
+msgstr "Zeichen 0x%s in Kodierung »%s« hat keine Entsprechung in »%s«"
 
 #: utils/mb/encnames.c:493
 msgid "encoding name too long"
@@ -12700,7 +12690,7 @@ msgstr "Parameter »%s« erfordert einen ganzzahligen Wert"
 #: utils/misc/guc.c:4057
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
-msgstr "%d ist außerhalb des gültigen Bereiches für Parameter »%s« (%d ... %d)"
+msgstr "%d ist außerhalb des gültigen Bereichs für Parameter »%s« (%d ... %d)"
 
 #: utils/misc/guc.c:4133
 #, c-format
@@ -12710,7 +12700,7 @@ msgstr "Parameter »%s« erfordert einen numerischen Wert"
 #: utils/misc/guc.c:4141
 #, c-format
 msgid "%g is outside the valid range for parameter \"%s\" (%g .. %g)"
-msgstr "%g ist außerhalb des gültigen Bereiches für Parameter »%s« (%g ... %g)"
+msgstr "%g ist außerhalb des gültigen Bereichs für Parameter »%s« (%g ... %g)"
 
 #: utils/misc/guc.c:4157
 #, c-format
@@ -12765,14 +12755,12 @@ msgid "invalid syntax for \"custom_variable_classes\": \"%s\""
 msgstr "ungültige Syntax für Typ »custom_variable_classes«: »%s«"
 
 #: utils/misc/guc.c:6295
-#, fuzzy
 msgid "assertion checking is not supported by this build"
-msgstr "Assert-Prüfungen sind bei der Übersetzung nicht konfiguriert worden."
+msgstr "Assert-Prüfungen werden von dieser Installation nicht unterstützt"
 
 #: utils/misc/guc.c:6307
-#, fuzzy
 msgid "SSL is not supported by this build"
-msgstr "»E« wird nicht unterstützt"
+msgstr "SSL wird von dieser Installation nicht unterstützt"
 
 #: utils/misc/guc.c:6320
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
@@ -12797,51 +12785,51 @@ msgstr ""
 msgid ""
 "time zone abbreviation \"%s\" is too long (maximum %d characters) in time "
 "zone file \"%s\", line %d"
-msgstr ""
+msgstr "Zeitzonenabkürzung »%s« ist zu lang (maximal %d Zeichen) in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:72
 #, c-format
 msgid ""
 "time zone offset %d is not a multiple of 900 sec (15 min) in time zone file "
 "\"%s\", line %d"
-msgstr ""
+msgstr "Zeitzonenabstand %d ist kein Vielfaches von 900 s (15 min) in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:86
 #, c-format
 msgid "time zone offset %d is out of range in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "Zeitzonenabstand %d ist außerhalb des gültigen Bereichs in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:123
-#, fuzzy, c-format
+#, c-format
 msgid "missing time zone abbreviation in time zone file \"%s\", line %d"
-msgstr "fehlender Eintrag in Datei »%s« am Ende von Zeile %d"
+msgstr "fehlende Zeitzonenabkürzung in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:134
-#, fuzzy, c-format
+#, c-format
 msgid "missing time zone offset in time zone file \"%s\", line %d"
-msgstr "fehlender Eintrag in Datei »%s« am Ende von Zeile %d"
+msgstr "fehlender Zeitzonenabstand in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:143
 #, c-format
 msgid "invalid number for time zone offset in time zone file \"%s\", line %d"
-msgstr ""
+msgstr "ungültige Zahl für Zeitzonenabstand in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "invalid syntax in time zone file \"%s\", line %d"
-msgstr "ungültige IP-Maske »%s« in Datei »%s« Zeile %d: %s"
+msgstr "ungültige Syntax in Zeitzonendatei »%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:234
 #, c-format
 msgid "time zone abbreviation \"%s\" is multiply defined"
-msgstr ""
+msgstr "Zeitzonenabkürzung »%s« ist mehrfach definiert"
 
 #: utils/misc/tzparser.c:236
 #, c-format
 msgid ""
 "Entry in time zone file \"%s\", line %d, conflicts with entry in file \"%s"
 "\", line %d."
-msgstr ""
+msgstr "Eintrag in Zeitzonendatei »%s«, Zeile %d, steht im Konflikt mit Eintrag in Datei »%s«, Zeile %d."
 
 #: utils/misc/tzparser.c:303
 #, c-format
@@ -12872,7 +12860,9 @@ msgstr "@INCLUDE ohne Dateiname in Zeitzonendatei »%s«, Zeile %d"
 #, c-format
 msgid ""
 "could not open configuration file \"%s\": maximum nesting depth exceeded"
-msgstr "konnte Konfigurationsdatei »%s« nicht öffnen: maximale Verschachtelungstiefe überschritten"
+msgstr ""
+"konnte Konfigurationsdatei »%s« nicht öffnen: maximale Verschachtelungstiefe "
+"überschritten"
 
 #: guc-file.l:350
 #, c-format
