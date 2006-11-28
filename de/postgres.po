@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2006.
 #
-# $Id: postgres.po,v 1.11 2006/11/27 15:50:43 petere Exp $
+# $Id: postgres.po,v 1.12 2006/11/28 20:12:08 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-26 19:00-0400\n"
+"POT-Creation-Date: 2006-11-28 13:01-0400\n"
 "PO-Revision-Date: 2006-11-27 16:49+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
@@ -418,7 +418,7 @@ msgstr "konnte Datei »%s« nicht öffnen (Logdatei %u, Segment %u): %m"
 
 #: access/transam/xlog.c:1941 access/transam/xlog.c:2063
 #: access/transam/xlog.c:3547 access/transam/xlog.c:6247
-#: access/transam/xlog.c:6378 postmaster/postmaster.c:2995
+#: access/transam/xlog.c:6378 postmaster/postmaster.c:2992
 #: ../port/copydir.c:126
 #, c-format
 msgid "could not create file \"%s\": %m"
@@ -427,7 +427,7 @@ msgstr "kann Datei »%s« nicht erstellen: %m"
 #: access/transam/xlog.c:1969 access/transam/xlog.c:2095
 #: access/transam/xlog.c:3599 access/transam/xlog.c:3637 commands/copy.c:1273
 #: commands/tablespace.c:663 commands/tablespace.c:669
-#: postmaster/postmaster.c:3005 postmaster/postmaster.c:3015
+#: postmaster/postmaster.c:3002 postmaster/postmaster.c:3012
 #: utils/init/miscinit.c:1014 utils/init/miscinit.c:1023 utils/misc/guc.c:5497
 #: utils/misc/guc.c:5560 ../port/copydir.c:148
 #, c-format
@@ -2105,7 +2105,9 @@ msgstr ""
 
 #: catalog/heap.c:2140
 msgid "cannot truncate a table referenced in a foreign key constraint"
-msgstr "kann eine Tabelle, die in einen Fremdschlüssel-Constraint eingebunden ist, nicht leeren"
+msgstr ""
+"kann eine Tabelle, die in einen Fremdschlüssel-Constraint eingebunden ist, "
+"nicht leeren"
 
 #: catalog/heap.c:2141
 #, c-format
@@ -2470,8 +2472,8 @@ msgid "inherited column \"%s\" has a type conflict"
 msgstr "geerbte Spalte »%s« hat Typkonflikt"
 
 #: commands/tablecmds.c:906 commands/tablecmds.c:1047
-#: parser/parse_coerce.c:261 parser/parse_coerce.c:1195
-#: parser/parse_coerce.c:1212 parser/parse_coerce.c:1257
+#: parser/parse_coerce.c:261 parser/parse_coerce.c:1194
+#: parser/parse_coerce.c:1211 parser/parse_coerce.c:1256
 #, c-format
 msgid "%s versus %s"
 msgstr "%s gegen %s"
@@ -3101,7 +3103,9 @@ msgstr "kann nicht anhand des partiellen Index »%s« clustern"
 msgid ""
 "cannot cluster on index \"%s\" because access method does not support "
 "clustering"
-msgstr "kann nicht anhand des Index »%s« clustern, weil die Indexmethode Clustern nicht unterstützt"
+msgstr ""
+"kann nicht anhand des Index »%s« clustern, weil die Indexmethode Clustern "
+"nicht unterstützt"
 
 #: commands/cluster.c:376
 #, c-format
@@ -3168,7 +3172,8 @@ msgstr "Rollenname kann nicht qualifiziert werden"
 #: commands/comment.c:676
 #, c-format
 msgid "must be member of role \"%s\" to comment upon it"
-msgstr "nur für Mitglieder der Rolle »%s« können einen Kommentar für sie erstellen"
+msgstr ""
+"nur für Mitglieder der Rolle »%s« können einen Kommentar für sie erstellen"
 
 #: commands/comment.c:700 commands/schemacmds.c:162
 msgid "schema name may not be qualified"
@@ -3322,7 +3327,8 @@ msgstr "COPY-Trennzeichen kann nicht Newline oder Carriage Return sein"
 
 #: commands/copy.c:875
 msgid "COPY null representation cannot use newline or carriage return"
-msgstr "COPY NULL-Darstellung kann nicht Newline oder Carriage Return enthalten"
+msgstr ""
+"COPY NULL-Darstellung kann nicht Newline oder Carriage Return enthalten"
 
 #: commands/copy.c:881
 msgid "COPY delimiter cannot be backslash"
@@ -4273,11 +4279,12 @@ msgstr "lastval ist in dieser Sitzung noch nicht definiert"
 #: commands/sequence.c:729
 #, c-format
 msgid "setval: value %s is out of bounds for sequence \"%s\" (%s..%s)"
-msgstr "setval: Wert %s ist außerhalb des gültigen Bereichs von Sequenz »%s« (%s..%s)"
+msgstr ""
+"setval: Wert %s ist außerhalb des gültigen Bereichs von Sequenz »%s« (%s..%s)"
 
 #: commands/sequence.c:892 lib/dllist.c:43 lib/dllist.c:88 libpq/auth.c:597
 #: postmaster/postmaster.c:848 postmaster/postmaster.c:1702
-#: postmaster/postmaster.c:2502 storage/buffer/buf_init.c:162
+#: postmaster/postmaster.c:2499 storage/buffer/buf_init.c:162
 #: storage/buffer/localbuf.c:301 storage/file/fd.c:317 storage/file/fd.c:676
 #: storage/file/fd.c:811 storage/ipc/procarray.c:537
 #: storage/ipc/procarray.c:544 utils/adt/oracle_compat.c:74
@@ -4644,7 +4651,8 @@ msgstr "Constraint »%s« ist nicht verschiebbar"
 #: commands/trigger.c:3204 commands/trigger.c:3225
 #, c-format
 msgid "cannot truncate table \"%s\" because it has pending trigger events"
-msgstr "kann Tabelle »%s« nicht leeren, weil sie anstehende Trigger-Ereignisse hat"
+msgstr ""
+"kann Tabelle »%s« nicht leeren, weil sie anstehende Trigger-Ereignisse hat"
 
 #: commands/typecmds.c:135
 #, c-format
@@ -6336,29 +6344,30 @@ msgstr "Argument von %s darf keine Aggregatfunktionen enthalten"
 msgid "argument of %s must not contain subqueries"
 msgstr "Argument von %s darf keine Unteranfragen enthalten"
 
-#: parser/parse_clause.c:1236
+#. translator: first %s is name of a SQL construct, eg ORDER BY
+#: parser/parse_clause.c:1234
 #, c-format
 msgid "%s \"%s\" is ambiguous"
 msgstr "%s »%s« ist nicht eindeutig"
 
 #. translator: %s is name of a SQL construct, eg ORDER BY
-#: parser/parse_clause.c:1259
+#: parser/parse_clause.c:1257
 #, c-format
 msgid "non-integer constant in %s"
 msgstr "Konstante in %s ist keine ganze Zahl"
 
 #. translator: %s is name of a SQL construct, eg ORDER BY
-#: parser/parse_clause.c:1275
+#: parser/parse_clause.c:1273
 #, c-format
 msgid "%s position %d is not in select list"
 msgstr "%s Position %d ist nicht in der Select-Liste"
 
-#: parser/parse_clause.c:1510
+#: parser/parse_clause.c:1508
 msgid "for SELECT DISTINCT, ORDER BY expressions must appear in select list"
 msgstr ""
 "bei SELECT DISTINCT müssen ORDER-BY-Ausdrücke in der Select-Liste erscheinen"
 
-#: parser/parse_clause.c:1550
+#: parser/parse_clause.c:1548
 msgid "SELECT DISTINCT ON expressions must match initial ORDER BY expressions"
 msgstr ""
 "Ausdrücke in SELECT DISTINCT ON müssen mit den ersten Ausdrücken in ORDER BY "
@@ -6717,7 +6726,8 @@ msgstr "Funktion »%s« in FROM hat nicht unterstützten Rückgabetyp %s"
 #: parser/parse_relation.c:983
 #, c-format
 msgid "VALUES lists \"%s\" have %d columns available but %d columns specified"
-msgstr "VALUES-Liste »%s« hat %d Spalten verfügbar, aber %d Spalten wurden angegeben"
+msgstr ""
+"VALUES-Liste »%s« hat %d Spalten verfügbar, aber %d Spalten wurden angegeben"
 
 #: parser/parse_relation.c:1640
 #, c-format
@@ -6732,7 +6742,8 @@ msgstr "ungültiger Verweis auf FROM-Klausel-Eintrag für Tabelle »%s«"
 #: parser/parse_relation.c:1995 parser/parse_relation.c:2021
 #, c-format
 msgid "Perhaps you meant to reference the table alias \"%s\"."
-msgstr "Vielleicht wurde beabsichtigt, auf den Tabellenalias »%s« zu verweisen."
+msgstr ""
+"Vielleicht wurde beabsichtigt, auf den Tabellenalias »%s« zu verweisen."
 
 #: parser/parse_relation.c:1997 parser/parse_relation.c:2024
 #, c-format
@@ -6816,32 +6827,33 @@ msgstr "Argument von %s muss Typ integer haben, nicht Typ %s"
 msgid "argument of %s must be type bigint, not type %s"
 msgstr "Argument von %s muss Typ bigint haben, nicht Typ %s"
 
-#: parser/parse_coerce.c:960
+#. translator: first %s is name of a SQL construct, eg CASE
+#: parser/parse_coerce.c:959
 #, c-format
 msgid "%s types %s and %s cannot be matched"
 msgstr "%s-Typen %s und %s passen nicht zusammen"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: parser/parse_coerce.c:1021
+#: parser/parse_coerce.c:1020
 #, c-format
 msgid "%s could not convert type %s to %s"
 msgstr "%s konnte Typ %s nicht in %s umwandeln"
 
-#: parser/parse_coerce.c:1194
+#: parser/parse_coerce.c:1193
 msgid "arguments declared \"anyelement\" are not all alike"
 msgstr "als »anyelement« deklariert Argumente sind nicht alle gleich"
 
-#: parser/parse_coerce.c:1211
+#: parser/parse_coerce.c:1210
 msgid "arguments declared \"anyarray\" are not all alike"
 msgstr "als »anyarray« deklarierte Argumente sind nicht alle gleich"
 
-#: parser/parse_coerce.c:1240 parser/parse_coerce.c:1351
-#: parser/parse_coerce.c:1378
+#: parser/parse_coerce.c:1239 parser/parse_coerce.c:1350
+#: parser/parse_coerce.c:1377
 #, c-format
 msgid "argument declared \"anyarray\" is not an array but type %s"
 msgstr "als »anyarray« deklariertes Argument ist kein Array sondern Typ %s"
 
-#: parser/parse_coerce.c:1256
+#: parser/parse_coerce.c:1255
 msgid ""
 "argument declared \"anyarray\" is not consistent with argument declared "
 "\"anyelement\""
@@ -6849,7 +6861,7 @@ msgstr ""
 "als »anyarray« deklariertes Argument ist nicht mit als »anyelement« "
 "deklariertem Argument konsistent"
 
-#: parser/parse_coerce.c:1267
+#: parser/parse_coerce.c:1266
 msgid ""
 "could not determine anyarray/anyelement type because input has type \"unknown"
 "\""
@@ -6857,8 +6869,8 @@ msgstr ""
 "konnte Typ für anyarray/anyelement nicht bestimmen, weil Eingabe Typ "
 "»unknown« hat"
 
-#: parser/parse_coerce.c:1292 parser/parse_coerce.c:1309
-#: parser/parse_coerce.c:1363 parser/parse_expr.c:1269
+#: parser/parse_coerce.c:1291 parser/parse_coerce.c:1308
+#: parser/parse_coerce.c:1362 parser/parse_expr.c:1269
 #: parser/parse_expr.c:1577 parser/parse_expr.c:1613 parser/parse_oper.c:920
 #, c-format
 msgid "could not find array type for data type %s"
@@ -6909,12 +6921,15 @@ msgstr "Zeilenvergleichsoperator darf keine Ergebnismenge zurückgeben"
 #: parser/parse_expr.c:2062 parser/parse_expr.c:2111 parser/parse_expr.c:2163
 #, c-format
 msgid "could not determine interpretation of row comparison operator %s"
-msgstr "konnte Interpretation des Zeilenvergleichsoperators %s nicht bestimmten"
+msgstr ""
+"konnte Interpretation des Zeilenvergleichsoperators %s nicht bestimmten"
 
 #: parser/parse_expr.c:2064
 msgid ""
 "Row comparison operators must be associated with btree operator classes."
-msgstr "Zeilenvergleichsoperatoren müssen einer »btree«-Operatorklasse zugeordnet sein."
+msgstr ""
+"Zeilenvergleichsoperatoren müssen einer »btree«-Operatorklasse zugeordnet "
+"sein."
 
 #: parser/parse_expr.c:2113 parser/parse_expr.c:2165
 msgid "There are multiple equally-plausible candidates."
@@ -7905,98 +7920,104 @@ msgstr "Serverprozess"
 msgid "terminating any other active server processes"
 msgstr "aktive Serverprozesse werden abgebrochen"
 
-#: postmaster/postmaster.c:2397
+#. translator: %s is a noun phrase describing a child process, such as
+#. "server process"
+#: postmaster/postmaster.c:2396
 #, c-format
 msgid "%s (PID %d) exited with exit code %d"
 msgstr "%s (PID %d) beendete mit Status %d"
 
-#: postmaster/postmaster.c:2406
+#. translator: %s is a noun phrase describing a child process, such as
+#. "server process"
+#: postmaster/postmaster.c:2404
 #, c-format
 msgid "%s (PID %d) was terminated by signal %d"
 msgstr "%s (PID %d) wurde von Signal %d beendet"
 
-#: postmaster/postmaster.c:2415
+#. translator: %s is a noun phrase describing a child process, such as
+#. "server process"
+#: postmaster/postmaster.c:2412
 #, c-format
 msgid "%s (PID %d) exited with unexpected status %d"
 msgstr "%s (PID %d) beendete mit unerwartetem Status %d"
 
-#: postmaster/postmaster.c:2548
+#: postmaster/postmaster.c:2545
 #, c-format
 msgid "could not fork new process for connection: %m"
 msgstr "konnte neuen Prozess für Verbindung nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:2588
+#: postmaster/postmaster.c:2585
 msgid "could not fork new process for connection: "
 msgstr "konnte neuen Prozess für Verbindung nicht starten (fork-Fehler): "
 
-#: postmaster/postmaster.c:2728
+#: postmaster/postmaster.c:2725
 #, c-format
 msgid "connection received: host=%s%s%s"
 msgstr "Verbindung empfangen: Host=%s%s%s"
 
-#: postmaster/postmaster.c:2799
+#: postmaster/postmaster.c:2796
 #, c-format
 msgid "connection authorized: user=%s database=%s"
 msgstr "Verbindung authorisiert: Benutzer=%s Datenbank=%s"
 
-#: postmaster/postmaster.c:3034
+#: postmaster/postmaster.c:3031
 #, c-format
 msgid "could not execute server process \"%s\": %m"
 msgstr "konnte Serverprozess »%s« nicht ausführen: %m"
 
-#: postmaster/postmaster.c:3675
+#: postmaster/postmaster.c:3672
 #, c-format
 msgid "could not fork startup process: %m"
 msgstr "konnte Start-Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:3679
+#: postmaster/postmaster.c:3676
 #, c-format
 msgid "could not fork background writer process: %m"
 msgstr "konnte Background-Writer-Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:3683
+#: postmaster/postmaster.c:3680
 #, c-format
 msgid "could not fork process: %m"
 msgstr "konnte Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:3856
+#: postmaster/postmaster.c:3853
 #, c-format
 msgid "could not duplicate socket %d for use in backend: error code %d"
 msgstr ""
 "konnte Socket %d nicht für Verwendung in Backend duplizieren: Fehlercode %d"
 
-#: postmaster/postmaster.c:3885
+#: postmaster/postmaster.c:3882
 #, c-format
 msgid "could not create inherited socket: error code %d\n"
 msgstr "konnte geerbtes Socket nicht erzeugen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:3914 postmaster/postmaster.c:3921
+#: postmaster/postmaster.c:3911 postmaster/postmaster.c:3918
 #, c-format
 msgid "could not read from backend variables file \"%s\": %s\n"
 msgstr "konnte nicht aus Servervariablendatei »%s« lesen: %s\n"
 
-#: postmaster/postmaster.c:3930
+#: postmaster/postmaster.c:3927
 #, c-format
 msgid "could not remove file \"%s\": %s\n"
 msgstr "konnte Datei »%s« nicht löschen: %s\n"
 
-#: postmaster/postmaster.c:3943
+#: postmaster/postmaster.c:3940
 #, c-format
 msgid "could not map view of backend variables: error code %d\n"
 msgstr "konnte Sicht der Backend-Variablen nicht mappen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:3952
+#: postmaster/postmaster.c:3949
 #, c-format
 msgid "could not unmap view of backend variables: error code %d\n"
 msgstr "konnte Sicht der Backend-Variablen nicht unmappen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:3959
+#: postmaster/postmaster.c:3956
 #, c-format
 msgid "could not close handle to backend parameter variables: error code %d\n"
 msgstr ""
 "konnte Handle für Backend-Parametervariablen nicht schließen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:4201
+#: postmaster/postmaster.c:4198
 #, c-format
 msgid "could not wait on child process handle: error code %d\n"
 msgstr "Warten auf Kindprozess-Handle fehlgeschlagen: Fehlercode %d\n"
@@ -8522,8 +8543,10 @@ msgid ""
 "Current limits are:  %d page slots, %d relations, using %.0f kB."
 msgstr ""
 "Es sind insgesamt %.0f Page-Slots in Benutzung (einschließlich Overhead).\n"
-"%.0f Page-Slots werden benötigt, um den gesamten freien Platz verwalten zu können.\n"
-"Aktuelle Begrenzungen sind:  %d Page-Slots, %d Relationen, ergibt %.0f kB Speicherverbrauch."
+"%.0f Page-Slots werden benötigt, um den gesamten freien Platz verwalten zu "
+"können.\n"
+"Aktuelle Begrenzungen sind:  %d Page-Slots, %d Relationen, ergibt %.0f kB "
+"Speicherverbrauch."
 
 #: storage/freespace/freespace.c:644
 #, c-format
@@ -8974,7 +8997,10 @@ msgstr "Fließkommafehler"
 msgid ""
 "An invalid floating-point operation was signaled. This probably means an out-"
 "of-range result or an invalid operation, such as division by zero."
-msgstr "Eine ungültige Fließkommaoperation wurde signalisiert. Das bedeutet wahrscheinlich ein Ergebnis außerhalb des gültigen Bereichs oder eine ungültige Operation, zum Beispiel Division durch null."
+msgstr ""
+"Eine ungültige Fließkommaoperation wurde signalisiert. Das bedeutet "
+"wahrscheinlich ein Ergebnis außerhalb des gültigen Bereichs oder eine "
+"ungültige Operation, zum Beispiel Division durch null."
 
 #: tcop/postgres.c:2475
 msgid "terminating connection due to administrator command"
@@ -9048,7 +9074,9 @@ msgstr "ungültiger Subtyp %d von DESCRIBE-Message"
 msgid ""
 "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%"
 "s"
-msgstr "Verbindungsende: Sitzungszeit: %d:%02d:%02d.%03d Benutzer=%s Datenbank=%s Host=%s%s%s"
+msgstr ""
+"Verbindungsende: Sitzungszeit: %d:%02d:%02d.%03d Benutzer=%s Datenbank=%s "
+"Host=%s%s%s"
 
 #: tcop/pquery.c:543
 #, c-format
@@ -9394,8 +9422,8 @@ msgid "date out of range: \"%s\""
 msgstr "date ist außerhalb des gültigen Bereichs: »%s«"
 
 #: utils/adt/date.c:734 utils/adt/date.c:777 utils/adt/date.c:1348
-#: utils/adt/date.c:1385 utils/adt/date.c:2284 utils/adt/formatting.c:3052
-#: utils/adt/formatting.c:3084 utils/adt/formatting.c:3152
+#: utils/adt/date.c:1385 utils/adt/date.c:2284 utils/adt/formatting.c:3057
+#: utils/adt/formatting.c:3089 utils/adt/formatting.c:3157
 #: utils/adt/nabstime.c:484 utils/adt/nabstime.c:527 utils/adt/nabstime.c:557
 #: utils/adt/nabstime.c:600 utils/adt/timestamp.c:155
 #: utils/adt/timestamp.c:193 utils/adt/timestamp.c:399
@@ -9458,7 +9486,7 @@ msgid "\"interval\" time zone \"%s\" not valid"
 msgstr "»interval«-Zeitzone »%s« nicht gültig"
 
 #: utils/adt/datetime.c:1238 utils/adt/datetime.c:2156
-#: utils/adt/formatting.c:3370
+#: utils/adt/formatting.c:3375
 #, c-format
 msgid "inconsistent use of year %04d and \"BC\""
 msgstr "inkonsistente Verwendung von Jahr %04d und »BC«"
@@ -9543,11 +9571,14 @@ msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »real«: Unterlauf"
 
 #: utils/adt/float.c:238
 msgid "type \"double precision\" value out of range: overflow"
-msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: Überlauf"
+msgstr ""
+"Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: Überlauf"
 
 #: utils/adt/float.c:242
 msgid "type \"double precision\" value out of range: underflow"
-msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: Unterlauf"
+msgstr ""
+"Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: "
+"Unterlauf"
 
 #: utils/adt/float.c:274 utils/adt/float.c:315 utils/adt/float.c:365
 #, c-format
@@ -9603,233 +9634,242 @@ msgstr "Logarithmus negativer Zahlen kann nicht ermittelt werden"
 msgid "input is out of range"
 msgstr "Eingabe ist außerhalb des gültigen Bereichs"
 
-#: utils/adt/formatting.c:454
+#: utils/adt/formatting.c:453
 msgid "invalid format specification for an interval value"
 msgstr "ungültige Formatangabe für Intervall-Wert"
 
-#: utils/adt/formatting.c:455
+#: utils/adt/formatting.c:454
 msgid "Intervals are not tied to specific calendar dates."
 msgstr "Intervalle beziehen sich nicht auf bestimmte Kalenderdaten."
 
-#: utils/adt/formatting.c:1015
+#: utils/adt/formatting.c:1014
 msgid "\"9\" must be ahead of \"PR\""
 msgstr "»9« muss vor »PR« stehen"
 
-#: utils/adt/formatting.c:1034
+#: utils/adt/formatting.c:1033
 msgid "\"0\" must be ahead of \"PR\""
 msgstr "»0« muss vor »PR« stehen"
 
-#: utils/adt/formatting.c:1063
+#: utils/adt/formatting.c:1062
 msgid "multiple decimal points"
 msgstr "mehrere Dezimalpunkte"
 
-#: utils/adt/formatting.c:1070 utils/adt/formatting.c:1174
+#: utils/adt/formatting.c:1069 utils/adt/formatting.c:1173
 msgid "cannot use \"V\" and decimal point together"
 msgstr "»V« und Dezimalpunkt können nicht zusammen verwendet werden"
 
-#: utils/adt/formatting.c:1085
+#: utils/adt/formatting.c:1084
 msgid "not unique \"S\""
 msgstr "»S« mehrmals verwendet"
 
-#: utils/adt/formatting.c:1092
+#: utils/adt/formatting.c:1091
 msgid "cannot use \"S\" and \"PL\"/\"MI\"/\"SG\"/\"PR\" together"
 msgstr "»S« und »PL«/»MI«/»SG«/»PR« können nicht zusammen verwendet werden"
 
-#: utils/adt/formatting.c:1115
+#: utils/adt/formatting.c:1114
 msgid "cannot use \"S\" and \"MI\" together"
 msgstr "»S« und »MI« können nicht zusammen verwendet werden"
 
-#: utils/adt/formatting.c:1128
+#: utils/adt/formatting.c:1127
 msgid "cannot use \"S\" and \"PL\" together"
 msgstr "»S« und »PL« können nicht zusammen verwendet werden"
 
-#: utils/adt/formatting.c:1141
+#: utils/adt/formatting.c:1140
 msgid "cannot use \"S\" and \"SG\" together"
 msgstr "»S« und »SG« können nicht zusammen verwendet werden"
 
-#: utils/adt/formatting.c:1153
+#: utils/adt/formatting.c:1152
 msgid "cannot use \"PR\" and \"S\"/\"PL\"/\"MI\"/\"SG\" together"
 msgstr "»PR« und »S«/»PL«/»MI«/»SG« können nicht zusammen verwendet werden"
 
-#: utils/adt/formatting.c:1183
+#: utils/adt/formatting.c:1182
 msgid "\"E\" is not supported"
 msgstr "»E« wird nicht unterstützt"
 
-#: utils/adt/formatting.c:1442
+#: utils/adt/formatting.c:1441
 #, c-format
 msgid "\"%s\" is not a number"
 msgstr "»%s« ist keine Zahl"
 
-#: utils/adt/formatting.c:1722
+#: utils/adt/formatting.c:1721
 msgid "invalid AM/PM string"
 msgstr "ungültige Zeichenkette für AM/PM"
 
-#: utils/adt/formatting.c:2044
+#: utils/adt/formatting.c:2043
 msgid "\"TZ\"/\"tz\" not supported"
 msgstr "»TZ«/»tz« nicht unterstützt"
 
-#: utils/adt/formatting.c:2054
+#: utils/adt/formatting.c:2053
 #, c-format
 msgid "invalid value for %s"
 msgstr "ungültiger Wert für %s"
 
-#: utils/adt/formatting.c:2871
+#: utils/adt/formatting.c:2870
 msgid "January"
 msgstr "Januar"
 
-#: utils/adt/formatting.c:2874
+#: utils/adt/formatting.c:2873
 msgid "February"
 msgstr "Februar"
 
-#: utils/adt/formatting.c:2877
+#: utils/adt/formatting.c:2876
 msgid "March"
 msgstr "März"
 
-#: utils/adt/formatting.c:2880
+#: utils/adt/formatting.c:2879
 msgid "April"
 msgstr "April"
 
-#: utils/adt/formatting.c:2883 utils/adt/formatting.c:2931
+#: utils/adt/formatting.c:2882
 msgid "May"
 msgstr "Mai"
 
-#: utils/adt/formatting.c:2886
+#: utils/adt/formatting.c:2885
 msgid "June"
 msgstr "Juni"
 
-#: utils/adt/formatting.c:2889
+#: utils/adt/formatting.c:2888
 msgid "July"
 msgstr "Juli"
 
-#: utils/adt/formatting.c:2892
+#: utils/adt/formatting.c:2891
 msgid "August"
 msgstr "August"
 
-#: utils/adt/formatting.c:2895
+#: utils/adt/formatting.c:2894
 msgid "September"
 msgstr "September"
 
-#: utils/adt/formatting.c:2898
+#: utils/adt/formatting.c:2897
 msgid "October"
 msgstr "Oktober"
 
-#: utils/adt/formatting.c:2901
+#: utils/adt/formatting.c:2900
 msgid "November"
 msgstr "November"
 
-#: utils/adt/formatting.c:2904
+#: utils/adt/formatting.c:2903
 msgid "December"
 msgstr "Dezember"
 
-#: utils/adt/formatting.c:2919
+#: utils/adt/formatting.c:2918
 msgid "Jan"
 msgstr "Jan"
 
-#: utils/adt/formatting.c:2922
+#: utils/adt/formatting.c:2921
 msgid "Feb"
 msgstr "Feb"
 
-#: utils/adt/formatting.c:2925
+#: utils/adt/formatting.c:2924
 msgid "Mar"
 msgstr "Mär"
 
-#: utils/adt/formatting.c:2928
+#: utils/adt/formatting.c:2927
 msgid "Apr"
 msgstr "Apr"
 
-#: utils/adt/formatting.c:2934
+#. translator: Translate this as the abbreviation of "May".
+#. In English, it is both the full month name and the
+#. abbreviation, so this hack is needed to distinguish
+#. them.  The translation also needs to start with S:,
+#. which will be stripped at run time.
+#: utils/adt/formatting.c:2936
+msgid "S:May"
+msgstr "S:Mai"
+
+#: utils/adt/formatting.c:2939
 msgid "Jun"
 msgstr "Jun"
 
-#: utils/adt/formatting.c:2937
+#: utils/adt/formatting.c:2942
 msgid "Jul"
 msgstr "Jul"
 
-#: utils/adt/formatting.c:2940
+#: utils/adt/formatting.c:2945
 msgid "Aug"
 msgstr "Aug"
 
-#: utils/adt/formatting.c:2943
+#: utils/adt/formatting.c:2948
 msgid "Sep"
 msgstr "Sep"
 
-#: utils/adt/formatting.c:2946
+#: utils/adt/formatting.c:2951
 msgid "Oct"
 msgstr "Okt"
 
-#: utils/adt/formatting.c:2949
+#: utils/adt/formatting.c:2954
 msgid "Nov"
 msgstr "Nov"
 
-#: utils/adt/formatting.c:2952
+#: utils/adt/formatting.c:2957
 msgid "Dec"
 msgstr "Dez"
 
-#: utils/adt/formatting.c:2967
+#: utils/adt/formatting.c:2972
 msgid "Sunday"
 msgstr "Sonntag"
 
-#: utils/adt/formatting.c:2970
+#: utils/adt/formatting.c:2975
 msgid "Monday"
 msgstr "Montag"
 
-#: utils/adt/formatting.c:2973
+#: utils/adt/formatting.c:2978
 msgid "Tuesday"
 msgstr "Dienstag"
 
-#: utils/adt/formatting.c:2976
+#: utils/adt/formatting.c:2981
 msgid "Wednesday"
 msgstr "Mittwoch"
 
-#: utils/adt/formatting.c:2979
+#: utils/adt/formatting.c:2984
 msgid "Thursday"
 msgstr "Donnerstag"
 
-#: utils/adt/formatting.c:2982
+#: utils/adt/formatting.c:2987
 msgid "Friday"
 msgstr "Freitag"
 
-#: utils/adt/formatting.c:2985
+#: utils/adt/formatting.c:2990
 msgid "Saturday"
 msgstr "Samstag"
 
-#: utils/adt/formatting.c:3000
+#: utils/adt/formatting.c:3005
 msgid "Sun"
 msgstr "So"
 
-#: utils/adt/formatting.c:3003
+#: utils/adt/formatting.c:3008
 msgid "Mon"
 msgstr "Mo"
 
-#: utils/adt/formatting.c:3006
+#: utils/adt/formatting.c:3011
 msgid "Tue"
 msgstr "Di"
 
-#: utils/adt/formatting.c:3009
+#: utils/adt/formatting.c:3014
 msgid "Wed"
 msgstr "Mi"
 
-#: utils/adt/formatting.c:3012
+#: utils/adt/formatting.c:3017
 msgid "Thu"
 msgstr "Do"
 
-#: utils/adt/formatting.c:3015
+#: utils/adt/formatting.c:3020
 msgid "Fri"
 msgstr "Fr"
 
-#: utils/adt/formatting.c:3018
+#: utils/adt/formatting.c:3023
 msgid "Sat"
 msgstr "Sa"
 
-#: utils/adt/formatting.c:3314
+#: utils/adt/formatting.c:3319
 msgid "AM/PM hour must be between 1 and 12"
 msgstr "AM/PM-Stunde muss zwischen 1 und 12 sein"
 
-#: utils/adt/formatting.c:3405
+#: utils/adt/formatting.c:3410
 msgid "cannot calculate day of year without year information"
 msgstr "kann Tag des Jahres nicht berechnen ohne Jahrinformationen"
 
-#: utils/adt/formatting.c:4252
+#: utils/adt/formatting.c:4257
 msgid "\"RN\" not supported"
 msgstr "»RN« wird nicht unterstützt"
 
@@ -10482,7 +10522,9 @@ msgstr "Schlüssel (%s)=(%s) ist nicht in Tabelle »%s« vorhanden."
 msgid ""
 "update or delete on table \"%s\" violates foreign key constraint \"%s\" on "
 "table \"%s\""
-msgstr "Aktualisieren oder Löschen in Tabelle »%s« verletzt Fremdschlüssel-Constraint »%s« von Tabelle »%s«"
+msgstr ""
+"Aktualisieren oder Löschen in Tabelle »%s« verletzt Fremdschlüssel-"
+"Constraint »%s« von Tabelle »%s«"
 
 #: utils/adt/ri_triggers.c:3305
 #, c-format
@@ -10805,40 +10847,42 @@ msgstr "ORT:  %s:%d\n"
 msgid "STATEMENT:  "
 msgstr "ANWEISUNG:  "
 
-#: utils/error/elog.c:1965
+#. translator: This string will be truncated at 47
+#. characters expanded.
+#: utils/error/elog.c:1964
 #, c-format
 msgid "operating system error %d"
 msgstr "Betriebssystemfehler %d"
 
-#: utils/error/elog.c:1988
+#: utils/error/elog.c:1987
 msgid "DEBUG"
 msgstr "DEBUG"
 
-#: utils/error/elog.c:1992
+#: utils/error/elog.c:1991
 msgid "LOG"
 msgstr "LOG"
 
-#: utils/error/elog.c:1995
+#: utils/error/elog.c:1994
 msgid "INFO"
 msgstr "INFO"
 
-#: utils/error/elog.c:1998
+#: utils/error/elog.c:1997
 msgid "NOTICE"
 msgstr "HINWEIS"
 
-#: utils/error/elog.c:2001
+#: utils/error/elog.c:2000
 msgid "WARNING"
 msgstr "WARNUNG"
 
-#: utils/error/elog.c:2004
+#: utils/error/elog.c:2003
 msgid "ERROR"
 msgstr "FEHLER"
 
-#: utils/error/elog.c:2007
+#: utils/error/elog.c:2006
 msgid "FATAL"
 msgstr "FATAL"
 
-#: utils/error/elog.c:2010
+#: utils/error/elog.c:2009
 msgid "PANIC"
 msgstr "PANIK"
 
@@ -11170,24 +11214,16 @@ msgid "loaded library \"%s\""
 msgstr "Bibliothek »%s« geladen"
 
 #: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:137
+#: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:165
 #, c-format
 msgid "unexpected encoding ID %d for ISO 8859 character sets"
 msgstr "unerwartete Kodierungs-ID %d für ISO-8859-Zeichensatz"
 
-#: utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c:165
-#, c-format
-msgid "unexpected encoding id %d for ISO-8859 charsets"
-msgstr ""
-
 #: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:127
+#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:155
 #, c-format
 msgid "unexpected encoding ID %d for WIN character sets"
 msgstr "unerwartete Kodierungs-ID %d für WIN-Zeichensatz"
-
-#: utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c:155
-#, c-format
-msgid "unexpected encoding id %d for WIN charsets"
-msgstr ""
 
 #: utils/mb/conv.c:371
 #, c-format
@@ -11203,7 +11239,10 @@ msgstr "ungültige Byte-Sequenz für Kodierung »%s«: 0x%s"
 msgid ""
 "This error can also happen if the byte sequence does not match the encoding "
 "expected by the server, which is controlled by \"client_encoding\"."
-msgstr "Dieser Fehler kann auch auftreten, wenn die Bytesequenz nicht mit der Kodierung übereinstimmt, die der Server erwartet, welche durch »client_encoding« bestimmt wird."
+msgstr ""
+"Dieser Fehler kann auch auftreten, wenn die Bytesequenz nicht mit der "
+"Kodierung übereinstimmt, die der Server erwartet, welche durch "
+"»client_encoding« bestimmt wird."
 
 #: utils/mb/wchar.c:1535
 #, c-format
@@ -12785,19 +12824,25 @@ msgstr ""
 msgid ""
 "time zone abbreviation \"%s\" is too long (maximum %d characters) in time "
 "zone file \"%s\", line %d"
-msgstr "Zeitzonenabkürzung »%s« ist zu lang (maximal %d Zeichen) in Zeitzonendatei »%s«, Zeile %d"
+msgstr ""
+"Zeitzonenabkürzung »%s« ist zu lang (maximal %d Zeichen) in Zeitzonendatei »%"
+"s«, Zeile %d"
 
 #: utils/misc/tzparser.c:72
 #, c-format
 msgid ""
 "time zone offset %d is not a multiple of 900 sec (15 min) in time zone file "
 "\"%s\", line %d"
-msgstr "Zeitzonenabstand %d ist kein Vielfaches von 900 s (15 min) in Zeitzonendatei »%s«, Zeile %d"
+msgstr ""
+"Zeitzonenabstand %d ist kein Vielfaches von 900 s (15 min) in Zeitzonendatei "
+"»%s«, Zeile %d"
 
 #: utils/misc/tzparser.c:86
 #, c-format
 msgid "time zone offset %d is out of range in time zone file \"%s\", line %d"
-msgstr "Zeitzonenabstand %d ist außerhalb des gültigen Bereichs in Zeitzonendatei »%s«, Zeile %d"
+msgstr ""
+"Zeitzonenabstand %d ist außerhalb des gültigen Bereichs in Zeitzonendatei »%"
+"s«, Zeile %d"
 
 #: utils/misc/tzparser.c:123
 #, c-format
@@ -12829,7 +12874,9 @@ msgstr "Zeitzonenabkürzung »%s« ist mehrfach definiert"
 msgid ""
 "Entry in time zone file \"%s\", line %d, conflicts with entry in file \"%s"
 "\", line %d."
-msgstr "Eintrag in Zeitzonendatei »%s«, Zeile %d, steht im Konflikt mit Eintrag in Datei »%s«, Zeile %d."
+msgstr ""
+"Eintrag in Zeitzonendatei »%s«, Zeile %d, steht im Konflikt mit Eintrag in "
+"Datei »%s«, Zeile %d."
 
 #: utils/misc/tzparser.c:303
 #, c-format
