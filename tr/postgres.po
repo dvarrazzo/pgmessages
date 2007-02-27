@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-28 13:01-0400\n"
-"PO-Revision-Date: 2007-02-21 15:41+0200\n"
+"PO-Revision-Date: 2007-02-27 12:24+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "\"%s\" kolonu SETOF olarak bildirilemez"
 #: access/common/printtup.c:266
 #: tcop/fastpath.c:179
 #: tcop/fastpath.c:551
-#: tcop/postgres.c:1527
+#: tcop/postgres.c:1535
 #, c-format
 msgid "unsupported format code: %d"
 msgstr "desteklenmeyen biçim kodu: %d"
@@ -188,18 +188,18 @@ msgstr "satır çok büyük: boyutu %lu, olabileceği en fazla boyut %lu"
 msgid "\"%s\" is not an index"
 msgstr "\"%s\" bir index değildir"
 
-#: access/nbtree/nbtinsert.c:276
+#: access/nbtree/nbtinsert.c:280
 #, c-format
 msgid "duplicate key violates unique constraint \"%s\""
 msgstr "mükerrer kayıt \"%s\" tekil kısıtlamasını ihlal etmektedir"
 
-#: access/nbtree/nbtinsert.c:421
+#: access/nbtree/nbtinsert.c:425
 #: access/nbtree/nbtsort.c:501
 #, c-format
 msgid "index row size %lu exceeds btree maximum, %lu"
 msgstr "%lu index satır boyutu, btree indexi için %lu olan en büyük satır büyüklüğünü aşmaktadır"
 
-#: access/nbtree/nbtinsert.c:424
+#: access/nbtree/nbtinsert.c:428
 #: access/nbtree/nbtsort.c:504
 msgid ""
 "Values larger than 1/3 of a buffer page cannot be indexed.\n"
@@ -308,13 +308,12 @@ msgid "Must be superuser or the user that prepared the transaction."
 msgstr "Superuser veya ğreparet transaction oluşturan kullanıcısı olmalısınız."
 
 #: access/transam/twophase.c:405
-#, fuzzy
 msgid "prepared transaction belongs to another database"
-msgstr "veritabanı oluşturma izin verilmedi."
+msgstr "prepared transaction başka bir veritabanına aittir"
 
 #: access/transam/twophase.c:406
 msgid "Connect to the database where the transaction was prepared to finish it."
-msgstr ""
+msgstr "İşlemini bitirmek için transaction prepare işlemi yapıldığı veritabanına bağlanın."
 
 #: access/transam/twophase.c:420
 #, c-format
@@ -459,15 +458,15 @@ msgstr "\"%s\" dosyası oluşturulamıyor: %m"
 #: access/transam/xlog.c:2013
 #: access/transam/xlog.c:3517
 #: access/transam/xlog.c:3555
-#: commands/copy.c:1273
+#: commands/copy.c:1274
 #: commands/tablespace.c:666
 #: commands/tablespace.c:672
 #: postmaster/postmaster.c:3070
 #: postmaster/postmaster.c:3080
 #: utils/init/miscinit.c:1014
 #: utils/init/miscinit.c:1023
-#: utils/misc/guc.c:5566
-#: utils/misc/guc.c:5629
+#: utils/misc/guc.c:5570
+#: utils/misc/guc.c:5633
 #: ../port/copydir.c:148
 #, c-format
 msgid "could not write to file \"%s\": %m"
@@ -1063,7 +1062,6 @@ msgid "database system was interrupted while in recovery at log time %s"
 msgstr "log time %s'da recovery sırasında veritabanı sistemi kesildi"
 
 #: access/transam/xlog.c:4602
-#, fuzzy
 msgid "If this has occurred more than once some data might be corrupted and you might need to choose an earlier recovery target."
 msgstr "Bu hata birden fazla kere meydana geldiyse, veri bozulmuş olabilir. Bu durumda daha erken tarihli kurtarma hedefinini belirtmelisiniz."
 
@@ -1387,9 +1385,9 @@ msgstr "%s bir fonksiyonun içinde çalışamaz"
 
 #. translator: %s represents an SQL statement name
 #: access/transam/xact.c:2592
-#, fuzzy, c-format
+#, c-format
 msgid "%s can only be used in transaction blocks"
-msgstr "%s sadece transaction bloğu içinde çalıştırılabilir"
+msgstr "%s sadece transaction bloğu içinde kullanılabilir"
 
 #: access/transam/xact.c:2774
 msgid "there is already a transaction in progress"
@@ -1427,14 +1425,14 @@ msgstr "GIN dizini boş bir sorguyla aramayı desteklemiyor"
 
 #: bootstrap/bootstrap.c:295
 #: postmaster/postmaster.c:571
-#: tcop/postgres.c:2940
+#: tcop/postgres.c:2938
 #, c-format
 msgid "--%s requires a value"
 msgstr "--%s bir değer gerektirir"
 
 #: bootstrap/bootstrap.c:300
 #: postmaster/postmaster.c:576
-#: tcop/postgres.c:2945
+#: tcop/postgres.c:2943
 #, c-format
 msgid "-c %s requires a value"
 msgstr "-c %s bir değer gerektirir"
@@ -1452,26 +1450,26 @@ msgid "%s: invalid command-line arguments\n"
 msgstr "%s: geçersiz komut satırı parametresi\n"
 
 #: y.tab.c:626
-#: y.tab.c:12841
+#: y.tab.c:12760
 msgid "syntax error: cannot back up"
 msgstr "sözdizimi hatası: geri diilemiyor"
 
 #: y.tab.c:1550
-#: y.tab.c:23653
+#: y.tab.c:23583
 msgid "syntax error; also virtual memory exhausted"
 msgstr "sözdizimi hatası; ayrıca sanal bellek de dolmuştur"
 
 #: y.tab.c:1554
-#: y.tab.c:23657
-#: gram.y:9241
-#: gram.y:9243
-#: gram.y:9260
-#: gram.y:9262
+#: y.tab.c:23587
+#: gram.y:9254
+#: gram.y:9256
+#: gram.y:9273
+#: gram.y:9275
 msgid "syntax error"
 msgstr "söz dizim hatası "
 
 #: y.tab.c:1668
-#: y.tab.c:23773
+#: y.tab.c:23703
 msgid "parser stack overflow"
 msgstr "parser stack overflow"
 
@@ -1504,7 +1502,7 @@ msgid "cannot drop %s because %s requires it"
 msgstr "%s tarafından kullanıldığı için %s kaldırılamıyor"
 
 #: catalog/dependency.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "You can drop %s instead."
 msgstr "Onun yerine %s nesnesini kaldırabilirsiniz."
 
@@ -1778,7 +1776,7 @@ msgstr "\"%s\" şeması mevcut değil"
 #: commands/tablespace.c:797
 #: commands/tablespace.c:892
 #: commands/tablespace.c:978
-#: executor/execMain.c:2410
+#: executor/execMain.c:2440
 #: utils/adt/acl.c:2581
 #: utils/adt/dbsize.c:209
 #, c-format
@@ -1808,7 +1806,6 @@ msgid "language \"%s\" is not trusted"
 msgstr "\"%s\" dili güvenilir bir dil değildir"
 
 #: catalog/aclchk.c:1001
-#, fuzzy
 msgid "Only superusers can use untrusted languages."
 msgstr "Güvenilir olmayan dilleri sadece superuser kullanabilir."
 
@@ -1867,9 +1864,9 @@ msgid "permission denied for operator class %s"
 msgstr "%s operatör sınıfına erişim engellendi"
 
 #: catalog/aclchk.c:1418
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied for operator family %s"
-msgstr "%s operatorüne erişim engellendi"
+msgstr "%s operator ailesine erişim engellendi"
 
 #: catalog/aclchk.c:1420
 #, c-format
@@ -1927,9 +1924,9 @@ msgid "must be owner of operator class %s"
 msgstr "%s operatör sınıfının sahibi olmalısınız"
 
 #: catalog/aclchk.c:1446
-#, fuzzy, c-format
+#, c-format
 msgid "must be owner of operator family %s"
-msgstr "%s operatörünün sahibi olmalısınız"
+msgstr "%s operator ailesinin sahibi olmalısınız"
 
 #: catalog/aclchk.c:1448
 #, c-format
@@ -1999,9 +1996,9 @@ msgid "operator class with OID %u does not exist"
 msgstr "%u OID'li operatör sınıfı mevcut değil"
 
 #: catalog/aclchk.c:2266
-#, fuzzy, c-format
+#, c-format
 msgid "operator family with OID %u does not exist"
-msgstr "%u OID'li operatör mevcut değil"
+msgstr "OID'i %u olan operatör mevcut değil"
 
 #: catalog/aclchk.c:2323
 #, c-format
@@ -2027,7 +2024,7 @@ msgstr "geçiş fonksiyonu strict olduğunda ve giriş parametresinin tipi uyums
 
 #: catalog/pg_aggregate.c:177
 #: catalog/pg_proc.c:185
-#: executor/functions.c:1056
+#: executor/functions.c:1064
 msgid "cannot determine result data type"
 msgstr "sonuç veri tipi belirlenemiyor"
 
@@ -2160,7 +2157,7 @@ msgid "column \"%s\" is of type %s but default expression is of type %s"
 msgstr "\"%s\" kolonunun tipi %s'dır, ancak öntanımlı ifadenin tipi %s'dir."
 
 #: catalog/heap.c:1862
-#: parser/analyze.c:3345
+#: parser/analyze.c:3334
 #: parser/parse_node.c:280
 #: parser/parse_target.c:439
 #: parser/parse_target.c:690
@@ -2228,7 +2225,6 @@ msgid "relation \"%s\" does not exist"
 msgstr "\"%s\" nesnesi mevcut değil"
 
 #: catalog/namespace.c:239
-#, fuzzy
 msgid "temporary tables cannot specify a schema name"
 msgstr "geçici tablolarda şema adı belirtilemez"
 
@@ -2247,8 +2243,8 @@ msgstr "veritabanı-arası referanslar oluşturulamaz: %s"
 #: catalog/namespace.c:1280
 #: parser/parse_expr.c:525
 #: parser/parse_target.c:878
-#: gram.y:2860
-#: gram.y:8439
+#: gram.y:2869
+#: gram.y:8452
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "geçersiz qualified adı (çok fazla noktalı isim): %s"
@@ -2344,7 +2340,7 @@ msgid "functions cannot have more than %d arguments"
 msgstr "bir fonksiyonun arguman sayısı %d sayısından büyük olamaz"
 
 #: catalog/pg_proc.c:186
-#: executor/functions.c:1057
+#: executor/functions.c:1065
 msgid "A function returning \"anyarray\" or \"anyelement\" must have at least one argument of either type."
 msgstr "\"anyarray\" veya \"anyelement\" döndüren fonksiyonlar bu tiplerden en az birer argümana sahip olmalıdır."
 
@@ -2406,7 +2402,7 @@ msgid "SQL functions cannot have arguments of type %s"
 msgstr "SQL fonksiyonları %s tipinde argümana sahip olamaz"
 
 #: catalog/pg_proc.c:631
-#: executor/functions.c:797
+#: executor/functions.c:805
 #, c-format
 msgid "SQL function \"%s\""
 msgstr " \"%s\" SQL fonksiyonu"
@@ -2508,7 +2504,7 @@ msgid "shared tables cannot be toasted after initdb"
 msgstr "initdb işleminden sonra paylaşılmış tablolar toast edilemez"
 
 #: commands/tablecmds.c:300
-#: executor/execMain.c:2386
+#: executor/execMain.c:2416
 msgid "ON COMMIT can only be used on temporary tables"
 msgstr "ON COMMIT sadece geçici tablolarda kullanılabilir"
 
@@ -2614,7 +2610,7 @@ msgid "inherited column \"%s\" must be renamed in child tables too"
 msgstr "\"%s\" inherited sütununun adı alt tablolarda da değiştirilmelidir"
 
 #: commands/tablecmds.c:1514
-#: commands/copy.c:3312
+#: commands/copy.c:3313
 #: commands/indexcmds.c:649
 #: parser/parse_expr.c:412
 #, c-format
@@ -2641,9 +2637,9 @@ msgstr "\"%2$s\" nesnesinin \"%1$s\" sütunu zaten mevcut"
 #: commands/tablecmds.c:2729
 #: commands/tablecmds.c:2766
 #: commands/tablecmds.c:3577
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" is being used by active queries in this session"
-msgstr "bu oturumda \"%s\" sequence'i için currval henüz tanımlanmamıştır"
+msgstr "\"%s\" tablosu şu anda aktif sorgular tarafından kullanılmaktadır"
 
 #: commands/tablecmds.c:2207
 #, c-format
@@ -2705,14 +2701,14 @@ msgstr "\"%s\" sütunun tanımı \"%s\" alt tablo için birleştiriliyor"
 #: commands/tablecmds.c:4804
 #: commands/analyze.c:218
 #: commands/comment.c:557
-#: commands/copy.c:3307
+#: commands/copy.c:3308
 #: commands/sequence.c:1223
-#: parser/analyze.c:2929
+#: parser/analyze.c:2918
 #: parser/parse_relation.c:1598
 #: parser/parse_relation.c:1653
 #: parser/parse_type.c:96
 #: parser/parse_target.c:764
-#: utils/adt/ruleutils.c:1282
+#: utils/adt/ruleutils.c:1279
 #: utils/adt/not_in.c:78
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
@@ -3112,9 +3108,9 @@ msgid "role \"%s\" cannot be dropped because some objects depend on it"
 msgstr "diğer nesnelerin ona bağlı olması nedeniyle \"%s\" rolü kaldırılamıyor"
 
 #: commands/user.c:893
-#: nodes/print.c:84
+#: nodes/print.c:83
 #: storage/lmgr/deadlock.c:942
-#: tcop/postgres.c:3818
+#: tcop/postgres.c:3816
 #: utils/adt/xml.c:1215
 #: utils/adt/xml.c:1216
 #: utils/adt/xml.c:1222
@@ -3124,12 +3120,10 @@ msgid "%s"
 msgstr "%s"
 
 #: commands/user.c:1010
-#, fuzzy
 msgid "session user cannot be renamed"
 msgstr "oturum kullanıcısının adı değiştirilemez"
 
 #: commands/user.c:1014
-#, fuzzy
 msgid "current user cannot be renamed"
 msgstr "geçerli kullanıcının adı değiştirilemez"
 
@@ -3262,12 +3256,12 @@ msgid "cannot cluster on index \"%s\" because access method does not handle null
 msgstr "\"%s\" indexin erişim yöntemi null değerleri desteklemediği için cluster yapılamaz"
 
 #: commands/cluster.c:379
-#, fuzzy, c-format
+#, c-format
 msgid "You might be able to work around this by marking column \"%s\" NOT NULL, or use ALTER TABLE ... SET WITHOUT CLUSTER to remove the cluster specification from the table."
-msgstr "Bunu önlemek için \"%s\" sütunu NOT NULL yaparak ya da tablodan cluser tanımlarını kaldırmak için ALTER TABLE ... SET WITHOUT CLUSTER kullanabilirsiniz"
+msgstr "Bunu önlemek için \"%s\" sütunu NOT NULL yaparak ya da tablodan cluser tanımlarını kaldırmak için ALTER TABLE ... SET WITHOUT CLUSTER kullanabilirsiniz."
 
 #: commands/cluster.c:381
-#, fuzzy, c-format
+#, c-format
 msgid "You might be able to work around this by marking column \"%s\" NOT NULL."
 msgstr "\"%s\" sütununu NOT NULL olarak tanımlamakla bu sorunu çözebilirsiniz"
 
@@ -3293,19 +3287,16 @@ msgid "\"%s\" is not a view"
 msgstr "\"%s\" bir view değildir"
 
 #: commands/comment.c:587
-#, fuzzy
 msgid "database name cannot be qualified"
-msgstr "veritabanı ismi nitelikli olmayabilir"
+msgstr "veritabanı ismi geçerli değil"
 
 #: commands/comment.c:635
-#, fuzzy
 msgid "tablespace name cannot be qualified"
-msgstr "tablespace adı nitelikli olmayabilir"
+msgstr "tablespace adı geçerli değil"
 
 #: commands/comment.c:672
-#, fuzzy
 msgid "role name cannot be qualified"
-msgstr "rol adı nitelikli olmayabilir"
+msgstr "rol adı geçerli değil"
 
 #: commands/comment.c:681
 #, c-format
@@ -3314,9 +3305,8 @@ msgstr "\"%s\" rolüne açıklama eklemek için bu role dahil olmalısınız"
 
 #: commands/comment.c:705
 #: commands/schemacmds.c:162
-#, fuzzy
 msgid "schema name cannot be qualified"
-msgstr "şema ismi sınıf nitelikli olmayabilir"
+msgstr "şema ismi geçerli değil"
 
 #: commands/comment.c:782
 #, c-format
@@ -3358,9 +3348,8 @@ msgid "constraint \"%s\" for table \"%s\" does not exist"
 msgstr "\"%2$s\" tablosu için \"%1$s\" bütünlük kısıtlaması mevcut değil"
 
 #: commands/comment.c:1164
-#, fuzzy
 msgid "language name cannot be qualified"
-msgstr "dil ismi nitelikli olmayabilir"
+msgstr "dil ismi geçerli değil"
 
 #: commands/comment.c:1179
 msgid "must be superuser to comment on procedural language"
@@ -3468,8 +3457,8 @@ msgstr "COPY dosyasından okuma hatası: %m"
 #: commands/copy.c:534
 #: commands/copy.c:538
 #: tcop/fastpath.c:291
-#: tcop/postgres.c:307
-#: tcop/postgres.c:330
+#: tcop/postgres.c:306
+#: tcop/postgres.c:329
 msgid "unexpected EOF on client connection"
 msgstr "istemci bağlantısında beklenmeyen EOF"
 
@@ -3564,8 +3553,8 @@ msgid "Anyone can COPY to stdout or from stdin. psql's \\copy command also works
 msgstr "Stdout'e ve stdin'e her kullanıcı COPY işlemi yapabilir. Ayrıca her kullanıcı psql'in \\copy komutunu kullanabilir."
 
 #: commands/copy.c:974
-#: executor/execMain.c:457
-#: tcop/utility.c:352
+#: executor/execMain.c:448
+#: tcop/utility.c:357
 msgid "transaction is read-only"
 msgstr "transaction salt okunurdur"
 
@@ -3574,184 +3563,184 @@ msgstr "transaction salt okunurdur"
 msgid "table \"%s\" does not have OIDs"
 msgstr "\"%s\" tablosunda OID yoktur"
 
-#: commands/copy.c:1000
+#: commands/copy.c:1001
 msgid "COPY (SELECT) WITH OIDS is not supported"
 msgstr "COPY (SELECT) WITH OIDS desteklenmemektedir"
 
-#: commands/copy.c:1005
+#: commands/copy.c:1007
 msgid "COPY (SELECT INTO) is not supported"
 msgstr "COPY (SELECT INTO) desteklenmemektedir"
 
-#: commands/copy.c:1089
+#: commands/copy.c:1090
 #, c-format
 msgid "FORCE QUOTE column \"%s\" not referenced by COPY"
 msgstr "FORCE UNIQUE \"%s\" sütunu COPY tarafından referans edilmemiştir"
 
-#: commands/copy.c:1111
+#: commands/copy.c:1112
 #, c-format
 msgid "FORCE NOT NULL column \"%s\" not referenced by COPY"
 msgstr "FORCE NOT NULL \"%s\" sütunu COPY tarafından referans edilmemiştir"
 
-#: commands/copy.c:1189
+#: commands/copy.c:1190
 #, c-format
 msgid "cannot copy from view \"%s\""
 msgstr "\"%s\" view'undan kopyalanamıyor"
 
-#: commands/copy.c:1191
+#: commands/copy.c:1192
 msgid "Try the COPY (SELECT ...) TO variant."
 msgstr "COPY (SELECT ...) TO variant deyimini deneyin."
 
-#: commands/copy.c:1195
+#: commands/copy.c:1196
 #, c-format
 msgid "cannot copy from sequence \"%s\""
 msgstr "\"%s\" sequence'inden kopyalanamıyor"
 
-#: commands/copy.c:1200
+#: commands/copy.c:1201
 #, c-format
 msgid "cannot copy from non-table relation \"%s\""
 msgstr "\"%s\" tablo olmayan nesnesinden copy yapılamıyor"
 
-#: commands/copy.c:1224
+#: commands/copy.c:1225
 msgid "relative path not allowed for COPY to file"
 msgstr "COPY işlemi ile dosyaya yazarken dosyanın tam yolunu belirtmelisiniz"
 
-#: commands/copy.c:1233
+#: commands/copy.c:1234
 #, c-format
 msgid "could not open file \"%s\" for writing: %m"
 msgstr "\"%s\" dosyası, yazmak için açılamadı: %m"
 
-#: commands/copy.c:1242
-#: commands/copy.c:1703
+#: commands/copy.c:1243
+#: commands/copy.c:1704
 #, c-format
 msgid "\"%s\" is a directory"
 msgstr "\"%s\" bir dizindir"
 
-#: commands/copy.c:1529
+#: commands/copy.c:1530
 #, c-format
 msgid "COPY %s, line %d, column %s"
 msgstr "COPY %s, satır %d, sütun %s"
 
-#: commands/copy.c:1533
-#: commands/copy.c:1578
+#: commands/copy.c:1534
+#: commands/copy.c:1579
 #, c-format
 msgid "COPY %s, line %d"
 msgstr "COPY %s, satır %d"
 
-#: commands/copy.c:1544
+#: commands/copy.c:1545
 #, c-format
 msgid "COPY %s, line %d, column %s: \"%s\""
 msgstr "COPY %s, satır %d, sütun %s: \"%s\""
 
-#: commands/copy.c:1552
+#: commands/copy.c:1553
 #, c-format
 msgid "COPY %s, line %d, column %s: null input"
 msgstr "COPY %s, satır %d, sütun %s: null girişi"
 
-#: commands/copy.c:1564
+#: commands/copy.c:1565
 #, c-format
 msgid "COPY %s, line %d: \"%s\""
 msgstr "COPY %s, satır %d: \"%s\""
 
-#: commands/copy.c:1664
+#: commands/copy.c:1665
 #, c-format
 msgid "cannot copy to view \"%s\""
 msgstr "\"%s\" view'ina kopyalanamıyor"
 
-#: commands/copy.c:1669
+#: commands/copy.c:1670
 #, c-format
 msgid "cannot copy to sequence \"%s\""
 msgstr "\"%s\" sequence'ine kopyalanamıyor"
 
-#: commands/copy.c:1674
+#: commands/copy.c:1675
 #, c-format
 msgid "cannot copy to non-table relation \"%s\""
 msgstr "tablo olmayan \"%s\" nesnesi kopyalanamaz"
 
-#: commands/copy.c:1694
+#: commands/copy.c:1695
 #: utils/adt/genfile.c:109
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
 msgstr "\"%s\" dosyası, okunmak için açılamadı: %m"
 
-#: commands/copy.c:1805
+#: commands/copy.c:1806
 msgid "COPY file signature not recognized"
 msgstr "COPY dosya imzası tanınmamaktadır"
 
-#: commands/copy.c:1810
+#: commands/copy.c:1811
 msgid "invalid COPY file header (missing flags)"
 msgstr "COPY dosya başlığı geçersiz (flagler eksik)"
 
-#: commands/copy.c:1816
+#: commands/copy.c:1817
 msgid "unrecognized critical flags in COPY file header"
 msgstr "COPY dosya başlığında tanınmayan flag"
 
-#: commands/copy.c:1822
+#: commands/copy.c:1823
 msgid "invalid COPY file header (missing length)"
 msgstr "COPY dosya başlığı geçersiz (uzunluklar eksik)"
 
-#: commands/copy.c:1829
+#: commands/copy.c:1830
 msgid "invalid COPY file header (wrong length)"
 msgstr "geçersiz COPY dosya başlığı (yanlış uzunluk)"
 
-#: commands/copy.c:1940
+#: commands/copy.c:1941
 msgid "missing data for OID column"
 msgstr "OID sütunu için veri eksik"
 
-#: commands/copy.c:1946
+#: commands/copy.c:1947
 msgid "null OID in COPY data"
 msgstr "COPY verisinde null OID"
 
-#: commands/copy.c:1956
-#: commands/copy.c:2028
+#: commands/copy.c:1957
+#: commands/copy.c:2029
 msgid "invalid OID in COPY data"
 msgstr "COPY verisinde geçersiz OID"
 
-#: commands/copy.c:1971
+#: commands/copy.c:1972
 #, c-format
 msgid "missing data for column \"%s\""
 msgstr "\"%s\" sütunu için veri eksik"
 
-#: commands/copy.c:2012
+#: commands/copy.c:2013
 #, c-format
 msgid "row field count is %d, expected %d"
 msgstr "satır alanı sayısı %d, beklenen %d"
 
-#: commands/copy.c:2176
+#: commands/copy.c:2177
 #: utils/init/miscinit.c:974
-#: utils/misc/guc.c:5697
+#: utils/misc/guc.c:5701
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "\"%s\" dosyasından okuma hatası: %m"
 
-#: commands/copy.c:2449
-#: commands/copy.c:2466
+#: commands/copy.c:2450
+#: commands/copy.c:2467
 msgid "literal carriage return found in data"
 msgstr "veride satır sonu karakterine rastlanmıştır"
 
-#: commands/copy.c:2450
-#: commands/copy.c:2467
+#: commands/copy.c:2451
+#: commands/copy.c:2468
 msgid "unquoted carriage return found in data"
 msgstr "veri içerisinde tırnak içinde olmayan satır sonu karakteri bulundu"
 
-#: commands/copy.c:2452
-#: commands/copy.c:2469
+#: commands/copy.c:2453
+#: commands/copy.c:2470
 msgid "Use \"\\r\" to represent carriage return."
 msgstr "Satır sonu karakteri için \"\\r\" kullanın."
 
-#: commands/copy.c:2453
-#: commands/copy.c:2470
+#: commands/copy.c:2454
+#: commands/copy.c:2471
 msgid "Use quoted CSV field to represent carriage return."
 msgstr "Satır sonunu göstermek için tırnak içinde CSV değerini kullanın."
 
-#: commands/copy.c:2482
+#: commands/copy.c:2483
 msgid "literal newline found in data"
 msgstr "veri içerisinde yeni satır karakteri bulundu"
 
-#: commands/copy.c:2483
+#: commands/copy.c:2484
 msgid "unquoted newline found in data"
 msgstr "veri içerisinde tırnak içinde olmayan yeni satır karakteri bulundu"
 
-#: commands/copy.c:2485
+#: commands/copy.c:2486
 msgid ""
 "Use \"\\n"
 "\" to represent newline."
@@ -3759,45 +3748,45 @@ msgstr ""
 "Yeni satır karakteri için \"\\n"
 "\" kullanın."
 
-#: commands/copy.c:2486
+#: commands/copy.c:2487
 msgid "Use quoted CSV field to represent newline."
 msgstr "Yeni satırı göstermek için tırnak içinde CSV değerini kullanın."
 
-#: commands/copy.c:2532
-#: commands/copy.c:2568
+#: commands/copy.c:2533
+#: commands/copy.c:2569
 msgid "end-of-copy marker does not match previous newline style"
 msgstr "end-of-copy göstergesi önceki yeni satır stiline uymuyor"
 
-#: commands/copy.c:2541
-#: commands/copy.c:2557
+#: commands/copy.c:2542
+#: commands/copy.c:2558
 msgid "end-of-copy marker corrupt"
 msgstr "end-of-copy göstergesi zarar görmüş"
 
-#: commands/copy.c:2684
-#: commands/copy.c:2720
-#: commands/copy.c:2884
-#: commands/copy.c:2922
+#: commands/copy.c:2685
+#: commands/copy.c:2721
+#: commands/copy.c:2885
+#: commands/copy.c:2923
 msgid "extra data after last expected column"
 msgstr "son beklenen sütundan sonra fazladan veri bulundu"
 
-#: commands/copy.c:2992
+#: commands/copy.c:2993
 msgid "unterminated CSV quoted field"
 msgstr "sonlandırılmamış CSV quoted alanı"
 
-#: commands/copy.c:3030
-#: commands/copy.c:3052
+#: commands/copy.c:3031
+#: commands/copy.c:3053
 msgid "unexpected EOF in COPY data"
 msgstr "COPY verisinde beklenmeyen dosya sonu"
 
-#: commands/copy.c:3039
+#: commands/copy.c:3040
 msgid "invalid field size"
 msgstr "geçersiz alan boyutu"
 
-#: commands/copy.c:3065
+#: commands/copy.c:3066
 msgid "incorrect binary data format"
 msgstr "ikili veri biçimi hatası"
 
-#: commands/copy.c:3319
+#: commands/copy.c:3320
 #: parser/parse_target.c:780
 #: parser/parse_target.c:791
 #, c-format
@@ -3882,9 +3871,8 @@ msgid "database \"%s\" is being accessed by other users"
 msgstr "\"%s\" veritabanına başka kullanıcılar tarafından erişilmektedir"
 
 #: commands/dbcommands.c:716
-#, fuzzy
 msgid "current database cannot be renamed"
-msgstr "geçerli veritabanının adı değiştirilemez"
+msgstr "geçerli veritabanının adını değiştirilemez"
 
 #: commands/dbcommands.c:743
 msgid "permission denied to rename database"
@@ -3991,12 +3979,12 @@ msgstr "dil belirtilmemiş"
 #: commands/functioncmds.c:438
 #: commands/functioncmds.c:1141
 msgid "COST must be positive"
-msgstr ""
+msgstr "COST pozitif olmalıdır"
 
 #: commands/functioncmds.c:446
 #: commands/functioncmds.c:1149
 msgid "ROWS must be positive"
-msgstr ""
+msgstr "ROWS pozitif olmalıdır"
 
 #: commands/functioncmds.c:485
 #, c-format
@@ -4023,9 +4011,8 @@ msgstr "fonksiyonun döndürme tipi belirtilmelidir"
 
 #: commands/functioncmds.c:716
 #: commands/functioncmds.c:1153
-#, fuzzy
 msgid "ROWS is not applicable when function does not return a set"
-msgstr "cast fonksiyonu bir set döndürmemelidir"
+msgstr "fonksiyonu bir set döndürmediğinde ROWS kullanılamaz"
 
 #: commands/functioncmds.c:765
 #, c-format
@@ -4209,14 +4196,14 @@ msgid "functions in index expression must be marked IMMUTABLE"
 msgstr "index ifadesinde kullanılacak fonksiyon IMMUTABLE olarak tanımlanmaıldır"
 
 #: commands/indexcmds.c:733
-#, fuzzy, c-format
+#, c-format
 msgid "access method \"%s\" does not support ASC/DESC options"
-msgstr "\"%s\" erişim yöntemi tekil indexleri desteklemiyor"
+msgstr "\"%s\" erişim yöntemi ASC/DESC desteklemiyor"
 
 #: commands/indexcmds.c:738
-#, fuzzy, c-format
+#, c-format
 msgid "access method \"%s\" does not support NULLS FIRST/LAST options"
-msgstr "\"%s\" erişim yöntemi tekil indexleri desteklemiyor"
+msgstr "\"%s\" erişim yöntemi NULLS FIRST/LAST desteklemiyor"
 
 #: commands/indexcmds.c:794
 #, c-format
@@ -4285,9 +4272,9 @@ msgid "storage type specified more than once"
 msgstr "depolama tipi birden fazla kez belirtilmiştir"
 
 #: commands/opclasscmds.c:511
-#, fuzzy, c-format
+#, c-format
 msgid "storage type cannot be different from data type for access method \"%s\""
-msgstr "depolama yönteminin veri tipi \"%s\", erişim metodu ile aynı olmalıdır"
+msgstr "depolama yötemi  erişim metodu \"%s\" ile aynı olmalıdır"
 
 #: commands/opclasscmds.c:528
 #, c-format
@@ -4305,27 +4292,24 @@ msgid "Operator class \"%s\" already is the default."
 msgstr "\"%s\" operatör sınıfı zaten varsayılandır."
 
 #: commands/opclasscmds.c:697
-#, fuzzy
 msgid "must be superuser to create an operator family"
-msgstr "operator sınıfı yaratmak için superuser olmalısınız"
+msgstr "operator sınıfı oluşturmak için superuser olmalısınız"
 
 #: commands/opclasscmds.c:815
-#, fuzzy
 msgid "must be superuser to alter an operator family"
-msgstr "operator sınıfı yaratmak için superuser olmalısınız"
+msgstr "operator sınıfı değiştirmek için superuser olmalısınız"
 
 #: commands/opclasscmds.c:878
 msgid "operator argument types must be specified in ALTER OPERATOR FAMILY"
-msgstr ""
+msgstr "operator argument tipleri ALTER OPERATOR FAMILY işleminde belirtilmelidir"
 
 #: commands/opclasscmds.c:935
 msgid "STORAGE cannot be specified in ALTER OPERATOR FAMILY"
-msgstr ""
+msgstr "ALTER OPERATOR FAMILY işleminde STORAGE kullanılamaz"
 
 #: commands/opclasscmds.c:1051
-#, fuzzy
 msgid "one or two argument types must be specified"
-msgstr "fonksiyonun döndürme tipi belirtilmelidir"
+msgstr "bir veya iki argüman türü belirtilmelidir"
 
 #: commands/opclasscmds.c:1079
 msgid "index operators must be binary"
@@ -4366,24 +4350,24 @@ msgid "operator number %d for (%s,%s) appears more than once"
 msgstr "%d (%s,%s) operator numarasına birden fazla kez rastlanıyor"
 
 #: commands/opclasscmds.c:1252
-#, fuzzy, c-format
+#, c-format
 msgid "operator %d(%s,%s) already exists in operator family \"%s\""
-msgstr "\"%s\" nesnesi zaten \"%s\" şemasında mevcuttur"
+msgstr "\"%4$s\" operator ailesinde %1$d(%2$s,%3$s) operatoru zaten mevcuttur"
 
 #: commands/opclasscmds.c:1353
-#, fuzzy, c-format
+#, c-format
 msgid "function %d(%s,%s) already exists in operator family \"%s\""
-msgstr "%s fonksiyonu \"%s\" şemasında zaten mevcut"
+msgstr "\"%4$s\" operator ailesinde %1$d(%2$s,%3$s) fonksiyonu zaten mevcuttur"
 
 #: commands/opclasscmds.c:1440
-#, fuzzy, c-format
+#, c-format
 msgid "operator %d(%s,%s) does not exist in operator family \"%s\""
-msgstr "\"%s\" erişim yöntemi için \"%s\" operatör sınıfı mevcut değil"
+msgstr "\"%4$s\" operator ailesinde %1$d(%2$s,%3$s) operatoru mevcut değil"
 
 #: commands/opclasscmds.c:1480
-#, fuzzy, c-format
+#, c-format
 msgid "function %d(%s,%s) does not exist in operator family \"%s\""
-msgstr "%s(%s) fonksiyonu mevcut değil, atlanıyor"
+msgstr "\"%4$s\" operator ailesinde %1$d(%2$s,%3$s) fonksiyonu mevcut değil"
 
 #: commands/opclasscmds.c:1801
 #, c-format
@@ -4391,9 +4375,9 @@ msgid "operator class \"%s\" for access method \"%s\" already exists in schema \
 msgstr "\"%2$s\" erişim yöntemi için kullanılacak \"%1$s\" operator classı zaten \"%3$s\" şemasında mevcuttur"
 
 #: commands/opclasscmds.c:1901
-#, fuzzy, c-format
+#, c-format
 msgid "operator family \"%s\" for access method \"%s\" already exists in schema \"%s\""
-msgstr "\"%2$s\" erişim yöntemi için kullanılacak \"%1$s\" operator classı zaten \"%3$s\" şemasında mevcuttur"
+msgstr "\"%2$s\" erişim yöntemi için kullanılacak \"%1$s\" operator ailesi zaten \"%3$s\" şemasında mevcuttur"
 
 #: commands/operatorcmds.c:102
 #: commands/operatorcmds.c:110
@@ -4415,14 +4399,13 @@ msgid "operator %s does not exist, skipping"
 msgstr "%s operatorü mevcut değil, atlanıyor"
 
 #: commands/portalcmds.c:56
-#: commands/portalcmds.c:188
-#: commands/portalcmds.c:233
+#: commands/portalcmds.c:186
+#: commands/portalcmds.c:231
 msgid "invalid cursor name: must not be empty"
 msgstr "geçersiz imleç adı: boş olmamalıdır"
 
 #: commands/portalcmds.c:91
-#: parser/analyze.c:3209
-#, fuzzy
+#: parser/analyze.c:3198
 msgid "DECLARE CURSOR cannot specify INTO"
 msgstr "DECLARE CURSOR tanımında INTO kullanılamaz"
 
@@ -4434,22 +4417,22 @@ msgstr "DECLARE CURSOR ... FOR UPDATE/SHARE desteklenmiyor"
 msgid "Cursors must be READ ONLY."
 msgstr "Cursor READ ONLY olmalıdır."
 
-#: commands/portalcmds.c:196
-#: commands/portalcmds.c:243
+#: commands/portalcmds.c:194
+#: commands/portalcmds.c:241
 #: utils/adt/xml.c:1642
 #: utils/adt/xml.c:1764
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "\"%s\" imleci mevcut değil"
 
-#: commands/portalcmds.c:351
-#: tcop/pquery.c:618
-#: tcop/pquery.c:1230
+#: commands/portalcmds.c:349
+#: tcop/pquery.c:732
+#: tcop/pquery.c:1332
 #, c-format
 msgid "portal \"%s\" cannot be run"
 msgstr "\"%s\" portalı çalıştırılamıyor"
 
-#: commands/portalcmds.c:418
+#: commands/portalcmds.c:416
 msgid "could not reposition held cursor"
 msgstr "tutulan cursorun yerini değiştirilemez"
 
@@ -4461,18 +4444,18 @@ msgstr "geçersiz deyim adı: boş olmamalıdır"
 msgid "utility statements cannot be prepared"
 msgstr "yardımcı program statementları hazırlanamaz"
 
-#: commands/prepare.c:188
-#: commands/prepare.c:193
-#: commands/prepare.c:633
+#: commands/prepare.c:191
+#: commands/prepare.c:197
+#: commands/prepare.c:629
 msgid "prepared statement is not a SELECT"
 msgstr "hazırlanmış (prepared) sorgu SELECT değildir"
 
-#: commands/prepare.c:329
+#: commands/prepare.c:328
 #, c-format
 msgid "prepared statement \"%s\" already exists"
 msgstr "\"%s\" hazırlanmış sorgusu zaten mevcut"
 
-#: commands/prepare.c:400
+#: commands/prepare.c:398
 #, c-format
 msgid "prepared statement \"%s\" does not exist"
 msgstr "hazırlanmış sorgu \"%s\" mevcut değil"
@@ -4613,12 +4596,12 @@ msgid "MINVALUE (%s) must be less than MAXVALUE (%s)"
 msgstr "MINVALUE (%s), MAXVALUE (%s) değerinden küçük olmalıdır"
 
 #: commands/sequence.c:1124
-#, fuzzy, c-format
+#, c-format
 msgid "START value (%s) cannot be less than MINVALUE (%s)"
 msgstr "START değeri (%s) MINVALUE değerinden (%s) küçük olamaz"
 
 #: commands/sequence.c:1136
-#, fuzzy, c-format
+#, c-format
 msgid "START value (%s) cannot be greater than MAXVALUE (%s)"
 msgstr "START değeri (%s) MAXVALUE değerinden (%s) büyük olamaz"
 
@@ -4656,9 +4639,8 @@ msgid "some databases have not been vacuumed in over 2 billion transactions"
 msgstr "bazı veritabanlaı iki milyarı aşkın transaction vacuum işlemi yapılmadan işlemişler"
 
 #: commands/vacuum.c:908
-#, fuzzy
 msgid "You might have already suffered transaction-wraparound data loss."
-msgstr "Hatta transaction-wraparound veri kaybını yaşamış olabilirsiniz."
+msgstr "transaction-wraparound veri kaybını zaten yaşamış olabilirsiniz."
 
 #: commands/vacuum.c:1023
 #, c-format
@@ -4671,29 +4653,29 @@ msgid "skipping \"%s\" --- cannot vacuum indexes, views, or special system table
 msgstr "\"%s\" atlanıyor --- indesk, view ve sistem tablolaları vacuum edilemez"
 
 #: commands/vacuum.c:1251
-#: commands/vacuumlazy.c:229
+#: commands/vacuumlazy.c:239
 #, c-format
 msgid "vacuuming \"%s.%s\""
 msgstr "\"%s.%s\" veritabanına vacuum yapılıyor"
 
 #: commands/vacuum.c:1304
-#: commands/vacuumlazy.c:314
+#: commands/vacuumlazy.c:324
 #, c-format
 msgid "relation \"%s\" page %u is uninitialized --- fixing"
 msgstr "\"%s\" nesnesi, %u, sayfası sıfırlanmamış --- düzeltiyorum"
 
 #: commands/vacuum.c:1410
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" TID %u/%u: InsertTransactionInProgress %u --- cannot shrink relation"
 msgstr "\"%s\" tablosu TID %u/%u: InsertTransactionInProgress %u --- nesne küçültülemiyor"
 
 #: commands/vacuum.c:1423
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" TID %u/%u: DeleteTransactionInProgress %u --- cannot shrink relation"
 msgstr "\"%s\" tablosu TID %u/%u: DeleteTransactionInProgress %u --- nesne küçültülemiyor"
 
 #: commands/vacuum.c:1600
-#: commands/vacuumlazy.c:497
+#: commands/vacuumlazy.c:507
 #, c-format
 msgid "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
 msgstr "\"%s\": bulunan %.0f kaldırılabilen, %.0f sabit satır sürümleril, toplam %u sayfa"
@@ -4723,22 +4705,22 @@ msgid "\"%s\": moved %u row versions, truncated %u to %u pages"
 msgstr "\"%s\": %u satır sürümü taşınmış, %u sayfa sayısından %u sayfaya düşürülmüştür"
 
 #: commands/vacuum.c:2363
-#: commands/vacuumlazy.c:566
-#: commands/vacuumlazy.c:658
-#: commands/vacuumlazy.c:804
+#: commands/vacuumlazy.c:569
+#: commands/vacuumlazy.c:661
+#: commands/vacuumlazy.c:807
 #, c-format
 msgid "%s."
 msgstr "%s."
 
 #: commands/vacuum.c:2888
-#: commands/vacuumlazy.c:801
+#: commands/vacuumlazy.c:804
 #, c-format
 msgid "\"%s\": truncated %u to %u pages"
 msgstr "\"%s\":  %u sayfadan  %u sayfaya düşürülmüştür"
 
 #: commands/vacuum.c:2974
 #: commands/vacuum.c:3043
-#: commands/vacuumlazy.c:691
+#: commands/vacuumlazy.c:694
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "\"%s\" indexi %.0f satır sürümü, %u sayfa"
@@ -4764,7 +4746,7 @@ msgid "Rebuild the index with REINDEX."
 msgstr "REINDEX işemiyle index yeniden oluşturuluyor."
 
 #: commands/vacuum.c:3047
-#: commands/vacuumlazy.c:695
+#: commands/vacuumlazy.c:698
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -4803,7 +4785,6 @@ msgid "Must be superuser to create a tablespace."
 msgstr "Tablespace oluşturmak için superuser haklarına sahip olmalısınız."
 
 #: commands/tablespace.c:231
-#, fuzzy
 msgid "tablespace location cannot contain single quotes"
 msgstr "tablespace yeri adında tek tırnak bulunamaz"
 
@@ -4935,9 +4916,9 @@ msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "BEFORE STATEMENT tetikleyicisi bir değer döndüremez"
 
 #: commands/trigger.c:1721
-#: executor/execMain.c:1211
-#: executor/execMain.c:1501
-#: executor/execMain.c:1681
+#: executor/execMain.c:1209
+#: executor/execMain.c:1499
+#: executor/execMain.c:1679
 msgid "could not serialize access due to concurrent update"
 msgstr "eşzamanlı update nedeniyle erişim sıralanamıyor"
 
@@ -4987,7 +4968,7 @@ msgstr "tipin çıkış fonksiyonu belirtilmelidir"
 
 #: commands/typecmds.c:284
 msgid "type modifier output function is useless without a type modifier input function"
-msgstr ""
+msgstr "type modifier input function olmadan type modifier output function kullanmak anlamsızdır"
 
 #: commands/typecmds.c:307
 #, c-format
@@ -5082,14 +5063,14 @@ msgid "changing argument type of function %s from \"opaque\" to %s"
 msgstr "%s fonksiyonunun argümanı \"opaque\"tan \"%s\"e değiştiriliyor"
 
 #: commands/typecmds.c:1129
-#, fuzzy, c-format
+#, c-format
 msgid "typmod_in function %s must return type \"integer\""
-msgstr "%s fonksiyonu \"trigger\" tipini döndürmelidir"
+msgstr "%s typmod_in fonksiyonu \"trigger\" tipini döndürmelidir"
 
 #: commands/typecmds.c:1156
-#, fuzzy, c-format
+#, c-format
 msgid "typmod_out function %s must return type \"cstring\""
-msgstr "%s type output fonksiyonu  \"cstring\" döndürmelidir"
+msgstr "%s typmod_out fonksiyonu  \"cstring\" döndürmelidir"
 
 #: commands/typecmds.c:1183
 #, c-format
@@ -5144,12 +5125,17 @@ msgstr "%s bir tablo satır tipidir"
 msgid "Use ALTER TABLE SET SCHEMA instead."
 msgstr "Yerine ALTER TABLE SET SCHEMA kullanın."
 
-#: commands/vacuumlazy.c:492
+#: commands/vacuumlazy.c:185
+#, c-format
+msgid "relation \"%s.%s\" contains more than \"max_fsm_pages\" pages with useful free space"
+msgstr "\"%s.%s\" nesnesi \"max_fsm_pages\" paramteresinde belirtilmiş sayısının üzerinde kullanılabilecek boş alan içeriyor"
+
+#: commands/vacuumlazy.c:502
 #, c-format
 msgid "\"%s\": removed %.0f row versions in %u pages"
 msgstr "\"%1$s\": %3$u sayfada %2$.0f satır sürümü kaldırılmış"
 
-#: commands/vacuumlazy.c:500
+#: commands/vacuumlazy.c:510
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -5164,22 +5150,12 @@ msgstr ""
 "%u sayfa ise tamamen boş.\n"
 "%s."
 
-#: commands/vacuumlazy.c:513
-#, c-format
-msgid "relation \"%s.%s\" contains more than \"max_fsm_pages\" pages with useful free space"
-msgstr "\"%s.%s\" nesnesi \"max_fsm_pages\" paramteresinde belirtilmiş sayısının üzerinde kullanılabilecek boş alan içeriyor"
-
-#: commands/vacuumlazy.c:516
-#, fuzzy
-msgid "Consider using VACUUM FULL on this relation or increasing the configuration parameter \"max_fsm_pages\"."
-msgstr "Bu nesneyi yoğunlaştırın veya \"max_fsm_pages\" yapılandırma parametresini arttırmaya deneyeyin."
-
-#: commands/vacuumlazy.c:563
+#: commands/vacuumlazy.c:566
 #, c-format
 msgid "\"%s\": removed %d row versions in %d pages"
 msgstr "\"%1$s\": %3$d sayfada %2$d satır sürümü kaldırılmış"
 
-#: commands/vacuumlazy.c:655
+#: commands/vacuumlazy.c:658
 #, c-format
 msgid "scanned index \"%s\" to remove %d row versions"
 msgstr "\"%s\" indeksi tarandı, %d satır sürümü kaldırıldı"
@@ -5262,27 +5238,27 @@ msgstr "%s ile %s arasında conversion desteklenmemektedir"
 msgid "permission denied to set role \"%s\""
 msgstr "\"%s\" rolü ayarlanması engellendi"
 
-#: executor/execMain.c:862
+#: executor/execMain.c:850
 #, c-format
 msgid "cannot change sequence \"%s\""
 msgstr "\"%s\" sequence değiştirilemez"
 
-#: executor/execMain.c:868
+#: executor/execMain.c:856
 #, c-format
 msgid "cannot change TOAST relation \"%s\""
 msgstr "\"%s\" TOAST objesi değiştirilemez"
 
-#: executor/execMain.c:874
+#: executor/execMain.c:862
 #, c-format
 msgid "cannot change view \"%s\""
 msgstr "\"%s\" view değiştirilemiyor"
 
-#: executor/execMain.c:1818
+#: executor/execMain.c:1816
 #, c-format
 msgid "null value in column \"%s\" violates not-null constraint"
 msgstr "\"%s\" sütununda null değeri not-null kısıtlamasını ihlal ediyor"
 
-#: executor/execMain.c:1830
+#: executor/execMain.c:1828
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
 msgstr "\"%s\" tablosuna girilen yeni satır \"%s\" check kısıtlamasını ihlal ediyor"
@@ -5308,33 +5284,32 @@ msgstr "atamada array subscript null olamaz"
 #: executor/execQual.c:3369
 #, c-format
 msgid "attribute %d has wrong type"
-msgstr ""
+msgstr "attribute %d yalnış tipe sahiptir"
 
 #: executor/execQual.c:514
 #: executor/execQual.c:3370
-#, fuzzy, c-format
+#, c-format
 msgid "Table has type %s, but query expects %s."
-msgstr "Sorgu, %2$d adresine döndürme tipi %1$s iken,  %3$s bekliyor."
+msgstr "Tablonun tipi %s iken, sorgu %s beklemektedir."
 
 #: executor/execQual.c:563
 #: executor/execQual.c:577
 #: executor/execQual.c:587
-#, fuzzy
 msgid "table row type and query-specified row type do not match"
-msgstr "sorgu-tanımlı sonuç satırı ve gerçek sonuç satırı uyuşmamaktadır"
+msgstr "sorgu-tanımlı sonuç satırı ve tablonun sonuç satırı uyuşmamaktadır"
 
 #: executor/execQual.c:564
-#, fuzzy, c-format
+#, c-format
 msgid "Table row contains %d attributes, but query expects %d."
-msgstr "Sorgu, döndürülen satırın %2$d sütundan oluşmasını beklerken, %1$d sürun geldi."
+msgstr "Sorgu, döndürülen satırın %2$d sütundan oluşmasını beklerken, %1$d sütun geldi."
 
 #: executor/execQual.c:578
-#, fuzzy, c-format
+#, c-format
 msgid "Table has type %s at ordinal position %d, but query expects %s."
 msgstr "Sorgu, %2$d adresine döndürme tipi %1$s iken,  %3$s bekliyor."
 
 #: executor/execQual.c:588
-#: executor/nodeFunctionscan.c:379
+#: executor/nodeFunctionscan.c:378
 #, c-format
 msgid "Physical storage mismatch on dropped attribute at ordinal position %d."
 msgstr "%d adresinde düşürülmüş sütunda fiziksel saklam uyuşmazlığı."
@@ -5358,9 +5333,9 @@ msgstr "fonksiyon ve operator en çok bir tane set parametresi alabiliyorlar"
 #: executor/execQual.c:1100
 #: executor/execQual.c:1143
 #: executor/execQual.c:1435
-#: executor/execQual.c:4399
-#: executor/functions.c:661
-#: executor/functions.c:700
+#: executor/execQual.c:4362
+#: executor/functions.c:669
+#: executor/functions.c:708
 #: utils/fmgr/funcapi.c:59
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "set değerini kabul etmediği ortamda set değeri alan fonksiyon çağırılmış"
@@ -5420,98 +5395,97 @@ msgstr "%s domaine kaydedilecek değer \"%s\" check kısıtlamasını destekleme
 #: executor/execQual.c:3617
 #: optimizer/util/clauses.c:486
 #: parser/parse_agg.c:73
-#, fuzzy
 msgid "aggregate function calls cannot be nested"
 msgstr "aggregate fonksiyon çağırmaları içiçe olamaz"
 
-#: executor/execQual.c:3888
+#: executor/execQual.c:3877
 #, c-format
 msgid "ROW() column has type %s instead of type %s"
 msgstr "ROW() sütünü %2$s yerine %1$s tipine sahip"
 
-#: executor/execQual.c:4021
+#: executor/execQual.c:4010
 #: utils/adt/arrayfuncs.c:3232
 #, c-format
 msgid "could not identify a comparison function for type %s"
 msgstr "%s tipi için karşılaştırma fonksiyonu bulunamadı"
 
 #. translator: %s is a SQL statement name
-#: executor/functions.c:117
+#: executor/functions.c:122
 #, c-format
 msgid "%s is not allowed in a SQL function"
 msgstr "%s, bir SQL fonksiyonunda yer alamaz"
 
 #. translator: %s is a SQL statement name
-#: executor/functions.c:124
-#: executor/spi.c:1438
+#: executor/functions.c:129
+#: executor/spi.c:1426
 #, c-format
 msgid "%s is not allowed in a non-volatile function"
 msgstr "non-volatile fonksiyonda %s kullanılamaz"
 
-#: executor/functions.c:187
+#: executor/functions.c:189
 #, c-format
 msgid "could not determine actual result type for function declared to return type %s"
 msgstr "geri döndürme tipi %s olarak tanımlanmış fonksiyonun gerçek döndürme tipi belirlenememektedir"
 
-#: executor/functions.c:223
+#: executor/functions.c:225
 #, c-format
 msgid "could not determine actual type of argument declared %s"
 msgstr "tipi %s olarak tanımlanmış fonksiyonun parametresinin gerçek döndürme tipi belirlenememektedir"
 
-#: executor/functions.c:784
+#: executor/functions.c:792
 #, c-format
 msgid "SQL function \"%s\" statement %d"
 msgstr "\"%s\" SQL fonksiyonu, %d komutu"
 
-#: executor/functions.c:803
+#: executor/functions.c:811
 #, c-format
 msgid "SQL function \"%s\" during startup"
 msgstr "başlangıç sırasında \"%s\" SQL fonksiyonu"
 
-#: executor/functions.c:878
-#: executor/functions.c:901
-#: executor/functions.c:911
-#: executor/functions.c:933
+#: executor/functions.c:886
+#: executor/functions.c:909
+#: executor/functions.c:919
 #: executor/functions.c:941
-#: executor/functions.c:1006
-#: executor/functions.c:1018
-#: executor/functions.c:1038
+#: executor/functions.c:949
+#: executor/functions.c:1014
+#: executor/functions.c:1026
+#: executor/functions.c:1046
 #, c-format
 msgid "return type mismatch in function declared to return %s"
 msgstr "%s dönüşlü bildirilmiş işlevde return deyimin tipi uyumsuz"
 
-#: executor/functions.c:880
-#: executor/functions.c:913
+#: executor/functions.c:888
+#: executor/functions.c:921
 msgid "Function's final statement must be a SELECT."
 msgstr "Fonksiyonun son komutu SELECT olmalıdır."
 
-#: executor/functions.c:903
+#: executor/functions.c:911
 msgid "Function's final statement must not be a SELECT."
 msgstr "Fonksiyonun son komutu SELECT olmamalıdır."
 
-#: executor/functions.c:935
+#: executor/functions.c:943
 msgid "Final SELECT must return exactly one column."
 msgstr "Son SELECT tam bir satır döndürmelidir."
 
-#: executor/functions.c:943
+#: executor/functions.c:951
 #, c-format
 msgid "Actual return type is %s."
 msgstr "Asıl döndürme tipi %s."
 
-#: executor/functions.c:1008
+#: executor/functions.c:1016
 msgid "Final SELECT returns too many columns."
 msgstr "Son SELECT fazla satır döndürüyor."
 
-#: executor/functions.c:1020
+#: executor/functions.c:1028
 #, c-format
 msgid "Final SELECT returns %s instead of %s at column %d."
 msgstr "Son SELECT %3$d sütununda %2$s yerine %1$s döndürüyor."
 
-#: executor/functions.c:1040
+#: executor/functions.c:1048
 msgid "Final SELECT returns too few columns."
 msgstr "Son SELECT az satır döndürüyor."
 
-#: executor/functions.c:1062
+#: executor/functions.c:1070
 #, c-format
 msgid "return type %s is not supported for SQL functions"
 msgstr "SQL fonksiyonların içinde %s dönüş tipi desteklenmemektedir"
@@ -5525,18 +5499,18 @@ msgstr "%u aggregate fonksiyonu uyumlu giriş ve geçiş tiplerine sahip olmalı
 msgid "DISTINCT is supported only for single-argument aggregates"
 msgstr "DISTINCT sace tek arümanlı aggregatelerde desteklenmektedir"
 
-#: executor/nodeFunctionscan.c:354
-#: executor/nodeFunctionscan.c:368
-#: executor/nodeFunctionscan.c:378
+#: executor/nodeFunctionscan.c:353
+#: executor/nodeFunctionscan.c:367
+#: executor/nodeFunctionscan.c:377
 msgid "function return row and query-specified return row do not match"
 msgstr "sorgu-tanımlı sonuç satırı ve gerçek sonuç satırı uyuşmamaktadır"
 
-#: executor/nodeFunctionscan.c:355
+#: executor/nodeFunctionscan.c:354
 #, c-format
 msgid "Returned row contains %d attributes, but query expects %d."
 msgstr "Sorgu, döndürülen satırın %2$d sütundan oluşmasını beklerken, %1$d sürun geldi."
 
-#: executor/nodeFunctionscan.c:369
+#: executor/nodeFunctionscan.c:368
 #, c-format
 msgid "Returned type %s at ordinal position %d, but query expects %s."
 msgstr "Sorgu, %2$d adresine döndürme tipi %1$s iken,  %3$s bekliyor."
@@ -5568,9 +5542,9 @@ msgstr "RIGHT JOIN ancak merge-join işlemine uygun şartlarında desteklenmekte
 msgid "FULL JOIN is only supported with merge-joinable join conditions"
 msgstr "FULL JOIN ancak merge-join işlemine uygun şartlarında desteklenmektedir"
 
-#: executor/nodeSubplan.c:291
-#: executor/nodeSubplan.c:332
-#: executor/nodeSubplan.c:972
+#: executor/nodeSubplan.c:290
+#: executor/nodeSubplan.c:329
+#: executor/nodeSubplan.c:943
 msgid "more than one row returned by a subquery used as an expression"
 msgstr "ifade içinde kullanılan alt sorgusu birden fazla satır döndürüldü"
 
@@ -5587,21 +5561,17 @@ msgstr "Atlanan \"SPI_finish\" çağırılarına bakın."
 msgid "subtransaction left non-empty SPI stack"
 msgstr "subtransaction left non-empty SPI stack"
 
-#: executor/spi.c:854
+#: executor/spi.c:853
 msgid "cannot open multi-query plan as cursor"
 msgstr "multi-query plan imleç olarak açılmıyor"
 
-#: executor/spi.c:859
-msgid "cannot open empty query as cursor"
-msgstr "boş bir sorgu imleç olarak açılamıyor"
-
 #. translator: %s is name of a SQL command, eg INSERT
-#: executor/spi.c:863
+#: executor/spi.c:858
 #, c-format
 msgid "cannot open %s query as cursor"
 msgstr "%s sorgusu sorgusunu imleç olarak açılmıyor"
 
-#: executor/spi.c:1657
+#: executor/spi.c:1643
 #, c-format
 msgid "SQL statement \"%s\""
 msgstr "SQL deyimi: \"%s\""
@@ -6551,10 +6521,10 @@ msgstr "inheritance sorgulamalar için SELECT FOR UPDATE/SHARE desteklenmemekted
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to the nullable side of an outer join"
 msgstr "SELECT FOR UPDATE/SHARE outer join'in null olabilecek tarafına uygulanamaz"
 
-#: optimizer/plan/planner.c:718
-#: parser/analyze.c:2442
-#: parser/analyze.c:2610
-#: parser/analyze.c:3362
+#: optimizer/plan/planner.c:753
+#: parser/analyze.c:2431
+#: parser/analyze.c:2599
+#: parser/analyze.c:3351
 msgid "SELECT FOR UPDATE/SHARE is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "UNION/INTERSECT/EXCEPT içeren sorguda SELECT FOR UPDATE/SHARE kullanılamaz"
 
@@ -6573,24 +6543,21 @@ msgid "JOIN/ON clause refers to \"%s\", which is not part of JOIN"
 msgstr "JOIN/ON ifadesi, JOIN parçası olmayan \"%s\" öğesine referans etmektedir"
 
 #: parser/parse_clause.c:432
-#: gram.y:6203
+#: gram.y:6216
 msgid "subquery in FROM must have an alias"
 msgstr "FROM öğesindeki subquery bir aliası almalıdır"
 
 #: parser/parse_clause.c:455
-#, fuzzy
 msgid "subquery in FROM cannot have SELECT INTO"
 msgstr "FROM ifadesindeki subquery içerisinde SELECT INTO kullanılamaz"
 
 #: parser/parse_clause.c:475
-#, fuzzy
 msgid "subquery in FROM cannot refer to other relations of same query level"
-msgstr "FROM öğesinde subquery ifadesi aynı seviyedeki diğer tabloya erişilemez"
+msgstr "FROM öğesinde subquery ifadesi aynı seviyedeki diğer tabloya erişemez"
 
 #: parser/parse_clause.c:524
-#, fuzzy
 msgid "function expression in FROM cannot refer to other relations of same query level"
-msgstr "FROM öğesinde fonksiyon ifadesi aynı seviyedeki diğer tabloya erişilemez"
+msgstr "FROM öğesinde fonksiyon ifadesi aynı seviyedeki diğer tabloya erişemez"
 
 #: parser/parse_clause.c:536
 msgid "cannot use aggregate function in function expression in FROM"
@@ -6671,14 +6638,13 @@ msgid "SELECT DISTINCT ON expressions must match initial ORDER BY expressions"
 msgstr "SELECT DISTINCT ON ifadesi, ORDER BY ifadelerine uymak zorundadır"
 
 #: parser/parse_clause.c:1683
-#, fuzzy, c-format
+#, c-format
 msgid "operator %s is not a valid ordering operator"
-msgstr "\"%s\" geçerli bir operatör adı değildir"
+msgstr "%s geçerli bir sıralama operatör adı değildir"
 
 #: parser/parse_clause.c:1685
-#, fuzzy
 msgid "Ordering operators must be \"<\" or \">\" members of btree operator families."
-msgstr "Satır karşılaştırma operatörleri btree sınıf operatörleri ile ilişilmelidir"
+msgstr "Ordering operators must be \"<\" or \">\" members of btree operator families."
 
 #: parser/analyze.c:429
 #, c-format
@@ -6694,27 +6660,27 @@ msgid "INSERT ... SELECT cannot specify INTO"
 msgstr "INSERT ... SELECT ifadesinde INTO öğesi kullanılamaz"
 
 #: parser/analyze.c:737
-#: parser/analyze.c:2231
+#: parser/analyze.c:2228
 msgid "VALUES lists must all be the same length"
 msgstr "VALUES listesi eşit uzunlukta olmalıdır"
 
 #: parser/analyze.c:756
-#: parser/analyze.c:2334
+#: parser/analyze.c:2328
 msgid "VALUES must not contain table references"
 msgstr "VALUES, tablo başvuruları içeremez"
 
 #: parser/analyze.c:768
-#: parser/analyze.c:2346
+#: parser/analyze.c:2340
 msgid "VALUES must not contain OLD or NEW references"
 msgstr "VALUES kısmında OLD veya NEW başvurular bulunmamalıdır"
 
 #: parser/analyze.c:769
-#: parser/analyze.c:2347
+#: parser/analyze.c:2341
 msgid "Use SELECT ... UNION ALL ... instead."
 msgstr "Onun yerine SELECT ... UNION ALL ... kullanın"
 
 #: parser/analyze.c:863
-#: parser/analyze.c:2357
+#: parser/analyze.c:2351
 msgid "cannot use aggregate function in VALUES"
 msgstr "VALUES kısmında aggregate fonksiyonları kullanılamaz"
 
@@ -6795,162 +6761,162 @@ msgstr "ON INSERT rule OLD tanımını kullanamaz"
 msgid "ON DELETE rule cannot use NEW"
 msgstr "ON DELETE rule NEW tanımını kullanamaz"
 
-#: parser/analyze.c:2244
+#: parser/analyze.c:2241
 msgid "DEFAULT can only appear in a VALUES list within INSERT"
 msgstr "DEFAUL sadece INSERT içinde yer alan VALUES listesinde yer alabilir"
 
-#: parser/analyze.c:2312
-#: parser/analyze.c:3483
+#: parser/analyze.c:2309
+#: parser/analyze.c:3472
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to VALUES"
 msgstr "SELECT FOR UPDATE/SHARE ifadesi VALUES kısmına uygulanamaz"
 
-#: parser/analyze.c:2550
+#: parser/analyze.c:2539
 msgid "invalid UNION/INTERSECT/EXCEPT ORDER BY clause"
-msgstr ""
+msgstr "geçersiz UNION/INTERSECT/EXCEPT ORDER BY ifadesi"
 
-#: parser/analyze.c:2551
+#: parser/analyze.c:2540
 msgid "Only result column names can be used, not expressions or functions."
-msgstr ""
+msgstr "Sadece sonuç sütun aldarı kullanılabilir, ifade veya fonksiyon kullanılamaz."
 
-#: parser/analyze.c:2552
+#: parser/analyze.c:2541
 msgid "Add the expression/function to every SELECT, or move the UNION into a FROM clause."
-msgstr ""
+msgstr "Bu ifade/fonksiyonu ger SELECT içine yerleştirin ya da FROM ifadesine UNION ekleyin."
 
-#: parser/analyze.c:2605
+#: parser/analyze.c:2594
 msgid "INTO is only allowed on first SELECT of UNION/INTERSECT/EXCEPT"
 msgstr "INTO, sadece UNION/INTERSECT/EXCEPT işleminin ilk SELECT ifadesinde kullanılabilir"
 
-#: parser/analyze.c:2666
+#: parser/analyze.c:2655
 msgid "UNION/INTERSECT/EXCEPT member statement cannot refer to other relations of same query level"
 msgstr "UNION/INTERSECT/EXCEPT öğesinin üye somutu aynı seviyedeki diğer tabloya erişilemez"
 
-#: parser/analyze.c:2724
+#: parser/analyze.c:2713
 #, c-format
 msgid "each %s query must have the same number of columns"
 msgstr "her %s sorgusu ayını sütun sayısına sahip olmalıdır"
 
-#: parser/analyze.c:2838
+#: parser/analyze.c:2827
 msgid "CREATE TABLE AS specifies too many column names"
 msgstr "CREATE TABLE AS işleminde belirtilen sütun sayısı çok fazla"
 
-#: parser/analyze.c:2887
+#: parser/analyze.c:2876
 msgid "cannot use aggregate function in UPDATE"
 msgstr "UPDATE parametresinde aggregate fonksiyon kullanılamaz"
 
-#: parser/analyze.c:2984
+#: parser/analyze.c:2973
 msgid "cannot use aggregate function in RETURNING"
 msgstr "RETURNING parametresinde aggregate fonksiyon kullanılamaz"
 
-#: parser/analyze.c:2990
+#: parser/analyze.c:2979
 msgid "RETURNING cannot contain references to other relations"
 msgstr "RETURNING, başka nesnelere başvuru içeremez"
 
-#: parser/analyze.c:3193
+#: parser/analyze.c:3182
 msgid "cannot specify both SCROLL and NO SCROLL"
 msgstr "hem SCROLL hem de NO SCROLL aynı yerde kullanılamaz"
 
-#: parser/analyze.c:3275
-#: parser/analyze.c:3842
-#: tcop/postgres.c:1190
+#: parser/analyze.c:3264
+#: parser/analyze.c:3831
+#: tcop/postgres.c:1192
 #, c-format
 msgid "could not determine data type of parameter $%d"
 msgstr "$%d parametrenin veri tipini belirlenemiyor"
 
-#: parser/analyze.c:3308
+#: parser/analyze.c:3297
 #, c-format
 msgid "wrong number of parameters for prepared statement \"%s\""
 msgstr "\"%s\" hazırlanmış sorgusunda parametre sayısı fazla"
 
-#: parser/analyze.c:3310
+#: parser/analyze.c:3299
 #, c-format
 msgid "Expected %d parameters but got %d."
 msgstr "%d beklenirken %d alındı."
 
-#: parser/analyze.c:3325
+#: parser/analyze.c:3314
 msgid "cannot use subquery in EXECUTE parameter"
 msgstr "EXECUTE parametresinde subquery kullanılamaz"
 
-#: parser/analyze.c:3329
+#: parser/analyze.c:3318
 msgid "cannot use aggregate function in EXECUTE parameter"
 msgstr "EXECUTE parametresinde aggregate fonksiyon kullanılamaz"
 
-#: parser/analyze.c:3341
+#: parser/analyze.c:3330
 #, c-format
 msgid "parameter $%d of type %s cannot be coerced to the expected type %s"
 msgstr "%2$s tipinde $%1$d parametresi %3$s beklenen tipine zorla dönüştürülemez"
 
-#: parser/analyze.c:3366
+#: parser/analyze.c:3355
 msgid "SELECT FOR UPDATE/SHARE is not allowed with DISTINCT clause"
 msgstr "SELECT FOR UPDATE/SHARE ifadesinde DISTINCT kullanılamaz"
 
-#: parser/analyze.c:3370
+#: parser/analyze.c:3359
 msgid "SELECT FOR UPDATE/SHARE is not allowed with GROUP BY clause"
 msgstr "SELECT FOR UPDATE/SHARE ifadesinde GROUP BY kullanılamaz"
 
-#: parser/analyze.c:3374
+#: parser/analyze.c:3363
 msgid "SELECT FOR UPDATE/SHARE is not allowed with HAVING clause"
 msgstr "SELECT FOR UPDATE/SHARE ifadesinde HAVING kullanılamaz"
 
-#: parser/analyze.c:3378
+#: parser/analyze.c:3367
 msgid "SELECT FOR UPDATE/SHARE is not allowed with aggregate functions"
 msgstr "aggregate fonskiyonlarinda SELECT FOR UPDATE/SHARE kullanılamaz"
 
-#: parser/analyze.c:3468
+#: parser/analyze.c:3457
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a join"
 msgstr "SELECT FOR UPDATE/SHARE joine uygulanamaz"
 
-#: parser/analyze.c:3473
+#: parser/analyze.c:3462
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to NEW or OLD"
 msgstr "SELECT FOR UPDATE/SHARE, NEW veya OLD tanımlarına uygulanamaz"
 
-#: parser/analyze.c:3478
+#: parser/analyze.c:3467
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a function"
 msgstr "SELECT FOR UPDATE/SHARE, bir fonksiyonuna uygulanamaz"
 
-#: parser/analyze.c:3496
+#: parser/analyze.c:3485
 #, c-format
 msgid "relation \"%s\" in FOR UPDATE/SHARE clause not found in FROM clause"
 msgstr "FOR UPDATE/SHARE ifadesinde belirtilen \"%s\" tablosu FROM ifadesinde bulunamadı"
 
-#: parser/analyze.c:3576
+#: parser/analyze.c:3565
 msgid "misplaced DEFERRABLE clause"
 msgstr "DEFERRABLE ifadesi burada kullanılamaz"
 
-#: parser/analyze.c:3580
-#: parser/analyze.c:3593
+#: parser/analyze.c:3569
+#: parser/analyze.c:3582
 msgid "multiple DEFERRABLE/NOT DEFERRABLE clauses not allowed"
 msgstr "birden fazla DEFERRABLE/NOT DEFERRABLE tanımına izin verilmez"
 
-#: parser/analyze.c:3589
+#: parser/analyze.c:3578
 msgid "misplaced NOT DEFERRABLE clause"
 msgstr "NOT DEFERRABLE yanlış yerde kullanılmış"
 
-#: parser/analyze.c:3600
-#: parser/analyze.c:3623
-#: gram.y:2674
-#: gram.y:2689
+#: parser/analyze.c:3589
+#: parser/analyze.c:3612
+#: gram.y:2683
+#: gram.y:2698
 msgid "constraint declared INITIALLY DEFERRED must be DEFERRABLE"
 msgstr "INITIALLY DEFERRED olarak tanımlanan kısıtlayıcı DEFERRABLE özelliğine sahip olmalıdır"
 
-#: parser/analyze.c:3607
+#: parser/analyze.c:3596
 msgid "misplaced INITIALLY DEFERRED clause"
 msgstr "INITIALLY DEFERRED yanlış yerde kullanılmış"
 
-#: parser/analyze.c:3611
-#: parser/analyze.c:3634
+#: parser/analyze.c:3600
+#: parser/analyze.c:3623
 msgid "multiple INITIALLY IMMEDIATE/DEFERRED clauses not allowed"
 msgstr "birden fazla INITIALLY IMMEDIATE/DEFERRED kullanılamaz"
 
-#: parser/analyze.c:3630
+#: parser/analyze.c:3619
 msgid "misplaced INITIALLY IMMEDIATE clause"
 msgstr "INITIALLY IMMEDIATE yanlış yerde kullanılmış"
 
-#: parser/analyze.c:3683
+#: parser/analyze.c:3672
 #, c-format
 msgid "CREATE specifies a schema (%s) different from the one being created (%s)"
 msgstr "CREATE işleminin belirttiği şema (%s) yaratılacak (%s) olanından farklı"
 
-#: parser/analyze.c:3837
+#: parser/analyze.c:3826
 #: parser/parse_coerce.c:243
 #: parser/parse_expr.c:553
 #: parser/parse_expr.c:559
@@ -7081,7 +7047,7 @@ msgstr "$%d parametresi için geçersiz tip bulundu"
 #: parser/parse_coerce.c:758
 #: parser/parse_coerce.c:774
 #: parser/parse_coerce.c:788
-#: parser/parse_expr.c:2086
+#: parser/parse_expr.c:2081
 #, c-format
 msgid "cannot cast type %s to %s"
 msgstr "%s tipi %s tipine dökülemiyor"
@@ -7159,7 +7125,7 @@ msgstr "giriş, \"unknown\" tipinde olduğu için anyarray/anyelement tipi belir
 #: parser/parse_coerce.c:1333
 #: parser/parse_expr.c:1282
 #: parser/parse_expr.c:1748
-#: parser/parse_expr.c:1784
+#: parser/parse_expr.c:1779
 #: parser/parse_oper.c:920
 #, c-format
 msgid "could not find array type for data type %s"
@@ -7202,39 +7168,39 @@ msgstr "isimsiz XML öğesi bir sütun referansı olmalıdır"
 msgid "XML attribute name \"%s\" appears more than once"
 msgstr "\"%s\" XML attrıbute adı birden fazla kez belirtilmiştir"
 
-#: parser/parse_expr.c:2127
-#: parser/parse_expr.c:2325
+#: parser/parse_expr.c:2122
+#: parser/parse_expr.c:2320
 msgid "unequal number of entries in row expressions"
 msgstr "satır ifadelerınde farklı öğe sayısı"
 
-#: parser/parse_expr.c:2137
+#: parser/parse_expr.c:2132
 msgid "cannot compare rows of zero length"
 msgstr "sıfır uzunluklu satırlar karşılaştırılamaz"
 
-#: parser/parse_expr.c:2162
+#: parser/parse_expr.c:2157
 #, c-format
 msgid "row comparison operator must yield type boolean, not type %s"
 msgstr "satır karşılaştırma operatörü %s tipini değil, boolean tipini döndürmelidir"
 
-#: parser/parse_expr.c:2169
+#: parser/parse_expr.c:2164
 msgid "row comparison operator must not return a set"
 msgstr "satır karşılaştırma operatörü set döndürmemelidir"
 
-#: parser/parse_expr.c:2228
-#: parser/parse_expr.c:2272
+#: parser/parse_expr.c:2223
+#: parser/parse_expr.c:2267
 #, c-format
 msgid "could not determine interpretation of row comparison operator %s"
 msgstr "%s satır karşılaştırma operatörünün youmlaması tespit edilemedi"
 
-#: parser/parse_expr.c:2230
+#: parser/parse_expr.c:2225
 msgid "Row comparison operators must be associated with btree operator families."
 msgstr "Satır karşılaştırma operatörleri btree sınıf operatörleri ile ilişilmelidir"
 
-#: parser/parse_expr.c:2274
+#: parser/parse_expr.c:2269
 msgid "There are multiple equally-plausible candidates."
 msgstr "Birden fazla uygun aday vardır."
 
-#: parser/parse_expr.c:2364
+#: parser/parse_expr.c:2359
 msgid "IS DISTINCT FROM requires = operator to yield boolean"
 msgstr "boolean değerini almak için IS DISTINCT FROM, = işlemini kullanmalıdır"
 
@@ -7402,7 +7368,7 @@ msgstr "\"%s\" tipi bir shelldir"
 #: parser/parse_type.c:287
 #, c-format
 msgid "type modifier is not allowed for type \"%s\""
-msgstr ""
+msgstr "\"%s\" veri tipi için tip niteliyicisi kullanılamaz"
 
 #: parser/parse_type.c:306
 msgid "type modifiers must be integer constants"
@@ -7542,12 +7508,12 @@ msgstr ""
 "Escape için standart sözdizimini kullanın, örneğin, E'\\r\\n"
 "'."
 
-#: gram.y:1194
-#: gram.y:1206
+#: gram.y:1196
+#: gram.y:1208
 msgid "time zone interval must be HOUR or HOUR TO MINUTE"
 msgstr "zaman dilimi aralığı  HOUR veya HOUR TO MINUTE olmalıdır"
 
-#: gram.y:2177
+#: gram.y:2179
 #: utils/adt/ri_triggers.c:365
 #: utils/adt/ri_triggers.c:425
 #: utils/adt/ri_triggers.c:588
@@ -7567,99 +7533,99 @@ msgstr "zaman dilimi aralığı  HOUR veya HOUR TO MINUTE olmalıdır"
 msgid "MATCH PARTIAL not yet implemented"
 msgstr "MATCH PARTIAL implemente edilmemiştir"
 
-#: gram.y:2270
+#: gram.y:2271
 msgid "CREATE TABLE AS cannot specify INTO"
 msgstr "CREATE TABLE AS işleminde INTO kullanılamaz"
 
-#: gram.y:2752
+#: gram.y:2761
 msgid "CREATE ASSERTION is not yet implemented"
 msgstr "CREATE ASSERTION implemente edilmemiştir"
 
-#: gram.y:2768
+#: gram.y:2777
 msgid "DROP ASSERTION is not yet implemented"
 msgstr "DROP ASSERTION implemente edilmemiştir"
 
-#: gram.y:4226
+#: gram.y:4235
 #: utils/adt/regproc.c:634
 msgid "missing argument"
 msgstr "argüman eksik"
 
-#: gram.y:4227
+#: gram.y:4236
 #: utils/adt/regproc.c:635
 msgid "Use NONE to denote the missing argument of a unary operator."
 msgstr "Unary operator'un bir argümanı eksik olduğunu göstermek için NONE kullanın"
 
-#: gram.y:4982
-#: gram.y:4988
-#: gram.y:4994
+#: gram.y:4991
+#: gram.y:4997
+#: gram.y:5003
 msgid "WITH CHECK OPTION is not implemented"
 msgstr "WITH CHECK OPTION gerçekleştirilmemiştir"
 
-#: gram.y:5477
+#: gram.y:5482
 msgid "column name list not allowed in CREATE TABLE / AS EXECUTE"
 msgstr "CREATE TABLE / AS EXECUTE işleminde sütun isim listesi verilmez"
 
-#: gram.y:5678
+#: gram.y:5683
 msgid "number of columns does not match number of values"
 msgstr "değer sayısı sayısı ile kolon satısı eşleşmiyor"
 
-#: gram.y:6013
+#: gram.y:6026
 msgid "LIMIT #,# syntax is not supported"
 msgstr "LIMIT #,# sözdizimi desteklenmemektedir"
 
-#: gram.y:6014
+#: gram.y:6027
 msgid "Use separate LIMIT and OFFSET clauses."
 msgstr "Ayrı LIMIT ve OFFSET ifadeleri kullanın."
 
-#: gram.y:6198
+#: gram.y:6211
 msgid "VALUES in FROM must have an alias"
 msgstr "FROM öğesindeki VALUES'ler bir alias almalıdır"
 
-#: gram.y:6199
+#: gram.y:6212
 msgid "For example, FROM (VALUES ...) [AS] foo."
 msgstr "Örneğin, FROM (VALUES ...) [AS] birşey."
 
-#: gram.y:6204
+#: gram.y:6217
 msgid "For example, FROM (SELECT ...) [AS] foo."
 msgstr "Örneğin, FROM (SELECT ...) [AS] birşey."
 
-#: gram.y:6637
+#: gram.y:6650
 msgid "precision for type float must be at least 1 bit"
 msgstr "float veri tipinin kesinliği en az 1 bit olmalıdır"
 
-#: gram.y:6645
+#: gram.y:6658
 msgid "precision for type float must be less than 54 bits"
 msgstr "float veri tipinin kesinliği ne çok 54 bit olabilir"
 
-#: gram.y:7282
+#: gram.y:7295
 msgid "UNIQUE predicate is not yet implemented"
 msgstr "UNIQUE predicate implemente edilmemiştir"
 
-#: gram.y:9054
+#: gram.y:9067
 msgid "OLD used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda OLD kullanıldı"
 
-#: gram.y:9063
+#: gram.y:9076
 msgid "NEW used in query that is not in a rule"
 msgstr "rule olmayan sorgusunda NEW kullanıldı"
 
-#: gram.y:9214
+#: gram.y:9227
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sol tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:9220
+#: gram.y:9233
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "OVERLAPS ifadesinin sağ tarafında yanlış parametre sayısı kullanılmış"
 
-#: gram.y:9320
+#: gram.y:9333
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "birden çok ORDER BY ifadesi kullanılamaz"
 
-#: gram.y:9330
+#: gram.y:9343
 msgid "multiple OFFSET clauses not allowed"
 msgstr "birden fazla OFFSET ifadesi desteklenmemektedir"
 
-#: gram.y:9338
+#: gram.y:9351
 msgid "multiple LIMIT clauses not allowed"
 msgstr "birden çok LIMIT ifadesi kullanılamaz"
 
@@ -8096,7 +8062,7 @@ msgstr "%s (PID %d) 0x%X exception tarafından sonlandırıldı"
 
 #: postmaster/postmaster.c:2437
 msgid "See C include file \"ntstatus.h\" for a description of the hex value."
-msgstr ""
+msgstr "Bu hex değerin tanımlaması için \"ntstatus.h\" dosyasına bakın."
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
@@ -8673,7 +8639,7 @@ msgstr "dosya belirteçleri kullanımda: %m; serbest bırakın ve yeniden kullan
 #: storage/file/fd.c:1021
 #, c-format
 msgid "temp file: path \"%s\" size %lu"
-msgstr ""
+msgstr "geçici dosya: yol \"%s\" boyut %lu"
 
 #: storage/file/fd.c:1498
 #: utils/adt/genfile.c:244
@@ -8833,8 +8799,8 @@ msgstr "Hazırlanmış transaction'un lock'ları yeniden atanması için yeterli
 
 #: storage/page/bufpage.c:135
 #: storage/page/bufpage.c:333
-#: storage/page/bufpage.c:471
-#: storage/page/bufpage.c:599
+#: storage/page/bufpage.c:491
+#: storage/page/bufpage.c:619
 #, c-format
 msgid "corrupted page pointers: lower = %u, upper = %u, special = %u"
 msgstr "bozuk sayfa göstergisi: lower = %u, upper = %u, special = %u"
@@ -8845,13 +8811,13 @@ msgid "corrupted item pointer: %u"
 msgstr "nesne imleyici bozuk: %u"
 
 #: storage/page/bufpage.c:391
-#: storage/page/bufpage.c:650
+#: storage/page/bufpage.c:670
 #, c-format
 msgid "corrupted item lengths: total %u, available space %u"
 msgstr "bozuk öğe uzunluğu: toplam %u, boş alan %u"
 
-#: storage/page/bufpage.c:489
-#: storage/page/bufpage.c:623
+#: storage/page/bufpage.c:509
+#: storage/page/bufpage.c:643
 #, c-format
 msgid "corrupted item pointer: offset = %u, size = %u"
 msgstr "bozuk öğe göstergisi: offset = %u, size = %u"
@@ -9029,7 +8995,7 @@ msgstr "\"%s\" bir tip değildir"
 msgid "Use DROP TYPE to remove a type."
 msgstr "Bir tipi kaldırmak için DROP TYPE kullanın."
 
-#: tcop/utility.c:1060
+#: tcop/utility.c:1065
 msgid "must be superuser to do CHECKPOINT"
 msgstr "CHECKPOINT yapmak için superuser olmalısınız"
 
@@ -9041,12 +9007,12 @@ msgid "invalid argument size %d in function call message"
 msgstr "fonksiyon çağırma mesajında geçersiz argüman boyutu %d"
 
 #: tcop/fastpath.c:304
-#: tcop/postgres.c:871
-#: tcop/postgres.c:1162
-#: tcop/postgres.c:1400
-#: tcop/postgres.c:1787
-#: tcop/postgres.c:2119
-#: tcop/postgres.c:2189
+#: tcop/postgres.c:873
+#: tcop/postgres.c:1164
+#: tcop/postgres.c:1408
+#: tcop/postgres.c:1793
+#: tcop/postgres.c:2100
+#: tcop/postgres.c:2170
 msgid "current transaction is aborted, commands ignored until end of transaction block"
 msgstr "geçerli transaction durduruldu, transaction blokunun sonua kadar komutlar yok sayılacak"
 
@@ -9056,10 +9022,10 @@ msgid "fastpath function call: \"%s\" (OID %u)"
 msgstr "fastpath function çağırımı: \"%s\" OID %u"
 
 #: tcop/fastpath.c:405
-#: tcop/postgres.c:1022
-#: tcop/postgres.c:1276
-#: tcop/postgres.c:1632
-#: tcop/postgres.c:1843
+#: tcop/postgres.c:1023
+#: tcop/postgres.c:1284
+#: tcop/postgres.c:1638
+#: tcop/postgres.c:1849
 #, c-format
 msgid "duration: %s ms"
 msgstr "süre: %s milisaniye"
@@ -9086,199 +9052,199 @@ msgstr "fonksiyon çağırma mesajı %d argüman biçimi ve %d argüman içeriyo
 msgid "incorrect binary data format in function argument %d"
 msgstr "%d fonksiyon argümanında geçersiz ikili veri"
 
-#: tcop/postgres.c:357
-#: tcop/postgres.c:369
-#: tcop/postgres.c:380
-#: tcop/postgres.c:392
-#: tcop/postgres.c:3667
+#: tcop/postgres.c:356
+#: tcop/postgres.c:368
+#: tcop/postgres.c:379
+#: tcop/postgres.c:391
+#: tcop/postgres.c:3665
 #, c-format
 msgid "invalid frontend message type %d"
 msgstr "geçersiz frontend mesaj tipi %d"
 
-#: tcop/postgres.c:823
+#: tcop/postgres.c:825
 #, c-format
 msgid "statement: %s"
 msgstr "komut: %s"
 
-#: tcop/postgres.c:1026
+#: tcop/postgres.c:1027
 #, c-format
 msgid "duration: %s ms  statement: %s"
 msgstr "süre: %s milisaniye  statement: %s"
 
-#: tcop/postgres.c:1072
+#: tcop/postgres.c:1074
 #, c-format
 msgid "parse %s: %s"
 msgstr "parse %s: %s"
 
-#: tcop/postgres.c:1138
+#: tcop/postgres.c:1140
 msgid "cannot insert multiple commands into a prepared statement"
 msgstr "önceden hazırlanmış komuta çoklu komut eklenemez"
 
-#: tcop/postgres.c:1280
+#: tcop/postgres.c:1288
 #, c-format
 msgid "duration: %s ms  parse %s: %s"
 msgstr "süre: %s milisaniye  parse %s: %s"
 
-#: tcop/postgres.c:1322
+#: tcop/postgres.c:1330
 #, c-format
 msgid "bind %s to %s"
 msgstr "bind %s to %s"
 
-#: tcop/postgres.c:1336
-#: tcop/postgres.c:2103
+#: tcop/postgres.c:1344
+#: tcop/postgres.c:2084
 msgid "unnamed prepared statement does not exist"
 msgstr "ismi verilmemiş hazırlamış komut mevcut değil"
 
-#: tcop/postgres.c:1378
+#: tcop/postgres.c:1386
 #, c-format
 msgid "bind message has %d parameter formats but %d parameters"
 msgstr "bind mesajı %d argüman biçimi ve %d argüman içeriyor"
 
-#: tcop/postgres.c:1384
+#: tcop/postgres.c:1392
 #, c-format
 msgid "bind message supplies %d parameters, but prepared statement \"%s\" requires %d"
 msgstr "bind mesajı   %d parametre veriyor ancak \"%s\" hazırlanmış deymi %d gerektirir"
 
-#: tcop/postgres.c:1520
+#: tcop/postgres.c:1528
 #, c-format
 msgid "incorrect binary data format in bind parameter %d"
 msgstr "bind parametresinde geçersiz ikili veri %d"
 
-#: tcop/postgres.c:1636
+#: tcop/postgres.c:1642
 #, c-format
 msgid "duration: %s ms  bind %s%s%s: %s"
 msgstr "süre: %s milisaniye  bind %s%s%s: %s"
 
-#: tcop/postgres.c:1683
-#: tcop/postgres.c:2175
+#: tcop/postgres.c:1689
+#: tcop/postgres.c:2156
 #, c-format
 msgid "portal \"%s\" does not exist"
 msgstr "portal \"%s\" mevcut değildir"
 
-#: tcop/postgres.c:1766
+#: tcop/postgres.c:1772
 #, c-format
 msgid "%s %s%s%s%s%s"
 msgstr "%s %s%s%s%s%s"
 
-#: tcop/postgres.c:1768
-#: tcop/postgres.c:1850
+#: tcop/postgres.c:1774
+#: tcop/postgres.c:1856
 msgid "execute fetch from"
 msgstr "execute fetch from"
 
-#: tcop/postgres.c:1769
-#: tcop/postgres.c:1851
+#: tcop/postgres.c:1775
+#: tcop/postgres.c:1857
 msgid "execute"
 msgstr "execute"
 
-#: tcop/postgres.c:1847
+#: tcop/postgres.c:1853
 #, c-format
 msgid "duration: %s ms  %s %s%s%s%s%s"
 msgstr "süre: %s milisaniye  %s %s%s%s%s%s"
 
-#: tcop/postgres.c:1998
+#: tcop/postgres.c:1979
 #, c-format
 msgid "prepare: %s"
 msgstr "prepare:  %s"
 
-#: tcop/postgres.c:2061
+#: tcop/postgres.c:2042
 #, c-format
 msgid "parameters: %s"
 msgstr "%s parametresi"
 
-#: tcop/postgres.c:2329
+#: tcop/postgres.c:2327
 msgid "terminating connection because of crash of another server process"
 msgstr "diğer aktif sunucu sürecinin durması nedeniyle bağlantı kapatılmıştır"
 
-#: tcop/postgres.c:2330
+#: tcop/postgres.c:2328
 msgid "The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory."
 msgstr "Başka bir sürecin olağandışı çıkışı nedeniyle shared memory bozulmuş ihtimali var. Dolayısıyla tüm süreçlerine tüm aktif işlemlerini rollback edip çıkmak komutu verilmiş."
 
-#: tcop/postgres.c:2334
+#: tcop/postgres.c:2332
 msgid "In a moment you should be able to reconnect to the database and repeat your command."
 msgstr "Birkaç saniye sonra veritabana bağlanıp işlemlerine devam edebilirisiniz."
 
-#: tcop/postgres.c:2450
+#: tcop/postgres.c:2448
 msgid "floating-point exception"
 msgstr "gerçel sayı istisnası"
 
-#: tcop/postgres.c:2451
+#: tcop/postgres.c:2449
 msgid "An invalid floating-point operation was signaled. This probably means an out-of-range result or an invalid operation, such as division by zero."
 msgstr "Geçersiz floatin-point işteri sinyali alındı. Bu, matimatiksel sıfıra bölme gibi geçersiz işlem ya da kapsam dışı sonucun gçstergesidir."
 
-#: tcop/postgres.c:2487
+#: tcop/postgres.c:2485
 msgid "terminating connection due to administrator command"
 msgstr "yoniticisi talimatı doğrultusunda bağlantı kesildi"
 
-#: tcop/postgres.c:2498
+#: tcop/postgres.c:2496
 msgid "canceling statement due to statement timeout"
 msgstr "sorgu zaman aşımına uğradı ve iptal edildi"
 
-#: tcop/postgres.c:2502
+#: tcop/postgres.c:2500
 msgid "canceling statement due to user request"
 msgstr "kullanıcı isteği ile sorgu iptal edildi"
 
-#: tcop/postgres.c:2546
+#: tcop/postgres.c:2544
 msgid "stack depth limit exceeded"
 msgstr "stack derinliği sınırı aşıldı"
 
-#: tcop/postgres.c:2547
+#: tcop/postgres.c:2545
 msgid "Increase the configuration parameter \"max_stack_depth\", after ensuring the platform's stack depth limit is adequate."
 msgstr "İşletim sisteminin stack derinliği yeterli olduğundan emin olarak \"max_stack_depth\" konfigurasyon parametresini artırın."
 
-#: tcop/postgres.c:2563
+#: tcop/postgres.c:2561
 #, c-format
 msgid "\"max_stack_depth\" must not exceed %ldkB"
 msgstr "\"max_stack_depth\" parametresi %ldkB açmamalıdır"
 
-#: tcop/postgres.c:2565
+#: tcop/postgres.c:2563
 msgid "Increase the platform's stack depth limit via \"ulimit -s\" or local equivalent."
 msgstr "İşletim sisteminin stack derinliği \"ulimit -s\" veya benzeri komutu ile arttırın."
 
-#: tcop/postgres.c:3068
+#: tcop/postgres.c:3066
 msgid "invalid command-line arguments for server process"
 msgstr "sunucu süreci için geçersiz komut satırı parametreleri"
 
-#: tcop/postgres.c:3069
-#: tcop/postgres.c:3083
+#: tcop/postgres.c:3067
+#: tcop/postgres.c:3081
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "Daha fazla bilgi için \"%s --help\" yazın."
 
-#: tcop/postgres.c:3081
+#: tcop/postgres.c:3079
 #, c-format
 msgid "%s: invalid command-line arguments"
 msgstr "%s: komut satırı parametresi yanlış"
 
-#: tcop/postgres.c:3091
+#: tcop/postgres.c:3089
 #, c-format
 msgid "%s: no database nor user name specified"
 msgstr ":%s: ne veritabanı ne de kullanıcı adı belirtilmemiştir"
 
-#: tcop/postgres.c:3577
+#: tcop/postgres.c:3575
 #, c-format
 msgid "invalid CLOSE message subtype %d"
 msgstr "geçersiz CLOSE mesaj alt tipi %d"
 
-#: tcop/postgres.c:3610
+#: tcop/postgres.c:3608
 #, c-format
 msgid "invalid DESCRIBE message subtype %d"
 msgstr "geçersiz DESCRIBE mesaj alt tipi %d"
 
-#: tcop/postgres.c:3848
+#: tcop/postgres.c:3846
 #, c-format
 msgid "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%s"
 msgstr "bağlantı bitti: oturum zamanı: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%s"
 
-#: tcop/pquery.c:543
+#: tcop/pquery.c:657
 #, c-format
 msgid "bind message has %d result formats but query has %d columns"
 msgstr "bind mesajı ında %d sonuç biçimi verilmişken sorguda %d sütun belirtilmiş"
 
-#: tcop/pquery.c:856
+#: tcop/pquery.c:970
 msgid "cursor can only scan forward"
 msgstr "cursor sadece ileri doğru gidebilir"
 
-#: tcop/pquery.c:857
+#: tcop/pquery.c:971
 msgid "Declare it with SCROLL option to enable backward scan."
 msgstr "Geriye gitmesini sağlamak için SCROLL seçeneği ile bildirin."
 
@@ -9464,13 +9430,13 @@ msgstr "\"%s\" fonksiyonu mevcut değil"
 msgid "must be member of role \"%s\""
 msgstr "\"%s\" rolüne dahil olmalıdır"
 
-#: utils/adt/ruleutils.c:1597
+#: utils/adt/ruleutils.c:1563
 #, c-format
 msgid "rule \"%s\" has unsupported event type %d"
 msgstr "\"%s\" rule desteklenmeyen veri tipine sahip %d"
 
-#: utils/adt/ruleutils.c:4218
-#: utils/adt/ruleutils.c:4246
+#: utils/adt/ruleutils.c:4237
+#: utils/adt/ruleutils.c:4265
 #: utils/adt/regproc.c:639
 #: utils/adt/regproc.c:1271
 msgid "too many arguments"
@@ -9969,7 +9935,7 @@ msgstr "işlenenin alt ve üst sınırı NaN olamaz"
 
 #: utils/adt/float.c:2785
 msgid "lower and upper bounds must be finite"
-msgstr ""
+msgstr "alt ve üst sınırları sonsuz olamaz"
 
 #: utils/adt/float.c:2823
 #: utils/adt/numeric.c:923
@@ -10610,7 +10576,7 @@ msgstr "NUMERIC %d ölçüsü 0 ile %d kesinliği arasında olmalıdır"
 
 #: utils/adt/numeric.c:578
 msgid "invalid NUMERIC type modifier"
-msgstr ""
+msgstr "geçersiz NUMERIC tipi niteleyicisi"
 
 #: utils/adt/numeric.c:1826
 msgid "cannot convert NaN to integer"
@@ -11028,7 +10994,7 @@ msgstr "interval sonuç sıra dışıdır"
 #: utils/adt/timestamp.c:754
 #: utils/adt/timestamp.c:787
 msgid "invalid INTERVAL type modifier"
-msgstr ""
+msgstr "geçersiz INTERVAL tipi niteleyicisi"
 
 #: utils/adt/timestamp.c:770
 #, c-format
@@ -12516,7 +12482,7 @@ msgstr "Sunucunun sürümünü tamsayı olarak gösteriyor."
 
 #: utils/misc/guc.c:1678
 msgid "Log the use of temporary files larger than this number of kilobytes."
-msgstr ""
+msgstr "Bu kadar kilobayttan büyük geçici dosya kullanıldığında log tutuyor."
 
 #: utils/misc/guc.c:1679
 msgid "Zero logs all files. The default is -1 (turning this feature off)."
@@ -12828,7 +12794,7 @@ msgstr "postmaster PID numarası belirtilen dosyaya yazar."
 
 #: utils/misc/guc.c:2295
 msgid "Sets how binary values are to be encoded in XML."
-msgstr ""
+msgstr "İkili değerlerin XML içinde nasıl kodlanacağını belirtiyor."
 
 #: utils/misc/guc.c:2296
 msgid "Valid values are BASE64 and HEX."
@@ -12836,7 +12802,7 @@ msgstr "Geçerli değerler: BASE64 ve HEX."
 
 #: utils/misc/guc.c:2304
 msgid "Sets whether XML data in implicit parsing and serialization operations is to be considered as documents or content fragments."
-msgstr ""
+msgstr "Ayrıştırma ve serialization işlemlerde XML veri birer document mi yoksa conten fragment olarak mı sayılacağını belirtiyor."
 
 #: utils/misc/guc.c:2306
 msgid "Valid values are DOCUMENT and CONTENT."
@@ -12891,148 +12857,148 @@ msgstr ""
 "%s, greken \"ident\" konfigurasyon dosyasını bulamamaktadır.\n"
 "Bu dosyanın yeri \"%s\" dosyasında \"ident_file\" değişkeninde, başlatma parametresi -D veya PGDATA enviroment değişkeni ile belirtilebilir.\n"
 
-#: utils/misc/guc.c:3901
-#: utils/misc/guc.c:4433
-#: utils/misc/guc.c:4473
-#: utils/misc/guc.c:4548
-#: utils/misc/guc.c:4888
-#: utils/misc/guc.c:5046
+#: utils/misc/guc.c:3905
+#: utils/misc/guc.c:4437
+#: utils/misc/guc.c:4477
+#: utils/misc/guc.c:4552
+#: utils/misc/guc.c:4892
+#: utils/misc/guc.c:5050
 #, c-format
 msgid "unrecognized configuration parameter \"%s\""
 msgstr "\"%s\" bilinmeyen konfigurasyon parametresi"
 
-#: utils/misc/guc.c:3919
+#: utils/misc/guc.c:3923
 #, c-format
 msgid "parameter \"%s\" cannot be changed"
 msgstr "\"%s\" parametresi değiştirilemez"
 
-#: utils/misc/guc.c:3930
+#: utils/misc/guc.c:3934
 #, c-format
 msgid "parameter \"%s\" cannot be changed after server start; configuration file change ignored"
 msgstr "\"%s\" parametresi, sunucu başlatıldıktan sonra değiştirilemez; yapılandırma dosyası yok sayıldı"
 
-#: utils/misc/guc.c:3939
+#: utils/misc/guc.c:3943
 #, c-format
 msgid "parameter \"%s\" cannot be changed after server start"
 msgstr "\"%s\" parametresi, sunucu başlatıldıktan sonra değiştirilemez"
 
-#: utils/misc/guc.c:3949
+#: utils/misc/guc.c:3953
 #, c-format
 msgid "parameter \"%s\" cannot be changed now"
 msgstr "\"%s\" parametresi şu anda değiştirilemez"
 
-#: utils/misc/guc.c:3979
+#: utils/misc/guc.c:3983
 #, c-format
 msgid "parameter \"%s\" cannot be set after connection start"
 msgstr "\"%s\" parametresi bağlantı başlatıldıktan sonra değiştirilemez"
 
-#: utils/misc/guc.c:3989
+#: utils/misc/guc.c:3993
 #, c-format
 msgid "permission denied to set parameter \"%s\""
 msgstr "\"%s\" parametresi değiştirmek için erişim hatası"
 
-#: utils/misc/guc.c:4039
+#: utils/misc/guc.c:4043
 #, c-format
 msgid "parameter \"%s\" requires a Boolean value"
 msgstr "\"%s\" seçeneği boolean değerini alır"
 
-#: utils/misc/guc.c:4055
-#: utils/misc/guc.c:4139
+#: utils/misc/guc.c:4059
+#: utils/misc/guc.c:4143
 #, c-format
 msgid "invalid value for parameter \"%s\": %d"
 msgstr "\"%s\" seçeneği için geçersiz değer: %d"
 
-#: utils/misc/guc.c:4115
+#: utils/misc/guc.c:4119
 #, c-format
 msgid "parameter \"%s\" requires an integer value"
 msgstr "\"%s\" seçeneği bir tamsayı değerini alır"
 
-#: utils/misc/guc.c:4123
+#: utils/misc/guc.c:4127
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "\"%2$s\" parametresi için %1$d değer sıra dışıdır (%3$d .. %4$d)"
 
-#: utils/misc/guc.c:4199
+#: utils/misc/guc.c:4203
 #, c-format
 msgid "parameter \"%s\" requires a numeric value"
 msgstr "\"%s\" seçeneği numeric değerini alır"
 
-#: utils/misc/guc.c:4207
+#: utils/misc/guc.c:4211
 #, c-format
 msgid "%g is outside the valid range for parameter \"%s\" (%g .. %g)"
 msgstr "\"%2$s\" parametresi için %1$g değer sıra dışıdır (%3$g .. %4$g)"
 
-#: utils/misc/guc.c:4223
+#: utils/misc/guc.c:4227
 #, c-format
 msgid "invalid value for parameter \"%s\": %g"
 msgstr "\"%s\" seçeneği için geçersiz değer: %g"
 
-#: utils/misc/guc.c:4324
+#: utils/misc/guc.c:4328
 #, c-format
 msgid "invalid value for parameter \"%s\": \"%s\""
 msgstr "\"%s\" seçeneği için geçersiz değer: \"%s\""
 
-#: utils/misc/guc.c:4437
-#: utils/misc/guc.c:4477
-#: utils/misc/guc.c:5050
+#: utils/misc/guc.c:4441
+#: utils/misc/guc.c:4481
+#: utils/misc/guc.c:5054
 #, c-format
 msgid "must be superuser to examine \"%s\""
 msgstr "\"%s\" değişkeninin değerini sorgulamak için superuser haklarına sahip olmalısınız"
 
-#: utils/misc/guc.c:4557
+#: utils/misc/guc.c:4561
 #, c-format
 msgid "SET %s takes only one argument"
 msgstr "SET %s tek bir argüman alır"
 
-#: utils/misc/guc.c:4662
+#: utils/misc/guc.c:4666
 msgid "SET requires parameter name"
 msgstr "SET komutu patametre adını gerektirir"
 
-#: utils/misc/guc.c:4726
+#: utils/misc/guc.c:4730
 #, c-format
 msgid "attempt to redefine parameter \"%s\""
 msgstr "\"%s\" parametresinin yeniden tanımlanma denemesi"
 
-#: utils/misc/guc.c:5806
+#: utils/misc/guc.c:5810
 #, c-format
 msgid "could not parse setting for parameter \"%s\""
 msgstr "\"%s\" parametresi için verilen değer çözümlenemiyor"
 
-#: utils/misc/guc.c:6002
+#: utils/misc/guc.c:6006
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "\"log_destination\" parametresi için dözdizimi geçersiz"
 
-#: utils/misc/guc.c:6025
+#: utils/misc/guc.c:6029
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "\"log_destination\" anahtar kelimesi anlaşılamıyor: \"%s\""
 
-#: utils/misc/guc.c:6287
+#: utils/misc/guc.c:6291
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF artık desteklenmiyor"
 
-#: utils/misc/guc.c:6335
+#: utils/misc/guc.c:6339
 #, c-format
 msgid "invalid syntax for \"custom_variable_classes\": \"%s\""
 msgstr "\"custom_variable_classes\" için söz dizim hatası: \"%s\""
 
-#: utils/misc/guc.c:6363
+#: utils/misc/guc.c:6367
 msgid "assertion checking is not supported by this build"
 msgstr "assert checking desteği derlenmemiş"
 
-#: utils/misc/guc.c:6375
+#: utils/misc/guc.c:6379
 msgid "SSL is not supported by this build"
 msgstr "SSL desteği derlenmemiş"
 
-#: utils/misc/guc.c:6388
+#: utils/misc/guc.c:6392
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "\"log_statement_stats\" tue iken değer aktif olamaz"
 
-#: utils/misc/guc.c:6405
+#: utils/misc/guc.c:6409
 msgid "cannot enable \"log_statement_stats\" when \"log_parser_stats\", \"log_planner_stats\", or \"log_executor_stats\" is true"
 msgstr "\"log_parser_stats\", \"log_planner_stats\", veya \"log_executor_stats\" değerleri true iken  \"log_statement_stats\" aktif edilemiyor"
 
-#: utils/misc/guc.c:6424
+#: utils/misc/guc.c:6428
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr "salt okunur transaction okuma-yazma mosunda geçirilemiyor"
 
@@ -13122,17 +13088,17 @@ msgstr "\"%s\" dosyası, %u satırınıda, satır sonunda sözdizimi hatası"
 msgid "syntax error in file \"%s\" line %u, near token \"%s\""
 msgstr "\"%s\" dosyası, %u satırınıda, \"%s\" ifadesi yakınında sözdizimi hatası"
 
-#: utils/mmgr/portalmem.c:193
+#: utils/mmgr/portalmem.c:209
 #, c-format
 msgid "cursor \"%s\" already exists"
 msgstr "cursor \"%s\" zaten mevcut"
 
-#: utils/mmgr/portalmem.c:197
+#: utils/mmgr/portalmem.c:213
 #, c-format
 msgid "closing existing cursor \"%s\""
 msgstr "var olan cursor \"%s\" kapatılıyor"
 
-#: utils/mmgr/portalmem.c:532
+#: utils/mmgr/portalmem.c:543
 msgid "cannot PREPARE a transaction that has created a cursor WITH HOLD"
 msgstr "WITH HOLD imleci oluşturan transaction PREPARE edilemedi"
 
