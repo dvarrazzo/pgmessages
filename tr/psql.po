@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: psql-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-06 01:27-0400\n"
-"PO-Revision-Date: 2007-04-05 13:02+0200\n"
+"PO-Revision-Date: 2007-04-12 14:15+0200\n"
 "Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -2170,8 +2170,8 @@ msgid "close a cursor"
 msgstr "cursor'u kapat"
 
 #: sql_help.h:118
-msgid "CLOSE name"
-msgstr "CLOSE name"
+msgid "CLOSE { name | ALL }"
+msgstr "CLOSE { name | ALL }"
 
 #: sql_help.h:121
 msgid "cluster a table according to an index"
@@ -2179,12 +2179,10 @@ msgstr "indexe dayanarak tabloyu cluster işlemine tabi tut"
 
 #: sql_help.h:122
 msgid ""
-"CLUSTER indexname ON tablename\n"
-"CLUSTER tablename\n"
+"CLUSTER tablename  USING indexname \n"
 "CLUSTER"
 msgstr ""
-"CLUSTER index_adı ON tablo_adı\n"
-"CLUSTER tablo_adı\n"
+"CLUSTER tablename  USING indexname \n"
 "CLUSTER"
 
 #: sql_help.h:125
@@ -2950,8 +2948,8 @@ msgid "deallocate a prepared statement"
 msgstr "deallocate a prepared statement"
 
 #: sql_help.h:238
-msgid "DEALLOCATE [ PREPARE ] name"
-msgstr "DEALLOCATE [ PREPARE ] name"
+msgid "DEALLOCATE [ PREPARE ] { name | ALL }"
+msgstr "DEALLOCATE [ PREPARE ] { name | ALL }"
 
 #: sql_help.h:241
 msgid "define a cursor"
@@ -3412,10 +3410,12 @@ msgstr "çalıştırma zamanı parametresini öntanımlı değerine getir"
 #: sql_help.h:406
 msgid ""
 "RESET configuration_parameter\n"
-"RESET ALL"
+"RESET ALL\n"
+"RESET { PLANS | SESSION | TEMP | TEMPORARY }"
 msgstr ""
 "RESET configuration_parameter\n"
-"RESET ALL"
+"RESET ALL\n"
+"RESET { PLANS | SESSION | TEMP | TEMPORARY }"
 
 #: sql_help.h:409
 msgid "remove access privileges"
