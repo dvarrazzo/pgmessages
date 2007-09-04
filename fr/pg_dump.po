@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-31 14:16-0300\n"
-"PO-Revision-Date: 2007-08-31 20:14+0100\n"
+"POT-Creation-Date: 2007-09-04 00:19-0300\n"
+"PO-Revision-Date: 2007-09-04 19:03+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team:  <fr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -384,13 +384,13 @@ msgid "Dumping the contents of table \"%s\" failed: PQgetCopyData() failed.\n"
 msgstr "La sauvegarde du contenu de la table « %s » a échoué : échec de PQgetCopyData().\n"
 
 #: pg_dump.c:1123
-#: pg_dump.c:10248
+#: pg_dump.c:10289
 #, c-format
 msgid "Error message from server: %s"
 msgstr "Message d'erreur du serveur : %s"
 
 #: pg_dump.c:1124
-#: pg_dump.c:10249
+#: pg_dump.c:10290
 #, c-format
 msgid "The command was: %s\n"
 msgstr "La commande était : %s\n"
@@ -552,12 +552,12 @@ msgstr "Aucune ligne trouvée pour enum"
 
 #: pg_dump.c:5757
 #: pg_dump.c:5942
-#: pg_dump.c:6537
-#: pg_dump.c:6992
-#: pg_dump.c:7343
-#: pg_dump.c:7681
-#: pg_dump.c:7854
-#: pg_dump.c:8048
+#: pg_dump.c:6541
+#: pg_dump.c:7033
+#: pg_dump.c:7384
+#: pg_dump.c:7722
+#: pg_dump.c:7895
+#: pg_dump.c:8089
 #, c-format
 msgid "Got %d rows instead of one from: %s"
 msgstr "%d lignes reçues au lieu d'une seule depuis : %s"
@@ -571,121 +571,125 @@ msgstr "la requête n'a renvoyé aucune ligne : %s\n"
 msgid "WARNING: bogus value in proargmodes array\n"
 msgstr "ATTENTION : valeur boguée dans le tableau proargmodes\n"
 
-#: pg_dump.c:6600
+#: pg_dump.c:6605
 msgid "WARNING: could not parse proallargtypes array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proallargtypes\n"
 
-#: pg_dump.c:6616
+#: pg_dump.c:6621
 msgid "WARNING: could not parse proargmodes array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proargmodes\n"
 
-#: pg_dump.c:6630
+#: pg_dump.c:6635
 msgid "WARNING: could not parse proargnames array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proargnames\n"
 
-#: pg_dump.c:6667
+#: pg_dump.c:6646
+msgid "WARNING: could not parse proconfig array\n"
+msgstr "ATTENTION : n'a pas pu analyser le tableau proconfig\n"
+
+#: pg_dump.c:6684
 #, c-format
 msgid "unrecognized provolatile value for function \"%s\"\n"
 msgstr "valeur provolatile non reconnue pour la fonction « %s »\n"
 
-#: pg_dump.c:7208
+#: pg_dump.c:7249
 #, c-format
 msgid "WARNING: could not find operator with OID %s\n"
 msgstr "ATTENTION : n'a pas pu trouver l'opérateur d'OID %s\n"
 
-#: pg_dump.c:7239
-#: pg_dump.c:8271
-#: pg_dump.c:8422
+#: pg_dump.c:7280
+#: pg_dump.c:8312
+#: pg_dump.c:8463
 #, c-format
 msgid "Got %d rows instead of one from \"%s\"\n"
 msgstr "%d lignes reçues au lieu d'une seule depuis « %s »\n"
 
-#: pg_dump.c:8072
+#: pg_dump.c:8113
 #, c-format
 msgid "WARNING: aggregate function %s could not be dumped correctly for this database version; ignored\n"
 msgstr "ATTENTION : la fonction d'aggrégat %s n'a pas pu être sauvegardée correctement avec cette version de la base de données ; ignorée\n"
 
-#: pg_dump.c:8547
+#: pg_dump.c:8588
 #, c-format
 msgid "could not parse ACL list (%s) for object \"%s\" (%s)\n"
 msgstr "n'a pas pu analyser la liste ACL (%s) de l'objet « %s » (%s)\n"
 
-#: pg_dump.c:8642
+#: pg_dump.c:8683
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned no data\n"
 msgstr "la requête permettant d'obtenir la définition de la vue « %s » n'a renvoyé aucune donnée\n"
 
-#: pg_dump.c:8645
+#: pg_dump.c:8686
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned more than one definition\n"
 msgstr "la requête permettant d'obtenir la définition de la vue « %s » a renvoyé plus d'une définition\n"
 
-#: pg_dump.c:8654
+#: pg_dump.c:8695
 #, c-format
 msgid "definition of view \"%s\" appears to be empty (length zero)\n"
 msgstr "la définition de la vue « %s » semble être vide (longueur nulle)\n"
 
-#: pg_dump.c:8952
+#: pg_dump.c:8993
 #, c-format
 msgid "invalid column number %d for table \"%s\"\n"
 msgstr "numéro de colonne invalide %d pour la table « %s »\n"
 
-#: pg_dump.c:9054
+#: pg_dump.c:9095
 #, c-format
 msgid "missing index for constraint \"%s\"\n"
 msgstr "index manquant pour la contrainte « %s »\n"
 
-#: pg_dump.c:9219
+#: pg_dump.c:9260
 #, c-format
 msgid "unrecognized constraint type: %c\n"
 msgstr "type de contrainte inconnu : %c\n"
 
-#: pg_dump.c:9282
+#: pg_dump.c:9323
 msgid "missing pg_database entry for this database\n"
 msgstr "entrée pg_database manquante pour cette base de données\n"
 
-#: pg_dump.c:9287
+#: pg_dump.c:9328
 msgid "found more than one pg_database entry for this database\n"
 msgstr "a trouvé plus d'une entrée dans pg_database pour cette base de données\n"
 
-#: pg_dump.c:9319
+#: pg_dump.c:9360
 msgid "could not find entry for pg_indexes in pg_class\n"
 msgstr "n'a pas pu trouver l'entrée de pg_indexes dans pg_class\n"
 
-#: pg_dump.c:9324
+#: pg_dump.c:9365
 msgid "found more than one entry for pg_indexes in pg_class\n"
 msgstr "a trouvé plus d'une entrée pour pg_indexes dans la table pg_class\n"
 
-#: pg_dump.c:9373
+#: pg_dump.c:9414
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d rows (expected 1)\n"
 msgstr "la requête permettant d'obtenir les données de la séquence « %s » a renvoyé %d lignes (une seule attendue)\n"
 
-#: pg_dump.c:9382
+#: pg_dump.c:9423
 #, c-format
 msgid "query to get data of sequence \"%s\" returned name \"%s\"\n"
 msgstr "la requête permettant d'obtenir les données de la séquence « %s » a renvoyé le nom « %s »\n"
 
-#: pg_dump.c:9636
+#: pg_dump.c:9677
 #, c-format
 msgid "invalid argument string (%s) for trigger \"%s\" on table \"%s\"\n"
 msgstr "chaîne argument invalide (%s) pour le trigger (trigger) « %s » sur la table « %s »\n"
 
-#: pg_dump.c:9773
+#: pg_dump.c:9814
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned"
 msgstr "la requête permettant d'obtenir la règle « %s » associée à la table « %s » a échoué : mauvais nombre de lignes renvoyées"
 
-#: pg_dump.c:9867
+#: pg_dump.c:9908
 msgid "reading dependency data\n"
 msgstr "récupération des données de dépendance\n"
 
-#: pg_dump.c:10056
+#: pg_dump.c:10097
 #, c-format
 msgid "query yielded %d rows instead of one: %s\n"
 msgstr "la requête a renvoyé %d lignes au lieu d'une seule : %s\n"
 
-#: pg_dump.c:10243
+#: pg_dump.c:10284
 msgid "SQL command failed\n"
 msgstr "la commande SQL a échoué\n"
 
