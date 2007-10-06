@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-28 13:01-0400\n"
-"PO-Revision-Date: 2007-05-02 09:26+0200\n"
-"Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
+"PO-Revision-Date: 2007-09-13 08:31+0200\n"
+"Last-Translator: Devrim GÜNDÜZ <devrim@gunduz.org>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7759,8 +7759,11 @@ msgid ""
 "If the request size is already small, it's possible that it is less than your kernel's SHMMIN parameter, in which case raising the request size or reconfiguring SHMMIN is called for.\n"
 "The PostgreSQL documentation contains more information about shared memory configuration."
 msgstr ""
-"Bu hata, PostgreSQL'in shared memory isteğinin kernelin SHMMAX parametresinde verilen değerinin aıldığını gösteriyor. İstenilen bellek boyutunu dürebilir veya kerneli daha büyük bir SHMMAX parametresi ile yeniden konfigure edebilirsiniz. İstenilen bellek boyutunu (şu an %lu bayt) düşürmek için PostgreSQL'in shared_buffers parametresini (şu an %d) ve/veya max_connections (şu an %d) parametrelerini düşürebilirsiniz.\n"
-" Eğer istenilen bellek boyutu zaten küçük ise, kernelin SHMMIN parametresinden düşük olabilir, bu durumda istenilen bellek boyutunu SHMMIN değerine kadar büyütmeniz lazım veya SHMMIN değerini düşürmeniz lazmı. PostgreSQL dokümanlarında shared memory konfigurasyonu hakkında daha fazla bilgi bulabilirsiniz."
+"Bu hata, PostgreSQL'in shared memory isteğinin çekirdeğin SHMMAX parametresinde verilen değerinin aşıldığını gösteriyor. İstenilen bellek boyutunu 
+düşürebilir ya da çekirdeği daha büyük bir SHMMAX parametresi ile yeniden yapılandırabilirsiniz. İstenilen bellek boyutunu (şu an %lu bayt) düşürmek için 
+PostgreSQL'in shared_buffers parametresini (şu an %d) ve/veya max_connections (şu an %d) parametrelerini düşürebilirsiniz.\n"
+" Eğer istenilen bellek boyutu zaten küçük ise, çekirdeğin SHMMIN parametresinden düşük olabilir; bu durumda istenilen bellek boyutunu SHMMIN değerine kadar 
+büyütmeniz ya da SHMMIN değerini düşürmeniz gerekli. PostgreSQL belgelerinde shared memory yapılandırılması hakkında daha fazla bilgi bulabilirsiniz."
 
 #: port/sysv_shmem.c:117
 #: port/pg_shmem.c:117
@@ -7769,8 +7772,9 @@ msgid ""
 "This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space. To reduce the request size (currently %lu bytes), reduce PostgreSQL's shared_buffers parameter (currently %d) and/or its max_connections parameter (currently %d).\n"
 "The PostgreSQL documentation contains more information about shared memory configuration."
 msgstr ""
-"Bu hata genellikle PostgreSQL'in shared kuullanımı boş takas alanının aştığı zaman ortay çıkıyor. İstenilen bellek bouytu (şu an %lu bayt) düşürmek içi, PostgreSQL'in shared_buffers (şu an %d) ve/veya max_connection (şu an %d) parametrelerini düşürün.\n"
-"  PostgreSQL dokümanlarında shared memory konfigurasyonu hakkında daha fazla bilgi bulabilirsiniz."
+"Bu hata genellikle PostgreSQL'in shared kullanımı boş takas alanını aştığı zaman ortaya çıkıyor. İstenilen bellek bouytu (şu an %lu bayt) düşürmek için, 
+PostgreSQL'in shared_buffers (şu an %d) ve/veya max_connections (şu an %d) parametrelerini düşürün.\n"
+"PostgreSQL dokümanlarında shared memory yapılandırması hakkında daha fazla bilgi bulabilirsiniz."
 
 #: port/sysv_shmem.c:126
 #: port/pg_shmem.c:126
@@ -7779,9 +7783,8 @@ msgid ""
 "This error does *not* mean that you have run out of disk space. It occurs either if all available shared memory IDs have been taken, in which case you need to raise the SHMMNI parameter in your kernel, or because the system's overall limit for shared memory has been reached.  If you cannot increase the shared memory limit, reduce PostgreSQL's shared memory request (currently %lu bytes), by reducing its shared_buffers parameter (currently %d) and/or its max_connections parameter (currently %d).\n"
 "The PostgreSQL documentation contains more information about shared memory configuration."
 msgstr ""
-"Bu hata mesajı yeterli boş disk alanı kalmadığı anlamına gelmiyor .\n"
-"Bu durum, tüm shared memory ID alınmış olduğu, ki bu durumda SHMMNI parametresinin değerleri yükseltmelisiniz.  Shared memory sınırını yükseltemezseniz, PostgerSQL sisteminin shared memory tütekitimini (şu an %lu bayt) shared_buffers (şu an %d) ve/veya max_connections parametresini (şu an %d) düşürerek azaltabilirsiniz.\n"
-"PostgreSQL dokümanlarında bu konu ile ilgili daha ayrıntılı açıklama ve konfigurasyon hakkında bilgileri bulabilirsiniz."
+"Bu hata mesajı yeterli boş disk alanı kalmadığı anlamına gelmiyor . Bu durum, tüm shared memory ID alınmış olduğu zamanda -- ki bu durumda SHMMNI parametresinin değerleri yükseltmelisiniz; ya da sistemin shared memory sınırına ulaşıldığı zamanda oluşur. Shared memory sınırını yükseltemezseniz, PostgreSQL sisteminin shared memory tüketimini (şu an %lu bayt) shared_buffers (şu an %d) ve/veya max_connections parametresini (şu an %d) düşürerek azaltabilirsiniz.\n"
+"PostgreSQL belgelerinde bu konu ile ilgili daha ayrıntılı açıklama ve yapılandırma hakkında bilgileri bulabilirsiniz."
 
 #: port/sysv_shmem.c:369
 #: port/pg_shmem.c:369
@@ -7965,7 +7968,7 @@ msgstr "veritabanı deizini \"%s\" mevcut değil"
 #: postmaster/postmaster.c:1000
 #, c-format
 msgid "could not read permissions of directory \"%s\": %m"
-msgstr "\"%s\" dizininin eriğim haklarını okunamıyor: %m"
+msgstr "\"%s\" dizininin erişim haklarını okunamıyor: %m"
 
 #: postmaster/postmaster.c:1017
 #, c-format
@@ -8009,7 +8012,7 @@ msgstr "%s: control TTY ile bağlantı kesilemiyor: %s\n"
 #: postmaster/postmaster.c:1176
 #, c-format
 msgid "select() failed in postmaster: %m"
-msgstr "pstmaster içinde select() başarısız: %m"
+msgstr "postmaster içinde select() başarısız: %m"
 
 #: postmaster/postmaster.c:1335
 #: postmaster/postmaster.c:1366
@@ -8637,7 +8640,7 @@ msgstr "view yazma hatası"
 
 #: rewrite/rewriteHandler.c:1813
 msgid "You need an unconditional ON INSERT DO INSTEAD rule."
-msgstr "ON INSERT DO INSTEAD rule gerekmetedir."
+msgstr "ON INSERT DO INSTEAD rule gerekmektedir."
 
 #: rewrite/rewriteHandler.c:1818
 msgid "cannot update a view"
@@ -8645,7 +8648,7 @@ msgstr "view değiştirilemiyor"
 
 #: rewrite/rewriteHandler.c:1819
 msgid "You need an unconditional ON UPDATE DO INSTEAD rule."
-msgstr "ON UPDATE DO INSTEAD rule gerekmetedir."
+msgstr "ON UPDATE DO INSTEAD rule gerekmektedir."
 
 #: rewrite/rewriteHandler.c:1824
 msgid "cannot delete from a view"
@@ -8653,7 +8656,7 @@ msgstr "view silme hatası"
 
 #: rewrite/rewriteHandler.c:1825
 msgid "You need an unconditional ON DELETE DO INSTEAD rule."
-msgstr "ON DELETE DO INSTEAD rule gerekmetedir."
+msgstr "ON DELETE DO INSTEAD rule gerekmektedir."
 
 #: rewrite/rewriteManip.c:757
 msgid "conditional utility statements are not implemented"
@@ -8801,7 +8804,7 @@ msgstr "istenilen shared memory boyutu size_t tipini aşıyor"
 #: storage/large_object/inv_api.c:712
 #, c-format
 msgid "large object %u was not opened for writing"
-msgstr "large object %u yazmak için açlışmadı"
+msgstr "large object %u yazmak için açılamadı"
 
 #: storage/lmgr/deadlock.c:849
 #, c-format
@@ -9273,7 +9276,7 @@ msgstr "stack derinliği sınırı aşıldı"
 
 #: tcop/postgres.c:2617
 msgid "Increase the configuration parameter \"max_stack_depth\", after ensuring the platform's stack depth limit is adequate."
-msgstr "İşletim sisteminin stack derinliği yeterli olduğundan emin olarak \"max_stack_depth\" konfigurasyon parametresini artırın."
+msgstr "İşletim sisteminin stack derinliğinin yeterli olduğundan emin olarak \"max_stack_depth\" konfigurasyon parametresini artırın."
 
 #: tcop/postgres.c:2633
 #, c-format
