@@ -1,7 +1,7 @@
 # German message translation file for psql
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: psql.po,v 1.13 2007/11/22 11:33:54 petere Exp $
+# $Id: psql.po,v 1.14 2007/11/23 10:19:05 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-21 19:14-0400\n"
-"PO-Revision-Date: 2007-11-22 12:33+0100\n"
+"POT-Creation-Date: 2007-11-22 23:14-0400\n"
+"PO-Revision-Date: 2007-11-23 11:18+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -1838,7 +1838,6 @@ msgid "change a database"
 msgstr "ändert eine Datenbank"
 
 #: sql_help.h:38
-#, fuzzy
 msgid ""
 "ALTER DATABASE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -1862,12 +1861,14 @@ msgstr ""
 "\n"
 "    CONNECTION LIMIT verbindungslimit\n"
 "\n"
-"ALTER DATABASE name SET parameter { TO | = } { wert | DEFAULT }\n"
-"ALTER DATABASE name RESET parameter\n"
-"\n"
 "ALTER DATABASE name RENAME TO neuer_name\n"
 "\n"
-"ALTER DATABASE name OWNER TO neuer_eigentümer"
+"ALTER DATABASE name OWNER TO neuer_eigentümer\n"
+"\n"
+"ALTER DATABASE name SET konfigurationsparameter { TO | = } { wert | DEFAULT }\n"
+"ALTER DATABASE name SET konfigurationsparameter FROM CURRENT\n"
+"ALTER DATABASE name RESET konfigurationsparameter\n"
+"ALTER DATABASE name RESET ALL"
 
 #: sql_help.h:41
 msgid "change the definition of a domain"
@@ -2033,7 +2034,8 @@ msgid ""
 msgstr ""
 "ALTER OPERATOR FAMILY name USING indexmethode ADD\n"
 "  {  OPERATOR strategienummer operatorname ( optyp, optyp ) [ RECHECK ]\n"
-"   | FUNCTION supportnummer [ ( optyp [ , optyp ] ) ] funkname ( argumenttyp [, ...] )\n"
+"   | FUNCTION supportnummer [ ( optyp [ , optyp ] ) ] funkname ( argumenttyp "
+"[, ...] )\n"
 "  } [, ... ]\n"
 "ALTER OPERATOR FAMILY name USING indexmethode DROP\n"
 "  {  OPERATOR strategienummer ( optyp [ , optyp ] )\n"
@@ -2047,7 +2049,6 @@ msgid "change a database role"
 msgstr "ändert eine Datenbankrolle"
 
 #: sql_help.h:74
-#, fuzzy
 msgid ""
 "ALTER ROLE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2087,7 +2088,9 @@ msgstr ""
 "ALTER ROLE name RENAME TO neuer_name\n"
 "\n"
 "ALTER ROLE name SET konfigurationsparameter { TO | = } { wert | DEFAULT }\n"
-"ALTER ROLE name RESET konfigurationsparameter"
+"ALTER ROLE name SET konfigurationsparameter FROM CURRENT\n"
+"ALTER ROLE name RESET konfigurationsparameter\n"
+"ALTER ROLE name RESET ALL"
 
 #: sql_help.h:77
 msgid "change the definition of a schema"
@@ -2106,7 +2109,6 @@ msgid "change the definition of a sequence generator"
 msgstr "ändert die Definition eines Sequenzgenerators"
 
 #: sql_help.h:82
-#, fuzzy
 msgid ""
 "ALTER SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
@@ -2119,6 +2121,7 @@ msgstr ""
 "    [ MINVALUE minwert | NO MINVALUE ] [ MAXVALUE maxwert | NO MAXVALUE ]\n"
 "    [ RESTART [ WITH ] start ] [ CACHE cache ] [ [ NO ] CYCLE ]\n"
 "    [ OWNED BY { tabelle.spalte | NONE } ]\n"
+"ALTER SEQUENCE name RENAME TO neuer_name\n"
 "ALTER SEQUENCE name SET SCHEMA neues_schema"
 
 #: sql_help.h:85
@@ -2249,7 +2252,8 @@ msgstr ""
 "ALTER TEXT SEARCH CONFIGURATION name\n"
 "    ALTER MAPPING REPLACE altes_wörterbuch WITH neues_wörterbuch\n"
 "ALTER TEXT SEARCH CONFIGURATION name\n"
-"    ALTER MAPPING FOR tokentyp [, ... ] REPLACE altes_wörterbuch WITH neues_wörterbuch\n"
+"    ALTER MAPPING FOR tokentyp [, ... ] REPLACE altes_wörterbuch WITH "
+"neues_wörterbuch\n"
 "ALTER TEXT SEARCH CONFIGURATION name\n"
 "    DROP MAPPING [ IF EXISTS ] FOR tokentyp [, ... ]\n"
 "ALTER TEXT SEARCH CONFIGURATION name RENAME TO neuer_name\n"
@@ -2777,7 +2781,6 @@ msgid "define a new index"
 msgstr "definiert einen neuen Index"
 
 #: sql_help.h:194
-#, fuzzy
 msgid ""
 "CREATE [ UNIQUE ] INDEX [ CONCURRENTLY ] name ON table [ USING method ]\n"
 "    ( { column | ( expression ) } [ opclass ] [ ASC | DESC ] [ NULLS { FIRST "
@@ -2787,7 +2790,7 @@ msgid ""
 "    [ WHERE predicate ]"
 msgstr ""
 "CREATE [ UNIQUE ] INDEX [ CONCURRENTLY ] name ON tabelle [ USING methode ]\n"
-"    ( { spalte | ( ausdruck ) } [ opklasse ] [, ...] )\n"
+"    ( { spalte | ( ausdruck ) } [ opklasse ] [ ASC | DESC ] [ NULLS { FRIST | LAST } ] [, ...] )\n"
 "    [ WITH ( storage_parameter = wert [, ... ] ) ]\n"
 "    [ TABLESPACE tablespace ]\n"
 "    [ WHERE prädikat ]"
@@ -2811,7 +2814,6 @@ msgid "define a new operator class"
 msgstr "definiert eine neue Operatorklasse"
 
 #: sql_help.h:202
-#, fuzzy
 msgid ""
 "CREATE OPERATOR CLASS name [ DEFAULT ] FOR TYPE data_type\n"
 "  USING index_method [ FAMILY family_name ] AS\n"
@@ -2822,10 +2824,10 @@ msgid ""
 "   | STORAGE storage_type\n"
 "  } [, ... ]"
 msgstr ""
-"CREATE OPERATOR CLASS name [ DEFAULT ] FOR TYPE datentyp USING indexmethode "
-"AS\n"
+"CREATE OPERATOR CLASS name [ DEFAULT ] FOR TYPE datentyp\n"
+"  USING indexmethode [ FAMILY familienname ] AS\n"
 "  {  OPERATOR strategienummer operatorname [ ( optyp, optyp ) ] [ RECHECK ]\n"
-"   | FUNCTION unterst_nummer funcname ( argumenttyp [, ...] )\n"
+"   | FUNCTION unterst_nummer [ ( optyp [, optyp ] ) ] funcname ( argumenttyp [, ...] )\n"
 "   | STORAGE storage_typ\n"
 "  } [, ... ]"
 
@@ -2834,7 +2836,6 @@ msgid "define a new operator"
 msgstr "definiert einen neuen Operator"
 
 #: sql_help.h:206
-#, fuzzy
 msgid ""
 "CREATE OPERATOR name (\n"
 "    PROCEDURE = funcname\n"
@@ -2850,8 +2851,6 @@ msgstr ""
 "    [, COMMUTATOR = kommutator_op ] [, NEGATOR = umkehrungs_op ]\n"
 "    [, RESTRICT = res_funktion ] [, JOIN = join_funktion ]\n"
 "    [, HASHES ] [, MERGES ]\n"
-"    [, SORT1 = linker_sortier_op ] [, SORT2 = rechter_sortier_op ]\n"
-"    [, LTCMP = kleiner_als_op ] [, GTCMP = größer_als_op ]\n"
 ")"
 
 #: sql_help.h:209
@@ -3273,21 +3272,18 @@ msgid "define a cursor"
 msgstr "definiert einen Cursor"
 
 #: sql_help.h:278
-#, fuzzy
 msgid ""
 "DECLARE name [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
 "    CURSOR [ { WITH | WITHOUT } HOLD ] FOR query"
 msgstr ""
 "DECLARE name [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
-"    CURSOR [ { WITH | WITHOUT } HOLD ] FOR anfrage\n"
-"    [ FOR { READ ONLY | UPDATE [ OF spalte [, ...] ] } ]"
+"    CURSOR [ { WITH | WITHOUT } HOLD ] FOR anfrage"
 
 #: sql_help.h:281
 msgid "delete rows of a table"
 msgstr "löscht Zeilen einer Tabelle"
 
 #: sql_help.h:282
-#, fuzzy
 msgid ""
 "DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
 "    [ USING usinglist ]\n"
@@ -3296,12 +3292,12 @@ msgid ""
 msgstr ""
 "DELETE FROM [ ONLY ] tabelle [ [ AS ] alias ]\n"
 "    [ USING using-liste ]\n"
-"    [ WHERE bedingung ]\n"
+"    [ WHERE bedingung | WHERE CURRENT OF cursorname ]\n"
 "    [ RETURNING * | ausgabeausdruck [ AS ausgabename ] [, ...] ]"
 
 #: sql_help.h:285
 msgid "discard session state"
-msgstr ""
+msgstr "verwirft den Sitzungszustand"
 
 #: sql_help.h:286
 msgid "DISCARD { ALL | PLANS | TEMPORARY | TEMP }"
@@ -4151,7 +4147,6 @@ msgid "update rows of a table"
 msgstr "aktualisiert Zeilen einer Tabelle"
 
 #: sql_help.h:530
-#, fuzzy
 msgid ""
 "UPDATE [ ONLY ] table [ [ AS ] alias ]\n"
 "    SET { column = { expression | DEFAULT } |\n"
@@ -4165,7 +4160,7 @@ msgstr ""
 "    SET { spalte = { ausdruck | DEFAULT } |\n"
 "          ( spalte [, ...] ) = ( { ausdruck | DEFAULT } [, ...] ) } [, ...]\n"
 "    [ FROM from-list ]\n"
-"    [ WHERE bedingung ]\n"
+"    [ WHERE bedingung | WHERE CURRENT OF cursorname ]\n"
 "    [ RETURNING * | ausgabeausdruck [ AS ausgabename ] [, ...] ]"
 
 #: sql_help.h:533
