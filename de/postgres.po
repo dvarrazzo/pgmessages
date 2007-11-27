@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: postgres.po,v 1.26 2007/11/22 11:28:07 petere Exp $
+# $Id: postgres.po,v 1.27 2007/11/27 10:16:02 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-21 19:00-0400\n"
-"PO-Revision-Date: 2007-11-22 12:27+0100\n"
+"POT-Creation-Date: 2007-11-27 02:01-0400\n"
+"PO-Revision-Date: 2007-11-27 11:13+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -463,9 +463,9 @@ msgstr "%s kann nicht in einer Subtransaktion laufen"
 
 #. translator: %s represents an SQL statement name
 #: access/transam/xact.c:2536
-#, fuzzy, c-format
+#, c-format
 msgid "%s cannot be executed from a function or multi-command string"
-msgstr "%s kann nicht aus einer Funktion heraus ausgeführt werden"
+msgstr "%s kann nicht aus einer Funktion oder einer mehrbefehligen Zeichenkette heraus ausgeführt werden"
 
 #. translator: %s represents an SQL statement name
 #: access/transam/xact.c:2587
@@ -1045,9 +1045,9 @@ msgid "starting archive recovery"
 msgstr "starte Wiederherstellung aus Archiv"
 
 #: access/transam/xlog.c:4380
-#, fuzzy, c-format
+#, c-format
 msgid "restore_command = '%s'"
-msgstr "restore_command = »%s«"
+msgstr "restore_command = '%s'"
 
 #: access/transam/xlog.c:4394
 #, c-format
@@ -1074,9 +1074,9 @@ msgid "recovery_target_xid = %u"
 msgstr "recovery_target_xid = %u"
 
 #: access/transam/xlog.c:4438
-#, fuzzy, c-format
+#, c-format
 msgid "recovery_target_time = '%s'"
-msgstr "recovery_target_time = %s"
+msgstr "recovery_target_time = '%s'"
 
 #: access/transam/xlog.c:4454
 #, c-format
@@ -1108,7 +1108,7 @@ msgid "recovery command file \"%s\" did not specify restore_command"
 msgstr "Recovery-Kommandodatei »%s« hat kein restore_command angegeben"
 
 #: access/transam/xlog.c:4507
-#, fuzzy, c-format
+#, c-format
 msgid "recovery target timeline %u does not exist"
 msgstr "recovery_target_timeline %u existiert nicht"
 
@@ -1267,9 +1267,9 @@ msgid "redo done at %X/%X"
 msgstr "Redo fertig bei %X/%X"
 
 #: access/transam/xlog.c:5091 access/transam/xlog.c:6028
-#, fuzzy, c-format
+#, c-format
 msgid "last completed transaction was at log time %s"
-msgstr "Transaktionslogdatei »%s« wird wiederverwendet"
+msgstr "letzte vollständige Transaktion war bei Logzeit %s"
 
 #: access/transam/xlog.c:5099
 msgid "redo is not required"
@@ -1402,9 +1402,8 @@ msgid "WAL archiving is not active"
 msgstr "WAL-Archivierung ist nicht aktiv"
 
 #: access/transam/xlog.c:6396
-#, fuzzy
 msgid "archive_mode must be enabled at server start."
-msgstr "Parameter »%s« kann nach dem Start des Servers nicht geändert werden"
+msgstr "archive_mode muss beim Start des Servers eingeschaltet sein."
 
 #: access/transam/xlog.c:6402
 msgid ""
@@ -1599,14 +1598,14 @@ msgid "operator class %s for access method %s"
 msgstr "Operatorklasse %s für Zugriffsmethode %s"
 
 #: catalog/dependency.c:2025
-#, fuzzy, c-format
+#, c-format
 msgid "operator %d %s of "
-msgstr "Operator %s"
+msgstr "Operator %d %s von "
 
 #: catalog/dependency.c:2062
-#, fuzzy, c-format
+#, c-format
 msgid "function %d %s of "
-msgstr "Funktion %s"
+msgstr "Funktion %d %s von "
 
 #: catalog/dependency.c:2098
 #, c-format
@@ -2041,13 +2040,10 @@ msgid "cannot determine transition data type"
 msgstr "kann Übergangsdatentyp nicht bestimmen"
 
 #: catalog/pg_aggregate.c:98
-#, fuzzy
 msgid ""
 "An aggregate using a polymorphic transition type must have at least one "
 "polymorphic argument."
-msgstr ""
-"Eine Aggregatfunktion, die »anyarray« oder »anyelement« als Übergangstyp "
-"verwendet, muss mindestens ein Argument mit einem der beiden Typen haben."
+msgstr "Eine Aggregatfunktion mit polymorphischem Übergangstyp muss mindestens ein polymorphisches Argument haben."
 
 #: catalog/pg_aggregate.c:121
 #, c-format
@@ -2067,13 +2063,10 @@ msgid "cannot determine result data type"
 msgstr "kann Ergebnisdatentyp nicht bestimmen"
 
 #: catalog/pg_aggregate.c:175
-#, fuzzy
 msgid ""
 "An aggregate returning a polymorphic type must have at least one polymorphic "
 "argument."
-msgstr ""
-"Eine Aggregatfunktion, die »anyarray« oder »anyelement« zurückgibt, muss "
-"mindestens ein Argument mit einem der beiden Typen haben."
+msgstr "Eine Aggregatfunktion, die einen polymorphischen Typ zurückgibt, muss mindestens ein polymorphisches Argument haben."
 
 #: catalog/pg_aggregate.c:184
 msgid "sort operator can only be specified for single-argument aggregates"
@@ -2348,9 +2341,9 @@ msgid "default conversion for %s to %s already exists"
 msgstr "Standardumwandlung von %s nach %s existiert bereits"
 
 #: catalog/pg_enum.c:90
-#, fuzzy, c-format
+#, c-format
 msgid "invalid enum label \"%s\", must be %d characters or less"
-msgstr "Domänennamen müssen %d oder weniger Zeichen lang sein"
+msgstr "ungültiges Enum-Label »%s«, muss %d oder weniger Zeichen haben"
 
 #: catalog/pg_namespace.c:51 commands/schemacmds.c:256
 #, c-format
@@ -2397,13 +2390,10 @@ msgid "functions cannot have more than %d arguments"
 msgstr "Funktionen können nicht mehr als %d Argumente haben"
 
 #: catalog/pg_proc.c:191 executor/functions.c:1079
-#, fuzzy
 msgid ""
 "A function returning a polymorphic type must have at least one polymorphic "
 "argument."
-msgstr ""
-"Eine Funktion, die »internal« zurückgibt, muss mindestens ein Argument vom "
-"Typ »internal« haben."
+msgstr "Eine Funktion, die einen polymorphischen Typ zurückgibt, muss mindestens ein polymorphisches Argument haben."
 
 #: catalog/pg_proc.c:196
 msgid "unsafe use of pseudo-type \"internal\""
@@ -2538,9 +2528,9 @@ msgid "fixed-size types must have storage PLAIN"
 msgstr "Typen mit fester Größe müssen Storage-Typ PLAIN haben"
 
 #: catalog/pg_type.c:653
-#, fuzzy, c-format
+#, c-format
 msgid "could not form array type name for type \"%s\""
-msgstr "konnte Arraytyp für Datentyp %s nicht finden"
+msgstr "konnte keinen Arraytypnamen für Datentyp »%s« erzeugen"
 
 #: catalog/toasting.c:83 commands/comment.c:514 commands/indexcmds.c:172
 #: commands/indexcmds.c:1328 commands/lockcmds.c:71 commands/tablecmds.c:656
@@ -3416,9 +3406,8 @@ msgid "function result type must be specified"
 msgstr "Ergebnistyp der Funktion muss angegeben werden"
 
 #: commands/functioncmds.c:779 commands/functioncmds.c:1219
-#, fuzzy
 msgid "ROWS is not applicable when function does not return a set"
-msgstr "Typumwandlungsfunktion darf keine Ergebnismenge zurückgeben"
+msgstr "ROWS ist nicht anwendbar, wenn die Funktion keine Ergebnismenge zurückgibt"
 
 #: commands/functioncmds.c:829
 #, c-format
@@ -4145,8 +4134,8 @@ msgid "inherited column \"%s\" has a type conflict"
 msgstr "geerbte Spalte »%s« hat Typkonflikt"
 
 #: commands/tablecmds.c:910 commands/tablecmds.c:1056
-#: parser/parse_coerce.c:268 parser/parse_coerce.c:1283
-#: parser/parse_coerce.c:1300 parser/parse_coerce.c:1345
+#: parser/parse_coerce.c:268 parser/parse_coerce.c:1304
+#: parser/parse_coerce.c:1321 parser/parse_coerce.c:1366
 #: parser/parse_expr.c:1638
 #, c-format
 msgid "%s versus %s"
@@ -4204,9 +4193,9 @@ msgstr "Spalte »%s« von Relation »%s« existiert bereits"
 
 #: commands/tablecmds.c:1770 commands/tablecmds.c:2791
 #: commands/tablecmds.c:2828 commands/tablecmds.c:3662
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" is being used by active queries in this session"
-msgstr "currval von Sequenz »%s« ist in dieser Sitzung noch nicht definiert"
+msgstr "Relation »%s« wird von aktiven Anfragen in dieser Sitzung verwendet"
 
 #: commands/tablecmds.c:2263
 #, c-format
@@ -4752,13 +4741,13 @@ msgid "text search parser \"%s\" already exists"
 msgstr "Textsucheparser »%s« existiert bereits"
 
 #: commands/tsearchcmds.c:447
-#, fuzzy, c-format
+#, c-format
 msgid "text search template \"%s\" does not accept options"
-msgstr "Schema »%s« existiert nicht"
+msgstr "Textsuchevorlage »%s« akzeptiert keine Optionen"
 
 #: commands/tsearchcmds.c:520
 msgid "text search template is required"
-msgstr ""
+msgstr "Textsuchevorlage muss angegeben werden"
 
 #: commands/tsearchcmds.c:588
 #, c-format
@@ -4807,13 +4796,12 @@ msgid "text search configuration parameter \"%s\" not recognized"
 msgstr "Textsuchekonfigurationsparameter »%s« nicht erkannt"
 
 #: commands/tsearchcmds.c:1311
-#, fuzzy
 msgid "cannot specify both PARSER and COPY options"
-msgstr "SCROLL und NO SCROLL können nicht beide angegeben werden"
+msgstr "Optionen PARSER und COPY können nicht beide angegeben werden"
 
 #: commands/tsearchcmds.c:1341
 msgid "text search parser is required"
-msgstr ""
+msgstr "Textsucheparser muss angegeben werden"
 
 #: commands/tsearchcmds.c:1450
 #, c-format
@@ -4841,9 +4829,9 @@ msgid "mapping for token type \"%s\" does not exist, skipping"
 msgstr "Typ »%s« existiert nicht, wird übersprungen"
 
 #: commands/tsearchcmds.c:2100 commands/tsearchcmds.c:2211
-#, fuzzy, c-format
+#, c-format
 msgid "invalid parameter list format: \"%s\""
-msgstr "ungültiges Argument für %s: »%s«"
+msgstr "ungültiges Parameterlistenformat: »%s«"
 
 #: commands/typecmds.c:219
 #, c-format
@@ -4959,14 +4947,14 @@ msgid "changing argument type of function %s from \"opaque\" to %s"
 msgstr "ändere Argumenttyp von Funktion %s von »opaque« in %s"
 
 #: commands/typecmds.c:1310
-#, fuzzy, c-format
+#, c-format
 msgid "typmod_in function %s must return type \"integer\""
-msgstr "Funktion %s muss Typ »trigger« zurückgeben"
+msgstr "typmod_in-Funktion %s muss Typ »integer« zurückgeben"
 
 #: commands/typecmds.c:1337
-#, fuzzy, c-format
+#, c-format
 msgid "typmod_out function %s must return type \"cstring\""
-msgstr "Typeausgabefunktion %s muss Typ »cstring« zurückgeben"
+msgstr "typmod_out-Funktion %s muss Typ »cstring« zurückgeben"
 
 #: commands/typecmds.c:1364
 #, c-format
@@ -5202,24 +5190,20 @@ msgstr ""
 "Seite %2$u in Relation »%1$s« ist nicht initialisiert --- wird repariert"
 
 #: commands/vacuum.c:1450 commands/vacuum.c:1515
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "relation \"%s\" TID %u/%u: XMIN_COMMITTED not set for transaction %u --- "
 "cannot shrink relation"
-msgstr ""
-"Relation »%s« TID %u/%u: InsertTransactionInProgress %u --- kann Relation "
-"nicht verkleinern"
+msgstr "Relation »%s« TID %u/%u: XMIN_COMMMITTED nicht gesetzt für Transaktion %u --- kann Relation nicht verkleinern"
 
 #: commands/vacuum.c:1483
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "relation \"%s\" TID %u/%u: dead HOT-updated tuple --- cannot shrink relation"
-msgstr ""
-"Relation »%s« TID %u/%u: InsertTransactionInProgress %u --- kann Relation "
-"nicht verkleinern"
+msgstr "Relation »%s« TID %u/%u: totes HOT-aktualisiertes Tupel --- kann Relation nicht verkleinern"
 
 #: commands/vacuum.c:1554
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "relation \"%s\" TID %u/%u: InsertTransactionInProgress %u --- cannot shrink "
 "relation"
@@ -5228,7 +5212,7 @@ msgstr ""
 "nicht verkleinern"
 
 #: commands/vacuum.c:1571
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "relation \"%s\" TID %u/%u: DeleteTransactionInProgress %u --- cannot shrink "
 "relation"
@@ -5527,11 +5511,8 @@ msgid "Table has type %s, but query expects %s."
 msgstr "Tabelle hat Typ %s, aber Anfrage erwartet %s."
 
 #: executor/execQual.c:583 executor/execQual.c:599 executor/execQual.c:609
-#, fuzzy
 msgid "table row type and query-specified row type do not match"
-msgstr ""
-"von Funktion zurückgegebene Zeile und von der Anfrage angegebene "
-"zurückzugebende Zeile stimmen nicht überein"
+msgstr "Zeilentyp der Tabelle und der von der Anfrage angegebene Zeilentyp stimmen nicht überein"
 
 #: executor/execQual.c:584
 #, c-format
@@ -5539,9 +5520,9 @@ msgid "Table row contains %d attributes, but query expects %d."
 msgstr "Tabellenzeile enthält %d Attribute, aber Anfrage erwartet %d."
 
 #: executor/execQual.c:600
-#, fuzzy, c-format
+#, c-format
 msgid "Table has type %s at ordinal position %d, but query expects %s."
-msgstr "Rückgabetyp war %s auf Position %d, aber Anfrage erwartet %s."
+msgstr "Tabelle hat Typ %s auf Position %d, aber Anfrage erwartet %s."
 
 #: executor/execQual.c:610 executor/nodeFunctionscan.c:378
 #, c-format
@@ -5895,9 +5876,9 @@ msgid "Kerberos 5 not implemented on this server"
 msgstr "Kerberos 5 ist auf diesem Server nicht implementiert"
 
 #: libpq/auth.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "Parsen %s: %s"
+msgstr "%s: %s"
 
 #: libpq/auth.c:438
 #, c-format
@@ -5937,9 +5918,8 @@ msgid "expected SSPI response, got message type %d"
 msgstr "SSPI-Antwort erwartet, Message-Typ %d empfangen"
 
 #: libpq/auth.c:751
-#, fuzzy
 msgid "could not accept SSPI security context"
-msgstr "konnte SSL-Kontext nicht erzeugen: %s"
+msgstr "konnte SSPI-Sicherheitskontext nicht akzeptieren"
 
 #: libpq/auth.c:807
 #, fuzzy
@@ -6848,7 +6828,7 @@ msgstr "SELECT FOR UPDATE/SHARE ist nicht in UNION/INTERSECT/EXCEPT erlaubt"
 msgid "SELECT FOR UPDATE/SHARE is not allowed in subqueries"
 msgstr "SELECT FOR UPDATE/SHARE ist in Unteranfragen nicht erlaubt"
 
-#: optimizer/util/clauses.c:3219
+#: optimizer/util/clauses.c:3230
 #, c-format
 msgid "SQL function \"%s\" during inlining"
 msgstr "SQL-Funktion »%s« beim Inlining"
@@ -6971,12 +6951,9 @@ msgid "operator %s is not a valid ordering operator"
 msgstr "Operator %s ist kein gültiger Sortieroperator"
 
 #: parser/parse_clause.c:1679
-#, fuzzy
 msgid ""
 "Ordering operators must be \"<\" or \">\" members of btree operator families."
-msgstr ""
-"Zeilenvergleichsoperatoren müssen einer »btree«-Operatorklasse zugeordnet "
-"sein."
+msgstr "Sortieroperatoren müssen die Mitglieder »<« oder »>« einer »btree«-Operatorfamilie sein."
 
 #: parser/analyze.c:391
 msgid "INSERT ... SELECT cannot specify INTO"
@@ -7024,7 +7001,9 @@ msgstr ""
 
 #: parser/analyze.c:1131
 msgid "Only result column names can be used, not expressions or functions."
-msgstr "Es können nur Ergebnisspaltennamen verwendet werden, keine Ausdrücke oder Funktionen."
+msgstr ""
+"Es können nur Ergebnisspaltennamen verwendet werden, keine Ausdrücke oder "
+"Funktionen."
 
 #: parser/analyze.c:1132
 msgid ""
@@ -7078,9 +7057,8 @@ msgid "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE is not supported"
 msgstr "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE wird nicht unterstützt"
 
 #: parser/analyze.c:1624
-#, fuzzy
 msgid "Holdable cursors must be READ ONLY."
-msgstr "Cursor müssen READ ONLY sein."
+msgstr "Haltbare Cursor müssen READ ONLY sein."
 
 #: parser/analyze.c:1637
 msgid "DECLARE INSENSITIVE CURSOR ... FOR UPDATE/SHARE is not supported"
@@ -7303,32 +7281,32 @@ msgid "argument of %s must be type %s, not type %s"
 msgstr "Argument von %s muss Typ %s haben, nicht Typ %s"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: parser/parse_coerce.c:1000
+#: parser/parse_coerce.c:1021
 #, c-format
 msgid "%s types %s and %s cannot be matched"
 msgstr "%s-Typen %s und %s passen nicht zusammen"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: parser/parse_coerce.c:1061
+#: parser/parse_coerce.c:1082
 #, c-format
 msgid "%s could not convert type %s to %s"
 msgstr "%s konnte Typ %s nicht in %s umwandeln"
 
-#: parser/parse_coerce.c:1282
+#: parser/parse_coerce.c:1303
 msgid "arguments declared \"anyelement\" are not all alike"
 msgstr "als »anyelement« deklariert Argumente sind nicht alle gleich"
 
-#: parser/parse_coerce.c:1299
+#: parser/parse_coerce.c:1320
 msgid "arguments declared \"anyarray\" are not all alike"
 msgstr "als »anyarray« deklarierte Argumente sind nicht alle gleich"
 
-#: parser/parse_coerce.c:1328 parser/parse_coerce.c:1464
-#: parser/parse_coerce.c:1495
+#: parser/parse_coerce.c:1349 parser/parse_coerce.c:1485
+#: parser/parse_coerce.c:1516
 #, c-format
 msgid "argument declared \"anyarray\" is not an array but type %s"
 msgstr "als »anyarray« deklariertes Argument ist kein Array sondern Typ %s"
 
-#: parser/parse_coerce.c:1344
+#: parser/parse_coerce.c:1365
 msgid ""
 "argument declared \"anyarray\" is not consistent with argument declared "
 "\"anyelement\""
@@ -7336,25 +7314,22 @@ msgstr ""
 "als »anyarray« deklariertes Argument ist nicht mit als »anyelement« "
 "deklariertem Argument konsistent"
 
-#: parser/parse_coerce.c:1355
-#, fuzzy
+#: parser/parse_coerce.c:1376
 msgid "could not determine polymorphic type because input has type \"unknown\""
-msgstr ""
-"konnte Typ für anyarray/anyelement nicht bestimmen, weil Eingabe Typ "
-"»unknown« hat"
+msgstr "konnte polymorphischen Typ nicht bestimmen, weil Eingabe Typ »unknown« hat"
 
-#: parser/parse_coerce.c:1364
+#: parser/parse_coerce.c:1385
 #, fuzzy, c-format
 msgid "type matched to anynonarray is an array type: %s"
 msgstr "als »anyarray« deklariertes Argument ist kein Array sondern Typ %s"
 
-#: parser/parse_coerce.c:1374
+#: parser/parse_coerce.c:1395
 #, c-format
 msgid "type matched to anyenum is not an enum type: %s"
 msgstr ""
 
-#: parser/parse_coerce.c:1403 parser/parse_coerce.c:1420
-#: parser/parse_coerce.c:1478 parser/parse_expr.c:1312
+#: parser/parse_coerce.c:1424 parser/parse_coerce.c:1441
+#: parser/parse_coerce.c:1499 parser/parse_expr.c:1312
 #: parser/parse_expr.c:1822 parser/parse_expr.c:1853 parser/parse_oper.c:929
 #, c-format
 msgid "could not find array type for data type %s"
@@ -7451,7 +7426,6 @@ msgid "function %s is not unique"
 msgstr "Funktion %s ist nicht eindeutig"
 
 #: parser/parse_func.c:216
-#, fuzzy
 msgid ""
 "Could not choose a best candidate function. You might need to add explicit "
 "type casts."
@@ -7460,7 +7434,6 @@ msgstr ""
 "ausdrückliche Typumwandlungen hinzufügen."
 
 #: parser/parse_func.c:225
-#, fuzzy
 msgid ""
 "No function matches the given name and argument types. You might need to add "
 "explicit type casts."
@@ -7568,7 +7541,6 @@ msgid "operator is not unique: %s"
 msgstr "Operator ist nicht eindeutig: %s"
 
 #: parser/parse_oper.c:773
-#, fuzzy
 msgid ""
 "Could not choose a best candidate operator. You might need to add explicit "
 "type casts."
@@ -7577,7 +7549,6 @@ msgstr ""
 "ausdrückliche Typumwandlungen hinzufügen."
 
 #: parser/parse_oper.c:781
-#, fuzzy
 msgid ""
 "No operator matches the given name and argument type(s). You might need to "
 "add explicit type casts."
@@ -8653,9 +8624,8 @@ msgstr ""
 "konnte Handle für Backend-Parametervariablen nicht schließen: Fehlercode %d\n"
 
 #: postmaster/postmaster.c:4540
-#, fuzzy
 msgid "could not read exit code for process\n"
-msgstr "konnte Background-Writer-Prozess nicht starten (fork-Fehler): %m"
+msgstr "konnte Exitcode des Prozesses nicht lesen\n"
 
 #: postmaster/postmaster.c:4545
 #, fuzzy
@@ -9430,7 +9400,9 @@ msgstr "Prüfen Sie den freien Festplattenplatz."
 #, c-format
 msgid ""
 "could not extend relation %u/%u/%u: wrote only %d of %d bytes at block %u"
-msgstr "konnte Relation %u/%u/%u nicht erweitern: es wurden nur %d von %d Bytes bei Block %u geschrieben"
+msgstr ""
+"konnte Relation %u/%u/%u nicht erweitern: es wurden nur %d von %d Bytes bei "
+"Block %u geschrieben"
 
 #: storage/smgr/md.c:520
 #, c-format
@@ -9445,7 +9417,9 @@ msgstr "konnte Block %u der Relation %u/%u/%u nicht lesen: %m"
 #: storage/smgr/md.c:626
 #, c-format
 msgid "could not read block %u of relation %u/%u/%u: read only %d of %d bytes"
-msgstr "konnte Block %u der Relation %u/%u/%u nicht lesen: es wurden nur %d von %d Bytes gelesen"
+msgstr ""
+"konnte Block %u der Relation %u/%u/%u nicht lesen: es wurden nur %d von %d "
+"Bytes gelesen"
 
 #: storage/smgr/md.c:677
 #, c-format
@@ -9456,7 +9430,9 @@ msgstr "konnte Block %u der Relation %u/%u/%u nicht schreiben: %m"
 #, c-format
 msgid ""
 "could not write block %u of relation %u/%u/%u: wrote only %d of %d bytes"
-msgstr "konnte Block %u der Relation %u/%u/%u nicht schreiben: es wurden nur %d von %d Bytes geschrieben"
+msgstr ""
+"konnte Block %u der Relation %u/%u/%u nicht schreiben: es wurden nur %d von %"
+"d Bytes geschrieben"
 
 #: storage/smgr/md.c:758
 #, c-format
@@ -9467,7 +9443,9 @@ msgstr "konnte Segment %u der Relation %u/%u/%u nicht öffnen: %m"
 #, c-format
 msgid ""
 "could not truncate relation %u/%u/%u to %u blocks: it's only %u blocks now"
-msgstr "konnte Relation %u/%u/%u nicht auf %u Blöcke kürzen: es sind jetzt nur %u Blöcke"
+msgstr ""
+"konnte Relation %u/%u/%u nicht auf %u Blöcke kürzen: es sind jetzt nur %u "
+"Blöcke"
 
 #: storage/smgr/md.c:823 storage/smgr/md.c:849 storage/smgr/md.c:873
 #, c-format
@@ -9971,13 +9949,13 @@ msgstr ""
 msgid "wrong affix file format for flag at line %d of affix file \"%s\""
 msgstr ""
 
-#: tsearch/ts_locale.c:83 tsearch/ts_locale.c:119
+#: tsearch/ts_locale.c:89 tsearch/ts_locale.c:126
 #: utils/adt/oracle_compat.c:102 utils/adt/oracle_compat.c:142
 #: utils/adt/oracle_compat.c:196
 msgid "invalid multibyte character for locale"
 msgstr "ungültiges Mehrbytezeichen für Locale"
 
-#: tsearch/ts_locale.c:84 tsearch/ts_locale.c:120
+#: tsearch/ts_locale.c:90 tsearch/ts_locale.c:127
 #: utils/adt/oracle_compat.c:103 utils/adt/oracle_compat.c:197
 msgid ""
 "The server's LC_CTYPE locale is probably incompatible with the database "
@@ -9986,7 +9964,7 @@ msgstr ""
 "Die LC_TYPE-Locale des Servers ist wahrscheinlich mit der Kodierung der "
 "Datenbank inkompatibel."
 
-#: tsearch/ts_locale.c:299
+#: tsearch/ts_locale.c:306
 #, fuzzy, c-format
 msgid "translation from wchar_t to server encoding failed: %m"
 msgstr "ungültige Serverkodierung %d"
@@ -10011,20 +9989,20 @@ msgstr "ungültiger Zeitzonen-Dateiname »%s«"
 msgid "could not open stopword file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht öffnen: %m"
 
-#: tsearch/wparser_def.c:1735
+#: tsearch/wparser_def.c:1741
 #, fuzzy, c-format
 msgid "unrecognized headline parameter: \"%s\""
 msgstr "unbekannter Parameter »%s«"
 
-#: tsearch/wparser_def.c:1744
+#: tsearch/wparser_def.c:1750
 msgid "MinWords should be less than MaxWords"
 msgstr ""
 
-#: tsearch/wparser_def.c:1748
+#: tsearch/wparser_def.c:1754
 msgid "MinWords should be positive"
 msgstr ""
 
-#: tsearch/wparser_def.c:1752
+#: tsearch/wparser_def.c:1758
 msgid "ShortWord should be >= 0"
 msgstr ""
 
@@ -10299,14 +10277,12 @@ msgid "typmod array must be type cstring[]"
 msgstr ""
 
 #: utils/adt/arrayutils.c:214
-#, fuzzy
 msgid "typmod array must be one-dimensional"
-msgstr "ACL-Arrays müssen eindimensional sein"
+msgstr "Typmod-Arrays müssen eindimensional sein"
 
 #: utils/adt/arrayutils.c:219
-#, fuzzy
 msgid "typmod array must not contain nulls"
-msgstr "Array darf keine NULL-Werte enthalten"
+msgstr "Typmod-Array darf keine NULL-Werte enthalten"
 
 #: utils/adt/ascii.c:75
 #, c-format
@@ -10318,13 +10294,13 @@ msgstr "Kodierungsumwandlung zwischen %s und ASCII wird nicht unterstützt"
 msgid "invalid input syntax for type boolean: \"%s\""
 msgstr "ungültige Eingabesyntax für Typ boolean: »%s«"
 
-#: utils/adt/cash.c:252
+#: utils/adt/cash.c:250
 #, c-format
 msgid "invalid input syntax for type money: \"%s\""
 msgstr "ungültige Eingabesyntax für Typ money: »%s«"
 
-#: utils/adt/cash.c:540 utils/adt/cash.c:591 utils/adt/cash.c:640
-#: utils/adt/cash.c:692 utils/adt/cash.c:742 utils/adt/float.c:758
+#: utils/adt/cash.c:543 utils/adt/cash.c:594 utils/adt/cash.c:643
+#: utils/adt/cash.c:695 utils/adt/cash.c:745 utils/adt/float.c:758
 #: utils/adt/float.c:823 utils/adt/float.c:2458 utils/adt/float.c:2521
 #: utils/adt/geo_ops.c:3957 utils/adt/int.c:719 utils/adt/int.c:859
 #: utils/adt/int.c:953 utils/adt/int.c:1037 utils/adt/int.c:1062
@@ -10340,9 +10316,8 @@ msgstr "\"char\" ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/date.c:65 utils/adt/timestamp.c:76 utils/adt/varbit.c:44
 #: utils/adt/varchar.c:43
-#, fuzzy
 msgid "invalid type modifier"
-msgstr "ungültiger Typname: »%s«"
+msgstr "ungültige Typmodifikation"
 
 #: utils/adt/date.c:70
 #, c-format
@@ -10364,9 +10339,8 @@ msgid "date out of range: \"%s\""
 msgstr "date ist außerhalb des gültigen Bereichs: »%s«"
 
 #: utils/adt/date.c:352 utils/adt/date.c:383
-#, fuzzy
 msgid "date out of range for timestamp"
-msgstr "date ist außerhalb des gültigen Bereichs: »%s«"
+msgstr "Datum ist außerhalb des gültigen Bereichs für Typ »timestamp«"
 
 #: utils/adt/date.c:806 utils/adt/date.c:849 utils/adt/date.c:1389
 #: utils/adt/date.c:1426 utils/adt/date.c:2290 utils/adt/formatting.c:3198
@@ -10512,14 +10486,12 @@ msgid "could not determine actual enum type"
 msgstr "konnte Eingabedatentypen nicht bestimmen"
 
 #: utils/adt/float.c:54
-#, fuzzy
 msgid "value out of range: overflow"
-msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »real«: Überlauf"
+msgstr "Wert ist außerhalb des gültigen Bereichs: Überlauf"
 
 #: utils/adt/float.c:59
-#, fuzzy
 msgid "value out of range: underflow"
-msgstr "Wert ist außerhalb des gültigen Bereichs für Typ »real«: Unterlauf"
+msgstr "Wert ist außerhalb des gültigen Bereichs: Unterlauf"
 
 #: utils/adt/float.c:196 utils/adt/float.c:237 utils/adt/float.c:288
 #, c-format
@@ -10576,13 +10548,12 @@ msgid "count must be greater than zero"
 msgstr "Anzahl muss größer als null sein"
 
 #: utils/adt/float.c:2680 utils/adt/numeric.c:912
-#, fuzzy
 msgid "operand, lower bound and upper bound cannot be NaN"
-msgstr "Untergrenze kann nicht gleich der Obergrenze sein"
+msgstr "Operand, Untergrenze und Obergrenze dürfen nicht NaN sein"
 
 #: utils/adt/float.c:2686
 msgid "lower and upper bounds must be finite"
-msgstr ""
+msgstr "Untergrenze und Obergrenze müssen endlich sein"
 
 #: utils/adt/float.c:2724 utils/adt/numeric.c:925
 msgid "lower bound cannot equal upper bound"
@@ -10823,7 +10794,7 @@ msgstr "AM/PM-Stunde muss zwischen 1 und 12 sein"
 msgid "cannot calculate day of year without year information"
 msgstr "kann Tag des Jahres nicht berechnen ohne Jahrinformationen"
 
-#: utils/adt/formatting.c:4440
+#: utils/adt/formatting.c:4442
 msgid "\"RN\" not supported"
 msgstr "»RN« wird nicht unterstützt"
 
@@ -10848,9 +10819,9 @@ msgstr "konnte Positionszeiger in Datei »%s« nicht setzen: %m"
 msgid "requested length cannot be negative"
 msgstr "verlangte Länge darf nicht negativ sein"
 
-#: utils/adt/genfile.c:127 utils/adt/oracle_compat.c:611
-#: utils/adt/oracle_compat.c:709 utils/adt/oracle_compat.c:1190
-#: utils/adt/oracle_compat.c:1480
+#: utils/adt/genfile.c:127 utils/adt/oracle_compat.c:613
+#: utils/adt/oracle_compat.c:711 utils/adt/oracle_compat.c:1192
+#: utils/adt/oracle_compat.c:1482
 msgid "requested length too large"
 msgstr "verlangte Länge zu groß"
 
@@ -11240,24 +11211,24 @@ msgstr "oidvector-Wert hat zu viele Elemente"
 msgid "invalid oidvector data"
 msgstr "ungültige oidvector-Daten"
 
-#: utils/adt/oracle_compat.c:219 utils/adt/oracle_compat.c:229
+#: utils/adt/oracle_compat.c:221 utils/adt/oracle_compat.c:231
 #, c-format
 msgid "UTF-16 to UTF-8 translation failed: %lu"
 msgstr "Übersetzung von UTF-16 nach UTF-8 fehlgeschlagen: %lu"
 
-#: utils/adt/oracle_compat.c:1327
+#: utils/adt/oracle_compat.c:1329
 #, fuzzy
 msgid "requested character too large"
 msgstr "verlangte Länge zu groß"
 
-#: utils/adt/oracle_compat.c:1373 utils/adt/oracle_compat.c:1427
+#: utils/adt/oracle_compat.c:1375 utils/adt/oracle_compat.c:1429
 #, c-format
 msgid "requested character too large for encoding: %d"
-msgstr ""
+msgstr "gewünschtes Zeichen ist zu groß für die Kodierung: %d"
 
-#: utils/adt/oracle_compat.c:1420
+#: utils/adt/oracle_compat.c:1422
 msgid "null character not permitted"
-msgstr ""
+msgstr "Null-Zeichen ist nicht erlaubt"
 
 #: utils/adt/pseudotypes.c:94
 msgid "cannot accept a value of type any"
@@ -11343,7 +11314,7 @@ msgstr "ungültige Option für regulären Ausdruck: »%c«"
 
 #: utils/adt/regexp.c:883
 msgid "regexp_split does not support the global option"
-msgstr ""
+msgstr "regexp_split unterstützt die »Global«-Option nicht"
 
 #: utils/adt/regproc.c:121 utils/adt/regproc.c:141
 #, c-format
@@ -11649,7 +11620,7 @@ msgstr "Intervall-Zeitzone »%s« darf keinen Monat angeben"
 
 #: utils/adt/tsginidx.c:74
 msgid "query requires full scan, which is not supported by GIN indexes"
-msgstr ""
+msgstr "Anfrage benötigt einen vollen Scan, was durch einen GIN-Index nicht unterstützt wird"
 
 #: utils/adt/tsginidx.c:100
 #, fuzzy
@@ -11876,7 +11847,7 @@ msgstr "nicht unterstützte XML-Funktionalität"
 
 #: utils/adt/xml.c:125
 msgid "This functionality requires the server to be built with libxml support."
-msgstr ""
+msgstr "Diese Funktionalität verlangt, dass der Server mit Libxml-Unterstützung gebaut wird."
 
 #: utils/adt/xml.c:126
 msgid "You need to rebuild PostgreSQL using --with-libxml."
@@ -11897,16 +11868,16 @@ msgstr "kein XML-Dokument"
 
 #: utils/adt/xml.c:681 utils/adt/xml.c:704
 msgid "invalid XML processing instruction"
-msgstr ""
+msgstr "ungültige XML-Verarbeitungsanweisung"
 
 #: utils/adt/xml.c:682
 #, c-format
 msgid "XML processing instruction target name cannot be \"%s\"."
-msgstr ""
+msgstr "Die Zielangabe der XML-Verarbeitungsanweisung darf nicht »%s« sein."
 
 #: utils/adt/xml.c:705
 msgid "XML processing instruction cannot contain \"?>\"."
-msgstr ""
+msgstr "XML-Verarbeitungsanweisung darf nicht »?>« enthalten."
 
 #: utils/adt/xml.c:942
 msgid "could not initialize XML library"
@@ -11916,7 +11887,7 @@ msgstr "konnte XML-Bibliothek nicht initialisieren"
 #, c-format
 msgid ""
 "libxml2 has incompatible char type: sizeof(char)=%u, sizeof(xmlChar)=%u."
-msgstr ""
+msgstr "libxml2 hat inkompatiblen char-Typ: sizeof(char)=%u, sizeof(xmlChar)=%u."
 
 #: utils/adt/xml.c:2085
 #, fuzzy
@@ -11938,7 +11909,7 @@ msgstr "leerer XPath-Ausdruck"
 
 #: utils/adt/xml.c:3386
 msgid "neither namespace name nor URI may be null"
-msgstr ""
+msgstr "weder Namensraumname noch URI dürfen NULL sein"
 
 #: utils/adt/xml.c:3393
 #, fuzzy, c-format
@@ -11967,7 +11938,7 @@ msgstr "keine Ausgabefunktion verfügbar für Typ %s"
 
 #: utils/cache/plancache.c:505
 msgid "cached plan must not change result type"
-msgstr ""
+msgstr "gecachter Plan darf den Ergebnistyp nicht ändern"
 
 #: utils/cache/relcache.c:3655
 #, c-format
@@ -14441,25 +14412,11 @@ msgstr "unbekannter win32-Fehlercode: %lu"
 msgid "unrecognized error %d"
 msgstr "unbekannter Fehler %d"
 
-#~ msgid "\"%s\" is a TOAST relation"
-#~ msgstr "»%s« ist eine TOAST-Relation"
-
 #~ msgid "\"%s\" is a table's row type"
 #~ msgstr "»%s« ist der Zeilentyp einer Tabelle"
 
 #~ msgid "could not wait on child process handle: error code %d\n"
 #~ msgstr "Warten auf Kindprozess-Handle fehlgeschlagen: Fehlercode %d\n"
-
-#, fuzzy
-#~ msgid "only supported for one-dimensional array"
-#~ msgstr "Argument muss entweder leer oder ein eindimensionales Array sein"
-
-#, fuzzy
-#~ msgid "position value too large"
-#~ msgstr "verlangte Länge zu groß"
-
-#~ msgid "LIKE INCLUDING INDEXES is not implemented"
-#~ msgstr "LIKE INCLUDING INDEXES ist nicht implementiert"
 
 #~ msgid ""
 #~ "ORDER BY on a UNION/INTERSECT/EXCEPT result must be on one of the result "
@@ -14467,9 +14424,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgstr ""
 #~ "ORDER BY mit dem Ergebnis von UNION/INTERSECT/EXCEPT muss sich auf eine "
 #~ "der Ergebnisspalten beziehen"
-
-#~ msgid "argument of %s must be type integer, not type %s"
-#~ msgstr "Argument von %s muss Typ integer haben, nicht Typ %s"
 
 #~ msgid "DECIMAL precision %d must be between 1 and %d"
 #~ msgstr "Präzision von DECIMAL (%d) muss zwischen 1 und %d liegen"
@@ -14507,9 +14461,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgid "could not read from log file %u, segment %u at offset %u: %m"
 #~ msgstr "konnte nicht aus Logdatei %u, Segment %u bei Position %u lesen: %m"
 
-#~ msgid "database system is ready"
-#~ msgstr "Datenbanksystem ist bereit"
-
 #~ msgid "checkpoint starting"
 #~ msgstr "Checkpoint-Prozess startet"
 
@@ -14519,31 +14470,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgstr ""
 #~ "Checkpoint vollständig; %d Transaktionslogdatei(en) hinzugefügt, %d "
 #~ "entfernt, %d wiederverwendet"
-
-#~ msgid "column name \"%s\" is duplicated"
-#~ msgstr "Spaltenname »%s« besteht mehrfach"
-
-#~ msgid ""
-#~ "A function returning \"anyarray\" or \"anyelement\" must have at least "
-#~ "one argument of either type."
-#~ msgstr ""
-#~ "Eine Funktion, die »anyarray« oder »anyelement« zurückgibt, muss "
-#~ "mindestens ein Argument von einem dieser Typen haben."
-
-#~ msgid "%d objects in this database"
-#~ msgstr "%d Objekte in dieser Datenbank"
-
-#~ msgid "%d shared objects"
-#~ msgstr "%d geteilte Objekte"
-
-#~ msgid "column \"%s\" duplicated"
-#~ msgstr "Spaltenname »%s« besteht mehrfach"
-
-#~ msgid "inherited relation \"%s\" duplicated"
-#~ msgstr "geerbte Relation »%s« ist doppelt angegeben"
-
-#~ msgid "duplicate check constraint name \"%s\""
-#~ msgstr "doppelter Check-Constraint-Name »%s«"
 
 #~ msgid "foreign key constraint \"%s\" will require costly sequential scans"
 #~ msgstr ""
@@ -14572,12 +14498,6 @@ msgstr "unbekannter Fehler %d"
 
 #~ msgid "btree procedures must have index type as first input"
 #~ msgstr "btree-Prozeduren müssen Indextyp als erste Eingabe haben"
-
-#~ msgid "must be superuser to drop procedural language"
-#~ msgstr "nur Superuser können prozedurale Sprachen löschen"
-
-#~ msgid "must be superuser to rename procedural language"
-#~ msgstr "nur Superuser können prozedurale Sprachen umbenennen"
 
 #~ msgid "could not delete directory \"%s\": %m"
 #~ msgstr "konnte Verzeichnis »%s« nicht löschen: %m"
@@ -14675,16 +14595,6 @@ msgstr "unbekannter Fehler %d"
 
 #~ msgid "invalid input syntax for type time with time zone: \"%s\""
 #~ msgstr "ungültige Eingabesyntax für Typ time with time zone: »%s«"
-
-#~ msgid "type \"double precision\" value out of range: overflow"
-#~ msgstr ""
-#~ "Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: "
-#~ "Überlauf"
-
-#~ msgid "type \"double precision\" value out of range: underflow"
-#~ msgstr ""
-#~ "Wert ist außerhalb des gültigen Bereichs für Typ »double precision«: "
-#~ "Unterlauf"
 
 #~ msgid "text too long to convert to MAC address"
 #~ msgstr "Text ist zu lang um ihn in eine MAC-Adresse umzuwandeln"
