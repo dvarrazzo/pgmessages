@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: psql-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-28 18:16-0400\n"
-"PO-Revision-Date: 2007-11-29 10:14-0800\n"
+"PO-Revision-Date: 2007-12-05 00:28-0800\n"
 "Last-Translator: Devrim GÜNDÜZ <devrim@commandprompt.com>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -840,24 +840,24 @@ msgid "  \\df [PATTERN]  list functions (add \"+\" for more detail)\n"
 msgstr "  \\df [PATTERN]  fonksiyonları göster (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:222
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dF [PATTERN]  list text search configurations (add \"+\" for more detail)\n"
-msgstr "  \\df [PATTERN]  fonksiyonları göster (daha fazla ayrıntı için \"+\" ekleyin)\n"
+msgstr "  \\dF [PATTERN]  metin arama yapılandırmalarını listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:223
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dFd [PATTERN] list text search dictionaries (add \"+\" for more detail)\n"
-msgstr "  \\db [PATTERN]  tablespaceleri listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
+msgstr "  \\dFd [PATTERN]  metin arama sözlüklerini listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:224
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dFt [PATTERN] list text search templates\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\dFt [PATTERN]  metin arama şablonlarını listele\n"
 
 #: help.c:225
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dFp [PATTERN] list text search parsers (add \"+\" for more detail)\n"
-msgstr "  \\db [PATTERN]  tablespaceleri listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
+msgstr "  \\dFp [PATTERN] metin arama ayrıştırıcılarını listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
 
 #: help.c:226
 #, c-format
@@ -1732,7 +1732,7 @@ msgstr "Yöntem"
 
 #: describe.c:2106
 msgid "Get next token"
-msgstr ""
+msgstr "Sıradaki tokeni al"
 
 #: describe.c:2107
 msgid "End parse"
@@ -1740,11 +1740,11 @@ msgstr "Ayrıştırmayı bitir"
 
 #: describe.c:2108
 msgid "Get headline"
-msgstr ""
+msgstr "Başlığı al"
 
 #: describe.c:2109
 msgid "Get token types"
-msgstr ""
+msgstr "Token tiplerini al"
 
 #: describe.c:2119
 #, c-format
@@ -1763,12 +1763,12 @@ msgstr "Token adı"
 #: describe.c:2148
 #, c-format
 msgid "Token types for parser \"%s.%s\""
-msgstr ""
+msgstr "\"%s.%s\" ayrıştırıcısı için token tipleri"
 
 #: describe.c:2150
 #, c-format
 msgid "Token types for parser \"%s\""
-msgstr ""
+msgstr "\"%s\" ayrıştırıcısı için token tipleri"
 
 #: describe.c:2190
 msgid "Template"
@@ -1788,7 +1788,7 @@ msgstr "Init"
 
 #: describe.c:2246
 msgid "Lexize"
-msgstr ""
+msgstr "Lexize"
 
 #: describe.c:2273
 msgid "List of text search templates"
@@ -1799,13 +1799,13 @@ msgid "List of text search configurations"
 msgstr "Metin arama yapılandırmalarının listesi"
 
 #: describe.c:2365
-#, fuzzy, c-format
+#, c-format
 msgid "Did not find any text search configuration named \"%s\".\n"
-msgstr "\"%s\" adında nesne bulunamadı.\n"
+msgstr "\"%s\" adında metin arama yapılandırması bulunamadı.\n"
 
 #: describe.c:2431
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 #: describe.c:2432
 msgid "Dictionaries"
@@ -1822,18 +1822,22 @@ msgid "Text search configuration \"%s\""
 msgstr "Metin arama yapılandırması \"%s\""
 
 #: describe.c:2448
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "Parser: \"%s.%s\""
-msgstr "Tablo \"%s.%s\""
+msgstr ""
+"\n"
+"Ayrıştırıcı \"%s.%s\""
 
 #: describe.c:2450
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "Parser: \"%s\""
-msgstr " \"%s\" kullanıcısı"
+msgstr ""
+"\n"
+"Ayrıştırıcı: \"%s\""
 
 #: sql_help.h:25
 #: sql_help.h:469
@@ -1875,7 +1879,6 @@ msgid "change a database"
 msgstr "veritabanını değiştir"
 
 #: sql_help.h:38
-#, fuzzy
 msgid ""
 "ALTER DATABASE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -1892,18 +1895,20 @@ msgid ""
 "ALTER DATABASE name RESET configuration_parameter\n"
 "ALTER DATABASE name RESET ALL"
 msgstr ""
-"ALTER DATABASE name [ [ WITH ] option [ ... ] ]\n"
+"ALTER DATABASE veritabanı_adı [ [ WITH ] seçene [ ... ] ]\n"
 "\n"
-"where option can be:\n"
+"seçenek aşağıdakilerden birisi olabilir:\n"
 "\n"
 "    CONNECTION LIMIT connlimit\n"
 "\n"
-"ALTER DATABASE name SET parameter { TO | = } { value | DEFAULT }\n"
-"ALTER DATABASE name RESET parameter\n"
+"ALTER DATABASE veritabanı_adı RENAME TO yeni_adı\n"
 "\n"
-"ALTER DATABASE name RENAME TO newname\n"
+"ALTER DATABASE veritabanı_adı OWNER TO yeni_sahibi\n"
 "\n"
-"ALTER DATABASE name OWNER TO new_owner"
+"ALTER DATABASE veritabanı_adı SET yapılandırma_parametresi { TO | = } { value | DEFAULT }\n"
+"ALTER DATABASE veritabanı_adı SET yapılandırma_parametresi FROM CURRENT\n"
+"ALTER DATABASE veritabanı_adı RESET yapılandırma_parametresi\n"
+"ALTER DATABASE veritabanı_adı RESET ALL"
 
 #: sql_help.h:41
 msgid "change the definition of a domain"
@@ -1942,7 +1947,6 @@ msgid "change the definition of a function"
 msgstr "fonksiyon tanımını değiştir"
 
 #: sql_help.h:46
-#, fuzzy
 msgid ""
 "ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
 "    action [ ... ] [ RESTRICT ]\n"
@@ -1965,22 +1969,26 @@ msgid ""
 "    RESET configuration_parameter\n"
 "    RESET ALL"
 msgstr ""
-"ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
-"    action [, ... ] [ RESTRICT ]\n"
-"ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
-"    RENAME TO new_name\n"
-"ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
-"    OWNER TO new_owner\n"
-"ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
-"    SET SCHEMA new_schema\n"
+"ALTER FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
+"    işlem [ ... ] [ RESTRICT ]\n"
+"ALTER FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
+"    RENAME TO yeni_adı\n"
+"ALTER FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
+"    OWNER TO yeni_sahibi\n"
+"ALTER FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
+"    SET SCHEMA yeni_şema\n"
 "\n"
-"where action is one of:\n"
+"işlem aşağıdakilerden birisi olabilir:\n"
 "\n"
 "    CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT\n"
 "    IMMUTABLE | STABLE | VOLATILE\n"
 "    [ EXTERNAL ] SECURITY INVOKER | [ EXTERNAL ] SECURITY DEFINER\n"
-"    COST execution_cost\n"
-"    ROWS result_rows"
+"    COST çalıştırma_maliyeti(execution cost)\n"
+"    ROWS result_rows\n"
+"    SET yapılandırma_parametresi { TO | = } { value | DEFAULT }\n"
+"    SET yapılandırma_parametresi FROM CURRENT\n"
+"    RESET yapılandırma_parametresi\n"
+"    RESET ALL"
 
 #: sql_help.h:49
 msgid "change role name or membership"
@@ -2080,7 +2088,6 @@ msgid "change a database role"
 msgstr "veritabanı dolünü değiştir"
 
 #: sql_help.h:74
-#, fuzzy
 msgid ""
 "ALTER ROLE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2103,9 +2110,9 @@ msgid ""
 "ALTER ROLE name RESET configuration_parameter\n"
 "ALTER ROLE name RESET ALL"
 msgstr ""
-"ALTER ROLE name [ [ WITH ] option [ ... ] ]\n"
+"ALTER ROLE rol_adı [ [ WITH ] seçenek [ ... ] ]\n"
 "\n"
-"where option can be:\n"
+"seçenek aşağıdakilerden birisi olabilir:\n"
 "    \n"
 "      SUPERUSER | NOSUPERUSER\n"
 "    | CREATEDB | NOCREATEDB\n"
@@ -2113,14 +2120,16 @@ msgstr ""
 "    | CREATEUSER | NOCREATEUSER\n"
 "    | INHERIT | NOINHERIT\n"
 "    | LOGIN | NOLOGIN\n"
-"    | CONNECTION LIMIT connlimit\n"
+"    | CONNECTION LIMIT bağlantı_sayısı_sınırı\n"
 "    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password'\n"
 "    | VALID UNTIL 'timestamp' \n"
 "\n"
-"ALTER ROLE name RENAME TO newname\n"
+"ALTER ROLE rol_adı RENAME TO yeni_adı\n"
 "\n"
-"ALTER ROLE name SET configuration_parameter { TO | = } { value | DEFAULT }\n"
-"ALTER ROLE name RESET configuration_parameter"
+"ALTER ROLE rol_adı SET yapılandırma_parametresi { TO | = } { value | DEFAULT }\n"
+"ALTER ROLE rol_adı SET yapılandırma_parametresi FROM CURRENT\n"
+"ALTER ROLE rol_adı RESET yapılandırma_parametresi\n"
+"ALTER ROLE rol_adı RESET ALL"
 
 #: sql_help.h:77
 msgid "change the definition of a schema"
@@ -2139,7 +2148,6 @@ msgid "change the definition of a sequence generator"
 msgstr "sequence üretecinin tanımını değiştir"
 
 #: sql_help.h:82
-#, fuzzy
 msgid ""
 "ALTER SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
@@ -2148,11 +2156,12 @@ msgid ""
 "ALTER SEQUENCE name RENAME TO new_name\n"
 "ALTER SEQUENCE name SET SCHEMA new_schema"
 msgstr ""
-"ALTER SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
-"    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
+"ALTER SEQUENCE sequence_adı [ INCREMENT [ BY ] arttırma_değeri ]\n"
+"    [ MINVALUE en_az_değer | NO MINVALUE ] [ MAXVALUE en_fazla_değer | NO MAXVALUE ]\n"
 "    [ RESTART [ WITH ] start ] [ CACHE cache ] [ [ NO ] CYCLE ]\n"
-"    [ OWNED BY { table.column | NONE } ]\n"
-"ALTER SEQUENCE name SET SCHEMA new_schema"
+"    [ OWNED BY { tablo.kolon | NONE } ]\n"
+"ALTER SEQUENCE sequence_adı RENAME TO yeni_şema\n"
+"ALTER SEQUENCE sequence_adı SET SCHEMA yeni_şema"
 
 #: sql_help.h:85
 msgid "change the definition of a table"
@@ -2259,9 +2268,8 @@ msgid "ALTER TRIGGER name ON table RENAME TO newname"
 msgstr "ALTER TRIGGER trigger_adı ON tablo_adı RENAME TO yeni_ad"
 
 #: sql_help.h:97
-#, fuzzy
 msgid "change the definition of a text search configuration"
-msgstr "bir dönüşümün tanımını değiştir"
+msgstr "metin arama yapılandırmasının tanımını değiştir"
 
 #: sql_help.h:98
 msgid ""
@@ -2292,9 +2300,8 @@ msgstr ""
 "ALTER TEXT SEARCH CONFIGURATION name OWNER TO newowner"
 
 #: sql_help.h:101
-#, fuzzy
 msgid "change the definition of a text search dictionary"
-msgstr "fonksiyon tanımını değiştir"
+msgstr "metin arama sözlüğünün tanımını değiştir"
 
 #: sql_help.h:102
 msgid ""
@@ -2311,24 +2318,20 @@ msgstr ""
 "ALTER TEXT SEARCH DICTIONARY ad OWNER TO yeni sahibi"
 
 #: sql_help.h:105
-#, fuzzy
 msgid "change the definition of a text search parser"
-msgstr "tablespace tanımını değiştir"
+msgstr "metin arama ayrıştırıcısının tanımını değiştir"
 
 #: sql_help.h:106
-#, fuzzy
 msgid "ALTER TEXT SEARCH PARSER name RENAME TO newname"
-msgstr "ALTER TRIGGER trigger_adı ON tablo_adı RENAME TO yeni_ad"
+msgstr "ALTER TEXT SEARCH PARSER ayrıştırıcı_adı RENAME TO yeni_adı"
 
 #: sql_help.h:109
-#, fuzzy
 msgid "change the definition of a text search template"
-msgstr "şema tanımını değiştir"
+msgstr "metin arama şablonunun tanımını değiştir"
 
 #: sql_help.h:110
-#, fuzzy
 msgid "ALTER TEXT SEARCH TEMPLATE name RENAME TO newname"
-msgstr "ALTER TRIGGER trigger_adı ON tablo_adı RENAME TO yeni_ad"
+msgstr "ALTER TEXT SEARCH TEMPLATE şablon_adı RENAME TO yeni_adı"
 
 #: sql_help.h:113
 msgid "change the definition of a type"
@@ -2343,7 +2346,6 @@ msgstr ""
 "ALTER TYPE name SET SCHEMA new_schema"
 
 #: sql_help.h:118
-#, fuzzy
 msgid ""
 "ALTER USER name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2366,9 +2368,9 @@ msgid ""
 "ALTER USER name RESET configuration_parameter\n"
 "ALTER USER name RESET ALL"
 msgstr ""
-"ALTER USER name [ [ WITH ] option [ ... ] ]\n"
+"ALTER USER kullanıcı_adı [ [ WITH ] seçenek [ ... ] ]\n"
 "\n"
-"where option can be:\n"
+"seçenek aşağıdakilerden birisi olabilir:\n"
 "    \n"
 "      SUPERUSER | NOSUPERUSER\n"
 "    | CREATEDB | NOCREATEDB\n"
@@ -2376,33 +2378,32 @@ msgstr ""
 "    | CREATEUSER | NOCREATEUSER\n"
 "    | INHERIT | NOINHERIT\n"
 "    | LOGIN | NOLOGIN\n"
-"    | CONNECTION LIMIT connlimit\n"
+"    | CONNECTION LIMIT bağlantı_sayısı_sınırı\n"
 "    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password'\n"
 "    | VALID UNTIL 'timestamp' \n"
 "\n"
-"ALTER USER name RENAME TO newname\n"
+"ALTER USER kullanıcı_adı RENAME TO yeni_adı\n"
 "\n"
-"ALTER USER name SET configuration_parameter { TO | = } { value | DEFAULT }\n"
-"ALTER USER name RESET configuration_parameter"
+"ALTER USER kullanıcı_adı SET yapılandırma_parametresi { TO | = } { value | DEFAULT }\n"
+"ALTER USER kullanıcı_adı SET yapılandırma_parametresi FROM CURRENT\n"
+"ALTER USER kullanıcı_adı RESET yapılandırma_parametresi\n"
+"ALTER USER kullanıcı_adı RESET ALL"
 
 #: sql_help.h:121
-#, fuzzy
 msgid "change the definition of a view"
-msgstr "index tanımını değiştir"
+msgstr "view tanımını değiştir"
 
 #: sql_help.h:122
-#, fuzzy
 msgid "ALTER VIEW name RENAME TO newname"
-msgstr "ALTER TRIGGER trigger_adı ON tablo_adı RENAME TO yeni_ad"
+msgstr "ALTER VIEW view_adı RENAME TO yeni_ad"
 
 #: sql_help.h:125
 msgid "collect statistics about a database"
 msgstr "database hakkında istatistikleri topla"
 
 #: sql_help.h:126
-#, fuzzy
 msgid "ANALYZE [ VERBOSE ] [ table [ ( column [, ...] ) ] ]"
-msgstr "ANALYZE [ VERBOSE ] [ tablo_adı [ (kolon [, ...] ) ] ]"
+msgstr "ANALYZE [ VERBOSE ] [ tablo [ ( kolon [, ...] ) ] ]"
 
 #: sql_help.h:129
 #: sql_help.h:517
@@ -2446,12 +2447,11 @@ msgid "cluster a table according to an index"
 msgstr "indexe dayanarak tabloyu cluster işlemine tabi tut"
 
 #: sql_help.h:142
-#, fuzzy
 msgid ""
 "CLUSTER tablename [ USING indexname ]\n"
 "CLUSTER"
 msgstr ""
-"CLUSTER tablename  USING indexname \n"
+"CLUSTER tablo_adı  USING index_adı \n"
 "CLUSTER"
 
 #: sql_help.h:145
@@ -2459,7 +2459,6 @@ msgid "define or change the comment of an object"
 msgstr "Nesne yorumunu tanımla ya da değiştir"
 
 #: sql_help.h:146
-#, fuzzy
 msgid ""
 "COMMENT ON\n"
 "{\n"
@@ -2494,29 +2493,33 @@ msgid ""
 msgstr ""
 "COMMENT ON\n"
 "{\n"
-"  TABLE object_name |\n"
-"  COLUMN table_name.column_name |\n"
+"  TABLE nesne_ado |\n"
+"  COLUMN tablo_adı.kolon_adı |\n"
 "  AGGREGATE agg_name (agg_type [, ...] ) |\n"
 "  CAST (sourcetype AS targettype) |\n"
 "  CONSTRAINT constraint_name ON table_name |\n"
-"  CONVERSION object_name |\n"
-"  DATABASE object_name |\n"
-"  DOMAIN object_name |\n"
-"  FUNCTION func_name ( [ [ argmode ] [ argname ] argtype [, ...] ] ) |\n"
-"  INDEX object_name |\n"
+"  CONVERSION nesne_adı |\n"
+"  DATABASE nesne_adı |\n"
+"  DOMAIN nesne_adı |\n"
+"  FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] ) |\n"
+"  INDEX nesne_adı |\n"
 "  LARGE OBJECT large_object_oid |\n"
 "  OPERATOR op (leftoperand_type, rightoperand_type) |\n"
-"  OPERATOR CLASS object_name USING index_method |\n"
-"  OPERATOR FAMILY object_name USING index_method |\n"
-"  [ PROCEDURAL ] LANGUAGE object_name |\n"
-"  ROLE object_name |\n"
-"  RULE rule_name ON table_name |\n"
-"  SCHEMA object_name |\n"
-"  SEQUENCE object_name |\n"
-"  TABLESPACE object_name |\n"
-"  TRIGGER trigger_name ON table_name |\n"
-"  TYPE object_name |\n"
-"  VIEW object_name\n"
+"  OPERATOR CLASS nesne_adı USING index_yöntemi |\n"
+"  OPERATOR FAMILY nesne_adı USING index_yöntemi |\n"
+"  [ PROCEDURAL ] LANGUAGE nesne_adı |\n"
+"  ROLE nesne_adı |\n"
+"  RULE kural_adı ON tablo_adı |\n"
+"  SCHEMA nesne_adı |\n"
+"  SEQUENCE nesne_adı |\n"
+"  TABLESPACE nesne_adı |\n"
+"  TEXT SEARCH CONFIGURATION nesne_adı |\n"
+"  TEXT SEARCH DICTIONARY nesne_adı |\n"
+"  TEXT SEARCH PARSER nesne_adı |\n"
+"  TEXT SEARCH TEMPLATE nesne_adı |\n"
+"  TRIGGER tetikleyici_adı ON table_name |\n"
+"  TYPE nesne_adı |\n"
+"  VIEW nesne_adı\n"
 "} IS 'text'"
 
 #: sql_help.h:149
@@ -2741,7 +2744,6 @@ msgid "define a new function"
 msgstr "yeni fonksiyonu tanımla"
 
 #: sql_help.h:186
-#, fuzzy
 msgid ""
 "CREATE [ OR REPLACE ] FUNCTION\n"
 "    name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
@@ -2759,7 +2761,7 @@ msgid ""
 "    [ WITH ( attribute [, ...] ) ]"
 msgstr ""
 "CREATE [ OR REPLACE ] FUNCTION\n"
-"    name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
+"    fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
 "    [ RETURNS rettype ]\n"
 "  { LANGUAGE langname\n"
 "    | IMMUTABLE | STABLE | VOLATILE\n"
@@ -2767,6 +2769,7 @@ msgstr ""
 "    | [ EXTERNAL ] SECURITY INVOKER | [ EXTERNAL ] SECURITY DEFINER\n"
 "    | COST execution_cost\n"
 "    | ROWS result_rows\n"
+"    | SET yapılandırma_parametresi { TO value | = value | FROM CURRENT }\n"
 "    | AS 'definition'\n"
 "    | AS 'obj_file', 'link_symbol'\n"
 "  } ...\n"
@@ -2989,7 +2992,6 @@ msgid "define a new table"
 msgstr "yeni tablo tanımla"
 
 #: sql_help.h:230
-#, fuzzy
 msgid ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name ( [\n"
 "  { column_name data_type [ DEFAULT default_expr ] [ column_constraint [ ... ] ]\n"
@@ -3029,30 +3031,30 @@ msgid ""
 "[ WITH ( storage_parameter [= value] [, ... ] ) ]\n"
 "[ USING INDEX TABLESPACE tablespace ]"
 msgstr ""
-"CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name ( [\n"
-"  { column_name data_type [ DEFAULT default_expr ] [ column_constraint [ ... ] ]\n"
-"    | table_constraint\n"
-"    | LIKE parent_table [ { INCLUDING | EXCLUDING } { DEFAULTS | CONSTRAINTS } ] ... }\n"
+"CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE tablo_adı ( [\n"
+"  { kolon_adı veri_tipi [ DEFAULT default_expr ] [ kolon_kısıtlayıcısı [ ... ] ]\n"
+"    | tablo_kısıtlayıcısı\n"
+"    | LIKE parent_table [ { INCLUDING | EXCLUDING } { DEFAULTS | CONSTRAINTS | INDEXES } ] ... }\n"
 "    [, ... ]\n"
 "] )\n"
 "[ INHERITS ( parent_table [, ... ] ) ]\n"
 "[ WITH ( storage_parameter [= value] [, ... ] ) | WITH OIDS | WITHOUT OIDS ]\n"
 "[ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
-"[ TABLESPACE tablespace ]\n"
+"[ TABLESPACE tablo_uzayı ]\n"
 "\n"
-"where column_constraint is:\n"
+"kolon_kısıtlayıcısı aşağıdakilerden birisi olabilir:\n"
 "\n"
-"[ CONSTRAINT constraint_name ]\n"
+"im[ CONSTRAINT constraint_name ]\n"
 "{ NOT NULL | \n"
 "  NULL | \n"
-"  UNIQUE index_parameters |\n"
-"  PRIMARY KEY index_parameters |\n"
-"  CHECK ( expression ) |\n"
-"  REFERENCES reftable [ ( refcolumn ) ] [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ]\n"
-"    [ ON DELETE action ] [ ON UPDATE action ] }\n"
+"  UNIQUE index_parametreleri |\n"
+"  PRIMARY KEY index_parametreleri |\n"
+"  CHECK ( ifade ) |\n"
+"  REFERENCES referans_tablosu [ ( referans_kolonu ) ] [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ]\n"
+"    [ ON DELETE işlem ] [ ON UPDATE işlem ] }\n"
 "[ DEFERRABLE | NOT DEFERRABLE ] [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ]\n"
 "\n"
-"and table_constraint is:\n"
+"ve tablo_kısıtlayıcısı aşağıdakilerden birisi olabilir:\n"
 "\n"
 "[ CONSTRAINT constraint_name ]\n"
 "{ UNIQUE ( column_name [, ... ] ) index_parameters |\n"
@@ -3062,10 +3064,10 @@ msgstr ""
 "    [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ] [ ON DELETE action ] [ ON UPDATE action ] }\n"
 "[ DEFERRABLE | NOT DEFERRABLE ] [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ]\n"
 "\n"
-"index_parameters in UNIQUE and PRIMARY KEY constraints are:\n"
+"UNIQUE ve PRIMARY KEY kısıtlamalarındaki index parametreleri aşağıdakilerden birisi olabilir:\n"
 "\n"
 "[ WITH ( storage_parameter [= value] [, ... ] ) ]\n"
-"[ USING INDEX TABLESPACE tablespace ]"
+"[ USING INDEX TABLESPACE tablo_uzayı ]"
 
 #: sql_help.h:233
 #: sql_help.h:489
@@ -3111,9 +3113,8 @@ msgstr ""
 "    EXECUTE PROCEDURE funcname ( arguments )"
 
 #: sql_help.h:245
-#, fuzzy
 msgid "define a new text search configuration"
-msgstr "yeni aggregate fonksiyonunu tanımla"
+msgstr "yeni metin arama yapılandırması tanımla"
 
 #: sql_help.h:246
 msgid ""
@@ -3128,9 +3129,8 @@ msgstr ""
 ")"
 
 #: sql_help.h:249
-#, fuzzy
 msgid "define a new text search dictionary"
-msgstr "yeni aggregate fonksiyonunu tanımla"
+msgstr "yeni metin arama sözlüğü tanımla"
 
 #: sql_help.h:250
 msgid ""
@@ -3145,9 +3145,8 @@ msgstr ""
 ")"
 
 #: sql_help.h:253
-#, fuzzy
 msgid "define a new text search parser"
-msgstr "yeni tablespace tanımla"
+msgstr "yeni metin arama ayrıştırıcısı tanımla"
 
 #: sql_help.h:254
 msgid ""
@@ -3168,9 +3167,8 @@ msgstr ""
 ")"
 
 #: sql_help.h:257
-#, fuzzy
 msgid "define a new text search template"
-msgstr "yeni şema tanımla"
+msgstr "yeni metin arama şablonu tanımla"
 
 #: sql_help.h:258
 msgid ""
@@ -3307,30 +3305,27 @@ msgid "define a cursor"
 msgstr "cursor tanımla"
 
 #: sql_help.h:278
-#, fuzzy
 msgid ""
 "DECLARE name [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
 "    CURSOR [ { WITH | WITHOUT } HOLD ] FOR query"
 msgstr ""
-"DECLARE name [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
-"    CURSOR [ { WITH | WITHOUT } HOLD ] FOR query\n"
-"    [ FOR { READ ONLY | UPDATE [ OF column [, ...] ] } ]"
+"DECLARE ad [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
+"    CURSOR [ { WITH | WITHOUT } HOLD ] FOR sorgu"
 
 #: sql_help.h:281
 msgid "delete rows of a table"
 msgstr "tablodan satırları sil"
 
 #: sql_help.h:282
-#, fuzzy
 msgid ""
 "DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
 "    [ USING usinglist ]\n"
 "    [ WHERE condition | WHERE CURRENT OF cursor_name ]\n"
 "    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
 msgstr ""
-"DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
+"DELETE FROM [ ONLY ] tablo [ [ AS ] takma_adı ]\n"
 "    [ USING usinglist ]\n"
-"    [ WHERE condition ]\n"
+"    [ WHERE condition | WHERE CURRENT OF cursor_name ]\n"
 "    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
 
 #: sql_help.h:285
@@ -3378,9 +3373,8 @@ msgid "remove a domain"
 msgstr "domain kaldır"
 
 #: sql_help.h:306
-#, fuzzy
 msgid "DROP DOMAIN [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "DROP DOMAIN [IF EXISTS ] domain_adı [, ...]  [ CASCADE | RESTRICT ]"
+msgstr "DROP DOMAIN [ IF EXISTS ] adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:309
 msgid "remove a function"
@@ -3505,44 +3499,36 @@ msgid "DROP TRIGGER [ IF EXISTS ] name ON table [ CASCADE | RESTRICT ]"
 msgstr "DROP TRIGGER [ IF EXISTS ] trigger_adı ON tablo_adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:369
-#, fuzzy
 msgid "remove a text search configuration"
-msgstr "aggregate function'u kaldır"
+msgstr "metin arama yapılandırmasını kaldır"
 
 #: sql_help.h:370
-#, fuzzy
 msgid "DROP TEXT SEARCH CONFIGURATION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] conversion_adı [ CASCADE | RESTRICT ]"
+msgstr "DROP TEXT SEARCH CONFIGURATION [ IF EXISTS ] adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:373
-#, fuzzy
 msgid "remove a text search dictionary"
-msgstr "aggregate function'u kaldır"
+msgstr "biri metin arama sözlüğünü kaldır"
 
 #: sql_help.h:374
-#, fuzzy
 msgid "DROP TEXT SEARCH DICTIONARY [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] conversion_adı [ CASCADE | RESTRICT ]"
+msgstr "DROP TEXT SEARCH DICTIONARY [ IF EXISTS ] adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:377
-#, fuzzy
 msgid "remove a text search parser"
-msgstr "tablespace kaldır"
+msgstr "bir metin arama ayrıştırıcısını kaldır"
 
 #: sql_help.h:378
-#, fuzzy
 msgid "DROP TEXT SEARCH PARSER [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] conversion_adı [ CASCADE | RESTRICT ]"
+msgstr "DROP TEXT SEARCH PARSER [ IF EXISTS ] adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:381
-#, fuzzy
 msgid "remove a text search template"
-msgstr "şema kaldır"
+msgstr "bir metin arama şablonunu kaldır"
 
 #: sql_help.h:382
-#, fuzzy
 msgid "DROP TEXT SEARCH TEMPLATE [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP SCHEMA [ IF EXISTS ] şema_adı [, ...] [ CASCADE | RESTRICT ]"
+msgstr "DROP TEXT SEARCH TEMPLATE [ IF EXISTS ] adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:385
 msgid "remove a data type"
@@ -3573,9 +3559,8 @@ msgid "execute a prepared statement"
 msgstr "hazırlanmış komutu çalıştır"
 
 #: sql_help.h:402
-#, fuzzy
 msgid "EXECUTE name [ ( parameter [, ...] ) ]"
-msgstr "EXECUTE name [ (parameter [, ...] ) ]"
+msgstr "EXECUTE adı [ ( parameter [, ...] ) ]"
 
 #: sql_help.h:405
 msgid "show the execution plan of a statement"
@@ -3634,7 +3619,6 @@ msgid "define access privileges"
 msgstr "erişim haklarını tanımla"
 
 #: sql_help.h:414
-#, fuzzy
 msgid ""
 "GRANT { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
@@ -3670,35 +3654,35 @@ msgid ""
 msgstr ""
 "GRANT { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON [ TABLE ] tablename [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON [ TABLE ] tablo_adı [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { { USAGE | SELECT | UPDATE }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SEQUENCE sequencename [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON SEQUENCE sequence_adı [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON DATABASE dbname [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON DATABASE veritabanı_adı [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { EXECUTE | ALL [ PRIVILEGES ] }\n"
-"    ON FUNCTION funcname ( [ [ argmode ] [ argname ] argtype [, ...] ] ) [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] ) [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
-"    ON LANGUAGE langname [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON LANGUAGE dil_adı [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { { CREATE | USAGE } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SCHEMA schemaname [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON SCHEMA şema_adı [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { CREATE | ALL [ PRIVILEGES ] }\n"
-"    ON TABLESPACE tablespacename [, ...]\n"
-"    TO { username | GROUP groupname | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON TABLESPACE tablo_uzayı_adı [, ...]\n"
+"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
-"GRANT role [, ...] TO username [, ...] [ WITH ADMIN OPTION ]"
+"GRANT role [, ...] TO rol_adı [, ...] [ WITH ADMIN OPTION ]"
 
 #: sql_help.h:417
 msgid "create new rows in a table"
@@ -3771,9 +3755,8 @@ msgid "prepare a statement for execution"
 msgstr "çalıştırmak için sorguyu hazırla"
 
 #: sql_help.h:442
-#, fuzzy
 msgid "PREPARE name [ ( datatype [, ...] ) ] AS statement"
-msgstr "PREPARE name [ (datatype [, ...] ) ] AS statement"
+msgstr "PREPARE adı [ ( veri_tipi [, ...] ) ] AS ifade"
 
 #: sql_help.h:445
 msgid "prepare the current transaction for two-phase commit"
@@ -3824,7 +3807,6 @@ msgid "remove access privileges"
 msgstr "erişim hakkını kaldır"
 
 #: sql_help.h:466
-#, fuzzy
 msgid ""
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
@@ -3877,49 +3859,49 @@ msgstr ""
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON [ TABLE ] tablename [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON [ TABLE ] tablo_adı [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { USAGE | SELECT | UPDATE }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SEQUENCE sequencename [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON SEQUENCE sequence_adı [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON DATABASE dbname [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON DATABASE veritabanı_adı [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { EXECUTE | ALL [ PRIVILEGES ] }\n"
-"    ON FUNCTION funcname ( [ [ argmode ] [ argname ] argtype [, ...] ] ) [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] ) [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { USAGE | ALL [ PRIVILEGES ] }\n"
-"    ON LANGUAGE langname [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON LANGUAGE dil_adı [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { CREATE | USAGE } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SCHEMA schemaname [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON SCHEMA şema_adı [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { CREATE | ALL [ PRIVILEGES ] }\n"
-"    ON TABLESPACE tablespacename [, ...]\n"
-"    FROM { username | GROUP groupname | PUBLIC } [, ...]\n"
+"    ON TABLESPACE tablo_uzayı_adı [, ...]\n"
+"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ ADMIN OPTION FOR ]\n"
-"    role [, ...] FROM username [, ...]\n"
+"    rol [, ...] FROM rol_adı [, ...]\n"
 "    [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:470
