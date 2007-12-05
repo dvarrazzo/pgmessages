@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-28 13:01-0400\n"
-"PO-Revision-Date: 2007-11-30 12:36+0200\n"
-"Last-Translator: Nicolai Tufar <ntufar@gmail.com>\n"
+"PO-Revision-Date: 2007-12-05 00:43-0800\n"
+"Last-Translator: Devrim GÜNDÜZ <devrim@commandprompt.com>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,9 +42,9 @@ msgid "RESET must not include values for parameters"
 msgstr "RESET, parametre için değer içermemeli"
 
 #: access/common/reloptions.c:209
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" specified more than once"
-msgstr "\"%s\" tablo adı birden fazla kez belirtilmiştir"
+msgstr "\"%s\" parametresi birden fazla kez belirtilmiştir"
 
 #: access/common/reloptions.c:230
 #, c-format
@@ -1042,9 +1042,9 @@ msgid "starting archive recovery"
 msgstr "arşivden geri getirme başlatılıyor"
 
 #: access/transam/xlog.c:4380
-#, fuzzy, c-format
+#, c-format
 msgid "restore_command = '%s'"
-msgstr "restore_command = \"%s\""
+msgstr "restore_command = '%s'"
 
 #: access/transam/xlog.c:4394
 #, c-format
@@ -1071,9 +1071,9 @@ msgid "recovery_target_xid = %u"
 msgstr "recovery_target_xid = %u"
 
 #: access/transam/xlog.c:4438
-#, fuzzy, c-format
+#, c-format
 msgid "recovery_target_time = '%s'"
-msgstr "recovery_target_time = %s"
+msgstr "recovery_target_time = '%s'"
 
 #: access/transam/xlog.c:4454
 #, c-format
@@ -1081,9 +1081,9 @@ msgid "recovery_target_inclusive = %s"
 msgstr "recovery_target_inclusive = %s"
 
 #: access/transam/xlog.c:4469
-#, fuzzy, c-format
+#, c-format
 msgid "log_restartpoints = %s"
-msgstr "recoveri yeniden başlangıç noktası: %X/%X"
+msgstr "log_restartpoints = %s"
 
 #: access/transam/xlog.c:4473
 #, c-format
@@ -1635,9 +1635,9 @@ msgid "text search template %s"
 msgstr "metin arama şablonu %s"
 
 #: catalog/dependency.c:2212
-#, fuzzy, c-format
+#, c-format
 msgid "text search configuration %s"
-msgstr "Sunucusunun \"hba\" konfigurasyon dosyasını belirtiyor."
+msgstr "%s metin arama yapılandırması"
 
 #: catalog/dependency.c:2220
 #, c-format
@@ -9965,7 +9965,7 @@ msgstr "\"%s\" tanınmayan parametre"
 
 #: tsearch/dict_thesaurus.c:658
 msgid "missing Dictionary parameter"
-msgstr ""
+msgstr "eksik Sözlük parametresi"
 
 #: tsearch/dict_simple.c:59
 #, fuzzy
@@ -10076,7 +10076,7 @@ msgstr ""
 #: tsearch/ts_parse.c:553
 #: tsearch/ts_parse.c:560
 msgid "word is too long to be indexed"
-msgstr ""
+msgstr "sözcük indexlenebilmek için çok uzun"
 
 #: tsearch/ts_parse.c:385
 #: tsearch/ts_parse.c:392
@@ -14057,7 +14057,7 @@ msgstr "\"%2$s\" parametresi için %1$d değer sıra dışıdır (%3$d .. %4$d)"
 #: utils/misc/guc.c:4493
 #, c-format
 msgid "parameter \"%s\" requires a numeric value"
-msgstr "\"%s\" seçeneği numeric değerini alır"
+msgstr "\"%s\" seçeneği sayısal değer gerektirir."
 
 #: utils/misc/guc.c:4501
 #, c-format
@@ -14114,7 +14114,7 @@ msgstr "assert checking desteği derlenmemiş"
 
 #: utils/misc/guc.c:6808
 msgid "SSL is not supported by this build"
-msgstr "SSL desteği derlenmemiş"
+msgstr "SSL bu yapılandırma tarafından desteklenmiyor."
 
 #: utils/misc/guc.c:6821
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
@@ -14126,7 +14126,7 @@ msgstr "\"log_parser_stats\", \"log_planner_stats\", veya \"log_executor_stats\"
 
 #: utils/misc/guc.c:6857
 msgid "cannot set transaction read-write mode inside a read-only transaction"
-msgstr "salt okunur transaction okuma-yazma mosunda geçirilemiyor"
+msgstr "salt okunur transaction içinde okuma-yazma moduna ayarlanamıyor"
 
 #: guc-file.l:368
 #, c-format
@@ -14136,12 +14136,12 @@ msgstr "yapılandırma dosyası \"%s\" açılamadı: en yüksek içiçe yuvalama
 #: guc-file.l:520
 #, c-format
 msgid "syntax error in file \"%s\" line %u, near end of line"
-msgstr "\"%s\" dosyası, %u satırınıda, satır sonunda sözdizimi hatası"
+msgstr "\"%s\" dosyasının %u. satırında satır sonunda sözdizimi hatası"
 
 #: guc-file.l:525
 #, c-format
 msgid "syntax error in file \"%s\" line %u, near token \"%s\""
-msgstr "\"%s\" dosyası, %u satırınıda, \"%s\" ifadesi yakınında sözdizimi hatası"
+msgstr "\"%s\" dosyasının %u. satırında, \"%s\" ifadesi yakınında sözdizimi hatası"
 
 #: utils/misc/tzparser.c:63
 #, c-format
@@ -14181,12 +14181,12 @@ msgstr "\"%s\" time zone dosyasında, %d satırında söz dizimi hatası"
 #: utils/misc/tzparser.c:234
 #, c-format
 msgid "time zone abbreviation \"%s\" is multiply defined"
-msgstr "\"%s\" time zone kısatması birden çok kez tanımlanmış"
+msgstr "\"%s\" time zone kısaltması birden çok kez tanımlanmış"
 
 #: utils/misc/tzparser.c:236
 #, c-format
 msgid "Entry in time zone file \"%s\", line %d, conflicts with entry in file \"%s\", line %d."
-msgstr "\"%s\" timezone dosyası, %d satırı, \"%s\" timezone dosyası, %d satırı ile çakışmaktadır."
+msgstr "\"%s\" timezone dosyasının %d. satırı, \"%s\" timezone dosyasının %d. satırı ile çakışmaktadır."
 
 #: utils/misc/tzparser.c:303
 #, c-format
@@ -14224,7 +14224,7 @@ msgstr "Memory content \"%s\" oluşturma başarısız."
 #: utils/mmgr/aset.c:910
 #, c-format
 msgid "Failed on request of size %lu."
-msgstr "%lu boyutu sorgulaması başarısız"
+msgstr "%lu boyutu isteği başarısız"
 
 #: utils/mmgr/portalmem.c:208
 #, c-format
@@ -14255,9 +14255,9 @@ msgid "could not read block %ld of temporary file: %m"
 msgstr "geçici dosyasının %ld bloku okunamıyor: %m"
 
 #: utils/sort/tuplesort.c:2723
-#, fuzzy, c-format
+#, c-format
 msgid "could not create unique index \"%s\""
-msgstr "unique dizin yaratılamadı"
+msgstr "\"%s\" tekil indexi yaratılamadı"
 
 #: utils/sort/tuplesort.c:2725
 msgid "Table contains duplicated values."
@@ -14325,7 +14325,7 @@ msgstr "\"%s\" ikili dosyası okunamıyor"
 #: ../port/exec.c:267
 #, c-format
 msgid "could not find a \"%s\" to execute"
-msgstr "çalıştırılacak \"%s\" socket bulunamadı"
+msgstr "çalıştırılacak \"%s\" bulunamadı"
 
 #: ../port/exec.c:322
 #: ../port/exec.c:358
@@ -14336,7 +14336,7 @@ msgstr "çalışma dizini \"%s\" olarak değiştirilemedi"
 #: ../port/exec.c:337
 #, c-format
 msgid "could not read symbolic link \"%s\""
-msgstr "symbolic link \"%s\" okuma hatası"
+msgstr "sembolik link \"%s\" okuma hatası"
 
 #: ../port/exec.c:583
 #, c-format
