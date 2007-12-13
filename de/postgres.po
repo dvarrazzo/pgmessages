@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: postgres.po,v 1.30 2007/12/12 20:33:13 petere Exp $
+# $Id: postgres.po,v 1.31 2007/12/13 11:56:27 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-12 04:01-0400\n"
-"PO-Revision-Date: 2007-12-12 21:31+0100\n"
+"POT-Creation-Date: 2007-12-12 18:00-0400\n"
+"PO-Revision-Date: 2007-12-13 12:54+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -798,7 +798,7 @@ msgstr "konnte Datei »%s« nicht nach »%s« linken: %m"
 
 #: access/transam/xlog.c:3742 access/transam/xlog.c:4571
 #: access/transam/xlog.c:4612 access/transam/xlog.c:4981
-#: postmaster/pgarch.c:596 utils/init/flatfiles.c:285
+#: postmaster/pgarch.c:633 utils/init/flatfiles.c:285
 #: utils/init/flatfiles.c:667
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
@@ -2630,7 +2630,7 @@ msgstr "Spalte »%s« von Relation »%s« existiert nicht"
 #: commands/analyze.c:487
 #, c-format
 msgid "automatic analyze of table \"%s.%s.%s\" system usage: %s"
-msgstr ""
+msgstr "automatisches Analysieren von Tabelle »%s.%s.%s« Systembenutzung: %s"
 
 #: commands/analyze.c:969
 #, c-format
@@ -5336,6 +5336,10 @@ msgid ""
 "tuples: %.0f removed, %.0f remain\n"
 "system usage: %s"
 msgstr ""
+"automatisches Vacuum von Tabelle »%s.%s.%s«: Index-Scans: %d\n"
+"Pages: %d entfernt, %d noch vorhanden\n"
+"Tuple: %.0f entfernt, %.0f noch vorhanden\n"
+"Systembenutzung: %s"
 
 #: commands/vacuumlazy.c:601
 #, c-format
@@ -5458,7 +5462,7 @@ msgstr "Cursor »%s« ist keine SELECT-Anfrage"
 #: executor/execCurrent.c:84
 #, c-format
 msgid "cursor \"%s\" is held from a previous transaction"
-msgstr ""
+msgstr "Cursor »%s« wurde aus einer vorherigen Transaktion beibehalten"
 
 #: executor/execCurrent.c:96
 #, fuzzy, c-format
@@ -5807,7 +5811,7 @@ msgstr "als Ausdruck verwendete Unteranfrage ergab mehr als eine Zeile"
 #: lib/stringinfo.c:246
 #, c-format
 msgid "Cannot enlarge string buffer containing %d bytes by %d more bytes."
-msgstr ""
+msgstr "Kann Zeichenkettenpuffer mit %d Bytes nicht um %d Bytes vergrößern."
 
 #: libpq/be-fsstubs.c:125 libpq/be-fsstubs.c:155 libpq/be-fsstubs.c:170
 #: libpq/be-fsstubs.c:195 libpq/be-fsstubs.c:242 libpq/be-fsstubs.c:469
@@ -5906,11 +5910,11 @@ msgstr "GSS-Antwort erwartet, Message-Typ %d empfangen"
 
 #: libpq/auth.c:501
 msgid "accepting GSS security context failed"
-msgstr ""
+msgstr "Annahme des GSS-Sicherheitskontexts fehlgeschlagen"
 
 #: libpq/auth.c:527
 msgid "retrieving GSS user name failed"
-msgstr ""
+msgstr "Abfrage des GSS-Benutzernamens fehlgeschlagen"
 
 #: libpq/auth.c:596
 msgid "GSSAPI not implemented on this server"
@@ -7088,9 +7092,8 @@ msgid "DECLARE INSENSITIVE CURSOR ... FOR UPDATE/SHARE is not supported"
 msgstr "DECLARE INSENSITIVE CURSOR ... FOR UPDATE/SHARE wird nicht unterstützt"
 
 #: parser/analyze.c:1638
-#, fuzzy
 msgid "Insensitive cursors must be READ ONLY."
-msgstr "Cursor müssen READ ONLY sein."
+msgstr "Insensitive Cursor müssen READ ONLY sein."
 
 #: parser/analyze.c:1695
 msgid "SELECT FOR UPDATE/SHARE is not allowed with DISTINCT clause"
@@ -8191,7 +8194,7 @@ msgstr "bereits bestehender Shared-Memory-Block wird noch benutzt"
 msgid ""
 "Check if there are any old server processes still running, and terminate "
 "them."
-msgstr ""
+msgstr "Prüfen Sie, ob irgendwelche alten Serverprozesse noch laufen und beenden Sie diese."
 
 #: port/win32_shmem.c:179
 msgid "Failed system call was DuplicateHandle."
@@ -8237,7 +8240,7 @@ msgstr "Autovacuum wegen Fehlkonfiguration nicht gestartet"
 
 #: postmaster/autovacuum.c:2713
 msgid "Enable the \"track_counts\" option."
-msgstr ""
+msgstr "Schalten Sie die Option »track_counts« ein."
 
 #: postmaster/autovacuum.c:2769
 msgid "not enough shared memory for autovacuum"
@@ -8532,10 +8535,10 @@ msgstr "%s (PID %d) beendete mit Status %d"
 msgid "%s (PID %d) was terminated by exception 0x%X"
 msgstr "%s (PID %d) wurde durch Ausnahme 0x%X beendet"
 
-#: postmaster/postmaster.c:2500
+#: postmaster/postmaster.c:2500 postmaster/pgarch.c:503
 msgid ""
 "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
-msgstr ""
+msgstr "Sehen Sie die Beschreibung des Hexadezimalwerts in der C-Include-Datei »ntstatus.h« nach."
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
@@ -8671,17 +8674,43 @@ msgid "transaction log file \"%s\" could not be archived: too many failures"
 msgstr ""
 "Transaktionslogdatei »%s« konnte nicht archiviert werden: zu viele Fehler"
 
-#: postmaster/pgarch.c:490
+#: postmaster/pgarch.c:492
 #, c-format
-msgid "archive command \"%s\" failed: return code %d"
-msgstr "Archivbefehl »%s« fehlgeschlagen: Fehlercode %d"
+msgid "archive command failed with exit code %d"
+msgstr "Archivbefehl ist fehlgeschlagen mit Statuscode %d"
 
-#: postmaster/pgarch.c:496
+#: postmaster/pgarch.c:494 postmaster/pgarch.c:504 postmaster/pgarch.c:511
+#: postmaster/pgarch.c:517 postmaster/pgarch.c:526
+#, c-format
+msgid "The failed archive command was: %s"
+msgstr "Der fehlgeschlagene Archivbefehl war: %s"
+
+#: postmaster/pgarch.c:501
+#, c-format
+msgid "archive command was terminated by exception 0x%X"
+msgstr "Archivbefehl wurde durch Ausnahme 0x%X beendet"
+
+#: postmaster/pgarch.c:508
+#, c-format
+msgid "archive command was terminated by signal %d: %s"
+msgstr "Archivbefehl wurde von Signal %d beendet: %s"
+
+#: postmaster/pgarch.c:515
+#, c-format
+msgid "archive command was terminated by signal %d"
+msgstr "Archivbefehl wurde von Signal %d beendet"
+
+#: postmaster/pgarch.c:524
+#, c-format
+msgid "archive command exited with unrecognized status %d"
+msgstr "Archivbefehl hat mit unbekanntem Status %d beendet"
+
+#: postmaster/pgarch.c:533
 #, c-format
 msgid "archived transaction log file \"%s\""
 msgstr "archivierte Transaktionslogdatei »%s«"
 
-#: postmaster/pgarch.c:542
+#: postmaster/pgarch.c:579
 #, c-format
 msgid "could not open archive status directory \"%s\": %m"
 msgstr "konnte Archivstatusverzeichnis »%s« nicht öffnen: %m"
@@ -9173,7 +9202,7 @@ msgstr "keine Dateideskriptoren mehr: %m; freigeben und nochmal versuchen"
 #: storage/file/fd.c:1006
 #, c-format
 msgid "temp file: path \"%s\" size %lu"
-msgstr ""
+msgstr "temporäre Datei: Pfad »%s« Größe %lu"
 
 #: storage/file/fd.c:1472
 #, c-format
@@ -9349,9 +9378,9 @@ msgid ""
 msgstr ""
 
 #: storage/lmgr/proc.c:980
-#, fuzzy, c-format
+#, c-format
 msgid "process %d still waiting for %s on %s after %ld.%03d ms"
-msgstr "Prozess %d wartet auf %s-Sperre auf %s; blockiert von Prozess %d."
+msgstr "Prozess %d wartet immer noch auf %s-Sperre auf %s nach %ld.%03d ms."
 
 #: storage/lmgr/proc.c:984
 #, c-format
@@ -10018,9 +10047,9 @@ msgstr ""
 "Datenbank inkompatibel."
 
 #: tsearch/ts_locale.c:306
-#, fuzzy, c-format
+#, c-format
 msgid "conversion from wchar_t to server encoding failed: %m"
-msgstr "ungültige Serverkodierung %d"
+msgstr "Umwandlung von wchar_t in Serverkodierung fehlgeschlagen: %m"
 
 #: tsearch/ts_parse.c:384 tsearch/ts_parse.c:391 tsearch/ts_parse.c:553
 #: tsearch/ts_parse.c:560
@@ -10044,9 +10073,9 @@ msgid "could not open stopword file \"%s\": %m"
 msgstr "konnte Stoppwortdatei »%s« nicht öffnen: %m"
 
 #: tsearch/wparser_def.c:1741
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized headline parameter: \"%s\""
-msgstr "unbekannter Parameter »%s«"
+msgstr "unbekannter Headline-Parameter: »%s«"
 
 #: tsearch/wparser_def.c:1750
 msgid "MinWords should be less than MaxWords"
@@ -11701,9 +11730,9 @@ msgid "syntax error in tsquery: \"%s\""
 msgstr "Syntaxfehler in tsquery: »%s«"
 
 #: utils/adt/tsquery.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "no operand in tsquery: \"%s\""
-msgstr "Syntax-Fehler in History-Datei: %s"
+msgstr "kein Operand in tsquery: »%s«"
 
 #: utils/adt/tsquery.c:241
 #, c-format
@@ -11711,14 +11740,14 @@ msgid "value is too big in tsquery: \"%s\""
 msgstr "Wert ist zu groß in tsquery: »%s«"
 
 #: utils/adt/tsquery.c:246
-#, fuzzy, c-format
+#, c-format
 msgid "operand is too long in tsquery: \"%s\""
-msgstr "Operator ist nicht eindeutig: %s"
+msgstr "Operator ist zu lang in tsquery: »%s«"
 
 #: utils/adt/tsquery.c:273
-#, fuzzy, c-format
+#, c-format
 msgid "word is too long in tsquery: \"%s\""
-msgstr "Syntax-Fehler in History-Datei: %s"
+msgstr "Wort ist zu lang in tsquery: »%s«"
 
 #: utils/adt/tsquery.c:501
 #, c-format
@@ -11746,23 +11775,20 @@ msgid "wrong position info in tsvector: \"%s\""
 msgstr "%s Position %d ist nicht in der Select-Liste"
 
 #: utils/adt/tsrank.c:379
-#, fuzzy
 msgid "array of weight must be one-dimensional"
-msgstr "ACL-Arrays müssen eindimensional sein"
+msgstr "Gewichtungs-Array muss eindimensional sein"
 
 #: utils/adt/tsrank.c:384
 msgid "array of weight is too short"
-msgstr ""
+msgstr "Gewichtungs-Array ist zu kurz"
 
 #: utils/adt/tsrank.c:389
-#, fuzzy
 msgid "array of weight must not contain nulls"
-msgstr "Array darf keine NULL-Werte enthalten"
+msgstr "Gewichtungs-Array darf keine NULL-Werte enthalten"
 
 #: utils/adt/tsrank.c:398 utils/adt/tsrank.c:717
-#, fuzzy
 msgid "weight out of range"
-msgstr "bigint ist außerhalb des gültigen Bereichs"
+msgstr "Gewichtung ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/tsvector.c:220
 #, c-format
@@ -12670,11 +12696,11 @@ msgstr "Ermöglicht sequenzielle Scans in Planer."
 
 #: utils/misc/guc.c:448
 msgid "Enables the planner's use of index-scan plans."
-msgstr "Ermöglicht Indexscans im Planer."
+msgstr "Ermöglicht Index-Scans im Planer."
 
 #: utils/misc/guc.c:456
 msgid "Enables the planner's use of bitmap-scan plans."
-msgstr "Ermöglicht Bitmaps-Scans im Planer."
+msgstr "Ermöglicht Bitmap-Scans im Planer."
 
 #: utils/misc/guc.c:464
 msgid "Enables the planner's use of TID scan plans."
@@ -13055,10 +13081,8 @@ msgid "Warn about backslash escapes in ordinary string literals."
 msgstr "Warnt bei Backslash-Escapes in normalen Zeichenkettenkonstanten."
 
 #: utils/misc/guc.c:1047
-#, fuzzy
 msgid "Causes '...' strings to treat backslashes literally."
-msgstr ""
-"Zeichenketten der Art '...' behandeln Backslashes als normales Zeichen."
+msgstr "Bewirkt, dass Zeichenketten der Art '...' Backslashes als normales Zeichen behandeln."
 
 #: utils/misc/guc.c:1057
 msgid "Allows archiving of WAL files using archive_command."
@@ -13557,9 +13581,7 @@ msgstr ""
 msgid ""
 "Sets the planner's estimate of the cost of processing each index entry "
 "during an index scan."
-msgstr ""
-"Setzt den vom Planer geschätzten Aufwand für die Verarbeitung eines "
-"Indexeintrags während eines Indexscans."
+msgstr "Setzt den vom Planer geschätzten Aufwand für die Verarbeitung eines Indexeintrags während eines Index-Scans."
 
 #: utils/misc/guc.c:1814
 msgid ""
@@ -14035,7 +14057,8 @@ msgstr "Gültige Einheiten für diesen Parameter sind »kB«, »MB« und »GB«."
 #: utils/misc/guc.c:3984
 msgid ""
 "Valid units for this parameter are \"ms\", \"s\", \"min\", \"h\", and \"d\"."
-msgstr "Gültige Einheiten für diesen Parameter sind »ms«, »s«, »min«, »h« und »d«."
+msgstr ""
+"Gültige Einheiten für diesen Parameter sind »ms«, »s«, »min«, »h« und »d«."
 
 #: utils/misc/guc.c:4195 utils/misc/guc.c:4718 utils/misc/guc.c:4762
 #: utils/misc/guc.c:4834 utils/misc/guc.c:5303 utils/misc/guc.c:5444
@@ -14436,9 +14459,6 @@ msgstr "unbekannter win32-Fehlercode: %lu"
 msgid "unrecognized error %d"
 msgstr "unbekannter Fehler %d"
 
-#~ msgid "\"%s\" is a table's row type"
-#~ msgstr "»%s« ist der Zeilentyp einer Tabelle"
-
 #~ msgid "could not wait on child process handle: error code %d\n"
 #~ msgstr "Warten auf Kindprozess-Handle fehlgeschlagen: Fehlercode %d\n"
 
@@ -14485,9 +14505,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgid "could not read from log file %u, segment %u at offset %u: %m"
 #~ msgstr "konnte nicht aus Logdatei %u, Segment %u bei Position %u lesen: %m"
 
-#~ msgid "checkpoint starting"
-#~ msgstr "Checkpoint-Prozess startet"
-
 #~ msgid ""
 #~ "checkpoint complete; %d transaction log file(s) added, %d removed, %d "
 #~ "recycled"
@@ -14523,9 +14540,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgid "btree procedures must have index type as first input"
 #~ msgstr "btree-Prozeduren müssen Indextyp als erste Eingabe haben"
 
-#~ msgid "could not delete directory \"%s\": %m"
-#~ msgstr "konnte Verzeichnis »%s« nicht löschen: %m"
-
 #~ msgid "type names must be %d characters or less"
 #~ msgstr "Typnamen müssen %d oder weniger Zeichen lang sein"
 
@@ -14555,22 +14569,8 @@ msgstr "unbekannter Fehler %d"
 #~ "Ist-Gleich-Operator für Typen %s und %s sollte Merge-Verbund-fähig sein, "
 #~ "ist es aber nicht"
 
-#~ msgid "Enable options \"stats_start_collector\" and \"stats_row_level\"."
-#~ msgstr ""
-#~ "Schalten Sie die Optionen »stats_start_collector« und »stats_row_level« "
-#~ "ein."
-
 #~ msgid "statistics collector startup skipped"
 #~ msgstr "Start des Statistiksammelprozesses übersprungen"
-
-#~ msgid "could not close relation %u/%u/%u: %m"
-#~ msgstr "konnte Relation %u/%u/%u nicht schließen: %m"
-
-#~ msgid "could not count blocks of relation %u/%u/%u: %m"
-#~ msgstr "konnte Blöcke der Relation %u/%u/%u nicht zählen: %m"
-
-#~ msgid "could not sync relation %u/%u/%u: %m"
-#~ msgstr "konnte Relation %u/%u/%u nicht syncen: %m"
 
 #~ msgid "Starts the server statistics-collection subprocess."
 #~ msgstr "Startet den Statistiksammelprozess."
@@ -14608,15 +14608,6 @@ msgstr "unbekannter Fehler %d"
 #~ "Typumwandlung von Arrays in Elemente mit Domänentyp wird gegenwärtig "
 #~ "nicht unterstützt"
 
-#~ msgid "invalid input syntax for type date: \"%s\""
-#~ msgstr "ungültige Eingabesyntax für Typ date: »%s«"
-
-#~ msgid "invalid input syntax for type time: \"%s\""
-#~ msgstr "ungültige Eingabesyntax für Typ time: »%s«"
-
-#~ msgid "invalid input syntax for type time with time zone: \"%s\""
-#~ msgstr "ungültige Eingabesyntax für Typ time with time zone: »%s«"
-
 #~ msgid "text too long to convert to MAC address"
 #~ msgstr "Text ist zu lang um ihn in eine MAC-Adresse umzuwandeln"
 
@@ -14625,9 +14616,6 @@ msgstr "unbekannter Fehler %d"
 
 #~ msgid "Must provide \"relationname.columnname\"."
 #~ msgstr "Muss »relationsname.spaltenname« angeben."
-
-#~ msgid "invalid option of regexp_replace: %c"
-#~ msgstr "ungültige Option für regexp_replace: %c"
 
 #~ msgid "function \"%s\" called with wrong number of trigger arguments"
 #~ msgstr "Funktion »%s« mit der falschen Anzahl Triggerargumente aufgerufen"
