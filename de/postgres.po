@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: postgres.po,v 1.31 2007/12/13 11:56:27 petere Exp $
+# $Id: postgres.po,v 1.32 2007/12/15 01:58:37 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-12 18:00-0400\n"
-"PO-Revision-Date: 2007-12-13 12:54+0100\n"
+"POT-Creation-Date: 2007-12-14 11:00-0400\n"
+"PO-Revision-Date: 2007-12-15 02:57+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -3746,9 +3746,8 @@ msgid "The supported languages are listed in the pg_pltemplate system catalog."
 msgstr "Die unterstützten Sprachen stehen im Systemkatalog pg_pltemplate."
 
 #: commands/proclang.c:210
-#, fuzzy
 msgid "must be superuser to create custom procedural language"
-msgstr "nur Superuser können prozedurale Sprachen erzeugen"
+msgstr "nur Superuser können maßgeschneiderte prozedurale Sprachen erzeugen"
 
 #: commands/proclang.c:229
 #, c-format
@@ -3985,9 +3984,8 @@ msgstr ""
 "Mengenergebnisse verarbeiten kann"
 
 #: commands/prepare.c:729 utils/mmgr/portalmem.c:879
-#, fuzzy
 msgid "materialize mode required, but it is not allowed in this context"
-msgstr "NULL-Werte im Array sind in diesem Zusammenhang nicht erlaubt"
+msgstr "Materialisierungsmodus wird benötigt, ist aber in diesem Zusammenhang nicht erlaubt"
 
 #: commands/schemacmds.c:81 commands/schemacmds.c:272
 #, c-format
@@ -4831,14 +4829,14 @@ msgid "token type \"%s\" does not exist"
 msgstr "Tokentyp »%s« existiert nicht"
 
 #: commands/tsearchcmds.c:1942
-#, fuzzy, c-format
+#, c-format
 msgid "mapping for token type \"%s\" does not exist"
-msgstr "Typ »%s« existiert nicht"
+msgstr "Mapping für Tokentyp »%s« existiert nicht"
 
 #: commands/tsearchcmds.c:1948
-#, fuzzy, c-format
+#, c-format
 msgid "mapping for token type \"%s\" does not exist, skipping"
-msgstr "Typ »%s« existiert nicht, wird übersprungen"
+msgstr "Mapping für Tokentyp »%s« existiert nicht, wird übersprungen"
 
 #: commands/tsearchcmds.c:2101 commands/tsearchcmds.c:2212
 #, c-format
@@ -5465,14 +5463,14 @@ msgid "cursor \"%s\" is held from a previous transaction"
 msgstr "Cursor »%s« wurde aus einer vorherigen Transaktion beibehalten"
 
 #: executor/execCurrent.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "cursor \"%s\" is not a simply updatable scan of table \"%s\""
-msgstr "Rolle »%s« ist kein Mitglied der Rolle »%s«"
+msgstr "Cursor »%s« ist kein einfach aktualisierbarer Scan der Tabelle »%s«"
 
 #: executor/execCurrent.c:109
-#, fuzzy, c-format
+#, c-format
 msgid "cursor \"%s\" is not positioned on a row"
-msgstr "Rolle »%s« hat keine Berechtigung zum Einloggen"
+msgstr "Cursor »%s« ist nicht auf eine Zeile positioniert"
 
 #: executor/execCurrent.c:160 executor/execQual.c:855
 #, c-format
@@ -8194,7 +8192,9 @@ msgstr "bereits bestehender Shared-Memory-Block wird noch benutzt"
 msgid ""
 "Check if there are any old server processes still running, and terminate "
 "them."
-msgstr "Prüfen Sie, ob irgendwelche alten Serverprozesse noch laufen und beenden Sie diese."
+msgstr ""
+"Prüfen Sie, ob irgendwelche alten Serverprozesse noch laufen und beenden Sie "
+"diese."
 
 #: port/win32_shmem.c:179
 msgid "Failed system call was DuplicateHandle."
@@ -8210,14 +8210,12 @@ msgid "could not fork autovacuum process: %m"
 msgstr "konnte Autovacuum-Prozess nicht starten (fork-Fehler): %m"
 
 #: postmaster/autovacuum.c:519
-#, fuzzy
 msgid "autovacuum launcher started"
-msgstr "Autovacuum-Prozess"
+msgstr "Autovacuum-Launcher startet"
 
 #: postmaster/autovacuum.c:751
-#, fuzzy
 msgid "autovacuum launcher shutting down"
-msgstr "Logger fährt herunter"
+msgstr "Autovacuum-Launcher fährt herunter"
 
 #: postmaster/autovacuum.c:1605
 #, c-format
@@ -8448,12 +8446,12 @@ msgstr "tut mir leid, schon zu viele Verbindungen"
 
 #: postmaster/postmaster.c:1715
 #, c-format
-msgid "bad key in cancel request for process %d"
+msgid "wrong key in cancel request for process %d"
 msgstr ""
 
 #: postmaster/postmaster.c:1723
 #, c-format
-msgid "bad pid in cancel request for process %d"
+msgid "PID %d in cancel request did not match any process"
 msgstr ""
 
 #: postmaster/postmaster.c:1904
@@ -8497,9 +8495,8 @@ msgid "WAL writer process"
 msgstr "WAL-Schreibprozess"
 
 #: postmaster/postmaster.c:2223
-#, fuzzy
 msgid "autovacuum launcher process"
-msgstr "Autovacuum-Prozess"
+msgstr "Autovacuum-Launcher-Prozess"
 
 #: postmaster/postmaster.c:2236
 msgid "archiver process"
@@ -8538,7 +8535,9 @@ msgstr "%s (PID %d) wurde durch Ausnahme 0x%X beendet"
 #: postmaster/postmaster.c:2500 postmaster/pgarch.c:503
 msgid ""
 "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
-msgstr "Sehen Sie die Beschreibung des Hexadezimalwerts in der C-Include-Datei »ntstatus.h« nach."
+msgstr ""
+"Sehen Sie die Beschreibung des Hexadezimalwerts in der C-Include-Datei "
+"»ntstatus.h« nach."
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
@@ -9200,8 +9199,8 @@ msgid "out of file descriptors: %m; release and retry"
 msgstr "keine Dateideskriptoren mehr: %m; freigeben und nochmal versuchen"
 
 #: storage/file/fd.c:1006
-#, c-format
-msgid "temp file: path \"%s\" size %lu"
+#, fuzzy, c-format
+msgid "temporary file: path \"%s\", size %lu"
 msgstr "temporäre Datei: Pfad »%s« Größe %lu"
 
 #: storage/file/fd.c:1472
@@ -9721,7 +9720,7 @@ msgstr "storniere Anfrage wegen Zeitüberschreitung"
 
 #: tcop/postgres.c:2584
 msgid "canceling autovacuum task"
-msgstr ""
+msgstr "storniere Autovacuum-Aufgabe"
 
 #: tcop/postgres.c:2588
 msgid "canceling statement due to user request"
@@ -10569,7 +10568,7 @@ msgstr "ungültiger interner Wert für Enum: %u"
 #: utils/adt/enum.c:266 utils/adt/enum.c:307 utils/adt/enum.c:356
 #: utils/adt/enum.c:376
 msgid "could not determine actual enum type"
-msgstr ""
+msgstr "konnte tatsächlichen Enum-Typen nicht bestimmen"
 
 #: utils/adt/float.c:54
 msgid "value out of range: overflow"
@@ -11219,7 +11218,7 @@ msgstr "Skala von NUMERIC (%d) muss zwischen 0 und %d liegen"
 
 #: utils/adt/numeric.c:580
 msgid "invalid NUMERIC type modifier"
-msgstr ""
+msgstr "ungültiker Modifikator für Typ NUMERIC"
 
 #: utils/adt/numeric.c:1567 utils/adt/numeric.c:3320
 msgid "value overflows numeric format"
@@ -11636,7 +11635,7 @@ msgstr "interval-Wert ist außerhalb des gültigen Bereichs"
 
 #: utils/adt/timestamp.c:754 utils/adt/timestamp.c:787
 msgid "invalid INTERVAL type modifier"
-msgstr ""
+msgstr "ungültiger Modifikator für Typ INTERVAL"
 
 #: utils/adt/timestamp.c:770
 #, c-format
@@ -12933,7 +12932,7 @@ msgstr "Erzeugt Debug-Ausgabe für LISTEN und NOTIFY."
 
 #: utils/misc/guc.c:828
 msgid "Logs long lock waits."
-msgstr ""
+msgstr "Schreibt Meldungen über langes Warten auf Sperren in den Log."
 
 #: utils/misc/guc.c:837
 msgid "Logs the host name in the connection logs."
@@ -13082,11 +13081,13 @@ msgstr "Warnt bei Backslash-Escapes in normalen Zeichenkettenkonstanten."
 
 #: utils/misc/guc.c:1047
 msgid "Causes '...' strings to treat backslashes literally."
-msgstr "Bewirkt, dass Zeichenketten der Art '...' Backslashes als normales Zeichen behandeln."
+msgstr ""
+"Bewirkt, dass Zeichenketten der Art '...' Backslashes als normales Zeichen "
+"behandeln."
 
 #: utils/misc/guc.c:1057
 msgid "Allows archiving of WAL files using archive_command."
-msgstr ""
+msgstr "Erlaubt die Archivierung von WAL-Dateien mittels archive_command."
 
 #: utils/misc/guc.c:1066
 msgid "Allows modifications of the structure of system tables."
@@ -13427,7 +13428,7 @@ msgstr ""
 
 #: utils/misc/guc.c:1563
 msgid "Zero prints all actions. -1 turns autovacuum logging off."
-msgstr ""
+msgstr "Null gibt alls Aktionen aus. -1 schaltet die Log-Aufzeichnung über Autovacuum aus."
 
 #: utils/misc/guc.c:1572
 msgid "Background writer sleep time between rounds."
@@ -13548,7 +13549,7 @@ msgstr "Zeigt die Serverversion als Zahl."
 
 #: utils/misc/guc.c:1759
 msgid "Log the use of temporary files larger than this number of kilobytes."
-msgstr ""
+msgstr "Schreibt Meldungen über die Verwendung von temporären Dateien in den Log, wenn sie größer als diese Anzahl an Kilobytes sind."
 
 #: utils/misc/guc.c:1760
 #, fuzzy
@@ -13581,7 +13582,9 @@ msgstr ""
 msgid ""
 "Sets the planner's estimate of the cost of processing each index entry "
 "during an index scan."
-msgstr "Setzt den vom Planer geschätzten Aufwand für die Verarbeitung eines Indexeintrags während eines Index-Scans."
+msgstr ""
+"Setzt den vom Planer geschätzten Aufwand für die Verarbeitung eines "
+"Indexeintrags während eines Index-Scans."
 
 #: utils/misc/guc.c:1814
 msgid ""
@@ -14468,32 +14471,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgstr ""
 #~ "ORDER BY mit dem Ergebnis von UNION/INTERSECT/EXCEPT muss sich auf eine "
 #~ "der Ergebnisspalten beziehen"
-
-#~ msgid "DECIMAL precision %d must be between 1 and %d"
-#~ msgstr "Präzision von DECIMAL (%d) muss zwischen 1 und %d liegen"
-
-#~ msgid "DECIMAL scale %d must be between 0 and precision %d"
-#~ msgstr "Skala von DECIMAL (%d) muss zwischen 0 und %d liegen"
-
-#~ msgid "CURRENT_TIME(%d) precision must not be negative"
-#~ msgstr "Präzision von CURRENT_TIME(%d) darf nicht negativ sein"
-
-#~ msgid "CURRENT_TIME(%d) precision reduced to maximum allowed, %d"
-#~ msgstr ""
-#~ "Präzision von CURRENT_TIME(%d) auf erlaubten Höchstwert %d reduziert"
-
-#~ msgid "CURRENT_TIMESTAMP(%d) precision must not be negative"
-#~ msgstr "Präzision von CURRENT_TIMESTAMP(%d) darf nicht negativ sein"
-
-#~ msgid "CURRENT_TIMESTAMP(%d) precision reduced to maximum allowed, %d"
-#~ msgstr ""
-#~ "Präzision von CURRENT_TIMESTAMP(%d) auf erlaubten Höchstwert %d reduziert"
-
-#~ msgid "LOCALTIME(%d) precision must not be negative"
-#~ msgstr "Präzision von LOCALTIME(%d) darf nicht negativ sein"
-
-#~ msgid "LOCALTIME(%d) precision reduced to maximum allowed, %d"
-#~ msgstr "Präzision von LOCALTIME(%d) auf erlaubten Höchstwert %d reduziert"
 
 #~ msgid "LOCALTIMESTAMP(%d) precision must not be negative"
 #~ msgstr "Präzision von LOCALTIMESTAMP(%d) darf nicht negativ sein"
