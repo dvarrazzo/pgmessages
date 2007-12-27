@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: postgres.po,v 1.32 2007/12/15 01:58:37 petere Exp $
+# $Id: postgres.po,v 1.33 2007/12/27 13:02:11 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-14 11:00-0400\n"
-"PO-Revision-Date: 2007-12-15 02:57+0100\n"
+"POT-Creation-Date: 2007-12-25 14:01-0400\n"
+"PO-Revision-Date: 2007-12-27 14:01+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -798,7 +798,7 @@ msgstr "konnte Datei »%s« nicht nach »%s« linken: %m"
 
 #: access/transam/xlog.c:3742 access/transam/xlog.c:4571
 #: access/transam/xlog.c:4612 access/transam/xlog.c:4981
-#: postmaster/pgarch.c:633 utils/init/flatfiles.c:285
+#: postmaster/pgarch.c:645 utils/init/flatfiles.c:285
 #: utils/init/flatfiles.c:667
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
@@ -2622,7 +2622,7 @@ msgstr "analysiere »%s.%s«"
 #: commands/tablecmds.c:4889 parser/analyze.c:1507
 #: parser/parse_relation.c:1597 parser/parse_relation.c:1652
 #: parser/parse_target.c:764 parser/parse_type.c:116
-#: utils/adt/ruleutils.c:1309
+#: utils/adt/ruleutils.c:1312
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
 msgstr "Spalte »%s« von Relation »%s« existiert nicht"
@@ -3345,7 +3345,7 @@ msgstr "Typ »%s« existiert nicht"
 #: commands/functioncmds.c:124 parser/parse_type.c:262
 #, c-format
 msgid "type modifier cannot be specified for shell type \"%s\""
-msgstr ""
+msgstr "Typmodifikator kann für Hüllentyp »%s« nicht angegeben werden"
 
 #: commands/functioncmds.c:130
 #, c-format
@@ -3985,7 +3985,9 @@ msgstr ""
 
 #: commands/prepare.c:729 utils/mmgr/portalmem.c:879
 msgid "materialize mode required, but it is not allowed in this context"
-msgstr "Materialisierungsmodus wird benötigt, ist aber in diesem Zusammenhang nicht erlaubt"
+msgstr ""
+"Materialisierungsmodus wird benötigt, ist aber in diesem Zusammenhang nicht "
+"erlaubt"
 
 #: commands/schemacmds.c:81 commands/schemacmds.c:272
 #, c-format
@@ -4718,7 +4720,7 @@ msgstr "Textsucheparserparameter »%s« nicht erkannt"
 
 #: commands/tsearchcmds.c:234
 msgid "text search parser start method is required"
-msgstr ""
+msgstr "Textsucheparserstartmethode muss angegeben werden"
 
 #: commands/tsearchcmds.c:239
 msgid "text search parser gettoken method is required"
@@ -4726,7 +4728,7 @@ msgstr ""
 
 #: commands/tsearchcmds.c:244
 msgid "text search parser end method is required"
-msgstr ""
+msgstr "Textsucheparserendemethode muss angegeben werden"
 
 #: commands/tsearchcmds.c:249
 msgid "text search parser lextypes method is required"
@@ -6293,7 +6295,7 @@ msgstr "IP-Adresse und -Maske passen nicht zusammen in Datei »%s« Zeile %d"
 #: libpq/hba.c:880
 #, c-format
 msgid "invalid entry in file \"%s\" at line %d, token \"%s\""
-msgstr "ungültiger Eintrag in Datei »%s« auf Zeile %d, Token »%s«"
+msgstr "ungültiger Eintrag in Datei »%s« in Zeile %d, Token »%s«"
 
 #: libpq/hba.c:886
 #, c-format
@@ -8447,12 +8449,12 @@ msgstr "tut mir leid, schon zu viele Verbindungen"
 #: postmaster/postmaster.c:1715
 #, c-format
 msgid "wrong key in cancel request for process %d"
-msgstr ""
+msgstr "falscher Schlüssel in Stornierungsanfrage für Prozess %d"
 
 #: postmaster/postmaster.c:1723
 #, c-format
 msgid "PID %d in cancel request did not match any process"
-msgstr ""
+msgstr "PID %d in Stornierungsanfrage stimmte mit keinem Prozess überein"
 
 #: postmaster/postmaster.c:1904
 msgid "received SIGHUP, reloading configuration files"
@@ -8532,7 +8534,7 @@ msgstr "%s (PID %d) beendete mit Status %d"
 msgid "%s (PID %d) was terminated by exception 0x%X"
 msgstr "%s (PID %d) wurde durch Ausnahme 0x%X beendet"
 
-#: postmaster/postmaster.c:2500 postmaster/pgarch.c:503
+#: postmaster/postmaster.c:2500 postmaster/pgarch.c:509
 msgid ""
 "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
 msgstr ""
@@ -8673,43 +8675,43 @@ msgid "transaction log file \"%s\" could not be archived: too many failures"
 msgstr ""
 "Transaktionslogdatei »%s« konnte nicht archiviert werden: zu viele Fehler"
 
-#: postmaster/pgarch.c:492
+#: postmaster/pgarch.c:498
 #, c-format
 msgid "archive command failed with exit code %d"
 msgstr "Archivbefehl ist fehlgeschlagen mit Statuscode %d"
 
-#: postmaster/pgarch.c:494 postmaster/pgarch.c:504 postmaster/pgarch.c:511
-#: postmaster/pgarch.c:517 postmaster/pgarch.c:526
+#: postmaster/pgarch.c:500 postmaster/pgarch.c:510 postmaster/pgarch.c:517
+#: postmaster/pgarch.c:523 postmaster/pgarch.c:532
 #, c-format
 msgid "The failed archive command was: %s"
 msgstr "Der fehlgeschlagene Archivbefehl war: %s"
 
-#: postmaster/pgarch.c:501
+#: postmaster/pgarch.c:507
 #, c-format
 msgid "archive command was terminated by exception 0x%X"
 msgstr "Archivbefehl wurde durch Ausnahme 0x%X beendet"
 
-#: postmaster/pgarch.c:508
+#: postmaster/pgarch.c:514
 #, c-format
 msgid "archive command was terminated by signal %d: %s"
 msgstr "Archivbefehl wurde von Signal %d beendet: %s"
 
-#: postmaster/pgarch.c:515
+#: postmaster/pgarch.c:521
 #, c-format
 msgid "archive command was terminated by signal %d"
 msgstr "Archivbefehl wurde von Signal %d beendet"
 
-#: postmaster/pgarch.c:524
+#: postmaster/pgarch.c:530
 #, c-format
 msgid "archive command exited with unrecognized status %d"
 msgstr "Archivbefehl hat mit unbekanntem Status %d beendet"
 
-#: postmaster/pgarch.c:533
+#: postmaster/pgarch.c:542
 #, c-format
 msgid "archived transaction log file \"%s\""
 msgstr "archivierte Transaktionslogdatei »%s«"
 
-#: postmaster/pgarch.c:579
+#: postmaster/pgarch.c:591
 #, c-format
 msgid "could not open archive status directory \"%s\": %m"
 msgstr "konnte Archivstatusverzeichnis »%s« nicht öffnen: %m"
@@ -9199,9 +9201,9 @@ msgid "out of file descriptors: %m; release and retry"
 msgstr "keine Dateideskriptoren mehr: %m; freigeben und nochmal versuchen"
 
 #: storage/file/fd.c:1006
-#, fuzzy, c-format
+#, c-format
 msgid "temporary file: path \"%s\", size %lu"
-msgstr "temporäre Datei: Pfad »%s« Größe %lu"
+msgstr "temporäre Datei: Pfad »%s«, Größe %lu"
 
 #: storage/file/fd.c:1472
 #, c-format
@@ -9368,13 +9370,13 @@ msgstr "konnte Signal nicht an Prozess %d senden: %m"
 msgid ""
 "process %d avoided deadlock for %s on %s by rearranging queue order after %"
 "ld.%03d ms"
-msgstr ""
+msgstr "Prozess %d vermied Verklemmung wegen %s für %s durch Umordnen der Queue nach %ld.%03d ms"
 
 #: storage/lmgr/proc.c:974
 #, c-format
 msgid ""
 "process %d detected deadlock while waiting for %s on %s after %ld.%03d ms"
-msgstr ""
+msgstr "Prozess %d hat Verklemmung festgestellt beim Warten auf %s für %s nach %ld.%03d ms"
 
 #: storage/lmgr/proc.c:980
 #, c-format
@@ -9384,12 +9386,12 @@ msgstr "Prozess %d wartet immer noch auf %s-Sperre auf %s nach %ld.%03d ms."
 #: storage/lmgr/proc.c:984
 #, c-format
 msgid "process %d acquired %s on %s after %ld.%03d ms"
-msgstr ""
+msgstr "Prozess %d erlangte %s für %s nach %ld.%03d ms"
 
 #: storage/lmgr/proc.c:1000
 #, c-format
 msgid "process %d failed to acquire %s on %s after %ld.%03d ms"
-msgstr ""
+msgstr "Prozess %d konnte %s für %s nach %ld.%03d ms nicht erlangen"
 
 #: storage/page/bufpage.c:143 storage/page/bufpage.c:362
 #: storage/page/bufpage.c:592 storage/page/bufpage.c:722
@@ -9907,7 +9909,7 @@ msgstr "unerwartetes Trennzeichen in Zeile %d der Thesaurusdatei »%s«"
 #: tsearch/dict_thesaurus.c:272 tsearch/dict_thesaurus.c:289
 #, c-format
 msgid "unexpected end of line or lexeme at line %d of thesaurus file \"%s\""
-msgstr ""
+msgstr "unerwartetes Zeilenende oder Lexem in Zeile %d der Thesaurusdatei »%s«"
 
 #: tsearch/dict_thesaurus.c:301
 #, c-format
@@ -9933,7 +9935,7 @@ msgstr "Verwenden Sie »\\r« um ein Carriage-Return-Zeichen darzustellen."
 #: tsearch/dict_thesaurus.c:582
 #, c-format
 msgid "thesaurus substitute word \"%s\" is a stop word (rule %d)"
-msgstr ""
+msgstr "Thesaurus-Ersatzwort »%s« ist ein Stoppwort (Regel %d)"
 
 #: tsearch/dict_thesaurus.c:589
 #, c-format
@@ -9944,7 +9946,7 @@ msgstr ""
 #: tsearch/dict_thesaurus.c:601
 #, c-format
 msgid "thesaurus substitute phrase is empty (rule %d)"
-msgstr ""
+msgstr "Thesaurus-Ersatzausdruck ist leer (Regel %d)"
 
 #: tsearch/dict_thesaurus.c:639
 msgid "multiple Dictionary parameters"
@@ -11410,8 +11412,8 @@ msgstr "es gibt mehrere Funktionen namens »%s«"
 msgid "more than one operator named %s"
 msgstr "es gibt mehrere Operatoren namens %s"
 
-#: utils/adt/regproc.c:638 utils/adt/regproc.c:1498 utils/adt/ruleutils.c:4318
-#: utils/adt/ruleutils.c:4346
+#: utils/adt/regproc.c:638 utils/adt/regproc.c:1498 utils/adt/ruleutils.c:4321
+#: utils/adt/ruleutils.c:4349
 msgid "too many arguments"
 msgstr "zu viele Argumente"
 
@@ -11581,7 +11583,7 @@ msgstr "falscher Datentyp: %u, erwartet wurde %u"
 msgid "improper binary format in record column %d"
 msgstr "falsches Binärformat in Record-Spalte %d"
 
-#: utils/adt/ruleutils.c:1593
+#: utils/adt/ruleutils.c:1596
 #, c-format
 msgid "rule \"%s\" has unsupported event type %d"
 msgstr "Regel »%s« hat nicht unterstützten Ereignistyp %d"
@@ -11825,14 +11827,14 @@ msgid "config column \"%s\" must not be NULL"
 msgstr "Spalte »%s« existiert nicht"
 
 #: utils/adt/tsvector_op.c:1352
-#, fuzzy, c-format
+#, c-format
 msgid "text search configuration name \"%s\" must be schema-qualified"
-msgstr "Setzt die Schemasuchreihenfolge für Namen ohne Schemaqualifikation."
+msgstr "Textsuchekonfigurationsname »%s« muss Schemaqualifikation haben"
 
 #: utils/adt/tsvector_op.c:1377
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" is not of character type"
-msgstr "Wert »%s« ist außerhalb des gültigen Bereichs für Typ »oid«"
+msgstr "Spalte »%s« hat keinen Zeichenkettentyp"
 
 #: utils/adt/varbit.c:49 utils/adt/varchar.c:48
 #, c-format
@@ -13185,10 +13187,8 @@ msgid "GEQO: number of iterations of the algorithm."
 msgstr "GEQO: Anzahl der Iterationen im Algorithmus."
 
 #: utils/misc/guc.c:1179
-#, fuzzy
 msgid "Sets the time to wait on a lock before checking for deadlock."
-msgstr ""
-"Zeit in Millisekunden, die gewartet wird, bis auf Verklemmung geprüft wird."
+msgstr "Setzt die Zeit, die gewartet wird, bis auf Verklemmung geprüft wird."
 
 #: utils/misc/guc.c:1203
 msgid "Sets the maximum number of concurrent connections."
@@ -13233,13 +13233,10 @@ msgid "Sets the maximum memory to be used for query workspaces."
 msgstr "Setzt die maximale Speichergröße für Anfrage-Arbeitsbereiche."
 
 #: utils/misc/guc.c:1264
-#, fuzzy
 msgid ""
 "This much memory can be used by each internal sort operation and hash table "
 "before switching to temporary disk files."
-msgstr ""
-"Gibt die Speichermenge an, die für interne Sortiervorgänge und Hashtabellen "
-"verwendet wird, bevor temporäre Dateien zur Hilfe gezogen werden."
+msgstr "Gibt die Speichermenge an, die für interne Sortiervorgänge und Hashtabellen verwendet werden kann, bevor auf temporäre Dateien umgeschaltet wird."
 
 #: utils/misc/guc.c:1275
 msgid "Sets the maximum memory to be used for maintenance operations."
@@ -13337,10 +13334,8 @@ msgid "Sets the maximum allowed time to complete client authentication."
 msgstr "Setzt die maximale Zeit um die Client-Authentifizierung zu beenden."
 
 #: utils/misc/guc.c:1457
-#, fuzzy
 msgid "Waits N seconds on connection startup before authentication."
-msgstr ""
-"Wartet beim Starten einer Verbindung N Sekunden nach der Authentifizierung."
+msgstr "Wartet beim Starten einer Verbindung N Sekunden vor der Authentifizierung."
 
 #: utils/misc/guc.c:1467
 msgid ""
@@ -13418,17 +13413,16 @@ msgid "Zero prints all queries. -1 turns this feature off."
 msgstr "Null zeigt alle Anfragen. -1 schaltet dieses Feature aus."
 
 #: utils/misc/guc.c:1561
-#, fuzzy
 msgid ""
 "Sets the minimum execution time above which autovacuum actions will be "
 "logged."
-msgstr ""
-"Setzt die minimale Ausführungszeit in Millisekunden, über der Anweisungen "
-"geloggt werden."
+msgstr "Setzt die minimale Ausführungszeit, über der Autovacuum-Aktionen geloggt werden."
 
 #: utils/misc/guc.c:1563
 msgid "Zero prints all actions. -1 turns autovacuum logging off."
-msgstr "Null gibt alls Aktionen aus. -1 schaltet die Log-Aufzeichnung über Autovacuum aus."
+msgstr ""
+"Null gibt alls Aktionen aus. -1 schaltet die Log-Aufzeichnung über "
+"Autovacuum aus."
 
 #: utils/misc/guc.c:1572
 msgid "Background writer sleep time between rounds."
@@ -13527,10 +13521,8 @@ msgstr ""
 "Setzt die maximal erlaubte Anzahl Ergebnisse für eine genaue Suche mit GIN."
 
 #: utils/misc/guc.c:1736
-#, fuzzy
 msgid "Sets the planner's assumption about the size of the disk cache."
-msgstr ""
-"Setzt die Annahme des Planers über die Größe des Kernel-Dateisystem-Caches."
+msgstr "Setzt die Annahme des Planers über die Größe des Festplatten-Caches."
 
 #: utils/misc/guc.c:1737
 msgid ""
@@ -13549,7 +13541,9 @@ msgstr "Zeigt die Serverversion als Zahl."
 
 #: utils/misc/guc.c:1759
 msgid "Log the use of temporary files larger than this number of kilobytes."
-msgstr "Schreibt Meldungen über die Verwendung von temporären Dateien in den Log, wenn sie größer als diese Anzahl an Kilobytes sind."
+msgstr ""
+"Schreibt Meldungen über die Verwendung von temporären Dateien in den Log, "
+"wenn sie größer als diese Anzahl an Kilobytes sind."
 
 #: utils/misc/guc.c:1760
 #, fuzzy
@@ -13718,9 +13712,8 @@ msgid "If blank, no prefix is used."
 msgstr "Wenn leer, dann wird kein Präfix verwendet."
 
 #: utils/misc/guc.c:1975
-#, fuzzy
 msgid "Sets the time zone to use in log messages."
-msgstr "Setzt den Detailgrad von geloggten Meldungen."
+msgstr "Setzt die in Logmeldungen verwendete Zeitzone."
 
 #: utils/misc/guc.c:1984
 msgid "Sets the display format for date and time values."
@@ -13762,7 +13755,7 @@ msgstr "Setzt das Ausgabeformat für Datums- und Zeitwerte."
 
 #: utils/misc/guc.c:2026
 msgid "Each session can be either \"origin\", \"replica\" or \"local\"."
-msgstr ""
+msgstr "Jede Sitzung kann »origin«, »replica« oder »local« sein."
 
 #: utils/misc/guc.c:2035
 msgid "Sets the path for dynamically loadable modules."
@@ -14354,9 +14347,9 @@ msgid "Table contains duplicated values."
 msgstr "Tabelle enthält doppelte Werte."
 
 #: ../port/chklocale.c:316 ../port/chklocale.c:322
-#, fuzzy, c-format
+#, c-format
 msgid "could not determine encoding for locale \"%s\": codeset is \"%s\""
-msgstr "konnte nicht bestimmen, auf welche Tabelle Constraint »%s« verweist"
+msgstr "konnte Kodierung für Locale »%s« nicht bestimmen: Codeset ist »%s«"
 
 #: ../port/chklocale.c:324
 msgid "Please report this to <pgsql-bugs@postgresql.org>."
@@ -14447,6 +14440,29 @@ msgstr "Kindprozess wurde von Signal %d beendet"
 msgid "child process exited with unrecognized status %d"
 msgstr "Kindprozess hat mit unbekanntem Status %d beendet"
 
+#: ../port/open.c:112
+msgid "sharing violation"
+msgstr ""
+
+#: ../port/open.c:112
+msgid "lock violation"
+msgstr "Sperrverletzung"
+
+#: ../port/open.c:111
+#, c-format
+msgid "could not open file \"%s\": %s"
+msgstr "konnte Datei »%s« nicht öffnen: %s"
+
+#: ../port/open.c:113
+msgid "Continuing to retry for 30 seconds."
+msgstr "Versuche werden für 30 Sekunden wiederholt."
+
+#: ../port/open.c:114
+msgid ""
+"You may have antivirus, backup or similar software interfering with the "
+"database."
+msgstr ""
+
 #: ../port/win32error.c:184
 #, c-format
 msgid "mapped win32 error code %lu to %d"
@@ -14471,51 +14487,6 @@ msgstr "unbekannter Fehler %d"
 #~ msgstr ""
 #~ "ORDER BY mit dem Ergebnis von UNION/INTERSECT/EXCEPT muss sich auf eine "
 #~ "der Ergebnisspalten beziehen"
-
-#~ msgid "LOCALTIMESTAMP(%d) precision must not be negative"
-#~ msgstr "Präzision von LOCALTIMESTAMP(%d) darf nicht negativ sein"
-
-#~ msgid "LOCALTIMESTAMP(%d) precision reduced to maximum allowed, %d"
-#~ msgstr ""
-#~ "Präzision von LOCALTIMESTAMP(%d) auf erlaubten Höchstwert %d reduziert"
-
-#~ msgid "could not read from log file %u, segment %u at offset %u: %m"
-#~ msgstr "konnte nicht aus Logdatei %u, Segment %u bei Position %u lesen: %m"
-
-#~ msgid ""
-#~ "checkpoint complete; %d transaction log file(s) added, %d removed, %d "
-#~ "recycled"
-#~ msgstr ""
-#~ "Checkpoint vollständig; %d Transaktionslogdatei(en) hinzugefügt, %d "
-#~ "entfernt, %d wiederverwendet"
-
-#~ msgid "foreign key constraint \"%s\" will require costly sequential scans"
-#~ msgstr ""
-#~ "Fremdschlüssel-Constraint »%s« wird teure sequenzielle Scans benötigen"
-
-#~ msgid "Key columns \"%s\" and \"%s\" are of different types: %s and %s."
-#~ msgstr "Schlüsselspalten »%s« und »%s« haben verschiedene Typen: %s und %s."
-
-#~ msgid "unquoted carriage return found in data"
-#~ msgstr "ungequotetes Carriage-Return-Zeichen in Daten gefunden"
-
-#~ msgid "Use quoted CSV field to represent carriage return."
-#~ msgstr ""
-#~ "Verwenden Sie ein gequotetes CSV-Feld um ein Carriage-Return-Zeichen "
-#~ "darzustellen."
-
-#~ msgid "unquoted newline found in data"
-#~ msgstr "ungequotetes Newline-Zeichen in Daten gefunden"
-
-#~ msgid "Use quoted CSV field to represent newline."
-#~ msgstr ""
-#~ "Verwenden Sie ein gequotetes CSV-Feld um ein Newline-Zeichen darzustellen."
-
-#~ msgid "btree operators must have index type as left input"
-#~ msgstr "btree-Operatoren müssen Indextyp als linke Eingabe haben"
-
-#~ msgid "btree procedures must have index type as first input"
-#~ msgstr "btree-Prozeduren müssen Indextyp als erste Eingabe haben"
 
 #~ msgid "type names must be %d characters or less"
 #~ msgstr "Typnamen müssen %d oder weniger Zeichen lang sein"
