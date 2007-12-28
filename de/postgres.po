@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: postgres.po,v 1.33 2007/12/27 13:02:11 petere Exp $
+# $Id: postgres.po,v 1.34 2007/12/28 12:39:51 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-25 14:01-0400\n"
-"PO-Revision-Date: 2007-12-27 14:01+0100\n"
+"POT-Creation-Date: 2007-12-27 21:01-0400\n"
+"PO-Revision-Date: 2007-12-28 13:37+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -532,11 +532,11 @@ msgid "could not create file \"%s\": %m"
 msgstr "kann Datei »%s« nicht erstellen: %m"
 
 #: access/transam/xlog.c:2009 access/transam/xlog.c:2138
-#: access/transam/xlog.c:3669 access/transam/xlog.c:3707 commands/copy.c:1258
+#: access/transam/xlog.c:3669 access/transam/xlog.c:3707 commands/copy.c:1269
 #: commands/tablespace.c:703 commands/tablespace.c:709
 #: postmaster/postmaster.c:3276 postmaster/postmaster.c:3286
-#: utils/init/miscinit.c:1019 utils/init/miscinit.c:1028 utils/misc/guc.c:5978
-#: utils/misc/guc.c:6041 ../port/copydir.c:148
+#: utils/init/miscinit.c:1019 utils/init/miscinit.c:1028 utils/misc/guc.c:6013
+#: utils/misc/guc.c:6076 ../port/copydir.c:148
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "konnte nicht in Datei »%s« schreiben: %m"
@@ -1790,8 +1790,8 @@ msgstr "Schema »%s« existiert nicht"
 #: catalog/aclchk.c:512 commands/comment.c:663 commands/dbcommands.c:303
 #: commands/indexcmds.c:207 commands/tablecmds.c:333 commands/tablecmds.c:5692
 #: commands/tablespace.c:412 commands/tablespace.c:767
-#: commands/tablespace.c:834 commands/tablespace.c:929
-#: commands/tablespace.c:1053 executor/execMain.c:2587 utils/adt/acl.c:2582
+#: commands/tablespace.c:834 commands/tablespace.c:928
+#: commands/tablespace.c:1052 executor/execMain.c:2587 utils/adt/acl.c:2582
 #: utils/adt/dbsize.c:240
 #, c-format
 msgid "tablespace \"%s\" does not exist"
@@ -2475,14 +2475,14 @@ msgstr "SQL-Funktion »%s«"
 msgid ""
 "\n"
 "and %d other objects (see server log for list)"
-msgstr ""
+msgstr "\nund %d weitere Objekte (Liste im Serverlog)"
 
 #: catalog/pg_shdepend.c:659
 #, c-format
 msgid ""
 "\n"
 "and objects in %d other databases (see server log for list)"
-msgstr ""
+msgstr "\nund Objekte in %d anderen Datenbanken (Liste im Serverlog)"
 
 #: catalog/pg_shdepend.c:671
 #, c-format
@@ -2614,7 +2614,7 @@ msgstr ""
 msgid "analyzing \"%s.%s\""
 msgstr "analysiere »%s.%s«"
 
-#: commands/analyze.c:243 commands/comment.c:577 commands/copy.c:3350
+#: commands/analyze.c:243 commands/comment.c:577 commands/copy.c:3367
 #: commands/sequence.c:1235 commands/tablecmds.c:3254
 #: commands/tablecmds.c:3346 commands/tablecmds.c:3393
 #: commands/tablecmds.c:3489 commands/tablecmds.c:3550
@@ -3056,59 +3056,60 @@ msgid "COPY null representation cannot use newline or carriage return"
 msgstr ""
 "COPY NULL-Darstellung kann nicht Newline oder Carriage Return enthalten"
 
-#: commands/copy.c:879
-msgid "COPY delimiter cannot be backslash"
-msgstr "DELIMITER für COPY darf kein Backslash sein"
+#: commands/copy.c:890
+#, c-format
+msgid "COPY delimiter cannot be \"%s\""
+msgstr "DELIMITER für COPY darf nicht »%s« sein"
 
-#: commands/copy.c:885
+#: commands/copy.c:896
 msgid "COPY HEADER available only in CSV mode"
 msgstr "COPY HEADER ist nur im CSV-Modus verfügbar"
 
-#: commands/copy.c:891
+#: commands/copy.c:902
 msgid "COPY quote available only in CSV mode"
 msgstr "Quote-Zeichen für COPY ist nur im CSV-Modus verfügbar"
 
-#: commands/copy.c:896
+#: commands/copy.c:907
 msgid "COPY quote must be a single ASCII character"
 msgstr "Quote-Zeichen für COPY muss ein einzelnes ACII-Zeichen sein"
 
-#: commands/copy.c:902
+#: commands/copy.c:913
 msgid "COPY escape available only in CSV mode"
 msgstr "Escape-Zeichen für COPY ist nur im CSV-Modus verfügbar"
 
-#: commands/copy.c:907
+#: commands/copy.c:918
 msgid "COPY escape must be a single ASCII character"
 msgstr "Escape-Zeichen für COPY muss ein einzelnes ASCII-Zeichen sein"
 
-#: commands/copy.c:913
+#: commands/copy.c:924
 msgid "COPY force quote available only in CSV mode"
 msgstr "FORCE QUOTE für COPY ist nur im CSV-Modus verfügbar"
 
-#: commands/copy.c:917
+#: commands/copy.c:928
 msgid "COPY force quote only available using COPY TO"
 msgstr "FORCE QUOTE für COPY geht nur bei COPY TO"
 
-#: commands/copy.c:923
+#: commands/copy.c:934
 msgid "COPY force not null available only in CSV mode"
 msgstr "FORCE NOT NULL für COPY ist nur im CSV-Modus verfügbar"
 
-#: commands/copy.c:927
+#: commands/copy.c:938
 msgid "COPY force not null only available using COPY FROM"
 msgstr "FORCE QUOTE für COPY geht nur bei COPY FROM"
 
-#: commands/copy.c:933
+#: commands/copy.c:944
 msgid "COPY delimiter must not appear in the NULL specification"
 msgstr "Trennzeichen für COPY darf nicht in der NULL-Darstellung erscheinen"
 
-#: commands/copy.c:940
+#: commands/copy.c:951
 msgid "CSV quote character must not appear in the NULL specification"
 msgstr "CSV-Quote-Zeichen darf nicht in der NULL-Darstellung erscheinen"
 
-#: commands/copy.c:946
+#: commands/copy.c:957
 msgid "must be superuser to COPY to or from a file"
 msgstr "nur Superuser können COPY mit Dateien verwenden"
 
-#: commands/copy.c:947
+#: commands/copy.c:958
 msgid ""
 "Anyone can COPY to stdout or from stdin. psql's \\copy command also works "
 "for anyone."
@@ -3116,210 +3117,226 @@ msgstr ""
 "Jeder kann COPY mit STDOUT oder STDIN verwenden. Der Befehl \\\\copy in psql "
 "funktioniert auch für jeden."
 
-#: commands/copy.c:972 executor/execMain.c:472 tcop/utility.c:362
+#: commands/copy.c:983 executor/execMain.c:472 tcop/utility.c:362
 msgid "transaction is read-only"
 msgstr "Transaktion ist Read-Only"
 
-#: commands/copy.c:978
+#: commands/copy.c:989
 #, c-format
 msgid "table \"%s\" does not have OIDs"
 msgstr "Tabelle »%s« hat keine OIDs"
 
-#: commands/copy.c:997
+#: commands/copy.c:1008
 msgid "COPY (SELECT) WITH OIDS is not supported"
 msgstr "COPY (SELECT) WITH OIDS wird nicht unterstützt"
 
-#: commands/copy.c:1024
+#: commands/copy.c:1035
 msgid "COPY (SELECT INTO) is not supported"
 msgstr "COPY (SELECT INTO) wird nicht unterstützt"
 
-#: commands/copy.c:1078
+#: commands/copy.c:1089
 #, c-format
 msgid "FORCE QUOTE column \"%s\" not referenced by COPY"
 msgstr "FORCE-QUOTE-Spalte »%s« wird von COPY nicht verwendet"
 
-#: commands/copy.c:1100
+#: commands/copy.c:1111
 #, c-format
 msgid "FORCE NOT NULL column \"%s\" not referenced by COPY"
 msgstr "Spalte »%s« mit FORCE NOT NULL wird von COPY nicht verwendet"
 
-#: commands/copy.c:1177
+#: commands/copy.c:1188
 #, c-format
 msgid "cannot copy from view \"%s\""
 msgstr "kann nicht aus Sicht »%s« kopieren"
 
-#: commands/copy.c:1179
+#: commands/copy.c:1190
 msgid "Try the COPY (SELECT ...) TO variant."
 msgstr "Versuchen Sie die Variante COPY (SELECT ...) TO."
 
-#: commands/copy.c:1183
+#: commands/copy.c:1194
 #, c-format
 msgid "cannot copy from sequence \"%s\""
 msgstr "kann nicht aus Sequenz »%s« kopieren"
 
-#: commands/copy.c:1188
+#: commands/copy.c:1199
 #, c-format
 msgid "cannot copy from non-table relation \"%s\""
 msgstr "kann nicht aus Relation »%s«, die keine Tabelle ist, kopieren"
 
-#: commands/copy.c:1212
+#: commands/copy.c:1223
 msgid "relative path not allowed for COPY to file"
 msgstr "relativer Pfad bei COPY in Datei nicht erlaubt"
 
-#: commands/copy.c:1221
+#: commands/copy.c:1232
 #, c-format
 msgid "could not open file \"%s\" for writing: %m"
 msgstr "konnte Datei »%s« nicht zum Schreiben öffnen: %m"
 
-#: commands/copy.c:1228 commands/copy.c:1723
+#: commands/copy.c:1239 commands/copy.c:1734
 #, c-format
 msgid "\"%s\" is a directory"
 msgstr "»%s« ist ein Verzeichnis"
 
-#: commands/copy.c:1514
+#: commands/copy.c:1525
 #, c-format
 msgid "COPY %s, line %d, column %s"
 msgstr "COPY %s, Zeile %d, Spalte %s"
 
-#: commands/copy.c:1518 commands/copy.c:1563
+#: commands/copy.c:1529 commands/copy.c:1574
 #, c-format
 msgid "COPY %s, line %d"
 msgstr "COPY %s, Zeile %d"
 
-#: commands/copy.c:1529
+#: commands/copy.c:1540
 #, c-format
 msgid "COPY %s, line %d, column %s: \"%s\""
 msgstr "COPY %s, Zeile %d, Spalte %s: »%s«"
 
-#: commands/copy.c:1537
+#: commands/copy.c:1548
 #, c-format
 msgid "COPY %s, line %d, column %s: null input"
 msgstr "COPY %s, Zeile %d, Spalte %s: NULL Eingabe"
 
-#: commands/copy.c:1549
+#: commands/copy.c:1560
 #, c-format
 msgid "COPY %s, line %d: \"%s\""
 msgstr "COPY %s, Zeile %d: »%s«"
 
-#: commands/copy.c:1651
+#: commands/copy.c:1662
 #, c-format
 msgid "cannot copy to view \"%s\""
 msgstr "kann nicht in Sicht »%s« kopieren"
 
-#: commands/copy.c:1656
+#: commands/copy.c:1667
 #, c-format
 msgid "cannot copy to sequence \"%s\""
 msgstr "kann nicht in Sequenz »%s« kopieren"
 
-#: commands/copy.c:1661
+#: commands/copy.c:1672
 #, c-format
 msgid "cannot copy to non-table relation \"%s\""
 msgstr "kann nicht in Relation »%s« kopieren, die keine Tabelle ist"
 
-#: commands/copy.c:1716 utils/adt/genfile.c:109
+#: commands/copy.c:1727 utils/adt/genfile.c:109
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
 msgstr "konnte Datei »%s« nicht zum Lesen öffnen: %m"
 
-#: commands/copy.c:1824
+#: commands/copy.c:1835
 msgid "COPY file signature not recognized"
 msgstr "COPY-Datei-Signatur nicht erkannt"
 
-#: commands/copy.c:1829
+#: commands/copy.c:1840
 msgid "invalid COPY file header (missing flags)"
 msgstr "ungültiger COPY-Dateikopf (Flags fehlen)"
 
-#: commands/copy.c:1835
+#: commands/copy.c:1846
 msgid "unrecognized critical flags in COPY file header"
 msgstr "unbekannte kritische Flags im COPY-Dateikopf"
 
-#: commands/copy.c:1841
+#: commands/copy.c:1852
 msgid "invalid COPY file header (missing length)"
 msgstr "ungültiger COPY-Dateikopf (Länge fehlt)"
 
-#: commands/copy.c:1848
+#: commands/copy.c:1859
 msgid "invalid COPY file header (wrong length)"
 msgstr "ungültiger COPY-Dateikopf (falsche Länge)"
 
-#: commands/copy.c:1937
+#: commands/copy.c:1948
 msgid "missing data for OID column"
 msgstr "fehlende Daten für OID-Spalte"
 
-#: commands/copy.c:1943
+#: commands/copy.c:1954
 msgid "null OID in COPY data"
 msgstr "OID ist NULL in COPY-Daten"
 
-#: commands/copy.c:1953 commands/copy.c:2025
+#: commands/copy.c:1964 commands/copy.c:2036
 msgid "invalid OID in COPY data"
 msgstr "ungültige OID in COPY-Daten"
 
-#: commands/copy.c:1968
+#: commands/copy.c:1979
 #, c-format
 msgid "missing data for column \"%s\""
 msgstr "fehlende Daten für Spalte »%s«"
 
-#: commands/copy.c:2009
+#: commands/copy.c:2020
 #, c-format
 msgid "row field count is %d, expected %d"
 msgstr "Feldanzahl in Zeile ist %d, erwartet wurden %d"
 
-#: commands/copy.c:2147 utils/init/miscinit.c:979 utils/misc/guc.c:6109
+#: commands/copy.c:2158 utils/init/miscinit.c:979 utils/misc/guc.c:6144
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "konnte nicht aus Datei »%s« lesen: %m"
 
-#: commands/copy.c:2424 commands/copy.c:2441
+#: commands/copy.c:2435 commands/copy.c:2452
 msgid "literal carriage return found in data"
 msgstr "Carriage-Return-Zeichen in Daten gefunden"
 
-#: commands/copy.c:2427 commands/copy.c:2444
+#: commands/copy.c:2436 commands/copy.c:2453
+msgid "unquoted carriage return found in data"
+msgstr "ungequotetes Carriage-Return-Zeichen in Daten gefunden"
+
+#: commands/copy.c:2438 commands/copy.c:2455
 msgid "Use \"\\r\" to represent carriage return."
 msgstr "Verwenden Sie »\\r« um ein Carriage-Return-Zeichen darzustellen."
 
-#: commands/copy.c:2457
+#: commands/copy.c:2439 commands/copy.c:2456
+msgid "Use quoted CSV field to represent carriage return."
+msgstr "Verwenden Sie ein gequotetes CSV-Feld, um ein Carriage-Return-Zeichen darzustellen."
+
+#: commands/copy.c:2468
 msgid "literal newline found in data"
 msgstr "Newline-Zeichen in Daten gefunden"
 
-#: commands/copy.c:2460
+#: commands/copy.c:2469
+msgid "unquoted newline found in data"
+msgstr "ungequotetes Newline-Zeichen in Daten gefunden"
+
+#: commands/copy.c:2471
 msgid "Use \"\\n\" to represent newline."
 msgstr "Verwenden Sie »\\n« um ein Newline-Zeichen darzustellen."
 
-#: commands/copy.c:2507 commands/copy.c:2543
+#: commands/copy.c:2472
+msgid "Use quoted CSV field to represent newline."
+msgstr "Verwenden Sie ein gequotetes CSV-Feld, um ein Newline-Zeichen darzustellen."
+
+#: commands/copy.c:2518 commands/copy.c:2554
 msgid "end-of-copy marker does not match previous newline style"
 msgstr "COPY-Ende-Markierung stimmt nicht mit vorherigem Newline-Stil überein"
 
-#: commands/copy.c:2516 commands/copy.c:2532
+#: commands/copy.c:2527 commands/copy.c:2543
 msgid "end-of-copy marker corrupt"
 msgstr "COPY-Ende-Markierung verfälscht"
 
-#: commands/copy.c:2659 commands/copy.c:2694 commands/copy.c:2874
-#: commands/copy.c:2910
+#: commands/copy.c:2670 commands/copy.c:2705 commands/copy.c:2885
+#: commands/copy.c:2921
 msgid "extra data after last expected column"
 msgstr "zusätzliche Daten nach letzter erwarteter Spalte"
 
-#: commands/copy.c:2980
+#: commands/copy.c:2991
 msgid "unterminated CSV quoted field"
 msgstr "Quotes in CSV-Feld nicht abgeschlossen"
 
-#: commands/copy.c:3018 commands/copy.c:3037
+#: commands/copy.c:3029 commands/copy.c:3048
 msgid "unexpected EOF in COPY data"
 msgstr "unerwartetes EOF in COPY-Daten"
 
-#: commands/copy.c:3027
+#: commands/copy.c:3038
 msgid "invalid field size"
 msgstr "ungültige Feldgröße"
 
-#: commands/copy.c:3050
+#: commands/copy.c:3061
 msgid "incorrect binary data format"
 msgstr "falsches Binärdatenformat"
 
-#: commands/copy.c:3355 commands/indexcmds.c:769 commands/tablecmds.c:1513
+#: commands/copy.c:3372 commands/indexcmds.c:769 commands/tablecmds.c:1513
 #: parser/parse_expr.c:418 utils/adt/tsvector_op.c:1372
 #, c-format
 msgid "column \"%s\" does not exist"
 msgstr "Spalte »%s« existiert nicht"
 
-#: commands/copy.c:3362 commands/tablecmds.c:797 parser/parse_target.c:780
+#: commands/copy.c:3379 commands/tablecmds.c:797 parser/parse_target.c:780
 #: parser/parse_target.c:791
 #, c-format
 msgid "column \"%s\" specified more than once"
@@ -4570,7 +4587,7 @@ msgstr "Der Präfix »pg_« ist für System-Tablespaces reserviert."
 msgid "tablespace \"%s\" already exists"
 msgstr "Tablespace »%s« existiert bereits"
 
-#: commands/tablespace.c:306 commands/tablespace.c:1290
+#: commands/tablespace.c:306 commands/tablespace.c:1289
 #, c-format
 msgid "could not set permissions on directory \"%s\": %m"
 msgstr "konnte Zugriffsrechte für Verzeichnis »%s« nicht setzen: %m"
@@ -4580,7 +4597,7 @@ msgstr "konnte Zugriffsrechte für Verzeichnis »%s« nicht setzen: %m"
 msgid "directory \"%s\" is not empty"
 msgstr "Verzeichnis »%s« ist nicht leer"
 
-#: commands/tablespace.c:336 commands/tablespace.c:1305
+#: commands/tablespace.c:336 commands/tablespace.c:1304
 #, c-format
 msgid "could not create symbolic link \"%s\": %m"
 msgstr "konnte symbolischen Link »%s« nicht erstellen: %m"
@@ -4615,7 +4632,7 @@ msgstr "konnte Verzeichnis »%s« nicht löschen: %m"
 msgid "could not remove symbolic link \"%s\": %m"
 msgstr "konnte symbolischen Link »%s« nicht löschen: %m"
 
-#: commands/tablespace.c:1318
+#: commands/tablespace.c:1317
 #, c-format
 msgid "tablespace %u is not empty"
 msgstr "Tablespace %u ist nicht leer"
@@ -4662,12 +4679,12 @@ msgstr ""
 #: commands/trigger.c:601 commands/trigger.c:617
 #, c-format
 msgid "ignoring incomplete trigger group for constraint \"%s\" %s"
-msgstr ""
+msgstr "unvollständige Triggergruppe für Constraint \"%s\" %s ignoriert"
 
 #: commands/trigger.c:629
 #, c-format
 msgid "converting trigger group into constraint \"%s\" %s"
-msgstr ""
+msgstr "Triggergruppe wird in Constraint \"%s\" %s umgewandelt"
 
 #: commands/trigger.c:766
 #, c-format
@@ -5054,7 +5071,7 @@ msgid "role \"%s\" already exists"
 msgstr "Rolle »%s« existiert bereits"
 
 #: commands/user.c:552 commands/user.c:734 commands/user.c:843
-#: commands/user.c:995 commands/variable.c:746 commands/variable.c:859
+#: commands/user.c:995 commands/variable.c:737 commands/variable.c:849
 #: utils/cache/lsyscache.c:2695 utils/init/miscinit.c:382
 #, c-format
 msgid "role \"%s\" does not exist"
@@ -5371,58 +5388,58 @@ msgstr "»%s«: %d Zeilenversionen in %d Seiten entfernt"
 msgid "scanned index \"%s\" to remove %d row versions"
 msgstr "Index »%s« gelesen und %d Zeilenversionen entfernt"
 
-#: commands/variable.c:63
+#: commands/variable.c:62
 msgid "invalid list syntax for parameter \"datestyle\""
 msgstr "ungültige Listensyntax für Parameter »datestyle«"
 
-#: commands/variable.c:163
+#: commands/variable.c:161
 #, c-format
 msgid "unrecognized \"datestyle\" key word: \"%s\""
 msgstr "unbekanntes »datestyle«-Schlüsselwort: »%s«"
 
-#: commands/variable.c:178
+#: commands/variable.c:175
 msgid "conflicting \"datestyle\" specifications"
 msgstr "widersprüchliche »datestyle«-Angaben"
 
-#: commands/variable.c:289
+#: commands/variable.c:285
 msgid "invalid interval value for time zone: month not allowed"
 msgstr "ungültige Intervallangabe für Zeitzone: Monat nicht erlaubt"
 
-#: commands/variable.c:298
+#: commands/variable.c:293
 msgid "invalid interval value for time zone: day not allowed"
 msgstr "ungültige Intervallangabe für Zeitzone: Tag nicht erlaubt"
 
-#: commands/variable.c:366 commands/variable.c:498
+#: commands/variable.c:361 commands/variable.c:493
 #, c-format
 msgid "unrecognized time zone name: \"%s\""
 msgstr "unbekannter Zeitzonenname: »%s«"
 
-#: commands/variable.c:375 commands/variable.c:507
+#: commands/variable.c:370 commands/variable.c:502
 #, c-format
 msgid "time zone \"%s\" appears to use leap seconds"
 msgstr "Zeitzone »%s« verwendet anscheinend Schaltsekunden"
 
-#: commands/variable.c:377 commands/variable.c:509
+#: commands/variable.c:372 commands/variable.c:504
 msgid "PostgreSQL does not support leap seconds."
 msgstr "PostgreSQL unterstützt keine Schaltsekunden."
 
-#: commands/variable.c:563
+#: commands/variable.c:557
 msgid "SET TRANSACTION ISOLATION LEVEL must be called before any query"
 msgstr ""
 "SET TRANSACTION ISOLATION LEVEL muss vor allen Anfragen aufgerufen werden"
 
-#: commands/variable.c:573
+#: commands/variable.c:566
 msgid "SET TRANSACTION ISOLATION LEVEL must not be called in a subtransaction"
 msgstr ""
 "SET TRANSACTION ISOLATION LEVEL kann nicht in einer Subtransaktion "
 "aufgerufen werden"
 
-#: commands/variable.c:673 utils/mb/mbutils.c:191
+#: commands/variable.c:665 utils/mb/mbutils.c:191
 #, c-format
 msgid "conversion between %s and %s is not supported"
 msgstr "Umwandlung zwischen %s und %s wird nicht unterstützt"
 
-#: commands/variable.c:876
+#: commands/variable.c:865
 #, c-format
 msgid "permission denied to set role \"%s\""
 msgstr "keine Berechtigung um Rolle »%s« zu setzen"
@@ -7346,14 +7363,14 @@ msgstr ""
 "konnte polymorphischen Typ nicht bestimmen, weil Eingabe Typ »unknown« hat"
 
 #: parser/parse_coerce.c:1385
-#, fuzzy, c-format
+#, c-format
 msgid "type matched to anynonarray is an array type: %s"
-msgstr "als »anyarray« deklariertes Argument ist kein Array sondern Typ %s"
+msgstr "mit »anynonarray« gepaarter Typ ist ein Array-Typ: %s"
 
 #: parser/parse_coerce.c:1395
 #, c-format
 msgid "type matched to anyenum is not an enum type: %s"
-msgstr ""
+msgstr "mit »anyenum« gepaarter Typ ist kein Enum-Typ: %s"
 
 #: parser/parse_coerce.c:1424 parser/parse_coerce.c:1441
 #: parser/parse_coerce.c:1499 parser/parse_expr.c:1312
@@ -9370,13 +9387,17 @@ msgstr "konnte Signal nicht an Prozess %d senden: %m"
 msgid ""
 "process %d avoided deadlock for %s on %s by rearranging queue order after %"
 "ld.%03d ms"
-msgstr "Prozess %d vermied Verklemmung wegen %s für %s durch Umordnen der Queue nach %ld.%03d ms"
+msgstr ""
+"Prozess %d vermied Verklemmung wegen %s für %s durch Umordnen der Queue nach "
+"%ld.%03d ms"
 
 #: storage/lmgr/proc.c:974
 #, c-format
 msgid ""
 "process %d detected deadlock while waiting for %s on %s after %ld.%03d ms"
-msgstr "Prozess %d hat Verklemmung festgestellt beim Warten auf %s für %s nach %ld.%03d ms"
+msgstr ""
+"Prozess %d hat Verklemmung festgestellt beim Warten auf %s für %s nach %ld.%"
+"03d ms"
 
 #: storage/lmgr/proc.c:980
 #, c-format
@@ -9920,17 +9941,16 @@ msgstr "unerwartetes Zeilenende in Zeile %d der Thesaurusdatei »%s«"
 #, c-format
 msgid ""
 "thesaurus sample word \"%s\" isn't recognized by subdictionary (rule %d)"
-msgstr ""
+msgstr "Thesaurus-Beispielwort »%s« wird nicht vom Unterwörterbuch erkannt (Regel %d)"
 
 #: tsearch/dict_thesaurus.c:434
 #, c-format
 msgid "thesaurus sample word \"%s\" is a stop word (rule %d)"
-msgstr ""
+msgstr "Thesaurus-Beispielwort »%s« ist ein Stoppwort (Regel %d)"
 
 #: tsearch/dict_thesaurus.c:437
-#, fuzzy
 msgid "Use \"?\" to represent a stop word within a sample phrase."
-msgstr "Verwenden Sie »\\r« um ein Carriage-Return-Zeichen darzustellen."
+msgstr "Verwenden Sie »?«, um ein Stoppwort in einem Beispielsatz darzustellen."
 
 #: tsearch/dict_thesaurus.c:582
 #, c-format
@@ -9941,7 +9961,7 @@ msgstr "Thesaurus-Ersatzwort »%s« ist ein Stoppwort (Regel %d)"
 #, c-format
 msgid ""
 "thesaurus substitute word \"%s\" isn't recognized by subdictionary (rule %d)"
-msgstr ""
+msgstr "Thesaurus-Ersatzwort »%s« wird nicht vom Unterwörterbuch erkannt (Regel %d)"
 
 #: tsearch/dict_thesaurus.c:601
 #, c-format
@@ -10070,7 +10090,7 @@ msgstr "ungültiger Textsuchekonfigurationsdateiname »%s«"
 
 #: tsearch/ts_utils.c:92
 #, c-format
-msgid "could not open stopword file \"%s\": %m"
+msgid "could not open stop-word file \"%s\": %m"
 msgstr "konnte Stoppwortdatei »%s« nicht öffnen: %m"
 
 #: tsearch/wparser_def.c:1741
@@ -10252,8 +10272,10 @@ msgid "must be member of role \"%s\""
 msgstr "Berechtigung nur für Mitglied von Rolle »%s«"
 
 #: utils/adt/tsquery_cleanup.c:285
-msgid "query contains only stopword(s) or doesn't contain lexeme(s), ignored"
-msgstr ""
+msgid ""
+"text-search query contains only stop words or doesn't contain lexemes, "
+"ignored"
+msgstr "Textsucheanfrage enthält nur Stoppwörter oder enthält keine Lexeme, ignoriert"
 
 #: utils/adt/arrayfuncs.c:205 utils/adt/arrayfuncs.c:217
 msgid "missing dimension value"
@@ -11752,8 +11774,8 @@ msgstr "Wort ist zu lang in tsquery: »%s«"
 
 #: utils/adt/tsquery.c:501
 #, c-format
-msgid "tsearch query doesn't contain lexeme(s): \"%s\""
-msgstr ""
+msgid "text-search query doesn't contain lexemes: \"%s\""
+msgstr "Textsucheanfrage enthält keine Lexeme: »%s«"
 
 #: utils/adt/tsquery_rewrite.c:294
 #, fuzzy
@@ -11802,29 +11824,29 @@ msgid "ts_stat query must return one tsvector column"
 msgstr "Unteranfrage darf nur eine Spalte zurückgeben"
 
 #: utils/adt/tsvector_op.c:1310
-#, fuzzy, c-format
+#, c-format
 msgid "tsvector column \"%s\" does not exist"
-msgstr "Spalte »%s« existiert nicht"
+msgstr "tsvector-Spalte »%s« existiert nicht"
 
 #: utils/adt/tsvector_op.c:1315
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" is not of tsvector type"
-msgstr "Spalte »%s« kann nicht in Typ »%s« umgewandelt werden"
+msgstr "Spalte »%s« hat nicht Typ tsvector"
 
 #: utils/adt/tsvector_op.c:1327
-#, fuzzy, c-format
-msgid "config column \"%s\" does not exist"
-msgstr "Spalte »%s« existiert nicht"
+#, c-format
+msgid "configuration column \"%s\" does not exist"
+msgstr "Konfigurationsspalte »%s« existiert nicht"
 
 #: utils/adt/tsvector_op.c:1332
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" is not of regconfig type"
-msgstr "Spalte »%s« nicht gefunden im Datentyp %s"
+msgstr "Spalte »%s« hat nicht Typ regconfig"
 
 #: utils/adt/tsvector_op.c:1339
-#, fuzzy, c-format
-msgid "config column \"%s\" must not be NULL"
-msgstr "Spalte »%s« existiert nicht"
+#, c-format
+msgid "configuration column \"%s\" must not be null"
+msgstr "Konfigurationsspalte »%s« darf nicht NULL sein"
 
 #: utils/adt/tsvector_op.c:1352
 #, c-format
@@ -13069,13 +13091,10 @@ msgid "Datetimes are integer based."
 msgstr "Datum/Zeit verwendet intern ganze Zahlen."
 
 #: utils/misc/guc.c:1029
-#, fuzzy
 msgid ""
 "Sets whether Kerberos and GSSAPI user names should be treated as case-"
 "insensitive."
-msgstr ""
-"Bestimmt, ob Groß-/Kleinschreibung bei Kerberos-Benutzernamen ignoriert "
-"werden soll."
+msgstr "Bestimmt, ob Groß-/Kleinschreibung bei Kerberos- und GSSAPI-Benutzernamen ignoriert werden soll."
 
 #: utils/misc/guc.c:1038
 msgid "Warn about backslash escapes in ordinary string literals."
@@ -13236,7 +13255,9 @@ msgstr "Setzt die maximale Speichergröße für Anfrage-Arbeitsbereiche."
 msgid ""
 "This much memory can be used by each internal sort operation and hash table "
 "before switching to temporary disk files."
-msgstr "Gibt die Speichermenge an, die für interne Sortiervorgänge und Hashtabellen verwendet werden kann, bevor auf temporäre Dateien umgeschaltet wird."
+msgstr ""
+"Gibt die Speichermenge an, die für interne Sortiervorgänge und Hashtabellen "
+"verwendet werden kann, bevor auf temporäre Dateien umgeschaltet wird."
 
 #: utils/misc/guc.c:1275
 msgid "Sets the maximum memory to be used for maintenance operations."
@@ -13335,7 +13356,8 @@ msgstr "Setzt die maximale Zeit um die Client-Authentifizierung zu beenden."
 
 #: utils/misc/guc.c:1457
 msgid "Waits N seconds on connection startup before authentication."
-msgstr "Wartet beim Starten einer Verbindung N Sekunden vor der Authentifizierung."
+msgstr ""
+"Wartet beim Starten einer Verbindung N Sekunden vor der Authentifizierung."
 
 #: utils/misc/guc.c:1467
 msgid ""
@@ -13416,7 +13438,9 @@ msgstr "Null zeigt alle Anfragen. -1 schaltet dieses Feature aus."
 msgid ""
 "Sets the minimum execution time above which autovacuum actions will be "
 "logged."
-msgstr "Setzt die minimale Ausführungszeit, über der Autovacuum-Aktionen geloggt werden."
+msgstr ""
+"Setzt die minimale Ausführungszeit, über der Autovacuum-Aktionen geloggt "
+"werden."
 
 #: utils/misc/guc.c:1563
 msgid "Zero prints all actions. -1 turns autovacuum logging off."
@@ -13754,7 +13778,7 @@ msgid "Sets the sessions behavior for triggers and rewrite rules."
 msgstr "Setzt das Ausgabeformat für Datums- und Zeitwerte."
 
 #: utils/misc/guc.c:2026
-msgid "Each session can be either \"origin\", \"replica\" or \"local\"."
+msgid "Each session can be either \"origin\", \"replica\", or \"local\"."
 msgstr "Jede Sitzung kann »origin«, »replica« oder »local« sein."
 
 #: utils/misc/guc.c:2035
@@ -13936,10 +13960,8 @@ msgstr ""
 "gewartet wird."
 
 #: utils/misc/guc.c:2346
-#, fuzzy
 msgid "Selects the method used for forcing WAL updates to disk."
-msgstr ""
-"Wählt die Methode um WAL-Änderungen auf die Festplatte zurückzuschreiben."
+msgstr "Wählt die Methode, um das Schreiben von WAL-Änderungen auf die Festplatte zu erzwingen."
 
 #: utils/misc/guc.c:2355
 msgid "Sets the list of known custom variable classes."
@@ -13984,14 +14006,12 @@ msgid "Valid values are DOCUMENT and CONTENT."
 msgstr "Gültige Werte sind DOCUMENT und CONTENT."
 
 #: utils/misc/guc.c:2434
-#, fuzzy
 msgid "Sets default text search configuration."
-msgstr "Setzt die Hauptkonfigurationsdatei des Servers."
+msgstr "Setzt die vorgegebene Textsuchekonfiguration."
 
 #: utils/misc/guc.c:2444
-#, fuzzy
 msgid "Sets the list of allowed SSL ciphers."
-msgstr "Setzt den Detailgrad von geloggten Meldungen."
+msgstr "Setzt die Liste der erlaubten SSL-Verschlüsselungsalgorithmen."
 
 #: utils/misc/guc.c:3176
 #, c-format
@@ -14057,7 +14077,7 @@ msgstr ""
 "Gültige Einheiten für diesen Parameter sind »ms«, »s«, »min«, »h« und »d«."
 
 #: utils/misc/guc.c:4195 utils/misc/guc.c:4718 utils/misc/guc.c:4762
-#: utils/misc/guc.c:4834 utils/misc/guc.c:5303 utils/misc/guc.c:5444
+#: utils/misc/guc.c:4869 utils/misc/guc.c:5338 utils/misc/guc.c:5479
 #: guc-file.l:213
 #, c-format
 msgid "unrecognized configuration parameter \"%s\""
@@ -14132,56 +14152,56 @@ msgstr "%g ist außerhalb des gültigen Bereichs für Parameter »%s« (%g ... %g)"
 msgid "invalid value for parameter \"%s\": %g"
 msgstr "ungültiger Wert für Parameter »%s«: %g"
 
-#: utils/misc/guc.c:4722 utils/misc/guc.c:4766 utils/misc/guc.c:5448
+#: utils/misc/guc.c:4722 utils/misc/guc.c:4766 utils/misc/guc.c:5483
 #, c-format
 msgid "must be superuser to examine \"%s\""
 msgstr "nur Superuser können »%s« ansehen"
 
-#: utils/misc/guc.c:4843
+#: utils/misc/guc.c:4878
 #, c-format
 msgid "SET %s takes only one argument"
 msgstr "SET %s darf nur ein Argument haben"
 
-#: utils/misc/guc.c:5055
+#: utils/misc/guc.c:5090
 msgid "SET requires parameter name"
 msgstr "SET benötigt Parameternamen"
 
-#: utils/misc/guc.c:5152
+#: utils/misc/guc.c:5187
 #, c-format
 msgid "attempt to redefine parameter \"%s\""
 msgstr "Versuch, den Parameter »%s« zu redefinieren"
 
-#: utils/misc/guc.c:6220
+#: utils/misc/guc.c:6255
 #, c-format
 msgid "could not parse setting for parameter \"%s\""
 msgstr "konnte Wert von Parameter »%s« nicht lesen"
 
-#: utils/misc/guc.c:6412
+#: utils/misc/guc.c:6446
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "ungültige Listensyntax für Parameter »log_destination«"
 
-#: utils/misc/guc.c:6437
+#: utils/misc/guc.c:6470
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "unbekanntes »log_destination«-Schlüsselwort: »%s«"
 
-#: utils/misc/guc.c:6725
+#: utils/misc/guc.c:6757
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF wird nicht mehr unterstützt"
 
-#: utils/misc/guc.c:6796
+#: utils/misc/guc.c:6829
 msgid "assertion checking is not supported by this build"
 msgstr "Assert-Prüfungen werden von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:6808
+#: utils/misc/guc.c:6844
 msgid "SSL is not supported by this build"
 msgstr "SSL wird von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:6821
+#: utils/misc/guc.c:6858
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "kann Parameter nicht einschalten, wenn »log_statement_stats« an ist"
 
-#: utils/misc/guc.c:6838
+#: utils/misc/guc.c:6874
 msgid ""
 "cannot enable \"log_statement_stats\" when \"log_parser_stats\", "
 "\"log_planner_stats\", or \"log_executor_stats\" is true"
@@ -14189,7 +14209,7 @@ msgstr ""
 "kann »log_statement_stats« nicht einschalten, wenn »log_parser_stats«, "
 "»log_planner_stats« oder »log_executor_stats« an ist"
 
-#: utils/misc/guc.c:6857
+#: utils/misc/guc.c:6892
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr ""
 "kann den Read/Write-Modus einer Transaktion nicht in einer Read-Only-"
@@ -14459,8 +14479,8 @@ msgstr "Versuche werden für 30 Sekunden wiederholt."
 
 #: ../port/open.c:114
 msgid ""
-"You may have antivirus, backup or similar software interfering with the "
-"database."
+"You may have antivirus, backup, or similar software interfering with the "
+"database system."
 msgstr ""
 
 #: ../port/win32error.c:184
@@ -14539,31 +14559,11 @@ msgstr "unbekannter Fehler %d"
 #~ "Prozentsatz der vom Background-Writer pro Durchlauf insgesamt zu "
 #~ "flushenden Puffer"
 
-#~ msgid "WAL archiving command."
-#~ msgstr "WAL-Archivierungsbefehl."
-
 #~ msgid "parameter \"%s\" requires an integer value"
 #~ msgstr "Parameter »%s« erfordert einen ganzzahligen Wert"
 
-#~ msgid "invalid syntax for \"custom_variable_classes\": \"%s\""
-#~ msgstr "ungültige Syntax für Typ »custom_variable_classes«: »%s«"
-
-#~ msgid "could not determine target array type"
-#~ msgstr "konnte Ziel-Arraytyp nicht bestimmen"
-
-#~ msgid "array coercion to domain type elements not currently supported"
-#~ msgstr ""
-#~ "Typumwandlung von Arrays in Elemente mit Domänentyp wird gegenwärtig "
-#~ "nicht unterstützt"
-
-#~ msgid "text too long to convert to MAC address"
-#~ msgstr "Text ist zu lang um ihn in eine MAC-Adresse umzuwandeln"
-
 #~ msgid "result out of range"
 #~ msgstr "Ergebnis ist außerhalb des gültigen Bereichs"
-
-#~ msgid "Must provide \"relationname.columnname\"."
-#~ msgstr "Muss »relationsname.spaltenname« angeben."
 
 #~ msgid "function \"%s\" called with wrong number of trigger arguments"
 #~ msgstr "Funktion »%s« mit der falschen Anzahl Triggerargumente aufgerufen"
@@ -14572,12 +14572,3 @@ msgstr "unbekannter Fehler %d"
 #~ "table \"%s\" does not have column \"%s\" referenced by constraint \"%s\""
 #~ msgstr ""
 #~ "Tabelle »%s« hat keine Spalte »%s«, auf die Constraint »%s« verweist"
-
-#~ msgid "invalid input syntax for type timestamp: \"%s\""
-#~ msgstr "ungültige Eingabesyntax für Typ timestamp: »%s«"
-
-#~ msgid "invalid input syntax for type timestamp with time zone: \"%s\""
-#~ msgstr "ungültige Eingabesyntax für Typ timestamp with time zone: »%s«"
-
-#~ msgid "invalid input syntax for type interval: \"%s\""
-#~ msgstr "ungültige Eingabesyntax für Typ interval: »%s«"
