@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-01 02:16-0200\n"
+"POT-Creation-Date: 2008-01-03 12:01-0200\n"
 "PO-Revision-Date: 2005-11-02 10:41-0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
@@ -38,21 +38,21 @@ msgstr "registro do índice requer %lu bytes, tamanho máximo é %lu"
 msgid "unsupported format code: %d"
 msgstr "código do formato não é suportado: %d"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:112
+#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:113
 msgid "RESET must not include values for parameters"
 msgstr "RESET não deve incluir valores para parâmetros"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:209
+#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:254
 #, c-format
 msgid "parameter \"%s\" specified more than once"
 msgstr "parâmetro \"%s\" foi especificado mais de uma vez"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:230
+#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:275
 #, c-format
 msgid "unrecognized parameter \"%s\""
 msgstr "parâmetro desconhecido \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:264
+#: /a/pgsql/HEAD/pgtst/src/backend/access/common/reloptions.c:309
 #, c-format
 msgid "fillfactor=%d is out of range (should be between %d and 100)"
 msgstr "fillfactor=%d está fora do intervalo (deve ser entre %d e 100)"
@@ -174,8 +174,8 @@ msgstr "\"%s\" é um índice"
 #: /a/pgsql/HEAD/pgtst/src/backend/access/heap/heapam.c:1023
 #: /a/pgsql/HEAD/pgtst/src/backend/access/heap/heapam.c:1051
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/aclchk.c:580
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5434
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6521
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5433
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6520
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" é um tipo composto"
@@ -195,8 +195,8 @@ msgstr "registro é muito grande: tamanho %lu, tamanho máximo %lu"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/access/index/indexam.c:146
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:500
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1264
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1294
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1254
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1284
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:97
 #, c-format
 msgid "\"%s\" is not an index"
@@ -334,6 +334,7 @@ msgstr "transação preparada pertence a outro banco de dados"
 msgid ""
 "Connect to the database where the transaction was prepared to finish it."
 msgstr ""
+"Conecte-se ao banco de dados onde a transação foi preparada para terminá-la."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/access/transam/twophase.c:423
 #, c-format
@@ -484,24 +485,24 @@ msgstr ""
 "limite de reinício do ID de transação é %u, limitado pelo banco de dados \"%s"
 "\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:575
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:592
 msgid "cannot have more than 2^32-1 commands in a transaction"
 msgstr "não pode ter mais do que 2^32-1 comandos em uma transação"
 
 #. translator: %s represents an SQL statement name
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2516
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2550
 #, c-format
 msgid "%s cannot run inside a transaction block"
 msgstr "%s não pode executar dentro de um bloco de transação"
 
 #. translator: %s represents an SQL statement name
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2526
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2560
 #, c-format
 msgid "%s cannot run inside a subtransaction"
 msgstr "%s não pode executar dentro de uma subtransação"
 
 #. translator: %s represents an SQL statement name
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2536
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2570
 #, c-format
 msgid "%s cannot be executed from a function or multi-command string"
 msgstr ""
@@ -509,30 +510,30 @@ msgstr ""
 "múltiplos comandos"
 
 #. translator: %s represents an SQL statement name
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2587
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2621
 #, c-format
 msgid "%s can only be used in transaction blocks"
 msgstr "%s só pode ser utilizado em blocos de transação"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2769
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2803
 msgid "there is already a transaction in progress"
 msgstr "há uma transação em execução"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2936
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3028
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:2970
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3062
 msgid "there is no transaction in progress"
 msgstr "não há uma transação em execução"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3122
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3172
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3178
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3222
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3270
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3276
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3156
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3206
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3212
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3256
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3304
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3310
 msgid "no such savepoint"
 msgstr "ponto de salvamento inexistente"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3920
+#: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xact.c:3954
 msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "não pode ter mais do que 2^32-1 subtransações em uma transação"
 
@@ -619,7 +620,7 @@ msgstr "não pôde fechar arquivo \"%s\": %m"
 #: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xlog.c:3636
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/hba.c:954
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/autovacuum.c:1785
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1203
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1202
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/init/miscinit.c:970
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/init/miscinit.c:1076
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/init/postinit.c:89
@@ -900,7 +901,7 @@ msgstr "não pôde vincular arquivo \"%s\" a \"%s\": %m"
 #: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xlog.c:4571
 #: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xlog.c:4612
 #: /a/pgsql/HEAD/pgtst/src/backend/access/transam/xlog.c:4981
-#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:596
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:645
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/init/flatfiles.c:285
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/init/flatfiles.c:667
 #, c-format
@@ -1611,14 +1612,14 @@ msgstr "redo do xlog %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/bootstrap/bootstrap.c:293
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:630
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3024
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3028
 #, c-format
 msgid "--%s requires a value"
 msgstr "--%s requer um valor"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/bootstrap/bootstrap.c:298
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:635
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3029
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3033
 #, c-format
 msgid "-c %s requires a value"
 msgstr "-c %s requer um valor"
@@ -1739,15 +1740,15 @@ msgstr "esquema \"%s\" não existe"
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/aclchk.c:512
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:663
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/dbcommands.c:303
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:210
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:207
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:333
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5693
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5692
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablespace.c:412
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablespace.c:767
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablespace.c:834
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablespace.c:929
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablespace.c:1053
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:2568
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:2587
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/acl.c:2582
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/dbsize.c:240
 #, c-format
@@ -2144,17 +2145,17 @@ msgstr "esquema %s"
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/dependency.c:2164
 #, c-format
 msgid "text search parser %s"
-msgstr ""
+msgstr "analisador de busca textual %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/dependency.c:2180
 #, c-format
 msgid "text search dictionary %s"
-msgstr ""
+msgstr "dicionário de busca textual %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/dependency.c:2196
 #, c-format
 msgid "text search template %s"
-msgstr ""
+msgstr "modelo de busca textual %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/dependency.c:2212
 #, c-format
@@ -2289,9 +2290,11 @@ msgstr ""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/heap.c:853
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/index.c:560
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5827
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5826
 msgid "only shared relations can be placed in pg_global tablespace"
 msgstr ""
+"somente relações compartilhadas podem ser armazenadas no espaço de tabelas "
+"pg_global"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/heap.c:1781
 #, c-format
@@ -2310,7 +2313,7 @@ msgid "cannot use aggregate function in check constraint"
 msgstr "não pode utilizar função de agregação na restrição de verificação"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/heap.c:1811
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3879
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3878
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "restrição \"%s\" para relação \"%s\" já existe"
@@ -2405,7 +2408,7 @@ msgstr "índice compartilhado \"%s\" só pode ser reindexado no modo autônomo"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/namespace.c:226
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/namespace.c:300
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3305
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3298
 #, c-format
 msgid "cross-database references are not implemented: \"%s.%s.%s\""
 msgstr ""
@@ -2434,26 +2437,26 @@ msgid "no schema has been selected to create in"
 msgstr "nenhum esquema foi selecionado para criá-lo(a)"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/namespace.c:1394
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:289
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:290
 #, fuzzy, c-format
 msgid "text search parser \"%s\" does not exist"
 msgstr "analisador de busca textual \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/namespace.c:1522
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:628
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:629
 #, c-format
 msgid "text search dictionary \"%s\" does not exist"
 msgstr "dicionário de busca textual \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/namespace.c:1651
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1104
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1105
 #, fuzzy, c-format
 msgid "text search template \"%s\" does not exist"
 msgstr "modelo de busca textual \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/namespace.c:1779
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1490
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1645
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1491
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1646
 #, c-format
 msgid "text search configuration \"%s\" does not exist"
 msgstr "configuração de busca textual \"%s\" não existe"
@@ -2563,7 +2566,7 @@ msgstr "conversão \"%s\" já existe"
 msgid "default conversion for %s to %s already exists"
 msgstr "conversão padrão de %s para %s já existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/catalog/pg_depend.c:205
+#: /a/pgsql/HEAD/pgtst/src/backend/catalog/pg_depend.c:207
 #, c-format
 msgid "cannot remove dependency on %s because it is a system object"
 msgstr "não pode remover dependência em %s porque ele é um objeto do sistema"
@@ -2786,13 +2789,13 @@ msgstr "não pôde encontrar tipo array para tipo de dado %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/catalog/toasting.c:83
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:514
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:172
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1328
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:169
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1318
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/lockcmds.c:71
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:656
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:2704
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:108
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:835
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:107
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:834
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:79
 #, c-format
 msgid "\"%s\" is not a table"
@@ -2862,7 +2865,7 @@ msgstr "analisando \"%s.%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/analyze.c:243
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:577
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:3318
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:3350
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/sequence.c:1235
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3254
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3346
@@ -2870,14 +2873,14 @@ msgstr "analisando \"%s.%s\""
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3489
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3550
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3616
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4757
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4890
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4756
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4889
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1507
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_relation.c:1597
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_relation.c:1652
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_target.c:764
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_type.c:116
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:1309
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:1312
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
 msgstr "coluna \"%s\" da relação \"%s\" não existe"
@@ -2908,7 +2911,7 @@ msgid "there is no previously clustered index for table \"%s\""
 msgstr "não há nenhum índice previamente agrupado na tabela \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/cluster.c:161
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5657
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5656
 #, c-format
 msgid "index \"%s\" for table \"%s\" does not exist"
 msgstr "índice \"%s\" na tabela \"%s\" não existe"
@@ -3030,9 +3033,9 @@ msgid "rule \"%s\" for relation \"%s\" does not exist"
 msgstr "regra \"%s\" para relação \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:1034
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:763
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:984
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1093
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:762
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:983
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1092
 #, c-format
 msgid "trigger \"%s\" for table \"%s\" does not exist"
 msgstr "gatilho \"%s\" na tabela \"%s\" não existe"
@@ -3066,7 +3069,7 @@ msgstr ""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:1236
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:1322
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:284
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:281
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/opclasscmds.c:288
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/opclasscmds.c:681
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/opclasscmds.c:784
@@ -3082,8 +3085,8 @@ msgstr "método de acesso \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:1265
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/comment.c:1275
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:946
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:956
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:966
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/opclasscmds.c:1530
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/opclasscmds.c:1534
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/opclasscmds.c:1771
@@ -3332,7 +3335,7 @@ msgstr ""
 "comando \\copy do psql também funciona para qualquer um."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:972
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:448
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:472
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:362
 msgid "transaction is read-only"
 msgstr "transação é somente leitura"
@@ -3544,8 +3547,8 @@ msgstr "tamanho de campo inválido"
 msgid "incorrect binary data format"
 msgstr "formato de dado binário incorreto"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:3323
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:779
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:3355
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:769
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:1513
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:418
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1372
@@ -3553,7 +3556,7 @@ msgstr "formato de dado binário incorreto"
 msgid "column \"%s\" does not exist"
 msgstr "coluna \"%s\" não existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:3330
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/copy.c:3362
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:797
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_target.c:780
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_target.c:791
@@ -3924,13 +3927,13 @@ msgid "function \"%s\" is already in schema \"%s\""
 msgstr "função \"%s\" já está no esquema \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/functioncmds.c:1708
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6549
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6548
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/typecmds.c:2592
 msgid "cannot move objects into or out of temporary schemas"
 msgstr "não pode mover objetos para ou de esquemas temporários"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/functioncmds.c:1714
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6555
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6554
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/typecmds.c:2598
 msgid "cannot move objects into or out of TOAST schema"
 msgstr "não pode mover objetos para ou de esquema TOAST"
@@ -3940,98 +3943,98 @@ msgstr "não pode mover objetos para ou de esquema TOAST"
 msgid "function \"%s\" already exists in schema \"%s\""
 msgstr "função \"%s\" já existe no esquema \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:147
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:144
 msgid "must specify at least one column"
 msgstr "deve especificar pelo menos uma coluna"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:151
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:148
 #, c-format
 msgid "cannot use more than %d columns in an index"
 msgstr "não pode utilizar mais do que %d colunas em um índice"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:181
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:178
 msgid "cannot create indexes on temporary tables of other sessions"
 msgstr "não pode criar índices em tabelas temporárias de outras sessões"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:274
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:271
 msgid "substituting access method \"gist\" for obsolete method \"rtree\""
 msgstr "substituindo método de acesso \"gist\" pelo método obsoleto \"rtree\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:293
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:290
 #, c-format
 msgid "access method \"%s\" does not support unique indexes"
 msgstr "método de acesso \"%s\" não suporta índices únicos"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:298
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:295
 #, c-format
 msgid "access method \"%s\" does not support multicolumn indexes"
 msgstr "método de acesso \"%s\" não suporta índices de múltiplas colunas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:331
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1027
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1056
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:328
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:980
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1063
 #, c-format
 msgid "multiple primary keys for table \"%s\" are not allowed"
 msgstr "chaves primárias múltiplas na tabela \"%s\" não são permitidas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:348
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:345
 msgid "primary keys cannot be expressions"
 msgstr "chaves primárias não podem ser expressões"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:378
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:774
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1171
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:375
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:764
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1178
 #, c-format
 msgid "column \"%s\" named in key does not exist"
 msgstr "coluna \"%s\" indicada na chave não existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:440
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:430
 #, c-format
 msgid "%s %s will create implicit index \"%s\" for table \"%s\""
 msgstr "%s %s criará índice implícito \"%s\" na tabela \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:715
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:705
 msgid "cannot use subquery in index predicate"
 msgstr "não pode utilizar subconsulta em predicado de índice"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:719
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:709
 msgid "cannot use aggregate in index predicate"
 msgstr "não pode utilizar agregação em predicado de índice"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:728
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:718
 msgid "functions in index predicate must be marked IMMUTABLE"
 msgstr "funções em predicado de índice devem ser IMMUTABLE"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:812
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:802
 msgid "cannot use subquery in index expression"
 msgstr "não pode utilizar subconsulta em expressão de índice"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:816
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:806
 msgid "cannot use aggregate function in index expression"
 msgstr "não pode utilizar função de agregação em expressão de índice"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:826
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:816
 msgid "functions in index expression must be marked IMMUTABLE"
 msgstr "funções em expressão de índice devem ser IMMUTABLE"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:863
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:853
 #, c-format
 msgid "access method \"%s\" does not support ASC/DESC options"
 msgstr "método de acesso \"%s\" não suporta opções ASC/DESC"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:868
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:858
 #, c-format
 msgid "access method \"%s\" does not support NULLS FIRST/LAST options"
 msgstr "método de acesso \"%s\" não suporta opções NULLS FIRST/LAST"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:924
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:914
 #, c-format
 msgid "data type %s has no default operator class for access method \"%s\""
 msgstr ""
 "tipo de dado %s não tem classe de operadores padrão para método de acesso \"%"
 "s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:926
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:916
 msgid ""
 "You must specify an operator class for the index or define a default "
 "operator class for the data type."
@@ -4039,31 +4042,31 @@ msgstr ""
 "Você deve especificar uma classe de operadores para o índice ou definir uma "
 "classe de operadores padrão para o tipo de dado."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:979
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:969
 #, c-format
 msgid "operator class \"%s\" does not accept data type %s"
 msgstr "classe de operadores \"%s\" não aceita tipo de dado %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1069
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1059
 #, c-format
 msgid "there are multiple default operator classes for data type %s"
 msgstr "há múltiplas classes de operadores padrão para tipo de dado %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1340
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1330
 #, c-format
 msgid "shared table \"%s\" can only be reindexed in stand-alone mode"
 msgstr "tabela compartilhada \"%s\" só pode ser reindexada no modo autônomo"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1347
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1337
 #, c-format
 msgid "table \"%s\" has no indexes"
 msgstr "tabela \"%s\" não tem índices"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1375
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1365
 msgid "can only reindex the currently open database"
 msgstr "só pode reindexar o banco de dados atualmente aberto"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1464
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/indexcmds.c:1454
 #, c-format
 msgid "table \"%s\" was reindexed"
 msgstr "tabela \"%s\" foi reindexada"
@@ -4249,8 +4252,8 @@ msgstr "nome do cursor é inválido: não deve ser vazio"
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/portalcmds.c:164
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/portalcmds.c:218
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/execCurrent.c:69
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:2006
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:2165
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:2007
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:2166
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "cursor \"%s\" não existe"
@@ -4509,7 +4512,7 @@ msgid "Specify OWNED BY table.column or OWNED BY NONE."
 msgstr "Especifique OWNED BY tabela.coluna ou OWNED BY NONE."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/sequence.c:1217
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3946
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3945
 #, c-format
 msgid "referenced relation \"%s\" is not a table"
 msgstr "relação referenciada \"%s\" não é uma tabela"
@@ -4523,7 +4526,7 @@ msgid "sequence must be in same schema as table it is linked to"
 msgstr "sequência deve estar no mesmo esquema da tabela que ela está ligada"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:303
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:2544
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:2563
 msgid "ON COMMIT can only be used on temporary tables"
 msgstr "ON COMMIT só pode ser utilizado em tabelas temporárias"
 
@@ -4537,9 +4540,9 @@ msgstr "truncando em cascata tabela \"%s\""
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:1649
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:2716
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:2745
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3958
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:114
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:841
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3957
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:113
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:840
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:207
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:244
 #, c-format
@@ -4556,20 +4559,20 @@ msgid "cannot truncate temporary tables of other sessions"
 msgstr "não pode truncar tabelas temporárias de outras sessões"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:822
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:537
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1134
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:539
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1141
 #, c-format
 msgid "inherited relation \"%s\" is not a table"
 msgstr "relação herdada \"%s\" não é uma tabela"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:828
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6028
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6027
 #, c-format
 msgid "cannot inherit from temporary relation \"%s\""
 msgstr "não pode herdar de uma tabela temporária \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:845
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6056
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6055
 #, fuzzy, c-format
 msgid "relation \"%s\" would be inherited from more than once"
 msgstr "relação \"%s\" seria herdada de mais de uma"
@@ -4587,9 +4590,9 @@ msgstr "coluna herdada \"%s\" tem um conflito de tipo"
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:910
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:1056
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:268
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1283
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1300
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1345
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1304
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1321
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1366
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:1638
 #, c-format
 msgid "%s versus %s"
@@ -4699,7 +4702,7 @@ msgid "column must be added to child tables too"
 msgstr "coluna deve ser adicionada as tabelas descendentes também"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3025
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6187
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6186
 #, c-format
 msgid "child table \"%s\" has different type for column \"%s\""
 msgstr "tabela descendente \"%s\" tem tipo diferente da coluna \"%s\""
@@ -4714,7 +4717,7 @@ msgstr "juntando definição da coluna \"%s\" para tabela descendente \"%s\""
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3400
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3496
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3557
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4766
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4765
 #, c-format
 msgid "cannot alter system column \"%s\""
 msgstr "não pode alterar coluna do sistema \"%s\""
@@ -4754,51 +4757,51 @@ msgstr "não pode remover coluna do sistema \"%s\""
 msgid "cannot drop inherited column \"%s\""
 msgstr "não pode remover coluna herdada \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3980
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3979
 msgid "cannot reference temporary table from permanent table constraint"
 msgstr ""
 "não pode referenciar tabela temporária a partir de uma restrição em uma "
 "tabela permanente"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3987
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:3986
 msgid "cannot reference permanent table from temporary table constraint"
 msgstr ""
 "não pode referenciar tabela permanente a partir de uma restrição em uma "
 "tabela temporária"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4041
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4040
 msgid "number of referencing and referenced columns for foreign key disagree"
 msgstr ""
 "número de colunas que referenciam e são referenciadas em um chave "
 "estrangeira não correspondem"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4132
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4131
 #, c-format
 msgid "foreign key constraint \"%s\" cannot be implemented"
 msgstr "restrição de chave estrangeira \"%s\" não pode ser implementada"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4135
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4134
 #, c-format
 msgid "Key columns \"%s\" and \"%s\" are of incompatible types: %s and %s."
 msgstr "Colunas chave \"%s\" e \"%s\" são de tipos incompatíveis: %s e %s."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4226
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4225
 #, c-format
 msgid "column \"%s\" referenced in foreign key constraint does not exist"
 msgstr ""
 "coluna \"%s\" referenciada na restrição de chave estrangeira não existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4231
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4230
 #, c-format
 msgid "cannot have more than %d keys in a foreign key"
 msgstr "não pode ter mais do que %d chaves em uma chave estrangeira"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4304
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4303
 #, c-format
 msgid "there is no primary key for referenced table \"%s\""
 msgstr "não há chave primária na tabela referenciada \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4438
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4437
 #, c-format
 msgid ""
 "there is no unique constraint matching given keys for referenced table \"%s\""
@@ -4806,166 +4809,166 @@ msgstr ""
 "não há restrição de unicidade que corresponde com as colunas informadas na "
 "tabela referenciada \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4722
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3425
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4721
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3418
 #, c-format
 msgid "constraint \"%s\" does not exist"
 msgstr "restrição \"%s\" não existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4727
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4726
 #, c-format
 msgid "multiple constraints named \"%s\" were dropped"
 msgstr "restrições múltiplas chamadas \"%s\" foram removidas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4773
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4772
 #, c-format
 msgid "cannot alter inherited column \"%s\""
 msgstr "não pode alterar coluna herdada \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4808
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4807
 msgid "transform expression must not return a set"
 msgstr "expressão de transformação não deve retornar um conjunto"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4814
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4813
 msgid "cannot use subquery in transform expression"
 msgstr "não pode utilizar subconsulta em expressão de transformação"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4818
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4817
 msgid "cannot use aggregate function in transform expression"
 msgstr "não pode utilizar função de agregação em expressão de transformação"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4835
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4834
 #, c-format
 msgid "column \"%s\" cannot be cast to type \"%s\""
 msgstr "coluna \"%s\" não pode ser convertida para tipo \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4861
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4860
 #, c-format
 msgid "type of inherited column \"%s\" must be changed in child tables too"
 msgstr ""
 "tipo de coluna herdada \"%s\" deve ser alterado nas tabelas descendentes "
 "também"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4900
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4899
 #, c-format
 msgid "cannot alter type of column \"%s\" twice"
 msgstr "não pode alterar tipo de coluna \"%s\" duas vezes"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4933
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:4932
 #, c-format
 msgid "default for column \"%s\" cannot be cast to type \"%s\""
 msgstr ""
 "valor padrão para coluna \"%s\" não pode ser convertido para tipo \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5059
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5058
 msgid "cannot alter type of a column used by a view or rule"
 msgstr "não pode alterar tipo de uma coluna utilizada por uma visão ou regra"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5060
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5059
 #, c-format
 msgid "%s depends on column \"%s\""
 msgstr "%s depende da coluna \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5404
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5403
 #, c-format
 msgid "cannot change owner of index \"%s\""
 msgstr "não pode mudar dono do índice \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5406
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5405
 msgid "Change the ownership of the index's table, instead."
 msgstr "Mude o dono da tabela do índice."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5422
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5421
 #, c-format
 msgid "cannot change owner of sequence \"%s\""
 msgstr "não pode mudar dono da sequência \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5424
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6513
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5423
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6512
 #, c-format
 msgid "Sequence \"%s\" is linked to table \"%s\"."
 msgstr "Sequência \"%s\" está ligada a tabela \"%s\"."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5436
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6523
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5435
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6522
 #, fuzzy
 msgid "Use ALTER TYPE instead."
 msgstr "Utilize ALTER TABLE SET SCHEMA."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5445
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6531
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5444
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6530
 #, c-format
 msgid "\"%s\" is not a table, view, or sequence"
 msgstr "\"%s\" não é uma tabela, visão ou sequência"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5704
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5703
 msgid "cannot have multiple SET TABLESPACE subcommands"
 msgstr "não pode ter múltiplos subcomandos SET TABLESPACE"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5757
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5756
 #, c-format
 msgid "\"%s\" is not a table, index, or TOAST table"
 msgstr "\"%s\" não é uma tabela, índice ou tabela TOAST"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5820
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5819
 #, c-format
 msgid "cannot move system relation \"%s\""
 msgstr "não pode mover relação do sistema \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5836
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:5835
 msgid "cannot move temporary tables of other sessions"
 msgstr "não pode mover tabelas temporárias de outras sessões"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6080
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6079
 msgid "circular inheritance not allowed"
 msgstr "herança circular não é permitida"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6081
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6080
 #, c-format
 msgid "\"%s\" is already a child of \"%s\"."
 msgstr "\"%s\" já é um descendente de \"%s\"."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6089
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6088
 #, c-format
 msgid "table \"%s\" without OIDs cannot inherit from table \"%s\" with OIDs"
 msgstr "tabela \"%s\" sem OIDs não pode herdar de tabela \"%s\" com OIDs"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6194
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6193
 #, c-format
 msgid "column \"%s\" in child table must be marked NOT NULL"
 msgstr "coluna \"%s\" na tabela descendente deve ser definida como NOT NULL"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6210
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6209
 #, c-format
 msgid "child table is missing column \"%s\""
 msgstr "tabela descendente está faltando coluna \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6302
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6301
 #, c-format
 msgid "child table is missing constraint \"%s\""
 msgstr "tabela descendente está faltando restrição \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6311
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6310
 #, c-format
 msgid "constraint definition for check constraint \"%s\" does not match"
 msgstr ""
 "definição de restrição para restrição de verificação \"%s\" não corresponde"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6392
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6391
 #, c-format
 msgid "relation \"%s\" is not a parent of relation \"%s\""
 msgstr "relação \"%s\" não é um ancestral da relação \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6512
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6511
 msgid "cannot move an owned sequence into another schema"
 msgstr "não pode mover uma sequência ligada para outro esquema"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6541
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6540
 #, c-format
 msgid "relation \"%s\" is already in schema \"%s\""
 msgstr "relação \"%s\" já está no esquema \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6606
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tablecmds.c:6605
 #, c-format
 msgid "relation \"%s\" already exists in schema \"%s\""
 msgstr "relação \"%s\" já existe no esquema \"%s\""
@@ -5084,246 +5087,239 @@ msgstr "não pôde remover link simbólico \"%s\": %m"
 msgid "tablespace %u is not empty"
 msgstr "espaço de tabelas %u não está vazio"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:164
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:163
 msgid "multiple INSERT events specified"
 msgstr "múltiplos eventos INSERT especificados"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:171
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:170
 msgid "multiple DELETE events specified"
 msgstr "múltiplos eventos DELETE especificados"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:178
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:177
 msgid "multiple UPDATE events specified"
 msgstr "múltiplos eventos UPDATE especificados"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:202
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:201
 #, c-format
 msgid "changing return type of function %s from \"opaque\" to \"trigger\""
 msgstr "alterando tipo retornado pela função %s de \"opaque\" para \"trigger\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:209
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:208
 #, c-format
 msgid "function %s must return type \"trigger\""
 msgstr "função %s deve retornar tipo \"trigger\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:288
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:942
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:287
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:941
 #, c-format
 msgid "trigger \"%s\" for relation \"%s\" already exists"
 msgstr "gatilho \"%s\" para relação \"%s\" já existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:491
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:490
 msgid "Found referenced table's UPDATE trigger."
 msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:492
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:491
 msgid "Found referenced table's DELETE trigger."
 msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:493
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:492
 msgid "Found referencing table's trigger."
 msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:602
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:618
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:601
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:617
 #, fuzzy, c-format
 msgid "ignoring incomplete trigger group for constraint \"%s\" %s"
 msgstr "faltando índice para restrição \"%s\"\n"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:630
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:629
 #, c-format
 msgid "converting trigger group into constraint \"%s\" %s"
 msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:767
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:766
 #, c-format
 msgid "trigger \"%s\" for table \"%s\" does not exist, skipping"
 msgstr "gatilho \"%s\" para tabela \"%s\" não existe, ignorando"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1061
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1060
 #, c-format
 msgid "permission denied: \"%s\" is a system trigger"
 msgstr "permissão negada: \"%s\" é um gatilho do sistema"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1589
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1588
 #, c-format
 msgid "trigger function %u returned null value"
 msgstr "função de gatilho %u retornou valor nulo"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1657
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1788
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1939
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1656
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1787
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:1935
 msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "gatilho BEFORE STATEMENT não pode retornar um valor"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:2080
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1304
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1594
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1774
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:2074
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1328
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1616
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1794
 msgid "could not serialize access due to concurrent update"
 msgstr "não pôde serializar acesso devido a uma atualização concorrente"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3399
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3392
 #, c-format
 msgid "constraint \"%s\" is not deferrable"
 msgstr "restrição \"%s\" não é postergável"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3527
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3548
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3520
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/trigger.c:3541
 #, c-format
 msgid "cannot truncate table \"%s\" because it has pending trigger events"
 msgstr ""
 "não pode truncar tabela \"%s\" porque ela tem eventos de gatilho pendentes"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:106
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:907
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:107
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:908
+#, c-format
 msgid "function %s should return type %s"
-msgstr "funções SQL não podem retornar tipo %s"
+msgstr "função %s deve retornar tipo %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:175
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:176
 msgid "must be superuser to create text search parsers"
-msgstr "deve ser super-usuário para criar super-usuários"
+msgstr "deve ser super-usuário para criar analisadores de busca textual"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:223
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:224
+#, c-format
 msgid "text search parser parameter \"%s\" not recognized"
-msgstr "atributo do tipo \"%s\" desconhecido"
+msgstr "parâmetro do analisador de busca textual \"%s\" é desconhecido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:233
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:234
 msgid "text search parser start method is required"
-msgstr ""
+msgstr "método start do analisador de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:238
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:239
 msgid "text search parser gettoken method is required"
-msgstr ""
+msgstr "método gettoken do analisador de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:243
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:244
 msgid "text search parser end method is required"
-msgstr ""
+msgstr "método end do analisador de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:248
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:249
 msgid "text search parser lextypes method is required"
-msgstr ""
+msgstr "método lextypes do analisador de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:280
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:281
 msgid "must be superuser to drop text search parsers"
-msgstr "deve ser super-usuário para remover super-usuários"
+msgstr "deve ser super-usuário para remover analisadores de busca textual"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:295
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:296
+#, c-format
 msgid "text search parser \"%s\" does not exist, skipping"
-msgstr "espaço de tabelas \"%s\" não existe, ignorando"
+msgstr "analisador de busca textual \"%s\" não existe, ignorando"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:347
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:348
 msgid "must be superuser to rename text search parsers"
-msgstr "deve ser super-usuário para renomear super-usuários"
+msgstr "deve ser super-usuário para renomear analisadores de busca textual"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:368
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:369
+#, c-format
 msgid "text search parser \"%s\" already exists"
-msgstr "espaço de tabelas \"%s\" já existe"
+msgstr "analisador de busca textual \"%s\" já existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:447
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:448
+#, c-format
 msgid "text search template \"%s\" does not accept options"
-msgstr "esquema \"%s\" não existe"
+msgstr "modelo de busca textual \"%s\" não aceita opções"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:520
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:521
 msgid "text search template is required"
-msgstr ""
+msgstr "modelo de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:588
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:589
+#, c-format
 msgid "text search dictionary \"%s\" already exists"
-msgstr "relação \"%s\" já existe"
+msgstr "dicionário de busca textual \"%s\" já existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:634
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:635
+#, c-format
 msgid "text search dictionary \"%s\" does not exist, skipping"
-msgstr "esquema \"%s\" não existe, ignorando"
+msgstr "dicionário de busca textual \"%s\" não existe, ignorando"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:968
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:969
 msgid "must be superuser to create text search templates"
-msgstr "deve ser super-usuário para criar uma classe de operadores"
+msgstr "deve ser super-usuário para criar modelos de busca textual"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1005
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1006
+#, c-format
 msgid "text search template parameter \"%s\" not recognized"
-msgstr "atributo da agregação \"%s\" é desconhecido"
+msgstr "parâmetro do modelo de busca textual \"%s\" é desconhecido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1015
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1016
 msgid "text search template lexize method is required"
-msgstr ""
+msgstr "método lexize do modelo de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1050
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1051
 msgid "must be superuser to rename text search templates"
-msgstr "deve ser super-usuário para renomear super-usuários"
+msgstr "deve ser super-usuário para renomear modelos de busca textual"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1072
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1073
+#, c-format
 msgid "text search template \"%s\" already exists"
-msgstr "esquema \"%s\" já existe"
+msgstr "modelo de busca textual \"%s\" já existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1095
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1096
 msgid "must be superuser to drop text search templates"
-msgstr "deve ser super-usuário para remover super-usuários"
+msgstr "deve ser super-usuário para remover modelos de busca textual"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1110
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1111
+#, c-format
 msgid "text search template \"%s\" does not exist, skipping"
-msgstr "esquema \"%s\" não existe, ignorando"
+msgstr "modelo de busca textual \"%s\" não existe, ignorando"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1304
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1305
+#, c-format
 msgid "text search configuration parameter \"%s\" not recognized"
-msgstr "atributo do tipo \"%s\" desconhecido"
+msgstr "parâmetro de configuração de busca textual \"%s\" é desconhecido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1311
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1312
 msgid "cannot specify both PARSER and COPY options"
-msgstr "não pode especificar SCROLL e NO SCROLL"
+msgstr "não pode especificar ambas opções PARSER e COPY"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1341
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1342
 msgid "text search parser is required"
-msgstr ""
+msgstr "analisador de busca textual é requerido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1450
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1451
+#, c-format
 msgid "text search configuration \"%s\" already exists"
-msgstr "restrição de verificação \"%s\" já existe"
+msgstr "configuração de busca textual \"%s\" já existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1496
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1497
+#, c-format
 msgid "text search configuration \"%s\" does not exist, skipping"
-msgstr "conversão \"%s\" não existe, ignorando"
+msgstr "configuração de busca textual \"%s\" não existe, ignorando"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1717
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1718
 #, fuzzy, c-format
 msgid "token type \"%s\" does not exist"
 msgstr "tipo \"%s\" não existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1941
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1942
 #, fuzzy, c-format
 msgid "mapping for token type \"%s\" does not exist"
 msgstr "tipo \"%s\" não existe"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1947
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:1948
 #, fuzzy, c-format
 msgid "mapping for token type \"%s\" does not exist, skipping"
 msgstr "tipo \"%s\" não existe, ignorando"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:2100
-#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:2211
-#, fuzzy, c-format
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:2101
+#: /a/pgsql/HEAD/pgtst/src/backend/commands/tsearchcmds.c:2212
+#, c-format
 msgid "invalid parameter list format: \"%s\""
-msgstr "argumento inválido para %s: \"%s\""
+msgstr "formato de lista de parâmetros é inválido: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/typecmds.c:219
 #, c-format
@@ -5602,11 +5598,11 @@ msgstr "role \"%s\" não pode ser removida porque alguns objetos dependem dela"
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/user.c:893
 #: /a/pgsql/HEAD/pgtst/src/backend/nodes/print.c:83
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/lmgr/deadlock.c:918
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3907
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1382
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3911
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1383
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1389
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1460
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1384
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1390
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1461
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -5858,6 +5854,10 @@ msgid ""
 "tuples: %.0f removed, %.0f remain\n"
 "system usage: %s"
 msgstr ""
+"limpeza automática da tabela \"%s.%s.%s\": buscas por índice: %d\n"
+"páginas: %d removidas, %d remanescentes\n"
+"tuplas: %.0f removidas, %.0f remanescentes\n"
+"uso do sistema: %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/commands/vacuumlazy.c:601
 #, c-format
@@ -5977,19 +5977,19 @@ msgid "view \"%s\" will be a temporary view"
 msgstr "visão \"%s\" será uma visão temporária"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/execCurrent.c:78
-#, fuzzy, c-format
+#, c-format
 msgid "cursor \"%s\" is not a SELECT query"
-msgstr "cursor \"%s\" não existe"
+msgstr "cursor \"%s\" não é uma consulta SELECT"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/execCurrent.c:84
 #, c-format
 msgid "cursor \"%s\" is held from a previous transaction"
-msgstr ""
+msgstr "cursor \"%s\" está aberto de uma transação anterior"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/execCurrent.c:96
 #, fuzzy, c-format
 msgid "cursor \"%s\" is not a simply updatable scan of table \"%s\""
-msgstr "role \"%s\" não é um membro da role \"%s\""
+msgstr "cursor \"%s\" não é um membro da role \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/execCurrent.c:109
 #, c-format
@@ -6002,32 +6002,32 @@ msgstr "cursor \"%s\" não está posicionado em um registro"
 msgid "no value found for parameter %d"
 msgstr "nenhum valor encontrado para parâmetro %d"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:857
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:881
 #, c-format
 msgid "cannot change sequence \"%s\""
 msgstr "não pode mudar sequência \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:863
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:887
 #, c-format
 msgid "cannot change TOAST relation \"%s\""
 msgstr "não pode mudar relação TOAST \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:869
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:893
 #, c-format
 msgid "cannot change view \"%s\""
 msgstr "não pode mudar visão \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:875
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:899
 #, fuzzy, c-format
 msgid "cannot change relation \"%s\""
 msgstr "não pode mudar relação TOAST \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1913
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1932
 #, c-format
 msgid "null value in column \"%s\" violates not-null constraint"
 msgstr "valor nulo na coluna \"%s\" viola a restrição não-nula"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1925
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/execMain.c:1944
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
 msgstr "novo registro da relação \"%s\" viola restrição de verificação \"%s\""
@@ -6189,7 +6189,7 @@ msgstr "%s não é permitido em uma função SQL"
 #. translator: %s is a SQL statement name
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/functions.c:132
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/spi.c:1020
-#: /a/pgsql/HEAD/pgtst/src/backend/executor/spi.c:1571
+#: /a/pgsql/HEAD/pgtst/src/backend/executor/spi.c:1563
 #, c-format
 msgid "%s is not allowed in a non-volatile function"
 msgstr "%s não é permitido em uma função não-volátil"
@@ -6353,15 +6353,14 @@ msgstr "não pode abrir consulta %s como cursor"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/spi.c:997
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1630
-#, fuzzy
 msgid "DECLARE SCROLL CURSOR ... FOR UPDATE/SHARE is not supported"
-msgstr "DECLARE CURSOR ... FOR UPDATE/SHARE não é suportado"
+msgstr "DECLARE SCROLL CURSOR ... FOR UPDATE/SHARE não é suportado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/spi.c:998
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1631
 #, fuzzy
 msgid "Scrollable cursors must be READ ONLY."
-msgstr "Cursores devem ser SOMENTE LEITURA."
+msgstr "Cursores roláveis devem ser SOMENTE LEITURA."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/executor/spi.c:1807
 #, c-format
@@ -6369,9 +6368,11 @@ msgid "SQL statement \"%s\""
 msgstr "comando SQL \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/lib/stringinfo.c:246
-#, c-format
+#, fuzzy, c-format
 msgid "Cannot enlarge string buffer containing %d bytes by %d more bytes."
 msgstr ""
+"Não pode aumentar o buffer de cadeia de caracteres contendo %d bytes para "
+"mais %d bytes."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:129
 #, c-format
@@ -6412,37 +6413,36 @@ msgid "Kerberos 5 not implemented on this server"
 msgstr "Kerberos 5 não foi implementado neste servidor"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "%s: %s\n"
+msgstr "%s: %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "expected GSS response, got message type %d"
-msgstr "resposta da senha esperada, recebeu tipo de mensagem %d"
+msgstr "resposta do GSS esperada, recebeu tipo de mensagem %d"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:501
 msgid "accepting GSS security context failed"
-msgstr ""
+msgstr "aceitação do contexto de segurança do GSS falhou"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:527
-msgid "retreiving GSS user name failed"
-msgstr ""
+msgid "retrieving GSS user name failed"
+msgstr "recuperação do nome de usuário do GSS falhou"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:596
-#, fuzzy
 msgid "GSSAPI not implemented on this server"
-msgstr "Kerberos 5 não foi implementado neste servidor"
+msgstr "GSSAPI não foi implementado neste servidor"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:610
-#, fuzzy, c-format
-msgid "sspi error %x"
-msgstr "faltando mensagem de erro"
+#, c-format
+msgid "SSPI error %x"
+msgstr "erro de SSPI %x"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:614
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%x)"
-msgstr "%s (%s/%s) "
+msgstr "%s (%x)"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:662
 #, fuzzy
@@ -6450,24 +6450,21 @@ msgid "could not acquire SSPI credentials handle"
 msgstr "não pôde receber credenciais: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:679
-#, fuzzy, c-format
+#, c-format
 msgid "expected SSPI response, got message type %d"
-msgstr "resposta da senha esperada, recebeu tipo de mensagem %d"
+msgstr "resposta do SSPI esperada, recebeu tipo de mensagem %d"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:751
-#, fuzzy
 msgid "could not accept SSPI security context"
-msgstr "não pôde criar contexto SSL: %s"
+msgstr "não pôde aceitar contexto de segurança do SSPI"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:807
-#, fuzzy
 msgid "could not get security token from context"
-msgstr "não pôde obter informação do usuário\n"
+msgstr "não pôde obter informação de segurança do contexto"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:880
-#, fuzzy
 msgid "SSPI not implemented on this server"
-msgstr "Kerberos 5 não foi implementado neste servidor"
+msgstr "SSPI não foi implementado neste servidor"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:919
 #, c-format
@@ -6480,14 +6477,14 @@ msgid "Kerberos 5 authentication failed for user \"%s\""
 msgstr "autenticação do tipo Kerberos 5 falhou para usuário \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:925
-#, fuzzy, c-format
+#, c-format
 msgid "GSSAPI authentication failed for user \"%s\""
-msgstr "autenticação do tipo LDAP falhou para usuário \"%s\""
+msgstr "autenticação do tipo GSSAPI falhou para usuário \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:928
-#, fuzzy, c-format
+#, c-format
 msgid "SSPI authentication failed for user \"%s\""
-msgstr "autenticação do tipo PAM falhou para usuário \"%s\""
+msgstr "autenticação do tipo SSPI falhou para usuário \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/libpq/auth.c:931
 #, c-format
@@ -7465,7 +7462,6 @@ msgid "SQL function \"%s\" during inlining"
 msgstr "função SQL \"%s\" durante expansão em linha"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:391
-#, fuzzy
 msgid "INSERT ... SELECT cannot specify INTO"
 msgstr "INSERT ... SELECT não pode especificar INTO"
 
@@ -7559,7 +7555,6 @@ msgid "cannot use aggregate function in RETURNING"
 msgstr "não pode utilizar função de agregação em RETURNING"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1568
-#, fuzzy
 msgid "RETURNING cannot contain references to other relations"
 msgstr "RETURNING não pode conter referências a outras relações"
 
@@ -7568,14 +7563,12 @@ msgid "cannot specify both SCROLL and NO SCROLL"
 msgstr "não pode especificar SCROLL e NO SCROLL"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1617
-#, fuzzy
 msgid "DECLARE CURSOR cannot specify INTO"
 msgstr "DECLARE CURSOR não pode especificar INTO"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1623
-#, fuzzy
 msgid "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE is not supported"
-msgstr "DECLARE CURSOR ... FOR UPDATE/SHARE não é suportado"
+msgstr "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE não é suportado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1624
 #, fuzzy
@@ -7583,9 +7576,8 @@ msgid "Holdable cursors must be READ ONLY."
 msgstr "Cursores devem ser SOMENTE LEITURA."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1637
-#, fuzzy
 msgid "DECLARE INSENSITIVE CURSOR ... FOR UPDATE/SHARE is not supported"
-msgstr "DECLARE CURSOR ... FOR UPDATE/SHARE não é suportado"
+msgstr "DECLARE INSENSITIVE CURSOR ... FOR UPDATE/SHARE não é suportado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/analyze.c:1638
 #, fuzzy
@@ -7672,19 +7664,16 @@ msgid "subquery in FROM must have an alias"
 msgstr "subconsulta no FROM deve ter um aliás"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_clause.c:448
-#, fuzzy
 msgid "subquery in FROM cannot have SELECT INTO"
-msgstr "subconsulta no FROM não deve ter SELECT INTO"
+msgstr "subconsulta no FROM não pode ter SELECT INTO"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_clause.c:468
-#, fuzzy
 msgid "subquery in FROM cannot refer to other relations of same query level"
 msgstr ""
 "subconsulta no FROM não pode referenciar outras relações do mesmo nível da "
 "consulta"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_clause.c:517
-#, fuzzy
 msgid ""
 "function expression in FROM cannot refer to other relations of same query "
 "level"
@@ -7839,33 +7828,33 @@ msgid "argument of %s must be type %s, not type %s"
 msgstr "argumento do %s deve ser do tipo bigint, e não do tipo %s"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1000
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1021
 #, c-format
 msgid "%s types %s and %s cannot be matched"
 msgstr "tipos no %s %s e %s não podem corresponder"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1061
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1082
 #, c-format
 msgid "%s could not convert type %s to %s"
 msgstr "%s não pôde converter tipo %s para %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1282
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1303
 msgid "arguments declared \"anyelement\" are not all alike"
 msgstr "argumentos declarados \"anyelement\" não são de tipos compatíveis"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1299
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1320
 msgid "arguments declared \"anyarray\" are not all alike"
 msgstr "argumentos declarados \"anyarray\" não são de tipos compatíveis"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1328
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1464
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1495
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1349
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1485
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1516
 #, c-format
 msgid "argument declared \"anyarray\" is not an array but type %s"
 msgstr "argumento declarado \"anyarray\" não é uma matriz mas do tipo %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1344
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1365
 msgid ""
 "argument declared \"anyarray\" is not consistent with argument declared "
 "\"anyelement\""
@@ -7873,29 +7862,29 @@ msgstr ""
 "argumento declarado \"anyarray\" não está consistente com argumento "
 "declarado \"anyelement\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1355
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1376
 #, fuzzy
 msgid "could not determine polymorphic type because input has type \"unknown\""
 msgstr ""
 "não pôde determinar tipo polimórfico porque entrada tem tipo \"unknown\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1364
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1385
 #, fuzzy, c-format
 msgid "type matched to anynonarray is an array type: %s"
 msgstr "argumento declarado \"anyarray\" não é uma matriz mas do tipo %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1374
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1395
 #, c-format
 msgid "type matched to anyenum is not an enum type: %s"
 msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1403
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1420
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1478
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1424
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1441
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_coerce.c:1499
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:1312
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:1822
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:1853
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:929
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:1042
 #, c-format
 msgid "could not find array type for data type %s"
 msgstr "não pôde encontrar tipo array para tipo de dado %s"
@@ -7964,11 +7953,10 @@ msgstr ""
 "não pôde determinar interpretação do operador de comparação de registro %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:2385
-#, fuzzy
 msgid ""
 "Row comparison operators must be associated with btree operator families."
 msgstr ""
-"Operadores de comparação de registro devem ser associados com classes de "
+"Operadores de comparação de registro devem ser associados com famílias de "
 "operadores de árvore B."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_expr.c:2429
@@ -8079,8 +8067,8 @@ msgstr "índice da matriz deve ser do tipo integer"
 msgid "array assignment requires type %s but expression is of type %s"
 msgstr "atribuição da matriz requer tipo %s mas expressão é do tipo %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:86
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:779
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:127
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:892
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regproc.c:465
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regproc.c:485
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regproc.c:646
@@ -8088,35 +8076,35 @@ msgstr "atribuição da matriz requer tipo %s mas expressão é do tipo %s"
 msgid "operator does not exist: %s"
 msgstr "operador não existe: %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:178
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:219
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/arrayfuncs.c:3027
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/arrayfuncs.c:3428
 #, c-format
 msgid "could not identify an equality operator for type %s"
 msgstr "não pôde identificar um operador de igualdade para tipo %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:242
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:307
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:283
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:348
 #, c-format
 msgid "could not identify an ordering operator for type %s"
 msgstr "não pôde identificar um operador de ordenação para tipo %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:244
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:309
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:285
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:350
 msgid "Use an explicit ordering operator or modify the query."
 msgstr "Utilize um operador de ordenação explícito ou modifique a consulta."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:577
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:642
 #, c-format
 msgid "operator requires run-time type coercion: %s"
 msgstr "operador requer conversão de tipo em tempo de execução: %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:771
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:884
 #, c-format
 msgid "operator is not unique: %s"
 msgstr "operador não é único: %s"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:773
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:886
 #, fuzzy
 msgid ""
 "Could not choose a best candidate operator. You might need to add explicit "
@@ -8125,7 +8113,7 @@ msgstr ""
 "Não pôde escolher um operador que se enquadra melhor. Você precisa adicionar "
 "conversões de tipo explícitas."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:781
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:894
 #, fuzzy
 msgid ""
 "No operator matches the given name and argument type(s). You might need to "
@@ -8134,15 +8122,15 @@ msgstr ""
 "Nenhum operador corresponde com o nome e os tipos dos argumentos informados. "
 "Você precisa adicionar conversões de tipo explícitas."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:874
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:987
 msgid "op ANY/ALL (array) requires array on right side"
 msgstr "op ANY/ALL (array) requer matriz no lado direito"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:904
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:1017
 msgid "op ANY/ALL (array) requires operator to yield boolean"
 msgstr "op ANY/ALL (array) requer operador que retorna booleano"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:909
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_oper.c:1022
 msgid "op ANY/ALL (array) requires operator not to return a set"
 msgstr "op ANY/ALL (array) requer operador que não retorne um conjunto"
 
@@ -8341,41 +8329,41 @@ msgstr "modificadores de tipo devem ser constantes ou identificadores"
 msgid "invalid type name \"%s\""
 msgstr "nome de tipo \"%s\" é inválido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:325
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:327
 #, c-format
 msgid "%s will create implicit sequence \"%s\" for serial column \"%s.%s\""
 msgstr "%s criará sequência implícita \"%s\" para coluna serial \"%s.%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:421
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:431
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:423
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:433
 #, c-format
 msgid ""
 "conflicting NULL/NOT NULL declarations for column \"%s\" of table \"%s\""
 msgstr ""
 "declarações NULL/NOT NULL conflitantes para coluna \"%s\" da tabela \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:441
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:443
 #, c-format
 msgid "multiple default values specified for column \"%s\" of table \"%s\""
 msgstr ""
 "valores padrão múltiplos especificados para coluna \"%s\" da tabela \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1183
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1190
 #, c-format
 msgid "column \"%s\" appears twice in primary key constraint"
 msgstr "coluna \"%s\" aparece duas vezes na restrição de chave primária"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1188
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1195
 #, c-format
 msgid "column \"%s\" appears twice in unique constraint"
 msgstr "coluna \"%s\" aparece duas vezes na restrição de unicidade"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1335
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1342
 #, fuzzy
 msgid "index expression cannot return a set"
 msgstr "expressão de índice não pode retornar um conjunto"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1345
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1352
 #, fuzzy
 msgid ""
 "index expressions and predicates can refer only to the table being indexed"
@@ -8383,16 +8371,16 @@ msgstr ""
 "expressões e predicados de índice só podem ser referenciados a tabelas "
 "indexadas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1440
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1447
 #, fuzzy
 msgid "rule WHERE condition cannot contain references to other relations"
 msgstr "condição WHERE de regra não pode conter referências a outras relações"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1446
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1453
 msgid "cannot use aggregate function in rule WHERE condition"
 msgstr "não pode utilizar função de agregação em condição WHERE de regra"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1518
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1525
 #, fuzzy
 msgid ""
 "rules with WHERE conditions can only have SELECT, INSERT, UPDATE, or DELETE "
@@ -8401,65 +8389,63 @@ msgstr ""
 "regras com condições WHERE só podem ter ações SELECT, INSERT, UPDATE ou "
 "DELETE"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1536
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1606
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1543
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1613
 #: /a/pgsql/HEAD/pgtst/src/backend/rewrite/rewriteHandler.c:386
 #: /a/pgsql/HEAD/pgtst/src/backend/rewrite/rewriteManip.c:802
 msgid "conditional UNION/INTERSECT/EXCEPT statements are not implemented"
 msgstr "comandos condicionais UNION/INTERSECT/EXCEPT não estão implementados"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1554
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1561
 msgid "ON SELECT rule cannot use OLD"
 msgstr "regra ON SELECT não pode utilizar OLD"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1558
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1565
 msgid "ON SELECT rule cannot use NEW"
 msgstr "regra ON SELECT não pode utilizar NEW"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1567
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1574
 msgid "ON INSERT rule cannot use OLD"
 msgstr "regra ON INSERT não pode utilizar OLD"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1573
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1580
 msgid "ON DELETE rule cannot use NEW"
 msgstr "regra ON DELETE não pode utilizar NEW"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1874
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1881
 msgid "misplaced DEFERRABLE clause"
 msgstr "cláusula DEFERRABLE no lugar errado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1878
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1891
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1885
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1898
 msgid "multiple DEFERRABLE/NOT DEFERRABLE clauses not allowed"
 msgstr "múltiplas cláusulas DEFERRABLE/NOT DEFERRABLE não são permitidas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1887
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1894
 msgid "misplaced NOT DEFERRABLE clause"
 msgstr "cláusula NOT DEFERRABLE no lugar errado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1898
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1921
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1905
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1928
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/gram.y:2780
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/gram.y:2795
 msgid "constraint declared INITIALLY DEFERRED must be DEFERRABLE"
 msgstr "restrição declarada INITIALLY DEFERRED deve ser DEFERRABLE"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1905
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1912
 msgid "misplaced INITIALLY DEFERRED clause"
 msgstr "cláusula INITIALLY DEFERRED no lugar errado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1909
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1932
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1916
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1939
 msgid "multiple INITIALLY IMMEDIATE/DEFERRED clauses not allowed"
 msgstr "múltiplas cláusulas INITTIALLY IMMEDIATE/DEFERRED não são permitidas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1928
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:1935
 msgid "misplaced INITIALLY IMMEDIATE clause"
 msgstr "cláusula INITIALLY IMMEDIATE no lugar errado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:2099
+#: /a/pgsql/HEAD/pgtst/src/backend/parser/parse_utilcmd.c:2106
 #, c-format
 msgid ""
 "CREATE specifies a schema (%s) different from the one being created (%s)"
@@ -8497,7 +8483,6 @@ msgid "MATCH PARTIAL not yet implemented"
 msgstr "MATCH PARTIAL ainda não foi implementado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/parser/gram.y:2368
-#, fuzzy
 msgid "CREATE TABLE AS cannot specify INTO"
 msgstr "CREATE TABLE AS não pode especificar INTO"
 
@@ -8840,10 +8825,10 @@ msgstr "não pôde criar segmento de memória compartilhada: %lu"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/port/win32_shmem.c:139
 #: /a/pgsql/HEAD/pgtst/src/backend/port/win32_shmem.c:162
-#, fuzzy, c-format
+#, c-format
 msgid "Failed system call was CreateFileMapping(size=%lu, name=%s)."
 msgstr ""
-"Falhou ao executar chamada de sistema CreateFileMapping(size=%lu, name=%s)"
+"Falhou ao executar chamada de sistema CreateFileMapping(size=%lu, name=%s)."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/port/win32_shmem.c:167
 msgid "pre-existing shared memory block is still in use"
@@ -8858,14 +8843,12 @@ msgstr ""
 "os."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/port/win32_shmem.c:179
-#, fuzzy
 msgid "Failed system call was DuplicateHandle."
-msgstr "Falhou ao executar chamada de sistema DuplicateHandle"
+msgstr "Falhou ao executar chamada de sistema DuplicateHandle."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/port/win32_shmem.c:200
-#, fuzzy
 msgid "Failed system call was MapViewOfFileEx."
-msgstr "Falhou ao executar chamada de sistema MapViewOfFileEx"
+msgstr "Falhou ao executar chamada de sistema MapViewOfFileEx."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/port/win32/security.c:43
 #, c-format
@@ -8922,14 +8905,14 @@ msgid "autovacuum: processing database \"%s\""
 msgstr "autovacuum: processando banco de dados \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/autovacuum.c:2147
-#, fuzzy, c-format
+#, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\""
-msgstr "análise automática da tabela \"%s.%s.%s\" uso do sistema: %s"
+msgstr "limpeza automática da tabela \"%s.%s.%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/autovacuum.c:2150
-#, fuzzy, c-format
+#, c-format
 msgid "automatic analyze of table \"%s.%s.%s\""
-msgstr "análise automática da tabela \"%s.%s.%s\" uso do sistema: %s"
+msgstr "análise automática da tabela \"%s.%s.%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/autovacuum.c:2712
 msgid "autovacuum not started because of misconfiguration"
@@ -8937,14 +8920,12 @@ msgstr "autovacuum não foi iniciado por causa de configuração errada"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/autovacuum.c:2713
 msgid "Enable the \"track_counts\" option."
-msgstr ""
+msgstr "Habilite a opção \"track_counts\"."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/autovacuum.c:2769
 #, fuzzy
 msgid "not enough shared memory for autovacuum"
-msgstr ""
-"memória compartilhada insuficiente para processo de escrita em segundo plano "
-"(background writer)"
+msgstr "não há memória compartilhada suficiente para autovacuum"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/bgwriter.c:450
 #, c-format
@@ -8983,7 +8964,7 @@ msgstr "não pôde criar processo arquivador: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:363
 msgid "archive_mode enabled, yet archive_command is not set"
-msgstr ""
+msgstr "archive_mode habilitado, mas archive_command não está definido"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:395
 #, c-format
@@ -8991,17 +8972,55 @@ msgid "transaction log file \"%s\" could not be archived: too many failures"
 msgstr ""
 "arquivo do log de transação \"%s\" não pôde ser arquivado: muitas falhas"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:490
-#, c-format
-msgid "archive command \"%s\" failed: return code %d"
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:498
+#, fuzzy, c-format
+msgid "archive command failed with exit code %d"
 msgstr "comando de arquivamento \"%s\" falhou: código de retorno %d"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:496
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:500
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:510
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:517
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:523
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:532
+#, fuzzy, c-format
+msgid "The failed archive command was: %s"
+msgstr "O comando foi: %s\n"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:507
+#, fuzzy, c-format
+msgid "archive command was terminated by exception 0x%X"
+msgstr "processo filho foi terminado pela exceção 0x%X"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:509
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2500
+#, fuzzy
+msgid ""
+"See C include file \"ntstatus.h\" for a description of the hexadecimal value."
+msgstr ""
+"Veja o arquivo de cabeçalho C \"ntstatus.h\" para obter uma descrição do "
+"valor hexadecimal."
+
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:514
+#, fuzzy, c-format
+msgid "archive command was terminated by signal %d: %s"
+msgstr "%s (PID %d) foi terminado pelo sinal %d: %s"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:521
+#, fuzzy, c-format
+msgid "archive command was terminated by signal %d"
+msgstr "processo filho foi terminado pelo sinal %d"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:530
+#, fuzzy, c-format
+msgid "archive command exited with unrecognized status %d"
+msgstr "processo filho terminou com status desconhecido %d"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:542
 #, c-format
 msgid "archived transaction log file \"%s\""
 msgstr "arquivo do log de transação \"%s\" foi arquivado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:542
+#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/pgarch.c:591
 #, c-format
 msgid "could not open archive status directory \"%s\": %m"
 msgstr "não pôde abrir diretório de status de arquivamento \"%s\": %m"
@@ -9315,13 +9334,13 @@ msgstr "desculpe, muitos clientes conectados"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:1715
 #, c-format
-msgid "bad key in cancel request for process %d"
-msgstr ""
+msgid "wrong key in cancel request for process %d"
+msgstr "chave incorreta no pedido de cancelamento do processo %d"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:1723
 #, c-format
-msgid "bad pid in cancel request for process %d"
-msgstr ""
+msgid "PID %d in cancel request did not match any process"
+msgstr "PID %d no pedido de cancelamento não combina com nenhum processo"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:1904
 msgid "received SIGHUP, reloading configuration files"
@@ -9352,9 +9371,8 @@ msgid "aborting startup due to startup process failure"
 msgstr "interrompendo inicialização porque o processo de inicialização falhou"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2159
-#, fuzzy
 msgid "database system is ready to accept connections"
-msgstr "banco de dados \"%s\" não está aceitando conexões"
+msgstr "sistema de banco de dados está pronto para aceitar conexões"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2192
 msgid "background writer process"
@@ -9405,14 +9423,6 @@ msgstr "%s (PID %d) terminou com código de saída %d"
 msgid "%s (PID %d) was terminated by exception 0x%X"
 msgstr "%s (PID %d) foi terminado pela exceção 0x%X"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2500
-#, fuzzy
-msgid ""
-"See C include file \"ntstatus.h\" for a description of the hexadecimal value."
-msgstr ""
-"Veja o arquivo de cabeçalho C \"ntstatus.h\" para obter uma descrição do "
-"valor hexadecimal."
-
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2507
@@ -9430,14 +9440,13 @@ msgstr "%s (PID %d) foi terminado pelo sinal %d"
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2526
-#, fuzzy, c-format
+#, c-format
 msgid "%s (PID %d) exited with unrecognized status %d"
-msgstr "%s (PID %d) terminou com status inesperado %d"
+msgstr "%s (PID %d) terminou com status desconhecido %d"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2644
-#, fuzzy
 msgid "abnormal database system shutdown"
-msgstr "sistema de banco de dados está desligado"
+msgstr "desligamento anormal do sistema de banco de dados"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:2663
 msgid "all server processes terminated; reinitializing"
@@ -9480,7 +9489,7 @@ msgstr "não pôde criar processo de escrita em segundo plano: %m"
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:4025
 #, fuzzy, c-format
 msgid "could not fork WAL writer process: %m"
-msgstr "não pôde criar processo de escrita em segundo plano: %m"
+msgstr "não pôde criar processo de escrita do WAL: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/postmaster/postmaster.c:4029
 #, c-format
@@ -9817,9 +9826,8 @@ msgid "conditional utility statements are not implemented"
 msgstr "comandos utilitários condicionais não estão implementados"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/rewrite/rewriteManip.c:985
-#, fuzzy
 msgid "WHERE CURRENT OF on a view is not implemented"
-msgstr "WITH CHECK OPTION não está implementado"
+msgstr "WHERE CURRENT OF em uma visão não está implementado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/rewrite/rewriteRemove.c:64
 #, c-format
@@ -9827,30 +9835,29 @@ msgid "rule \"%s\" for relation \"%s\" does not exist, skipping"
 msgstr "regra \"%s\" para relação \"%s\" não existe, ignorando"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/snowball/dict_snowball.c:183
-#, c-format
+#, fuzzy, c-format
 msgid "no Snowball stemmer available for language \"%s\" and encoding \"%s\""
 msgstr ""
+"nenhum stemmer Snowball disponível para idioma \"%s\" e codificação \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/snowball/dict_snowball.c:206
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_ispell.c:74
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_simple.c:50
 msgid "multiple StopWords parameters"
-msgstr ""
+msgstr "múltiplos parâmetros StopWords"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/snowball/dict_snowball.c:215
-#, fuzzy
 msgid "multiple Language parameters"
-msgstr "parâmetro duplicado \"%s\""
+msgstr "múltiplos parâmetros Language"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/snowball/dict_snowball.c:222
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized Snowball parameter: \"%s\""
-msgstr "parâmetro desconhecido \"%s\""
+msgstr "parâmetro desconhecido do Snowball: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/snowball/dict_snowball.c:230
-#, fuzzy
 msgid "missing Language parameter"
-msgstr "faltando argumento"
+msgstr "faltando parâmetro Language"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/buffer/bufmgr.c:228
 #, c-format
@@ -9881,7 +9888,6 @@ msgid "could not write block %u of %u/%u/%u"
 msgstr "não pôde escrever bloco %u de %u/%u/%u"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/buffer/bufmgr.c:2556
-#, fuzzy
 msgid "Multiple failures --- write error might be permanent."
 msgstr "Falhas múltiplas --- erro de escrita pode ser permanente."
 
@@ -9914,8 +9920,8 @@ msgstr "sem descritores de arquivo: %m; libere e tente novamente"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/file/fd.c:1006
 #, c-format
-msgid "temp file: path \"%s\" size %lu"
-msgstr "arquivo temporário: caminho \"%s\" tamanho %lu"
+msgid "temporary file: path \"%s\", size %lu"
+msgstr "arquivo temporário: caminho \"%s\", tamanho %lu"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/file/fd.c:1472
 #, c-format
@@ -10085,32 +10091,35 @@ msgid "could not send signal to process %d: %m"
 msgstr "não pôde enviar sinal para processo %d: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/lmgr/proc.c:962
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "process %d avoided deadlock for %s on %s by rearranging queue order after %"
 "ld.%03d ms"
 msgstr ""
+"processo %d evitou impasse por %s em %s ao reorganizar a ordem da fila após %"
+"ld.03d ms"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/lmgr/proc.c:974
 #, c-format
 msgid ""
 "process %d detected deadlock while waiting for %s on %s after %ld.%03d ms"
 msgstr ""
+"processo %d detectou impasse enquanto esperava por %s em %s após %ld.%03d ms"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/lmgr/proc.c:980
-#, fuzzy, c-format
+#, c-format
 msgid "process %d still waiting for %s on %s after %ld.%03d ms"
-msgstr "Processo %d espera por %s em %s; bloqueado pelo processo %d."
+msgstr "processo %d ainda espera por %s em %s após %ld.%03d ms"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/lmgr/proc.c:984
 #, c-format
 msgid "process %d acquired %s on %s after %ld.%03d ms"
-msgstr ""
+msgstr "processo %d obteve %s em %s após %ld.%03d ms"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/lmgr/proc.c:1000
 #, c-format
 msgid "process %d failed to acquire %s on %s after %ld.%03d ms"
-msgstr ""
+msgstr "processo %d falhou ao obter %s em %s após %ld.%03d ms"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/page/bufpage.c:143
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/page/bufpage.c:362
@@ -10150,14 +10159,14 @@ msgid "could not remove relation %u/%u/%u: %m"
 msgstr "não pôde remover relação %u/%u/%u: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:367
-#, fuzzy, c-format
+#, c-format
 msgid "could not remove segment %u of relation %u/%u/%u: %m"
-msgstr "não pôde executar fsync no segmento %u da relação %u/%u/%u: %m"
+msgstr "não pôde remover segmento %u da relação %u/%u/%u: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:415
 #, fuzzy, c-format
 msgid "cannot extend relation %u/%u/%u beyond %u blocks"
-msgstr "não pôde truncar relação %u/%u/%u para %u blocos: %m"
+msgstr "não pôde estender relação %u/%u/%u além de %u blocos"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:442
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:596
@@ -10167,7 +10176,7 @@ msgid "could not seek to block %u of relation %u/%u/%u: %m"
 msgstr "não pôde ler bloco %u da relação %u/%u/%u: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:453
-#, c-format
+#, fuzzy, c-format
 msgid "could not extend relation %u/%u/%u: %m"
 msgstr "não pôde extender relação %u/%u/%u: %m"
 
@@ -10181,7 +10190,9 @@ msgstr "Verifique o espaço em disco livre."
 #, fuzzy, c-format
 msgid ""
 "could not extend relation %u/%u/%u: wrote only %d of %d bytes at block %u"
-msgstr "não pôde truncar relação %u/%u/%u para %u blocos: %m"
+msgstr ""
+"não pôde estender relação %u/%u/%u: escreveu somente %d de %d bytes no bloco "
+"%u"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:520
 #, c-format
@@ -10194,9 +10205,9 @@ msgid "could not read block %u of relation %u/%u/%u: %m"
 msgstr "não pôde ler bloco %u da relação %u/%u/%u: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:626
-#, fuzzy, c-format
+#, c-format
 msgid "could not read block %u of relation %u/%u/%u: read only %d of %d bytes"
-msgstr "não pôde ler bloco %u da relação %u/%u/%u: %m"
+msgstr "não pôde ler bloco %u da relação %u/%u/%u: leu somente %d de %d bytes"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:677
 #, c-format
@@ -10204,21 +10215,24 @@ msgid "could not write block %u of relation %u/%u/%u: %m"
 msgstr "não pôde escrever bloco %u da relação %u/%u/%u: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:685
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "could not write block %u of relation %u/%u/%u: wrote only %d of %d bytes"
-msgstr "não pôde escrever bloco %u da relação %u/%u/%u: %m"
+msgstr ""
+"não pôde escrever bloco %u da relação %u/%u/%u: escreveu somente %d de %d "
+"bytes"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:758
-#, fuzzy, c-format
+#, c-format
 msgid "could not open segment %u of relation %u/%u/%u: %m"
-msgstr "não pôde executar fsync no segmento %u da relação %u/%u/%u: %m"
+msgstr "não pôde abrir segmento %u da relação %u/%u/%u: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:796
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "could not truncate relation %u/%u/%u to %u blocks: it's only %u blocks now"
-msgstr "não pôde truncar relação %u/%u/%u para %u blocos: %m"
+msgstr ""
+"não pôde truncar relação %u/%u/%u para %u blocos: há somente %u blocos agora"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:823
 #: /a/pgsql/HEAD/pgtst/src/backend/storage/smgr/md.c:849
@@ -10314,7 +10328,7 @@ msgstr "formato de dado binário incorreto no argumento %d da função"
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:385
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:396
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:408
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3756
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3760
 #, c-format
 msgid "invalid frontend message type %d"
 msgstr "tipo de mensagem do cliente %d é inválido"
@@ -10451,9 +10465,10 @@ msgstr ""
 "divisão por zero."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2565
-#, fuzzy
 msgid "terminating autovacuum process due to administrator command"
-msgstr "terminando conexão por causa de um comando do administrador"
+msgstr ""
+"terminando processo de limpeza automática por causa de um comando do "
+"administrador"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2569
 msgid "terminating connection due to administrator command"
@@ -10464,14 +10479,18 @@ msgid "canceling statement due to statement timeout"
 msgstr "cancelando comando por causa do tempo de espera (timeout) do comando"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2584
+msgid "canceling autovacuum task"
+msgstr "cancelando tarefa de limpeza automática"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2588
 msgid "canceling statement due to user request"
 msgstr "cancelando comando por causa de um pedido do usuário"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2628
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2632
 msgid "stack depth limit exceeded"
 msgstr "limite da profundidade da pilha foi excedido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2629
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2633
 msgid ""
 "Increase the configuration parameter \"max_stack_depth\", after ensuring the "
 "platform's stack depth limit is adequate."
@@ -10479,12 +10498,12 @@ msgstr ""
 "Aumente o parâmetro de configuração \"max_stack_depth\", após certificar-se "
 "que o limite de profundidade da pilha para a plataforma é adequado."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2645
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2649
 #, c-format
 msgid "\"max_stack_depth\" must not exceed %ldkB"
 msgstr "\"max_stack_depth\" não deve exceder %ldkB"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2647
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:2651
 msgid ""
 "Increase the platform's stack depth limit via \"ulimit -s\" or local "
 "equivalent."
@@ -10492,37 +10511,37 @@ msgstr ""
 "Aumente o limite de profundidade da pilha da plataforma utilizando \"ulimit -"
 "s\" ou equivalente."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3164
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3168
 msgid "invalid command-line arguments for server process"
 msgstr "argumentos de linha de comando são inválidos para processo servidor"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3165
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3179
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3169
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3183
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "Tente \"%s --help\" para obter informações adicionais."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3177
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3181
 #, c-format
 msgid "%s: invalid command-line arguments"
 msgstr "%s: argumentos de linha de comando são inválidos"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3187
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3191
 #, c-format
 msgid "%s: no database nor user name specified"
 msgstr "%s: banco de dados ou nome de usuário não foi especificado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3666
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3670
 #, c-format
 msgid "invalid CLOSE message subtype %d"
 msgstr "subtipo %d de mensagem CLOSE é inválido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3699
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3703
 #, c-format
 msgid "invalid DESCRIBE message subtype %d"
 msgstr "subtipo %d de mensagem DESCRIBE é inválido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3937
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/postgres.c:3941
 #, c-format
 msgid ""
 "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%"
@@ -10610,41 +10629,36 @@ msgstr "\"%s\" não é um tipo"
 msgid "Use DROP TYPE to remove a type."
 msgstr "use DROP TYPE para remover um tipo."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:1144
+#: /a/pgsql/HEAD/pgtst/src/backend/tcop/utility.c:1143
 msgid "must be superuser to do CHECKPOINT"
 msgstr "deve ser super-usuário para fazer CHECKPOINT"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_ispell.c:52
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:614
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:630
 msgid "multiple DictFile parameters"
-msgstr "parâmetro duplicado \"%s\""
+msgstr "múltiplos parâmetros DictFile"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_ispell.c:63
-#, fuzzy
 msgid "multiple AffFile parameters"
-msgstr "parâmetro duplicado \"%s\""
+msgstr "múltiplos parâmetros AffFile"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_ispell.c:82
-#, fuzzy, c-format
-msgid "unrecognized ISpell parameter: \"%s\""
-msgstr "parâmetro desconhecido \"%s\""
+#, c-format
+msgid "unrecognized Ispell parameter: \"%s\""
+msgstr "parâmetro desconhecido do Ispell: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_ispell.c:96
-#, fuzzy
 msgid "missing AffFile parameter"
-msgstr "Faltando parêntese esquerdo."
+msgstr "faltando parâmetro AffFile"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_ispell.c:102
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:638
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:654
 msgid "missing DictFile parameter"
-msgstr "Faltando parêntese esquerdo."
+msgstr "faltando parâmetro DictFile"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_simple.c:59
-#, fuzzy
 msgid "multiple Accept parameters"
-msgstr "parâmetro duplicado \"%s\""
+msgstr "múltiplos parâmetros Accept"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_simple.c:67
 #, fuzzy, c-format
@@ -10654,22 +10668,21 @@ msgstr "parâmetro de recuperação \"%s\" é desconhecido"
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_synonym.c:96
 #, fuzzy, c-format
 msgid "unrecognized synonym parameter: \"%s\""
-msgstr "parâmetro desconhecido \"%s\""
+msgstr "parâmetro synonym desconhecido: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_synonym.c:103
-#, fuzzy
 msgid "missing Synonyms parameter"
-msgstr "faltando nome"
+msgstr "faltando parâmetro Synonyms"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_synonym.c:110
 #, fuzzy, c-format
 msgid "could not open synonym file \"%s\": %m"
-msgstr "não pôde abrir arquivo \"%s\": %m"
+msgstr "não pôde abrir arquivo synonym \"%s\": %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:183
 #, fuzzy, c-format
 msgid "could not open thesaurus file \"%s\": %m"
-msgstr "não pôde abrir arquivo \"%s\" no servidor: %m"
+msgstr "não pôde abrir arquivo thesaurus \"%s\": %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:220
 #, c-format
@@ -10687,20 +10700,50 @@ msgstr ""
 msgid "unexpected end of line at line %d of thesaurus file \"%s\""
 msgstr "dado inesperado após EOF no bloco %u da relação \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:623
-#, fuzzy
-msgid "multiple Dictionary parameters"
-msgstr "parâmetro duplicado \"%s\""
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:428
+#, c-format
+msgid ""
+"thesaurus sample word \"%s\" isn't recognized by subdictionary (rule %d)"
+msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:630
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:434
+#, c-format
+msgid "thesaurus sample word \"%s\" is a stop word (rule %d)"
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:437
+#, fuzzy
+msgid "Use \"?\" to represent a stop word within a sample phrase."
+msgstr "Utilize \"\\r\" para representar retorno de carro."
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:582
+#, c-format
+msgid "thesaurus substitute word \"%s\" is a stop word (rule %d)"
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:589
+#, c-format
+msgid ""
+"thesaurus substitute word \"%s\" isn't recognized by subdictionary (rule %d)"
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:601
+#, c-format
+msgid "thesaurus substitute phrase is empty (rule %d)"
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:639
+msgid "multiple Dictionary parameters"
+msgstr "múltiplos parâmetros Dictionary"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:646
 #, fuzzy, c-format
 msgid "unrecognized Thesaurus parameter: \"%s\""
-msgstr "parâmetro desconhecido \"%s\""
+msgstr "parâmetro Thesaurus desconhecido: \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:642
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/dict_thesaurus.c:658
 msgid "missing Dictionary parameter"
-msgstr "faltando nome"
+msgstr "faltando parâmetro Dictionary"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/regis.c:89
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/regis.c:108
@@ -10712,7 +10755,7 @@ msgstr "nome de role \"%s\" é inválido"
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:205
 #, fuzzy, c-format
 msgid "could not open dictionary file \"%s\": %m"
-msgstr "não pôde abrir arquivo de controle \"%s\": %m"
+msgstr "não pôde abrir arquivo dictionary \"%s\": %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:366
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regexp.c:194
@@ -10727,7 +10770,7 @@ msgstr "expressão regular é inválida: %s"
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:524
 #, fuzzy, c-format
 msgid "syntax error at line %d of affix file \"%s\""
-msgstr "erro de sintaxe no arquivo de histórico: %s"
+msgstr "erro de sintaxe na linha %d do arquivo affix \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:530
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:790
@@ -10741,7 +10784,7 @@ msgstr ""
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:726
 #, fuzzy, c-format
 msgid "could not open affix file \"%s\": %m"
-msgstr "não pôde abrir arquivo \"%s\": %m"
+msgstr "não pôde abrir arquivo affix \"%s\": %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/spell.c:615
 #, c-format
@@ -10759,20 +10802,19 @@ msgstr ""
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector.c:227
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector.c:276
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:491
-#, fuzzy
 msgid "string is too long for tsvector"
-msgstr "cadeia de bits muito longa para tipo bit varying(%d)"
+msgstr "cadeia de caracteres é muito longa para tsvector"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:83
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:119
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:89
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:126
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:102
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:142
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:196
 msgid "invalid multibyte character for locale"
 msgstr "caracter multibyte é inválido para idioma"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:84
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:120
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:90
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:127
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:103
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:197
 msgid ""
@@ -10782,51 +10824,52 @@ msgstr ""
 "O idioma LC_TYPE do servidor é provavelmente incompatível com a codificação "
 "do banco de dados."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:299
-#, fuzzy, c-format
-msgid "translation from wchar_t to server encoding failed: %m"
-msgstr "codificação do servidor %d é inválida"
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_locale.c:306
+#, c-format
+msgid "conversion from wchar_t to server encoding failed: %m"
+msgstr "conversão do wchar_t para codificação do servidor falhou: %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:384
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:391
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:551
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:558
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:553
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:560
 msgid "word is too long to be indexed"
-msgstr ""
+msgstr "palavra é muito longa para ser indexada"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:385
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:552
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:392
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:554
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_parse.c:561
 #, c-format
 msgid "Words longer than %d characters are ignored."
-msgstr ""
+msgstr "Palavras maiores do que %d caracteres são ignoradas."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_utils.c:54
-#, fuzzy, c-format
+#, c-format
 msgid "invalid text search configuration file name \"%s\""
-msgstr "nome de arquivo de zona horária \"%s\" é inválido"
+msgstr "nome de arquivo de configuração de busca textual \"%s\" é inválido"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/tsearch/ts_utils.c:92
 #, fuzzy, c-format
 msgid "could not open stopword file \"%s\": %m"
-msgstr "não pôde abrir arquivo \"%s\": %m"
+msgstr "não pôde abrir arquivo stopword \"%s\": %m"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1735
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1741
 #, fuzzy, c-format
 msgid "unrecognized headline parameter: \"%s\""
-msgstr "parâmetro desconhecido \"%s\""
+msgstr "parâmetro headline desconhecido: \"%s\""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1744
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1750
 msgid "MinWords should be less than MaxWords"
-msgstr ""
+msgstr "MinWords deve ser menor do que MaxWords"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1748
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1754
 msgid "MinWords should be positive"
-msgstr "ROWS deve ser positivo"
+msgstr "MinWords deve ser positivo"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1752
+#: /a/pgsql/HEAD/pgtst/src/backend/tsearch/wparser_def.c:1758
 msgid "ShortWord should be >= 0"
-msgstr ""
+msgstr "ShortWord deve ser >= 0"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/acl.c:145
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/name.c:87
@@ -11164,12 +11207,12 @@ msgstr "conversão de codificação de %s para ASCII não é suportada"
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/bool.c:95
 #, c-format
 msgid "invalid input syntax for type boolean: \"%s\""
-msgstr "sintaxe de entrada inválida para tipo boolean: \"%s\""
+msgstr "sintaxe de entrada é inválida para tipo boolean: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/cash.c:250
 #, c-format
 msgid "invalid input syntax for type money: \"%s\""
-msgstr "sintaxe de entrada inválida para tipo money: \"%s\""
+msgstr "sintaxe de entrada é inválida para tipo money: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/cash.c:543
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/cash.c:594
@@ -11208,7 +11251,7 @@ msgstr "\"char\" fora do intervalo"
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/varchar.c:43
 #, fuzzy
 msgid "invalid type modifier"
-msgstr "nome de tipo \"%s\" é inválido"
+msgstr "modificador de tipo é inválido"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/date.c:70
 #, c-format
@@ -11233,9 +11276,8 @@ msgstr "date fora do intervalo: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/date.c:352
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/date.c:383
-#, fuzzy
 msgid "date out of range for timestamp"
-msgstr "date fora do intervalo: \"%s\""
+msgstr "date fora do intervalo para timestamp"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/date.c:806
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/date.c:849
@@ -11281,10 +11323,10 @@ msgstr "date fora do intervalo: \"%s\""
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/timestamp.c:4584
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/timestamp.c:4588
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/timestamp.c:4629
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1725
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1731
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1751
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1757
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1726
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1732
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1752
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:1758
 msgid "timestamp out of range"
 msgstr "timestamp fora do intervalo"
 
@@ -11350,7 +11392,7 @@ msgstr "deslocamento de zona horária fora do intervalo: \"%s\""
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/network.c:107
 #, c-format
 msgid "invalid input syntax for type %s: \"%s\""
-msgstr "sintaxe de entrada inválida para tipo %s: \"%s\""
+msgstr "sintaxe de entrada é inválida para tipo %s: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/datum.c:80
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/datum.c:92
@@ -11406,33 +11448,30 @@ msgstr "sintaxe de entrada é inválida para tipo bytea"
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:55
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:108
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:119
-#, fuzzy, c-format
+#, c-format
 msgid "invalid input value for enum %s: \"%s\""
-msgstr "sintaxe de entrada inválida para tipo %s: \"%s\""
+msgstr "valor de entrada é inválido para enum %s: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:80
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:146
-#, fuzzy, c-format
+#, c-format
 msgid "invalid internal value for enum: %u"
-msgstr "valor inválido para %s"
+msgstr "valor interno é inválido para enum: %u"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:266
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:307
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:356
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/enum.c:376
-#, fuzzy
 msgid "could not determine actual enum type"
-msgstr "não pôde determinar tipos de dado de entrada"
+msgstr "não pôde determinar tipo enum atual"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/float.c:54
-#, fuzzy
 msgid "value out of range: overflow"
-msgstr "valor do tipo \"real\" fora do intervalo: estouro (overflow)"
+msgstr "valor fora do intervalo: estouro (overflow)"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/float.c:59
-#, fuzzy
 msgid "value out of range: underflow"
-msgstr "valor do tipo \"real\" fora do intervalo: estouro (underflow)"
+msgstr "valor fora do intervalo: estouro (underflow)"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/float.c:196
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/float.c:237
@@ -11786,15 +11825,14 @@ msgid "could not seek in file \"%s\": %m"
 msgstr "não pôde buscar em arquivo \"%s\": %m"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/genfile.c:121
-#, fuzzy
 msgid "requested length cannot be negative"
 msgstr "tamanho solicitado não pode ser negativo"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/genfile.c:127
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:611
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:709
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1190
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1480
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:613
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:711
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1192
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1482
 msgid "requested length too large"
 msgstr "tamanho solicitado é muito grande"
 
@@ -12230,26 +12268,25 @@ msgstr "oidvector tem muitos elementos"
 msgid "invalid oidvector data"
 msgstr "dado oidvector inválido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:219
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:229
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:221
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:231
 #, c-format
 msgid "UTF-16 to UTF-8 translation failed: %lu"
 msgstr "tradução de UTF-16 para UTF-8 falhou: %lu"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1327
-#, fuzzy
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1329
 msgid "requested character too large"
 msgstr "tamanho solicitado é muito grande"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1373
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1427
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1375
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1429
 #, c-format
 msgid "requested character too large for encoding: %d"
-msgstr ""
+msgstr "caracter solicitado é muito grande para codificação: %d"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1420
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/oracle_compat.c:1422
 msgid "null character not permitted"
-msgstr ""
+msgstr "caracter nulo não é permitido"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/pseudotypes.c:94
 msgid "cannot accept a value of type any"
@@ -12265,9 +12302,8 @@ msgid "cannot accept a value of type anyarray"
 msgstr "não pode aceitar um valor do tipo anyarray"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/pseudotypes.c:174
-#, fuzzy
 msgid "cannot accept a value of type anyenum"
-msgstr "não pode aceitar um valor do tipo any"
+msgstr "não pode aceitar um valor do tipo anyenum"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/pseudotypes.c:224
 msgid "cannot accept a value of type trigger"
@@ -12310,14 +12346,12 @@ msgid "cannot display a value of type anyelement"
 msgstr "não pode mostrar um valor do tipo anyelement"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/pseudotypes.c:358
-#, fuzzy
 msgid "cannot accept a value of type anynonarray"
-msgstr "não pode aceitar um valor do tipo anyarray"
+msgstr "não pode aceitar um valor do tipo anynonarray"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/pseudotypes.c:371
-#, fuzzy
 msgid "cannot display a value of type anynonarray"
-msgstr "não pode mostrar um valor do tipo any"
+msgstr "não pode mostrar um valor do tipo anynonarray"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/pseudotypes.c:384
 msgid "cannot accept a value of a shell type"
@@ -12334,9 +12368,9 @@ msgid "regular expression failed: %s"
 msgstr "expressão regular falhou: %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regexp.c:408
-#, fuzzy, c-format
+#, c-format
 msgid "invalid regexp option: \"%c\""
-msgstr "opção da expressão regular é inválida: %c"
+msgstr "opção da expressão regular é inválida: \"%c\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regexp.c:883
 msgid "regexp_split does not support the global option"
@@ -12356,8 +12390,8 @@ msgstr "mais de um operador com nome %s"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regproc.c:638
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/regproc.c:1498
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:4380
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:4408
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:4321
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:4349
 msgid "too many arguments"
 msgstr "muitos argumentos"
 
@@ -12434,9 +12468,9 @@ msgid "function \"%s\" must be fired for DELETE"
 msgstr "função \"%s\" deve ser disparada pelo DELETE"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ri_triggers.c:3044
-#, fuzzy, c-format
+#, c-format
 msgid "no pg_constraint entry for trigger \"%s\" on table \"%s\""
-msgstr "nenhuma tabela alvo foi informada para gatilho \"%s\" na tabela \"%s\""
+msgstr "nenhuma entrada em pg_constraint para gatilho \"%s\" na tabela \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ri_triggers.c:3046
 msgid ""
@@ -12535,20 +12569,20 @@ msgstr "tipo de dado incorreto: %u, esperado %u"
 msgid "improper binary format in record column %d"
 msgstr "formato binário inválido na coluna %d do registro"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:1655
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/ruleutils.c:1596
 #, c-format
 msgid "rule \"%s\" has unsupported event type %d"
 msgstr "regra \"%s\" tem tipo de evento %d que não é suportado"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:3950
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4376
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4098
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4524
 msgid "case insensitive matching not supported on type bytea"
 msgstr ""
 "correspondência não sensível a maiúsculas/minúsculas não é suportada pelo "
 "tipo bytea"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4056
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4536
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4204
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/selfuncs.c:4684
 msgid "regular-expression matching not supported on type bytea"
 msgstr "correspondência de expressão regular não é suportada pelo tipo bytea"
 
@@ -12674,7 +12708,7 @@ msgstr "zona horária de interval \"%s\" não deve especificar o mês"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsginidx.c:74
 msgid "query requires full scan, which is not supported by GIN indexes"
-msgstr ""
+msgstr "consulta requer busca completa, que não é suportada por índices GIN"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsginidx.c:100
 msgid ""
@@ -12682,123 +12716,120 @@ msgid ""
 msgstr ""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsginidx.c:101
-#, fuzzy
 msgid "Use the @@@ operator instead."
-msgstr "Ao invés disso utilize visões ou gatilhos."
+msgstr "Ao invés disso utilize o operador @@@."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsgistidx.c:100
-#, fuzzy
 msgid "gtsvector_in not implemented"
-msgstr "tipo \"line\" não está implementado"
+msgstr "gtsvector_in não está implementado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:147
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:381
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_parser.c:136
-#, fuzzy, c-format
+#, c-format
 msgid "syntax error in tsquery: \"%s\""
-msgstr "erro de sintaxe no arquivo de histórico: %s"
+msgstr "erro de sintaxe em tsquery: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "no operand in tsquery: \"%s\""
-msgstr "operador não é único: %s"
+msgstr "nenhum operando em tsquery: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:241
 #, c-format
 msgid "value is too big in tsquery: \"%s\""
-msgstr ""
+msgstr "valor é muito grande em tsquery: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:246
-#, fuzzy, c-format
+#, c-format
 msgid "operand is too long in tsquery: \"%s\""
-msgstr "operador não é único: %s"
+msgstr "operando é muito longo em tsquery: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:273
 #, c-format
 msgid "word is too long in tsquery: \"%s\""
-msgstr ""
+msgstr "palavra é muito longa em tsquery: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery.c:501
 #, c-format
 msgid "tsearch query doesn't contain lexeme(s): \"%s\""
 msgstr ""
 
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery_cleanup.c:285
+msgid "query contains only stopword(s) or doesn't contain lexeme(s), ignored"
+msgstr ""
+
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsquery_rewrite.c:294
-#, fuzzy
 msgid "ts_rewrite query must return two tsquery columns"
-msgstr "subconsulta deve retornar somente uma coluna"
+msgstr "consulta ts_rewrite deve retornar duas colunas tsquery"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsrank.c:379
-#, fuzzy
 msgid "array of weight must be one-dimensional"
-msgstr "matrizes ACL devem ser de uma dimensão"
+msgstr "matriz de pesos devem ser de uma dimensão"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsrank.c:384
 msgid "array of weight is too short"
-msgstr ""
+msgstr "matriz de pesos é muito pequena"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsrank.c:389
-#, fuzzy
 msgid "array of weight must not contain nulls"
-msgstr "matriz não deve conter valores nulos"
+msgstr "matriz de pesos não deve conter valores nulos"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsrank.c:398
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsrank.c:717
-#, fuzzy
 msgid "weight out of range"
-msgstr "bigint fora do intervalo"
+msgstr "peso fora do intervalo"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector.c:220
 #, c-format
 msgid "word is too long (%ld bytes, max %ld bytes)"
-msgstr ""
+msgstr "palavra é muito longa (%ld bytes, máximo de %ld bytes)"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1108
-#, fuzzy
 msgid "ts_stat query must return one tsvector column"
-msgstr "subconsulta deve retornar somente uma coluna"
+msgstr "consulta ts_stat deve retornar uma coluna tsvector"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1310
-#, fuzzy, c-format
+#, c-format
 msgid "tsvector column \"%s\" does not exist"
-msgstr "coluna \"%s\" não existe"
+msgstr "coluna tsvector \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1315
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" is not of tsvector type"
-msgstr "coluna \"%s\" não pode ser convertida para tipo \"%s\""
+msgstr "coluna \"%s\" não é do tipo tsvector"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1327
 #, fuzzy, c-format
 msgid "config column \"%s\" does not exist"
-msgstr "coluna \"%s\" não existe"
+msgstr "coluna config \"%s\" não existe"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1332
 #, fuzzy, c-format
 msgid "column \"%s\" is not of regconfig type"
-msgstr "coluna \"%s\" não foi encontrada no tipo de dado %s"
+msgstr "coluna \"%s\" não é do tipo regconfig"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1339
 #, fuzzy, c-format
 msgid "config column \"%s\" must not be NULL"
-msgstr "coluna \"%s\" não existe"
+msgstr "coluna config \"%s\" não deve ser NULO"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1352
-#, fuzzy, c-format
+#, c-format
 msgid "text search configuration name \"%s\" must be schema-qualified"
 msgstr ""
-"Define a ordem de busca em esquemas para nomes que não especificam um "
-"esquema."
+"nome da configuração de busca textual \"%s\" deve ser qualificada pelo "
+"esquema"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_op.c:1377
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" is not of character type"
-msgstr "valor \"%s\" está fora do intervalo para tipo oid"
+msgstr "coluna \"%s\" não é do tipo caracter"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_parser.c:137
-#, fuzzy, c-format
+#, c-format
 msgid "syntax error in tsvector: \"%s\""
-msgstr "erro de sintaxe no arquivo de histórico: %s"
+msgstr "erro de sintaxe em tsvector: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/tsvector_parser.c:202
 #, fuzzy, c-format
@@ -12811,9 +12842,9 @@ msgid "wrong position info in tsvector: \"%s\""
 msgstr "posição %2$d do %1$s não está na lista de seleção"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/uuid.c:136
-#, fuzzy, c-format
+#, c-format
 msgid "invalid input syntax for uuid: \"%s\""
-msgstr "sintaxe de entrada é inválida para tipo oid: \"%s\""
+msgstr "sintaxe de entrada é inválida para uuid: \"%s\""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/varbit.c:49
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/varchar.c:48
@@ -12920,85 +12951,84 @@ msgid "unsupported XML feature"
 msgstr "funcionalidade XML não é suportado"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:125
-#, fuzzy
 msgid "This functionality requires the server to be built with libxml support."
-msgstr "Esta funcionalidade requer suporte a libxml."
+msgstr ""
+"Esta funcionalidade requer que o servidor seja construído com suporte a "
+"libxml."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:126
-#, fuzzy
 msgid "You need to rebuild PostgreSQL using --with-libxml."
-msgstr "Você precisa recompilar o PostgreSQL utilizando --with-libxml."
+msgstr "Você precisa reconstruir o PostgreSQL utilizando --with-libxml."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:149
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/mb/mbutils.c:429
-#, fuzzy, c-format
+#, c-format
 msgid "invalid encoding name \"%s\""
-msgstr "nome da codificação de origem \"%s\" é inválido"
+msgstr "nome da codificação \"%s\" é inválido"
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:413
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:418
 msgid "invalid XML comment"
 msgstr "comentário XML inválido"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:548
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:549
 msgid "not an XML document"
 msgstr "não é um documento XML"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:681
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:704
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:682
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:705
 msgid "invalid XML processing instruction"
 msgstr "instrução de processamento XML é inválida"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:682
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:683
 #, fuzzy, c-format
 msgid "XML processing instruction target name cannot be \"%s\"."
-msgstr ""
-"nome alvo da instrução de processamento XML não pode iniciar com \"xml\"."
+msgstr "nome alvo da instrução de processamento XML não pode ser \"%s\"."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:705
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:706
 msgid "XML processing instruction cannot contain \"?>\"."
 msgstr "instrução de processamento XML não pode conter \"?>\"."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:942
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:943
 msgid "could not initialize XML library"
 msgstr "não pôde inicializar biblioteca XML"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:943
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:944
 #, c-format
 msgid ""
 "libxml2 has incompatible char type: sizeof(char)=%u, sizeof(xmlChar)=%u."
 msgstr ""
 "libxml2 tem tipo char incompatível: sizeof(char)=%u, sizeof(xmlChar)=%u."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:2085
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:2086
 msgid "invalid query"
 msgstr "consulta inválida"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3283
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3287
 #, fuzzy
 msgid "invalid array for XML namespace mapping"
 msgstr "tipo de privilégio %s é inválido para esquema"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3284
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3288
 msgid ""
 "The array must be two-dimensional with length of the second axis equal to 2."
 msgstr ""
 "A matriz deve ter duas dimensões com comprimento do segundo eixo igual a 2."
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3308
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3312
 msgid "empty XPath expression"
 msgstr "expressão XPath vazia"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3386
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3390
 msgid "neither namespace name nor URI may be null"
 msgstr ""
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3393
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3397
 #, fuzzy, c-format
 msgid "could not register XML namespace with name \"%s\" and URI \"%s\""
 msgstr "não pôde traduzir nome da máquina \"%s\" para endereço: %s\n"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3406
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/adt/xml.c:3410
 msgid "could not create XPath object"
 msgstr "não pôde criar objeto XPath"
 
@@ -13124,13 +13154,13 @@ msgstr "nenhuma função de saída disponível para tipo %s"
 msgid "cached plan must not change result type"
 msgstr "plano em cache não deve mudar tipo resultante"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/cache/relcache.c:3655
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/cache/relcache.c:3675
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr ""
 "não pôde criar arquivo de inicialização de cache de relações \"%s\": %m"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/cache/relcache.c:3657
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/cache/relcache.c:3677
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Continuando mesmo assim, mas há algo errado."
 
@@ -13152,110 +13182,105 @@ msgstr "TRAP: ExceptionalCondition: argumentos inválidos\n"
 msgid "TRAP: %s(\"%s\", File: \"%s\", Line: %d)\n"
 msgstr "TRAP: %s(\"%s\", Arquivo: \"%s\", Linha: %d)\n"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1213
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1212
 #, c-format
 msgid "could not reopen file \"%s\" as stderr: %m"
 msgstr "não pôde abrir arquivo \"%s\" novamente como saída stderr: %m"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1226
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1225
 #, c-format
 msgid "could not reopen file \"%s\" as stdout: %m"
 msgstr "não pôde abrir arquivo \"%s\" novamente como saida stdout: %m"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1485
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1495
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1722
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1734
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1484
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1494
 msgid "[unknown]"
 msgstr "[desconhecido]"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1826
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1890
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2145
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2221
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1897
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2152
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2228
 msgid "missing error text"
 msgstr "faltando mensagem de erro"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1839
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1842
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1893
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1896
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2224
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2227
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1900
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1903
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2231
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2234
 #, c-format
 msgid " at character %d"
 msgstr " no caracter %d"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1906
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1913
 msgid "DETAIL:  "
 msgstr "DETALHE:  "
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1913
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1920
 msgid "HINT:  "
 msgstr "DICA:  "
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1920
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1927
 msgid "QUERY:  "
 msgstr "CONSULTA:  "
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1927
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1934
 msgid "CONTEXT:  "
 msgstr "CONTEXTO:  "
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1937
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1944
 #, c-format
 msgid "LOCATION:  %s, %s:%d\n"
 msgstr "LOCAL:  %s, %s:%d\n"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1944
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1951
 #, c-format
 msgid "LOCATION:  %s:%d\n"
 msgstr "LOCAL:  %s:%d\n"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1958
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:1965
 msgid "STATEMENT:  "
 msgstr "COMANDO:  "
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2055
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2062
 msgid "Not safe to send CSV data\n"
 msgstr ""
 
 #. translator: This string will be truncated at 47
 #. characters expanded.
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2336
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2343
 #, c-format
 msgid "operating system error %d"
 msgstr "erro do sistema operacional %d"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2359
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2366
 msgid "DEBUG"
 msgstr "DEPURAÇÃO"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2363
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2370
 msgid "LOG"
 msgstr "LOG"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2366
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2373
 msgid "INFO"
 msgstr "INFO"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2369
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2376
 msgid "NOTICE"
 msgstr "NOTA"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2372
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2379
 msgid "WARNING"
 msgstr "AVISO"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2375
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2382
 msgid "ERROR"
 msgstr "ERRO"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2378
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2385
 msgid "FATAL"
 msgstr "FATAL"
 
-#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2381
+#: /a/pgsql/HEAD/pgtst/src/backend/utils/error/elog.c:2388
 msgid "PANIC"
 msgstr "PÂNICO"
 
@@ -13402,7 +13427,6 @@ msgid "File \"%s\" does not contain valid data."
 msgstr "Arquivo \"%s\" não contém dados válidos."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/init/miscinit.c:1087
-#, fuzzy
 msgid "You might need to initdb."
 msgstr "Você precisa executar o initdb."
 
@@ -13836,9 +13860,8 @@ msgstr ""
 "segundo plano e qualquer terminal de controle é dissociado."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:601
-#, fuzzy
 msgid "Logs each checkpoint."
-msgstr "Registra cada conexão bem sucedida."
+msgstr "Registra cada ponto de controle."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:609
 msgid "Logs each successful connection."
@@ -13864,9 +13887,8 @@ msgstr "Esse é um auxílio na depuração."
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:817
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1379
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1388
-#, fuzzy
 msgid "No description available."
-msgstr "nenhuma descrição disponível"
+msgstr "Nenhuma descrição disponível."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:649
 msgid "Logs the duration of each completed SQL statement."
@@ -13921,9 +13943,8 @@ msgstr ""
 "mesmo tempo que o comando inicia a execução."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:752
-#, fuzzy
 msgid "Collects statistics on database activity."
-msgstr "Coleta estatísticas de registros do banco de dados."
+msgstr "Coleta estatísticas da atividade no banco de dados."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:761
 msgid "Updates the process title to show the active SQL command."
@@ -13946,9 +13967,8 @@ msgid "Generates debugging output for LISTEN and NOTIFY."
 msgstr "Gera saída de depuração para LISTEN e NOTIFY."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:828
-#, fuzzy
 msgid "Logs long lock waits."
-msgstr "Registra eventos de espera devido a bloqueios longos."
+msgstr "Registra esperas devido a bloqueios longos."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:837
 msgid "Logs the host name in the connection logs."
@@ -14051,10 +14071,11 @@ msgid "Create new tables with OIDs by default."
 msgstr "Cria novas tabelas com OIDs por padrão."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:947
-#, fuzzy
 msgid ""
 "Start a subprocess to capture stderr output and/or csvlogs into log files."
-msgstr "Inicia um subprocesso para capturar saída stderr em arquivos de log."
+msgstr ""
+"Inicia um subprocesso para capturar saída stderr e/ou csvlogs em arquivos de "
+"log."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:955
 msgid "Truncate existing log files of same name during log rotation."
@@ -14082,13 +14103,12 @@ msgid "Datetimes are integer based."
 msgstr "Datetimes são baseados em inteiros."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1029
-#, fuzzy
 msgid ""
 "Sets whether Kerberos and GSSAPI user names should be treated as case-"
 "insensitive."
 msgstr ""
-"Define se nomes de usuário do Kerberos devem ser tratados como não sensíveis "
-"a minúsculas/maiúsculas."
+"Define se nomes de usuário do Kerberos e do GSSAPI devem ser tratados como "
+"não sensíveis a minúsculas/maiúsculas."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1038
 msgid "Warn about backslash escapes in ordinary string literals."
@@ -14098,11 +14118,13 @@ msgstr ""
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1047
 #, fuzzy
 msgid "Causes '...' strings to treat backslashes literally."
-msgstr "cadeias de caracteres '...' tratam barras invertidas literalmente."
+msgstr ""
+"Faz com que cadeias de caracteres '...' tratem barras invertidas "
+"literalmente."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1057
 msgid "Allows archiving of WAL files using archive_command."
-msgstr ""
+msgstr "Permite arquivamento de arquivos do WAL utilizando archive_command."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1066
 msgid "Allows modifications of the structure of system tables."
@@ -14200,11 +14222,8 @@ msgid "GEQO: number of iterations of the algorithm."
 msgstr "GEQO: número de iterações do algoritmo."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1179
-#, fuzzy
 msgid "Sets the time to wait on a lock before checking for deadlock."
-msgstr ""
-"O tempo em milisegundos para esperar um bloqueio antes de verificar um "
-"impasse."
+msgstr "Define o tempo para esperar um bloqueio antes de verificar um impasse."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:1203
 msgid "Sets the maximum number of concurrent connections."
@@ -15068,12 +15087,14 @@ msgstr ""
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:3925
 msgid "Valid units for this parameter are \"kB\", \"MB\", and \"GB\"."
-msgstr ""
+msgstr "Unidades válidas para este parâmetro são \"kB\", \"MB\" e \"GB\"."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:3984
 msgid ""
 "Valid units for this parameter are \"ms\", \"s\", \"min\", \"h\", and \"d\"."
 msgstr ""
+"Unidades válidas para este parâmetro são \"ms\", \"s\", \"min\", \"h\" e \"d"
+"\"."
 
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:4195
 #: /a/pgsql/HEAD/pgtst/src/backend/utils/misc/guc.c:4718
@@ -15492,6 +15513,29 @@ msgstr "processo filho foi terminado pelo sinal %d"
 msgid "child process exited with unrecognized status %d"
 msgstr "processo filho terminou com status desconhecido %d"
 
+#: /a/pgsql/HEAD/pgtst/src/backend/../port/open.c:112
+msgid "sharing violation"
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/../port/open.c:112
+msgid "lock violation"
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/../port/open.c:111
+#, fuzzy, c-format
+msgid "could not open file \"%s\": %s"
+msgstr "não pôde abrir arquivo \"%s\": %s\n"
+
+#: /a/pgsql/HEAD/pgtst/src/backend/../port/open.c:113
+msgid "Continuing to retry for 30 seconds."
+msgstr ""
+
+#: /a/pgsql/HEAD/pgtst/src/backend/../port/open.c:114
+msgid ""
+"You may have antivirus, backup or similar software interfering with the "
+"database."
+msgstr ""
+
 #: /a/pgsql/HEAD/pgtst/src/backend/../port/strerror.c:25
 #, c-format
 msgid "unrecognized error %d"
@@ -15506,3 +15550,7 @@ msgstr "código de erro win32 mapeado de %lu para %d"
 #, c-format
 msgid "unrecognized win32 error code: %lu"
 msgstr "código de erro win32 desconhecido: %lu"
+
+#, fuzzy
+#~ msgid "sspi error %x"
+#~ msgstr "faltando mensagem de erro"
