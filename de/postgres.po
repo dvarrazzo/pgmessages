@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2007.
 #
-# $Id: postgres.po,v 1.36 2008/01/14 16:53:04 petere Exp $
+# $Id: postgres.po,v 1.37 2008/01/16 09:59:56 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-14 06:01-0400\n"
-"PO-Revision-Date: 2008-01-14 17:52+0100\n"
+"POT-Creation-Date: 2008-01-16 00:08-0400\n"
+"PO-Revision-Date: 2008-01-16 10:58+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -445,24 +445,24 @@ msgid "transaction ID wrap limit is %u, limited by database \"%s\""
 msgstr ""
 "Grenze für Transaktionsnummernüberlauf ist %u, begrenzt durch Datenbank »%s«"
 
-#: access/transam/xact.c:594
+#: access/transam/xact.c:595
 msgid "cannot have more than 2^32-1 commands in a transaction"
 msgstr "kann nicht mehr als 2^32-1 Befehle in einer Transaktion ausführen"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2547
+#: access/transam/xact.c:2551
 #, c-format
 msgid "%s cannot run inside a transaction block"
 msgstr "%s kann nicht in einem Transaktionsblock laufen"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2557
+#: access/transam/xact.c:2561
 #, c-format
 msgid "%s cannot run inside a subtransaction"
 msgstr "%s kann nicht in einer Subtransaktion laufen"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2567
+#: access/transam/xact.c:2571
 #, c-format
 msgid "%s cannot be executed from a function or multi-command string"
 msgstr ""
@@ -470,26 +470,26 @@ msgstr ""
 "heraus ausgeführt werden"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2618
+#: access/transam/xact.c:2622
 #, c-format
 msgid "%s can only be used in transaction blocks"
 msgstr "%s kann nur in Transaktionsblöcken verwendet werden"
 
-#: access/transam/xact.c:2800
+#: access/transam/xact.c:2804
 msgid "there is already a transaction in progress"
 msgstr "eine Transaktion ist bereits begonnen"
 
-#: access/transam/xact.c:2967 access/transam/xact.c:3059
+#: access/transam/xact.c:2971 access/transam/xact.c:3063
 msgid "there is no transaction in progress"
 msgstr "keine Transaktion offen"
 
-#: access/transam/xact.c:3153 access/transam/xact.c:3203
-#: access/transam/xact.c:3209 access/transam/xact.c:3253
-#: access/transam/xact.c:3301 access/transam/xact.c:3307
+#: access/transam/xact.c:3157 access/transam/xact.c:3207
+#: access/transam/xact.c:3213 access/transam/xact.c:3257
+#: access/transam/xact.c:3305 access/transam/xact.c:3311
 msgid "no such savepoint"
 msgstr "Savepoint existiert nicht"
 
-#: access/transam/xact.c:3936
+#: access/transam/xact.c:3941
 msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "kann nicht mehr als 2^32-1 Subtransaktionen in einer Transaktion haben"
 
@@ -535,8 +535,8 @@ msgstr "kann Datei »%s« nicht erstellen: %m"
 #: access/transam/xlog.c:3669 access/transam/xlog.c:3707 commands/copy.c:1274
 #: commands/tablespace.c:703 commands/tablespace.c:709
 #: postmaster/postmaster.c:3303 postmaster/postmaster.c:3313
-#: utils/init/miscinit.c:1042 utils/init/miscinit.c:1051 utils/misc/guc.c:6013
-#: utils/misc/guc.c:6076 ../port/copydir.c:148
+#: utils/init/miscinit.c:1042 utils/init/miscinit.c:1051 utils/misc/guc.c:6023
+#: utils/misc/guc.c:6086 ../port/copydir.c:148
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "konnte nicht in Datei »%s« schreiben: %m"
@@ -3278,7 +3278,7 @@ msgstr "fehlende Daten für Spalte »%s«"
 msgid "row field count is %d, expected %d"
 msgstr "Feldanzahl in Zeile ist %d, erwartet wurden %d"
 
-#: commands/copy.c:2163 utils/init/miscinit.c:1002 utils/misc/guc.c:6144
+#: commands/copy.c:2163 utils/init/miscinit.c:1002 utils/misc/guc.c:6154
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "konnte nicht aus Datei »%s« lesen: %m"
@@ -3701,7 +3701,8 @@ msgstr "Hash-Prozeduren müssen Typ integer zurückgeben"
 
 #: commands/opclasscmds.c:1173
 msgid "associated data types must be specified for index support procedure"
-msgstr "zugehörige Datentypen müssen für Indexunterstützungsprozedur angegeben werden"
+msgstr ""
+"zugehörige Datentypen müssen für Indexunterstützungsprozedur angegeben werden"
 
 #: commands/opclasscmds.c:1199
 #, c-format
@@ -3944,7 +3945,7 @@ msgid "invalid cursor name: must not be empty"
 msgstr "ungültiger Cursorname: darf nicht leer sein"
 
 #: commands/portalcmds.c:164 commands/portalcmds.c:218
-#: executor/execCurrent.c:69 utils/adt/xml.c:2011 utils/adt/xml.c:2175
+#: executor/execCurrent.c:69 utils/adt/xml.c:2026 utils/adt/xml.c:2190
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "Cursor »%s« existiert nicht"
@@ -5135,8 +5136,8 @@ msgid "role \"%s\" cannot be dropped because some objects depend on it"
 msgstr "kann Rolle »%s« nicht löschen, weil andere Objekte davon abhängen"
 
 #: commands/user.c:893 nodes/print.c:83 storage/lmgr/deadlock.c:918
-#: tcop/postgres.c:3911 utils/adt/xml.c:1386 utils/adt/xml.c:1387
-#: utils/adt/xml.c:1393 utils/adt/xml.c:1464
+#: tcop/postgres.c:3911 utils/adt/xml.c:1401 utils/adt/xml.c:1402
+#: utils/adt/xml.c:1408 utils/adt/xml.c:1479
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -5463,7 +5464,9 @@ msgstr "Umwandlung zwischen %s und %s wird nicht unterstützt"
 
 #: commands/variable.c:731
 msgid "cannot set session authorization within security-definer function"
-msgstr "Sitzungsauthorisierung kann nicht in einer Security-Definer-Funktion gesetzt werden"
+msgstr ""
+"Sitzungsauthorisierung kann nicht in einer Security-Definer-Funktion gesetzt "
+"werden"
 
 #: commands/variable.c:855
 msgid "cannot set role within security-definer function"
@@ -10067,7 +10070,8 @@ msgstr "Syntaxfehler in Zeile %d der Affixdatei »%s«"
 #: tsearch/spell.c:530 tsearch/spell.c:790 tsearch/spell.c:811
 #, c-format
 msgid "multibyte flag character is not allowed at line %d of affix file \"%s\""
-msgstr "Mehrbytemarkierungszeichen ist nicht erlaubt in Zeile %d der Affixdatei »%s«"
+msgstr ""
+"Mehrbytemarkierungszeichen ist nicht erlaubt in Zeile %d der Affixdatei »%s«"
 
 #: tsearch/spell.c:567 tsearch/spell.c:629 tsearch/spell.c:726
 #, c-format
@@ -10079,7 +10083,9 @@ msgstr "konnte Affixdatei »%s« nicht öffnen: %m"
 msgid ""
 "Ispell dictionary supports only default flag value at line %d of affix file "
 "\"%s\""
-msgstr "Ispell-Wörterbuch unterstützt nur den Default-Flag-Wert in Zeile %d der Affixdatei »%s«"
+msgstr ""
+"Ispell-Wörterbuch unterstützt nur den Default-Flag-Wert in Zeile %d der "
+"Affixdatei »%s«"
 
 #: tsearch/spell.c:823
 #, c-format
@@ -10126,6 +10132,10 @@ msgstr "ungültiger Textsuchekonfigurationsdateiname »%s«"
 #, c-format
 msgid "could not open stop-word file \"%s\": %m"
 msgstr "konnte Stoppwortdatei »%s« nicht öffnen: %m"
+
+#: tsearch/wparser.c:315
+msgid "text search parser does not support headline creation"
+msgstr "Textsucheparser unterstützt die Erzeugung von Headlines nicht"
 
 #: tsearch/wparser_def.c:1741
 #, c-format
@@ -10507,8 +10517,8 @@ msgstr "Datum ist außerhalb des gültigen Bereichs für Typ »timestamp«"
 #: utils/adt/timestamp.c:4255 utils/adt/timestamp.c:4456
 #: utils/adt/timestamp.c:4550 utils/adt/timestamp.c:4557
 #: utils/adt/timestamp.c:4584 utils/adt/timestamp.c:4588
-#: utils/adt/timestamp.c:4629 utils/adt/xml.c:1729 utils/adt/xml.c:1735
-#: utils/adt/xml.c:1755 utils/adt/xml.c:1761
+#: utils/adt/timestamp.c:4629 utils/adt/xml.c:1744 utils/adt/xml.c:1750
+#: utils/adt/xml.c:1770 utils/adt/xml.c:1776
 msgid "timestamp out of range"
 msgstr "timestamp ist außerhalb des gültigen Bereichs"
 
@@ -11982,86 +11992,86 @@ msgstr "neues Bit muss 0 oder 1 sein"
 msgid "field position must be greater than zero"
 msgstr "Feldposition muss größer als null sein"
 
-#: utils/adt/xml.c:124
+#: utils/adt/xml.c:139
 msgid "unsupported XML feature"
 msgstr "nicht unterstützte XML-Funktionalität"
 
-#: utils/adt/xml.c:125
+#: utils/adt/xml.c:140
 msgid "This functionality requires the server to be built with libxml support."
 msgstr ""
 "Diese Funktionalität verlangt, dass der Server mit Libxml-Unterstützung "
 "gebaut wird."
 
-#: utils/adt/xml.c:126
+#: utils/adt/xml.c:141
 msgid "You need to rebuild PostgreSQL using --with-libxml."
 msgstr "Sie müssen PostgreSQL mit --with-libxml neu bauen."
 
-#: utils/adt/xml.c:149 utils/mb/mbutils.c:423
+#: utils/adt/xml.c:164 utils/mb/mbutils.c:423
 #, c-format
 msgid "invalid encoding name \"%s\""
 msgstr "ungültiger Kodierungsname »%s«"
 
-#: utils/adt/xml.c:413 utils/adt/xml.c:418
+#: utils/adt/xml.c:428 utils/adt/xml.c:433
 msgid "invalid XML comment"
 msgstr "ungültiger XML-Kommentar"
 
-#: utils/adt/xml.c:549
+#: utils/adt/xml.c:564
 msgid "not an XML document"
 msgstr "kein XML-Dokument"
 
-#: utils/adt/xml.c:682 utils/adt/xml.c:705
+#: utils/adt/xml.c:697 utils/adt/xml.c:720
 msgid "invalid XML processing instruction"
 msgstr "ungültige XML-Verarbeitungsanweisung"
 
-#: utils/adt/xml.c:683
+#: utils/adt/xml.c:698
 #, c-format
 msgid "XML processing instruction target name cannot be \"%s\"."
 msgstr "Die Zielangabe der XML-Verarbeitungsanweisung darf nicht »%s« sein."
 
-#: utils/adt/xml.c:706
+#: utils/adt/xml.c:721
 msgid "XML processing instruction cannot contain \"?>\"."
 msgstr "XML-Verarbeitungsanweisung darf nicht »?>« enthalten."
 
-#: utils/adt/xml.c:943
+#: utils/adt/xml.c:940
 msgid "could not initialize XML library"
 msgstr "konnte XML-Bibliothek nicht initialisieren"
 
-#: utils/adt/xml.c:944
+#: utils/adt/xml.c:941
 #, c-format
 msgid ""
 "libxml2 has incompatible char type: sizeof(char)=%u, sizeof(xmlChar)=%u."
 msgstr ""
 "libxml2 hat inkompatiblen char-Typ: sizeof(char)=%u, sizeof(xmlChar)=%u."
 
-#: utils/adt/xml.c:2090
+#: utils/adt/xml.c:2105
 msgid "invalid query"
 msgstr "ungültige Anfrage"
 
-#: utils/adt/xml.c:3301
+#: utils/adt/xml.c:3316
 msgid "invalid array for XML namespace mapping"
 msgstr "ungültiges Array for XML-Namensraumabbildung"
 
-#: utils/adt/xml.c:3302
+#: utils/adt/xml.c:3317
 msgid ""
 "The array must be two-dimensional with length of the second axis equal to 2."
 msgstr ""
 "Das Array muss zweidimensional sein und die Länge der zweiten Achse muss "
 "gleich 2 sein."
 
-#: utils/adt/xml.c:3326
+#: utils/adt/xml.c:3341
 msgid "empty XPath expression"
 msgstr "leerer XPath-Ausdruck"
 
-#: utils/adt/xml.c:3404
+#: utils/adt/xml.c:3416
 msgid "neither namespace name nor URI may be null"
 msgstr "weder Namensraumname noch URI dürfen NULL sein"
 
-#: utils/adt/xml.c:3411
+#: utils/adt/xml.c:3423
 #, c-format
 msgid "could not register XML namespace with name \"%s\" and URI \"%s\""
 msgstr "konnte XML-Namensraum mit Namen »%s« und URI »%s« nicht registrieren"
 
-#: utils/adt/xml.c:3424
+#: utils/adt/xml.c:3436
 msgid "could not create XPath object"
 msgstr "konnte XPath-Objekt nicht erzeugen"
 
@@ -13095,7 +13105,9 @@ msgstr "Erzeugt neue Tabellen standardmäßig mit OIDs."
 #: utils/misc/guc.c:947
 msgid ""
 "Start a subprocess to capture stderr output and/or csvlogs into log files."
-msgstr "Startet einen Subprozess, um die Stderr-Ausgabe und/oder CSV-Logs in Logdateien auszugeben."
+msgstr ""
+"Startet einen Subprozess, um die Stderr-Ausgabe und/oder CSV-Logs in "
+"Logdateien auszugeben."
 
 #: utils/misc/guc.c:955
 msgid "Truncate existing log files of same name during log rotation."
@@ -13673,7 +13685,9 @@ msgstr ""
 msgid ""
 "Time spent flushing dirty buffers during checkpoint, as fraction of "
 "checkpoint interval."
-msgstr "Zeit, die damit verbracht wird, modifizierte Puffer während eines Checkpoints zurückzuschreiben, als Bruchteil des Checkpoint-Intervalls."
+msgstr ""
+"Zeit, die damit verbracht wird, modifizierte Puffer während eines "
+"Checkpoints zurückzuschreiben, als Bruchteil des Checkpoint-Intervalls."
 
 #: utils/misc/guc.c:1888
 msgid "Sets the shell command that will be called to archive a WAL file."
@@ -14104,7 +14118,7 @@ msgstr ""
 "Gültige Einheiten für diesen Parameter sind »ms«, »s«, »min«, »h« und »d«."
 
 #: utils/misc/guc.c:4195 utils/misc/guc.c:4718 utils/misc/guc.c:4762
-#: utils/misc/guc.c:4869 utils/misc/guc.c:5338 utils/misc/guc.c:5479
+#: utils/misc/guc.c:4879 utils/misc/guc.c:5348 utils/misc/guc.c:5489
 #: guc-file.l:213
 #, c-format
 msgid "unrecognized configuration parameter \"%s\""
@@ -14179,56 +14193,56 @@ msgstr "%g ist außerhalb des gültigen Bereichs für Parameter »%s« (%g ... %g)"
 msgid "invalid value for parameter \"%s\": %g"
 msgstr "ungültiger Wert für Parameter »%s«: %g"
 
-#: utils/misc/guc.c:4722 utils/misc/guc.c:4766 utils/misc/guc.c:5483
+#: utils/misc/guc.c:4722 utils/misc/guc.c:4766 utils/misc/guc.c:5493
 #, c-format
 msgid "must be superuser to examine \"%s\""
 msgstr "nur Superuser können »%s« ansehen"
 
-#: utils/misc/guc.c:4878
+#: utils/misc/guc.c:4888
 #, c-format
 msgid "SET %s takes only one argument"
 msgstr "SET %s darf nur ein Argument haben"
 
-#: utils/misc/guc.c:5090
+#: utils/misc/guc.c:5100
 msgid "SET requires parameter name"
 msgstr "SET benötigt Parameternamen"
 
-#: utils/misc/guc.c:5187
+#: utils/misc/guc.c:5197
 #, c-format
 msgid "attempt to redefine parameter \"%s\""
 msgstr "Versuch, den Parameter »%s« zu redefinieren"
 
-#: utils/misc/guc.c:6255
+#: utils/misc/guc.c:6265
 #, c-format
 msgid "could not parse setting for parameter \"%s\""
 msgstr "konnte Wert von Parameter »%s« nicht lesen"
 
-#: utils/misc/guc.c:6446
+#: utils/misc/guc.c:6456
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "ungültige Listensyntax für Parameter »log_destination«"
 
-#: utils/misc/guc.c:6470
+#: utils/misc/guc.c:6480
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "unbekanntes »log_destination«-Schlüsselwort: »%s«"
 
-#: utils/misc/guc.c:6757
+#: utils/misc/guc.c:6767
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF wird nicht mehr unterstützt"
 
-#: utils/misc/guc.c:6829
+#: utils/misc/guc.c:6839
 msgid "assertion checking is not supported by this build"
 msgstr "Assert-Prüfungen werden von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:6844
+#: utils/misc/guc.c:6854
 msgid "SSL is not supported by this build"
 msgstr "SSL wird von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:6858
+#: utils/misc/guc.c:6868
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "kann Parameter nicht einschalten, wenn »log_statement_stats« an ist"
 
-#: utils/misc/guc.c:6874
+#: utils/misc/guc.c:6884
 msgid ""
 "cannot enable \"log_statement_stats\" when \"log_parser_stats\", "
 "\"log_planner_stats\", or \"log_executor_stats\" is true"
@@ -14236,7 +14250,7 @@ msgstr ""
 "kann »log_statement_stats« nicht einschalten, wenn »log_parser_stats«, "
 "»log_planner_stats« oder »log_executor_stats« an ist"
 
-#: utils/misc/guc.c:6892
+#: utils/misc/guc.c:6902
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr ""
 "kann den Read/Write-Modus einer Transaktion nicht in einer Read-Only-"
