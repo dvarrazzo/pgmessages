@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2008.
 #
-# $Id: postgres.po,v 1.41 2008/03/13 07:23:51 petere Exp $
+# pgtranslation Id: postgres.po,v 1.41 2008/03/13 07:23:51 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-09 08:02-0300\n"
-"PO-Revision-Date: 2008-03-13 08:21+0100\n"
+"POT-Creation-Date: 2008-03-13 07:06-0300\n"
+"PO-Revision-Date: 2008-03-13 15:09+0100\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -86,7 +86,7 @@ msgstr ""
 "fillfactor=%d ist außerhalb des gültigen Bereichs (sollte zwischen %d und "
 "100 sein)"
 
-#: access/common/printtup.c:266 tcop/postgres.c:1557 tcop/fastpath.c:179
+#: access/common/printtup.c:266 tcop/postgres.c:1575 tcop/fastpath.c:179
 #: tcop/fastpath.c:548
 #, c-format
 msgid "unsupported format code: %d"
@@ -1485,12 +1485,12 @@ msgstr "konnte Transaktionslogposition »%s« nicht interpretieren"
 msgid "xlog redo %s"
 msgstr "xlog redo %s"
 
-#: bootstrap/bootstrap.c:293 postmaster/postmaster.c:631 tcop/postgres.c:3023
+#: bootstrap/bootstrap.c:293 postmaster/postmaster.c:631 tcop/postgres.c:3041
 #, c-format
 msgid "--%s requires a value"
 msgstr "--%s benötigt einen Wert"
 
-#: bootstrap/bootstrap.c:298 postmaster/postmaster.c:636 tcop/postgres.c:3028
+#: bootstrap/bootstrap.c:298 postmaster/postmaster.c:636 tcop/postgres.c:3046
 #, c-format
 msgid "-c %s requires a value"
 msgstr "-c %s benötigt einen Wert"
@@ -2763,6 +2763,10 @@ msgstr "kann nicht anhand des ungültigen Index »%s« clustern"
 msgid "\"%s\" is a system catalog"
 msgstr "»%s« ist ein Systemkatalog"
 
+#: commands/async.c:344
+msgid "cannot PREPARE a transaction that has executed LISTEN or UNLISTEN"
+msgstr "PREPARE kann nicht in einer Transaktion ausgeführt werden, die LISTEN oder UNLISTEN ausgeführt hat"
+
 #: commands/conversioncmds.c:66
 #, c-format
 msgid "source encoding \"%s\" does not exist"
@@ -3995,7 +3999,7 @@ msgstr "konnte gehaltenen Cursor nicht umpositionieren"
 msgid "invalid statement name: must not be empty"
 msgstr "ungültiger Anweisungsname: darf nicht leer sein"
 
-#: commands/prepare.c:121 parser/analyze.c:1896 tcop/postgres.c:1199
+#: commands/prepare.c:121 parser/analyze.c:1896 tcop/postgres.c:1217
 #, c-format
 msgid "could not determine data type of parameter $%d"
 msgstr "konnte Datentyp von Parameter $%d nicht ermitteln"
@@ -5163,7 +5167,7 @@ msgid "role \"%s\" cannot be dropped because some objects depend on it"
 msgstr "kann Rolle »%s« nicht löschen, weil andere Objekte davon abhängen"
 
 #: commands/user.c:893 nodes/print.c:83 storage/lmgr/deadlock.c:918
-#: tcop/postgres.c:3906 utils/adt/xml.c:1350 utils/adt/xml.c:1351
+#: tcop/postgres.c:3924 utils/adt/xml.c:1350 utils/adt/xml.c:1351
 #: utils/adt/xml.c:1357 utils/adt/xml.c:1428
 #, c-format
 msgid "%s"
@@ -7933,13 +7937,13 @@ msgstr "Operator zu lang"
 #: scan.l:798
 #, c-format
 msgid "%s at end of input"
-msgstr "Fehler »%s« am Ende der Eingabe"
+msgstr "%s am Ende der Eingabe"
 
 #. translator: first %s is typically "syntax error"
 #: scan.l:806
 #, c-format
 msgid "%s at or near \"%s\""
-msgstr "Fehler »%s« bei »%s«"
+msgstr "%s bei »%s«"
 
 #: scan.l:940
 msgid "nonstandard use of \\' in a string literal"
@@ -9620,18 +9624,18 @@ msgstr ""
 "setzen: %m"
 
 #: tcop/postgres.c:373 tcop/postgres.c:385 tcop/postgres.c:396
-#: tcop/postgres.c:408 tcop/postgres.c:3755
+#: tcop/postgres.c:408 tcop/postgres.c:3773
 #, c-format
 msgid "invalid frontend message type %d"
 msgstr "ungültiger Frontend-Message-Typ %d"
 
-#: tcop/postgres.c:825
+#: tcop/postgres.c:843
 #, c-format
 msgid "statement: %s"
 msgstr "Anweisung: %s"
 
-#: tcop/postgres.c:883 tcop/postgres.c:1169 tcop/postgres.c:1432
-#: tcop/postgres.c:1832 tcop/postgres.c:2150 tcop/postgres.c:2230
+#: tcop/postgres.c:901 tcop/postgres.c:1187 tcop/postgres.c:1450
+#: tcop/postgres.c:1850 tcop/postgres.c:2168 tcop/postgres.c:2248
 #: tcop/fastpath.c:304
 msgid ""
 "current transaction is aborted, commands ignored until end of transaction "
@@ -9640,46 +9644,46 @@ msgstr ""
 "aktuelle Transaktion wurde abgebrochen, Befehle werden bis zum Ende der "
 "Transaktion ignoriert"
 
-#: tcop/postgres.c:1032 tcop/postgres.c:1302 tcop/postgres.c:1674
-#: tcop/postgres.c:1889 tcop/fastpath.c:405
+#: tcop/postgres.c:1050 tcop/postgres.c:1320 tcop/postgres.c:1692
+#: tcop/postgres.c:1907 tcop/fastpath.c:405
 #, c-format
 msgid "duration: %s ms"
 msgstr "Dauer: %s ms"
 
-#: tcop/postgres.c:1037
+#: tcop/postgres.c:1055
 #, c-format
 msgid "duration: %s ms  statement: %s"
 msgstr "Dauer: %s ms  Anweisung: %s"
 
-#: tcop/postgres.c:1085
+#: tcop/postgres.c:1103
 #, c-format
 msgid "parse %s: %s"
 msgstr "Parsen %s: %s"
 
-#: tcop/postgres.c:1143
+#: tcop/postgres.c:1161
 msgid "cannot insert multiple commands into a prepared statement"
 msgstr "kann nicht mehrere Befehle in vorbereitete Anweisung einfügen"
 
-#: tcop/postgres.c:1307
+#: tcop/postgres.c:1325
 #, c-format
 msgid "duration: %s ms  parse %s: %s"
 msgstr "Dauer: %s ms  Parsen %s: %s"
 
-#: tcop/postgres.c:1349
+#: tcop/postgres.c:1367
 #, c-format
 msgid "bind %s to %s"
 msgstr "Binden %s an %s"
 
-#: tcop/postgres.c:1368 tcop/postgres.c:2130
+#: tcop/postgres.c:1386 tcop/postgres.c:2148
 msgid "unnamed prepared statement does not exist"
 msgstr "unbenannte vorbereitete Anweisung existiert nicht"
 
-#: tcop/postgres.c:1410
+#: tcop/postgres.c:1428
 #, c-format
 msgid "bind message has %d parameter formats but %d parameters"
 msgstr "Binden-Nachricht hat %d Parameterformate aber %d Parameter"
 
-#: tcop/postgres.c:1416
+#: tcop/postgres.c:1434
 #, c-format
 msgid ""
 "bind message supplies %d parameters, but prepared statement \"%s\" requires %"
@@ -9688,54 +9692,54 @@ msgstr ""
 "Binden-Nachricht enthält %d Parameter, aber vorbereitete Anweisung »%s« "
 "erfordert %d"
 
-#: tcop/postgres.c:1550
+#: tcop/postgres.c:1568
 #, c-format
 msgid "incorrect binary data format in bind parameter %d"
 msgstr "falsches Binärdatenformat in Binden-Parameter %d"
 
-#: tcop/postgres.c:1679
+#: tcop/postgres.c:1697
 #, c-format
 msgid "duration: %s ms  bind %s%s%s: %s"
 msgstr "Dauer: %s ms  Binden %s%s%s: %s"
 
-#: tcop/postgres.c:1727 tcop/postgres.c:2216
+#: tcop/postgres.c:1745 tcop/postgres.c:2234
 #, c-format
 msgid "portal \"%s\" does not exist"
 msgstr "Portal »%s« existiert nicht"
 
-#: tcop/postgres.c:1812 tcop/postgres.c:1897
+#: tcop/postgres.c:1830 tcop/postgres.c:1915
 msgid "execute fetch from"
 msgstr "Ausführen Fetch von"
 
-#: tcop/postgres.c:1813 tcop/postgres.c:1898
+#: tcop/postgres.c:1831 tcop/postgres.c:1916
 msgid "execute"
 msgstr "Ausführen"
 
-#: tcop/postgres.c:1810
+#: tcop/postgres.c:1828
 #, c-format
 msgid "%s %s%s%s%s%s"
 msgstr "%s %s%s%s%s%s"
 
-#: tcop/postgres.c:1894
+#: tcop/postgres.c:1912
 #, c-format
 msgid "duration: %s ms  %s %s%s%s%s%s"
 msgstr "Dauer: %s ms  %s %s%s%s%s%s"
 
-#: tcop/postgres.c:2021
+#: tcop/postgres.c:2039
 #, c-format
 msgid "prepare: %s"
 msgstr "Vorbereiten: %s"
 
-#: tcop/postgres.c:2084
+#: tcop/postgres.c:2102
 #, c-format
 msgid "parameters: %s"
 msgstr "Parameter: %s"
 
-#: tcop/postgres.c:2406
+#: tcop/postgres.c:2424
 msgid "terminating connection because of crash of another server process"
 msgstr "breche Verbindung ab wegen Absturz eines anderen Serverprozesses"
 
-#: tcop/postgres.c:2407
+#: tcop/postgres.c:2425
 msgid ""
 "The postmaster has commanded this server process to roll back the current "
 "transaction and exit, because another server process exited abnormally and "
@@ -9745,7 +9749,7 @@ msgstr ""
 "zurückzurollen und die Sitzung zu beenden, weil ein anderer Serverprozess "
 "abnormal beendet wurde und möglicherweise das Shared Memory verfälscht hat."
 
-#: tcop/postgres.c:2411
+#: tcop/postgres.c:2429
 msgid ""
 "In a moment you should be able to reconnect to the database and repeat your "
 "command."
@@ -9753,11 +9757,11 @@ msgstr ""
 "In einem Moment sollten Sie wieder mit der Datenbank verbinden und Ihren "
 "Befehl wiederholen können."
 
-#: tcop/postgres.c:2522
+#: tcop/postgres.c:2540
 msgid "floating-point exception"
 msgstr "Fließkommafehler"
 
-#: tcop/postgres.c:2523
+#: tcop/postgres.c:2541
 msgid ""
 "An invalid floating-point operation was signaled. This probably means an out-"
 "of-range result or an invalid operation, such as division by zero."
@@ -9766,31 +9770,31 @@ msgstr ""
 "wahrscheinlich ein Ergebnis außerhalb des gültigen Bereichs oder eine "
 "ungültige Operation, zum Beispiel Division durch null."
 
-#: tcop/postgres.c:2560
+#: tcop/postgres.c:2578
 msgid "terminating autovacuum process due to administrator command"
 msgstr "breche Autovacuum-Prozess ab aufgrund von Anweisung des Administrators"
 
-#: tcop/postgres.c:2564
+#: tcop/postgres.c:2582
 msgid "terminating connection due to administrator command"
 msgstr "breche Verbindung ab aufgrund von Anweisung des Administrators"
 
-#: tcop/postgres.c:2575
+#: tcop/postgres.c:2593
 msgid "canceling statement due to statement timeout"
 msgstr "storniere Anfrage wegen Zeitüberschreitung"
 
-#: tcop/postgres.c:2579
+#: tcop/postgres.c:2597
 msgid "canceling autovacuum task"
 msgstr "storniere Autovacuum-Aufgabe"
 
-#: tcop/postgres.c:2583
+#: tcop/postgres.c:2601
 msgid "canceling statement due to user request"
 msgstr "storniere Anfrage wegen Benutzeraufforderung"
 
-#: tcop/postgres.c:2627
+#: tcop/postgres.c:2645
 msgid "stack depth limit exceeded"
 msgstr "Grenze für Stacktiefe überschritten"
 
-#: tcop/postgres.c:2628
+#: tcop/postgres.c:2646
 msgid ""
 "Increase the configuration parameter \"max_stack_depth\", after ensuring the "
 "platform's stack depth limit is adequate."
@@ -9799,12 +9803,12 @@ msgstr ""
 "sichergestellt haben, dass die Stacktiefenbegrenzung Ihrer Plattform "
 "ausreichend ist."
 
-#: tcop/postgres.c:2644
+#: tcop/postgres.c:2662
 #, c-format
 msgid "\"max_stack_depth\" must not exceed %ldkB"
 msgstr "»max_stack_depth« darf %ldkB nicht überschreiten"
 
-#: tcop/postgres.c:2646
+#: tcop/postgres.c:2664
 msgid ""
 "Increase the platform's stack depth limit via \"ulimit -s\" or local "
 "equivalent."
@@ -9812,36 +9816,36 @@ msgstr ""
 "Erhöhen Sie die Stacktiefenbegrenzung Ihrer Plattform mit »ulimit -s« oder "
 "der lokalen Entsprechung."
 
-#: tcop/postgres.c:3163
+#: tcop/postgres.c:3181
 msgid "invalid command-line arguments for server process"
 msgstr "ungültige Kommandozeilenargumente für Serverprozess"
 
-#: tcop/postgres.c:3164 tcop/postgres.c:3178
+#: tcop/postgres.c:3182 tcop/postgres.c:3196
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "Versuchen Sie »%s --help« für weitere Informationen."
 
-#: tcop/postgres.c:3176
+#: tcop/postgres.c:3194
 #, c-format
 msgid "%s: invalid command-line arguments"
 msgstr "%s: ungültige Kommandozeilenargumente"
 
-#: tcop/postgres.c:3186
+#: tcop/postgres.c:3204
 #, c-format
 msgid "%s: no database nor user name specified"
 msgstr "%s: weder Datenbankname noch Benutzername angegeben"
 
-#: tcop/postgres.c:3665
+#: tcop/postgres.c:3683
 #, c-format
 msgid "invalid CLOSE message subtype %d"
 msgstr "ungültiger Subtyp %d von CLOSE-Message"
 
-#: tcop/postgres.c:3698
+#: tcop/postgres.c:3716
 #, c-format
 msgid "invalid DESCRIBE message subtype %d"
 msgstr "ungültiger Subtyp %d von DESCRIBE-Message"
 
-#: tcop/postgres.c:3936
+#: tcop/postgres.c:3954
 #, c-format
 msgid ""
 "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%"
