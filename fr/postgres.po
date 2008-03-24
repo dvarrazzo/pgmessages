@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-fr-8.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-09 08:02-0300\n"
-"PO-Revision-Date: 2008-03-13 09:26+0100\n"
+"POT-Creation-Date: 2008-03-14 17:02-0300\n"
+"PO-Revision-Date: 2008-03-24 09:05+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgid "fillfactor=%d is out of range (should be between %d and 100)"
 msgstr "le facteur de remplissage (%d) est en dehors des limites (il devrait être entre %d et 100)"
 
 #: access/common/printtup.c:266
-#: tcop/postgres.c:1557
+#: tcop/postgres.c:1575
 #: tcop/fastpath.c:179
 #: tcop/fastpath.c:548
 #, c-format
@@ -638,7 +638,7 @@ msgstr "n'a pas pu fermer le fichier « %s » : %m"
 #: access/transam/xlog.c:3538
 #: access/transam/xlog.c:3636
 #: libpq/hba.c:954
-#: postmaster/autovacuum.c:1785
+#: postmaster/autovacuum.c:1786
 #: utils/error/elog.c:1202
 #: utils/init/miscinit.c:993
 #: utils/init/miscinit.c:1099
@@ -1596,14 +1596,14 @@ msgstr "xlog redo %s"
 
 #: bootstrap/bootstrap.c:293
 #: postmaster/postmaster.c:631
-#: tcop/postgres.c:3023
+#: tcop/postgres.c:3041
 #, c-format
 msgid "--%s requires a value"
 msgstr "--%s requiert une valeur"
 
 #: bootstrap/bootstrap.c:298
 #: postmaster/postmaster.c:636
-#: tcop/postgres.c:3028
+#: tcop/postgres.c:3046
 #, c-format
 msgid "-c %s requires a value"
 msgstr "-c %s requiert une valeur"
@@ -2965,6 +2965,12 @@ msgstr "ne peut pas exécuter la commande CLUSTER sur l'index invalide « %s »"
 msgid "\"%s\" is a system catalog"
 msgstr "« %s » est un catalogue système"
 
+#: commands/async.c:344
+msgid "cannot PREPARE a transaction that has executed LISTEN or UNLISTEN"
+msgstr ""
+"ne peut pas exécuter PREPARE sur une transaction qui a exécuté LISTEN ou\n"
+"UNLISTEN"
+
 #: commands/conversioncmds.c:66
 #, c-format
 msgid "source encoding \"%s\" does not exist"
@@ -4323,7 +4329,7 @@ msgstr "nom de l'instruction invalide : ne doit pas être vide"
 
 #: commands/prepare.c:121
 #: parser/analyze.c:1896
-#: tcop/postgres.c:1199
+#: tcop/postgres.c:1217
 #, c-format
 msgid "could not determine data type of parameter $%d"
 msgstr "n'a pas pu déterminer le type de données du paramètres $%d"
@@ -4462,8 +4468,8 @@ msgstr "setval : la valeur %s est en dehors des limites de la séquence « %s » (%
 #: utils/adt/oracle_compat.c:128
 #: utils/adt/oracle_compat.c:176
 #: utils/adt/regexp.c:209
-#: utils/adt/varlena.c:2841
-#: utils/adt/varlena.c:2864
+#: utils/adt/varlena.c:2854
+#: utils/adt/varlena.c:2877
 #: utils/fmgr/dfmgr.c:221
 #: utils/hash/dynahash.c:363
 #: utils/hash/dynahash.c:435
@@ -5598,7 +5604,7 @@ msgstr "le rôle « %s » ne peut pas être supprimé car d'autres objets en dépenden
 #: commands/user.c:893
 #: nodes/print.c:83
 #: storage/lmgr/deadlock.c:918
-#: tcop/postgres.c:3906
+#: tcop/postgres.c:3924
 #: utils/adt/xml.c:1350
 #: utils/adt/xml.c:1351
 #: utils/adt/xml.c:1357
@@ -5661,84 +5667,84 @@ msgstr "le rôle « %s » est déjà un membre du rôle « %s »"
 msgid "role \"%s\" is not a member of role \"%s\""
 msgstr "le rôle « %s » n'est pas un membre du rôle « %s »"
 
-#: commands/vacuum.c:636
+#: commands/vacuum.c:640
 msgid "oldest xmin is far in the past"
 msgstr "le plus ancien xmin est loin dans le passé"
 
-#: commands/vacuum.c:637
+#: commands/vacuum.c:641
 msgid "Close open transactions soon to avoid wraparound problems."
 msgstr ""
 "Fermez les transactions ouvertes rapidement pour éviter des problèmes de\n"
 "réinitialisation."
 
-#: commands/vacuum.c:932
+#: commands/vacuum.c:936
 msgid "some databases have not been vacuumed in over 2 billion transactions"
 msgstr ""
 "certaines bases de données n'ont pas eu droit à l'opération de maintenance\n"
 "VACUUM depuis plus de 2 milliards de transactions"
 
-#: commands/vacuum.c:933
+#: commands/vacuum.c:937
 msgid "You might have already suffered transaction-wraparound data loss."
 msgstr ""
 "Vous pouvez avoir déjà souffert de pertes de données suite à une\n"
 "réinitialisation de l'identifiant des transactions."
 
-#: commands/vacuum.c:1052
+#: commands/vacuum.c:1063
 #, c-format
 msgid "skipping \"%s\" --- only table or database owner can vacuum it"
 msgstr ""
 "ignore « %s » --- seul le propriétaire de la table ou de la base de données\n"
 "peut exécuter un VACUUM"
 
-#: commands/vacuum.c:1066
+#: commands/vacuum.c:1077
 #, c-format
 msgid "skipping \"%s\" --- cannot vacuum indexes, views, or special system tables"
 msgstr ""
 "ignore « %s » --- n'a pas pu exécuter un VACUUM sur les index, vues ou\n"
 "tables système"
 
-#: commands/vacuum.c:1293
+#: commands/vacuum.c:1304
 #: commands/vacuumlazy.c:286
 #, c-format
 msgid "vacuuming \"%s.%s\""
 msgstr "exécution du VACUUM sur « %s.%s »"
 
-#: commands/vacuum.c:1351
+#: commands/vacuum.c:1362
 #: commands/vacuumlazy.c:371
 #, c-format
 msgid "relation \"%s\" page %u is uninitialized --- fixing"
 msgstr "relation « %s » : la page %u n'est pas initialisée --- correction en cours"
 
-#: commands/vacuum.c:1463
-#: commands/vacuum.c:1528
+#: commands/vacuum.c:1474
+#: commands/vacuum.c:1539
 #, c-format
 msgid "relation \"%s\" TID %u/%u: XMIN_COMMITTED not set for transaction %u --- cannot shrink relation"
 msgstr ""
 "relation « %s », TID %u/%u : XMIN_COMMITTED non configuré pour la\n"
 "transaction %u --- n'a pas pu diminuer la taille de la relation"
 
-#: commands/vacuum.c:1496
+#: commands/vacuum.c:1507
 #, c-format
 msgid "relation \"%s\" TID %u/%u: dead HOT-updated tuple --- cannot shrink relation"
 msgstr ""
 "relation « %s », TID %u/%u : ligne morte mise à jour par HOT --- n'a pas pu\n"
 "diminuer la taille de la relation"
 
-#: commands/vacuum.c:1567
+#: commands/vacuum.c:1578
 #, c-format
 msgid "relation \"%s\" TID %u/%u: InsertTransactionInProgress %u --- cannot shrink relation"
 msgstr ""
 "relation « %s », TID %u/%u : InsertTransactionInProgress %u --- n'a pas pu\n"
 "diminuer la taille de la relation"
 
-#: commands/vacuum.c:1584
+#: commands/vacuum.c:1595
 #, c-format
 msgid "relation \"%s\" TID %u/%u: DeleteTransactionInProgress %u --- cannot shrink relation"
 msgstr ""
 "relation « %s », TID %u/%u : DeleteTransactionInProgress %u --- n'a pas pu\n"
 "diminuer la taille de la relation"
 
-#: commands/vacuum.c:1772
+#: commands/vacuum.c:1783
 #: commands/vacuumlazy.c:606
 #, c-format
 msgid "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
@@ -5746,7 +5752,7 @@ msgstr ""
 "« %s » : %.0f versions de ligne supprimables, %.0f non supprimables\n"
 "parmi %u pages"
 
-#: commands/vacuum.c:1775
+#: commands/vacuum.c:1786
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -5768,12 +5774,12 @@ msgstr ""
 "disponibles.\n"
 "%s."
 
-#: commands/vacuum.c:2683
+#: commands/vacuum.c:2694
 #, c-format
 msgid "\"%s\": moved %u row versions, truncated %u to %u pages"
 msgstr "« %s » : %u versions de ligne déplacées, %u pages tronquées sur %u"
 
-#: commands/vacuum.c:2686
+#: commands/vacuum.c:2697
 #: commands/vacuumlazy.c:668
 #: commands/vacuumlazy.c:760
 #: commands/vacuumlazy.c:911
@@ -5781,20 +5787,20 @@ msgstr "« %s » : %u versions de ligne déplacées, %u pages tronquées sur %u"
 msgid "%s."
 msgstr "%s."
 
-#: commands/vacuum.c:3209
+#: commands/vacuum.c:3220
 #: commands/vacuumlazy.c:908
 #, c-format
 msgid "\"%s\": truncated %u to %u pages"
 msgstr "« %s » : %u pages tronqués en %u"
 
-#: commands/vacuum.c:3292
-#: commands/vacuum.c:3362
+#: commands/vacuum.c:3303
+#: commands/vacuum.c:3373
 #: commands/vacuumlazy.c:794
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "l'index « %s » contient maintenant %.0f versions de ligne dans %u pages"
 
-#: commands/vacuum.c:3296
+#: commands/vacuum.c:3307
 #, c-format
 msgid ""
 "%u index pages have been deleted, %u are currently reusable.\n"
@@ -5803,20 +5809,20 @@ msgstr ""
 "%u pages d'index ont été supprimées, %u sont actuellement réutilisables.\n"
 "%s."
 
-#: commands/vacuum.c:3310
-#: commands/vacuum.c:3382
+#: commands/vacuum.c:3321
+#: commands/vacuum.c:3393
 #, c-format
 msgid "index \"%s\" contains %.0f row versions, but table contains %.0f row versions"
 msgstr ""
 "l'index « %s » contient %.0f versions de ligne, mais la table contient %.0f\n"
 "versions de ligne"
 
-#: commands/vacuum.c:3313
-#: commands/vacuum.c:3385
+#: commands/vacuum.c:3324
+#: commands/vacuum.c:3396
 msgid "Rebuild the index with REINDEX."
 msgstr "Reconstruisez l'index avec REINDEX."
 
-#: commands/vacuum.c:3366
+#: commands/vacuum.c:3377
 #: commands/vacuumlazy.c:798
 #, c-format
 msgid ""
@@ -8767,48 +8773,48 @@ msgstr "L'appel système qui a échoué était DuplicateHandle."
 msgid "Failed system call was MapViewOfFileEx."
 msgstr "L'appel système qui a échoué était MapViewOfFileEx."
 
-#: postmaster/autovacuum.c:355
+#: postmaster/autovacuum.c:356
 #, c-format
 msgid "could not fork autovacuum launcher process: %m"
 msgstr "n'a pas pu exécuter le processus autovacuum maître : %m"
 
-#: postmaster/autovacuum.c:519
+#: postmaster/autovacuum.c:520
 msgid "autovacuum launcher started"
 msgstr "lancement du processus autovacuum"
 
-#: postmaster/autovacuum.c:751
+#: postmaster/autovacuum.c:752
 msgid "autovacuum launcher shutting down"
 msgstr "arrêt du processus autovacuum"
 
-#: postmaster/autovacuum.c:1403
+#: postmaster/autovacuum.c:1404
 #, c-format
 msgid "could not fork autovacuum worker process: %m"
 msgstr "n'a pas pu exécuter le processus autovacuum worker : %m"
 
-#: postmaster/autovacuum.c:1605
+#: postmaster/autovacuum.c:1606
 #, c-format
 msgid "autovacuum: processing database \"%s\""
 msgstr "autovacuum : traitement de la base de données « %s »"
 
-#: postmaster/autovacuum.c:2147
+#: postmaster/autovacuum.c:2141
 #, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\""
 msgstr "VACUUM automatique de la table « %s.%s.%s »"
 
-#: postmaster/autovacuum.c:2150
+#: postmaster/autovacuum.c:2144
 #, c-format
 msgid "automatic analyze of table \"%s.%s.%s\""
 msgstr "ANALYZE automatique de la table « %s.%s.%s »"
 
-#: postmaster/autovacuum.c:2712
+#: postmaster/autovacuum.c:2706
 msgid "autovacuum not started because of misconfiguration"
 msgstr "autovacuum non exécuté à cause d'une mauvaise configuration"
 
-#: postmaster/autovacuum.c:2713
+#: postmaster/autovacuum.c:2707
 msgid "Enable the \"track_counts\" option."
 msgstr "Activez l'option « track_counts »."
 
-#: postmaster/autovacuum.c:2769
+#: postmaster/autovacuum.c:2763
 msgid "not enough shared memory for autovacuum"
 msgstr "pas assez de mémoire partagée pour le processus autovacuum"
 
@@ -10148,224 +10154,224 @@ msgstr "n'a pas pu se déplacer à la fin du segment %u de la relation %u/%u/%u : 
 #: tcop/postgres.c:385
 #: tcop/postgres.c:396
 #: tcop/postgres.c:408
-#: tcop/postgres.c:3755
+#: tcop/postgres.c:3773
 #, c-format
 msgid "invalid frontend message type %d"
 msgstr "type %d du message de l'interface invalide"
 
-#: tcop/postgres.c:825
+#: tcop/postgres.c:843
 #, c-format
 msgid "statement: %s"
 msgstr "instruction : %s"
 
-#: tcop/postgres.c:883
-#: tcop/postgres.c:1169
-#: tcop/postgres.c:1432
-#: tcop/postgres.c:1832
-#: tcop/postgres.c:2150
-#: tcop/postgres.c:2230
+#: tcop/postgres.c:901
+#: tcop/postgres.c:1187
+#: tcop/postgres.c:1450
+#: tcop/postgres.c:1850
+#: tcop/postgres.c:2168
+#: tcop/postgres.c:2248
 #: tcop/fastpath.c:304
 msgid "current transaction is aborted, commands ignored until end of transaction block"
 msgstr ""
 "la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc\n"
 "de la transaction"
 
-#: tcop/postgres.c:1032
-#: tcop/postgres.c:1302
-#: tcop/postgres.c:1674
-#: tcop/postgres.c:1889
+#: tcop/postgres.c:1050
+#: tcop/postgres.c:1320
+#: tcop/postgres.c:1692
+#: tcop/postgres.c:1907
 #: tcop/fastpath.c:405
 #, c-format
 msgid "duration: %s ms"
 msgstr "durée : %s ms"
 
-#: tcop/postgres.c:1037
+#: tcop/postgres.c:1055
 #, c-format
 msgid "duration: %s ms  statement: %s"
 msgstr "durée : %s ms, instruction : %s"
 
-#: tcop/postgres.c:1085
+#: tcop/postgres.c:1103
 #, c-format
 msgid "parse %s: %s"
 msgstr "analyse %s : %s"
 
-#: tcop/postgres.c:1143
+#: tcop/postgres.c:1161
 msgid "cannot insert multiple commands into a prepared statement"
 msgstr "ne peut pas insérer les commandes multiples dans une instruction préparée"
 
-#: tcop/postgres.c:1307
+#: tcop/postgres.c:1325
 #, c-format
 msgid "duration: %s ms  parse %s: %s"
 msgstr "durée : %s ms, analyse %s : %s"
 
-#: tcop/postgres.c:1349
+#: tcop/postgres.c:1367
 #, c-format
 msgid "bind %s to %s"
 msgstr "lie %s à %s"
 
-#: tcop/postgres.c:1368
-#: tcop/postgres.c:2130
+#: tcop/postgres.c:1386
+#: tcop/postgres.c:2148
 msgid "unnamed prepared statement does not exist"
 msgstr "l'instruction préparée non nommée n'existe pas"
 
-#: tcop/postgres.c:1410
+#: tcop/postgres.c:1428
 #, c-format
 msgid "bind message has %d parameter formats but %d parameters"
 msgstr "le message bind a %d formats de paramètres mais %d paramètres"
 
-#: tcop/postgres.c:1416
+#: tcop/postgres.c:1434
 #, c-format
 msgid "bind message supplies %d parameters, but prepared statement \"%s\" requires %d"
 msgstr ""
 "le message bind fournit %d paramètres, mais l'instruction préparée « %s » en\n"
 "requiert %d"
 
-#: tcop/postgres.c:1550
+#: tcop/postgres.c:1568
 #, c-format
 msgid "incorrect binary data format in bind parameter %d"
 msgstr "format des données binaires incorrect dans le paramètre bind %d"
 
-#: tcop/postgres.c:1679
+#: tcop/postgres.c:1697
 #, c-format
 msgid "duration: %s ms  bind %s%s%s: %s"
 msgstr "durée : %s ms, lien %s%s%s : %s"
 
-#: tcop/postgres.c:1727
-#: tcop/postgres.c:2216
+#: tcop/postgres.c:1745
+#: tcop/postgres.c:2234
 #, c-format
 msgid "portal \"%s\" does not exist"
 msgstr "le portail « %s » n'existe pas"
 
-#: tcop/postgres.c:1812
-#: tcop/postgres.c:1897
+#: tcop/postgres.c:1830
+#: tcop/postgres.c:1915
 msgid "execute fetch from"
 msgstr "exécute fetch à partir de"
 
-#: tcop/postgres.c:1813
-#: tcop/postgres.c:1898
+#: tcop/postgres.c:1831
+#: tcop/postgres.c:1916
 msgid "execute"
 msgstr "exécute"
 
-#: tcop/postgres.c:1810
+#: tcop/postgres.c:1828
 #, c-format
 msgid "%s %s%s%s%s%s"
 msgstr "%s %s%s%s%s%s"
 
-#: tcop/postgres.c:1894
+#: tcop/postgres.c:1912
 #, c-format
 msgid "duration: %s ms  %s %s%s%s%s%s"
 msgstr "durée : %s ms  %s %s%s%s%s%s"
 
-#: tcop/postgres.c:2021
+#: tcop/postgres.c:2039
 #, c-format
 msgid "prepare: %s"
 msgstr "préparation : %s"
 
-#: tcop/postgres.c:2084
+#: tcop/postgres.c:2102
 #, c-format
 msgid "parameters: %s"
 msgstr "paramètres : %s"
 
-#: tcop/postgres.c:2406
+#: tcop/postgres.c:2424
 msgid "terminating connection because of crash of another server process"
 msgstr "arrêt de la connexion à cause de l'arrêt brutal d'un autre processus serveur"
 
-#: tcop/postgres.c:2407
+#: tcop/postgres.c:2425
 msgid "The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory."
 msgstr ""
 "Le postmaster a commandé à ce processus serveur d'annuler la transaction\n"
 "courante et de quitter car un autre processus serveur a quitté anormalement\n"
 "et qu'il existe probablement de la mémoire partagée corrompue."
 
-#: tcop/postgres.c:2411
+#: tcop/postgres.c:2429
 msgid "In a moment you should be able to reconnect to the database and repeat your command."
 msgstr ""
 "Dans un moment, vous devriez être capable de vous reconnecter à la base de\n"
 "données et de relancer votre commande."
 
-#: tcop/postgres.c:2522
+#: tcop/postgres.c:2540
 msgid "floating-point exception"
 msgstr "exception dû à une virgule flottante"
 
-#: tcop/postgres.c:2523
+#: tcop/postgres.c:2541
 msgid "An invalid floating-point operation was signaled. This probably means an out-of-range result or an invalid operation, such as division by zero."
 msgstr ""
 "Une opération invalide sur les virgules flottantes a été signalée.\n"
 "Ceci signifie probablement un résultat en dehors de l'échelle ou une\n"
 "opération invalide telle qu'une division par zéro."
 
-#: tcop/postgres.c:2560
+#: tcop/postgres.c:2578
 msgid "terminating autovacuum process due to administrator command"
 msgstr "arrêt du processus autovacuum suite à la demande de l'administrateur"
 
-#: tcop/postgres.c:2564
+#: tcop/postgres.c:2582
 msgid "terminating connection due to administrator command"
 msgstr "arrêt des connexions suite à la demande de l'administrateur"
 
-#: tcop/postgres.c:2575
+#: tcop/postgres.c:2593
 msgid "canceling statement due to statement timeout"
 msgstr "annulation de la requête à cause du délai écoulé pour l'exécution de l'instruction"
 
-#: tcop/postgres.c:2579
+#: tcop/postgres.c:2597
 msgid "canceling autovacuum task"
 msgstr "annulation de la tâche d'autovacuum"
 
-#: tcop/postgres.c:2583
+#: tcop/postgres.c:2601
 msgid "canceling statement due to user request"
 msgstr "annulation de la requête à la demande de l'utilisateur"
 
-#: tcop/postgres.c:2627
+#: tcop/postgres.c:2645
 msgid "stack depth limit exceeded"
 msgstr "dépassement de limite (en profondeur) de la pile"
 
-#: tcop/postgres.c:2628
+#: tcop/postgres.c:2646
 msgid "Increase the configuration parameter \"max_stack_depth\", after ensuring the platform's stack depth limit is adequate."
 msgstr ""
 "Augmenter le paramètre « max_stack_depth » après vous être assuré que la\n"
 "limite de profondeur de la pile de la plateforme est adéquate."
 
-#: tcop/postgres.c:2644
+#: tcop/postgres.c:2662
 #, c-format
 msgid "\"max_stack_depth\" must not exceed %ldkB"
 msgstr "« max_stack_depth » ne doit pas dépasser %ld Ko"
 
-#: tcop/postgres.c:2646
+#: tcop/postgres.c:2664
 msgid "Increase the platform's stack depth limit via \"ulimit -s\" or local equivalent."
 msgstr ""
 "Augmenter la limite de profondeur de la pile sur votre plateforme via\n"
 "« ulimit -s » ou l'équivalent local."
 
-#: tcop/postgres.c:3163
+#: tcop/postgres.c:3181
 msgid "invalid command-line arguments for server process"
 msgstr "arguments invalides en ligne de commande pour le processus serveur"
 
-#: tcop/postgres.c:3164
-#: tcop/postgres.c:3178
+#: tcop/postgres.c:3182
+#: tcop/postgres.c:3196
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "Essayez « %s --help » pour plus d'informations."
 
-#: tcop/postgres.c:3176
+#: tcop/postgres.c:3194
 #, c-format
 msgid "%s: invalid command-line arguments"
 msgstr "%s : arguments invalides en ligne de commande"
 
-#: tcop/postgres.c:3186
+#: tcop/postgres.c:3204
 #, c-format
 msgid "%s: no database nor user name specified"
 msgstr "%s : aucune base de données et aucun utilisateur spécifiés"
 
-#: tcop/postgres.c:3665
+#: tcop/postgres.c:3683
 #, c-format
 msgid "invalid CLOSE message subtype %d"
 msgstr "sous-type %d du message CLOSE invalide"
 
-#: tcop/postgres.c:3698
+#: tcop/postgres.c:3716
 #, c-format
 msgid "invalid DESCRIBE message subtype %d"
 msgstr "sous-type %d du message DESCRIBE invalide"
 
-#: tcop/postgres.c:3936
+#: tcop/postgres.c:3954
 #, c-format
 msgid "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%s%s%s"
 msgstr ""
@@ -13892,7 +13898,7 @@ msgid "cannot display a value of a shell type"
 msgstr "ne peut pas afficher une valeur de type shell"
 
 #: utils/adt/regexp.c:273
-#: utils/adt/varlena.c:2385
+#: utils/adt/varlena.c:2398
 #, c-format
 msgid "regular expression failed: %s"
 msgstr "l'expression rationnelle a échoué : %s"
@@ -13931,8 +13937,8 @@ msgstr "Fournit deux types d'argument pour l'opérateur."
 
 #: utils/adt/regproc.c:1333
 #: utils/adt/regproc.c:1338
-#: utils/adt/varlena.c:1786
-#: utils/adt/varlena.c:1791
+#: utils/adt/varlena.c:1799
+#: utils/adt/varlena.c:1804
 msgid "invalid name syntax"
 msgstr "syntaxe du nom invalide"
 
@@ -14439,7 +14445,7 @@ msgstr "valeur trop longue pour le type character varying(%d)"
 
 #: utils/adt/varlena.c:595
 #: utils/adt/varlena.c:659
-#: utils/adt/varlena.c:1472
+#: utils/adt/varlena.c:1485
 msgid "negative substring length not allowed"
 msgstr "longueur de sous-chaîne négative non autorisée"
 
@@ -14454,19 +14460,19 @@ msgstr "n'a pas pu convertir la chaîne en UTF16 : erreur %lu"
 msgid "could not compare Unicode strings: %m"
 msgstr "n'a pas pu comparer les chaînes unicode : %m"
 
-#: utils/adt/varlena.c:1567
-#: utils/adt/varlena.c:1598
-#: utils/adt/varlena.c:1634
-#: utils/adt/varlena.c:1677
+#: utils/adt/varlena.c:1580
+#: utils/adt/varlena.c:1611
+#: utils/adt/varlena.c:1647
+#: utils/adt/varlena.c:1690
 #, c-format
 msgid "index %d out of valid range, 0..%d"
 msgstr "index %d en dehors des limites valides, 0..%d"
 
-#: utils/adt/varlena.c:1689
+#: utils/adt/varlena.c:1702
 msgid "new bit must be 0 or 1"
 msgstr "le nouveau bit doit valoir soit 0 soit 1"
 
-#: utils/adt/varlena.c:2478
+#: utils/adt/varlena.c:2491
 msgid "field position must be greater than zero"
 msgstr "la position du champ doit être plus grand que zéro"
 
