@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: postgres-fr-8.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-14 17:02-0300\n"
-"PO-Revision-Date: 2008-03-24 09:05+0100\n"
+"PO-Revision-Date: 2008-03-26 13:53+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team:  <pgsql-fr-general@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -2966,10 +2966,9 @@ msgid "\"%s\" is a system catalog"
 msgstr "« %s » est un catalogue système"
 
 #: commands/async.c:344
+#, fuzzy
 msgid "cannot PREPARE a transaction that has executed LISTEN or UNLISTEN"
-msgstr ""
-"ne peut pas exécuter PREPARE sur une transaction qui a exécuté LISTEN ou\n"
-"UNLISTEN"
+msgstr "ne peut pas préparer une transaction qui a créé un curseur WITH HOLD"
 
 #: commands/conversioncmds.c:66
 #, c-format
@@ -5237,7 +5236,7 @@ msgstr "l'analyseur de recherche plein texte « %s » existe déjà"
 #: commands/tsearchcmds.c:448
 #, c-format
 msgid "text search template \"%s\" does not accept options"
-msgstr "le modèle de recherche plein texte « %s » n'existe pas"
+msgstr "le modèle de recherche plein texte « %s » n'accepte pas d'options"
 
 #: commands/tsearchcmds.c:521
 msgid "text search template is required"
@@ -6707,7 +6706,7 @@ msgstr "erreur SSL : %s"
 #: libpq/be-secure.c:919
 #, c-format
 msgid "unrecognized SSL error code: %d"
-msgstr "code d'erreur SSL non reconnu : %d"
+msgstr "code d'erreur SSL inconnu : %d"
 
 #: libpq/be-secure.c:347
 #: libpq/be-secure.c:351
@@ -6814,7 +6813,7 @@ msgstr "connexion SSL de « %s »"
 
 #: libpq/be-secure.c:990
 msgid "no SSL error reported"
-msgstr "aucun code d'erreur SSL rapporté"
+msgstr "aucune erreur SSL reportée"
 
 #: libpq/be-secure.c:994
 #, c-format
@@ -8682,7 +8681,7 @@ msgstr ""
 #: port/pg_shmem.c:381
 #, c-format
 msgid "could not stat data directory \"%s\": %m"
-msgstr "n'a pas pu lire les informations sur le répertoire « %s » : %m"
+msgstr "n'a pas pu lire les informations sur le répertoire des données « %s » : %m"
 
 #: port/sysv_sema.c:114
 #: port/pg_sema.c:114
@@ -10814,7 +10813,7 @@ msgstr "Rapports et traces"
 
 #: utils/misc/guc.c:354
 msgid "Reporting and Logging / Where to Log"
-msgstr "Rapports et traces / Quand tracer"
+msgstr "Rapports et traces / Où tracer"
 
 #: utils/misc/guc.c:356
 msgid "Reporting and Logging / When to Log"
@@ -14696,7 +14695,7 @@ msgstr "INFO"
 
 #: utils/error/elog.c:2376
 msgid "NOTICE"
-msgstr "INFO"
+msgstr "NOTICE"
 
 #: utils/error/elog.c:2379
 msgid "WARNING"
@@ -15196,7 +15195,7 @@ msgstr "n'a pas pu supprimer le fichier ou répertoire « %s » : %s\n"
 #: ../port/exec.c:352
 #, c-format
 msgid "could not identify current directory: %s"
-msgstr "n'a pas pu identifier le répertoire de travail : « %s »"
+msgstr "n'a pas pu identifier le répertoire courant : %s"
 
 #: ../port/exec.c:214
 #, c-format
@@ -15211,13 +15210,13 @@ msgstr "n'a pas pu lire le binaire « %s »"
 #: ../port/exec.c:270
 #, c-format
 msgid "could not find a \"%s\" to execute"
-msgstr "n'a pas pu trouver un « %s » pour l'exécuter"
+msgstr "n'a pas pu trouver un « %s » à exécuter"
 
 #: ../port/exec.c:325
 #: ../port/exec.c:361
 #, c-format
 msgid "could not change directory to \"%s\""
-msgstr "n'a pas pu aller dans le répertoire « %s »"
+msgstr "n'a pas pu accéder au répertoire « %s »"
 
 #: ../port/exec.c:340
 #, c-format
@@ -15247,7 +15246,7 @@ msgstr "le processus fils a été terminé par le signal %d"
 #: ../port/exec.c:606
 #, c-format
 msgid "child process exited with unrecognized status %d"
-msgstr "le processus fils a quitté avec le statut non reconnu %d"
+msgstr "le processus fils a quitté avec un statut %d non reconnu"
 
 #: ../port/open.c:112
 msgid "sharing violation"
