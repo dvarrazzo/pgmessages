@@ -1,7 +1,7 @@
 # German message translation file for libpq
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2009.
 #
-# $Id: libpq.po,v 1.8 2009/01/19 09:00:36 petere Exp $
+# $Id: libpq.po,v 1.9 2009/01/19 21:06:16 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-01-17 05:02+0000\n"
-"PO-Revision-Date: 2009-01-19 10:55+0200\n"
+"POT-Creation-Date: 2009-01-19 19:23+0000\n"
+"PO-Revision-Date: 2009-01-19 23:05+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -314,7 +314,9 @@ msgstr "WARNUNG: Passwortdatei »%s« ist keine normale Datei\n"
 msgid ""
 "WARNING: password file \"%s\" has group or world access; permissions should "
 "be u=rw (0600) or less\n"
-msgstr "WARNUNG: Passwortdatei »%s« erlaubt Lesezugriff für Gruppe oder Andere; Rechte sollten u=rw (0600) oder weniger sein\n"
+msgstr ""
+"WARNUNG: Passwortdatei »%s« erlaubt Lesezugriff für Gruppe oder Andere; "
+"Rechte sollten u=rw (0600) oder weniger sein\n"
 
 #: fe-exec.c:826
 msgid "NOTICE"
@@ -648,38 +650,42 @@ msgstr "PQgetline: Text COPY OUT nicht ausgeführt\n"
 msgid "could not establish SSL connection: %s\n"
 msgstr "konnte SSL-Verbindung nicht aufbauen: %s\n"
 
-#: fe-secure.c:299 fe-secure.c:383 fe-secure.c:1096
+#: fe-secure.c:299 fe-secure.c:383 fe-secure.c:1097
 #, c-format
 msgid "SSL SYSCALL error: %s\n"
 msgstr "SSL-SYSCALL-Fehler: %s\n"
 
-#: fe-secure.c:305 fe-secure.c:389 fe-secure.c:1100
+#: fe-secure.c:305 fe-secure.c:389 fe-secure.c:1101
 msgid "SSL SYSCALL error: EOF detected\n"
 msgstr "SSL-SYSCALL-Fehler: Dateiende entdeckt\n"
 
-#: fe-secure.c:317 fe-secure.c:400 fe-secure.c:1119
+#: fe-secure.c:317 fe-secure.c:400 fe-secure.c:1120
 #, c-format
 msgid "SSL error: %s\n"
 msgstr "SSL-Fehler: %s\n"
 
-#: fe-secure.c:327 fe-secure.c:410 fe-secure.c:1129
+#: fe-secure.c:327 fe-secure.c:410 fe-secure.c:1130
 #, c-format
 msgid "unrecognized SSL error code: %d\n"
 msgstr "unbekannter SSL-Fehlercode: %d\n"
 
 #: fe-secure.c:511
 msgid ""
-"verified SSL connections are only supported when connecting to a hostname"
-msgstr "verifizierte SSL-Verbindungen werden nur unterstützt, wenn mit einem Hostnamen verbunden wird"
+"verified SSL connections are only supported when connecting to a host name"
+msgstr ""
+"verifizierte SSL-Verbindungen werden nur unterstützt, wenn mit einem "
+"Hostnamen verbunden wird"
 
 #: fe-secure.c:530
 #, c-format
-msgid "server common name '%s' does not match hostname '%s'"
+msgid "server common name \"%s\" does not match host name \"%s\""
 msgstr "Server-Common-Name »%s« stimmt nicht mit dem Hostnamen »%s« überein"
 
 #: fe-secure.c:572
-msgid "cannot find home directory to locate client certificate files"
-msgstr "konnte Home-Verzeichnis nicht ermitteln, um Client-Zertifikat-Dateien zu finden"
+msgid "could not get home directory to locate client certificate files"
+msgstr ""
+"konnte Home-Verzeichnis nicht ermitteln, um Client-Zertifikat-Dateien zu "
+"finden"
 
 #: fe-secure.c:596 fe-secure.c:610
 #, c-format
@@ -711,7 +717,9 @@ msgstr "Zertifikat vorhanden, aber keine private Schlüsseldatei »%s«\n"
 msgid ""
 "private key file \"%s\" has group or world access; permissions should be "
 "u=rw (0600) or less\n"
-msgstr "WARNUNG: private Schlüsseldatei »%s« erlaubt Lesezugriff für Gruppe oder Andere; Rechte sollten u=rw (0600) oder weniger sein\n"
+msgstr ""
+"WARNUNG: private Schlüsseldatei »%s« erlaubt Lesezugriff für Gruppe oder "
+"Andere; Rechte sollten u=rw (0600) oder weniger sein\n"
 
 #: fe-secure.c:725
 #, c-format
@@ -739,8 +747,9 @@ msgid "could not create SSL context: %s\n"
 msgstr "konnte SSL-Kontext nicht erzeugen: %s\n"
 
 #: fe-secure.c:986
-msgid "cannot find home directory to locate root certificate file"
-msgstr "konnte Home-Verzeichnis nicht ermitteln, um Root-Zertifikat-Datei zu finden"
+msgid "could not get home directory to locate root certificate file"
+msgstr ""
+"konnte Home-Verzeichnis nicht ermitteln, um Root-Zertifikat-Datei zu finden"
 
 #: fe-secure.c:1012
 #, c-format
@@ -752,21 +761,21 @@ msgstr "konnte Root-Zertifikat-Datei »%s« nicht lesen: %s\n"
 msgid "SSL library does not support CRL certificates (file \"%s\")\n"
 msgstr "SSL-Bibliothek unterstützt keine CRL-Zertifikate (Datei »%s«)\n"
 
-#: fe-secure.c:1052
+#: fe-secure.c:1053
 #, c-format
-msgid "root certificate file (%s) not found"
+msgid "root certificate file \"%s\" does not exist"
 msgstr "Root-Zertifikat-Datei »%s« existiert nicht"
 
-#: fe-secure.c:1148
+#: fe-secure.c:1149
 #, c-format
 msgid "certificate could not be obtained: %s\n"
 msgstr "Zertifikat konnte nicht ermittelt werden: %s\n"
 
-#: fe-secure.c:1222
+#: fe-secure.c:1223
 msgid "no SSL error reported"
 msgstr "kein SSL-Fehler berichtet"
 
-#: fe-secure.c:1231
+#: fe-secure.c:1232
 #, c-format
 msgid "SSL error code %lu"
 msgstr "SSL-Fehlercode %lu"
