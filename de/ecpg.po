@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PostgreSQL package.
 # Peter Eisentraut <peter_e@gmx.net>, 2009.
 #
-# $Id: ecpg.po,v 1.1 2009/01/26 10:21:14 petere Exp $
+# $Id: ecpg.po,v 1.2 2009/01/27 21:42:25 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-01-23 21:22+0000\n"
-"PO-Revision-Date: 2009-01-26 12:18+0200\n"
+"POT-Creation-Date: 2009-01-27 15:22+0000\n"
+"PO-Revision-Date: 2009-01-27 23:41+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -231,7 +231,7 @@ msgstr "Bezeichner in Anführungszeichen nicht abgeschlossen"
 
 #: pgc.l:898
 msgid "missing identifier in EXEC SQL UNDEF command"
-msgstr ""
+msgstr "fehlender Bezeichner im Befehl EXEC SQL UNDEF"
 
 #: pgc.l:944 pgc.l:958
 msgid "missing matching \"EXEC SQL IFDEF\" / \"EXEC SQL IFNDEF\""
@@ -251,15 +251,15 @@ msgstr ""
 
 #: pgc.l:1051
 msgid "too many nested EXEC SQL IFDEF conditions"
-msgstr ""
+msgstr "zu viele geschachtelte EXEC SQL IFDEF-Bedingungen"
 
 #: pgc.l:1084
 msgid "missing identifier in EXEC SQL IFDEF command"
-msgstr ""
+msgstr "fehlender Bezeichner im Befehl EXEC SQL IFDEF"
 
 #: pgc.l:1093
 msgid "missing identifier in EXEC SQL DEFINE command"
-msgstr ""
+msgstr "fehlender Bezeichner im Befehl EXEC SQL DEFINE"
 
 #: pgc.l:1126
 msgid "syntax error in EXEC SQL INCLUDE command"
@@ -269,7 +269,7 @@ msgstr "Syntaxfehler im Befehl EXEC SQL INCLUDE"
 msgid ""
 "internal error: unreachable state; please report this to <pgsql-"
 "bugs@postgresql.org>"
-msgstr ""
+msgstr "interner Fehler: unerreichbarer Zustand; bitte an <pgsql-bugs@postgresql.org> berichten"
 
 #: pgc.l:1297
 #, c-format
@@ -305,14 +305,15 @@ msgstr "Cursor »%s« existiert nicht"
 msgid "initializer not allowed in type definition"
 msgstr ""
 
-#: preproc.y:347
+#: preproc.y:347 preproc.y:10546
 #, c-format
 msgid "type \"%s\" is already defined"
 msgstr "Typ »%s« ist bereits definiert"
 
 #: preproc.y:370 variable.c:582
 msgid "multidimensional arrays for simple data types are not supported"
-msgstr "mehrdimensionale Arrays für einfache Datentypen werden nicht unterstützt"
+msgstr ""
+"mehrdimensionale Arrays für einfache Datentypen werden nicht unterstützt"
 
 #: preproc.y:1232
 msgid "AT option not allowed in CLOSE DATABASE statement"
@@ -373,14 +374,14 @@ msgid "constraint declared INITIALLY DEFERRED must be DEFERRABLE"
 msgstr ""
 "Constraint, der als INITIALLY DEFERRED deklariert wurde, muss DEFERRABLE sein"
 
-#: preproc.y:6495
+#: preproc.y:6495 preproc.y:10162
 #, c-format
 msgid "cursor \"%s\" is already defined"
 msgstr "Cursor »%s« ist bereits definiert"
 
 #: preproc.y:6848
 msgid "no longer supported LIMIT #,# syntax passed to server"
-msgstr ""
+msgstr "nicht mehr unterstützte Syntax LIMIT #,# wird an Server weitergereicht"
 
 #: preproc.y:7090
 msgid "subquery in FROM must have an alias"
@@ -395,8 +396,8 @@ msgid "NEW used in a query that is not in a rule"
 msgstr ""
 
 #: preproc.y:9890
-msgid "CREATE TABLE AS cannot specify INTO\n"
-msgstr ""
+msgid "CREATE TABLE AS cannot specify INTO"
+msgstr "CREATE TABLE AS kann INTO nicht verwenden"
 
 #: preproc.y:9937
 #, c-format
@@ -447,13 +448,8 @@ msgstr "unvollständige Anweisung"
 msgid "unrecognized token \"%s\""
 msgstr ""
 
-#: preproc.y:10162
-#, c-format
-msgid "cursor \"%s\" already defined"
-msgstr ""
-
 #: preproc.y:10365
-msgid "only numeric/decimal have precision/scale argument"
+msgid "only data types numeric and decimal have precision/scale argument"
 msgstr ""
 
 #: preproc.y:10377
@@ -464,18 +460,13 @@ msgstr ""
 msgid "too many levels in nested structure/union definition"
 msgstr ""
 
-#: preproc.y:10546
-#, c-format
-msgid "type \"%s\" already defined"
-msgstr ""
-
 #: preproc.y:10704
-msgid "pointer to varchar are not implemented"
-msgstr ""
+msgid "pointers to varchar are not implemented"
+msgstr "Zeiger auf varchar sind nicht implementiert"
 
 #: preproc.y:10868 preproc.y:10875 preproc.y:10882
 msgid "using unsupported DESCRIBE statement"
-msgstr ""
+msgstr "nicht unterstützter DESCRIBE-Befehl wird verwendet"
 
 #: preproc.y:11113
 msgid "initializer not allowed in EXEC SQL VAR command"
@@ -505,7 +496,7 @@ msgstr "unbekannter Variablentypcode %d"
 
 #: type.c:241
 msgid "indicator for array/pointer has to be array/pointer"
-msgstr ""
+msgstr "Indikator für Array/Zeiger muss Array/Zeiger sein"
 
 #: type.c:245
 msgid "nested arrays are not supported (except strings)"
@@ -513,11 +504,11 @@ msgstr ""
 
 #: type.c:278
 msgid "indicator for struct has to be a struct"
-msgstr ""
+msgstr "Indikator für struct muss ein struct sein"
 
 #: type.c:287 type.c:295 type.c:303
 msgid "indicator for simple data type has to be simple"
-msgstr ""
+msgstr "Indikator für einfachen Typ muss einfachen Typ haben"
 
 #: type.c:613
 #, c-format
@@ -542,7 +533,7 @@ msgstr "Variable »%s« ist kein Zeiger auf eine Struktur oder Union"
 #: variable.c:150
 #, c-format
 msgid "variable \"%s\" is neither a structure nor a union"
-msgstr ""
+msgstr "Variable »%s« ist keine Struktur oder Union"
 
 #: variable.c:160
 #, c-format
@@ -551,12 +542,12 @@ msgstr "Variable »%s« ist kein Array"
 
 #: variable.c:229 variable.c:251
 #, c-format
-msgid "variable %s is not declared"
-msgstr ""
+msgid "variable \"%s\" is not declared"
+msgstr "Variable »%s« ist nicht deklariert"
 
 #: variable.c:459
 msgid "indicator variable must have an integer type"
-msgstr ""
+msgstr "Indikatorvariable muss einen ganzzahligen Typ haben"
 
 #: variable.c:471
 #, c-format
