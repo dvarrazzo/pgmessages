@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PostgreSQL package.
 # Peter Eisentraut <peter_e@gmx.net>, 2009.
 #
-# $Id: ecpg.po,v 1.3 2009/01/29 22:15:37 petere Exp $
+# $Id: ecpg.po,v 1.4 2009/01/30 12:58:34 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-01-29 11:22+0000\n"
-"PO-Revision-Date: 2009-01-29 16:44+0200\n"
+"POT-Creation-Date: 2009-01-30 03:22+0000\n"
+"PO-Revision-Date: 2009-01-30 14:52+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "Deskriptor »%s« existiert nicht"
 #: descriptor.c:161 descriptor.c:210
 #, c-format
 msgid "descriptor header item \"%d\" does not exist"
-msgstr ""
+msgstr "Deskriptorkopfelement »%d« existiert nicht"
 
 #: descriptor.c:182
 msgid "nullable is always 1"
@@ -57,7 +57,7 @@ msgstr "Deskriptorelement »%s« kann nicht gesetzt werden"
 msgid ""
 "%s is the PostgreSQL embedded SQL preprocessor for C programs.\n"
 "\n"
-msgstr ""
+msgstr "%s ist der Embedded-SQL-Präprozessor von PostgreSQL für C-Programme.\n\n"
 
 #: ecpg.c:38
 #, c-format
@@ -66,6 +66,9 @@ msgid ""
 "  %s [OPTION]... FILE...\n"
 "\n"
 msgstr ""
+"Aufruf:\n"
+"  %s [OPTION]... DATEI...\n"
+"\n"
 
 #: ecpg.c:41
 #, c-format
@@ -78,6 +81,8 @@ msgid ""
 "  -c             automatically generate C code from embedded SQL code;\n"
 "                 this affects EXEC SQL TYPE\n"
 msgstr ""
+"  -c             automatisch C-Code aus eingebettetem SQL-Code erzeugen;\n"
+"                 betrifft EXEC SQL TYPE\n"
 
 #: ecpg.c:44
 #, c-format
@@ -85,11 +90,13 @@ msgid ""
 "  -C MODE        set compatibility mode; MODE can be one of\n"
 "                 \"INFORMIX\", \"INFORMIX_SE\"\n"
 msgstr ""
+"  -C MODUS       Kompatibilitätsmodus setzen; MODUS kann sein:\n"
+"                 »INFORMIX« oder »INFORMIX_SE«\n"
 
 #: ecpg.c:47
 #, c-format
 msgid "  -d             generate parser debug output\n"
-msgstr ""
+msgstr "  -d             Parser-Debug-Ausgabe erzeugen\n"
 
 #: ecpg.c:49
 #, c-format
@@ -100,49 +107,51 @@ msgstr "  -D SYMBOL      SYMBOL definieren\n"
 #, c-format
 msgid ""
 "  -h             parse a header file, this option includes option \"-c\"\n"
-msgstr ""
+msgstr "  -h             eine Headerdatei parsen, schließt Option »-c« ein\n"
 
 #: ecpg.c:51
 #, c-format
 msgid "  -i             parse system include files as well\n"
-msgstr ""
+msgstr "  -i             Systemheaderdateien ebenfalls parsen\n"
 
 #: ecpg.c:52
 #, c-format
 msgid "  -I DIRECTORY   search DIRECTORY for include files\n"
-msgstr ""
+msgstr "  -I VERZ        VERZ nach Include-Dateien durchsuchen\n"
 
 #: ecpg.c:53
 #, c-format
 msgid "  -o OUTFILE     write result to OUTFILE\n"
-msgstr ""
+msgstr "  -o DATEI       Ausgabe in DATEI schreiben\n"
 
 #: ecpg.c:54
 #, c-format
 msgid ""
 "  -r OPTION      specify run-time behavior; OPTION can be:\n"
-"                  \"no_indicator\", \"prepare\", \"questionmarks\"\n"
+"                 \"no_indicator\", \"prepare\", \"questionmarks\"\n"
 msgstr ""
+"  -r OPTION      Laufzeitverhalten bestimmen; OPTION kann sein:\n"
+"                 »no_indicator«, »prepare«, »questionmarks«\n"
 
 #: ecpg.c:56
 #, c-format
 msgid "  -t             turn on autocommit of transactions\n"
-msgstr ""
+msgstr "  -t             Autocommit von Transaktionen anschalten\n"
 
 #: ecpg.c:57
 #, c-format
 msgid "  --help         show this help, then exit\n"
-msgstr ""
+msgstr "  --help         diese Hilfe anzeigen, dann beenden\n"
 
 #: ecpg.c:58
 #, c-format
 msgid "  --regression   run in regression testing mode\n"
-msgstr ""
+msgstr "  --regression   Regressiontestmodus verwenden\n"
 
 #: ecpg.c:59
 #, c-format
 msgid "  --version      output version information, then exit\n"
-msgstr ""
+msgstr "  --version      Versionsinformationen anzeigen, dann beenden\n"
 
 #: ecpg.c:60
 #, c-format
@@ -151,6 +160,9 @@ msgid ""
 "If no output file is specified, the name is formed by adding .c to the\n"
 "input file name, after stripping off .pgc if present.\n"
 msgstr ""
+"\n"
+"Wenn keine Ausgabedatei angegeben ist, dann wird .c an den Namen der\n"
+"Eingabedatei angehängt und vorher .pgc, falls vorhanden, entfernt.\n"
 
 #: ecpg.c:62
 #, c-format
@@ -179,7 +191,7 @@ msgstr "%s: Unterstützung für Parserdebugging (-d) nicht verfügbar\n"
 #: ecpg.c:264
 #, c-format
 msgid "%s, the PostgreSQL embedded C preprocessor, version %d.%d.%d\n"
-msgstr ""
+msgstr "%s, der PostgreSQL-Embedded-C-Präprozessor, Version %d.%d.%d\n"
 
 #: ecpg.c:266
 #, c-format
@@ -276,7 +288,7 @@ msgstr ""
 #: pgc.l:1297
 #, c-format
 msgid "Error: include path \"%s/%s\" is too long on line %d, skipping\n"
-msgstr ""
+msgstr "Fehler: Include-Pfad »%s/%s« ist zu lang auf Zeile %d, wird übersprungen\n"
 
 #: pgc.l:1313
 #, c-format
@@ -305,7 +317,7 @@ msgstr "Cursor »%s« existiert nicht"
 
 #: preproc.y:340
 msgid "initializer not allowed in type definition"
-msgstr ""
+msgstr "Initialisierungswert nicht erlaubt in Typdefinition"
 
 #: preproc.y:347 preproc.y:10546
 #, c-format
@@ -410,7 +422,7 @@ msgstr "»@« erwartet, »%s« gefunden"
 msgid ""
 "only protocols \"tcp\" and \"unix\" and database type \"postgresql\" are "
 "supported"
-msgstr ""
+msgstr "er werden nur die Protokolle »tcp« und »unix« und der Datenbanktyp »postgresql« unterstützt"
 
 #: preproc.y:9952
 #, c-format
@@ -420,7 +432,7 @@ msgstr "»://« erwartet, »%s« gefunden"
 #: preproc.y:9957
 #, c-format
 msgid "Unix-domain sockets only work on \"localhost\" but not on \"%s\""
-msgstr ""
+msgstr "Unix-Domain-Sockets funktionieren nur mit »localhost«, aber nicht mit »%s«"
 
 #: preproc.y:9983
 #, c-format
@@ -472,7 +484,7 @@ msgstr "nicht unterstützter DESCRIBE-Befehl wird verwendet"
 
 #: preproc.y:11113
 msgid "initializer not allowed in EXEC SQL VAR command"
-msgstr ""
+msgstr "Initialisierungswert nicht erlaubt in Befehl EXEC SQL VAR"
 
 #: preproc.y:11145 preproc.y:11659
 msgid "no multidimensional array support for simple data types"
@@ -480,7 +492,7 @@ msgstr ""
 
 #: preproc.y:11628
 msgid "arrays of indicators are not allowed on input"
-msgstr ""
+msgstr "Array aus Indikatoren bei der Eingabe nicht erlaubt"
 
 #: preproc.y:11856
 #, c-format
@@ -520,7 +532,7 @@ msgstr "unbekannter Deskriptorelementcode %d"
 #: variable.c:89 variable.c:112
 #, c-format
 msgid "incorrectly formed variable \"%s\""
-msgstr ""
+msgstr "falsch geformte Variable »%s«"
 
 #: variable.c:135
 #, c-format
@@ -564,7 +576,7 @@ msgstr "mehrdimensionale Arrays werden nicht unterstützt"
 #, c-format
 msgid ""
 "multilevel pointers (more than 2 levels) are not supported; found %d levels"
-msgstr ""
+msgstr "Zeiger mit mehr als 2 Ebenen werden nicht unterstützt; %d Ebenen gefunden"
 
 #: variable.c:502
 msgid "pointer to pointer is not supported for this data type"
@@ -572,4 +584,4 @@ msgstr "Zeiger auf Zeiger wird für diesen Datentyp nicht unterstützt"
 
 #: variable.c:522
 msgid "multidimensional arrays for structures are not supported"
-msgstr ""
+msgstr "mehrdimensionale Arrays für Strukturen werden nicht unterstützt"
