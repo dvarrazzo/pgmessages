@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PostgreSQL package.
 # Peter Eisentraut <peter_e@gmx.net>, 2009.
 #
-# $Id: plpgsql.po,v 1.3 2009/02/18 20:57:14 petere Exp $
+# $Id: plpgsql.po,v 1.4 2009/02/23 10:35:00 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-02-18 17:23+0000\n"
-"PO-Revision-Date: 2009-02-18 22:55+0200\n"
+"POT-Creation-Date: 2009-02-23 01:23+0000\n"
+"PO-Revision-Date: 2009-02-23 12:32+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "PL/pgSQL-Funktionen können Typ %s nicht annehmen"
 #: pl_comp.c:501
 #, c-format
 msgid "could not determine actual return type for polymorphic function \"%s\""
-msgstr ""
+msgstr "konnte den tatsächlichen Rückgabetyp der polymorphischen Funktion »%s« nicht ermitteln"
 
 #: pl_comp.c:533
 msgid "trigger functions can only be called as triggers"
@@ -46,7 +46,9 @@ msgstr "Triggerfunktionen können keine deklarierten Argumente haben"
 msgid ""
 "The arguments of the trigger can be accessed through TG_NARGS and TG_ARGV "
 "instead."
-msgstr "Auf die Argumente des Triggers kann stattdessen über TG_NARGS und TG_ARGV zugegriffen werden."
+msgstr ""
+"Auf die Argumente des Triggers kann stattdessen über TG_NARGS und TG_ARGV "
+"zugegriffen werden."
 
 #: pl_comp.c:769
 #, c-format
@@ -101,11 +103,11 @@ msgstr "unbekannte Ausnahmebedingung »%s«"
 #, c-format
 msgid ""
 "could not determine actual argument type for polymorphic function \"%s\""
-msgstr ""
+msgstr "konnte den tatsächlichen Argumenttyp der polymorphischen Funktion »%s« nicht ermitteln"
 
 #: pl_exec.c:234 pl_exec.c:505
 msgid "during initialization of execution state"
-msgstr ""
+msgstr "während der Initialisierung des Ausführungszustandes"
 
 #: pl_exec.c:241 pl_exec.c:632
 msgid "while storing call arguments into local variables"
@@ -113,7 +115,7 @@ msgstr ""
 
 #: pl_exec.c:296 pl_exec.c:643
 msgid "during function entry"
-msgstr ""
+msgstr "während des Eintritts in die Funktion"
 
 #: pl_exec.c:327 pl_exec.c:674
 msgid "CONTINUE cannot be used outside a loop"
@@ -143,7 +145,7 @@ msgstr ""
 
 #: pl_exec.c:446 pl_exec.c:686
 msgid "during function exit"
-msgstr ""
+msgstr "während des Verlassens der Funktion"
 
 #: pl_exec.c:682
 msgid "control reached end of trigger procedure without RETURN"
@@ -151,7 +153,7 @@ msgstr ""
 
 #: pl_exec.c:691
 msgid "trigger procedure cannot return a set"
-msgstr ""
+msgstr "Triggerprozedur kann keine Ergebnismenge zurückgeben"
 
 #: pl_exec.c:709
 msgid ""
@@ -219,13 +221,12 @@ msgid "upper bound of FOR loop cannot be null"
 msgstr ""
 
 #: pl_exec.c:1706
-#, fuzzy
 msgid "BY value of FOR loop cannot be null"
-msgstr "aktueller Sitzungsbenutzer kann nicht umbenannt werden"
+msgstr "BY-Wert einer FOR-Schleife darf nicht NULL sein"
 
 #: pl_exec.c:1712
 msgid "BY value of FOR loop must be greater than zero"
-msgstr ""
+msgstr "BY-Wert einer FOR-Schleife muss größer als null sein"
 
 #: pl_exec.c:1884 pl_exec.c:3122
 #, c-format
@@ -242,7 +243,7 @@ msgstr "Cursor benötigt Argumente"
 
 #: pl_exec.c:2144 gram.y:2404
 msgid "cannot use RETURN NEXT in a non-SETOF function"
-msgstr ""
+msgstr "RETURN NEXT kann nur in einer Funktion mit SETOF-Rückgabetyp verwendet werden"
 
 #: pl_exec.c:2168 pl_exec.c:2228
 msgid "wrong result type supplied in RETURN NEXT"
@@ -267,24 +268,23 @@ msgstr "RETURN NEXT muss einen Parameter haben"
 
 #: pl_exec.c:2285 gram.y:2451
 msgid "cannot use RETURN QUERY in a non-SETOF function"
-msgstr ""
+msgstr "RETURN QUERY kann nur in einer Funktion mit SETOF-Rückgabetyp verwendet werden"
 
 #: pl_exec.c:2304
 msgid "structure of query does not match function result type"
-msgstr ""
+msgstr "Struktur der Anfrage stimmt nicht mit Rückgabetyp der Funktion überein"
 
 #: pl_exec.c:2421
 msgid "too few parameters specified for RAISE"
-msgstr ""
+msgstr "zu wenige Parameter für RAISE angegeben"
 
 #: pl_exec.c:2447
 msgid "too many parameters specified for RAISE"
-msgstr ""
+msgstr "zu viele Parameter für RAISE angegeben"
 
 #: pl_exec.c:2467
-#, fuzzy
 msgid "RAISE statement option cannot be null"
-msgstr "aktueller Sitzungsbenutzer kann nicht umbenannt werden"
+msgstr "Option einer RAISE-Anweisung darf nicht NULL sein"
 
 #: pl_exec.c:2477 pl_exec.c:2486 pl_exec.c:2494 pl_exec.c:2502
 #, c-format
@@ -298,19 +298,19 @@ msgstr "%s"
 
 #: pl_exec.c:2680 pl_exec.c:2986
 msgid "cannot COPY to/from client in PL/pgSQL"
-msgstr ""
+msgstr "COPY vom/zum Client funktioniert in PL/pgSQL nicht"
 
 #: pl_exec.c:2684 pl_exec.c:2990
 msgid "cannot begin/end transactions in PL/pgSQL"
-msgstr ""
+msgstr "Transaktionen können in PL/pgSQL nicht begonnen/beendet werden"
 
 #: pl_exec.c:2685 pl_exec.c:2991
 msgid "Use a BEGIN block with an EXCEPTION clause instead."
-msgstr ""
+msgstr "Verwenden Sie stattdessen einen BEGIN-Block mit einer EXCEPTION-Klausel."
 
 #: pl_exec.c:2836 pl_exec.c:3015
 msgid "INTO used with a command that cannot return data"
-msgstr ""
+msgstr "INTO mit einem Befehl verwendet, der keine Daten zurückgeben kann"
 
 #: pl_exec.c:2856 pl_exec.c:3035
 msgid "query returned no rows"
@@ -339,9 +339,9 @@ msgid "EXECUTE of SELECT ... INTO is not implemented"
 msgstr "EXECUTE von SELECT ... INTO ist nicht implementiert"
 
 #: pl_exec.c:3297 pl_exec.c:3393
-#, fuzzy, c-format
+#, c-format
 msgid "cursor variable \"%s\" is null"
-msgstr "Variable »%s« ist nicht deklariert"
+msgstr "Cursorvariable »%s« ist NULL"
 
 #: pl_exec.c:3304 pl_exec.c:3400
 #, c-format
@@ -350,12 +350,12 @@ msgstr "Cursor »%s« existiert nicht"
 
 #: pl_exec.c:3318
 msgid "relative or absolute cursor position is null"
-msgstr ""
+msgstr "relative oder absolute Cursorposition ist NULL"
 
 #: pl_exec.c:3460
 #, c-format
 msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
-msgstr ""
+msgstr "NULL-Wert kann der Variable »%s« nicht zugewiesen werden, weil sie als NOT NULL deklariert ist"
 
 #: pl_exec.c:3505
 msgid "cannot assign non-composite value to a row variable"
@@ -368,7 +368,7 @@ msgstr ""
 #: pl_exec.c:3619 pl_exec.c:3944
 #, c-format
 msgid "record \"%s\" has no field \"%s\""
-msgstr ""
+msgstr "Record »%s« hat kein Feld »%s«"
 
 #: pl_exec.c:3717
 #, c-format
@@ -426,20 +426,20 @@ msgstr ""
 #, c-format
 msgid ""
 "Number of returned columns (%d) does not match expected column count (%d)."
-msgstr ""
+msgstr "Die Anzahl der zurückgegebenen Spalten (%d) stimmt nicht mit der erwarteten Spaltenanzahl (%d) überein."
 
 #: pl_exec.c:5146
 #, c-format
-msgid "Returned type %s does not match expected type %s in column %s."
-msgstr ""
+msgid "Returned type %s does not match expected type %s in column \"%s\"."
+msgstr "Der zurückgegebene Typ %s stimmt nicht mit dem erwarteten Typ %s in Spalte »%s« überein."
 
 #: gram.y:359
 msgid "row or record variable cannot be CONSTANT"
-msgstr ""
+msgstr "Zeilen- oder Record-Variable kann nicht CONSTANT sein"
 
 #: gram.y:368
 msgid "row or record variable cannot be NOT NULL"
-msgstr ""
+msgstr "Zeilen- oder Record-Variable kann nicht NOT NULL sein"
 
 #: gram.y:377
 msgid "default value for row or record variable is not supported"
@@ -558,7 +558,7 @@ msgstr "FROM oder IN erwartet"
 msgid ""
 "RETURN cannot have a parameter in function returning set; use RETURN NEXT or "
 "RETURN QUERY"
-msgstr ""
+msgstr "RETURN kann keinen Parameter haben in einer Funktion mit Mengenergebnis; verwenden Sie RETURN NEXT oder RETURN QUERY"
 
 #: gram.y:2353
 msgid "RETURN cannot have a parameter in function with OUT parameters"
@@ -566,7 +566,8 @@ msgstr "RETURN kann keinen Parameter haben in einer Funktion mit OUT-Parametern"
 
 #: gram.y:2359
 msgid "RETURN cannot have a parameter in function returning void"
-msgstr "RETURN kann keinen Parameter haben in einer Funktion, die »void« zurückgibt"
+msgstr ""
+"RETURN kann keinen Parameter haben in einer Funktion, die »void« zurückgibt"
 
 #: gram.y:2378 gram.y:2382
 msgid "RETURN must specify a record or row variable in function returning row"
@@ -574,7 +575,8 @@ msgstr ""
 
 #: gram.y:2415
 msgid "RETURN NEXT cannot have a parameter in function with OUT parameters"
-msgstr "RETURN NEXT kann keinen Parameter haben in einer Funktion mit OUT-Parametern"
+msgstr ""
+"RETURN NEXT kann keinen Parameter haben in einer Funktion mit OUT-Parametern"
 
 #: gram.y:2431 gram.y:2435
 msgid ""
@@ -659,23 +661,23 @@ msgstr "qualifizierter Bezeichner kann hier nicht verwendet werden: %s"
 
 #: pl_funcs.c:471
 msgid "statement block"
-msgstr ""
+msgstr "Anweisungsblock"
 
 #: pl_funcs.c:473
 msgid "assignment"
-msgstr ""
+msgstr "Zuweisung"
 
 #: pl_funcs.c:483
 msgid "FOR with integer loop variable"
-msgstr ""
+msgstr "FOR mit ganzzahliger Schleifenvariable"
 
 #: pl_funcs.c:485
 msgid "FOR over SELECT rows"
-msgstr ""
+msgstr "FOR über SELECT-Zeilen"
 
 #: pl_funcs.c:487
 msgid "FOR over cursor"
-msgstr ""
+msgstr "FOR über Cursor"
 
 #: pl_funcs.c:499
 msgid "SQL statement"
@@ -687,7 +689,7 @@ msgstr "EXECUTE-Anweisung"
 
 #: pl_funcs.c:503
 msgid "FOR over EXECUTE statement"
-msgstr ""
+msgstr "FOR-über-EXECUTE-Anweisung"
 
 #: scan.l:232
 msgid "unterminated quoted identifier"
