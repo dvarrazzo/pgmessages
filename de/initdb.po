@@ -3,14 +3,14 @@
 #
 # Use these quotes: »%s«
 #
-# $Id: initdb.po,v 1.12 2009/01/16 09:47:10 petere Exp $
+# $Id: initdb.po,v 1.13 2009/03/02 09:41:27 petere Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-01-16 08:55+0000\n"
-"PO-Revision-Date: 2009-01-16 11:26+0200\n"
+"POT-Creation-Date: 2009-03-01 07:12+0000\n"
+"PO-Revision-Date: 2009-03-02 11:13+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: Peter Eisentraut <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -312,42 +312,57 @@ msgstr ""
 
 #: initdb.c:2423
 #, c-format
+msgid ""
+"  -A, --auth=METHOD         default authentication method for local "
+"connections\n"
+msgstr ""
+"  -A, --auth=METHODE        vorgegebene Authentifizierungsmethode für lokale "
+"Verbindungen\n"
+
+#: initdb.c:2424
+#, c-format
 msgid " [-D, --pgdata=]DATADIR     location for this database cluster\n"
 msgstr ""
 " [-D, --pgdata=]DATENVERZ   Datenverzeichnis für diesen Datenbankcluster\n"
 
-#: initdb.c:2424
+#: initdb.c:2425
 #, c-format
 msgid "  -E, --encoding=ENCODING   set default encoding for new databases\n"
 msgstr ""
 "  -E, --encoding=KODIERUNG  setze Standardkodierung für neue Datenbanken\n"
 
-#: initdb.c:2425
-#, c-format
-msgid "  --locale=LOCALE           set default locale for new databases\n"
-msgstr "  --locale=LOCALE           setze Standardlocale für neue Datenbanken\n"
-
 #: initdb.c:2426
 #, c-format
+msgid "      --locale=LOCALE       set default locale for new databases\n"
+msgstr "      --locale=LOCALE       setze Standardlocale für neue Datenbanken\n"
+
+#: initdb.c:2427
+#, c-format
 msgid ""
-"  --lc-collate, --lc-ctype, --lc-messages=LOCALE\n"
-"  --lc-monetary, --lc-numeric, --lc-time=LOCALE\n"
-"                            set default locale in the respective\n"
-"                            category for new databases (default\n"
-"                            taken from environment)\n"
+"      --lc-collate=, --lc-ctype=, --lc-messages=LOCALE\n"
+"      --lc-monetary=, --lc-numeric=, --lc-time=LOCALE\n"
+"                            set default locale in the respective category "
+"for\n"
+"                            new databases (default taken from environment)\n"
 msgstr ""
-"  --lc-collate, --lc-ctype, --lc-messages=LOCALE\n"
-"  --lc-monetary, --lc-numeric, --lc-time=LOCALE\n"
+"      --lc-collate=, --lc-ctype=, --lc-messages=LOCALE\n"
+"      --lc-monetary=, --lc-numeric=, --lc-time=LOCALE\n"
 "                            setze Standardlocale in der jeweiligen Kategorie\n"
 "                            für neue Datenbanken (Voreinstellung aus der\n"
 "                            Umgebung entnommen)\n"
 
 #: initdb.c:2431
 #, c-format
-msgid "  --no-locale               equivalent to --locale=C\n"
-msgstr "  --no-locale               entspricht --locale=C\n"
+msgid "      --no-locale           equivalent to --locale=C\n"
+msgstr "      --no-locale           entspricht --locale=C\n"
 
 #: initdb.c:2432
+#, c-format
+msgid ""
+"      --pwfile=FILE         read password for the new superuser from file\n"
+msgstr "      --pwfile=DATEI        lese Passwort des neuen Superusers aus Datei\n"
+
+#: initdb.c:2433
 #, c-format
 msgid ""
 "  -T, --text-search-config=CFG\n"
@@ -356,51 +371,24 @@ msgstr ""
 "  -T, --text-search-config=KFG\n"
 "                            Standardtextsuchekonfiguration\n"
 
-#: initdb.c:2434
-#, c-format
-msgid ""
-"  -X, --xlogdir=XLOGDIR     location for the transaction log directory\n"
-msgstr " -X, --xlogdir=XLOGVERZ     Verzeichnis für den Transaktionslog\n"
-
 #: initdb.c:2435
-#, c-format
-msgid ""
-"  -A, --auth=METHOD         default authentication method for local "
-"connections\n"
-msgstr ""
-"  -A, --auth=METHODE        vorgegebene Authentifizierungsmethode für lokale "
-"Verbindungen\n"
-
-#: initdb.c:2436
 #, c-format
 msgid "  -U, --username=NAME       database superuser name\n"
 msgstr "  -U, --username=NAME       Datenbank-Superusername\n"
 
-#: initdb.c:2437
+#: initdb.c:2436
 #, c-format
 msgid ""
 "  -W, --pwprompt            prompt for a password for the new superuser\n"
 msgstr "  -W, --pwprompt            frage nach Passwort für neuen Superuser\n"
 
-#: initdb.c:2438
+#: initdb.c:2437
 #, c-format
 msgid ""
-"  --pwfile=FILE             read password for the new superuser from file\n"
-msgstr ""
-"  --pwfile=DATEI            lese Passwort des neuen Superusers aus Datei\n"
+"  -X, --xlogdir=XLOGDIR     location for the transaction log directory\n"
+msgstr " -X, --xlogdir=XLOGVERZ     Verzeichnis für den Transaktionslog\n"
 
-#: initdb.c:2439
-#, c-format
-msgid "  -?, --help                show this help, then exit\n"
-msgstr "  -?, --help                diese Hilfe anzeigen, dann beenden\n"
-
-#: initdb.c:2440
-#, c-format
-msgid "  -V, --version             output version information, then exit\n"
-msgstr ""
-"  -V, --version             Versionsinformationen anzeigen, dann beenden\n"
-
-#: initdb.c:2441
+#: initdb.c:2438
 #, c-format
 msgid ""
 "\n"
@@ -409,25 +397,43 @@ msgstr ""
 "\n"
 "Weniger häufig verwendete Optionen:\n"
 
-#: initdb.c:2442
+#: initdb.c:2439
 #, c-format
 msgid "  -d, --debug               generate lots of debugging output\n"
 msgstr "  -d, --debug               erzeuge eine Menge Debug-Ausgaben\n"
 
-#: initdb.c:2443
-#, c-format
-msgid "  -s, --show                show internal settings\n"
-msgstr "  -s, --show                zeige interne Einstellungen\n"
-
-#: initdb.c:2444
+#: initdb.c:2440
 #, c-format
 msgid "  -L DIRECTORY              where to find the input files\n"
 msgstr "  -L VERZEICHNIS            wo sind die Eingabedateien zu finden\n"
 
-#: initdb.c:2445
+#: initdb.c:2441
 #, c-format
 msgid "  -n, --noclean             do not clean up after errors\n"
 msgstr "  -n, --noclean             nach Fehlern nicht aufräumen\n"
+
+#: initdb.c:2442
+#, c-format
+msgid "  -s, --show                show internal settings\n"
+msgstr "  -s, --show                zeige interne Einstellungen\n"
+
+#: initdb.c:2443
+#, c-format
+msgid ""
+"\n"
+"Other options:\n"
+msgstr "\nWeitere Optionen:\n"
+
+#: initdb.c:2444
+#, c-format
+msgid "  -?, --help                show this help, then exit\n"
+msgstr "  -?, --help                diese Hilfe anzeigen, dann beenden\n"
+
+#: initdb.c:2445
+#, c-format
+msgid "  -V, --version             output version information, then exit\n"
+msgstr ""
+"  -V, --version             Versionsinformationen anzeigen, dann beenden\n"
 
 #: initdb.c:2446
 #, c-format
