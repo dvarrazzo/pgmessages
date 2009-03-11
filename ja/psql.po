@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-06 22:20+0900\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
+"POT-Creation-Date: 2009-03-08 23:24+0900\n"
 "PO-Revision-Date: 2008-02-12 18:29+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
@@ -13,314 +13,358 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: command.c:120
+#: command.c:112
 #, c-format
 msgid "Invalid command \\%s. Try \\? for help.\n"
 msgstr "\\%s：不正なコマンドです。\\? でヘルプを参照してください。\n"
 
-#: command.c:122
+#: command.c:114
 #, c-format
 msgid "invalid command \\%s\n"
 msgstr "\\%s：不正なコマンドです。\n"
 
-#: command.c:133
+#: command.c:125
 #, c-format
 msgid "\\%s: extra argument \"%s\" ignored\n"
 msgstr "\\%s: 余分な引数 \"%s\" は無視されました。\n"
 
-#: command.c:275
+#: command.c:267
 #, c-format
 msgid "could not get home directory: %s\n"
 msgstr "ホームディレクトリ \"%s\" の位置を特定できません。\n"
 
-#: command.c:291
+#: command.c:283
 #, c-format
 msgid "\\%s: could not change directory to \"%s\": %s\n"
 msgstr "\\%s: ディレクトリを \"%s\" に変更できません：%s\n"
 
-#: command.c:325 common.c:921
+#: command.c:316 common.c:935
 #, c-format
 msgid "Time: %.3f ms\n"
 msgstr "時間: %.3f ms\n"
 
-#: command.c:449 command.c:949
+#: command.c:454 command.c:482 command.c:1021
 msgid "no query buffer\n"
 msgstr "クエリーバッファがありません。\n"
 
-#: command.c:512
+#: command.c:524
+msgid "No changes."
+msgstr "変更なし。"
+
+#: command.c:578
 #, c-format
 msgid "%s: invalid encoding name or conversion procedure not found\n"
 msgstr ""
 "%s: 正しいエンコーディング名でないか、または変換用プロシージャが見つかりませ"
 "ん。\n"
 
-#: command.c:580 command.c:614 command.c:628 command.c:645 command.c:749
-#: command.c:799 command.c:929 command.c:960
+#: command.c:646 command.c:680 command.c:694 command.c:711 command.c:815
+#: command.c:865 command.c:1001 command.c:1032
 #, c-format
 msgid "\\%s: missing required argument\n"
 msgstr "\\%s: 引数が不足しています。\n"
 
-#: command.c:677
+#: command.c:743
 msgid "Query buffer is empty."
 msgstr "クエリーバッファは空です。"
 
-#: command.c:687
+#: command.c:753
 msgid "Enter new password: "
 msgstr "新しいパスワード: "
 
-#: command.c:688
+#: command.c:754
 msgid "Enter it again: "
 msgstr "もう一度入力してください："
 
-#: command.c:692
+#: command.c:758
 #, c-format
 msgid "Passwords didn't match.\n"
 msgstr "パスワードがマッチしません。\n"
 
-#: command.c:710
+#: command.c:776
 #, c-format
 msgid "Password encryption failed.\n"
 msgstr "パスワードの暗号化に失敗しました。\n"
 
-#: command.c:778 command.c:879 command.c:934
+#: command.c:844 command.c:945 command.c:1006
 #, c-format
 msgid "\\%s: error\n"
 msgstr "\\%s: エラー\n"
 
-#: command.c:819
+#: command.c:885
 msgid "Query buffer reset (cleared)."
 msgstr "クエリーバッファがリセット（クリア）されました。"
 
-#: command.c:832
+#: command.c:898
 #, c-format
 msgid "Wrote history to file \"%s/%s\".\n"
 msgstr "ファイル \"%s/%s\" にヒストリを出力しました。\n"
 
-#: command.c:870 common.c:50 common.c:64 mainloop.c:67 print.c:56 print.c:70
-#: print.c:885
+#: command.c:936 common.c:52 common.c:66 input.c:198 mainloop.c:69
+#: mainloop.c:227 print.c:61 print.c:75
 #, c-format
 msgid "out of memory\n"
 msgstr "メモリ不足です\n"
 
-#: command.c:915
+#: command.c:986
 msgid "Timing is on."
 msgstr "タイミングは on です。"
 
-#: command.c:917
+#: command.c:988
 msgid "Timing is off."
 msgstr "タイミングは off です。"
 
-#: command.c:977 command.c:997 command.c:1395 command.c:1402 command.c:1411
-#: command.c:1421 command.c:1430 command.c:1444 command.c:1458 command.c:1491
-#: common.c:135 copy.c:509 copy.c:573
+#: command.c:1049 command.c:1069 command.c:1567 command.c:1574 command.c:1583
+#: command.c:1593 command.c:1602 command.c:1616 command.c:1633 command.c:1666
+#: common.c:137 copy.c:521 copy.c:585
 #, c-format
 msgid "%s: %s\n"
 msgstr "%s: %s\n"
 
-#: command.c:1079 startup.c:179
+#: command.c:1151 startup.c:164
 msgid "Password: "
 msgstr "パスワード: "
 
-#: command.c:1086 startup.c:182 startup.c:184
+#: command.c:1158 startup.c:167 startup.c:169
 #, c-format
 msgid "Password for user %s: "
 msgstr "ユーザ %s のパスワード: "
 
-#: command.c:1182 common.c:181 common.c:458 common.c:523 common.c:809
-#: common.c:834 common.c:907 copy.c:644 copy.c:689 copy.c:818
+#: command.c:1254 command.c:2096 common.c:183 common.c:460 common.c:525
+#: common.c:811 common.c:836 common.c:920 copy.c:656 copy.c:701 copy.c:830
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: command.c:1186
+#: command.c:1258
 msgid "Previous connection kept\n"
 msgstr "以前の接続は保持されています。\n"
 
-#: command.c:1190
+#: command.c:1262
 #, c-format
 msgid "\\connect: %s"
 msgstr "\\connect: %s"
 
-#: command.c:1213
+#: command.c:1286
 #, c-format
 msgid "You are now connected to database \"%s\""
 msgstr "データベース \"%s\" に接続しました。"
 
-#: command.c:1216
+#: command.c:1289
 #, c-format
 msgid " on host \"%s\""
 msgstr "ホスト：\"%s\""
 
-#: command.c:1219
+#: command.c:1292
 #, c-format
 msgid " at port \"%s\""
 msgstr "ポート：\"%s\""
 
-#: command.c:1222
+#: command.c:1295
 #, c-format
 msgid " as user \"%s\""
 msgstr "ユーザ名：\"%s\""
 
-#: command.c:1314
+#: command.c:1330
+msgid "%s (%s, server %s)\n"
+msgstr "%s (%s, サーバ %s)\n"
+
+#: command.c:1337
+#, c-format
+msgid ""
+"WARNING: %s version %d.%d, server version %d.%d.\n"
+"         Some psql features might not work.\n"
+msgstr ""
+"注意： %s バージョン %d.%d, サーババージョン %d.%d.\n"
+"         psql の機能の中で、動作しないものがあるかもしれません。\n"
+
+#: command.c:1367
+msgid "SSL connection (cipher: %s, bits: %i)\n"
+msgstr "SSL 接続 (暗号化方式: %s, ビット長: %i)\n"
+
+#: command.c:1376
+msgid "SSL connection (unknown cipher)\n"
+msgstr "SSL 接続 (未定義の暗号化方式)\n"
+
+#: command.c:1397
+msgid ""
+"WARNING: Console code page (%u) differs from Windows code page (%u)\n"
+"         8-bit characters might not work correctly. See psql reference\n"
+"         page \"Notes for Windows users\" for details.\n"
+msgstr ""
+"警告：コンソールのコードページ (%u) が Windows のコードページ (%u) と\n"
+"      異なるため、8 ビット文字列が正しく動作しない可能性があります。\n"
+"      詳細は psql リファレンスマニュアルの \"Notes for Windows users\"\n"
+"      （ウィンドウズユーザのために）を参照してください。\n"
+"\n"
+
+#: command.c:1486
 #, c-format
 msgid "could not start editor \"%s\"\n"
 msgstr "エディタ \"%s\" を起動できません。\n"
 
-#: command.c:1316
+#: command.c:1488
 msgid "could not start /bin/sh\n"
 msgstr "/bin/sh を起動できませんでした。\n"
 
-#: command.c:1353
+#: command.c:1525
 #, c-format
 msgid "cannot locate temporary directory: %s"
 msgstr "一時ディレクトリ \"%s\" が見つかりません。"
 
-#: command.c:1380
+#: command.c:1552
 #, c-format
 msgid "could not open temporary file \"%s\": %s\n"
 msgstr "一時ファイル \"%s\" を開けません: %s\n"
 
-#: command.c:1570
-msgid "\\pset: allowed formats are unaligned, aligned, html, latex, troff-ms\n"
+#: command.c:1750
+msgid ""
+"\\pset: allowed formats are unaligned, aligned, wrapped, html, latex, troff-"
+"ms\n"
 msgstr ""
-"\\pset: 有効なフォーマットは unaligned, aligned, html, latex, troff-ms で"
-"す。\n"
+"\\pset: 有効なフォーマットは unaligned, aligned, wrapped, html, latex, "
+"troff-ms です。\n"
 
-#: command.c:1575
+#: command.c:1755
 #, c-format
 msgid "Output format is %s.\n"
 msgstr "出力フォーマットは \"%s\" です。\n"
 
-#: command.c:1585
+#: command.c:1765
 #, c-format
 msgid "Border style is %d.\n"
 msgstr "境界線のスタイルは %d です。\n"
 
-#: command.c:1597
+#: command.c:1777
 #, c-format
 msgid "Expanded display is on.\n"
 msgstr "拡張表示は on です。\n"
 
-#: command.c:1598
+#: command.c:1778
 #, c-format
 msgid "Expanded display is off.\n"
 msgstr "拡張表示は off です。\n"
 
-#: command.c:1611
+#: command.c:1791
 msgid "Showing locale-adjusted numeric output."
 msgstr "ロケールで調整された数値出力を表示しています。"
 
-#: command.c:1613
+#: command.c:1793
 msgid "Locale-adjusted numeric output is off."
 msgstr "ロケールで調整された数値出力は off です。"
 
-#: command.c:1626
+#: command.c:1806
 #, c-format
 msgid "Null display is \"%s\".\n"
 msgstr "Null 表示は \"%s\" です。\n"
 
-#: command.c:1638
+#: command.c:1818
 #, c-format
 msgid "Field separator is \"%s\".\n"
 msgstr "フィールド区切り文字は \"%s\" です。\n"
 
-#: command.c:1652
+#: command.c:1832
 #, c-format
 msgid "Record separator is <newline>."
 msgstr "レコード区切り文字は <newline> です。"
 
-#: command.c:1654
+#: command.c:1834
 #, c-format
 msgid "Record separator is \"%s\".\n"
 msgstr "レコード区切り文字は \"%s\" です。\n"
 
-#: command.c:1668
+#: command.c:1848
 msgid "Showing only tuples."
 msgstr "タプルのみを表示しています。"
 
-#: command.c:1670
+#: command.c:1850
 msgid "Tuples only is off."
 msgstr "「タプルのみ表示」は off です。"
 
-#: command.c:1686
+#: command.c:1866
 #, c-format
 msgid "Title is \"%s\".\n"
 msgstr "タイトルは \"%s\" です。\n"
 
-#: command.c:1688
+#: command.c:1868
 #, c-format
 msgid "Title is unset.\n"
 msgstr "タイトルはセットされていません。\n"
 
-#: command.c:1704
+#: command.c:1884
 #, c-format
 msgid "Table attribute is \"%s\".\n"
 msgstr "テーブル属性は \"%s\" です。\n"
 
-#: command.c:1706
+#: command.c:1886
 #, c-format
 msgid "Table attributes unset.\n"
 msgstr "テーブル属性はセットされていません。\n"
 
-#: command.c:1727
+#: command.c:1907
 msgid "Pager is used for long output."
 msgstr "出力が長い場合はページャが使われます。"
 
-#: command.c:1729
+#: command.c:1909
 msgid "Pager is always used."
 msgstr "常にページャが使われます。"
 
-#: command.c:1731
+#: command.c:1911
 msgid "Pager usage is off."
 msgstr "「ページャを使う」は off です。"
 
-#: command.c:1745
+#: command.c:1925
 msgid "Default footer is on."
 msgstr "デフォルトのフッタは on です。"
 
-#: command.c:1747
+#: command.c:1927
 msgid "Default footer is off."
 msgstr "デフォルトのフッタは off です。"
 
-#: command.c:1753
+#: command.c:1938
+#, c-format
+msgid "Target width for \"wrapped\" format is %d.\n"
+msgstr "\"wrapped\" フォーマットの対象幅は %d です。\n"
+
+#: command.c:1943
 #, c-format
 msgid "\\pset: unknown option: %s\n"
 msgstr "\\pset: 未定義のオプション：%s\n"
 
-#: command.c:1808
+#: command.c:1997
 msgid "\\!: failed\n"
 msgstr "\\!: 失敗\n"
 
-#: common.c:43
+#: common.c:45
 #, c-format
 msgid "%s: pg_strdup: cannot duplicate null pointer (internal error)\n"
 msgstr "%s: pg_strdup: null ポインタを複製できません（内部エラー）。\n"
 
-#: common.c:88
+#: common.c:90
 msgid "out of memory"
 msgstr "メモリ不足です"
 
-#: common.c:341
+#: common.c:343
 msgid "connection to server was lost\n"
 msgstr "サーバへの接続が切れました。\n"
 
-#: common.c:345
+#: common.c:347
 msgid "The connection to the server was lost. Attempting reset: "
 msgstr "サーバへの接続が切れました。リセットしています: "
 
-#: common.c:350
+#: common.c:352
 msgid "Failed.\n"
 msgstr "失敗。\n"
 
-#: common.c:357
+#: common.c:359
 msgid "Succeeded.\n"
 msgstr "成功。\n"
 
-#: common.c:491 common.c:766
+#: common.c:493 common.c:768
 msgid "You are currently not connected to a database.\n"
 msgstr "現在データベースには接続していません。\n"
 
-#: common.c:497 common.c:504 common.c:792
+#: common.c:499 common.c:506 common.c:794
 #, c-format
 msgid ""
 "********* QUERY **********\n"
@@ -333,14 +377,14 @@ msgstr ""
 "*****************************\n"
 "\n"
 
-#: common.c:556
+#: common.c:558
 #, c-format
 msgid ""
 "Asynchronous notification \"%s\" received from server process with PID %d.\n"
 msgstr ""
 "PID %2$d を持つサーバプロセスから非同期通知 \"%1$s\" を受信しました。\n"
 
-#: common.c:774
+#: common.c:776
 #, c-format
 msgid ""
 "***(Single step mode: verify command)"
@@ -355,57 +399,57 @@ msgstr ""
 "***([Enter] を押して進むか、x [Enter] でキャンセル)*******\n"
 "*******************\n"
 
-#: common.c:825
+#: common.c:827
 #, c-format
 msgid ""
 "The server version (%d) does not support savepoints for ON_ERROR_ROLLBACK.\n"
 msgstr ""
-"このサーバのバージョン (%d) では ON_ERROR_ROLLBACK 用のセーブポイントをサポー"
-"トしていません。\n"
+"このサーバのバージョン (%d) では、ON_ERROR_ROLLBACK 用のセーブポイントを"
+"サポートしていません。\n"
 
 #: copy.c:124
 msgid "\\copy: arguments required\n"
 msgstr "\\copy: 引数がありません。\n"
 
-#: copy.c:391
+#: copy.c:403
 #, c-format
 msgid "\\copy: parse error at \"%s\"\n"
 msgstr "\\copy: \"%s\" でパースエラー発生\n"
 
-#: copy.c:393
+#: copy.c:405
 msgid "\\copy: parse error at end of line\n"
 msgstr "\\copy: 行末でパースエラー発生\n"
 
-#: copy.c:520
+#: copy.c:532
 #, c-format
 msgid "%s: cannot copy from/to a directory\n"
 msgstr "%s: ディレクトリから／ディレクトリへのコピーはできません。\n"
 
-#: copy.c:546
+#: copy.c:558
 #, c-format
 msgid "\\copy: %s"
 msgstr "\\copy: %s"
 
-#: copy.c:550 copy.c:564
+#: copy.c:562 copy.c:576
 #, c-format
 msgid "\\copy: unexpected response (%d)\n"
 msgstr "\\copy: 予期しない応答 (%d)\n"
 
-#: copy.c:619 copy.c:629
+#: copy.c:631 copy.c:641
 #, c-format
 msgid "could not write COPY data: %s\n"
 msgstr "コピーデータを書き込めません：%s\n"
 
-#: copy.c:636
+#: copy.c:648
 #, c-format
 msgid "COPY data transfer failed: %s"
 msgstr "COPY データの転送に失敗しました：%s"
 
-#: copy.c:684
+#: copy.c:696
 msgid "canceled by user"
 msgstr "ユーザによりキャンセルされました"
 
-#: copy.c:699
+#: copy.c:711
 msgid ""
 "Enter data to be copied followed by a newline.\n"
 "End with a backslash and a period on a line by itself."
@@ -413,7 +457,7 @@ msgstr ""
 "コピーするデータに続いて改行を入力します。\n"
 "バックスラッシュ(\\)とピリオドだけの行で終了します。"
 
-#: copy.c:811
+#: copy.c:823
 msgid "aborted because of read failure"
 msgstr "読み込みに失敗したため異常終了しました"
 
@@ -430,526 +474,502 @@ msgstr "オフ"
 msgid "could not get current user name: %s\n"
 msgstr "現在のユーザ名を取得できません: %s\n"
 
-#: help.c:87
-#, c-format
+#: help.c:86
 msgid ""
-"This is psql %s, the PostgreSQL interactive terminal.\n"
+"psql is the PostgreSQL interactive terminal.\n"
 "\n"
 msgstr ""
-"こちらは PostgreSQL の会話型ターミナル、psql %s です。\n"
+"psql は PostgreSQL の会話型ターミナルです。\n"
 "\n"
 
-#: help.c:89
-msgid "Usage:"
-msgstr "使用法:"
+#: help.c:87
+#, c-format
+msgid "Usage:\n"
+msgstr "使用方法:\n"
 
-#: help.c:90
-msgid "  psql [OPTIONS]... [DBNAME [USERNAME]]\n"
+#: help.c:88
+msgid ""
+"  psql [OPTIONS]... [DBNAME [USERNAME]]\n"
+"\n"
 msgstr "  psql [オプション]... [データベース名 [ユーザ名]]\n"
 
-#: help.c:92
-msgid "General options:"
-msgstr "一般的なオプション:"
+#: help.c:90
+msgid "General options:\n"
+msgstr "一般的なオプション：\n"
+
+#: help.c:95
+msgid ""
+"  -c, --command=COMMAND    run only single command (SQL or internal) and "
+"exit\n"
+msgstr ""
+"  -c, --command=コマンド   (SQLまたは内部の)単一コマンドを一つだけ"
+"実行して終了\n"
+
+#: help.c:96
+msgid ""
+"  -d, --dbnme=DBNAME       database name to connect to (default: \"%s\")\n"
+msgstr ""
+"  -d, --dbnme=DB名         接続するデータベース名を指定(デフォルト: \"%s\")\n"
 
 #: help.c:97
-#, c-format
-msgid ""
-"  -d DBNAME       specify database name to connect to (default: \"%s\")\n"
-msgstr "  -d DB名         接続するデータベース名を指定(デフォルト: \"%s\")\n"
+msgid "  -f, --file=FILENAME      execute commands from file, then exit\n"
+msgstr ""
+"  -f, --file=ファイル名   ファイルからコマンドを読み込んで実行後、終了\n"
 
 #: help.c:98
-msgid "  -c COMMAND      run only single command (SQL or internal) and exit"
-msgstr "  -c コマンド     (SQLまたは内部の)単一コマンドを一つだけ実行して終了"
+msgid "  -l, --list               list available databases, then exit\n"
+msgstr "  -l(エル), --list        使用可能なデータベース一覧を表示して終了\n"
 
 #: help.c:99
-msgid "  -f FILENAME     execute commands from file, then exit"
-msgstr "  -f ファイル名   ファイルからコマンドを読み込んで実行後、終了"
-
-#: help.c:100
-msgid "  -1 (\"one\")      execute command file as a single transaction"
-msgstr "  -1 (数字の1)    コマンドファイルを単一のトランザクションとして実行"
+msgid ""
+"  -v, --set=, --variable=NAME=VALUE\n"
+"                           set psql variable NAME to VALUE\n"
+msgstr ""
+"  -v, --set=, --variable=名前=値\n"
+"                           psql 変数 '名前' に '値' をセット\n"
 
 #: help.c:101
-msgid "  -l              list available databases, then exit"
-msgstr "  -l(エル)        使用可能なデータベース一覧を表示して終了"
+msgid "  -X, --no-psqlrc          do not read startup file (~/.psqlrc)\n"
+msgstr "  -X              初期化ファイル (~/.psqlrc) を読みこまない\n"
 
 #: help.c:102
-msgid "  -v NAME=VALUE   set psql variable NAME to VALUE"
-msgstr "  -v 名前=値      '名前' という psql 変数に '値' をセット"
-
-#: help.c:103
-msgid "  -X              do not read startup file (~/.psqlrc)"
-msgstr "  -X              初期化ファイル (~/.psqlrc) を読みこまない"
+msgid ""
+"  -1 (\"one\"), --single-transaction\n"
+"                           execute command file as a single transaction\n"
+msgstr ""
+"  -1(数字の１), --single-transaction\n"
+"                           単一のトランザクションとしてコマンドファイルを"
+"実行\n"
 
 #: help.c:104
-msgid "  --help          show this help, then exit"
-msgstr "  --help          このヘルプを表示して終了"
+#, c-format
+msgid "  --help                   show this help, then exit\n"
+msgstr "  --help                   ヘルプを表示し、終了します\n"
 
 #: help.c:105
-msgid "  --version       output version information, then exit"
-msgstr "  --version       バージョン情報を表示して終了"
+#, c-format
+msgid "  --version                output version information, then exit\n"
+msgstr "  --version                バージョン情報を表示し、終了します\n"
 
 #: help.c:107
 msgid ""
 "\n"
-"Input and output options:"
+"Input and output options:\n"
 msgstr ""
 "\n"
-"入出力オプション:"
+"入出力オプション：\n"
 
 #: help.c:108
-msgid "  -a              echo all input from script"
-msgstr "  -a              スクリプトからのすべての入力を表示"
+msgid "  -a, --echo-all           echo all input from script\n"
+msgstr "  -a, --echo-all           スクリプトからのすべての入力を表示\n"
 
 #: help.c:109
-msgid "  -e              echo commands sent to server"
-msgstr "  -e              サーバへ送信したコマンドを表示"
+msgid "  -e, --echo-queries       echo commands sent to server\n"
+msgstr "  -e, --echo-queries       サーバへ送信したコマンドを表示\n"
 
 #: help.c:110
-msgid "  -E              display queries that internal commands generate"
-msgstr "  -E              内部コマンドが生成したクエリーを表示"
+msgid ""
+"  -E, --echo-hidden        display queries that internal commands generate\n"
+msgstr ""
+"  -E, --echo-hidden        内部コマンドが生成したクエリーを表示\n"
 
 #: help.c:111
-msgid "  -q              run quietly (no messages, only query output)"
-msgstr "  -q              静かに実行(メッセージなしで、クエリー出力のみ)"
+msgid "  -L, --log-file=FILENAME  send session log to file\n"
+msgstr "  -L, --log-file=ファイル名 セッションログをファイルに吐き出す\n"
 
 #: help.c:112
-msgid "  -o FILENAME     send query results to file (or |pipe)"
-msgstr "  -o ファイル名   クエリーの結果をファイル(または |パイプ)に送る"
+msgid ""
+"  -n, --no-readline        disable enhanced command line editing (readline)\n"
+msgstr ""
+"  -n, --no-readline        拡張コマンドライン編集機能(readline)を無効にする\n"
 
 #: help.c:113
-msgid "  -n              disable enhanced command line editing (readline)"
-msgstr "  -n              拡張コマンドライン編集機能(readline)を無効にする"
+msgid "  -o, --output=FILENAME    send query results to file (or |pipe)\n"
+msgstr "  -o, --output=ファイル名  クエリーの結果をファイル"
+"(または |パイプ)に送る\n"
 
 #: help.c:114
-msgid "  -s              single-step mode (confirm each query)"
-msgstr "  -s              シングルステップモード(各クエリーごとに確認)"
+msgid ""
+"  -q, --quiet              run quietly (no messages, only query output)\n"
+msgstr ""
+"  -q, --quiet              静かに実行(メッセージなしで、クエリー出力のみ)\n"
 
 #: help.c:115
-msgid "  -S              single-line mode (end of line terminates SQL command)"
-msgstr "  -S              単一行モード(行末を SQL コマンドの終了とみなす)"
+msgid "  -s, --single-step        single-step mode (confirm each query)\n"
+msgstr ""
+"  -s, --single-step        シングルステップモード(各クエリーごとに確認)\n"
 
 #: help.c:116
-msgid "  -L FILENAME     send session log to file"
-msgstr "  -L ファイル名   セッションログをファイルに吐き出す"
+msgid ""
+"  -S, --single-line        single-line mode (end of line terminates SQL "
+"command)\n"
+msgstr ""
+"  -S, --single-line         単一行モード(行末を SQL コマンドの終了とみなす)\n"
 
 #: help.c:118
 msgid ""
 "\n"
-"Output format options:"
+"Output format options:\n"
 msgstr ""
 "\n"
-"出力フォーマットオプション:"
+"出力フォーマットオプション:\n"
 
 #: help.c:119
-msgid "  -A              unaligned table output mode (-P format=unaligned)"
-msgstr "  -A              桁揃えしないテーブル出力モード (-P format=unaligned)"
+msgid "  -A, --no-align           unaligned table output mode\n"
+msgstr "  -A, --no-align           桁揃えしないテーブル出力モード\n"
 
 #: help.c:120
-msgid "  -H              HTML table output mode (-P format=html)"
-msgstr "  -H              HTML テーブル出力モード (-P format=html)"
-
-#: help.c:121
-msgid "  -t              print rows only (-P tuples_only)"
-msgstr "  -t              行のみを表示 (-P tuples_only)"
-
-#: help.c:122
 msgid ""
-"  -T TEXT         set HTML table tag attributes (width, border) (-P "
-"tableattr=)"
+"  -F, --field-separator=STRING\n"
+"                           set field separator (default: \"%s\")\n"
 msgstr ""
-"  -T TEXT         HTMLテーブルのタグ属性をセット(幅, 境界線) (-P tableattr=)"
+"  -F, --field-separator=文字列  フィールド区切り文字を設定"
+"(デフォルト: \"%s\")\n"
 
 #: help.c:123
-msgid "  -x              turn on expanded table output (-P expanded)"
-msgstr "  -x              拡張テーブル出力を有効にする (-P expanded)"
+msgid "  -H, --html               HTML table output mode\n"
+msgstr "  -H, --html               HTML テーブル出力モード\n"
 
 #: help.c:124
-msgid "  -P VAR[=ARG]    set printing option VAR to ARG (see \\pset command)"
+msgid ""
+"  -P, --pset=VAR[=ARG]     set printing option VAR to ARG (see \\pset "
+"command)\n"
 msgstr ""
-"  -P 変数[=値]    表示オプション '変数' を '値' にセット (\\pset コマンドを参"
-"照)"
+"  -P, --pset=変数[=値]     表示オプション '変数' を '値' にセット"
+" (\\pset コマンドを参照)\n"
 
 #: help.c:125
-#, c-format
 msgid ""
-"  -F STRING       set field separator (default: \"%s\") (-P fieldsep=)\n"
+"  -R, --record-separator=STRING\n"
+"                           set record separator (default: newline)\n"
 msgstr ""
-"  -F 文字列       フィールド区切り文字を設定(デフォルト: \"%s\" (-P "
-"fieldsep=)\n"
+"  -R, --record-separator=文字列\n"
+"                           レコード区切り文字を設定(デフォルト：改行)\n"
 
 #: help.c:127
+msgid "  -t, --tuples-only        print rows only\n"
+msgstr "  -t, --tuples-only        行のみを表示\n"
+
+#: help.c:128
 msgid ""
-"  -R STRING       set record separator (default: newline) (-P recordsep=)"
+"  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, "
+"border)\n"
 msgstr ""
-"  -R 文字列       レコード区切り文字を設定(デフォルト：改行) (-P recordsep=)"
+"  -T, --table-attr=TEXT    HTMLテーブルのタグ属性をセット(width, border等)\n"
 
 #: help.c:129
+msgid "  -x, --expanded           turn on expanded table output\n"
+msgstr "  -x, --expanded           拡張テーブル出力を有効にする\n"
+
+#: help.c:131
 msgid ""
 "\n"
-"Connection options:"
+"Connection options:\n"
 msgstr ""
 "\n"
-"接続オプション:"
+"接続オプション:\n"
 
-#: help.c:132
-#, c-format
+#: help.c:134
 msgid ""
-"  -h HOSTNAME     database server host or socket directory (default: \"%s"
-"\")\n"
+"  -h, --host=HOSTNAME      database server host or socket directory "
+"(default: \"%s\")\n"
 msgstr ""
-"  -h ホスト名     データベースサーバのホストまたはソケットのディレクトリ(デ"
-"フォルト: \"%s\")\n"
+"  -h, --host=ホスト名      データベースサーバのホストまたはソケットの"
+"ディレクトリ(デフォルト: \"%s\")\n"
 
-#: help.c:133
+#: help.c:135
 msgid "local socket"
 msgstr "ローカルソケット"
 
-#: help.c:136
-#, c-format
-msgid "  -p PORT         database server port (default: \"%s\")\n"
+#: help.c:138
+msgid "  -p, --port=PORT          database server port (default: \"%s\")\n"
 msgstr ""
-"  -p ポート番号   データベースサーバのポート番号(デフォルト： \"%s\")\n"
+"  -p, --port=ポート番号    データベースサーバのポート番号"
+"(デフォルト： \"%s\")\n"
 
-#: help.c:142
-#, c-format
-msgid "  -U NAME         database user name (default: \"%s\")\n"
-msgstr "  -U 名前         データベースのユーザ名を指定(デフォルト: \"%s\")\n"
+#: help.c:144
+msgid "  -U, --username=USERNAME  database user name (default: \"%s\")\n"
+msgstr "  -U, --username=名前      データベースのユーザ名"
+"(デフォルト: \"%s\")\n"
 
-#: help.c:143
-msgid "  -W              force password prompt (should happen automatically)"
-msgstr "  -W                     パスワードプロンプトを強制表示します(自動的に表示されるはずです)"
+#: help.c:145
+msgid "  -w, --no-password        never prompt for password\n"
+msgstr "  -w, --no-password        パスワード入力を要求しない\n"
 
 #: help.c:146
 msgid ""
+"  -W, --password           force password prompt (should happen "
+"automatically)\n"
+msgstr ""
+"  -W, --password           パスワードプロンプトを強制表示する\n"
+"                           （自動的に表示されるはずです）\n"
+
+#: help.c:148
+msgid ""
 "\n"
-"For more information, type \"\\?\" (for internal commands) or \"\\help\"\n"
-"(for SQL commands) from within psql, or consult the psql section in\n"
-"the PostgreSQL documentation.\n"
+"For more information, type \"\\?\" (for internal commands) or \"\\help"
+"\" (for SQL\n"
+"commands) from within psql, or consult the psql section in the PostgreSQL\n"
+"documentation.\n"
 "\n"
-"Report bugs to <pgsql-bugs@postgresql.org>."
 msgstr ""
 "\n"
 "詳細は psql の中で \"\\?\" (内部コマンドの場合) または \"\\help\"\n"
 "(SQL コマンドの場合) をタイプするか、PostgreSQL ドキュメントの psql の\n"
 "セクションを参照のこと。\n"
 "\n"
-"バグレポートは <pgsql-bugs@postgresql.org> まで。"
 
-#: help.c:171
-#, c-format
+#: help.c:151
+msgid "Report bugs to <pgsql-bugs@postgresql.org>.\n"
+msgstr "不具合は<pgsql-bugs@postgresql.org>まで報告してください。\n"
+
+#: help.c:173
 msgid "General\n"
 msgstr "一般\n"
 
-#: help.c:172
-#, c-format
-msgid ""
-"  \\c[onnect] [DBNAME|- USER|- HOST|- PORT|-]\n"
-"                 connect to new database (currently \"%s\")\n"
-msgstr ""
-"  \\c[onnect] [DB名|- ユーザ名|- ホスト名|- ポート番号|-]\n"
-"                 新しいデータベースに接続する (現在は \"%s\")\n"
-
-#: help.c:175
-#, c-format
-msgid "  \\cd [DIR]      change the current working directory\n"
-msgstr "  \\cd [DIR]      カレントディレクトリを変更\n"
-
-#: help.c:176
-#, c-format
+#: help.c:174
 msgid "  \\copyright     show PostgreSQL usage and distribution terms\n"
 msgstr "  \\copyright     PostgreSQL の使い方と配布条件を表示\n"
 
-#: help.c:177
-#, c-format
-msgid ""
-"  \\encoding [ENCODING]\n"
-"                 show or set client encoding\n"
-msgstr ""
-"  \\encoding [エンコーディング]\n"
-"                 クライアントのエンコーディングを表示またはセット\n"
+#: help.c:175
+msgid "  \\g [FILE] or ; execute query (and send results to file or |pipe)\n"
+msgstr "  \\g [ファイル] または ;  クエリー実行"
+"（し、結果をファイルまたは |パイプ へ書き出す)\n"
 
-#: help.c:179
-#, c-format
+#: help.c:176
 msgid "  \\h [NAME]      help on syntax of SQL commands, * for all commands\n"
 msgstr "  \\h [名前]      SQL コマンドの書式のヘルプ、* で全コマンド\n"
 
-#: help.c:180
+#: help.c:177
 #, c-format
 msgid "  \\q             quit psql\n"
 msgstr "  \\q             psql を終了\n"
 
-#: help.c:181
-#, c-format
-msgid ""
-"  \\set [NAME [VALUE]]\n"
-"                 set internal variable, or list all if no parameters\n"
-msgstr ""
-"  \\set [名前 [値]]\n"
-"                 内部変数の値をセット。引数がない場合は一覧表示。\n"
-
-#: help.c:183
-#, c-format
-msgid "  \\timing        toggle timing of commands (currently %s)\n"
-msgstr "  \\timing        コマンドのタイミングを切り替え(現在 %s)\n"
-
-#: help.c:185
-#, c-format
-msgid "  \\unset NAME    unset (delete) internal variable\n"
-msgstr "  \\unset 名前    内部変数を削除\n"
-
-#: help.c:186
-#, c-format
-msgid ""
-"  \\prompt [TEXT] NAME\n"
-"                 prompt user to set internal variable\n"
-msgstr "  \\prompt [テキスト] 変数名    ユーザに内部変数をセットするよう促す\n"
-
-#: help.c:188
-#, c-format
-msgid "  \\! [COMMAND]   execute command in shell or start interactive shell\n"
-msgstr "  \\! [コマンド]  シェルでコマンドを実行もしくは会話型シェルを起動\n"
-
-#: help.c:191
+#: help.c:180
 #, c-format
 msgid "Query Buffer\n"
 msgstr "クエリーバッファ\n"
 
-#: help.c:192
+#: help.c:181
 #, c-format
 msgid ""
 "  \\e [FILE]      edit the query buffer (or file) with external editor\n"
 msgstr ""
 "  \\e [ファイル]  現在のクエリーバッファやファイルを外部エディタで編集\n"
 
-#: help.c:193
-#, c-format
-msgid ""
-"  \\g [FILE]      send query buffer to server (and results to file or |"
-"pipe)\n"
-msgstr ""
-"  \\g [ファイル]  クエリーをサーバに送信\n"
-"                （し、結果をファイルまたは |パイプ へ書き出す)\n"
-
-#: help.c:194
+#: help.c:182
 #, c-format
 msgid "  \\p             show the contents of the query buffer\n"
 msgstr "  \\p             クエリーバッファの内容を表示\n"
 
-#: help.c:195
+#: help.c:183
 #, c-format
 msgid "  \\r             reset (clear) the query buffer\n"
 msgstr "  \\r             クエリーバッファをリセット（クリア）\n"
 
-#: help.c:197
+#: help.c:185
 #, c-format
 msgid "  \\s [FILE]      display history or save it to file\n"
 msgstr "  \\s [ファイル]  ヒストリを表示またはファイルに保存\n"
 
-#: help.c:199
+#: help.c:187
 #, c-format
 msgid "  \\w FILE        write query buffer to file\n"
 msgstr "  \\w [ファイル]  クエリーバッファの内容をファイルに書き出す\n"
 
-#: help.c:202
+#: help.c:190
 #, c-format
 msgid "Input/Output\n"
 msgstr "入出力\n"
 
-#: help.c:203
+#: help.c:191
+#, c-format
+msgid ""
+"  \\copy ...      perform SQL COPY with data stream to the client host\n"
+msgstr ""
+"  \\copy ...      クライアントホストに対し、データストリームを使って\n"
+"                  SQL コピーを行う\n"
+
+#: help.c:192
 #, c-format
 msgid "  \\echo [STRING] write string to standard output\n"
 msgstr "  \\echo [文字列] 文字列を標準出力に書き出す\n"
 
-#: help.c:204
+#: help.c:193
 #, c-format
 msgid "  \\i FILE        execute commands from file\n"
 msgstr "  \\i ファイル    ファイルからコマンドを読み込んで実行\n"
 
-#: help.c:205
+#: help.c:194
 #, c-format
 msgid "  \\o [FILE]      send all query results to file or |pipe\n"
 msgstr ""
 "  \\o ファイル    すべてのクエリーの結果をファイルまたは |パイプ へ送る\n"
 
-#: help.c:206
-#, c-format
-msgid ""
-"  \\qecho [STRING]\n"
-"                 write string to query output stream (see \\o)\n"
+#: help.c:195
+msgid "  \\qecho [STRING] write string to query output stream (see \\o)\n"
 msgstr ""
 "  \\qecho [文字列]    文字列をクエリー出力ストリームに出力(\\o を参照)\n"
 
-#: help.c:210
+#: help.c:198
 #, c-format
 msgid "Informational\n"
 msgstr "情報\n"
 
-#: help.c:211
+#: help.c:199
 #, c-format
-msgid "  \\d [NAME]      describe table, index, sequence, or view\n"
-msgstr ""
-" \\d [名前]      テーブル、インデックス、シーケンス、またはビューの\n"
-"                説明を表示\n"
+msgid "  Modifiers: S = show system objects  + = Additional detail\n"
+msgstr "修飾子: S = システムオブジェクトを表示 + = 詳細情報\n"
+
+#: help.c:200
+msgid "  \\l[+]                 list all databases\n"
+msgstr "  \\l[+]                 データベースの一覧を表示\n"
+
+#: help.c:201
+msgid "  \\d[S+]                list tables, views, and sequences\n"
+msgstr "  \\d[S+]                テーブル、ビュー、シーケンスの一覧を表示\n"
+
+#: help.c:202
+msgid "  \\d[S+]   NAME         describe table, view, sequence, or index\n"
+msgstr "  \\d[S+]   名前         テーブル、ビュー、シーケンス、インデックス"
+"の説明を表示\n"
+
+#: help.c:203
+msgid "  \\da[S]   [PATTERN]    list aggregate functions\n"
+msgstr "  \\da[S]   [パターン]   集約関数一覧を表示\n"
+
+#: help.c:204
+msgid "  \\db[+]   [PATTERN]    list tablespaces\n"
+msgstr "  \\db[+]   [パターン]   テーブルスペース一覧を表示\n"
+
+#: help.c:205
+msgid "  \\dc[S]   [PATTERN]    list conversions\n"
+msgstr "  \\dc[S]   [パターン]   変換ルール一覧を表示\n"
+
+#: help.c:206
+msgid "  \\dC      [PATTERN]    list casts\n"
+msgstr "  \\dC      [パターン]   キャスト一覧を表示\n"
+
+#: help.c:207
+msgid "  \\dd[S]   [PATTERN]    show comments on objects\n"
+msgstr "  \\dd[S]   [パターン]   オブジェクトのコメントを表示\n"
+
+#: help.c:208
+msgid "  \\dD[S]   [PATTERN]    list domains\n"
+msgstr "  \\dD[S]   [パターン]   ドメイン一覧を表示\n"
+
+#: help.c:209
+msgid "  \\des[+]  [PATTERN]    list foreign servers\n"
+msgstr "  \\des[+]  [パターン]   他のサーバ一覧を表示\n"
+
+#: help.c:210
+msgid "  \\deu[+]  [PATTERN]    list user mappings\n"
+msgstr "  \\deu[+]  [パターン]   ユーザマッピングの一覧を表示\n"
+
+#: help.c:211
+msgid "  \\dew[+]  [PATTERN]    list foreign-data wrappers\n"
+msgstr "  \\dew[+]  [パターン]   外部データラッパーの一覧を表示\n"
 
 #: help.c:212
-#, c-format
-msgid ""
-"  \\d{t|i|s|v|S} [PATTERN] (add \"+\" for more detail)\n"
-"                 list tables/indexes/sequences/views/system tables\n"
-msgstr ""
-"  \\d{t|i|s|v|S} [パターン] (\"+\" をつければ詳細を表示)\n"
-"                 テーブル / インデックス / シーケンス / ビュー\n"
-"                 / システムテーブルの一覧を表示\n"
+msgid "  \\df[S+]  [PATTERN]    list functions\n"
+msgstr "  \\df[S+]  [パターン]   関数一覧を表示\n"
+
+#: help.c:213
+msgid "  \\dF[+]   [PATTERN]    list text search configurations\n"
+msgstr "  \\dF[+]   [パターン]   テキスト検索設定一覧を表示\n"
 
 #: help.c:214
-#, c-format
-msgid "  \\da [PATTERN]  list aggregate functions\n"
-msgstr "  \\da [パターン] 集約関数一覧を表示\n"
+msgid "  \\dFd[+]  [PATTERN]    list text search dictionaries\n"
+msgstr "  \\dFd[+]  [パターン]   テキスト検索用の辞書一覧を表示\n"
 
 #: help.c:215
-#, c-format
-msgid "  \\db [PATTERN]  list tablespaces (add \"+\" for more detail)\n"
-msgstr ""
-"  \\dT [パターン] テーブルスペース一覧を表示 (\"+\" をつければ詳細を表示)\n"
+msgid "  \\dFp[+]  [PATTERN]    list text search parsers\n"
+msgstr "  \\dFp[+]  [パターン]   テキスト検索用のパーサ一覧を表示\n"
 
 #: help.c:216
-#, c-format
-msgid "  \\dc [PATTERN]  list conversions\n"
-msgstr "  \\dc [パターン] 変換ルール一覧を表示\n"
+msgid "  \\dFt[+]  [PATTERN]    list text search templates\n"
+msgstr "  \\dFt[+]  [パターン]   テキスト検索用のテンプレート一覧を表示\n"
 
 #: help.c:217
-#, c-format
-msgid "  \\dC            list casts\n"
-msgstr "  \\dC             キャスト一覧を表示\n"
+msgid "  \\dg      [PATTERN]    list roles (groups)\n"
+msgstr "  \\dg      [パターン]   ロール（グループ）の一覧を表示\n"
 
 #: help.c:218
-#, c-format
-msgid "  \\dd [PATTERN]  show comment for object\n"
-msgstr "  \\dd [パターン] オブジェクトのコメントを表示\n"
+msgid "  \\di[S+]  [PATTERN]    list indexes\n"
+msgstr "  \\di[S+]  [パターン]   インデックスの一覧を表示\n"
 
 #: help.c:219
-#, c-format
-msgid "  \\dD [PATTERN]  list domains\n"
-msgstr "  \\dD [パターン] ドメイン一覧を表示\n"
+msgid "  \\dl                   list large objects, same as \\lo_list\n"
+msgstr "  \\dl             ラージオブジェクトの一覧を表示。\\lo_list と同じ。\n"
 
 #: help.c:220
-#, c-format
-msgid "  \\df [PATTERN]  list functions (add \"+\" for more detail)\n"
-msgstr "  \\df [パターン] 関数一覧を表示 (\"+\" をつければ詳細を表示)\n"
+msgid "  \\dn[+]   [PATTERN]    list schemas\n"
+msgstr "  \\dn[+]   [パターン]   スキーマの一覧を表示\n"
 
 #: help.c:221
-#, c-format
-msgid ""
-"  \\dF [PATTERN]  list text search configurations (add \"+\" for more "
-"detail)\n"
-msgstr ""
-"  \\df [パターン] テキスト検索設定一覧を表示 (\"+\" をつければ詳細を表示)\n"
+msgid "  \\do[S]   [PATTERN]    list operators\n"
+msgstr "  \\do[S]   [名前]       演算子の一覧を表示\n"
 
 #: help.c:222
-#, c-format
 msgid ""
-"  \\dFd [PATTERN] list text search dictionaries (add \"+\" for more detail)\n"
+"  \\dp      [PATTERN]    list table, view, and sequence access privileges\n"
 msgstr ""
-"  \\dFd [パターン] テキスト検索用の辞書一覧を表示 (\"+\" をつければ詳細を表"
-"示)\n"
+"  \\dp [パターン]       テーブル、ビュー、シーケンスのアクセス権一覧を表示\n"
 
 #: help.c:223
-#, c-format
-msgid "  \\dFt [PATTERN] list text search templates\n"
-msgstr "  \\dFt [パターン] テキスト検索用のテンプレート一覧を表示\n"
+msgid "   \\z      [PATTERN]    same as \\dp\n"
+msgstr "   \\z      [パターン]   \\dp と同じ\n"
 
 #: help.c:224
-#, c-format
-msgid ""
-"  \\dFp [PATTERN] list text search parsers (add \"+\" for more detail)\n"
-msgstr ""
-"  \\dFp [パターン] テキスト検索用のパーサ一覧を表示 (\"+\" をつければ詳細を表"
-"示)\n"
+msgid "  \\ds[S+]  [PATTERN]    list sequences\n"
+msgstr "  \\ds[S+]  [パターン]   シーケンスの一覧を表示\n"
 
 #: help.c:225
-#, c-format
-msgid "  \\dg [PATTERN]  list groups\n"
-msgstr "  \\dg [パターン] グループ一覧を表示\n"
+msgid "  \\dt[S+]  [PATTERN]    list tables\n"
+msgstr "  \\dt[S+]  [パターン]   テーブルの一覧を表示\n"
 
 #: help.c:226
-#, c-format
-msgid "  \\dn [PATTERN]  list schemas (add \"+\" for more detail)\n"
-msgstr "  \\dn [パターン] スキーマ一覧を表示 (\"+\" をつければ詳細を表示)\n"
+msgid "  \\dT[S+]  [PATTERN]    list data types\n"
+msgstr "  \\dT[S+]  [パターン]   データ型の一覧を表示\n"
 
 #: help.c:227
-#, c-format
-msgid "  \\do [NAME]     list operators\n"
-msgstr "  \\do [名前]     演算子一覧を表示\n"
+msgid "  \\du      [PATTERN]    list roles (users)\n"
+msgstr "  \\du      [パターン]   ロール（ユーザ）の一覧を表示\n"
 
 #: help.c:228
-#, c-format
-msgid "  \\dl            list large objects, same as \\lo_list\n"
-msgstr "  \\dl            ラージオブジェクト一覧を表示。\\lo_list と同じ。\n"
-
-#: help.c:229
-#, c-format
-msgid "  \\dp [PATTERN]  list table, view, and sequence access privileges\n"
-msgstr "  \\dp [パターン] テーブル、ビュー、シーケンスのアクセス権一覧を表示\n"
-
-#: help.c:230
-#, c-format
-msgid "  \\dT [PATTERN]  list data types (add \"+\" for more detail)\n"
-msgstr "  \\dT [パターン] データ型一覧を表示 (\"+\" をつければ詳細を表示)\n"
+msgid "  \\dv[S+]  [PATTERN]    list views\n"
+msgstr "  \\dv[S+]  [パターン]   ビューの一覧を表示\n"
 
 #: help.c:231
-#, c-format
-msgid "  \\du [PATTERN]  list users\n"
-msgstr "  \\du [パターン] ユーザ一覧を表示\n"
-
-#: help.c:232
-#, c-format
-msgid "  \\l             list all databases (add \"+\" for more detail)\n"
-msgstr ""
-"  \\l              データベース一覧を表示(\"+\" をつければ詳細を表示)\n"
-
-#: help.c:233
-#, c-format
-msgid ""
-"  \\z [PATTERN]   list table, view, and sequence access privileges (same as "
-"\\dp)\n"
-msgstr ""
-"  \\z [パターン]  テーブル、ビュー、シーケンスののアクセス権一覧を表示(\\dp "
-"と同じ)\n"
-
-#: help.c:236
 #, c-format
 msgid "Formatting\n"
 msgstr "書式設定\n"
 
-#: help.c:237
+#: help.c:232
 #, c-format
 msgid "  \\a             toggle between unaligned and aligned output mode\n"
 msgstr "  \\a             'unaligned' および 'aligned' 出力モードのトグル\n"
 
-#: help.c:238
+#: help.c:233
 #, c-format
 msgid "  \\C [STRING]    set table title, or unset if none\n"
 msgstr "  \\C タイトル    テーブルのタイトルをセット、指定がなければ解除\n"
 
-#: help.c:239
-#, c-format
+#: help.c:234
 msgid ""
 "  \\f [STRING]    show or set field separator for unaligned query output\n"
 msgstr ""
 "  \\f [文字列]    クエリー出力の際に桁揃えを行わない(unaligned)場合に\n"
 "                  使用するフィールド区切り文字を表示または指定\n"
 
-#: help.c:240
+#: help.c:235
 #, c-format
 msgid "  \\H             toggle HTML output mode (currently %s)\n"
 msgstr "  \\H             HTML の出力モードをトグル(現在: %s)\n"
 
-#: help.c:242
-#, c-format
+#: help.c:237
 msgid ""
-"  \\pset NAME [VALUE]\n"
-"                 set table output option\n"
+"  \\pset NAME [VALUE]  set table output option\n"
 "                 (NAME := {format|border|expanded|fieldsep|footer|null|\n"
 "                 numericlocale|recordsep|tuples_only|title|tableattr|"
 "pager})\n"
@@ -959,36 +979,85 @@ msgstr ""
 "                 numericlocale|recordsep|tuples_only|title|tableattr|"
 "pager})\n"
 
-#: help.c:246
-#, c-format
-msgid "  \\t             show only rows (currently %s)\n"
-msgstr "  \\t             行のみ表示する (現在 %s)\n"
+#: help.c:240
+msgid "  \\t [on|off]    show only rows (currently %s)\n"
+msgstr "  \\t [on|off]    行のみ表示する (現在 %s)\n"
 
-#: help.c:248
-#, c-format
+#: help.c:242
 msgid "  \\T [STRING]    set HTML <table> tag attributes, or unset if none\n"
 msgstr ""
 "  \\T [文字列]    HTML の <table> タグの属性をセット。引数がなければ解除。\n"
 
-#: help.c:249
-#, c-format
-msgid "  \\x             toggle expanded output (currently %s)\n"
-msgstr "  \\x             拡張出力のトグル(現在 %s)\n"
+#: help.c:243
+msgid "  \\x [on|off]    toggle expanded output (currently %s)\n"
+msgstr "  \\x [on|off]    拡張出力のトグル(現在 %s)\n"
 
-#: help.c:253
-#, c-format
-msgid "Copy, Large Object\n"
-msgstr "Copy, ラージオブジェクト\n"
+#: help.c:247
+msgid "Connection\n"
+msgstr "接続\n"
 
-#: help.c:254
+#: help.c:248
 #, c-format
 msgid ""
-"  \\copy ...      perform SQL COPY with data stream to the client host\n"
+"  \\c[onnect] [DBNAME|- USER|- HOST|- PORT|-]\n"
+"                 connect to new database (currently \"%s\")\n"
 msgstr ""
-"  \\copy ...      クライアントホストに対し、データストリームを使って\n"
-"                  SQL コピーを行う\n"
+"  \\c[onnect] [DB名|- ユーザ名|- ホスト名|- ポート番号|-]\n"
+"                 新しいデータベースに接続する (現在は \"%s\")\n"
+
+#: help.c:251
+msgid "  \\encoding [ENCODING]  show or set client encoding\n"
+msgstr ""
+"  \\encoding [エンコーディング]\n"
+"                 クライアントのエンコーディングを表示またはセット\n"
+
+#: help.c:252
+#, c-format
+msgid "  \\password [USERNAME]  securely change the password for a user\n"
+msgstr "  \\password [USERNAME]  ユーザのパスワードを安全に変更する\n"
 
 #: help.c:255
+#, c-format
+msgid "External\n"
+msgstr "外部\n"
+
+#: help.c:256
+msgid "  \\cd [DIR]         change the current working directory\n"
+msgstr "  \\cd [DIR]         カレントディレクトリを変更\n"
+
+#: help.c:257
+msgid "  \\timing [on|off]  toggle timing of commands (currently %s)\n"
+msgstr "  \\timing [on|off]  コマンドのタイミングを切り替え(現在 %s)\n"
+
+#: help.c:259
+msgid ""
+"  \\! [COMMAND]      execute command in shell or start interactive shell\n"
+msgstr "  \\! [コマンド]  シェルでコマンドを実行、もしくは会話型シェルを起動\n"
+
+#: help.c:262
+msgid "Variable\n"
+msgstr "変数\n"
+
+#: help.c:263
+msgid "  \\prompt [TEXT] NAME  prompt user to set internal variable\n"
+msgstr "  \\prompt [テキスト] 変数名    ユーザに内部変数をセットするよう促す\n"
+
+#: help.c:264
+msgid ""
+"  \\set [NAME [VALUE]]  set internal variable, or list all if no parameters\n"
+msgstr ""
+"  \\set [名前 [値]]\n"
+"                 内部変数の値をセット。引数がない場合は一覧表示。\n"
+
+#: help.c:265
+msgid "  \\unset NAME          unset (delete) internal variable\n"
+msgstr "  \\unset 名前          内部変数を削除\n"
+
+#: help.c:268
+msgid "Large Object\n"
+msgstr "ラージオブジェクト\n"
+
+#: help.c:269
 #, c-format
 msgid ""
 "  \\lo_export LOBOID FILE\n"
@@ -1001,11 +1070,11 @@ msgstr ""
 "  \\lo_list\n"
 "  \\lo_unlink LOBOID     ラージオブジェクトの操作\n"
 
-#: help.c:307
+#: help.c:321
 msgid "Available help:\n"
 msgstr "利用可能なヘルプ:\n"
 
-#: help.c:396
+#: help.c:410
 #, c-format
 msgid ""
 "Command:     %s\n"
@@ -1015,33 +1084,30 @@ msgid ""
 "\n"
 msgstr ""
 "コマンド:     %s\n"
-"説明: %s\n"
+"説明:         %s\n"
 "書式:\n"
 "%s\n"
 "\n"
 
-#: help.c:412
-#, c-format
+#: help.c:426
 msgid ""
 "No help available for \"%-.*s\".\n"
 "Try \\h with no arguments to see available help.\n"
 msgstr ""
-"'%-.*s' についてはヘルプ情報がありません。\n"
+"\"%-.*s\" についてはヘルプ情報がありません。\n"
 "引数なしで \\h とタイプすると、ヘルプの一覧が表示されます。\n"
 
 #: input.c:187
-#, c-format
 msgid "could not read from input file: %s\n"
 msgstr "入力ファイルから読み込めませんでした: %s\n"
 
-#: input.c:340
-#, c-format
+#: input.c:347
 msgid "could not save history to file \"%s\": %s\n"
 msgstr "ファイル \"%s\" にヒストリを保存できませんでした: %s\n"
 
-#: input.c:345
+#: input.c:352
 msgid "history is not supported by this installation\n"
-msgstr "このインストールではヒストリ機能をサポートしていません。\n"
+msgstr "この環境ではヒストリ機能をサポートしていません。\n"
 
 #: large_obj.c:66
 #, c-format
@@ -1060,13 +1126,13 @@ msgstr "%s: トランザクションの状態が不明です。\n"
 
 #: large_obj.c:286
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
-#: large_obj.c:287 describe.c:92 describe.c:147 describe.c:239 describe.c:315
-#: describe.c:379 describe.c:431 describe.c:546 describe.c:850 describe.c:1640
-#: describe.c:1721 describe.c:1979 describe.c:2034 describe.c:2170
-#: describe.c:2209 describe.c:2269 describe.c:2321 describe.c:2330
-#: describe.c:2382
+#: large_obj.c:287 describe.c:95 describe.c:157 describe.c:266 describe.c:354
+#: describe.c:428 describe.c:498 describe.c:621 describe.c:1093
+#: describe.c:1864 describe.c:1994 describe.c:2278 describe.c:2340
+#: describe.c:2476 describe.c:2515 describe.c:2582 describe.c:2641
+#: describe.c:2650 describe.c:2709
 msgid "Description"
 msgstr "説明"
 
@@ -1074,697 +1140,689 @@ msgstr "説明"
 msgid "Large objects"
 msgstr "ラージオブジェクト"
 
-#: mainloop.c:154
+#: mainloop.c:156
 #, c-format
 msgid "Use \"\\q\" to leave %s.\n"
 msgstr "\"\\q\" で %s を抜けます。\n"
 
-#: print.c:773
-#, c-format
-msgid "(No rows)\n"
-msgstr "(行がありません)\n"
-
-#: print.c:1808
-#, c-format
-msgid "Interrupted\n"
-msgstr "中断されました\n"
-
-#: print.c:1916
-#, c-format
-msgid "invalid output format (internal error): %d"
-msgstr "出力フォーマットが無効（内部エラー）：%d"
-
-#: print.c:1996
-#, c-format
-msgid "(1 row)"
-msgstr "(1 行)"
-
-#: print.c:1998
-#, c-format
-msgid "(%lu rows)"
-msgstr "(%lu 行)"
-
-#: startup.c:237
-#, c-format
-msgid "%s: could not open log file \"%s\": %s\n"
-msgstr "%s: ログファイル \"%s\" が開けません: %s\n"
-
-#: startup.c:318
-#, c-format
-msgid ""
-"Welcome to %s %s (server %s), the PostgreSQL interactive terminal.\n"
-"\n"
+#: mainloop.c:182
+msgid "You are using psql, the command-line interface to PostgreSQL."
 msgstr ""
-"PostgreSQL の会話型ターミナル、%s %s （サーバ %s）へようこそ\n"
-"\n"
+"これは psql : PostgreSQL へのコマンドライン・インターフェースです。"
 
-#: startup.c:322
-#, c-format
-msgid ""
-"Welcome to %s %s, the PostgreSQL interactive terminal.\n"
-"\n"
-msgstr ""
-"PostgreSQL の会話型ターミナル、%s %s へようこそ\n"
-"\n"
-
-#: startup.c:325
-#, c-format
+#: mainloop.c:183
 msgid ""
 "Type:  \\copyright for distribution terms\n"
 "       \\h for help with SQL commands\n"
 "       \\? for help with psql commands\n"
 "       \\g or terminate with semicolon to execute query\n"
 "       \\q to quit\n"
-"\n"
 msgstr ""
 "\\copyright とタイプすると、配布条件を表示します。\n"
 "\\h とタイプすると、SQL コマンドのヘルプを表示します。\n"
 "\\? とタイプすると、psql コマンドのヘルプを表示します。\n"
 "\\g と打つかセミコロンで閉じると、クエリーを実行します。\n"
 "\\q で終了します。\n"
-"\n"
 
-#: startup.c:332
-#, c-format
+#: print.c:973
+msgid "(No rows)\n"
+msgstr "(行がありません)\n"
+
+#: print.c:1960
+msgid "Interrupted\n"
+msgstr "中断されました\n"
+
+#: print.c:2027
+msgid "Cannot add header to table content: column count of %d exceeded.\n"
+msgstr "テーブルの内容に見出しを追加できませんでした："
+"カラム数 %d が制限を越えています。\n"
+
+#: print.c:2064
+msgid "Cannot add cell to table content: total cell count of %d exceeded.\n"
+msgstr "テーブルの内容にセルを追加できませんでした："
+"全セル数 %d が制限を越えています。\n"
+
+#: print.c:2263
+msgid "invalid fout format (internal error): %d"
+msgstr "出力フォーマットが無効（内部エラー）：%d"
+
+#: print.c:2352
+msgid "(1 row)"
+msgstr "(1 行)"
+
+#: print.c:2354
+msgid "(%lu rows)"
+msgstr "(%lu 行)"
+
+#: startup.c:222
+msgid "%s: could not open log file \"%s\": %s\n"
+msgstr "%s: ログファイル \"%s\" が開けません: %s\n"
+
+#: startup.c:284
 msgid ""
-"WARNING:  You are connected to a server with major version %d.%d,\n"
-"but your %s client is major version %d.%d.  Some backslash commands,\n"
-"such as \\d, might not work properly.\n"
+"Type \"help\" for help.\n"
 "\n"
 msgstr ""
-"警告: 現在接続中のサーバはメジャーバージョン %d.%d ですが、使用中の\n"
-"クライアント %s のメジャーバージョンは %d.%d です。\\d をはじめとする\n"
-"いくつかのバックスラッシュコマンドは正常に動作しない場合があります。\n"
+"\"help\" でヘルプを表示します.\n"
+"\n"
 
-#: startup.c:514
+#: startup.c:430
 #, c-format
 msgid "%s: could not set printing parameter \"%s\"\n"
 msgstr "%s: 表示用パラメータ \"%s\" をセットできませんでした\n"
 
-#: startup.c:553
+#: startup.c:469
 #, c-format
 msgid "%s: could not delete variable \"%s\"\n"
 msgstr "%s: 変数 \"%s\" を削除できませんでした\n"
 
-#: startup.c:563
+#: startup.c:479
 #, c-format
 msgid "%s: could not set variable \"%s\"\n"
 msgstr "%s: 変数 \"%s\" をセットできませんでした\n"
 
-#: startup.c:597 startup.c:603
+#: startup.c:516 startup.c:522
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
 msgstr "詳細は '%s --help' をごらんください\n"
 
-#: startup.c:620
+#: startup.c:539
 #, c-format
 msgid "%s: warning: extra command-line argument \"%s\" ignored\n"
 msgstr "%s: 警告：余分なコマンドラインオプション \"%s\" は無視されます\n"
 
-#: startup.c:685
+#: startup.c:604
 msgid "contains support for command-line editing"
 msgstr "コマンドライン編集機能のサポートが組み込まれています。"
 
-#: startup.c:708
-#, c-format
-msgid ""
-"SSL connection (cipher: %s, bits: %i)\n"
-"\n"
-msgstr ""
-"SSL 接続 (暗号方式: %s %i ビット)\n"
-"\n"
-
-#: startup.c:730
-#, c-format
-msgid ""
-"Warning: Console code page (%u) differs from Windows code page (%u)\n"
-"         8-bit characters might not work correctly. See psql reference\n"
-"         page \"Notes for Windows users\" for details.\n"
-"\n"
-msgstr ""
-"警告：コンソールのコードページ (%u) が Windows のコードページ (%u) と\n"
-"      異なるため、8 ビット文字列が正しく動作しない可能性があります。\n"
-"      詳細は psql リファレンスマニュアルの \"Notes for Windows users\"\n"
-"      （ウィンドウズユーザのために）を参照してください。\n"
-"\n"
-
-#: describe.c:88 describe.c:219 describe.c:300 describe.c:374 describe.c:481
-#: describe.c:543 describe.c:1707 describe.c:1820 describe.c:1871
-#: describe.c:2032 describe.c:2252 describe.c:2317 describe.c:2328
-#: describe.c:2380
+#: describe.c:68 describe.c:199 describe.c:326 describe.c:423 describe.c:543
+#: describe.c:618 describe.c:1972 describe.c:2086 describe.c:2140
+#: describe.c:2338 describe.c:2565 describe.c:2637 describe.c:2648
+#: describe.c:2707
 msgid "Schema"
 msgstr "スキーマ"
 
-#: describe.c:89 describe.c:138 describe.c:220 describe.c:301 describe.c:375
-#: describe.c:421 describe.c:482 describe.c:544 describe.c:1708
-#: describe.c:1821 describe.c:1872 describe.c:1971 describe.c:2033
-#: describe.c:2253 describe.c:2318 describe.c:2329 describe.c:2381
+#: describe.c:69 describe.c:144 describe.c:200 describe.c:327 describe.c:424
+#: describe.c:473 describe.c:544 describe.c:619 describe.c:1973
+#: describe.c:2087 describe.c:2141 describe.c:2269 describe.c:2339
+#: describe.c:2566 describe.c:2638 describe.c:2649 describe.c:2708
+#: describe.c:2898 describe.c:2957
 msgid "Name"
 msgstr "名前"
 
-#: describe.c:90 describe.c:221
+#: describe.c:70 describe.c:206 describe.c:241 describe.c:248
 msgid "Result data type"
 msgstr "結果のデータ型"
 
-#: describe.c:91 describe.c:222
+#: describe.c:84 describe.c:88 describe.c:207 describe.c:242 describe.c:249
 msgid "Argument data types"
 msgstr "引数のデータ型"
 
-#: describe.c:106
+#: describe.c:112
 msgid "List of aggregate functions"
 msgstr "集約関数一覧"
 
-#: describe.c:127
-#, c-format
-msgid "The server version (%d) does not support tablespaces.\n"
+#: describe.c:133
+msgid "The server (version %d.%d) does not support tablespaces.\n"
 msgstr ""
-"このサーバのバージョン (%d) はテーブルスペースをサポートしていません。\n"
+"このサーバのバージョン (%d.%d) はテーブルスペースをサポートしていません。\n"
 
-#: describe.c:139 describe.c:236 describe.c:422 describe.c:1711
-#: describe.c:1972
+#: describe.c:145 describe.c:263 describe.c:474 describe.c:1980
+#: describe.c:2270 describe.c:2899 describe.c:2958
 msgid "Owner"
 msgstr "所有者"
 
-#: describe.c:140
+#: describe.c:146
 msgid "Location"
 msgstr "場所"
 
-#: describe.c:146 describe.c:485 describe.c:1978
-msgid "Access privileges"
-msgstr "アクセス権"
-
-#: describe.c:164
+#: describe.c:174
 msgid "List of tablespaces"
 msgstr "テーブルスペース一覧"
 
-#: describe.c:235
+#: describe.c:262
 msgid "Volatility"
 msgstr "揮発性"
 
-#: describe.c:237
+#: describe.c:264
 msgid "Language"
 msgstr "言語"
 
-#: describe.c:238
+#: describe.c:265
 msgid "Source code"
 msgstr "ソースコード"
 
-#: describe.c:273
+#: describe.c:299
 msgid "List of functions"
 msgstr "関数一覧"
 
-#: describe.c:311
+#: describe.c:337
 msgid "Internal name"
 msgstr "内部名"
 
-#: describe.c:312
+#: describe.c:338 describe.c:490 describe.c:1990
 msgid "Size"
 msgstr "サイズ"
 
-#: describe.c:343
+#: describe.c:350
+msgid "Elements"
+msgstr "要素"
+
+#: describe.c:392
 msgid "List of data types"
 msgstr "データ型一覧"
 
-#: describe.c:376
+#: describe.c:425
 msgid "Left arg type"
 msgstr "左辺の型"
 
-#: describe.c:377
+#: describe.c:426
 msgid "Right arg type"
 msgstr "右辺の型"
 
-#: describe.c:378
+#: describe.c:427
 msgid "Result type"
 msgstr "結果の型"
 
-#: describe.c:393
+#: describe.c:445
 msgid "List of operators"
 msgstr "演算子一覧"
 
-#: describe.c:423
+#: describe.c:475
 msgid "Encoding"
 msgstr "エンコーディング"
 
-#: describe.c:428
+#: describe.c:480
+msgid "Collation"
+msgstr "照合順序"
+
+#: describe.c:481
+msgid "Ctype"
+msgstr "Ctype(変換演算子)"
+
+#: describe.c:494
 msgid "Tablespace"
 msgstr "テーブルスペース"
 
-#: describe.c:446
+#: describe.c:511
 msgid "List of databases"
 msgstr "データベース一覧"
 
-#: describe.c:483 describe.c:622 describe.c:1709
+#: describe.c:545 describe.c:713 describe.c:1974
 msgid "table"
 msgstr "テーブル"
 
-#: describe.c:483 describe.c:623 describe.c:1709
+#: describe.c:545 describe.c:714 describe.c:1975
 msgid "view"
 msgstr "ビュー"
 
-#: describe.c:483 describe.c:625 describe.c:1709
+#: describe.c:545 describe.c:716 describe.c:1977
 msgid "sequence"
 msgstr "シーケンス"
 
-#: describe.c:484 describe.c:837 describe.c:1710 describe.c:1822
+#: describe.c:546 describe.c:1078 describe.c:1979 describe.c:2088
+#: describe.c:2970
 msgid "Type"
 msgstr "型"
 
-#: describe.c:507
-#, c-format
-msgid "Access privileges for database \"%s\""
-msgstr "データベース \"%s\" のアクセス権"
+#: describe.c:557
+msgid "Column access privileges"
+msgstr "アクセス権限を剥奪する"
 
-#: describe.c:545
+#: describe.c:583 describe.c:3065 describe.c:3069
+msgid "Access privileges"
+msgstr "アクセス権"
+
+#: describe.c:620
 msgid "Object"
 msgstr "オブジェクト"
 
-#: describe.c:557
+#: describe.c:632
 msgid "aggregate"
 msgstr "集約関数"
 
-#: describe.c:576
+#: describe.c:655
 msgid "function"
 msgstr "関数"
 
-#: describe.c:590
+#: describe.c:673
 msgid "operator"
 msgstr "演算子"
 
-#: describe.c:604
+#: describe.c:691
 msgid "data type"
 msgstr "データ型"
 
-#: describe.c:624 describe.c:1709
+#: describe.c:715 describe.c:1976
 msgid "index"
 msgstr "インデックス"
 
-#: describe.c:641
+#: describe.c:735
 msgid "rule"
 msgstr "ルール"
 
-#: describe.c:657
+#: describe.c:755
 msgid "trigger"
 msgstr "トリガ"
 
-#: describe.c:675
+#: describe.c:776
 msgid "Object descriptions"
 msgstr "オブジェクトの説明"
 
-#: describe.c:725
+#: describe.c:828
 #, c-format
 msgid "Did not find any relation named \"%s\".\n"
 msgstr "\"%s\" という名前のリレーションが見つかりません。\n"
 
-#: describe.c:820
+#: describe.c:965
 #, c-format
 msgid "Did not find any relation with OID %s.\n"
 msgstr "OID %s を持つリレーションが見つかりません。\n"
 
-#: describe.c:836
-msgid "Column"
-msgstr "カラム"
-
-#: describe.c:844
-msgid "Modifiers"
-msgstr "修飾語"
-
-#: describe.c:952
+#: describe.c:1040
 #, c-format
 msgid "Table \"%s.%s\""
 msgstr "テーブル \"%s.%s\""
 
-#: describe.c:956
+#: describe.c:1044
 #, c-format
 msgid "View \"%s.%s\""
 msgstr "ビュー \"%s.%s\""
 
-#: describe.c:960
+#: describe.c:1048
 #, c-format
 msgid "Sequence \"%s.%s\""
 msgstr "シーケンス \"%s.%s\""
 
-#: describe.c:964
+#: describe.c:1052
 #, c-format
 msgid "Index \"%s.%s\""
 msgstr "インデックス \"%s.%s\""
 
-#: describe.c:969
+#: describe.c:1057
 #, c-format
 msgid "Special relation \"%s.%s\""
 msgstr "特殊なリレーション \"%s.%s\""
 
-#: describe.c:973
+#: describe.c:1061
 #, c-format
 msgid "TOAST table \"%s.%s\""
 msgstr "TOAST テーブル \"%s.%s\""
 
-#: describe.c:977
+#: describe.c:1065
 #, c-format
 msgid "Composite type \"%s.%s\""
 msgstr "複合型 \"%s.%s\""
 
-#: describe.c:981
-#, c-format
-msgid "?%c? \"%s.%s\""
-msgstr "?%c? \"%s.%s\""
+#: describe.c:1077
+msgid "Column"
+msgstr "カラム"
 
-#: describe.c:1020
+#: describe.c:1083
+msgid "Modifiers"
+msgstr "修飾語"
+
+#: describe.c:1088
+msgid "Value"
+msgstr "値"
+
+#: describe.c:1092
+msgid "Storage"
+msgstr "ストレージ"
+
+#: describe.c:1134
+msgid "not null"
+msgstr "not null"
+
+#. translator: default values of column definitions
+#: describe.c:1143
+msgid "default %s"
+msgstr "デフォルト %s"
+
+#: describe.c:1209
 msgid "primary key, "
 msgstr "プライマリキー, "
 
-#: describe.c:1022
+#: describe.c:1211
 msgid "unique, "
 msgstr "ユニーク, "
 
-#: describe.c:1028
-#, c-format
+#: describe.c:1217
 msgid "for table \"%s.%s\""
 msgstr "テーブル \"%s.%s\" 用"
 
-#: describe.c:1032
+#: describe.c:1221
 #, c-format
 msgid ", predicate (%s)"
 msgstr ", 述語 (%s)"
 
-#: describe.c:1035
+#: describe.c:1224
 msgid ", clustered"
-msgstr ", クラスタ化"
+msgstr ", クラスタ化済み"
 
-#: describe.c:1038
+#: describe.c:1227
 msgid ", invalid"
 msgstr ", 無効"
 
-#: describe.c:1075
-#, c-format
-msgid ""
-"View definition:\n"
-"%s"
-msgstr ""
-"ビューの定義:\n"
-"%s"
+#: describe.c:1241
+msgid "View definition:"
+msgstr "ビュー定義:"
 
-#: describe.c:1081 describe.c:1378
+#: describe.c:1258 describe.c:1511
 msgid "Rules:"
 msgstr "ルール:"
 
-#: describe.c:1253
+#: describe.c:1305
 msgid "Indexes:"
 msgstr "インデックス:"
 
-#: describe.c:1262
-#, c-format
-msgid "    \"%s\""
-msgstr "    \"%s\""
-
-#: describe.c:1309
+#: describe.c:1365
 msgid "Check constraints:"
 msgstr "CHECK 制約:"
 
-#: describe.c:1313 describe.c:1328
-#, c-format
-msgid "    \"%s\" %s"
-msgstr "    \"%s\" %s"
-
-#: describe.c:1324
+#: describe.c:1396
 msgid "Foreign-key constraints:"
 msgstr "外部キー制約:"
 
-#: describe.c:1381
+#: describe.c:1427
+msgid "Referenced by:"
+msgstr "参照元："
+
+#. translator: the first %s is a FK name, the following are
+#. * a table name and the FK definition
+#: describe.c:1432
+msgid "  \"%s\" IN %s %s"
+msgstr " %2$s %3$s の \"%1$s\""
+
+#: describe.c:1514
 msgid "Disabled rules:"
 msgstr "無効にされたルール："
 
-#: describe.c:1384
+#: describe.c:1517
 msgid "Rules firing always:"
 msgstr "常に無視されるルール"
 
-#: describe.c:1387
+#: describe.c:1520
 msgid "Rules firing on replica only:"
 msgstr "レプリカでのみ無視されるルール"
 
-#: describe.c:1455
+#: describe.c:1616
 msgid "Triggers:"
 msgstr "トリガ:"
 
-#: describe.c:1458
+#: describe.c:1619
 msgid "Disabled triggers:"
-msgstr "無効にしているトリガ："
+msgstr "無効にされたトリガ："
 
-#: describe.c:1461
+#: describe.c:1622
 msgid "Triggers firing always:"
 msgstr "常に無視されるトリガ"
 
-#: describe.c:1464
+#: describe.c:1625
 msgid "Triggers firing on replica only:"
 msgstr "レプリカでのみ無視されるトリガ"
 
-#: describe.c:1487
+#: describe.c:1658
 msgid "Inherits"
 msgstr "継承"
 
-#: describe.c:1501
+#: describe.c:1673
 msgid "Has OIDs"
 msgstr "OID を持つ"
 
-#: describe.c:1504 describe.c:1628 describe.c:1630 describe.c:1632
-#: describe.c:1875 describe.c:1936
+#: describe.c:1676 describe.c:2144 describe.c:2216
 msgid "yes"
 msgstr "yes"
 
-#: describe.c:1504 describe.c:1628 describe.c:1630 describe.c:1632
-#: describe.c:1875 describe.c:1936
+#: describe.c:1676 describe.c:2144 describe.c:2216
 msgid "no"
 msgstr "no"
 
-#: describe.c:1589
-#, c-format
+#: describe.c:1684 describe.c:2908 describe.c:2972 describe.c:3028
+msgid "Options"
+msgstr "オプション"
+
+#: describe.c:1769
 msgid "Tablespace: \"%s\""
 msgstr "テーブルスペース \"%s\""
 
-#: describe.c:1589
-#, c-format
-msgid "tablespace \"%s\""
+#. translator: before this string there's an index
+#. * description like '"foo_pkey" PRIMARY KEY, btree (a)'
+#: describe.c:1779
+msgid ", tablespace \"%s\""
 msgstr "テーブルスペース \"%s\""
 
-#: describe.c:1627
-msgid "Role name"
-msgstr "ロール名"
-
-#: describe.c:1629
-msgid "Superuser"
-msgstr "スーパーユーザ"
-
-#: describe.c:1631
-msgid "Create role"
-msgstr "ロールを作成できる"
-
-#: describe.c:1633
-msgid "Create DB"
-msgstr "DBを作成できる"
-
-#: describe.c:1634
-msgid "no limit"
-msgstr "無制限"
-
-#: describe.c:1635
-msgid "Connections"
-msgstr "接続"
-
-#: describe.c:1636
-msgid "Member of"
-msgstr "メンバー"
-
-#: describe.c:1655
+#: describe.c:1857
 msgid "List of roles"
 msgstr "ロール一覧"
 
-#: describe.c:1709
+#: describe.c:1859
+msgid "Role name"
+msgstr "ロール名"
+
+#: describe.c:1860
+msgid "Attributes"
+msgstr "属性"
+
+#: describe.c:1861
+msgid "Member of"
+msgstr "メンバー"
+
+#: describe.c:1872
+msgid "Superuser"
+msgstr "スーパーユーザ"
+
+#: describe.c:1875
+msgid "No inheritance"
+msgstr "継承なし"
+
+#: describe.c:1878
+msgid "Create role"
+msgstr "ロールを作成できる"
+
+#: describe.c:1881
+msgid "Create DB"
+msgstr "DBを作成できる"
+
+#: describe.c:1884
+msgid "Cannot login"
+msgstr "ログインできない"
+
+#: describe.c:1893
+msgid "No connections"
+msgstr "接続なし"
+
+#: describe.c:1895
+msgid "1 connection"
+msgstr "1 個の接続"
+
+#: describe.c:1897
+msgid "%d connections"
+msgstr "%d 個の接続"
+
+#: describe.c:1978
 msgid "special"
 msgstr "特殊"
 
-#: describe.c:1716
+#: describe.c:1985
 msgid "Table"
 msgstr "テーブル"
 
-#: describe.c:1773
-#, c-format
+#: describe.c:2038
 msgid "No matching relations found.\n"
 msgstr "マッチするリレーションが見つかりません\n"
 
-#: describe.c:1775
-#, c-format
+#: describe.c:2040
 msgid "No relations found.\n"
 msgstr "リレーションがありません。\n"
 
-#: describe.c:1780
+#: describe.c:2045
 msgid "List of relations"
 msgstr "リレーションの一覧"
 
-#: describe.c:1823
+#: describe.c:2089
 msgid "Modifier"
 msgstr "修飾語"
 
-#: describe.c:1824
+#: describe.c:2090
 msgid "Check"
 msgstr "チェック"
 
-#: describe.c:1838
+#: describe.c:2107
 msgid "List of domains"
 msgstr "ドメイン一覧"
 
-#: describe.c:1873
+#: describe.c:2142
 msgid "Source"
 msgstr "ソース"
 
-#: describe.c:1874
+#: describe.c:2143
 msgid "Destination"
 msgstr "宛先"
 
-#: describe.c:1876
+#: describe.c:2145
 msgid "Default?"
 msgstr "デフォルト？"
 
-#: describe.c:1890
+#: describe.c:2162
 msgid "List of conversions"
 msgstr "変換ルール一覧"
 
-#: describe.c:1933
+#: describe.c:2213
 msgid "Source type"
 msgstr "ソースの型"
 
-#: describe.c:1934
+#: describe.c:2214
 msgid "Target type"
 msgstr "ターゲットの型"
 
-#: describe.c:1935 describe.c:2169
+#: describe.c:2215 describe.c:2475
 msgid "Function"
 msgstr "関数"
 
-#: describe.c:1936
+#: describe.c:2216
 msgid "in assignment"
 msgstr "代入"
 
-#: describe.c:1937
+#: describe.c:2217
 msgid "Implicit?"
 msgstr "暗黙?"
 
-#: describe.c:1945
+#: describe.c:2243
 msgid "List of casts"
 msgstr "キャスト一覧"
 
-#: describe.c:1999
+#: describe.c:2298
 msgid "List of schemas"
 msgstr "スキーマ一覧"
 
-#: describe.c:2049
+#: describe.c:2321 describe.c:2554 describe.c:2622 describe.c:2690
+msgid "The server (version %d.%d) does not support full text search.\n"
+msgstr ""
+"このサーバのバージョン (%d.%d) はテーブルスペースをサポートしていません。\n"
+
+#: describe.c:2355
 msgid "List of text search parsers"
 msgstr "テキスト検索用パーサ一覧"
 
-#: describe.c:2092
+#: describe.c:2398
 #, c-format
 msgid "Did not find any text search parser named \"%s\".\n"
 msgstr "テキスト検索用パーサ \"%s\" が見つかりません。\n"
 
-#: describe.c:2167
+#: describe.c:2473
 msgid "Start parse"
 msgstr "パース起動"
 
-#: describe.c:2168
+#: describe.c:2474
 msgid "Method"
 msgstr "メソッド"
 
-#: describe.c:2172
+#: describe.c:2478
 msgid "Get next token"
 msgstr "次のトークンを取得"
 
-#: describe.c:2174
+#: describe.c:2480
 msgid "End parse"
 msgstr "パース終了"
 
-#: describe.c:2176
+#: describe.c:2482
 msgid "Get headline"
 msgstr "見出しの取得"
 
-#: describe.c:2178
+#: describe.c:2484
 msgid "Get token types"
 msgstr "トークンタイプの取得"
 
-#: describe.c:2188
-#, c-format
+#: describe.c:2494
 msgid "Text search parser \"%s.%s\""
 msgstr "テキスト検索用パーサ \"%s.%s\""
 
-#: describe.c:2190
-#, c-format
+#: describe.c:2496
 msgid "Text search parser \"%s\""
 msgstr "テキスト検索用パーサ \"%s\""
 
-#: describe.c:2208
+#: describe.c:2514
 msgid "Token name"
 msgstr "トークン名"
 
-#: describe.c:2219
-#, c-format
+#: describe.c:2525
 msgid "Token types for parser \"%s.%s\""
 msgstr "パーサ \"%s.%s\" のトークンタイプ"
 
-#: describe.c:2221
-#, c-format
+#: describe.c:2527
 msgid "Token types for parser \"%s\""
 msgstr "パーサ \"%s\" のトークンタイプ"
 
-#: describe.c:2263
+#: describe.c:2576
 msgid "Template"
 msgstr "テンプレート"
 
-#: describe.c:2264
+#: describe.c:2577
 msgid "Init options"
 msgstr "初期化オプション:"
 
-#: describe.c:2286
+#: describe.c:2599
 msgid "List of text search dictionaries"
 msgstr "テキスト検索用辞書の一覧"
 
-#: describe.c:2319
+#: describe.c:2639
 msgid "Init"
 msgstr "初期化"
 
-#: describe.c:2320
+#: describe.c:2640
 msgid "Lexize"
 msgstr "Lex 処理"
 
-#: describe.c:2347
+#: describe.c:2667
 msgid "List of text search templates"
 msgstr "テキスト検索用テンプレート一覧"
 
-#: describe.c:2397
+#: describe.c:2724
 msgid "List of text search configurations"
 msgstr "テキスト検索用設定一覧"
 
-#: describe.c:2441
-#, c-format
+#: describe.c:2768
 msgid "Did not find any text search configuration named \"%s\".\n"
 msgstr "テキスト検索用設定 \"%s\" が見つかりません。\n"
 
-#: describe.c:2507
+#: describe.c:2834
 msgid "Token"
 msgstr "トークン"
 
-#: describe.c:2508
+#: describe.c:2835
 msgid "Dictionaries"
 msgstr "辞書"
 
-#: describe.c:2519
-#, c-format
+#: describe.c:2846
 msgid "Text search configuration \"%s.%s\""
 msgstr "テキスト検索用設定 \"%s.%s\""
 
-#: describe.c:2522
-#, c-format
+#: describe.c:2849
 msgid "Text search configuration \"%s\""
 msgstr "テキスト検索用設定 \"%s\""
 
-#: describe.c:2526
-#, c-format
+#: describe.c:2853
 msgid ""
 "\n"
 "Parser: \"%s.%s\""
@@ -1772,8 +1830,7 @@ msgstr ""
 "\n"
 "パーサ： \"%s.%s\""
 
-#: describe.c:2529
-#, c-format
+#: describe.c:2856
 msgid ""
 "\n"
 "Parser: \"%s\""
@@ -1781,7 +1838,55 @@ msgstr ""
 "\n"
 "パーサ：\"%s\""
 
-#: sql_help.h:25 sql_help.h:469
+#: describe.c:2888
+msgid "The server (version %d.%d) does not support foreign-data wrappers.\n"
+msgstr ""
+"このサーバのバージョン (%d.%d) は外部データラッパーをサポートしていません。\n"
+
+#: describe.c:2900
+msgid "Validator"
+msgstr ""
+
+#: describe.c:2924
+msgid "List of foreign-data wrappers"
+msgstr "外部データラッパーの一覧"
+
+#: describe.c:2947
+msgid "The server (version %d.%d) does not support foreign-data servers.\n"
+msgstr ""
+"このサーバのバージョン (%d.%d) は外部データラッパーをサポートしていません。\n"
+
+#: describe.c:2959
+msgid "Foreign-data wrapper\n"
+msgstr "外部データラッパー\n"
+
+#: describe.c:2971
+msgid "Version"
+msgstr "バージョン"
+
+#: describe.c:2990
+msgid "List of foreign servers"
+msgstr "外部サーバ一覧"
+
+#: describe.c:3013
+msgid ""
+"The server (version %d.%d) does not support foreign-data user mappings.\n"
+msgstr ""
+"このサーバのバージョン (%d) は外部データラッパーをサポートしていません。\n"
+
+#: describe.c:3022
+msgid "Server"
+msgstr "サーバ"
+
+#: describe.c:3023
+msgid "Username"
+msgstr "ユーザ名"
+
+#: describe.c:3043
+msgid "List of user mappings"
+msgstr "ユーザマッピングの一覧"
+
+#: sql_help.h:25 sql_help.h:505
 msgid "abort the current transaction"
 msgstr "現在のトランザクションを中断する"
 
@@ -1831,6 +1936,8 @@ msgid ""
 "\n"
 "ALTER DATABASE name OWNER TO new_owner\n"
 "\n"
+"ALTER DATABASE name SET TABLESPACE new_tablespace\n"
+"\n"
 "ALTER DATABASE name SET configuration_parameter { TO | = } { value | "
 "DEFAULT }\n"
 "ALTER DATABASE name SET configuration_parameter FROM CURRENT\n"
@@ -1847,7 +1954,10 @@ msgstr ""
 "\n"
 "ALTER DATABASE データベース名 OWNER TO 新しい所有者\n"
 "\n"
-"ALTER DATABASE データベース名 SET 設定パラメータ { TO | = } { 値 | DEFAULT }\n"
+"ALTER DATABASE データベース名 SET TABLESPACE 新しいテーブルスペース名\n"
+"\n"
+"ALTER DATABASE データベース名 SET 設定パラメータ { TO | = } { 値 | "
+"DEFAULT }\n"
 "ALTER DATABASE name SET 設定パラメータ FROM CURRENT\n"
 "ALTER DATABASE データベース名 RESET 設定パラメータ\n"
 "ALTER DATABASE name RESET ALL"
@@ -1885,10 +1995,26 @@ msgstr ""
 "    SET SCHEMA 新しいスキーマ"
 
 #: sql_help.h:45
+msgid "change the definition of a foreign-data wrapper"
+msgstr "外部データラッパーの定義を変更する"
+
+#: sql_help.h:46
+msgid ""
+"ALTER FOREIGN DATA WRAPPER name\n"
+"    [ VALIDATOR valfunction | NO VALIDATOR ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ]) ]\n"
+"ALTER FOREIGN DATA WRAPPER name OWNER TO new_owner"
+msgstr ""
+"ALTER FOREIGN DATA WRAPPER 外部データラッパー名\n"
+"    [ VALIDATOR 検査関数 | NO VALIDATOR ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] オプション ['値'] [, ... ]) ]\n"
+"ALTER FOREIGN DATA WRAPPER 外部データラッパー名 OWNER TO 新しい所有者"
+
+#: sql_help.h:49
 msgid "change the definition of a function"
 msgstr "関数の定義を変更する"
 
-#: sql_help.h:46
+#: sql_help.h:50
 msgid ""
 "ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
 "    action [ ... ] [ RESTRICT ]\n"
@@ -1932,11 +2058,11 @@ msgstr ""
 "    RESET 設定パラメータ\n"
 "    RESET ALL"
 
-#: sql_help.h:49
+#: sql_help.h:53
 msgid "change role name or membership"
 msgstr "ロールの名前またはメンバーシップを変更する"
 
-#: sql_help.h:50
+#: sql_help.h:54
 msgid ""
 "ALTER GROUP groupname ADD USER username [, ... ]\n"
 "ALTER GROUP groupname DROP USER username [, ... ]\n"
@@ -1948,11 +2074,11 @@ msgstr ""
 "\n"
 "ALTER GROUP グループ名 RENAME TO 新しい名前"
 
-#: sql_help.h:53
+#: sql_help.h:57
 msgid "change the definition of an index"
 msgstr "インデックスの定義を変更する"
 
-#: sql_help.h:54
+#: sql_help.h:58
 msgid ""
 "ALTER INDEX name RENAME TO new_name\n"
 "ALTER INDEX name SET TABLESPACE tablespace_name\n"
@@ -1964,31 +2090,17 @@ msgstr ""
 "ALTER INDEX インデックス名 SET ( ストレージパラメータ = 値 [, ... ] )\n"
 "ALTER INDEX インデックス名 RESET ( ストレージパラメータ [, ... ] )"
 
-#: sql_help.h:57
+#: sql_help.h:61
 msgid "change the definition of a procedural language"
 msgstr "手続き言語の定義を変更する"
 
-#: sql_help.h:58
+#: sql_help.h:62
 msgid ""
 "ALTER [ PROCEDURAL ] LANGUAGE name RENAME TO newname\n"
 "ALTER [ PROCEDURAL ] LANGUAGE name OWNER TO new_owner"
 msgstr ""
 "ALTER [ PROCEDURAL ] LANGUAGE 言語名 RENAME TO 新しい名前\n"
 "ALTER [ PROCEDURAL ] LANGUAGE 言語名 OWNER TO 新しい所有者"
-
-#: sql_help.h:61
-msgid "change the definition of an operator class"
-msgstr "演算子クラスの定義を変更する"
-
-#: sql_help.h:62
-msgid ""
-"ALTER OPERATOR CLASS name USING index_method RENAME TO newname\n"
-"ALTER OPERATOR CLASS name USING index_method OWNER TO newowner"
-msgstr ""
-"ALTER OPERATOR CLASS 演算子クラス名 USING インデックスメソッド RENAME TO 新し"
-"い名前\n"
-"ALTER OPERATOR CLASS 演算子クラス名 USING インデックスメソッド OWNER TO 新し"
-"い所有者"
 
 #: sql_help.h:65
 msgid "change the definition of an operator"
@@ -2003,14 +2115,27 @@ msgstr ""
 "TO 新しい所有者"
 
 #: sql_help.h:69
-msgid "change the definition of an operator family"
-msgstr "演算子ファミリの定義を変更する"
+msgid "change the definition of an operator class"
+msgstr "演算子クラスの定義を変更する"
 
 #: sql_help.h:70
 msgid ""
+"ALTER OPERATOR CLASS name USING index_method RENAME TO newname\n"
+"ALTER OPERATOR CLASS name USING index_method OWNER TO newowner"
+msgstr ""
+"ALTER OPERATOR CLASS 演算子クラス名 USING インデックスメソッド RENAME TO 新し"
+"い名前\n"
+"ALTER OPERATOR CLASS 演算子クラス名 USING インデックスメソッド OWNER TO 新し"
+"い所有者"
+
+#: sql_help.h:73
+msgid "change the definition of an operator family"
+msgstr "演算子ファミリの定義を変更する"
+
+#: sql_help.h:74
+msgid ""
 "ALTER OPERATOR FAMILY name USING index_method ADD\n"
-"  {  OPERATOR strategy_number operator_name ( op_type, op_type ) "
-"[ RECHECK ]\n"
+"  {  OPERATOR strategy_number operator_name ( op_type, op_type )\n"
 "   | FUNCTION support_number [ ( op_type [ , op_type ] ) ] funcname "
 "( argument_type [, ...] )\n"
 "  } [, ... ]\n"
@@ -2021,12 +2146,25 @@ msgid ""
 "ALTER OPERATOR FAMILY name USING index_method RENAME TO newname\n"
 "ALTER OPERATOR FAMILY name USING index_method OWNER TO newowner"
 msgstr ""
+"ALTER OPERATOR FAMILY 演算子ファミリ名 USING インデックス種別 ADD\n"
+"  {  OPERATOR 計画番号 演算子名 ( オペランドの型, オペランドの型 )\n"
+"   | FUNCTION サポート番号 [ ( オペランドの型 [ , オペランドの型 ] ) ]\n"
+"   関数名 ( 引数のタイプ [, ...] )\n"
+"  } [, ... ]\n"
+"ALTER OPERATOR FAMILY 演算子ファミリ名 USING インデックス種別 DROP\n"
+"  {  OPERATOR 計画番号 ( オペランドの型 [ , オペランドの型 ] )\n"
+"   | FUNCTION サポート番号 ( オペランドの型 [ , オペランドの型 ] )\n"
+"  } [, ... ]\n"
+"ALTER OPERATOR FAMILY 演算子ファミリ名 USING インデックス種別 \n"
+"  RENAME TO 新しい名前\n"
+"ALTER OPERATOR FAMILY 演算子ファミリ名 USING インデックス種別 \n"
+"  OWNER TO 新しい所有者"
 
-#: sql_help.h:73 sql_help.h:117
+#: sql_help.h:77 sql_help.h:125
 msgid "change a database role"
 msgstr "データベースのロールを変更する"
 
-#: sql_help.h:74
+#: sql_help.h:78
 msgid ""
 "ALTER ROLE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2070,11 +2208,11 @@ msgstr ""
 "ALTER ROLE ロール名 RESET 設定パラメータ名\n"
 "ALTER ROLE ロール名 RESET ALL"
 
-#: sql_help.h:77
+#: sql_help.h:81
 msgid "change the definition of a schema"
 msgstr "スキーマの定義を変更する"
 
-#: sql_help.h:78
+#: sql_help.h:82
 msgid ""
 "ALTER SCHEMA name RENAME TO newname\n"
 "ALTER SCHEMA name OWNER TO newowner"
@@ -2082,31 +2220,51 @@ msgstr ""
 "ALTER SCHEMA スキーマ名 RENAME TO 新しい名前\n"
 "ALTER SCHEMA スキーマ名 OWNER TO 新しい所有者"
 
-#: sql_help.h:81
+#: sql_help.h:85
 msgid "change the definition of a sequence generator"
 msgstr "シーケンス生成器の定義を変更する"
 
-#: sql_help.h:82
+#: sql_help.h:86
 msgid ""
 "ALTER SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
-"    [ RESTART [ WITH ] start ] [ CACHE cache ] [ [ NO ] CYCLE ]\n"
+"    [ START [ WITH ] start ]\n"
+"    [ RESTART [ [ WITH ] restart ] ]\n"
+"    [ CACHE cache ] [ [ NO ] CYCLE ]\n"
 "    [ OWNED BY { table.column | NONE } ]\n"
+"ALTER SEQUENCE name OWNER TO new_owner\n"
 "ALTER SEQUENCE name RENAME TO new_name\n"
 "ALTER SEQUENCE name SET SCHEMA new_schema"
 msgstr ""
 "ALTER SEQUENCE シーケンス名 [ INCREMENT [ BY ] 増分 ]\n"
 "    [ MINVALUE 最小値 | NO MINVALUE ] [ MAXVALUE 最大値 | NO MAXVALUE ]\n"
-"    [ RESTART [ WITH ] 開始番号 ] [ CACHE キャッシュ ] [ [ NO ] "
-"CYCLE ]        [ OWNED BY { テーブル名.カラム名 | NONE } ]\n"
+"    [ START [ WITH ] 開始値 ]\n"
+"    [ RESTART [ WITH ] 再開値 ]\n"
+"    [ CACHE キャッシュ ] [ [ NO ] CYCLE ]\n"
+"    [ OWNED BY { テーブル名.カラム名 | NONE } ]\n"
+"ALTER SEQUENCE シーケンス名 OWNER TO 新しい所有者\n"
 "ALTER SEQUENCE シーケンス名 RENAME TO 新しい名前\n"
 "ALTER SEQUENCE シーケンス名 SET SCHEMA 新しいスキーマ名"
 
-#: sql_help.h:85
+#: sql_help.h:89
+msgid "change the definition of a foreign server"
+msgstr "外部サーバの定義を変更する"
+
+#: sql_help.h:90
+msgid ""
+"ALTER SERVER servername [ VERSION 'newversion' ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] ) ]\n"
+"ALTER SERVER servername OWNER TO new_owner"
+msgstr ""
+"ALTER SERVER 外部サーバ名 [ VERSION '新しいバージョン番号' ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] オプション ['値'] [, ... ] ) ]\n"
+"ALTER SERVER 外部サーバ名 OWNER TO 新しい所有者"
+
+#: sql_help.h:93
 msgid "change the definition of a table"
 msgstr "テーブルの定義を変更する"
 
-#: sql_help.h:86
+#: sql_help.h:94
 msgid ""
 "ALTER TABLE [ ONLY ] name [ * ]\n"
 "    action [, ... ]\n"
@@ -2121,7 +2279,7 @@ msgid ""
 "\n"
 "    ADD [ COLUMN ] column type [ column_constraint [ ... ] ]\n"
 "    DROP [ COLUMN ] column [ RESTRICT | CASCADE ]\n"
-"    ALTER [ COLUMN ] column TYPE type [ USING expression ]\n"
+"    ALTER [ COLUMN ] column [ SET DATA ] TYPE type [ USING expression ]\n"
 "    ALTER [ COLUMN ] column SET DEFAULT expression\n"
 "    ALTER [ COLUMN ] column DROP DEFAULT\n"
 "    ALTER [ COLUMN ] column { SET | DROP } NOT NULL\n"
@@ -2140,6 +2298,7 @@ msgid ""
 "    ENABLE ALWAYS RULE rewrite_rule_name\n"
 "    CLUSTER ON index_name\n"
 "    SET WITHOUT CLUSTER\n"
+"    SET WITH OIDS\n"
 "    SET WITHOUT OIDS\n"
 "    SET ( storage_parameter = value [, ... ] )\n"
 "    RESET ( storage_parameter [, ... ] )\n"
@@ -2180,6 +2339,7 @@ msgstr ""
 "    ENABLE ALWAYS RULE 書き換えルール名\n"
 "    CLUSTER ON インデックス名\n"
 "    SET WITHOUT CLUSTER\n"
+"    SET WITH OIDS\n"
 "    SET WITHOUT OIDS\n"
 "    SET ( 格納パラメータ = 値 [, ... ] )\n"
 "    RESET ( 格納パラメータ [, ... ] )\n"
@@ -2188,11 +2348,11 @@ msgstr ""
 "    OWNER TO 新しい所有者\n"
 "    SET TABLESPACE 新しいテーブルスペース名"
 
-#: sql_help.h:89
+#: sql_help.h:97
 msgid "change the definition of a tablespace"
 msgstr "テーブルスペースの定義を変更する"
 
-#: sql_help.h:90
+#: sql_help.h:98
 msgid ""
 "ALTER TABLESPACE name RENAME TO newname\n"
 "ALTER TABLESPACE name OWNER TO newowner"
@@ -2200,19 +2360,11 @@ msgstr ""
 "ALTER TABLESPACE テーブルスペース名 RENAME TO 新しい名前\n"
 "ALTER TABLESPACE テーブルスペース名 OWNER TO 新しい所有者"
 
-#: sql_help.h:93
-msgid "change the definition of a trigger"
-msgstr "トリガの定義を変更する"
-
-#: sql_help.h:94
-msgid "ALTER TRIGGER name ON table RENAME TO newname"
-msgstr "ALTER TRIGGER トリガ名 ON テーブル名 RENAME TO 新しい名前"
-
-#: sql_help.h:97
+#: sql_help.h:101
 msgid "change the definition of a text search configuration"
 msgstr "テキスト検索設定の定義を変更する"
 
-#: sql_help.h:98
+#: sql_help.h:102
 msgid ""
 "ALTER TEXT SEARCH CONFIGURATION name\n"
 "    ADD MAPPING FOR token_type [, ... ] WITH dictionary_name [, ... ]\n"
@@ -2242,11 +2394,11 @@ msgstr ""
 "ALTER TEXT SEARCH CONFIGURATION 設定名 RENAME TO 新しい名前\n"
 "ALTER TEXT SEARCH CONFIGURATION 設定名 OWNER TO 新しい所有者"
 
-#: sql_help.h:101
+#: sql_help.h:105
 msgid "change the definition of a text search dictionary"
 msgstr "テキスト検索辞書の定義を変更する"
 
-#: sql_help.h:102
+#: sql_help.h:106
 msgid ""
 "ALTER TEXT SEARCH DICTIONARY name (\n"
 "    option [ = value ] [, ... ]\n"
@@ -2260,35 +2412,45 @@ msgstr ""
 "ALTER TEXT SEARCH DICTIONARY 辞書名 RENAME TO 新しい名前\n"
 "ALTER TEXT SEARCH DICTIONARY 辞書名 OWNER TO 新しい所有者"
 
-#: sql_help.h:105
+#: sql_help.h:109
 msgid "change the definition of a text search parser"
 msgstr "テキスト検索パーサの定義を変更する"
 
-#: sql_help.h:106
+#: sql_help.h:110
 msgid "ALTER TEXT SEARCH PARSER name RENAME TO newname"
 msgstr "ALTER TEXT SEARCH PARSER パーサ名 RENAME TO 新しい名前"
 
-#: sql_help.h:109
+#: sql_help.h:113
 msgid "change the definition of a text search template"
 msgstr "テキスト検索テンプレートの定義を変更する"
 
-#: sql_help.h:110
+#: sql_help.h:114
 msgid "ALTER TEXT SEARCH TEMPLATE name RENAME TO newname"
 msgstr "ALTER TEXT SEARCH TEMPLATE テンプレート名 RENAME TO 新しい名前"
 
-#: sql_help.h:113
+#: sql_help.h:117
+msgid "change the definition of a trigger"
+msgstr "トリガの定義を変更する"
+
+#: sql_help.h:118
+msgid "ALTER TRIGGER name ON table RENAME TO newname"
+msgstr "ALTER TRIGGER トリガ名 ON テーブル名 RENAME TO 新しい名前"
+
+#: sql_help.h:121
 msgid "change the definition of a type"
 msgstr "型の定義を変更する"
 
-#: sql_help.h:114
+#: sql_help.h:122
 msgid ""
+"ALTER TYPE name RENAME TO new_name\n"
 "ALTER TYPE name OWNER TO new_owner \n"
 "ALTER TYPE name SET SCHEMA new_schema"
 msgstr ""
+"ALTER TYPE 型名 RENAME TO 新しい名前\n"
 "ALTER TYPE 型名 OWNER TO 新しい所有者\n"
 "ALTER TYPE 型名 SET SCHEMA 新しいスキーマ"
 
-#: sql_help.h:118
+#: sql_help.h:126
 msgid ""
 "ALTER USER name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2315,12 +2477,12 @@ msgstr ""
 "\n"
 "オプションは以下の通り:\n"
 "\n"
-"      SUPERUSER | NOSUPERUSER\n"
-"    | CREATEDB | NOCREATEDB\n"
+"      SUPERUSER  | NOSUPERUSER\n"
+"    | CREATEDB   | NOCREATEDB\n"
 "    | CREATEROLE | NOCREATEROLE\n"
 "    | CREATEUSER | NOCREATEUSER \n"
-"    | INHERIT | NOINHERIT\n"
-"    | LOGIN | NOLOGIN\n"
+"    | INHERIT    | NOINHERIT\n"
+"    | LOGIN      | NOLOGIN\n"
 "    | CONNECTION LIMIT 最大接続数\n"
 "    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'パスワード文字列' \n"
 "    | VALID UNTIL 'タイプスタンプ'\n"
@@ -2332,27 +2494,51 @@ msgstr ""
 "ALTER USER ユーザ名 RESET 設定パラメータ名\n"
 "ALTER USER ユーザ名 RESET ALL"
 
-#: sql_help.h:121
+#: sql_help.h:129
+msgid "change the definition of a user mapping"
+msgstr "ユーザマッピングの定義を変更する"
+
+#: sql_help.h:130
+msgid ""
+"ALTER USER MAPPING FOR { username | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER servername\n"
+"    OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] )"
+msgstr ""
+"ALTER USER MAPPING FOR { ユーザ名 | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER サーバ名\n"
+"    OPTIONS ( [ ADD | SET | DROP ] オプション ['値'] [, ... ] )"
+
+#: sql_help.h:133
 msgid "change the definition of a view"
 msgstr "ビューの定義を変更する"
 
-#: sql_help.h:122
-msgid "ALTER VIEW name RENAME TO newname"
-msgstr "ALTER VIEW ビュー名 RENAME TO 新しい名前"
+#: sql_help.h:134
+msgid ""
+"ALTER VIEW name ALTER [ COLUMN ] column SET DEFAULT expression\n"
+"ALTER VIEW name ALTER [ COLUMN ] column DROP DEFAULT\n"
+"ALTER VIEW name OWNER TO new_owner\n"
+"ALTER VIEW name RENAME TO new_name\n"
+"ALTER VIEW name SET SCHEMA new_schema"
+msgstr ""
+"ALTER VIEW ビュー名 ALTER [ COLUMN ] カラム名 SET DEFAULT 評価式\n"
+"ALTER VIEW ビュー名 ALTER [ COLUMN ] カラム名 DROP DEFAULT\n"
+"ALTER VIEW ビュー名 OWNER TO 新しい所有者\n"
+"ALTER VIEW ビュー名 RENAME TO 新しい名前\n"
+"ALTER VIEW ビュー名 SET SCHEMA 新しいスキーマ"
 
-#: sql_help.h:125
+#: sql_help.h:137
 msgid "collect statistics about a database"
 msgstr "データベースの統計情報を収集する"
 
-#: sql_help.h:126
+#: sql_help.h:138
 msgid "ANALYZE [ VERBOSE ] [ table [ ( column [, ...] ) ] ]"
 msgstr "ANALYZE [ VERBOSE ] [ テーブル名 [ (カラム名 [, ...] ) ] ]"
 
-#: sql_help.h:129 sql_help.h:517
+#: sql_help.h:141 sql_help.h:553
 msgid "start a transaction block"
 msgstr "トランザクションブロックを開始する"
 
-#: sql_help.h:130
+#: sql_help.h:142
 msgid ""
 "BEGIN [ WORK | TRANSACTION ] [ transaction_mode [, ...] ]\n"
 "\n"
@@ -2370,39 +2556,39 @@ msgstr ""
 "    { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }\n"
 "    READ WRITE | READ ONLY"
 
-#: sql_help.h:133
+#: sql_help.h:145
 msgid "force a transaction log checkpoint"
 msgstr "トランザクションログのチェックポイントを強制設定する"
 
-#: sql_help.h:134
+#: sql_help.h:146
 msgid "CHECKPOINT"
 msgstr "チェックポイント"
 
-#: sql_help.h:137
+#: sql_help.h:149
 msgid "close a cursor"
 msgstr "カーソルを閉じる"
 
-#: sql_help.h:138
+#: sql_help.h:150
 msgid "CLOSE { name | ALL }"
 msgstr "CLOSE { カーソル名 | ALL }"
 
-#: sql_help.h:141
+#: sql_help.h:153
 msgid "cluster a table according to an index"
 msgstr "インデックスに従ってテーブルをクラスタ化する"
 
-#: sql_help.h:142
+#: sql_help.h:154
 msgid ""
-"CLUSTER tablename [ USING indexname ]\n"
-"CLUSTER"
+"CLUSTER [VERBOSE] tablename [ USING indexname ]\n"
+"CLUSTER [VERBOSE]"
 msgstr ""
-"CLUSTER テーブル名 [ USING インデックス名 ]\n"
-"CLUSTER"
+"CLUSTER [VERBOSE] テーブル名 [ USING インデックス名 ]\n"
+"CLUSTER [VERBOSE]"
 
-#: sql_help.h:145
+#: sql_help.h:157
 msgid "define or change the comment of an object"
 msgstr "オブジェクトのコメントを定義または変更する"
 
-#: sql_help.h:146
+#: sql_help.h:158
 msgid ""
 "COMMENT ON\n"
 "{\n"
@@ -2466,29 +2652,29 @@ msgstr ""
 "  VIEW オブジェクト名\n"
 "} IS '文字列'"
 
-#: sql_help.h:149 sql_help.h:397
+#: sql_help.h:161 sql_help.h:433
 msgid "commit the current transaction"
 msgstr "現在のトランザクションをコミット（確定）する"
 
-#: sql_help.h:150
+#: sql_help.h:162
 msgid "COMMIT [ WORK | TRANSACTION ]"
 msgstr "COMMIT [ WORK | TRANSACTION ]"
 
-#: sql_help.h:153
+#: sql_help.h:165
 msgid "commit a transaction that was earlier prepared for two-phase commit"
 msgstr ""
 "２フェーズコミットのために事前に準備されたトランザクションを\n"
 "コミットする"
 
-#: sql_help.h:154
+#: sql_help.h:166
 msgid "COMMIT PREPARED transaction_id"
 msgstr "COMMIT PREPARED トランザクションID"
 
-#: sql_help.h:157
+#: sql_help.h:169
 msgid "copy data between a file and a table"
 msgstr "ファイルとテーブル間でデータをコピーする"
 
-#: sql_help.h:158
+#: sql_help.h:170
 msgid ""
 "COPY tablename [ ( column [, ...] ) ]\n"
 "    FROM { 'filename' | STDIN }\n"
@@ -2506,7 +2692,6 @@ msgid ""
 "    TO { 'filename' | STDOUT }\n"
 "    [ [ WITH ] \n"
 "          [ BINARY ]\n"
-"          [ HEADER ]\n"
 "          [ OIDS ]\n"
 "          [ DELIMITER [ AS ] 'delimiter' ]\n"
 "          [ NULL [ AS ] 'null string' ]\n"
@@ -2521,7 +2706,7 @@ msgstr ""
 "          [ BINARY ] \n"
 "          [ OIDS ]\n"
 "          [ DELIMITER [ AS ] 'フィールド区切り文字' ]\n"
-"          [ NULL [ AS ] 'nullを表現する文字列' ]\n"
+"          [ NULL [ AS ] 'nullを表す文字列' ]\n"
 "          [ CSV [ HEADER ]\n"
 "                [ QUOTE [ AS ] '引用符として使用する文字' ] \n"
 "                [ ESCAPE [ AS ] 'エスケープ文字' ]\n"
@@ -2531,20 +2716,19 @@ msgstr ""
 "    TO { 'ファイル名' | STDOUT }\n"
 "    [ [ WITH ] \n"
 "          [ BINARY ]\n"
-"          [ HEADER ]\n"
 "          [ OIDS ]\n"
 "          [ DELIMITER [ AS ] 'フィールド区切り文字' ]\n"
-"          [ NULL [ AS ] 'nullを表現する文字列' ]\n"
+"          [ NULL [ AS ] 'nullを表す文字列' ]\n"
 "          [ CSV [ HEADER ]\n"
 "                [ QUOTE [ AS ] '引用符として使用する文字' ] \n"
 "                [ ESCAPE [ AS ] 'エスケープ文字' ]\n"
 "                [ FORCE QUOTE カラム名 [, ...] ]"
 
-#: sql_help.h:161
+#: sql_help.h:173
 msgid "define a new aggregate function"
 msgstr "新しい集約関数を定義する"
 
-#: sql_help.h:162
+#: sql_help.h:174
 msgid ""
 "CREATE AGGREGATE name ( input_data_type [ , ... ] ) (\n"
 "    SFUNC = sfunc,\n"
@@ -2584,11 +2768,11 @@ msgstr ""
 "    [ , SORTOP = ソート演算子 ]\n"
 ")"
 
-#: sql_help.h:165
+#: sql_help.h:177
 msgid "define a new cast"
 msgstr "新しいキャストを定義する"
 
-#: sql_help.h:166
+#: sql_help.h:178
 msgid ""
 "CREATE CAST (sourcetype AS targettype)\n"
 "    WITH FUNCTION funcname (argtypes)\n"
@@ -2596,6 +2780,10 @@ msgid ""
 "\n"
 "CREATE CAST (sourcetype AS targettype)\n"
 "    WITHOUT FUNCTION\n"
+"    [ AS ASSIGNMENT | AS IMPLICIT ]\n"
+"\n"
+"CREATE CAST (sourcetype AS targettype)\n"
+"    WITH INOUT\n"
 "    [ AS ASSIGNMENT | AS IMPLICIT ]"
 msgstr ""
 "CREATE CAST (元の型 AS キャスト後の型)\n"
@@ -2605,12 +2793,16 @@ msgstr ""
 "CREATE CAST (元の型 AS キャスト後の型)\n"
 "    WITHOUT FUNCTION\n"
 "    [ AS ASSIGNMENT | AS IMPLICIT ]"
+"\n"
+"CREATE CAST (元の型 AS キャスト後の型)\n"
+"    WITH INOUT\n"
+"    [ AS ASSIGNMENT | AS IMPLICIT ]"
 
-#: sql_help.h:169
+#: sql_help.h:181
 msgid "define a new constraint trigger"
 msgstr "新しい制約トリガを定義する"
 
-#: sql_help.h:170
+#: sql_help.h:182
 msgid ""
 "CREATE CONSTRAINT TRIGGER name\n"
 "    AFTER event [ OR ... ]\n"
@@ -2630,11 +2822,11 @@ msgstr ""
 "    FOR EACH ROW\n"
 "    EXECUTE PROCEDURE 関数名 ( 引数 )"
 
-#: sql_help.h:173
+#: sql_help.h:185
 msgid "define a new encoding conversion"
 msgstr "新しいエンコーディングの変換ルールを定義する"
 
-#: sql_help.h:174
+#: sql_help.h:186
 msgid ""
 "CREATE [ DEFAULT ] CONVERSION name\n"
 "    FOR source_encoding TO dest_encoding FROM funcname"
@@ -2642,16 +2834,18 @@ msgstr ""
 "CREATE [ DEFAULT ] CONVERSION 変換ルール名\n"
 "    FOR 変換前のエンコーディング TO 変換後のエンコーディング FROM 関数名"
 
-#: sql_help.h:177
+#: sql_help.h:189
 msgid "create a new database"
 msgstr "新しいデータベースを作成する"
 
-#: sql_help.h:178
+#: sql_help.h:190
 msgid ""
 "CREATE DATABASE name\n"
 "    [ [ WITH ] [ OWNER [=] dbowner ]\n"
 "           [ TEMPLATE [=] template ]\n"
 "           [ ENCODING [=] encoding ]\n"
+"           [ COLLATE [=] collate ]\n"
+"           [ CTYPE [=] 変換演算子 ]\n"
 "           [ TABLESPACE [=] tablespace ]\n"
 "           [ CONNECTION LIMIT [=] connlimit ] ]"
 msgstr ""
@@ -2659,14 +2853,16 @@ msgstr ""
 "    [ [ WITH ] [ OWNER [=] データベースの所有者 ]\n"
 "           [ TEMPLATE [=] テンプレート名 ]\n"
 "           [ ENCODING [=] エンコーディング ]\n"
+"           [ COLLATE [=] 照合順序 ]\n"
+"           [ CTYPE [=] ctype ]\n"
 "           [ TABLESPACE [=] テーブルスペース名 ] ]\n"
 "           [ CONNECTION LIMIT [=] 最大接続数 ] ]"
 
-#: sql_help.h:181
+#: sql_help.h:193
 msgid "define a new domain"
 msgstr "新しいドメインを定義する"
 
-#: sql_help.h:182
+#: sql_help.h:194
 msgid ""
 "CREATE DOMAIN name [ AS ] data_type\n"
 "    [ DEFAULT expression ]\n"
@@ -2686,16 +2882,33 @@ msgstr ""
 "[ CONSTRAINT 制約名 ]\n"
 "{ NOT NULL | NULL | CHECK (評価式) }"
 
-#: sql_help.h:185
+#: sql_help.h:197
+msgid "define a new foreign-data wrapper"
+msgstr "新しい外部データラッパーを定義する"
+
+#: sql_help.h:198
+msgid ""
+"CREATE FOREIGN DATA WRAPPER name\n"
+"    [ VALIDATOR valfunction | NO VALIDATOR ]\n"
+"    [ OPTIONS ( option 'value' [, ... ] ) ]"
+msgstr ""
+"CREATE FOREIGN DATA WRAPPER 外部データラッパー名\n"
+"    [ VALIDATOR 妥当性検査関数 | NO VALIDATOR ]\n"
+"    [ OPTIONS ( オプション '値' [, ... ] ) ]"
+
+#: sql_help.h:201
 msgid "define a new function"
 msgstr "新しい関数を定義する"
 
-#: sql_help.h:186
+#: sql_help.h:202
 msgid ""
 "CREATE [ OR REPLACE ] FUNCTION\n"
-"    name ( [ [ argmode ] [ argname ] argtype [, ...] ] )\n"
-"    [ RETURNS rettype ]\n"
+"    name ( [ [ argmode ] [ argname ] argtype [ { DEFAULT | = } defexpr ] "
+"[, ...] ] )\n"
+"    [ RETURNS rettype\n"
+"      | RETURNS TABLE ( colname coltype [, ...] ) ]\n"
 "  { LANGUAGE langname\n"
+"    | WINDOW\n"
 "    | IMMUTABLE | STABLE | VOLATILE\n"
 "    | CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT\n"
 "    | [ EXTERNAL ] SECURITY INVOKER | [ EXTERNAL ] SECURITY DEFINER\n"
@@ -2708,9 +2921,12 @@ msgid ""
 "    [ WITH ( attribute [, ...] ) ]"
 msgstr ""
 "CREATE [ OR REPLACE ] FUNCTION\n"
-"    関数名 ( [ [ 引数のモード ] [ 引数名 ] 引数の型 [, ...] ] )\n"
-"    [ RETURNS 戻り値の型 ]\n"
+"    関数名 ( [ [ 引数のモード ] [ 引数名 ] 引数の型 \n"
+"    [ { DEFAULT | = } デフォルト値の評価式 ] [, ...] ] )\n"
+"    [ RETURNS 戻り値の型\n"
+"      | RETURNS TABLE ( カラム名 カラムの型 [, ...] ) ]\n"
 "  { LANGUAGE 言語名\n"
+"    | WINDOW\n"
 "    | IMMUTABLE | STABLE | VOLATILE\n"
 "    | CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT\n"
 "    | [EXTERNAL] SECURITY INVOKER | [EXTERNAL] SECURITY DEFINER\n"
@@ -2722,11 +2938,11 @@ msgstr ""
 "  } ...\n"
 "    [ WITH ( 属性 [, ...] ) ]"
 
-#: sql_help.h:189 sql_help.h:213 sql_help.h:265
+#: sql_help.h:205 sql_help.h:229 sql_help.h:285
 msgid "define a new database role"
 msgstr "データベースの新しいロールを定義する"
 
-#: sql_help.h:190
+#: sql_help.h:206
 msgid ""
 "CREATE GROUP name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2766,11 +2982,11 @@ msgstr ""
 "    | USER ロール名 [, ...]\n"
 "    | SYSID uid"
 
-#: sql_help.h:193
+#: sql_help.h:209
 msgid "define a new index"
 msgstr "新しいインデックスを定義する"
 
-#: sql_help.h:194
+#: sql_help.h:210
 msgid ""
 "CREATE [ UNIQUE ] INDEX [ CONCURRENTLY ] name ON table [ USING method ]\n"
 "    ( { column | ( expression ) } [ opclass ] [ ASC | DESC ] [ NULLS { FIRST "
@@ -2787,11 +3003,11 @@ msgstr ""
 "    [ TABLESPACE  テーブルスペース名 ]\n"
 "    [ WHERE 述語 ]"
 
-#: sql_help.h:197
+#: sql_help.h:213
 msgid "define a new procedural language"
 msgstr "新しい手続き言語を定義する"
 
-#: sql_help.h:198
+#: sql_help.h:214
 msgid ""
 "CREATE [ PROCEDURAL ] LANGUAGE name\n"
 "CREATE [ TRUSTED ] [ PROCEDURAL ] LANGUAGE name\n"
@@ -2801,34 +3017,11 @@ msgstr ""
 "CREATE [ TRUSTED ] [ PROCEDURAL ] LANGUAGE 言語名\n"
 "    HANDLER 呼び出しハンドラ [ VALIDATOR バリデーション関数 ]"
 
-#: sql_help.h:201
-msgid "define a new operator class"
-msgstr "新しい演算子クラスを定義する"
-
-#: sql_help.h:202
-msgid ""
-"CREATE OPERATOR CLASS name [ DEFAULT ] FOR TYPE data_type\n"
-"  USING index_method [ FAMILY family_name ] AS\n"
-"  {  OPERATOR strategy_number operator_name [ ( op_type, op_type ) ] "
-"[ RECHECK ]\n"
-"   | FUNCTION support_number [ ( op_type [ , op_type ] ) ] funcname "
-"( argument_type [, ...] )\n"
-"   | STORAGE storage_type\n"
-"  } [, ... ]"
-msgstr ""
-"CREATE OPERATOR CLASS クラス名 [ DEFAULT ] FOR TYPE データ型\n"
-"  USING インデックスメソッド [ FAMILY ファミリ名 ] AS\n"
-"  {  OPERATOR 計画番号 演算子名 [ ( 演算子の型, 演算子の型 ) ] [ RECHECK ]\n"
-"   | FUNCTION サポート番号 [ ( 演算子の型 [ , 演算子の型 ] ) ] 関数名 ( 引数"
-"の型 [, ...] )\n"
-"   | STORAGE 記憶域の型\n"
-"  } [, ... ]"
-
-#: sql_help.h:205
+#: sql_help.h:217
 msgid "define a new operator"
 msgstr "新しい演算子を定義する"
 
-#: sql_help.h:206
+#: sql_help.h:218
 msgid ""
 "CREATE OPERATOR name (\n"
 "    PROCEDURE = funcname\n"
@@ -2846,15 +3039,37 @@ msgstr ""
 "    [, HASHES ] [, MERGES ]\n"
 ")"
 
-#: sql_help.h:209
+#: sql_help.h:221
+msgid "define a new operator class"
+msgstr "新しい演算子クラスを定義する"
+
+#: sql_help.h:222
+msgid ""
+"CREATE OPERATOR CLASS name [ DEFAULT ] FOR TYPE data_type\n"
+"  USING index_method [ FAMILY family_name ] AS\n"
+"  {  OPERATOR strategy_number operator_name [ ( op_type, op_type ) ]\n"
+"   | FUNCTION support_number [ ( op_type [ , op_type ] ) ] funcname "
+"( argument_type [, ...] )\n"
+"   | STORAGE storage_type\n"
+"  } [, ... ]"
+msgstr ""
+"CREATE OPERATOR CLASS クラス名 [ DEFAULT ] FOR TYPE データ型\n"
+"  USING インデックスメソッド [ FAMILY ファミリ名 ] AS\n"
+"  {  OPERATOR 計画番号 演算子名 [ ( 演算子の型, 演算子の型 ) ]\n"
+"   | FUNCTION サポート番号 [ ( 演算子の型 [ , 演算子の型 ] ) ]\n"
+"      関数名 ( 引数の型 [, ...] )\n"
+"   | STORAGE 記憶域の型\n"
+"  } [, ... ]"
+
+#: sql_help.h:225
 msgid "define a new operator family"
 msgstr "新しい演算子ファミリを定義する"
 
-#: sql_help.h:210
+#: sql_help.h:226
 msgid "CREATE OPERATOR FAMILY name USING index_method"
 msgstr "CREATE OPERATOR FAMILY 演算子ファミリ名 USING インデックスメソッド"
 
-#: sql_help.h:214
+#: sql_help.h:230
 msgid ""
 "CREATE ROLE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2896,11 +3111,11 @@ msgstr ""
 "    | USER ロール名 [, ...]\n"
 "    | SYSID ユーザID"
 
-#: sql_help.h:217
+#: sql_help.h:233
 msgid "define a new rewrite rule"
 msgstr "新しい書き換えルールを定義する"
 
-#: sql_help.h:218
+#: sql_help.h:234
 msgid ""
 "CREATE [ OR REPLACE ] RULE name AS ON event\n"
 "    TO table [ WHERE condition ]\n"
@@ -2908,14 +3123,13 @@ msgid ""
 msgstr ""
 "CREATE [ OR REPLACE ] RULE ルール名 AS ON イベント\n"
 "    TO テーブル名 [ WHERE 条件 ]\n"
-"    DO [ ALSO | INSTEAD ] { NOTHING | コマンド | ( コマンド ; コマン"
-"ド ... ) }"
+"    DO [ ALSO | INSTEAD ] { NOTHING | コマンド | ( コマンド ; コマンド ... ) }"
 
-#: sql_help.h:221
+#: sql_help.h:237
 msgid "define a new schema"
 msgstr "新しいスキーマを定義する"
 
-#: sql_help.h:222
+#: sql_help.h:238
 msgid ""
 "CREATE SCHEMA schemaname [ AUTHORIZATION username ] [ schema_element "
 "[ ... ] ]\n"
@@ -2925,11 +3139,11 @@ msgstr ""
 "[ ... ] ]\n"
 "CREATE SCHEMA AUTHORIZATION ユーザ名 [ スキーマ要素 [ ... ] ]"
 
-#: sql_help.h:225
+#: sql_help.h:241
 msgid "define a new sequence generator"
 msgstr "新しいシーケンス発生器を定義する"
 
-#: sql_help.h:226
+#: sql_help.h:242
 msgid ""
 "CREATE [ TEMPORARY | TEMP ] SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
@@ -2941,11 +3155,25 @@ msgstr ""
 "    [ START [ WITH ] 開始番号 ] [ CACHE キャッシュ数 ] [ [ NO ] "
 "CYCLE ]        [ OWNED BY { テーブル名.カラム名 | NONE } ]"
 
-#: sql_help.h:229
+#: sql_help.h:245
+msgid "define a new foreign server"
+msgstr "新しい外部サーバを定義する"
+
+#: sql_help.h:246
+msgid ""
+"CREATE SERVER servername [ TYPE 'servertype' ] [ VERSION 'serverversion' ]\n"
+"    FOREIGN DATA WRAPPER fdwname\n"
+"    [ OPTIONS ( option 'value' [, ... ] ) ]"
+msgstr ""
+"CREATE SERVER 外部サーバ名 [ TYPE 'タイプ' ] [ VERSION 'バージョン番号' ]\n"
+"    FOREIGN DATA WRAPPER 外部データラッパー名\n"
+"    [ OPTIONS ( オプション '値' [, ... ] ) ]"
+
+#: sql_help.h:249
 msgid "define a new table"
 msgstr "新しいテーブルを定義する"
 
-#: sql_help.h:230
+#: sql_help.h:250
 msgid ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name ( [\n"
 "  { column_name data_type [ DEFAULT default_expr ] [ column_constraint "
@@ -3038,11 +3266,11 @@ msgstr ""
 "[ WITH ( ストレージパラメータ [= 値] [, ... ] ) ]\n"
 "[ USING INDEX TABLESPACE テーブルスペース名 ]"
 
-#: sql_help.h:233 sql_help.h:489
+#: sql_help.h:253 sql_help.h:525
 msgid "define a new table from the results of a query"
 msgstr "クエリーの結果から新しいテーブルを生成する"
 
-#: sql_help.h:234
+#: sql_help.h:254
 msgid ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE table_name\n"
 "    [ (column_name [, ...] ) ]\n"
@@ -3050,46 +3278,34 @@ msgid ""
 "OIDS ]\n"
 "    [ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
 "    [ TABLESPACE tablespace ]\n"
-"    AS query"
+"    AS query\n"
+"    [ WITH [ NO ] DATA ]"
 msgstr ""
 "CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } ] TABLE テーブル名\n"
 "    [ (カラム名 [, ...] ) ]\n"
-"    [ WITH ( ストレージパラメータ [= 値] [, ... ] ) | WITH OIDS | WITHOUT "
+"    [ WITH ( 格納域パラメータ [= 値] [, ... ] ) | WITH OIDS | WITHOUT "
 "OIDS ]\n"
 "    [ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]\n"
 "    [ TABLESPACE テーブルスペース名 ]\n"
-"    AS クエリー文字列"
+"    AS クエリー文字列\n"
+"    [ WITH [ NO ] DATA ]"
 
-#: sql_help.h:237
+#: sql_help.h:257
 msgid "define a new tablespace"
 msgstr "新しいテーブルスペースを定義する"
 
-#: sql_help.h:238
+#: sql_help.h:258
 msgid ""
 "CREATE TABLESPACE tablespacename [ OWNER username ] LOCATION 'directory'"
 msgstr ""
 "CREATE TABLESPACE テーブルスペース名 [ OWNER ユーザ名 ] LOCATION 'ディレクト"
 "リ' "
 
-#: sql_help.h:241
-msgid "define a new trigger"
-msgstr "新しいトリガを定義する"
-
-#: sql_help.h:242
-msgid ""
-"CREATE TRIGGER name { BEFORE | AFTER } { event [ OR ... ] }\n"
-"    ON table [ FOR [ EACH ] { ROW | STATEMENT } ]\n"
-"    EXECUTE PROCEDURE funcname ( arguments )"
-msgstr ""
-"CREATE TRIGGER トリガ名 { BEFORE | AFTER } { イベント [ OR ... ] }\n"
-"    ON テーブル名 [ FOR [ EACH ] { ROW | STATEMENT } ]\n"
-"    EXECUTE PROCEDURE 関数名 ( 引数 )"
-
-#: sql_help.h:245
+#: sql_help.h:261
 msgid "define a new text search configuration"
 msgstr "新しいテキスト検索設定を定義する"
 
-#: sql_help.h:246
+#: sql_help.h:262
 msgid ""
 "CREATE TEXT SEARCH CONFIGURATION name (\n"
 "    PARSER = parser_name |\n"
@@ -3101,11 +3317,11 @@ msgstr ""
 "    COPY = 元の設定名\n"
 ")"
 
-#: sql_help.h:249
+#: sql_help.h:265
 msgid "define a new text search dictionary"
 msgstr "新しいテキスト検索用辞書を定義する"
 
-#: sql_help.h:250
+#: sql_help.h:266
 msgid ""
 "CREATE TEXT SEARCH DICTIONARY name (\n"
 "    TEMPLATE = template\n"
@@ -3117,11 +3333,11 @@ msgstr ""
 "    [, オプション = 値 [, ... ]]\n"
 ")"
 
-#: sql_help.h:253
+#: sql_help.h:269
 msgid "define a new text search parser"
 msgstr "新しいテキスト検索用パーサを定義する"
 
-#: sql_help.h:254
+#: sql_help.h:270
 msgid ""
 "CREATE TEXT SEARCH PARSER name (\n"
 "    START = start_function ,\n"
@@ -3139,11 +3355,11 @@ msgstr ""
 "    [, HEADLINE = 見出し関数 ]\n"
 ")"
 
-#: sql_help.h:257
+#: sql_help.h:273
 msgid "define a new text search template"
 msgstr "新しいテキスト検索テンプレートを定義する"
 
-#: sql_help.h:258
+#: sql_help.h:274
 msgid ""
 "CREATE TEXT SEARCH TEMPLATE name (\n"
 "    [ INIT = init_function , ]\n"
@@ -3155,11 +3371,25 @@ msgstr ""
 "    LEXIZE = LEX処理関数\n"
 ")"
 
-#: sql_help.h:261
+#: sql_help.h:277
+msgid "define a new trigger"
+msgstr "新しいトリガを定義する"
+
+#: sql_help.h:278
+msgid ""
+"CREATE TRIGGER name { BEFORE | AFTER } { event [ OR ... ] }\n"
+"    ON table [ FOR [ EACH ] { ROW | STATEMENT } ]\n"
+"    EXECUTE PROCEDURE funcname ( arguments )"
+msgstr ""
+"CREATE TRIGGER トリガ名 { BEFORE | AFTER } { イベント [ OR ... ] }\n"
+"    ON テーブル名 [ FOR [ EACH ] { ROW | STATEMENT } ]\n"
+"    EXECUTE PROCEDURE 関数名 ( 引数 )"
+
+#: sql_help.h:281
 msgid "define a new data type"
 msgstr "新しいデータ型を定義する"
 
-#: sql_help.h:262
+#: sql_help.h:282
 msgid ""
 "CREATE TYPE name AS\n"
 "    ( attribute_name data_type [, ... ] )\n"
@@ -3179,6 +3409,9 @@ msgid ""
 "    [ , PASSEDBYVALUE ]\n"
 "    [ , ALIGNMENT = alignment ]\n"
 "    [ , STORAGE = storage ]\n"
+"    [ , LIKE = like_type ]\n"
+"    [ , CATEGORY = category ]\n"
+"    [ , PREFERRED = preferred ]\n"
 "    [ , DEFAULT = default ]\n"
 "    [ , ELEMENT = element ]\n"
 "    [ , DELIMITER = delimiter ]\n"
@@ -3204,6 +3437,9 @@ msgstr ""
 "    [ , PASSEDBYVALUE ]\n"
 "    [ , ALIGNMENT = アラインメント位置 ]\n"
 "    [ , STORAGE = 記憶域 ]\n"
+"    [ , LIKE = likeの型 ]\n"
+"    [ , CATEGORY = 型のカテゴリ ]\n"
+"    [ , PREFERRED = 優先する型 ]\n"
 "    [ , DEFAULT = デフォルト値 ]\n"
 "    [ , ELEMENT = 要素 ]\n"
 "    [ , DELIMITER = 区切り文字 ]\n"
@@ -3211,7 +3447,7 @@ msgstr ""
 "\n"
 "CREATE TYPE 型名"
 
-#: sql_help.h:266
+#: sql_help.h:286
 msgid ""
 "CREATE USER name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -3253,11 +3489,25 @@ msgstr ""
 "    | USER ロール名 [, ...]\n"
 "    | SYSID ユーザID"
 
-#: sql_help.h:269
+#: sql_help.h:289
+msgid "define a new mapping of a user to a foreign server"
+msgstr "外部サーバに対してユーザの新しいマッピングを定義する"
+
+#: sql_help.h:290
+msgid ""
+"CREATE USER MAPPING FOR { username | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER servername\n"
+"    [ OPTIONS ( option 'value' [ , ... ] ) ]"
+msgstr ""
+"CREATE USER MAPPING FOR { ユーザ名 | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER 外部サーバ名\n"
+"    [ OPTIONS ( オプション '値' [ , ... ] ) ]"
+
+#: sql_help.h:293
 msgid "define a new view"
 msgstr "新しいビューを定義する"
 
-#: sql_help.h:270
+#: sql_help.h:294
 msgid ""
 "CREATE [ OR REPLACE ] [ TEMP | TEMPORARY ] VIEW name [ ( column_name "
 "[, ...] ) ]\n"
@@ -3267,19 +3517,19 @@ msgstr ""
 "[, ...] ) ]\n"
 "    AS クエリー文字列"
 
-#: sql_help.h:273
+#: sql_help.h:297
 msgid "deallocate a prepared statement"
 msgstr "準備済みステートメントを開放する"
 
-#: sql_help.h:274
+#: sql_help.h:298
 msgid "DEALLOCATE [ PREPARE ] { name | ALL }"
 msgstr "DEALLOCATE [ PREPARE ] { 実行プラン名 | ALL }"
 
-#: sql_help.h:277
+#: sql_help.h:301
 msgid "define a cursor"
 msgstr "カーソルを定義する"
 
-#: sql_help.h:278
+#: sql_help.h:302
 msgid ""
 "DECLARE name [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
 "    CURSOR [ { WITH | WITHOUT } HOLD ] FOR query"
@@ -3287,81 +3537,91 @@ msgstr ""
 "DECLARE カーソル名 [ BINARY ] [ INSENSITIVE ] [ [ NO ] SCROLL ]\n"
 "    CURSOR [ { WITH | WITHOUT } HOLD ] FOR クエリー文字列"
 
-#: sql_help.h:281
+#: sql_help.h:305
 msgid "delete rows of a table"
 msgstr "テーブルの行を削除する"
 
-#: sql_help.h:282
+#: sql_help.h:306
 msgid ""
 "DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
 "    [ USING usinglist ]\n"
 "    [ WHERE condition | WHERE CURRENT OF cursor_name ]\n"
-"    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
+"    [ RETURNING * | output_expression [ [ AS ] output_name ] [, ...] ]"
 msgstr ""
 "DELETE FROM [ ONLY ] テーブル名 [ [ AS ] 別名 ]\n"
 "    [ USING USING並び ]\n"
 "    [ WHERE 条件 | WHERE CURRENT OF カーソル名 ]\n"
 "    [ RETURNING * | 出力表現 [ AS 出力名 ] [, ...] ]"
 
-#: sql_help.h:285
+#: sql_help.h:309
 msgid "discard session state"
 msgstr "セッションの状態を破棄する"
 
-#: sql_help.h:286
+#: sql_help.h:310
 msgid "DISCARD { ALL | PLANS | TEMPORARY | TEMP }"
 msgstr "DISCARD { ALL | PLANS | TEMPORARY | TEMP }"
 
-#: sql_help.h:289
+#: sql_help.h:313
 msgid "remove an aggregate function"
 msgstr "集約関数を削除する"
 
-#: sql_help.h:290
+#: sql_help.h:314
 msgid ""
 "DROP AGGREGATE [ IF EXISTS ] name ( type [ , ... ] ) [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP AGGREGATE [ IF EXISTS ] 集約関数名 ( データ型 [ , ... ] ) [ CASCADE | "
 "RESTRICT ]"
 
-#: sql_help.h:293
+#: sql_help.h:317
 msgid "remove a cast"
 msgstr "キャストを削除する"
 
-#: sql_help.h:294
+#: sql_help.h:318
 msgid ""
 "DROP CAST [ IF EXISTS ] (sourcetype AS targettype) [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP CAST [ IF EXISTS ] (キャスト前の型 AS キャスト後の型) [ CASCADE | "
 "RESTRICT ]"
 
-#: sql_help.h:297
+#: sql_help.h:321
 msgid "remove a conversion"
 msgstr "エンコーディング変換ルールを削除する"
 
-#: sql_help.h:298
+#: sql_help.h:322
 msgid "DROP CONVERSION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 msgstr "DROP CONVERSION [ IF EXISTS ] 変換ルール名 [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:301
+#: sql_help.h:325
 msgid "remove a database"
 msgstr "データベースを削除する"
 
-#: sql_help.h:302
+#: sql_help.h:326
 msgid "DROP DATABASE [ IF EXISTS ] name"
 msgstr "DROP DATABASE  [ IF EXISTS ] データベース名"
 
-#: sql_help.h:305
+#: sql_help.h:329
 msgid "remove a domain"
 msgstr "ドメインを削除する"
 
-#: sql_help.h:306
+#: sql_help.h:330
 msgid "DROP DOMAIN [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP DOMAIN [ IF EXISTS ] ドメイン名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:309
+#: sql_help.h:333
+msgid "remove a foreign-data wrapper"
+msgstr "外部データラッパーを削除する"
+
+#: sql_help.h:334
+msgid "DROP FOREIGN DATA WRAPPER [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
+msgstr ""
+"DROP FOREIGN DATA WRAPPER [ IF EXISTS ] 外部データラッパー名\n"
+" [ CASCADE | RESTRICT ]"
+
+#: sql_help.h:337
 msgid "remove a function"
 msgstr "関数を削除する"
 
-#: sql_help.h:310
+#: sql_help.h:338
 msgid ""
 "DROP FUNCTION [ IF EXISTS ] name ( [ [ argmode ] [ argname ] argtype "
 "[, ...] ] )\n"
@@ -3371,48 +3631,36 @@ msgstr ""
 "型 [, ...] ] )\n"
 " [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:313 sql_help.h:341 sql_help.h:389
+#: sql_help.h:341 sql_help.h:369 sql_help.h:421
 msgid "remove a database role"
 msgstr "データベースのロールを削除する"
 
-#: sql_help.h:314
+#: sql_help.h:342
 msgid "DROP GROUP [ IF EXISTS ] name [, ...]"
 msgstr "DROP GROUP [ IF EXISTS ] グループ名 [, ...]"
 
-#: sql_help.h:317
+#: sql_help.h:345
 msgid "remove an index"
 msgstr "インデックスを削除する"
 
-#: sql_help.h:318
+#: sql_help.h:346
 msgid "DROP INDEX [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP INDEX [ IF EXISTS ] インデックス名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:321
+#: sql_help.h:349
 msgid "remove a procedural language"
 msgstr "手続き言語を削除する"
 
-#: sql_help.h:322
+#: sql_help.h:350
 msgid "DROP [ PROCEDURAL ] LANGUAGE [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP [ PROCEDURAL ] LANGUAGE [ IF EXISTS ] 言語名 [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:325
-msgid "remove an operator class"
-msgstr "演算子クラスを削除する"
-
-#: sql_help.h:326
-msgid ""
-"DROP OPERATOR CLASS [ IF EXISTS ] name USING index_method [ CASCADE | "
-"RESTRICT ]"
-msgstr ""
-"DROP OPERATOR CLASS [ IF EXISTS ] 演算子クラス名 USING インデックスメソッド "
-"[ CASCADE | RESTRICT ]"
-
-#: sql_help.h:329
+#: sql_help.h:353
 msgid "remove an operator"
 msgstr "演算子を削除する"
 
-#: sql_help.h:330
+#: sql_help.h:354
 msgid ""
 "DROP OPERATOR [ IF EXISTS ] name ( { lefttype | NONE } , { righttype | "
 "NONE } ) [ CASCADE | RESTRICT ]"
@@ -3420,11 +3668,23 @@ msgstr ""
 "DROP OPERATOR [ IF EXISTS ] 演算子名 ( { 左辺の型 | NONE } , { 右辺の型 | "
 "NONE } ) [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:333
+#: sql_help.h:357
+msgid "remove an operator class"
+msgstr "演算子クラスを削除する"
+
+#: sql_help.h:358
+msgid ""
+"DROP OPERATOR CLASS [ IF EXISTS ] name USING index_method [ CASCADE | "
+"RESTRICT ]"
+msgstr ""
+"DROP OPERATOR CLASS [ IF EXISTS ] 演算子クラス名 USING インデックスメソッド "
+"[ CASCADE | RESTRICT ]"
+
+#: sql_help.h:361
 msgid "remove an operator family"
 msgstr "演算子ファミリを削除する"
 
-#: sql_help.h:334
+#: sql_help.h:362
 msgid ""
 "DROP OPERATOR FAMILY [ IF EXISTS ] name USING index_method [ CASCADE | "
 "RESTRICT ]"
@@ -3432,150 +3692,170 @@ msgstr ""
 "DROP OPERATOR FAMILY [ IF EXISTS ] 演算子クラス名 USING インデックスメソッド "
 "[ CASCADE | RESTRICT ]"
 
-#: sql_help.h:337
+#: sql_help.h:365
 msgid "remove database objects owned by a database role"
 msgstr "特定のデータベースロールが所有するデータベースオブジェクトを削除する"
 
-#: sql_help.h:338
+#: sql_help.h:366
 msgid "DROP OWNED BY name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP OWNED BY 名前 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:342
+#: sql_help.h:370
 msgid "DROP ROLE [ IF EXISTS ] name [, ...]"
 msgstr "DROP ROLE [ IF EXISTS ] ロール名 [, ...]"
 
-#: sql_help.h:345
+#: sql_help.h:373
 msgid "remove a rewrite rule"
 msgstr "書き換えルールを削除する"
 
-#: sql_help.h:346
+#: sql_help.h:374
 msgid "DROP RULE [ IF EXISTS ] name ON relation [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP RULE [ IF EXISTS ] ルール名 ON リレーション [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:349
+#: sql_help.h:377
 msgid "remove a schema"
 msgstr "スキーマを削除する"
 
-#: sql_help.h:350
+#: sql_help.h:378
 msgid "DROP SCHEMA [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP SCHEMA [ IF EXISTS ] スキーマ名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:353
+#: sql_help.h:381
 msgid "remove a sequence"
 msgstr "シーケンスを削除する"
 
-#: sql_help.h:354
+#: sql_help.h:382
 msgid "DROP SEQUENCE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP SEQUENCE [ IF EXISTS ] シーケンス名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:357
+#: sql_help.h:385
+msgid "remove a foreign server descriptor"
+msgstr "外部サーバ識別子を削除する"
+
+#: sql_help.h:386
+msgid "DROP SERVER [ IF EXISTS ] servername [ CASCADE | RESTRICT ]"
+msgstr "DROP SERVER [ IF EXISTS ] サーバ名 [ CASCADE | RESTRICT ]"
+
+#: sql_help.h:389
 msgid "remove a table"
 msgstr "テーブルを削除する"
 
-#: sql_help.h:358
+#: sql_help.h:390
 msgid "DROP TABLE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP TABLE [ IF EXISTS ] テーブル名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:361
+#: sql_help.h:393
 msgid "remove a tablespace"
 msgstr "テーブルスペースを削除する"
 
-#: sql_help.h:362
+#: sql_help.h:394
 msgid "DROP TABLESPACE [ IF EXISTS ] tablespacename"
 msgstr "DROP TABLESPACE [ IF EXISTS ] テーブルスペース名"
 
-#: sql_help.h:365
-msgid "remove a trigger"
-msgstr "トリガを削除する"
-
-#: sql_help.h:366
-msgid "DROP TRIGGER [ IF EXISTS ] name ON table [ CASCADE | RESTRICT ]"
-msgstr ""
-"DROP TRIGGER [ IF EXISTS ] トリガ名 ON テーブル名 [ CASCADE | RESTRICT ]"
-
-#: sql_help.h:369
+#: sql_help.h:397
 msgid "remove a text search configuration"
 msgstr "テキスト検索設定を削除する"
 
-#: sql_help.h:370
+#: sql_help.h:398
 msgid ""
 "DROP TEXT SEARCH CONFIGURATION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP TEXT SEARCH CONFIGURATION [ IF EXISTS ] 設定名 [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:373
+#: sql_help.h:401
 msgid "remove a text search dictionary"
 msgstr "テキスト検索用辞書を削除する"
 
-#: sql_help.h:374
+#: sql_help.h:402
 msgid "DROP TEXT SEARCH DICTIONARY [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP TEXT SEARCH DICTIONARY [ IF EXISTS ] 辞書名 [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:377
+#: sql_help.h:405
 msgid "remove a text search parser"
 msgstr "テキスト検索用パーサを削除する"
 
-#: sql_help.h:378
+#: sql_help.h:406
 msgid "DROP TEXT SEARCH PARSER [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 msgstr "DROP TEXT SEARCH PARSER [ IF EXISTS ] パーサ名 [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:381
+#: sql_help.h:409
 msgid "remove a text search template"
 msgstr "テキスト検索用テンプレートを削除する"
 
-#: sql_help.h:382
+#: sql_help.h:410
 msgid "DROP TEXT SEARCH TEMPLATE [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 msgstr ""
 "DROP TEXT SEARCH TEMPLATE [ IF EXISTS ] テンプレート名 [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:385
+#: sql_help.h:413
+msgid "remove a trigger"
+msgstr "トリガを削除する"
+
+#: sql_help.h:414
+msgid "DROP TRIGGER [ IF EXISTS ] name ON table [ CASCADE | RESTRICT ]"
+msgstr ""
+"DROP TRIGGER [ IF EXISTS ] トリガ名 ON テーブル名 [ CASCADE | RESTRICT ]"
+
+#: sql_help.h:417
 msgid "remove a data type"
 msgstr "データ型を削除する"
 
-#: sql_help.h:386
+#: sql_help.h:418
 msgid "DROP TYPE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP TYPE [ IF EXISTS ] データ型名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:390
+#: sql_help.h:422
 msgid "DROP USER [ IF EXISTS ] name [, ...]"
 msgstr "DROP USER [ IF EXISTS ] ユーザ名 [, ...]"
 
-#: sql_help.h:393
+#: sql_help.h:425
+msgid "remove a user mapping for a foreign server"
+msgstr "外部サーバーのユーザ定義マッピングを削除"
+
+#: sql_help.h:426
+msgid ""
+"DROP USER MAPPING [ IF EXISTS ] FOR { username | USER | CURRENT_USER | "
+"PUBLIC } SERVER servername"
+msgstr ""
+"DROP USER MAPPING [ IF EXISTS ] FOR { ユーザ名 | USER | CURRENT_USER | "
+"PUBLIC } SERVER サーバ名"
+
+#: sql_help.h:429
 msgid "remove a view"
 msgstr "ビューを削除する"
 
-#: sql_help.h:394
+#: sql_help.h:430
 msgid "DROP VIEW [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP VIEW [ IF EXISTS ] ビュー名 [, ...] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:398
+#: sql_help.h:434
 msgid "END [ WORK | TRANSACTION ]"
 msgstr "END [ WORK | TRANSACTION ]"
 
-#: sql_help.h:401
+#: sql_help.h:437
 msgid "execute a prepared statement"
 msgstr "準備済みステートメントを実行する"
 
-#: sql_help.h:402
+#: sql_help.h:438
 msgid "EXECUTE name [ ( parameter [, ...] ) ]"
 msgstr "EXECUTE 実行プラン名 [ ( パラメータ [, ...] ) ]"
 
-#: sql_help.h:405
+#: sql_help.h:441
 msgid "show the execution plan of a statement"
 msgstr "ステートメントの実行プランを表示する"
 
-#: sql_help.h:406
+#: sql_help.h:442
 msgid "EXPLAIN [ ANALYZE ] [ VERBOSE ] statement"
 msgstr "EXPLAIN [ ANALYZE ] [ VERBOSE ] ステートメント"
 
-#: sql_help.h:409
+#: sql_help.h:445
 msgid "retrieve rows from a query using a cursor"
 msgstr "カーソルを使ってクエリーから行を取り出す"
 
-#: sql_help.h:410
+#: sql_help.h:446
 msgid ""
 "FETCH [ direction { FROM | IN } ] cursorname\n"
 "\n"
@@ -3615,14 +3895,20 @@ msgstr ""
 "    BACKWARD 行数\n"
 "    BACKWARD ALL"
 
-#: sql_help.h:413
+#: sql_help.h:449
 msgid "define access privileges"
 msgstr "アクセス権限を定義する"
 
-#: sql_help.h:414
+#: sql_help.h:450
 msgid ""
-"GRANT { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
+"GRANT { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | "
+"TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
+"    ON [ TABLE ] tablename [, ...]\n"
+"    TO { [ GROUP ] rolename | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { { SELECT | INSERT | UPDATE | REFERENCES } ( column [, ...] )\n"
+"    [,...] | ALL [ PRIVILEGES ] ( column [, ...] ) }\n"
 "    ON [ TABLE ] tablename [, ...]\n"
 "    TO { [ GROUP ] rolename | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
@@ -3634,6 +3920,14 @@ msgid ""
 "GRANT { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL "
 "[ PRIVILEGES ] }\n"
 "    ON DATABASE dbname [, ...]\n"
+"    TO { [ GROUP ] rolename | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN DATA WRAPPER fdwname [, ...]\n"
+"    TO { [ GROUP ] rolename | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN SERVER servername [, ...]\n"
 "    TO { [ GROUP ] rolename | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { EXECUTE | ALL [ PRIVILEGES ] }\n"
@@ -3655,8 +3949,14 @@ msgid ""
 "\n"
 "GRANT role [, ...] TO rolename [, ...] [ WITH ADMIN OPTION ]"
 msgstr ""
-"GRANT { { SELECT | INSERT | UPDATE | DELETE | RULE | REFERENCES | TRIGGER }\n"
+"GRANT { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | "
+"TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
+"    ON [ TABLE ] テーブル名 [, ...]\n"
+"    TO { [ GROUP ] ロール名 | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { { SELECT | INSERT | UPDATE | REFERENCES } ( カラム名 [, ...] )\n"
+"    [,...] | ALL [ PRIVILEGES ] ( カラム名 [, ...] ) }\n"
 "    ON [ TABLE ] テーブル名 [, ...]\n"
 "    TO { [ GROUP ] ロール名 | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
@@ -3668,6 +3968,14 @@ msgstr ""
 "GRANT { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL "
 "[ PRIVILEGES ] }\n"
 "    ON DATABASE データベース名 [, ...]\n"
+"    TO { [ GROUP ] ロール名 | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN DATA WRAPPER 外部ラッパー名 [, ...]\n"
+"    TO { [ GROUP ] ロール名 | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN SERVER 外部サーバ名 [, ...]\n"
 "    TO { [ GROUP ] ロール名 | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { EXECUTE | ALL [ PRIVILEGES ] }\n"
@@ -3689,45 +3997,45 @@ msgstr ""
 "\n"
 "GRANT ロール [, ...] TO { ロール名 [, ...] [ WITH ADMIN OPTION ]"
 
-#: sql_help.h:417
+#: sql_help.h:453
 msgid "create new rows in a table"
 msgstr "テーブルに新しい行を作成する"
 
-#: sql_help.h:418
+#: sql_help.h:454
 msgid ""
 "INSERT INTO table [ ( column [, ...] ) ]\n"
 "    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) [, ...] | "
 "query }\n"
-"    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
+"    [ RETURNING * | output_expression [ [ AS ] output_name ] [, ...] ]"
 msgstr ""
 "INSERT INTO テーブル名 [ ( カラム名 [, ...] ) ]\n"
-"    { DEFAULT VALUES | VALUES ( { 評価式 | DEFAULT } [, ...] ) [, ...] | クエ"
-"リー文字列 }\n"
-"    [ RETURNING * | 出力表現 [ AS 出力名 ] [, ...] ]"
+"    { DEFAULT VALUES | VALUES ( { 評価式 | DEFAULT } [, ...] ) [, ...] | "
+"クエリー文字列 }\n"
+"    [ RETURNING * | 出力評価式 [ AS 出力名 ] [, ...] ]"
 
-#: sql_help.h:421
+#: sql_help.h:457
 msgid "listen for a notification"
 msgstr "通知メッセージを監視する"
 
-#: sql_help.h:422
+#: sql_help.h:458
 msgid "LISTEN name"
 msgstr "LISTEN メッセージ名"
 
-#: sql_help.h:425
+#: sql_help.h:461
 msgid "load or reload a shared library file"
 msgstr "共有ライブラリファイルを（再）ロードする"
 
-#: sql_help.h:426
+#: sql_help.h:462
 msgid "LOAD 'filename'"
 msgstr "LOAD 'ファイル名'"
 
-#: sql_help.h:429
+#: sql_help.h:465
 msgid "lock a table"
 msgstr "テーブルをロックする"
 
-#: sql_help.h:430
+#: sql_help.h:466
 msgid ""
-"LOCK [ TABLE ] name [, ...] [ IN lockmode MODE ] [ NOWAIT ]\n"
+"LOCK [ TABLE ] [ ONLY ] name [, ...] [ IN lockmode MODE ] [ NOWAIT ]\n"
 "\n"
 "where lockmode is one of:\n"
 "\n"
@@ -3741,68 +4049,68 @@ msgstr ""
 "    ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE\n"
 "    | SHARE | SHARE ROW EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE"
 
-#: sql_help.h:433
+#: sql_help.h:469
 msgid "position a cursor"
 msgstr "カーソルを位置付ける"
 
-#: sql_help.h:434
+#: sql_help.h:470
 msgid "MOVE [ direction { FROM | IN } ] cursorname"
 msgstr "MOVE [ 方向 { FROM | IN } ] カーソル名"
 
-#: sql_help.h:437
+#: sql_help.h:473
 msgid "generate a notification"
 msgstr "通知メッセージを生成する"
 
-#: sql_help.h:438
+#: sql_help.h:474
 msgid "NOTIFY name"
 msgstr "NOTIFY メッセージ名"
 
-#: sql_help.h:441
+#: sql_help.h:477
 msgid "prepare a statement for execution"
 msgstr "実行に先立ってステートメントを準備する"
 
-#: sql_help.h:442
+#: sql_help.h:478
 msgid "PREPARE name [ ( datatype [, ...] ) ] AS statement"
 msgstr "PREPARE 実行プラン名 [ ( データ型 [, ...] ) ] AS ステートメント"
 
-#: sql_help.h:445
+#: sql_help.h:481
 msgid "prepare the current transaction for two-phase commit"
 msgstr "２フェーズコミット用に現在のトランザクションを準備する"
 
-#: sql_help.h:446
+#: sql_help.h:482
 msgid "PREPARE TRANSACTION transaction_id"
 msgstr "PREPARE TRANSACTION トランザクションID"
 
-#: sql_help.h:449
+#: sql_help.h:485
 msgid "change the ownership of database objects owned by a database role"
 msgstr ""
 "あるデータベースロールが所有するデータベースオブジェクトの所有者を変更する"
 
-#: sql_help.h:450
+#: sql_help.h:486
 msgid "REASSIGN OWNED BY old_role [, ...] TO new_role"
 msgstr "REASSIGN OWNED BY 元のロール名 [, ...] TO 新しいロール名"
 
-#: sql_help.h:453
+#: sql_help.h:489
 msgid "rebuild indexes"
 msgstr "インデックスを再構築する"
 
-#: sql_help.h:454
+#: sql_help.h:490
 msgid "REINDEX { INDEX | TABLE | DATABASE | SYSTEM } name [ FORCE ]"
 msgstr "REINDEX { INDEX | TABLE | DATABASE | SYSTEM } 名前 [ FORCE ]"
 
-#: sql_help.h:457
+#: sql_help.h:493
 msgid "destroy a previously defined savepoint"
 msgstr "前回定義したセーブポイントを削除する"
 
-#: sql_help.h:458
+#: sql_help.h:494
 msgid "RELEASE [ SAVEPOINT ] savepoint_name"
 msgstr "RELEASE [ SAVEPOINT ] セーブポイント名"
 
-#: sql_help.h:461
+#: sql_help.h:497
 msgid "restore the value of a run-time parameter to the default value"
 msgstr "実行時パラメータの値をデフォルト値に戻す"
 
-#: sql_help.h:462
+#: sql_help.h:498
 msgid ""
 "RESET configuration_parameter\n"
 "RESET ALL"
@@ -3810,15 +4118,23 @@ msgstr ""
 "RESET パラメータ名\n"
 "RESET ALL"
 
-#: sql_help.h:465
+#: sql_help.h:501
 msgid "remove access privileges"
 msgstr "アクセス権限を剥奪する"
 
-#: sql_help.h:466
+#: sql_help.h:502
 msgid ""
 "REVOKE [ GRANT OPTION FOR ]\n"
-"    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
+"    { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | "
+"TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
+"    ON [ TABLE ] tablename [, ...]\n"
+"    FROM { [ GROUP ] rolename | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { { SELECT | INSERT | UPDATE | REFERENCES } ( column [, ...] )\n"
+"    [,...] | ALL [ PRIVILEGES ] ( column [, ...] ) }\n"
 "    ON [ TABLE ] tablename [, ...]\n"
 "    FROM { [ GROUP ] rolename | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
@@ -3833,6 +4149,18 @@ msgid ""
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
 "    ON DATABASE dbname [, ...]\n"
+"    FROM { [ GROUP ] rolename | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN DATA WRAPPER fdwname [, ...]\n"
+"    FROM { [ GROUP ] rolename | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN SERVER servername [, ...]\n"
 "    FROM { [ GROUP ] rolename | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
@@ -3866,8 +4194,16 @@ msgid ""
 "    [ CASCADE | RESTRICT ]"
 msgstr ""
 "REVOKE [ GRANT OPTION FOR ]\n"
-"    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
+"    { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | "
+"TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
+"    ON [ TABLE ] テーブル名 [, ...]\n"
+"    FROM { [ GROUP ] ロール名 | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { { SELECT | INSERT | UPDATE | REFERENCES } ( カラム名 [, ...] )\n"
+"    [,...] | ALL [ PRIVILEGES ] ( カラム名 [, ...] ) }\n"
 "    ON [ TABLE ] テーブル名 [, ...]\n"
 "    FROM { [ GROUP ] ロール名 | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
@@ -3882,6 +4218,18 @@ msgstr ""
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
 "    ON DATABASE データベース名 [, ...]\n"
+"    FROM { [ GROUP ] ロール名 | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN DATA WRAPPER 外部データラッパー名 [, ...]\n"
+"    FROM { [ GROUP ] ロール名 | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN SERVER 外部サーバ名 [, ...]\n"
 "    FROM { [ GROUP ] ロール名 | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
@@ -3914,62 +4262,72 @@ msgstr ""
 "    ロール [, ...] FROM ロール名 [, ...]\n"
 "    [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:470
+#: sql_help.h:506
 msgid "ROLLBACK [ WORK | TRANSACTION ]"
 msgstr "ROLLBACK [ WORK | TRANSACTION ]"
 
-#: sql_help.h:473
+#: sql_help.h:509
 msgid "cancel a transaction that was earlier prepared for two-phase commit"
 msgstr "２フェーズコミット用に事前準備されたトランザクションをキャンセルする"
 
-#: sql_help.h:474
+#: sql_help.h:510
 msgid "ROLLBACK PREPARED transaction_id"
 msgstr "ROLLBACK PREPARED トランザクションID"
 
-#: sql_help.h:477
+#: sql_help.h:513
 msgid "roll back to a savepoint"
 msgstr "セーブポイントまでロールバックする"
 
-#: sql_help.h:478
+#: sql_help.h:514
 msgid "ROLLBACK [ WORK | TRANSACTION ] TO [ SAVEPOINT ] savepoint_name"
 msgstr "ROLLBACK [ WORK | TRANSACTION ] TO [ SAVEPOINT ] セーブポイント名"
 
-#: sql_help.h:481
+#: sql_help.h:517
 msgid "define a new savepoint within the current transaction"
 msgstr "現在のトランザクションに対して新しいセーブポイントを定義する"
 
-#: sql_help.h:482
+#: sql_help.h:518
 msgid "SAVEPOINT savepoint_name"
 msgstr "SAVEPOINT セーブポイント名"
 
-#: sql_help.h:485
+#: sql_help.h:521 sql_help.h:557 sql_help.h:581
 msgid "retrieve rows from a table or view"
 msgstr "テーブルもしくはビューから行を取り出す"
 
-#: sql_help.h:486
+#: sql_help.h:522 sql_help.h:558 sql_help.h:582
 msgid ""
-"SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]\n"
-"    * | expression [ AS output_name ] [, ...]\n"
-"    [ FROM from_item [, ...] ]\n"
-"    [ WHERE condition ]\n"
-"    [ GROUP BY expression [, ...] ]\n"
-"    [ HAVING condition [, ...] ]\n"
-"    [ { UNION | INTERSECT | EXCEPT } [ ALL ] select ]\n"
-"    [ ORDER BY expression [ ASC | DESC | USING operator ] [ NULLS { FIRST | "
+"[ WITH [ RECURSIVE ] WITHクエリー [, ...] ]\n"
+"SELECT [ ALL | DISTINCT [ ON ( 評価式 [, ...] ) ] ]\n"
+"    * | 評価式 [ [ AS ] 出力名 ] [, ...]\n"
+"    [ FROM FROM項目 [, ...] ]\n"
+"    [ WHERE 条件 ]\n"
+"    [ GROUP BY 評価式 [, ...] ]\n"
+"    [ HAVING 条件 [, ...] ]\n"
+"    [ WINDOW ウィンドウ名 AS ( ウィンドウ定義 ) [, ...] ]\n"
+"    [ { UNION | INTERSECT | EXCEPT } [ ALL ] SELECT句 ]\n"
+"    [ ORDER BY expression [ ASC | DESC | USING 演算子名 ] [ NULLS { FIRST | "
 "LAST } ] [, ...] ]\n"
-"    [ LIMIT { count | ALL } ]\n"
-"    [ OFFSET start ]\n"
-"    [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]\n"
+"    [ LIMIT { 行数 | ALL } ]\n"
+"    [ OFFSET 開始行番号 [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ 行数 ] { ROW | ROWS } ONLY ]\n"
+"    [ FOR { UPDATE | SHARE } [ OF テーブル名 [, ...] ] [ NOWAIT ] [...] ]\n"
 "\n"
-"where from_item can be one of:\n"
+"FROM項目は以下の通り：\n"
 "\n"
-"    [ ONLY ] table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]\n"
-"    ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]\n"
-"    function_name ( [ argument [, ...] ] ) [ AS ] alias [ ( column_alias "
-"[, ...] | column_definition [, ...] ) ]\n"
-"    function_name ( [ argument [, ...] ] ) AS ( column_definition [, ...] )\n"
-"    from_item [ NATURAL ] join_type from_item [ ON join_condition | USING "
-"( join_column [, ...] ) ]"
+"    [ ONLY ] テーブル名 [ * ] [ [ AS ] 別名 [ ( カラム別名 [, ...] ) ] ]\n"
+"    ( SELECT句 ) [ AS ] 別名 [ ( カラム別名 [, ...] ) ]\n"
+"    WITHクエリー名 [ [ AS ] 別名 [ ( カラム別名 [, ...] ) ] ]\n"
+"    関数名 ( [ 引数 [, ...] ] ) [ AS ] 別名 [ ( カラム別名 "
+"[, ...] | カラム定義 [, ...] ) ]\n"
+"    関数名 ( [ 引数 [, ...] ] ) AS ( カラム定義 [, ...] )\n"
+"    FROM項目 [ NATURAL ] JOINタイプ FROM項目 [ ON JOIN条件 | USING "
+"( JOIN対象カラム [, ...] ) ]\n"
+"\n"
+"WITHクエリーは以下の通り：\n"
+"\n"
+"    WITHクエリー名 [ ( カラム名 [, ...] ) ] AS ( SELECT句 )\n"
+"\n"
+"TABLE { [ ONLY ] テーブル名 [ * ] | WITHクエリー名 }"
 msgstr ""
 "SELECT [ ALL | DISTINCT [ ON ( 評価式 [, ...] ) ] ]\n"
 "    * | 評価式 [ AS 出力項目名 ] [, ...]\n"
@@ -3994,22 +4352,26 @@ msgstr ""
 "    FROM項目 [ NATURAL ] JOINタイプ FROM項目 [ ON JOIN条件 | USING ( JOIN対象"
 "カラム [, ...] ) ]"
 
-#: sql_help.h:490
+#: sql_help.h:526
 msgid ""
+"[ WITH [ RECURSIVE ] with_query [, ...] ]\n"
 "SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]\n"
-"    * | expression [ AS output_name ] [, ...]\n"
+"    * | expression [ [ AS ] output_name ] [, ...]\n"
 "    INTO [ TEMPORARY | TEMP ] [ TABLE ] new_table\n"
 "    [ FROM from_item [, ...] ]\n"
 "    [ WHERE condition ]\n"
 "    [ GROUP BY expression [, ...] ]\n"
 "    [ HAVING condition [, ...] ]\n"
+"    [ WINDOW window_name AS ( window_definition ) [, ...] ]\n"
 "    [ { UNION | INTERSECT | EXCEPT } [ ALL ] select ]\n"
 "    [ ORDER BY expression [ ASC | DESC | USING operator ] [ NULLS { FIRST | "
 "LAST } ] [, ...] ]\n"
 "    [ LIMIT { count | ALL } ]\n"
-"    [ OFFSET start ]\n"
+"    [ OFFSET start [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ count ] { ROW | ROWS } ONLY ]\n"
 "    [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]"
 msgstr ""
+"[ WITH [ RECURSIVE ] WITHクエリー [, ...] ]\n"
 "SELECT [ ALL | DISTINCT [ ON ( 評価式 [, ...] ) ] ]\n"
 "    * | 評価式 [ AS 出力項目名 ] [, ...]\n"
 "    INTO [ TEMPORARY | TEMP ] [ TABLE ] 新しいテーブル名\n"
@@ -4017,18 +4379,20 @@ msgstr ""
 "    [ WHERE 条件 ]\n"
 "    [ GROUP BY 評価式 [, ...] ]\n"
 "    [ HAVING 条件 [, ...] ]\n"
+"    [ WINDOW ウィンドウ名 AS ( ウィンドウ定義 ) [, ...] ]\n"
 "    [ { UNION | INTERSECT | EXCEPT } [ ALL ] SELECT句 ]\n"
 "    [ ORDER BY 評価式 [ ASC | DESC | USING 演算子 ] [ NULLS { FIRST | "
 "LAST } ] [, ...] ]\n"
 "    [ LIMIT { 行数 | ALL } ]\n"
-"    [ OFFSET 開始番号 ]\n"
+"    [ OFFSET 開始行番号 [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ 行数 ] { ROW | ROWS } ONLY ]\n"
 "    [ FOR { UPDATE | SHARE } [ OF テーブル名 [, ...] ] [ NOWAIT ] [...] ]"
 
-#: sql_help.h:493
+#: sql_help.h:529
 msgid "change a run-time parameter"
 msgstr "実行時パラメータを変更する"
 
-#: sql_help.h:494
+#: sql_help.h:530
 msgid ""
 "SET [ SESSION | LOCAL ] configuration_parameter { TO | = } { value | 'value' "
 "| DEFAULT }\n"
@@ -4037,19 +4401,19 @@ msgstr ""
 "SET [ SESSION | LOCAL ] 設定パラメータ名 { TO | = } { 値 | '値' | DEFAULT }\n"
 "SET [ SESSION | LOCAL ] TIME ZONE { タイムゾーン | LOCAL | DEFAULT }"
 
-#: sql_help.h:497
+#: sql_help.h:533
 msgid "set constraint checking modes for the current transaction"
 msgstr "現在のトランザクションに対して制約モードを設定する"
 
-#: sql_help.h:498
+#: sql_help.h:534
 msgid "SET CONSTRAINTS { ALL | name [, ...] } { DEFERRED | IMMEDIATE }"
 msgstr "SET CONSTRAINTS { ALL | 制約名 [, ...] } { DEFERRED | IMMEDIATE }"
 
-#: sql_help.h:501
+#: sql_help.h:537
 msgid "set the current user identifier of the current session"
 msgstr "現在のセッションにおける現在のユーザ識別を設定する"
 
-#: sql_help.h:502
+#: sql_help.h:538
 msgid ""
 "SET [ SESSION | LOCAL ] ROLE rolename\n"
 "SET [ SESSION | LOCAL ] ROLE NONE\n"
@@ -4059,7 +4423,7 @@ msgstr ""
 "SET [ SESSION | LOCAL ] ROLE NONE\n"
 "RESET ROLE"
 
-#: sql_help.h:505
+#: sql_help.h:541
 msgid ""
 "set the session user identifier and the current user identifier of the "
 "current session"
@@ -4067,7 +4431,7 @@ msgstr ""
 "セッションのユーザ識別、および現在のセッションにおける現在のユーザ識別を設定"
 "する"
 
-#: sql_help.h:506
+#: sql_help.h:542
 msgid ""
 "SET [ SESSION | LOCAL ] SESSION AUTHORIZATION username\n"
 "SET [ SESSION | LOCAL ] SESSION AUTHORIZATION DEFAULT\n"
@@ -4077,11 +4441,11 @@ msgstr ""
 "SET [ SESSION | LOCAL ] SESSION AUTHORIZATION DEFAULT\n"
 "RESET SESSION AUTHORIZATION"
 
-#: sql_help.h:509
+#: sql_help.h:545
 msgid "set the characteristics of the current transaction"
 msgstr "現在のトランザクションの特性を設定します"
 
-#: sql_help.h:510
+#: sql_help.h:546
 msgid ""
 "SET TRANSACTION transaction_mode [, ...]\n"
 "SET SESSION CHARACTERISTICS AS TRANSACTION transaction_mode [, ...]\n"
@@ -4101,11 +4465,11 @@ msgstr ""
 "UNCOMMITTED }\n"
 "    READ WRITE | READ ONLY"
 
-#: sql_help.h:513
+#: sql_help.h:549
 msgid "show the value of a run-time parameter"
 msgstr "実行時パラメータの値を表示する"
 
-#: sql_help.h:514
+#: sql_help.h:550
 msgid ""
 "SHOW name\n"
 "SHOW ALL"
@@ -4113,7 +4477,7 @@ msgstr ""
 "SHOW パラメータ名\n"
 "SHOW ALL"
 
-#: sql_help.h:518
+#: sql_help.h:554
 msgid ""
 "START TRANSACTION [ transaction_mode [, ...] ]\n"
 "\n"
@@ -4131,27 +4495,31 @@ msgstr ""
 "UNCOMMITTED }\n"
 "    READ WRITE | READ ONLY"
 
-#: sql_help.h:521
+#: sql_help.h:561
 msgid "empty a table or set of tables"
 msgstr "テーブルもしくはテーブルのセットを 0 件に切り詰める"
 
-#: sql_help.h:522
-msgid "TRUNCATE [ TABLE ] name [, ...] [ CASCADE | RESTRICT ]"
-msgstr "TRUNCATE [ TABLE ] テーブル名 [, ...] [ CASCADE | RESTRICT ]"
+#: sql_help.h:562
+msgid ""
+"TRUNCATE [ TABLE ] [ ONLY ] name [, ... ]\n"
+"    [ RESTART IDENTITY | CONTINUE IDENTITY ] [ CASCADE | RESTRICT ]"
+msgstr ""
+"TRUNCATE [ TABLE ] [ ONLY ] テーブル名 [, ... ]\n"
+"    [ RESTART IDENTITY | CONTINUE IDENTITY ] [ CASCADE | RESTRICT ]"
 
-#: sql_help.h:525
+#: sql_help.h:565
 msgid "stop listening for a notification"
 msgstr "通知メッセージの監視を中止する"
 
-#: sql_help.h:526
+#: sql_help.h:566
 msgid "UNLISTEN { name | * }"
 msgstr "UNLISTEN { 通知メッセージ名 | * }"
 
-#: sql_help.h:529
+#: sql_help.h:569
 msgid "update rows of a table"
 msgstr "テーブルの行を更新する"
 
-#: sql_help.h:530
+#: sql_help.h:570
 msgid ""
 "UPDATE [ ONLY ] table [ [ AS ] alias ]\n"
 "    SET { column = { expression | DEFAULT } |\n"
@@ -4159,20 +4527,21 @@ msgid ""
 "[, ...]\n"
 "    [ FROM fromlist ]\n"
 "    [ WHERE condition | WHERE CURRENT OF cursor_name ]\n"
-"    [ RETURNING * | output_expression [ AS output_name ] [, ...] ]"
+"    [ RETURNING * | output_expression [ [ AS ] output_name ] [, ...] ]"
 msgstr ""
 "UPDATE [ ONLY ] テーブル名 [ [ AS ] 別名 ]\n"
 "    SET { カラム名 = { 評価式 | DEFAULT } |\n"
-"          ( カラム名 [, ...] ) = ( { 評価式 | DEFAULT } [, ...] ) } [, ...]\n"
+"          ( カラム名 [, ...] ) = ( { 評価式 | DEFAULT } [, ...] ) } "
+"[, ...]\n"
 "    [ FROM FROM項目並び ]\n"
 "    [ WHERE 条件 | WHERE CURRENT OF カーソル名 ]\n"
 "    [ RETURNING * | 出力評価式 [ AS 出力名 ] [, ...] ]"
 
-#: sql_help.h:533
+#: sql_help.h:573
 msgid "garbage-collect and optionally analyze a database"
 msgstr "ガーベジコレクションを行い、オプションでデータベースの分析をします"
 
-#: sql_help.h:534
+#: sql_help.h:574
 msgid ""
 "VACUUM [ FULL ] [ FREEZE ] [ VERBOSE ] [ table ]\n"
 "VACUUM [ FULL ] [ FREEZE ] [ VERBOSE ] ANALYZE [ table [ (column "
@@ -4182,73 +4551,75 @@ msgstr ""
 "VACUUM [ FULL ] [ FREEZE ] [ VERBOSE ] ANALYZE [ テーブル名 [ (カラム名 "
 "[, ...] ) ] ]"
 
-#: sql_help.h:537
+#: sql_help.h:577
 msgid "compute a set of rows"
 msgstr "ロールのセットを計算します"
 
-#: sql_help.h:538
+#: sql_help.h:578
 msgid ""
 "VALUES ( expression [, ...] ) [, ...]\n"
 "    [ ORDER BY sort_expression [ ASC | DESC | USING operator ] [, ...] ]\n"
 "    [ LIMIT { count | ALL } ]\n"
-"    [ OFFSET start ]"
+"    [ OFFSET start [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ count ] { ROW | ROWS } ONLY ]"
 msgstr ""
-"VALUES ( 表現 [, ...] ) [, ...]\n"
-"    [ ORDER BY ソート表現 [ ASC | DESC | USING 演算子 ] [, ...] ]\n"
+"VALUES ( 評価式 [, ...] ) [, ...]\n"
+"    [ ORDER BY ソート評価式 [ ASC | DESC | USING 演算子 ] [, ...] ]\n"
 "    [ LIMIT { 行数 | ALL } ]\n"
-"    [ OFFSET 開始行番号 ]"
+"    [ OFFSET 開始行番号 [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ 行数 ] { ROW | ROWS } ONLY ]"
 
-#: ../../port/exec.c:192 ../../port/exec.c:306 ../../port/exec.c:349
+#: ../../port/exec.c:195 ../../port/exec.c:309 ../../port/exec.c:352
 #, c-format
 msgid "could not identify current directory: %s"
 msgstr "カレントディレクトリ %s を取得できませんでした。"
 
-#: ../../port/exec.c:211
+#: ../../port/exec.c:214
 #, c-format
 msgid "invalid binary \"%s\""
 msgstr "\"%s\" は有効なバイナリファイルではありません。"
 
-#: ../../port/exec.c:260
+#: ../../port/exec.c:263
 #, c-format
 msgid "could not read binary \"%s\""
 msgstr "バイナリファイル \"%s\" を読み込めませんでした。"
 
-#: ../../port/exec.c:267
+#: ../../port/exec.c:270
 #, c-format
 msgid "could not find a \"%s\" to execute"
 msgstr "実行に必要な \"%s\" が見つかりません。"
 
-#: ../../port/exec.c:322 ../../port/exec.c:358
+#: ../../port/exec.c:325 ../../port/exec.c:361
 #, c-format
 msgid "could not change directory to \"%s\""
 msgstr "ディレクトリを \"%s\" に変更できませんでした。"
 
-#: ../../port/exec.c:337
+#: ../../port/exec.c:340
 #, c-format
 msgid "could not read symbolic link \"%s\""
 msgstr "シンボリックリンク \"%s\" を読み込めませんでした。"
 
-#: ../../port/exec.c:583
+#: ../../port/exec.c:586
 #, c-format
 msgid "child process exited with exit code %d"
 msgstr "子プロセスが終了コード %d で終了しました。"
 
-#: ../../port/exec.c:587
+#: ../../port/exec.c:590
 #, c-format
 msgid "child process was terminated by exception 0x%X"
 msgstr "子プロセスが例外 0x%X で終了させられました。"
 
-#: ../../port/exec.c:596
+#: ../../port/exec.c:599
 #, c-format
 msgid "child process was terminated by signal %s"
 msgstr "子プロセスがシグナル %s で終了させられました。"
 
-#: ../../port/exec.c:599
+#: ../../port/exec.c:602
 #, c-format
 msgid "child process was terminated by signal %d"
 msgstr "子プロセスがシグナル %d で終了させられました。"
 
-#: ../../port/exec.c:603
+#: ../../port/exec.c:606
 #, c-format
 msgid "child process exited with unrecognized status %d"
 msgstr "子プロセスが認識できないステータス %d により終了しました。"
