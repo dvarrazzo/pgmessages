@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PostgreSQL package.
 # Peter Eisentraut <peter_e@gmx.net>, 2009.
 #
-# $Id: plpgsql.po,v 1.4 2009/02/23 10:35:00 petere Exp $
+# $Id: plpgsql.po,v 1.5 2009/03/24 07:40:13 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-02-23 01:23+0000\n"
-"PO-Revision-Date: 2009-02-23 12:32+0200\n"
+"POT-Creation-Date: 2009-03-23 23:22+0000\n"
+"PO-Revision-Date: 2009-03-24 09:38+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,9 @@ msgstr "PL/pgSQL-Funktionen können Typ %s nicht annehmen"
 #: pl_comp.c:501
 #, c-format
 msgid "could not determine actual return type for polymorphic function \"%s\""
-msgstr "konnte den tatsächlichen Rückgabetyp der polymorphischen Funktion »%s« nicht ermitteln"
+msgstr ""
+"konnte den tatsächlichen Rückgabetyp der polymorphischen Funktion »%s« nicht "
+"ermitteln"
 
 #: pl_comp.c:533
 msgid "trigger functions can only be called as triggers"
@@ -103,7 +105,9 @@ msgstr "unbekannte Ausnahmebedingung »%s«"
 #, c-format
 msgid ""
 "could not determine actual argument type for polymorphic function \"%s\""
-msgstr "konnte den tatsächlichen Argumenttyp der polymorphischen Funktion »%s« nicht ermitteln"
+msgstr ""
+"konnte den tatsächlichen Argumenttyp der polymorphischen Funktion »%s« nicht "
+"ermitteln"
 
 #: pl_exec.c:234 pl_exec.c:505
 msgid "during initialization of execution state"
@@ -123,7 +127,7 @@ msgstr "CONTINUE kann nicht außerhalb einer Schleife verwendet werden"
 
 #: pl_exec.c:331 pl_exec.c:678
 msgid "RAISE without parameters cannot be used outside an exception handler"
-msgstr ""
+msgstr "RAISE ohne Parameter kann nicht außerhalb einer Ausnahmebehandlung verwendet werden"
 
 #: pl_exec.c:335
 msgid "control reached end of function without RETURN"
@@ -158,7 +162,7 @@ msgstr "Triggerprozedur kann keine Ergebnismenge zurückgeben"
 #: pl_exec.c:709
 msgid ""
 "returned row structure does not match the structure of the triggering table"
-msgstr ""
+msgstr "zurückgegebene Zeilenstruktur stimmt nicht mit der Struktur der Tabelle, die den Trigger ausgelöst hat, überein"
 
 #. translator: last %s is a phrase such as "during statement block local variable initialization"
 #: pl_exec.c:769
@@ -190,7 +194,7 @@ msgstr ""
 #: pl_exec.c:942
 #, c-format
 msgid "variable \"%s\" declared NOT NULL cannot default to NULL"
-msgstr ""
+msgstr "Variable »%s« ist als NOT NULL deklariert und kann daher nicht den Ausgangswert NULL haben"
 
 #: pl_exec.c:990
 msgid "during statement block entry"
@@ -214,11 +218,11 @@ msgstr ""
 
 #: pl_exec.c:1674
 msgid "lower bound of FOR loop cannot be null"
-msgstr ""
+msgstr "Untergrenze einer FOR-Schleife darf nicht NULL sein"
 
 #: pl_exec.c:1689
 msgid "upper bound of FOR loop cannot be null"
-msgstr ""
+msgstr "Obergrenze einer FOR-Schleife darf nicht NULL sein"
 
 #: pl_exec.c:1706
 msgid "BY value of FOR loop cannot be null"
@@ -235,7 +239,7 @@ msgstr "Cursor »%s« ist bereits in Verwendung"
 
 #: pl_exec.c:1907 pl_exec.c:3216
 msgid "arguments given for cursor without arguments"
-msgstr ""
+msgstr "einem Cursor ohne Argumente wurden Argumente übergeben"
 
 #: pl_exec.c:1926 pl_exec.c:3235
 msgid "arguments required for cursor"
@@ -243,7 +247,8 @@ msgstr "Cursor benötigt Argumente"
 
 #: pl_exec.c:2144 gram.y:2404
 msgid "cannot use RETURN NEXT in a non-SETOF function"
-msgstr "RETURN NEXT kann nur in einer Funktion mit SETOF-Rückgabetyp verwendet werden"
+msgstr ""
+"RETURN NEXT kann nur in einer Funktion mit SETOF-Rückgabetyp verwendet werden"
 
 #: pl_exec.c:2168 pl_exec.c:2228
 msgid "wrong result type supplied in RETURN NEXT"
@@ -268,7 +273,9 @@ msgstr "RETURN NEXT muss einen Parameter haben"
 
 #: pl_exec.c:2285 gram.y:2451
 msgid "cannot use RETURN QUERY in a non-SETOF function"
-msgstr "RETURN QUERY kann nur in einer Funktion mit SETOF-Rückgabetyp verwendet werden"
+msgstr ""
+"RETURN QUERY kann nur in einer Funktion mit SETOF-Rückgabetyp verwendet "
+"werden"
 
 #: pl_exec.c:2304
 msgid "structure of query does not match function result type"
@@ -306,7 +313,8 @@ msgstr "Transaktionen können in PL/pgSQL nicht begonnen/beendet werden"
 
 #: pl_exec.c:2685 pl_exec.c:2991
 msgid "Use a BEGIN block with an EXCEPTION clause instead."
-msgstr "Verwenden Sie stattdessen einen BEGIN-Block mit einer EXCEPTION-Klausel."
+msgstr ""
+"Verwenden Sie stattdessen einen BEGIN-Block mit einer EXCEPTION-Klausel."
 
 #: pl_exec.c:2836 pl_exec.c:3015
 msgid "INTO used with a command that cannot return data"
@@ -355,7 +363,9 @@ msgstr "relative oder absolute Cursorposition ist NULL"
 #: pl_exec.c:3460
 #, c-format
 msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
-msgstr "NULL-Wert kann der Variable »%s« nicht zugewiesen werden, weil sie als NOT NULL deklariert ist"
+msgstr ""
+"NULL-Wert kann der Variable »%s« nicht zugewiesen werden, weil sie als NOT "
+"NULL deklariert ist"
 
 #: pl_exec.c:3505
 msgid "cannot assign non-composite value to a row variable"
@@ -377,7 +387,7 @@ msgstr "Anzahl der Arraydimensionen (%d) überschreitet erlaubtes Maximum (%d)"
 
 #: pl_exec.c:3731
 msgid "subscripted object is not an array"
-msgstr ""
+msgstr "Objekt mit Arrayindex ist kein Array"
 
 #: pl_exec.c:3754
 msgid "array subscript in assignment must not be null"
@@ -420,18 +430,22 @@ msgstr "Anfrage »%s« ist kein SELECT"
 
 #: pl_exec.c:5126
 msgid "N/A (dropped column)"
-msgstr ""
+msgstr "k.A. (gelöschte Spalte)"
 
 #: pl_exec.c:5137
 #, c-format
 msgid ""
 "Number of returned columns (%d) does not match expected column count (%d)."
-msgstr "Die Anzahl der zurückgegebenen Spalten (%d) stimmt nicht mit der erwarteten Spaltenanzahl (%d) überein."
+msgstr ""
+"Die Anzahl der zurückgegebenen Spalten (%d) stimmt nicht mit der erwarteten "
+"Spaltenanzahl (%d) überein."
 
 #: pl_exec.c:5146
 #, c-format
 msgid "Returned type %s does not match expected type %s in column \"%s\"."
-msgstr "Der zurückgegebene Typ %s stimmt nicht mit dem erwarteten Typ %s in Spalte »%s« überein."
+msgstr ""
+"Der zurückgegebene Typ %s stimmt nicht mit dem erwarteten Typ %s in Spalte »%"
+"s« überein."
 
 #: gram.y:359
 msgid "row or record variable cannot be CONSTANT"
@@ -558,11 +572,14 @@ msgstr "FROM oder IN erwartet"
 msgid ""
 "RETURN cannot have a parameter in function returning set; use RETURN NEXT or "
 "RETURN QUERY"
-msgstr "RETURN kann keinen Parameter haben in einer Funktion mit Mengenergebnis; verwenden Sie RETURN NEXT oder RETURN QUERY"
+msgstr ""
+"RETURN kann keinen Parameter haben in einer Funktion mit Mengenergebnis; "
+"verwenden Sie RETURN NEXT oder RETURN QUERY"
 
 #: gram.y:2353
 msgid "RETURN cannot have a parameter in function with OUT parameters"
-msgstr "RETURN kann keinen Parameter haben in einer Funktion mit OUT-Parametern"
+msgstr ""
+"RETURN kann keinen Parameter haben in einer Funktion mit OUT-Parametern"
 
 #: gram.y:2359
 msgid "RETURN cannot have a parameter in function returning void"
