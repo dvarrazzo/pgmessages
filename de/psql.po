@@ -1,7 +1,7 @@
 # German message translation file for psql
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2009.
 #
-# $Id: psql.po,v 1.23 2009/03/13 22:32:38 petere Exp $
+# $Id: psql.po,v 1.24 2009/03/24 14:38:14 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-03-13 19:13+0000\n"
-"PO-Revision-Date: 2009-03-14 00:31+0200\n"
+"POT-Creation-Date: 2009-03-24 09:13+0000\n"
+"PO-Revision-Date: 2009-03-24 16:37+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr "kein Anfragepuffer\n"
 
 #: command.c:524
 msgid "No changes."
-msgstr ""
+msgstr "keine Änderungen"
 
 #: command.c:578
 #, c-format
@@ -171,7 +171,7 @@ msgstr " als Benutzer »%s«"
 #: command.c:1330
 #, c-format
 msgid "%s (%s, server %s)\n"
-msgstr ""
+msgstr "%s (%s, Server %s)\n"
 
 #: command.c:1337
 #, c-format
@@ -483,7 +483,9 @@ msgstr "konnte aktuellen Benutzernamen nicht ermitteln: %s\n"
 msgid ""
 "psql is the PostgreSQL interactive terminal.\n"
 "\n"
-msgstr "psql ist  das interaktive PostgreSQL-Terminal.\n\n"
+msgstr ""
+"psql ist  das interaktive PostgreSQL-Terminal.\n"
+"\n"
 
 #: help.c:87
 #, c-format
@@ -493,9 +495,9 @@ msgstr "Aufruf:\n"
 #: help.c:88
 #, c-format
 msgid ""
-"  psql [OPTIONS]... [DBNAME [USERNAME]]\n"
+"  psql [OPTION]... [DBNAME [USERNAME]]\n"
 "\n"
-msgstr ""
+msgstr "  psql [OPTION]... [DBNAME [BENUTZERNAME]]\n\n"
 
 #: help.c:90
 #, c-format
@@ -510,21 +512,25 @@ msgid ""
 msgstr "  -c, --command=ANWEISUNG   einzelne Anweisung ausführen und beenden\n"
 
 #: help.c:96
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"  -d, --dbnme=DBNAME       database name to connect to (default: \"%s\")\n"
+"  -d, --dbname=DBNAME      database name to connect to (default: \"%s\")\n"
 msgstr ""
-"  -d DBNAME       Datenbank, zu der verbunden werden soll (Standard: »%s«)\n"
+"  -d, --dbname=DBNAME      Datenbank, zu der verbunden werden soll\n"
+"                           (Standard: »%s«)\n"
 
 #: help.c:97
 #, c-format
 msgid "  -f, --file=FILENAME      execute commands from file, then exit\n"
-msgstr "  -f, --file=DATEINAME     Anweisungen aus Datei ausführen und danach beenden\n"
+msgstr ""
+"  -f, --file=DATEINAME     Anweisungen aus Datei ausführen und danach "
+"beenden\n"
 
 #: help.c:98
 #, c-format
 msgid "  -l, --list               list available databases, then exit\n"
-msgstr "  -l, --list               verfügbare Datenbanken auflisten und beenden\n"
+msgstr ""
+"  -l, --list               verfügbare Datenbanken auflisten und beenden\n"
 
 #: help.c:99
 #, c-format
@@ -541,13 +547,13 @@ msgid "  -X, --no-psqlrc          do not read startup file (~/.psqlrc)\n"
 msgstr "  -X, --no-psqlrc          Startdatei (~/.psqlrc) nicht lesen\n"
 
 #: help.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -1 (\"one\"), --single-transaction\n"
 "                           execute command file as a single transaction\n"
 msgstr ""
-"  -1, --single-transaction\n"
-"                           Wiederherstellung als einzelne Transaktion\n"
+"  -1 (»eins«), --single-transaction\n"
+"                           Befehlsdatei als eine einzige Transaktion ausführen\n"
 
 #: help.c:104
 #, c-format
@@ -565,7 +571,9 @@ msgstr ""
 msgid ""
 "\n"
 "Input and output options:\n"
-msgstr "\nEingabe- und Ausgabeoptionen:\n"
+msgstr ""
+"\n"
+"Eingabe- und Ausgabeoptionen:\n"
 
 #: help.c:108
 #, c-format
@@ -575,13 +583,16 @@ msgstr "  -a, --echo-all           Skript-Inhalt wiedergeben\n"
 #: help.c:109
 #, c-format
 msgid "  -e, --echo-queries       echo commands sent to server\n"
-msgstr "  -e, --echo-queries       an den Server geschickte Anweisungen zeigen\n"
+msgstr ""
+"  -e, --echo-queries       an den Server geschickte Anweisungen zeigen\n"
 
 #: help.c:110
 #, c-format
 msgid ""
 "  -E, --echo-hidden        display queries that internal commands generate\n"
-msgstr "  -E, --echo-hidden        von internen Anweisungen erzeugte Anfragen zeigen\n"
+msgstr ""
+"  -E, --echo-hidden        von internen Anweisungen erzeugte Anfragen "
+"zeigen\n"
 
 #: help.c:111
 #, c-format
@@ -594,12 +605,15 @@ msgstr ""
 #, c-format
 msgid ""
 "  -n, --no-readline        disable enhanced command line editing (readline)\n"
-msgstr "  -n, --no-readline        erweiterte Zeilenbearbeitung (Readline) ausschalten\n"
+msgstr ""
+"  -n, --no-readline        erweiterte Zeilenbearbeitung (Readline) "
+"ausschalten\n"
 
 #: help.c:113
 #, c-format
 msgid "  -o, --output=FILENAME    send query results to file (or |pipe)\n"
-msgstr "  -o, --output=DATEINAME   Anfrageergebnisse in Datei (oder |Pipe) senden\n"
+msgstr ""
+"  -o, --output=DATEINAME   Anfrageergebnisse in Datei (oder |Pipe) senden\n"
 
 #: help.c:114
 #, c-format
@@ -612,21 +626,26 @@ msgstr ""
 #: help.c:115
 #, c-format
 msgid "  -s, --single-step        single-step mode (confirm each query)\n"
-msgstr "  -s, --single-step        Einzelschrittmodus (jede Anfrage bestätigen)\n"
+msgstr ""
+"  -s, --single-step        Einzelschrittmodus (jede Anfrage bestätigen)\n"
 
 #: help.c:116
 #, c-format
 msgid ""
 "  -S, --single-line        single-line mode (end of line terminates SQL "
 "command)\n"
-msgstr "  -S, --single-line        Einzelzeilenmodus (Zeilenende beendet SQL-Anweisung)\n"
+msgstr ""
+"  -S, --single-line        Einzelzeilenmodus (Zeilenende beendet SQL-"
+"Anweisung)\n"
 
 #: help.c:118
 #, c-format
 msgid ""
 "\n"
 "Output format options:\n"
-msgstr "\nAusgabeformatoptionen:\n"
+msgstr ""
+"\n"
+"Ausgabeformatoptionen:\n"
 
 #: help.c:119
 #, c-format
@@ -666,16 +685,17 @@ msgstr ""
 "                           Satztrennzeichen setzen (Standard: Newline)\n"
 
 #: help.c:127
-#, fuzzy, c-format
+#, c-format
 msgid "  -t, --tuples-only        print rows only\n"
-msgstr "  -t, --table=TABELLE       reindiziere nur eine bestimmte Tabelle\n"
+msgstr "  -t, --tuples-only        nur Datenzeilen ausgeben\n"
 
 #: help.c:128
 #, c-format
 msgid ""
 "  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, "
 "border)\n"
-msgstr "  -T, --table-attr=TEXT    HTML »table«-Tag-Attribute setzen (z.B. width)\n"
+msgstr ""
+"  -T, --table-attr=TEXT    HTML »table«-Tag-Attribute setzen (z.B. width)\n"
 
 #: help.c:129
 #, c-format
@@ -761,11 +781,12 @@ msgid "  \\copyright     show PostgreSQL usage and distribution terms\n"
 msgstr "  \\copyright     PostgreSQL-Urheberrechtsinformationen zeigen\n"
 
 #: help.c:175
-#, fuzzy, c-format
+#, c-format
 msgid "  \\g [FILE] or ; execute query (and send results to file or |pipe)\n"
 msgstr ""
-"  \\g [DATEI]     SQL-Anweisung ausführen (und Ergebnis in Datei oder |Pipe\n"
-"                 schreiben)\n"
+"  \\g [DATEI] oder ;\n"
+"                  SQL-Anweisung ausführen (und Ergebnis in Datei oder |Pipe\n"
+"                  schreiben)\n"
 
 #: help.c:176
 #, c-format
@@ -840,9 +861,7 @@ msgstr ""
 #: help.c:195
 #, fuzzy, c-format
 msgid "  \\qecho [STRING] write string to query output stream (see \\o)\n"
-msgstr ""
-"  \\qecho [TEXT]  Text auf Ausgabestrom für Anfrageergebnisse schreiben "
-"(siehe \\o)\n"
+msgstr "  \\qecho [TEXT]  Text auf Ausgabestrom für Anfrageergebnisse schreiben (siehe \\o)\n"
 
 #: help.c:198
 #, c-format
@@ -1239,7 +1258,7 @@ msgid "You are using psql, the command-line interface to PostgreSQL."
 msgstr ""
 
 #: mainloop.c:183
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Type:  \\copyright for distribution terms\n"
 "       \\h for help with SQL commands\n"
@@ -1252,7 +1271,6 @@ msgstr ""
 "                \\? für Hilfe über interne Anweisungen\n"
 "                \\g oder Semikolon, um eine Anfrage auszuführen\n"
 "                \\q um zu beenden\n"
-"\n"
 
 #: print.c:973
 #, c-format
@@ -1299,7 +1317,7 @@ msgstr "%s: konnte Logdatei »%s« nicht öffnen: %s\n"
 msgid ""
 "Type \"help\" for help.\n"
 "\n"
-msgstr ""
+msgstr "Geben Sie »help« für Hilfe ein.\n\n"
 
 #: startup.c:430
 #, c-format
@@ -1428,14 +1446,12 @@ msgid "Encoding"
 msgstr "Kodierung"
 
 #: describe.c:480
-#, fuzzy
 msgid "Collation"
-msgstr "Pfad"
+msgstr "Sortierfolge"
 
 #: describe.c:481
-#, fuzzy
 msgid "Ctype"
-msgstr "Typ"
+msgstr "Zeichentyp"
 
 #: describe.c:494
 msgid "Tablespace"
@@ -1718,7 +1734,7 @@ msgstr "Superuser"
 
 #: describe.c:1875
 msgid "No inheritance"
-msgstr ""
+msgstr "keine Vererbung"
 
 #: describe.c:1878
 msgid "Create role"
@@ -1730,7 +1746,7 @@ msgstr "DB erzeugen"
 
 #: describe.c:1884
 msgid "Cannot login"
-msgstr ""
+msgstr "kann nicht einloggen"
 
 #: describe.c:1893
 msgid "No connections"
@@ -1747,7 +1763,7 @@ msgstr "%d Verbindungen"
 
 #: describe.c:1978
 msgid "special"
-msgstr "spezial"
+msgstr "speziell"
 
 #: describe.c:1985
 msgid "Table"
@@ -1824,9 +1840,9 @@ msgid "List of schemas"
 msgstr "Liste der Schemas"
 
 #: describe.c:2321 describe.c:2554 describe.c:2622 describe.c:2690
-#, fuzzy, c-format
+#, c-format
 msgid "The server (version %d.%d) does not support full text search.\n"
-msgstr "Diese Serverversion (%d) unterstützt keine Tablespaces.\n"
+msgstr "Der Server (Version %d.%d) unterstützt keine Volltextsuche.\n"
 
 #: describe.c:2355
 msgid "List of text search parsers"
@@ -1955,18 +1971,17 @@ msgstr ""
 "Parser: »%s«"
 
 #: describe.c:2888
-#, fuzzy, c-format
+#, c-format
 msgid "The server (version %d.%d) does not support foreign-data wrappers.\n"
-msgstr "Diese Serverversion (%d) unterstützt keine Tablespaces.\n"
+msgstr "Der Server (Version %d.%d) unterstützt keine Fremddaten-Wrapper.\n"
 
 #: describe.c:2900
 msgid "Validator"
 msgstr "Validator"
 
 #: describe.c:2924
-#, fuzzy
 msgid "List of foreign-data wrappers"
-msgstr "Liste der Datentypen"
+msgstr "Liste der Fremddaten-Wrapper"
 
 #: describe.c:2947
 #, fuzzy, c-format
@@ -1975,16 +1990,15 @@ msgstr "Diese Serverversion (%d) unterstützt keine Tablespaces.\n"
 
 #: describe.c:2959
 msgid "Foreign-data wrapper"
-msgstr ""
+msgstr "Fremddaten-Wrapper"
 
 #: describe.c:2971
 msgid "Version"
 msgstr "Version"
 
 #: describe.c:2990
-#, fuzzy
 msgid "List of foreign servers"
-msgstr "Liste der Konversionen"
+msgstr "Liste der Fremdserver"
 
 #: describe.c:3013
 #, fuzzy, c-format
@@ -2114,9 +2128,8 @@ msgstr ""
 "    SET SCHEMA neues_schema"
 
 #: sql_help.h:45
-#, fuzzy
 msgid "change the definition of a foreign-data wrapper"
-msgstr "ändert die Definition eines Triggers"
+msgstr "ändert die Definition eines Fremddaten-Wrappers"
 
 #: sql_help.h:46
 msgid ""
@@ -2125,6 +2138,10 @@ msgid ""
 "    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ]) ]\n"
 "ALTER FOREIGN DATA WRAPPER name OWNER TO new_owner"
 msgstr ""
+"ALTER FOREIGN DATA WRAPPER name\n"
+"    [ VALIDATOR valfunktion | NO VALIDATOR ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] option ['wert'] [, ... ]) ]\n"
+"ALTER FOREIGN DATA WRAPPER name OWNER TO neuer_eigentümer"
 
 #: sql_help.h:49
 msgid "change the definition of a function"
@@ -2358,9 +2375,8 @@ msgstr ""
 "ALTER SEQUENCE name SET SCHEMA neues_schema"
 
 #: sql_help.h:89
-#, fuzzy
 msgid "change the definition of a foreign server"
-msgstr "ändert die Definition eines Triggers"
+msgstr "ändert die Definition eines Fremdservers"
 
 #: sql_help.h:90
 msgid ""
@@ -2368,6 +2384,9 @@ msgid ""
 "    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] ) ]\n"
 "ALTER SERVER servername OWNER TO new_owner"
 msgstr ""
+"ALTER SERVER servername [ VERSION 'neue_version' ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] option ['wert'] [, ... ] ) ]\n"
+"ALTER SERVER servername OWNER TO neuer_eigentümer"
 
 #: sql_help.h:93
 msgid "change the definition of a table"
@@ -2550,12 +2569,12 @@ msgid "change the definition of a type"
 msgstr "ändert die Definition eines Typs"
 
 #: sql_help.h:122
-#, fuzzy
 msgid ""
 "ALTER TYPE name RENAME TO new_name\n"
 "ALTER TYPE name OWNER TO new_owner \n"
 "ALTER TYPE name SET SCHEMA new_schema"
 msgstr ""
+"ALTER TYPE name RENAME TO neuer_name\n"
 "ALTER TYPE name OWNER TO neuer_eigentümer\n"
 "ALTER TYPE name SET SCHEMA neues_schema"
 
@@ -2614,6 +2633,9 @@ msgid ""
 "    SERVER servername\n"
 "    OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] )"
 msgstr ""
+"ALTER USER MAPPING FOR { benutzername | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER servername\n"
+"    OPTIONS ( [ ADD | SET | DROP ] option ['wert'] [, ... ] )"
 
 #: sql_help.h:133
 msgid "change the definition of a view"
@@ -2627,6 +2649,11 @@ msgid ""
 "ALTER VIEW name RENAME TO new_name\n"
 "ALTER VIEW name SET SCHEMA new_schema"
 msgstr ""
+"ALTER VIEW name ALTER [ COLUMN ] spalte SET DEFAULT ausdruck\n"
+"ALTER VIEW name ALTER [ COLUMN ] spalte DROP DEFAULT\n"
+"ALTER VIEW name OWNER TO neuer_eigentümer\n"
+"ALTER VIEW name RENAME TO neuer_name\n"
+"ALTER VIEW name SET SCHEMA neues_schema"
 
 #: sql_help.h:137
 msgid "collect statistics about a database"
@@ -2679,13 +2706,12 @@ msgid "cluster a table according to an index"
 msgstr "clustert eine Tabelle nach einem Index"
 
 #: sql_help.h:154
-#, fuzzy
 msgid ""
 "CLUSTER [VERBOSE] tablename [ USING indexname ]\n"
 "CLUSTER [VERBOSE]"
 msgstr ""
-"CLUSTER tabellenname [ USING indexname ]\n"
-"CLUSTER"
+"CLUSTER [VERBOSE] tabellenname [ USING indexname ]\n"
+"CLUSTER [VERBOSE]"
 
 #: sql_help.h:157
 msgid "define or change the comment of an object"
@@ -2984,9 +3010,8 @@ msgstr ""
 "{ NOT NULL | NULL | CHECK (ausdruck) }"
 
 #: sql_help.h:197
-#, fuzzy
 msgid "define a new foreign-data wrapper"
-msgstr "definiert einen neuen Datentyp"
+msgstr "definiert einen neuen Fremddaten-Wrapper"
 
 #: sql_help.h:198
 msgid ""
@@ -2994,6 +3019,9 @@ msgid ""
 "    [ VALIDATOR valfunction | NO VALIDATOR ]\n"
 "    [ OPTIONS ( option 'value' [, ... ] ) ]"
 msgstr ""
+"CREATE FOREIGN DATA WRAPPER name\n"
+"    [ VALIDATOR valfunktion | NO VALIDATOR ]\n"
+"    [ OPTIONS ( option 'wert' [, ... ] ) ]"
 
 #: sql_help.h:201
 msgid "define a new function"
@@ -3253,9 +3281,8 @@ msgstr ""
 "    [ OWNED BY { tabelle.spalte | NONE } ]"
 
 #: sql_help.h:245
-#, fuzzy
 msgid "define a new foreign server"
-msgstr "definiert einen neuen Trigger"
+msgstr "definiert einen neuen Fremdserver"
 
 #: sql_help.h:246
 msgid ""
@@ -3263,6 +3290,9 @@ msgid ""
 "    FOREIGN DATA WRAPPER fdwname\n"
 "    [ OPTIONS ( option 'value' [, ... ] ) ]"
 msgstr ""
+"CREATE SERVER servername [ TYPE 'servertyp' ] [ VERSION 'serverversion' ]\n"
+"    FOREIGN DATA WRAPPER fdwname\n"
+"    [ OPTIONS ( option 'wert' [, ... ] ) ]"
 
 #: sql_help.h:249
 msgid "define a new table"
@@ -3592,6 +3622,9 @@ msgid ""
 "    SERVER servername\n"
 "    [ OPTIONS ( option 'value' [ , ... ] ) ]"
 msgstr ""
+"CREATE USER MAPPING FOR { benutzername | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER servername\n"
+"    [ OPTIONS ( option 'wert' [ , ... ] ) ]"
 
 #: sql_help.h:293
 msgid "define a new view"
@@ -3632,7 +3665,6 @@ msgid "delete rows of a table"
 msgstr "löscht Zeilen einer Tabelle"
 
 #: sql_help.h:306
-#, fuzzy
 msgid ""
 "DELETE FROM [ ONLY ] table [ [ AS ] alias ]\n"
 "    [ USING usinglist ]\n"
@@ -3642,7 +3674,7 @@ msgstr ""
 "DELETE FROM [ ONLY ] tabelle [ [ AS ] alias ]\n"
 "    [ USING using-liste ]\n"
 "    [ WHERE bedingung | WHERE CURRENT OF cursorname ]\n"
-"    [ RETURNING * | ausgabeausdruck [ AS ausgabename ] [, ...] ]"
+"    [ RETURNING * | ausgabeausdruck [ [ AS ] ausgabename ] [, ...] ]"
 
 #: sql_help.h:309
 msgid "discard session state"
@@ -3696,14 +3728,12 @@ msgid "DROP DOMAIN [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP DOMAIN [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:333
-#, fuzzy
 msgid "remove a foreign-data wrapper"
-msgstr "entfernt einen Datentyp"
+msgstr "entfernt einen Fremddaten-Wrapper"
 
 #: sql_help.h:334
-#, fuzzy
 msgid "DROP FOREIGN DATA WRAPPER [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
+msgstr "DROP FOREIGN DATA WRAPPER [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:337
 msgid "remove a function"
@@ -3821,9 +3851,8 @@ msgid "remove a foreign server descriptor"
 msgstr "entfernt eine Zeichensatzkonversion"
 
 #: sql_help.h:386
-#, fuzzy
 msgid "DROP SERVER [ IF EXISTS ] servername [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
+msgstr "DROP SERVER [ IF EXISTS ] servername [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:389
 msgid "remove a table"
@@ -3903,7 +3932,7 @@ msgstr ""
 msgid ""
 "DROP USER MAPPING [ IF EXISTS ] FOR { username | USER | CURRENT_USER | "
 "PUBLIC } SERVER servername"
-msgstr ""
+msgstr "DROP USER MAPPING [ IF EXISTS ] FOR { benutzername | USER | CURRENT_USER | PUBLIC } SERVER servername"
 
 #: sql_help.h:429
 msgid "remove a view"
@@ -4071,7 +4100,6 @@ msgid "create new rows in a table"
 msgstr "erzeugt neue Zeilen in einer Tabelle"
 
 #: sql_help.h:454
-#, fuzzy
 msgid ""
 "INSERT INTO table [ ( column [, ...] ) ]\n"
 "    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) [, ...] | "
@@ -4079,9 +4107,8 @@ msgid ""
 "    [ RETURNING * | output_expression [ [ AS ] output_name ] [, ...] ]"
 msgstr ""
 "INSERT INTO tabelle [ ( spalte [, ...] ) ]\n"
-"    { DEFAULT VALUES | VALUES ( { ausdruck | DEFAULT } [, ...] ) [, ...] | "
-"anfrage }\n"
-"    [ RETURNING * | ausgabeausdruck [ AS ausgabename ] [, ...] ]"
+"    { DEFAULT VALUES | VALUES ( { ausdruck | DEFAULT } [, ...] ) [, ...] | anfrage }\n"
+"    [ RETURNING * | ausgabeausdruck [ [ AS ] ausgabename ] [, ...] ]"
 
 #: sql_help.h:457
 msgid "listen for a notification"
@@ -4104,7 +4131,6 @@ msgid "lock a table"
 msgstr "sperrt eine Tabelle"
 
 #: sql_help.h:466
-#, fuzzy
 msgid ""
 "LOCK [ TABLE ] [ ONLY ] name [, ...] [ IN lockmode MODE ] [ NOWAIT ]\n"
 "\n"
@@ -4113,7 +4139,7 @@ msgid ""
 "    ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE\n"
 "    | SHARE | SHARE ROW EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE"
 msgstr ""
-"LOCK [ TABLE ] name [, ...] [ IN sperrmodus MODE ] [ NOWAIT ]\n"
+"LOCK [ TABLE ] [ ONLY ] name [, ...] [ IN sperrmodus MODE ] [ NOWAIT ]\n"
 "\n"
 "wobei sperrmodus Folgendes sein kann:\n"
 "\n"
@@ -4554,11 +4580,12 @@ msgid "empty a table or set of tables"
 msgstr "leert eine oder mehrere Tabellen"
 
 #: sql_help.h:562
-#, fuzzy
 msgid ""
 "TRUNCATE [ TABLE ] [ ONLY ] name [, ... ]\n"
 "    [ RESTART IDENTITY | CONTINUE IDENTITY ] [ CASCADE | RESTRICT ]"
-msgstr "TRUNCATE [ TABLE ] name [, ...] [ CASCADE | RESTRICT ]"
+msgstr ""
+"TRUNCATE [ TABLE ] [ ONLY ] name [, ... ]\n"
+"    [ RESTART IDENTITY | CONTINUE IDENTITY ] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:565
 msgid "stop listening for a notification"
@@ -4573,7 +4600,6 @@ msgid "update rows of a table"
 msgstr "aktualisiert Zeilen einer Tabelle"
 
 #: sql_help.h:570
-#, fuzzy
 msgid ""
 "UPDATE [ ONLY ] table [ [ AS ] alias ]\n"
 "    SET { column = { expression | DEFAULT } |\n"
@@ -4588,7 +4614,7 @@ msgstr ""
 "          ( spalte [, ...] ) = ( { ausdruck | DEFAULT } [, ...] ) } [, ...]\n"
 "    [ FROM from-list ]\n"
 "    [ WHERE bedingung | WHERE CURRENT OF cursorname ]\n"
-"    [ RETURNING * | ausgabeausdruck [ AS ausgabename ] [, ...] ]"
+"    [ RETURNING * | ausgabeausdruck [ [ AS ] ausgabename ] [, ...] ]"
 
 #: sql_help.h:573
 msgid "garbage-collect and optionally analyze a database"
@@ -4609,7 +4635,6 @@ msgid "compute a set of rows"
 msgstr "berechnet eine Zeilenmenge"
 
 #: sql_help.h:578
-#, fuzzy
 msgid ""
 "VALUES ( expression [, ...] ) [, ...]\n"
 "    [ ORDER BY sort_expression [ ASC | DESC | USING operator ] [, ...] ]\n"
@@ -4620,7 +4645,8 @@ msgstr ""
 "VALUES ( ausdruck [, ...] ) [, ...]\n"
 "    [ ORDER BY sortierausdruck [ ASC | DESC | USING operator ] [, ...] ]\n"
 "    [ LIMIT { anzahl | ALL } ]\n"
-"    [ OFFSET start ]"
+"    [ OFFSET start [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ anzahl ] { ROW | ROWS } ONLY ]"
 
 #: ../../port/exec.c:195 ../../port/exec.c:309 ../../port/exec.c:352
 #, c-format
@@ -4683,29 +4709,11 @@ msgstr "Kindprozess hat mit unbekanntem Status %d beendet"
 #~ msgid "General options:"
 #~ msgstr "Allgemeine Optionen:"
 
-#~ msgid "  -1 (\"one\")      execute command file as a single transaction"
-#~ msgstr "  -1 (»eins«)     Datei als einzelne Transaktion ausführen"
-
 #~ msgid "  --help          show this help, then exit"
 #~ msgstr "  --help          diese Hilfe anzeigen, dann beenden"
 
 #~ msgid "  --version       output version information, then exit"
 #~ msgstr "  --version       Versionsinformationen anzeigen, dann beenden"
-
-#~ msgid "  -t              print rows only (-P tuples_only)"
-#~ msgstr "  -t              nur Datenzeilen ausgeben (-P tuples_only)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Connection options:"
-#~ msgstr ""
-#~ "\n"
-#~ "Verbindungsoptionen:"
-
-#~ msgid ""
-#~ "  -W              force password prompt (should happen automatically)"
-#~ msgstr ""
-#~ "  -W              Passwortfrage erzwingen (sollte automatisch passieren)"
 
 #~ msgid ""
 #~ "  \\d{t|i|s|v|S} [PATTERN] (add \"+\" for more detail)\n"
@@ -4784,9 +4792,6 @@ msgstr "Kindprozess hat mit unbekanntem Status %d beendet"
 #~ "funktionieren.\n"
 #~ "\n"
 
-#~ msgid "Access privileges for database \"%s\""
-#~ msgstr "Zugriffsrechte für Datenbank »%s«"
-
 #~ msgid "?%c? \"%s.%s\""
 #~ msgstr "?%c? »%s.%s«"
 
@@ -4795,6 +4800,3 @@ msgstr "Kindprozess hat mit unbekanntem Status %d beendet"
 
 #~ msgid "no limit"
 #~ msgstr "keine Beschränkung"
-
-#~ msgid "ALTER VIEW name RENAME TO newname"
-#~ msgstr "ALTER VIEW name RENAME TO neuer_name"
