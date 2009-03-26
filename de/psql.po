@@ -1,7 +1,7 @@
 # German message translation file for psql
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2009.
 #
-# $Id: psql.po,v 1.24 2009/03/24 14:38:14 petere Exp $
+# $Id: psql.po,v 1.25 2009/03/26 10:08:00 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-03-24 09:13+0000\n"
-"PO-Revision-Date: 2009-03-24 16:37+0200\n"
+"POT-Creation-Date: 2009-03-26 05:13+0000\n"
+"PO-Revision-Date: 2009-03-26 12:06+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgid "no query buffer\n"
 msgstr "kein Anfragepuffer\n"
 
 #: command.c:524
-msgid "No changes."
+msgid "No changes"
 msgstr "keine Änderungen"
 
 #: command.c:578
@@ -497,7 +497,9 @@ msgstr "Aufruf:\n"
 msgid ""
 "  psql [OPTION]... [DBNAME [USERNAME]]\n"
 "\n"
-msgstr "  psql [OPTION]... [DBNAME [BENUTZERNAME]]\n\n"
+msgstr ""
+"  psql [OPTION]... [DBNAME [BENUTZERNAME]]\n"
+"\n"
 
 #: help.c:90
 #, c-format
@@ -553,7 +555,8 @@ msgid ""
 "                           execute command file as a single transaction\n"
 msgstr ""
 "  -1 (»eins«), --single-transaction\n"
-"                           Befehlsdatei als eine einzige Transaktion ausführen\n"
+"                           Befehlsdatei als eine einzige Transaktion "
+"ausführen\n"
 
 #: help.c:104
 #, c-format
@@ -749,7 +752,7 @@ msgstr ""
 "geschehen)\n"
 
 #: help.c:148
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "For more information, type \"\\?\" (for internal commands) or \"\\help"
@@ -763,423 +766,418 @@ msgstr ""
 "»\\help« (für SQL-Anweisungen) in psql ein oder schauen Sie in den psql-\n"
 "Abschnitt der PostgreSQL-Dokumentation.\n"
 "\n"
-"Berichten Sie Fehler an <pgsql-bugs@postgresql.org>."
 
 #: help.c:151
 #, c-format
 msgid "Report bugs to <pgsql-bugs@postgresql.org>.\n"
 msgstr "Berichten Sie Fehler an <pgsql-bugs@postgresql.org>.\n"
 
-#: help.c:173
+#: help.c:169
 #, c-format
 msgid "General\n"
 msgstr "Allgemein\n"
 
-#: help.c:174
+#: help.c:170
 #, c-format
-msgid "  \\copyright     show PostgreSQL usage and distribution terms\n"
-msgstr "  \\copyright     PostgreSQL-Urheberrechtsinformationen zeigen\n"
+msgid ""
+"  \\copyright             show PostgreSQL usage and distribution terms\n"
+msgstr "  \\copyright             PostgreSQL-Urheberrechtsinformationen zeigen\n"
 
-#: help.c:175
+#: help.c:171
 #, c-format
-msgid "  \\g [FILE] or ; execute query (and send results to file or |pipe)\n"
+msgid ""
+"  \\g [FILE] or ;         execute query (and send results to file or |pipe)\n"
 msgstr ""
-"  \\g [DATEI] oder ;\n"
-"                  SQL-Anweisung ausführen (und Ergebnis in Datei oder |Pipe\n"
-"                  schreiben)\n"
+"  \\g [DATEI] oder ;      SQL-Anweisung ausführen (und Ergebnis in Datei oder\n"
+"                         |Pipe schreiben)\n"
+
+#: help.c:172
+#, c-format
+msgid ""
+"  \\h [NAME]              help on syntax of SQL commands, * for all "
+"commands\n"
+msgstr "  \\h [NAME]              Syntaxhilfe über SQL-Anweisung, * für alle Anweisungen\n"
+
+#: help.c:173
+#, c-format
+msgid "  \\q                     quit psql\n"
+msgstr "  \\q                     psql beenden\n"
 
 #: help.c:176
-#, c-format
-msgid "  \\h [NAME]      help on syntax of SQL commands, * for all commands\n"
-msgstr ""
-"  \\h [NAME]      Syntaxhilfe über SQL-Anweisung, * für alle Anweisungen\n"
-
-#: help.c:177
-#, c-format
-msgid "  \\q             quit psql\n"
-msgstr "  \\q             psql beenden\n"
-
-#: help.c:180
 #, c-format
 msgid "Query Buffer\n"
 msgstr "Anfragepuffer\n"
 
-#: help.c:181
+#: help.c:177
 #, c-format
 msgid ""
-"  \\e [FILE]      edit the query buffer (or file) with external editor\n"
-msgstr ""
-"  \\e [DATEI]     Anfragepuffer (oder Datei) mit externem Editor bearbeiten\n"
+"  \\e [FILE]              edit the query buffer (or file) with external "
+"editor\n"
+msgstr "  \\e [DATEI]             Anfragepuffer (oder Datei) mit externem Editor bearbeiten\n"
 
-#: help.c:182
+#: help.c:178
 #, c-format
-msgid "  \\p             show the contents of the query buffer\n"
-msgstr "  \\p             aktuellen Inhalt der Anfragepuffers zeigen\n"
+msgid "  \\p                     show the contents of the query buffer\n"
+msgstr "  \\p                     aktuellen Inhalt der Anfragepuffers zeigen\n"
+
+#: help.c:179
+#, c-format
+msgid "  \\r                     reset (clear) the query buffer\n"
+msgstr "  \\r                     Anfragepuffer löschen\n"
+
+#: help.c:181
+#, c-format
+msgid "  \\s [FILE]              display history or save it to file\n"
+msgstr "  \\s [DATEI]             Befehlsgeschichte ausgeben oder in Datei schreiben\n"
 
 #: help.c:183
 #, c-format
-msgid "  \\r             reset (clear) the query buffer\n"
-msgstr "  \\r             Anfragepuffer löschen\n"
+msgid "  \\w FILE                write query buffer to file\n"
+msgstr "  \\w DATEI               Anfragepuffer in Datei schreiben\n"
 
-#: help.c:185
-#, c-format
-msgid "  \\s [FILE]      display history or save it to file\n"
-msgstr "  \\s [DATEI]     Befehlsgeschichte ausgeben oder in Datei schreiben\n"
-
-#: help.c:187
-#, c-format
-msgid "  \\w FILE        write query buffer to file\n"
-msgstr "  \\w DATEI       aktuellen Anfragepuffer in eine Datei schreiben\n"
-
-#: help.c:190
+#: help.c:186
 #, c-format
 msgid "Input/Output\n"
 msgstr "Eingabe/Ausgabe\n"
 
+#: help.c:187
+#, c-format
+msgid ""
+"  \\copy ...              perform SQL COPY with data stream to the client "
+"host\n"
+msgstr "  \\copy ...              SQL COPY mit Datenstrom auf Client-Host ausführen\n"
+
+#: help.c:188
+#, c-format
+msgid "  \\echo [STRING]         write string to standard output\n"
+msgstr "  \\echo [TEXT]           Text auf Standardausgabe schreiben\n"
+
+#: help.c:189
+#, c-format
+msgid "  \\i FILE                execute commands from file\n"
+msgstr "  \\i DATEI               Befehle aus Datei ausführen\n"
+
+#: help.c:190
+#, c-format
+msgid "  \\o [FILE]              send all query results to file or |pipe\n"
+msgstr "  \\o DATEI               alle Anfrageergebnisse in Datei oder |Pipe schreiben\n"
+
 #: help.c:191
 #, c-format
 msgid ""
-"  \\copy ...      perform SQL COPY with data stream to the client host\n"
-msgstr "  \\copy ...      SQL COPY mit Datenstrom auf Client-Host ausführen\n"
-
-#: help.c:192
-#, c-format
-msgid "  \\echo [STRING] write string to standard output\n"
-msgstr "  \\echo [TEXT]   Text auf Standardausgabe schreiben\n"
-
-#: help.c:193
-#, c-format
-msgid "  \\i FILE        execute commands from file\n"
-msgstr "  \\i DATEI       Anweisungen aus Datei ausführen\n"
+"  \\qecho [STRING]        write string to query output stream (see \\o)\n"
+msgstr ""
+"  \\qecho [TEXT]          Text auf Ausgabestrom für Anfrageergebnisse schreiben\n"
+"                         (siehe \\o)\n"
 
 #: help.c:194
-#, c-format
-msgid "  \\o [FILE]      send all query results to file or |pipe\n"
-msgstr ""
-"  \\o DATEI       alle Anfrageergebnisse in Datei oder |Pipe schreiben\n"
-
-#: help.c:195
-#, fuzzy, c-format
-msgid "  \\qecho [STRING] write string to query output stream (see \\o)\n"
-msgstr "  \\qecho [TEXT]  Text auf Ausgabestrom für Anfrageergebnisse schreiben (siehe \\o)\n"
-
-#: help.c:198
 #, c-format
 msgid "Informational\n"
 msgstr "Informationen\n"
 
+#: help.c:195
+#, c-format
+msgid "  (options: S = show system objects, + = additional detail)\n"
+msgstr "  (Optionen: S = Systemobjekte zeigen, + = zusätzliche Details zeigen)\n"
+
+#: help.c:196
+#, c-format
+msgid "  \\d[S+]                 list tables, views, and sequences\n"
+msgstr "  \\d[S+]                 Tabellen, Sichten und Sequenzen auflisten\n"
+
+#: help.c:197
+#, c-format
+msgid "  \\d[S+]  NAME           describe table, view, sequence, or index\n"
+msgstr "  \\d[S+]  NAME           Tabelle, Sicht, Sequenz oder Index beschreiben\n"
+
+#: help.c:198
+#, c-format
+msgid "  \\da[S]  [PATTERN]      list aggregate functions\n"
+msgstr "  \\da[S]  [MUSTER]       Aggregatfunktionen auflisten\n"
+
 #: help.c:199
 #, c-format
-msgid "  Modifiers: S = show system objects  + = Additional detail\n"
-msgstr ""
+msgid "  \\db[+]  [PATTERN]      list tablespaces\n"
+msgstr "  \\db[+]  [MUSTER]       Tablespaces auflisten\n"
 
 #: help.c:200
-#, fuzzy, c-format
-msgid "  \\l[+]                 list all databases\n"
-msgstr "  -a, --all                 clustere alle Datenbanken\n"
+#, c-format
+msgid "  \\dc[S]  [PATTERN]      list conversions\n"
+msgstr "  \\dc[S]  [MUSTER]       Konversionen auflisten\n"
 
 #: help.c:201
-#, fuzzy, c-format
-msgid "  \\d[S+]                list tables, views, and sequences\n"
-msgstr ""
-"  \\dp [MUSTER]   Zugriffsrechte für Tabellen, Sichten und Sequenzen "
-"auflisten\n"
+#, c-format
+msgid "  \\dC     [PATTERN]      list casts\n"
+msgstr "  \\dC     [MUSTER]       Typumwandlungen (Casts) auflisten\n"
 
 #: help.c:202
-#, fuzzy, c-format
-msgid "  \\d[S+]   NAME         describe table, view, sequence, or index\n"
-msgstr "  \\d [NAME]      Tabelle, Index, Sequenz oder Sicht beschreiben\n"
+#, c-format
+msgid "  \\dd[S]  [PATTERN]      show comments on objects\n"
+msgstr "  \\dd[S]  [MUSTER]       Kommentar für Objekt zeigen\n"
 
 #: help.c:203
-#, fuzzy, c-format
-msgid "  \\da[S]   [PATTERN]    list aggregate functions\n"
-msgstr "  \\da [MUSTER]   Aggregatfunktionen auflisten\n"
+#, c-format
+msgid "  \\dD[S]  [PATTERN]      list domains\n"
+msgstr "  \\dD[S]  [MUSTER]       Domänen auflisten\n"
 
 #: help.c:204
-#, fuzzy, c-format
-msgid "  \\db[+]   [PATTERN]    list tablespaces\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
+#, c-format
+msgid "  \\des[+] [PATTERN]      list foreign servers\n"
+msgstr "  \\des[+] [MUSTER]       Fremdserver auflisten\n"
 
 #: help.c:205
-#, fuzzy, c-format
-msgid "  \\dc[S]   [PATTERN]    list conversions\n"
-msgstr "  \\dc [MUSTER]   Konversionen auflisten\n"
+#, c-format
+msgid "  \\deu[+] [PATTERN]      list user mappings\n"
+msgstr "  \\deu[+] [MUSTER]       Benutzerabbildungen auflisten\n"
 
 #: help.c:206
-#, fuzzy, c-format
-msgid "  \\dC      [PATTERN]    list casts\n"
-msgstr "  \\dC            Typumwandlungen (Casts) auflisten\n"
+#, c-format
+msgid "  \\dew[+] [PATTERN]      list foreign-data wrappers\n"
+msgstr "  \\dew[+] [MUSTER]       Fremddaten-Wrapper auflisten\n"
 
 #: help.c:207
-#, fuzzy, c-format
-msgid "  \\dd[S]   [PATTERN]    show comments on objects\n"
-msgstr "  \\dd [MUSTER]   Kommentar für Objekt zeigen\n"
+#, c-format
+msgid "  \\df[S+] [PATTERN]      list functions\n"
+msgstr "  \\df[S+] [MUSTER]       Funktionen auflisten\n"
 
 #: help.c:208
-#, fuzzy, c-format
-msgid "  \\dD[S]   [PATTERN]    list domains\n"
-msgstr "  \\dD [MUSTER]   Domänen auflisten\n"
+#, c-format
+msgid "  \\dF[+]  [PATTERN]      list text search configurations\n"
+msgstr "  \\dF[+]  [MUSTER]       Textsuchekonfigurationen auflisten\n"
 
 #: help.c:209
-#, fuzzy, c-format
-msgid "  \\des[+]  [PATTERN]    list foreign servers\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
+#, c-format
+msgid "  \\dFd[+] [PATTERN]      list text search dictionaries\n"
+msgstr "  \\dFd[+] [MUSTER]       Textsuchewörterbücher auflisten\n"
 
 #: help.c:210
-#, fuzzy, c-format
-msgid "  \\deu[+]  [PATTERN]    list user mappings\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
+#, c-format
+msgid "  \\dFp[+] [PATTERN]      list text search parsers\n"
+msgstr "  \\dFp[+] [MUSTER]       Textsucheparser auflisten\n"
 
 #: help.c:211
-#, fuzzy, c-format
-msgid "  \\dew[+]  [PATTERN]    list foreign-data wrappers\n"
-msgstr "  \\dg [MUSTER]   Gruppen auflisten\n"
+#, c-format
+msgid "  \\dFt[+] [PATTERN]      list text search templates\n"
+msgstr "  \\dFt[+] [MUSTER]       Textsuchevorlagen auflisten\n"
 
 #: help.c:212
-#, fuzzy, c-format
-msgid "  \\df[S+]  [PATTERN]    list functions\n"
-msgstr "  \\da [MUSTER]   Aggregatfunktionen auflisten\n"
+#, c-format
+msgid "  \\dg     [PATTERN]      list roles (groups)\n"
+msgstr "  \\dg     [MUSTER]       Rollen (Gruppen) auflisten\n"
 
 #: help.c:213
-#, fuzzy, c-format
-msgid "  \\dF[+]   [PATTERN]    list text search configurations\n"
-msgstr ""
-"  \\dF [MUSTER]   Textsuchekonfigurationen auflisten (»+« hinzufügen für mehr "
-"Detail)\n"
+#, c-format
+msgid "  \\di[S+] [PATTERN]      list indexes\n"
+msgstr "  \\di[S+] [MUSTER]       Indexe auflisten\n"
 
 #: help.c:214
-#, fuzzy, c-format
-msgid "  \\dFd[+]  [PATTERN]    list text search dictionaries\n"
-msgstr "  \\dFt [MUSTER]  Textsuchevorlagen auflisten\n"
+#, c-format
+msgid "  \\dl                    list large objects, same as \\lo_list\n"
+msgstr "  \\dl                    Large Objects auflisten, wie \\lo_list\n"
 
 #: help.c:215
-#, fuzzy, c-format
-msgid "  \\dFp[+]  [PATTERN]    list text search parsers\n"
-msgstr "  \\dFt [MUSTER]  Textsuchevorlagen auflisten\n"
+#, c-format
+msgid "  \\dn[+]  [PATTERN]      list schemas\n"
+msgstr "  \\dn[+]  [MUSTER]       Schemas auflisten\n"
 
 #: help.c:216
-#, fuzzy, c-format
-msgid "  \\dFt[+]  [PATTERN]    list text search templates\n"
-msgstr "  \\dFt [MUSTER]  Textsuchevorlagen auflisten\n"
+#, c-format
+msgid "  \\do[S]  [PATTERN]      list operators\n"
+msgstr "  \\do[S]  [MUSTER]       Operatoren auflisten\n"
 
 #: help.c:217
-#, fuzzy, c-format
-msgid "  \\dg      [PATTERN]    list roles (groups)\n"
-msgstr "  \\dg [MUSTER]   Gruppen auflisten\n"
+#, c-format
+msgid ""
+"  \\dp     [PATTERN]      list table, view, and sequence access privileges\n"
+msgstr "  \\dp     [MUSTER]       Zugriffsrechte für Tabellen, Sichten und Sequenzen auflisten\n"
 
 #: help.c:218
-#, fuzzy, c-format
-msgid "  \\di[S+]  [PATTERN]    list indexes\n"
-msgstr "  \\dD [MUSTER]   Domänen auflisten\n"
+#, c-format
+msgid "  \\ds[S+] [PATTERN]      list sequences\n"
+msgstr "  \\ds[S+] [MUSTER]       Sequenzen auflisten\n"
 
 #: help.c:219
-#, fuzzy, c-format
-msgid "  \\dl                   list large objects, same as \\lo_list\n"
-msgstr "  \\dl            Large Objects auflisten, wie \\lo_list\n"
+#, c-format
+msgid "  \\dt[S+] [PATTERN]      list tables\n"
+msgstr "  \\dt[S+] [MUSTER]       Tabellen auflisten\n"
 
 #: help.c:220
-#, fuzzy, c-format
-msgid "  \\dn[+]   [PATTERN]    list schemas\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
+#, c-format
+msgid "  \\dT[S+] [PATTERN]      list data types\n"
+msgstr "  \\dT[S+] [MUSTER]       Datentypen auflisten\n"
 
 #: help.c:221
-#, fuzzy, c-format
-msgid "  \\do[S]   [PATTERN]    list operators\n"
-msgstr "  \\do [NAME]     Operatoren auflisten\n"
+#, c-format
+msgid "  \\du     [PATTERN]      list roles (users)\n"
+msgstr "  \\du     [MUSTER]       Rollen (Benutzer) auflisten\n"
 
 #: help.c:222
-#, fuzzy, c-format
-msgid ""
-"  \\dp      [PATTERN]    list table, view, and sequence access privileges\n"
-msgstr ""
-"  \\dp [MUSTER]   Zugriffsrechte für Tabellen, Sichten und Sequenzen "
-"auflisten\n"
+#, c-format
+msgid "  \\dv[S+] [PATTERN]      list views\n"
+msgstr "  \\dv[S+] [MUSTER]       Sichten auflisten\n"
 
 #: help.c:223
-#, fuzzy, c-format
-msgid "   \\z      [PATTERN]    same as \\dp\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
+#, c-format
+msgid "  \\l[+]                  list all databases\n"
+msgstr "  \\l[+]                  alle Datenbanken auflisten\n"
 
 #: help.c:224
-#, fuzzy, c-format
-msgid "  \\ds[S+]  [PATTERN]    list sequences\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
-
-#: help.c:225
-#, fuzzy, c-format
-msgid "  \\dt[S+]  [PATTERN]    list tables\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
-
-#: help.c:226
-#, fuzzy, c-format
-msgid "  \\dT[S+]  [PATTERN]    list data types\n"
-msgstr "  \\dD [MUSTER]   Domänen auflisten\n"
+#, c-format
+msgid "  \\z      [PATTERN]      same as \\dp\n"
+msgstr "  \\z      [MUSTER]       äquivalent zu \\dp \n"
 
 #: help.c:227
-#, fuzzy, c-format
-msgid "  \\du      [PATTERN]    list roles (users)\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
-
-#: help.c:228
-#, fuzzy, c-format
-msgid "  \\dv[S+]  [PATTERN]    list views\n"
-msgstr "  \\du [MUSTER]   Benutzer auflisten\n"
-
-#: help.c:231
 #, c-format
 msgid "Formatting\n"
 msgstr "Formatierung\n"
 
-#: help.c:232
+#: help.c:228
 #, c-format
-msgid "  \\a             toggle between unaligned and aligned output mode\n"
+msgid ""
+"  \\a                     toggle between unaligned and aligned output mode\n"
 msgstr ""
-"  \\a             zwischen unausgerichtetem und ausgerichtetem Ausgabemodus\n"
-"                 umschalten\n"
+"  \\a                     zwischen unausgerichtetem und ausgerichtetem Ausgabemodus\n"
+"                         umschalten\n"
+
+#: help.c:229
+#, c-format
+msgid "  \\C [STRING]            set table title, or unset if none\n"
+msgstr "  \\C [TEXT]              Tabellentitel setzen oder löschen\n"
+
+#: help.c:230
+#, c-format
+msgid ""
+"  \\f [STRING]            show or set field separator for unaligned query "
+"output\n"
+msgstr "  \\f [ZEICHEN]           Feldtrennzeichen zeigen oder setzen\n"
+
+#: help.c:231
+#, c-format
+msgid "  \\H                     toggle HTML output mode (currently %s)\n"
+msgstr "  \\H                     HTML-Ausgabemodus umschalten (gegenwärtig %s)\n"
 
 #: help.c:233
 #, c-format
-msgid "  \\C [STRING]    set table title, or unset if none\n"
-msgstr "  \\C [TITEL]     Tabellentitel setzen bzw. löschen\n"
-
-#: help.c:234
-#, c-format
 msgid ""
-"  \\f [STRING]    show or set field separator for unaligned query output\n"
-msgstr "  \\f [ZEICHEN]   Feldtrennzeichen zeigen oder setzen\n"
-
-#: help.c:235
-#, c-format
-msgid "  \\H             toggle HTML output mode (currently %s)\n"
-msgstr "  \\H             HTML-Ausgabemodus umschalten (gegenwärtig %s)\n"
-
-#: help.c:237
-#, fuzzy, c-format
-msgid ""
-"  \\pset NAME [VALUE]  set table output option\n"
-"                 (NAME := {format|border|expanded|fieldsep|footer|null|\n"
-"                 numericlocale|recordsep|tuples_only|title|tableattr|"
+"  \\pset NAME [VALUE]     set table output option\n"
+"                         (NAME := {format|border|expanded|fieldsep|footer|"
+"null|\n"
+"                         numericlocale|recordsep|tuples_only|title|tableattr|"
 "pager})\n"
 msgstr ""
-"  \\pset NAME [WERT]\n"
-"                 Tabellenausgabeoption setzen\n"
-"                 (NAME := {format|border|expanded|fieldsep|footer|null|\n"
-"                 numericlocale|recordsep|tuples_only|title|tableattr|"
-"pager})\n"
+"  \\pset NAME [WERT]      Tabellenausgabeoption setzen\n"
+"                         (NAME := {format|border|expanded|fieldsep|footer|null|\n"
+"                         numericlocale|recordsep|tuples_only|title|tableattr|pager})\n"
 
-#: help.c:240
-#, fuzzy, c-format
-msgid "  \\t [on|off]    show only rows (currently %s)\n"
-msgstr "  \\t             nur Datenzeilen zeigen (gegenwärtig %s)\n"
-
-#: help.c:242
+#: help.c:236
 #, c-format
-msgid "  \\T [STRING]    set HTML <table> tag attributes, or unset if none\n"
-msgstr "  \\T [TEXT]      HTML <table>-Tag-Attribute setzen oder löschen\n"
+msgid "  \\t [on|off]            show only rows (currently %s)\n"
+msgstr "  \\t [on|off]            nur Datenzeilen zeigen (gegenwärtig %s)\n"
+
+#: help.c:238
+#, c-format
+msgid ""
+"  \\T [STRING]            set HTML <table> tag attributes, or unset if none\n"
+msgstr "  \\T [TEXT]              HTML <table>-Tag-Attribute setzen oder löschen\n"
+
+#: help.c:239
+#, c-format
+msgid "  \\x [on|off]            toggle expanded output (currently %s)\n"
+msgstr "  \\x [on|off]            erweiterte Ausgabe umschalten (gegenwärtig %s)\n"
 
 #: help.c:243
-#, fuzzy, c-format
-msgid "  \\x [on|off]    toggle expanded output (currently %s)\n"
-msgstr "  \\x             erweiterte Ausgabe umschalten (gegenwärtig %s)\n"
-
-#: help.c:247
 #, c-format
 msgid "Connection\n"
 msgstr "Verbindung\n"
 
-#: help.c:248
+#: help.c:244
 #, c-format
 msgid ""
 "  \\c[onnect] [DBNAME|- USER|- HOST|- PORT|-]\n"
-"                 connect to new database (currently \"%s\")\n"
+"                         connect to new database (currently \"%s\")\n"
 msgstr ""
 "  \\c[onnect] [DBNAME|- BENUTZER|- HOST|- PORT|-]\n"
-"                 mit neuer Datenbank verbinden (aktuell »%s«)\n"
+"                         mit neuer Datenbank verbinden (aktuell »%s«)\n"
 
-#: help.c:251
-#, fuzzy, c-format
-msgid "  \\encoding [ENCODING]  show or set client encoding\n"
-msgstr ""
-"  \\encoding [KODIERUNG]\n"
-"                 Client-Kodierung zeigen oder setzen\n"
+#: help.c:247
+#, c-format
+msgid "  \\encoding [ENCODING]   show or set client encoding\n"
+msgstr "  \\encoding [KODIERUNG]  Client-Kodierung zeigen oder setzen\n"
 
-#: help.c:252
-#, fuzzy, c-format
-msgid "  \\password [USERNAME]  securely change the password for a user\n"
+#: help.c:248
+#, c-format
+msgid "  \\password [USERNAME]   securely change the password for a user\n"
 msgstr ""
 "  \\password [BENUTZERNAME]\n"
-"                 sicheres Ändern eines Benutzerpasswortes\n"
+"                         sicheres Ändern eines Benutzerpasswortes\n"
+
+#: help.c:251
+#, c-format
+msgid "Operating System\n"
+msgstr "Betriebssystem\n"
+
+#: help.c:252
+#, c-format
+msgid "  \\cd [DIR]              change the current working directory\n"
+msgstr "  \\cd [VERZ]             Arbeitsverzeichnis wechseln\n"
+
+#: help.c:253
+#, c-format
+msgid "  \\timing [on|off]       toggle timing of commands (currently %s)\n"
+msgstr "  \\timing [on|off]       Zeitmessung umschalten (gegenwärtig %s)\n"
 
 #: help.c:255
 #, c-format
-msgid "External\n"
-msgstr ""
+msgid ""
+"  \\! [COMMAND]           execute command in shell or start interactive "
+"shell\n"
+msgstr "  \\! [BEFEHL]            Befehl in Shell ausführen oder interaktive Shell starten\n"
 
-#: help.c:256
-#, fuzzy, c-format
-msgid "  \\cd [DIR]         change the current working directory\n"
-msgstr "  \\cd [VERZ]     Arbeitsverzeichnis wechseln\n"
-
-#: help.c:257
-#, fuzzy, c-format
-msgid "  \\timing [on|off]  toggle timing of commands (currently %s)\n"
-msgstr "  \\timing        Zeitmessung umschalten (gegenwärtig %s)\n"
+#: help.c:258
+#, c-format
+msgid "Variables\n"
+msgstr "Variablen\n"
 
 #: help.c:259
-#, fuzzy, c-format
-msgid ""
-"  \\! [COMMAND]      execute command in shell or start interactive shell\n"
-msgstr ""
-"  \\! [BEFEHL]    Befehl in Shell ausführen oder interaktive Shell starten\n"
-
-#: help.c:262
 #, c-format
-msgid "Variable\n"
-msgstr ""
+msgid "  \\prompt [TEXT] NAME    prompt user to set internal variable\n"
+msgstr "  \\prompt [TEXT] NAME    interne Variable vom Benutzer abfragen\n"
 
-#: help.c:263
-#, fuzzy, c-format
-msgid "  \\prompt [TEXT] NAME  prompt user to set internal variable\n"
-msgstr ""
-"  \\prompt [TEXT] NAME\n"
-"                 interne Variable vom Benutzer abfragen\n"
+#: help.c:260
+#, c-format
+msgid ""
+"  \\set [NAME [VALUE]]    set internal variable, or list all if no "
+"parameters\n"
+msgstr "  \\set [NAME [WERT]]     interne Variable setzen, oder alle anzeigen\n"
+
+#: help.c:261
+#, c-format
+msgid "  \\unset NAME            unset (delete) internal variable\n"
+msgstr "  \\unset NAME            interne Variable löschen\n"
 
 #: help.c:264
-#, fuzzy, c-format
-msgid ""
-"  \\set [NAME [VALUE]]  set internal variable, or list all if no parameters\n"
-msgstr ""
-"  \\set [NAME [WERT]]\n"
-"                 interne Variable setzen\n"
+#, c-format
+msgid "Large Objects\n"
+msgstr "Large Objects\n"
 
 #: help.c:265
-#, fuzzy, c-format
-msgid "  \\unset NAME          unset (delete) internal variable\n"
-msgstr "  \\unset NAME    interne Variable löschen\n"
-
-#: help.c:268
-#, fuzzy, c-format
-msgid "Large Object\n"
-msgstr "Large Objects"
-
-#: help.c:269
 #, c-format
 msgid ""
 "  \\lo_export LOBOID FILE\n"
 "  \\lo_import FILE [COMMENT]\n"
 "  \\lo_list\n"
-"  \\lo_unlink LOBOID    large object operations\n"
+"  \\lo_unlink LOBOID      large object operations\n"
 msgstr ""
 "  \\lo_export LOBOID DATEI\n"
 "  \\lo_import DATEI [KOMMENTAR]\n"
 "  \\lo_list\n"
-"  \\lo_unlink LOBOID    Large-Object-Operationen\n"
+"  \\lo_unlink LOBOID      Large-Object-Operationen\n"
 
-#: help.c:321
+#: help.c:317
 msgid "Available help:\n"
 msgstr "Verfügbare Hilfe:\n"
 
-#: help.c:410
+#: help.c:406
 #, c-format
 msgid ""
 "Command:     %s\n"
@@ -1194,7 +1192,7 @@ msgstr ""
 "%s\n"
 "\n"
 
-#: help.c:426
+#: help.c:422
 #, c-format
 msgid ""
 "No help available for \"%-.*s\".\n"
@@ -1317,7 +1315,9 @@ msgstr "%s: konnte Logdatei »%s« nicht öffnen: %s\n"
 msgid ""
 "Type \"help\" for help.\n"
 "\n"
-msgstr "Geben Sie »help« für Hilfe ein.\n\n"
+msgstr ""
+"Geben Sie »help« für Hilfe ein.\n"
+"\n"
 
 #: startup.c:430
 #, c-format
@@ -1580,9 +1580,8 @@ msgid "Value"
 msgstr "Wert"
 
 #: describe.c:1092
-#, fuzzy
 msgid "Storage"
-msgstr "Quelle"
+msgstr "Speicherung"
 
 #: describe.c:1134
 msgid "not null"
@@ -1590,9 +1589,9 @@ msgstr "not null"
 
 #. translator: default values of column definitions
 #: describe.c:1143
-#, fuzzy, c-format
+#, c-format
 msgid "default %s"
-msgstr "Vorgabewert für %s"
+msgstr "Vorgabewert %s"
 
 #: describe.c:1209
 msgid "primary key, "
@@ -1641,9 +1640,8 @@ msgid "Foreign-key constraints:"
 msgstr "Fremdschlüssel-Constraints:"
 
 #: describe.c:1427
-#, fuzzy
 msgid "Referenced by:"
-msgstr "Referenz"
+msgstr "Fremdschlüsselverweise von:"
 
 #. translator: the first %s is a FK name, the following are
 #. * a table name and the FK definition
@@ -1984,9 +1982,9 @@ msgid "List of foreign-data wrappers"
 msgstr "Liste der Fremddaten-Wrapper"
 
 #: describe.c:2947
-#, fuzzy, c-format
-msgid "The server (version %d.%d) does not support foreign-data servers.\n"
-msgstr "Diese Serverversion (%d) unterstützt keine Tablespaces.\n"
+#, c-format
+msgid "The server (version %d.%d) does not support foreign servers.\n"
+msgstr "Der Server (Version %d.%d) unterstützt keine Fremdserver.\n"
 
 #: describe.c:2959
 msgid "Foreign-data wrapper"
@@ -2001,24 +1999,21 @@ msgid "List of foreign servers"
 msgstr "Liste der Fremdserver"
 
 #: describe.c:3013
-#, fuzzy, c-format
-msgid ""
-"The server (version %d.%d) does not support foreign-data user mappings.\n"
-msgstr "Diese Serverversion (%d) unterstützt keine Tablespaces.\n"
+#, c-format
+msgid "The server (version %d.%d) does not support user mappings.\n"
+msgstr "Der Server (Version %d.%d) unterstützt keine Benutzerabbildungen.\n"
 
 #: describe.c:3022
 msgid "Server"
 msgstr "Server"
 
 #: describe.c:3023
-#, fuzzy
-msgid "Username"
-msgstr "Benutzername: "
+msgid "User name"
+msgstr "Benutzername"
 
 #: describe.c:3043
-#, fuzzy
 msgid "List of user mappings"
-msgstr "Liste der Domänen"
+msgstr "Liste der Benutzerabbildungen"
 
 #: sql_help.h:25 sql_help.h:505
 msgid "abort the current transaction"
@@ -2623,9 +2618,8 @@ msgstr ""
 "ALTER USER name RESET ALL"
 
 #: sql_help.h:129
-#, fuzzy
 msgid "change the definition of a user mapping"
-msgstr "ändert die Definition einer Domäne"
+msgstr "ändert die Definition einer Benutzerabbildung"
 
 #: sql_help.h:130
 msgid ""
@@ -3614,7 +3608,7 @@ msgstr ""
 
 #: sql_help.h:289
 msgid "define a new mapping of a user to a foreign server"
-msgstr ""
+msgstr "definiert eine neue Abbildung eines Benutzers auf einen Fremdserver"
 
 #: sql_help.h:290
 msgid ""
@@ -3846,9 +3840,8 @@ msgid "DROP SEQUENCE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP SEQUENCE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:385
-#, fuzzy
 msgid "remove a foreign server descriptor"
-msgstr "entfernt eine Zeichensatzkonversion"
+msgstr "entfernt einen Fremdserverdeskriptor"
 
 #: sql_help.h:386
 msgid "DROP SERVER [ IF EXISTS ] servername [ CASCADE | RESTRICT ]"
@@ -3926,13 +3919,15 @@ msgstr "DROP USER [ IF EXISTS ] name [, ...]"
 
 #: sql_help.h:425
 msgid "remove a user mapping for a foreign server"
-msgstr ""
+msgstr "entfernt eine Benutzerabbildung für einen Fremdserver"
 
 #: sql_help.h:426
 msgid ""
 "DROP USER MAPPING [ IF EXISTS ] FOR { username | USER | CURRENT_USER | "
 "PUBLIC } SERVER servername"
-msgstr "DROP USER MAPPING [ IF EXISTS ] FOR { benutzername | USER | CURRENT_USER | PUBLIC } SERVER servername"
+msgstr ""
+"DROP USER MAPPING [ IF EXISTS ] FOR { benutzername | USER | CURRENT_USER | "
+"PUBLIC } SERVER servername"
 
 #: sql_help.h:429
 msgid "remove a view"
@@ -4107,7 +4102,8 @@ msgid ""
 "    [ RETURNING * | output_expression [ [ AS ] output_name ] [, ...] ]"
 msgstr ""
 "INSERT INTO tabelle [ ( spalte [, ...] ) ]\n"
-"    { DEFAULT VALUES | VALUES ( { ausdruck | DEFAULT } [, ...] ) [, ...] | anfrage }\n"
+"    { DEFAULT VALUES | VALUES ( { ausdruck | DEFAULT } [, ...] ) [, ...] | "
+"anfrage }\n"
 "    [ RETURNING * | ausgabeausdruck [ [ AS ] ausgabename ] [, ...] ]"
 
 #: sql_help.h:457
@@ -4702,101 +4698,3 @@ msgstr "Kindprozess wurde von Signal %d beendet"
 #, c-format
 msgid "child process exited with unrecognized status %d"
 msgstr "Kindprozess hat mit unbekanntem Status %d beendet"
-
-#~ msgid "Usage:"
-#~ msgstr "Aufruf:"
-
-#~ msgid "General options:"
-#~ msgstr "Allgemeine Optionen:"
-
-#~ msgid "  --help          show this help, then exit"
-#~ msgstr "  --help          diese Hilfe anzeigen, dann beenden"
-
-#~ msgid "  --version       output version information, then exit"
-#~ msgstr "  --version       Versionsinformationen anzeigen, dann beenden"
-
-#~ msgid ""
-#~ "  \\d{t|i|s|v|S} [PATTERN] (add \"+\" for more detail)\n"
-#~ "                 list tables/indexes/sequences/views/system tables\n"
-#~ msgstr ""
-#~ "  \\d{t|i|s|v|S} [MUSTER] (»+« für mehr Detail hinzufügen)\n"
-#~ "                 Tabellen/Indexe/Sequenzen/Sichten auflisten\n"
-
-#~ msgid "  \\db [PATTERN]  list tablespaces (add \"+\" for more detail)\n"
-#~ msgstr ""
-#~ "  \\db [MUSTER]   Tablespaces auflisten (»+« für mehr Detail hinzufügen)\n"
-
-#~ msgid "  \\df [PATTERN]  list functions (add \"+\" for more detail)\n"
-#~ msgstr ""
-#~ "  \\df [MUSTER]   Funktionen auflisten (»+« hinzufügen für mehr Detail)\n"
-
-#~ msgid ""
-#~ "  \\dFd [PATTERN] list text search dictionaries (add \"+\" for more "
-#~ "detail)\n"
-#~ msgstr ""
-#~ "  \\dFd [MUSTER]  Textsuchewörterbücher auflisten (»+« für mehr Detail "
-#~ "hinzufügen)\n"
-
-#~ msgid ""
-#~ "  \\dFp [PATTERN] list text search parsers (add \"+\" for more detail)\n"
-#~ msgstr ""
-#~ "  \\dFp [MUSTER]  Textsucheparser auflisten (»+« für mehr Detail "
-#~ "hinzufügen)\n"
-
-#~ msgid "  \\dn [PATTERN]  list schemas (add \"+\" for more detail)\n"
-#~ msgstr ""
-#~ "  \\dn [MUSTER]   Schemas auflisten (»+« hinzufügen für mehr Detail)\n"
-
-#~ msgid "  \\dT [PATTERN]  list data types (add \"+\" for more detail)\n"
-#~ msgstr ""
-#~ "  \\dT [MUSTER]   Datentypen auflisten (»+« für mehr Detail hinzufügen)\n"
-
-#~ msgid "  \\l             list all databases (add \"+\" for more detail)\n"
-#~ msgstr ""
-#~ "  \\l             alle Datenbanken auflisten (»+« für mehr Detail "
-#~ "hinzufügen)\n"
-
-#~ msgid ""
-#~ "  \\z [PATTERN]   list table, view, and sequence access privileges (same "
-#~ "as \\dp)\n"
-#~ msgstr ""
-#~ "  \\z [MUSTER]    Zugriffsrechte für Tabellen, Sichen und Sequenzen "
-#~ "auflisten (wie \\dp)\n"
-
-#~ msgid "Copy, Large Object\n"
-#~ msgstr "COPY, Large Objects\n"
-
-#~ msgid ""
-#~ "Welcome to %s %s (server %s), the PostgreSQL interactive terminal.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Dies ist %s %s (Server %s), das interaktive PostgreSQL-Terminal.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "Welcome to %s %s, the PostgreSQL interactive terminal.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Dies ist %s %s, das interaktive PostgreSQL-Terminal.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "WARNING:  You are connected to a server with major version %d.%d,\n"
-#~ "but your %s client is major version %d.%d.  Some backslash commands,\n"
-#~ "such as \\d, might not work properly.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "WARNUNG: Sie sind mit einem Server mit der Hauptversion %d.%d\n"
-#~ "verbunden, aber der %s-Client hat die Hauptversion %d.%d. Einige\n"
-#~ "Backslash-Befehle wie \\d werden möglicherweise nicht richtig\n"
-#~ "funktionieren.\n"
-#~ "\n"
-
-#~ msgid "?%c? \"%s.%s\""
-#~ msgstr "?%c? »%s.%s«"
-
-#~ msgid "    \"%s\""
-#~ msgstr "    »%s«"
-
-#~ msgid "no limit"
-#~ msgstr "keine Beschränkung"
