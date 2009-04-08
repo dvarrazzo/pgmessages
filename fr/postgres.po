@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-04-05 05:22+0000\n"
-"PO-Revision-Date: 2009-04-06 22:18+0100\n"
+"POT-Creation-Date: 2009-04-08 20:38+0000\n"
+"PO-Revision-Date: 2009-04-09 00:49+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,15 @@ msgstr "le tableau ne doit pas contenir de valeurs NULL"
 #: access/gin/ginscan.c:227
 msgid "GIN indexes do not support whole-index scans"
 msgstr "les index GIN ne supportent pas les parcours complets d'index"
+
+#: access/gist/gistsplit.c:372
+#, c-format
+msgid "Picksplit method for %d column of index \"%s\" failed"
+msgstr ""
+
+#: access/gist/gistsplit.c:374
+msgid "Index is not optimal, to optimize it contact developer or try to use the column as a second one in create index command"
+msgstr ""
 
 #: access/gist/gistutil.c:406
 #, c-format
@@ -646,8 +655,8 @@ msgstr "n'a pas pu ouvrir le fichier « %s » (journal de transactions %u, segment
 #: access/transam/xlog.c:2167
 #: access/transam/xlog.c:2296
 #: access/transam/xlog.c:3905
-#: access/transam/xlog.c:7036
-#: access/transam/xlog.c:7171
+#: access/transam/xlog.c:7039
+#: access/transam/xlog.c:7174
 #: postmaster/postmaster.c:3421
 #: ../port/copydir.c:126
 #, c-format
@@ -706,11 +715,11 @@ msgstr "n'a pas pu ouvrir le fichier « %s » : %m"
 
 #: access/transam/xlog.c:2309
 #: access/transam/xlog.c:3936
-#: access/transam/xlog.c:7143
-#: access/transam/xlog.c:7193
-#: access/transam/xlog.c:7485
-#: access/transam/xlog.c:7510
-#: access/transam/xlog.c:7548
+#: access/transam/xlog.c:7146
+#: access/transam/xlog.c:7196
+#: access/transam/xlog.c:7488
+#: access/transam/xlog.c:7513
+#: access/transam/xlog.c:7551
 #: utils/adt/genfile.c:132
 #: ../port/copydir.c:137
 #, c-format
@@ -743,7 +752,7 @@ msgstr "n'a pas pu fermer le journal de transactions %u, segment %u : %m"
 
 #: access/transam/xlog.c:2650
 #: access/transam/xlog.c:2800
-#: access/transam/xlog.c:7019
+#: access/transam/xlog.c:7022
 #: utils/adt/dbsize.c:62
 #: utils/adt/dbsize.c:209
 #: utils/adt/dbsize.c:278
@@ -754,7 +763,7 @@ msgid "could not stat file \"%s\": %m"
 msgstr "n'a pas pu tester le fichier « %s » : %m"
 
 #: access/transam/xlog.c:2658
-#: access/transam/xlog.c:7198
+#: access/transam/xlog.c:7201
 #: commands/tablespace.c:631
 #, c-format
 msgid "could not remove file \"%s\": %m"
@@ -1601,99 +1610,99 @@ msgstr ""
 "n'a pas pu synchroniser sur disque (fdatasync) le journal de transactions\n"
 "%u, segment %u : %m"
 
-#: access/transam/xlog.c:6931
-#: access/transam/xlog.c:7103
+#: access/transam/xlog.c:6932
+#: access/transam/xlog.c:7106
 msgid "must be superuser to run a backup"
 msgstr "doit être super-utilisateur pour exécuter une sauvegarde"
 
-#: access/transam/xlog.c:6936
-#: access/transam/xlog.c:6942
-#: access/transam/xlog.c:7108
+#: access/transam/xlog.c:6937
+#: access/transam/xlog.c:6943
+#: access/transam/xlog.c:7111
 msgid "WAL archiving is not active"
 msgstr "l'archivage des journaux de transactions n'est pas actif"
 
-#: access/transam/xlog.c:6937
-#: access/transam/xlog.c:7109
+#: access/transam/xlog.c:6938
+#: access/transam/xlog.c:7112
 msgid "archive_mode must be enabled at server start."
 msgstr "archive_mode doit être activé au lancement du serveur."
 
-#: access/transam/xlog.c:6943
+#: access/transam/xlog.c:6944
 msgid "archive_command must be defined before online backups can be made safely."
 msgstr ""
 "archive_command doit être défini avant que les sauvegardes à chaud puissent\n"
 "s'effectuer correctement."
 
-#: access/transam/xlog.c:6971
-#: access/transam/xlog.c:7025
+#: access/transam/xlog.c:6972
+#: access/transam/xlog.c:7028
 msgid "a backup is already in progress"
 msgstr "une sauvegarde est déjà en cours"
 
-#: access/transam/xlog.c:6972
+#: access/transam/xlog.c:6973
 msgid "Run pg_stop_backup() and try again."
 msgstr "Exécutez pg_stop_backup() et tentez de nouveau."
 
-#: access/transam/xlog.c:7026
+#: access/transam/xlog.c:7029
 #, c-format
 msgid "If you're sure there is no backup in progress, remove file \"%s\" and try again."
 msgstr ""
 "Si vous êtes certain qu'aucune sauvegarde n'est en cours, supprimez le\n"
 "fichier « %s » et recommencez de nouveau."
 
-#: access/transam/xlog.c:7047
-#: access/transam/xlog.c:7184
+#: access/transam/xlog.c:7050
+#: access/transam/xlog.c:7187
 #, c-format
 msgid "could not write file \"%s\": %m"
 msgstr "impossible d'écrire le fichier « %s » : %m"
 
-#: access/transam/xlog.c:7147
+#: access/transam/xlog.c:7150
 msgid "a backup is not in progress"
 msgstr "une sauvegarde n'est pas en cours"
 
-#: access/transam/xlog.c:7159
-#: access/transam/xlog.c:7500
-#: access/transam/xlog.c:7506
-#: access/transam/xlog.c:7537
-#: access/transam/xlog.c:7543
+#: access/transam/xlog.c:7162
+#: access/transam/xlog.c:7503
+#: access/transam/xlog.c:7509
+#: access/transam/xlog.c:7540
+#: access/transam/xlog.c:7546
 #, c-format
 msgid "invalid data in file \"%s\""
 msgstr "données invalides dans le fichier « %s »"
 
-#: access/transam/xlog.c:7239
+#: access/transam/xlog.c:7242
 #, c-format
 msgid "pg_stop_backup still waiting for archive to complete (%d seconds elapsed)"
 msgstr ""
 
-#: access/transam/xlog.c:7264
+#: access/transam/xlog.c:7267
 msgid "must be superuser to switch transaction log files"
 msgstr "doit être super-utilisateur pour changer de journal de transactions"
 
-#: access/transam/xlog.c:7361
-#: access/transam/xlog.c:7427
+#: access/transam/xlog.c:7364
+#: access/transam/xlog.c:7430
 #, c-format
 msgid "could not parse transaction log location \"%s\""
 msgstr ""
 "n'a pas pu analyser l'emplacement du journal des transactions nommé « %s » :\n"
 "%m"
 
-#: access/transam/xlog.c:7571
+#: access/transam/xlog.c:7574
 #, c-format
 msgid "xlog redo %s"
 msgstr "xlog redo %s"
 
-#: access/transam/xlog.c:7611
+#: access/transam/xlog.c:7614
 msgid "online backup mode cancelled"
 msgstr "mode de sauvegarde en ligne annulé"
 
-#: access/transam/xlog.c:7612
+#: access/transam/xlog.c:7615
 #, c-format
 msgid "\"%s\" was renamed to \"%s\"."
 msgstr "« %s » a été renommé en « %s »."
 
-#: access/transam/xlog.c:7619
+#: access/transam/xlog.c:7622
 msgid "online backup mode was not cancelled"
 msgstr "le mode de sauvegarde en ligne n'a pas été annulé"
 
-#: access/transam/xlog.c:7620
+#: access/transam/xlog.c:7623
 #, c-format
 msgid "Could not rename \"%s\" to \"%s\": %m."
 msgstr "N'a pas pu renommer « %s » en « %s » : %m"
@@ -1808,9 +1817,9 @@ msgstr "les droits sur la colonne sont seulement valides pour les relations"
 #: commands/dbcommands.c:1511
 #: utils/adt/acl.c:2514
 #: utils/adt/dbsize.c:144
-#: utils/init/postinit.c:415
-#: utils/init/postinit.c:534
-#: utils/init/postinit.c:550
+#: utils/init/postinit.c:420
+#: utils/init/postinit.c:539
+#: utils/init/postinit.c:555
 #, c-format
 msgid "database \"%s\" does not exist"
 msgstr "la base de données « %s » n'existe pas"
@@ -3970,13 +3979,13 @@ msgstr "l'encodage %s ne correspond pas à la locale %s"
 
 #: commands/dbcommands.c:365
 #, c-format
-msgid "The chosen CTYPE setting requires encoding %s."
-msgstr "Le paramètre CTYPE choisi nécessite l'encodage %s."
+msgid "The chosen LC_CTYPE setting requires encoding %s."
+msgstr "Le paramètre LC_CTYPE choisi nécessite l'encodage %s."
 
 #: commands/dbcommands.c:378
 #, c-format
-msgid "The chosen COLLATE setting requires encoding %s."
-msgstr "Le paramètre COLLATE choisi nécessite l'encodage %s."
+msgid "The chosen LC_COLLATE setting requires encoding %s."
+msgstr "Le paramètre LC_COLLATE choisi nécessite l'encodage %s."
 
 #: commands/dbcommands.c:392
 #, c-format
@@ -3989,11 +3998,13 @@ msgstr ""
 
 #: commands/dbcommands.c:397
 #, c-format
-msgid "new ctype is incompatible with the ctype of the template database (%s)"
+msgid "new LC_CTYPE is incompatible with LC_CTYPE of the template database (%s)"
 msgstr ""
+"le nouveau LC_CTYPE est incompatible avec le LC_CTYPE de la base de\n"
+"données modèle (%s)"
 
 #: commands/dbcommands.c:398
-msgid "Use the same ctype as in the template database, or use template0 as template"
+msgid "Use the same LC_CTYPE as in the template database, or use template0 as template"
 msgstr ""
 
 #: commands/dbcommands.c:425
@@ -6799,8 +6810,8 @@ msgstr "la nouvelle ligne viole la contrainte de vérification « %s » de la relat
 #: utils/adt/arrayfuncs.c:203
 #: utils/adt/arrayfuncs.c:455
 #: utils/adt/arrayfuncs.c:1190
-#: utils/adt/arrayfuncs.c:2845
-#: utils/adt/arrayfuncs.c:4513
+#: utils/adt/arrayfuncs.c:2867
+#: utils/adt/arrayfuncs.c:4535
 #, c-format
 msgid "number of array dimensions (%d) exceeds the maximum allowed (%d)"
 msgstr "le nombre de dimensions du tableau (%d) dépasse le maximum autorisé (%d)"
@@ -6957,7 +6968,7 @@ msgid "ROW() column has type %s instead of type %s"
 msgstr "une colonne ROW() a le type %s au lieu du type %s"
 
 #: executor/execQual.c:4655
-#: utils/adt/arrayfuncs.c:3265
+#: utils/adt/arrayfuncs.c:3287
 #: utils/adt/rowtypes.c:907
 #, c-format
 msgid "could not identify a comparison function for type %s"
@@ -7802,6 +7813,8 @@ msgstr "clientcert peut seulement être configuré pour les lignes « hostssl »"
 #: libpq/hba.c:979
 msgid "client certificates can only be checked if a root certificate store is available"
 msgstr ""
+"les certificats cert peuvent seulement être vérifiés si un emplacement de\n"
+"certificat racine est disponible"
 
 #: libpq/hba.c:980
 msgid "make sure the root certificate store is present and readable"
@@ -7809,7 +7822,7 @@ msgstr ""
 
 #: libpq/hba.c:993
 msgid "clientcert can not be set to 0 when using \"cert\" authentication"
-msgstr ""
+msgstr "clientcert ne peut pas être initialisé à 0 si vous utilisez l'authentification « cert »"
 
 #: libpq/hba.c:1027
 #, c-format
@@ -7851,6 +7864,8 @@ msgstr "entrée manquante dans le fichier « %s » à la fin de la ligne %d"
 #, c-format
 msgid "provided username (%s) and authenticated username (%s) don't match"
 msgstr ""
+"le nom d'utilisateur (%s) et le nom d'utilisateur authentifié (%s) ne\n"
+"correspondent pas"
 
 #: libpq/hba.c:1645
 #, c-format
@@ -8360,11 +8375,11 @@ msgstr ""
 
 #: optimizer/plan/planner.c:1473
 msgid "could not implement DISTINCT"
-msgstr ""
+msgstr "n'a pas pu implanté DISTINCT"
 
 #: optimizer/plan/planner.c:2521
 msgid "could not implement window PARTITION BY"
-msgstr ""
+msgstr "n'a pas pu implanter PARTITION BY de window"
 
 #: optimizer/plan/planner.c:2522
 msgid "Window partitioning columns must be of sortable datatypes."
@@ -8402,9 +8417,8 @@ msgid "SQL function \"%s\" during inlining"
 msgstr "fonction SQL « %s » durant « inlining »"
 
 #: gram.y:1191
-#, fuzzy
 msgid "current database cannot be changed"
-msgstr "la base de données actuelle ne peut pas être renommée"
+msgstr "la base de données actuelle ne peut pas être changée"
 
 #: gram.y:1306
 #: gram.y:1321
@@ -8414,9 +8428,8 @@ msgstr "l'intervalle de fuseau horaire doit être HOUR ou HOUR TO MINUTE"
 #: gram.y:1326
 #: gram.y:7750
 #: gram.y:10043
-#, fuzzy
 msgid "interval precision specified twice"
-msgstr "La précision de interval(%d) doit être comprise entre %d et %d"
+msgstr "précision d'intervalle spécifiée deux fois"
 
 #: gram.y:2429
 #: utils/adt/ri_triggers.c:373
@@ -8540,29 +8553,29 @@ msgstr "WHERE CURRENT OF n'est pas implémenté sur une vue"
 msgid "frame end cannot be UNBOUNDED PRECEDING"
 msgstr ""
 
-#: gram.y:10564
+#: gram.y:10565
 msgid "OLD used in query that is not in a rule"
 msgstr "OLD utilisé dans une requête qui n'est pas une règle"
 
-#: gram.y:10574
+#: gram.y:10575
 msgid "NEW used in query that is not in a rule"
 msgstr "NEW utilisé dans une requête qui ne fait pas partie d'une règle"
 
-#: gram.y:10622
-#: gram.y:10829
+#: gram.y:10623
+#: gram.y:10830
 msgid "improper use of \"*\""
 msgstr "mauvaise utilisation de « * »"
 
-#: gram.y:10761
+#: gram.y:10762
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "mauvais nombre de paramètres sur le côté gauche de l'expression OVERLAPS"
 
-#: gram.y:10768
+#: gram.y:10769
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "mauvais nombre de paramètres sur le côté droit de l'expression OVERLAPS"
 
-#: gram.y:10792
-#: gram.y:10809
+#: gram.y:10793
+#: gram.y:10810
 #: tsearch/spell.c:444
 #: tsearch/spell.c:461
 #: tsearch/spell.c:478
@@ -8571,25 +8584,25 @@ msgstr "mauvais nombre de paramètres sur le côté droit de l'expression OVERLAPS"
 msgid "syntax error"
 msgstr "erreur de syntaxe"
 
-#: gram.y:10891
+#: gram.y:10892
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "clauses ORDER BY multiples non autorisées"
 
-#: gram.y:10902
+#: gram.y:10903
 msgid "multiple OFFSET clauses not allowed"
 msgstr "clauses OFFSET multiples non autorisées"
 
-#: gram.y:10911
+#: gram.y:10912
 msgid "multiple LIMIT clauses not allowed"
 msgstr "clauses LIMIT multiples non autorisées"
 
-#: gram.y:10920
+#: gram.y:10921
 msgid "multiple WITH clauses not allowed"
 msgstr "clauses WITH multiples non autorisées"
 
-#: gram.y:11074
+#: gram.y:11075
 msgid "OUT and INOUT arguments aren't allowed in TABLE functions"
-msgstr ""
+msgstr "les arguments OUT et INOUT ne sont pas autorisés dans des fonctions TABLE"
 
 #: parser/analyze.c:442
 msgid "INSERT ... SELECT cannot specify INTO"
@@ -8955,12 +8968,12 @@ msgstr "le window « %s » est déjà définie"
 #: parser/parse_clause.c:1587
 #, c-format
 msgid "cannot override PARTITION BY clause of window \"%s\""
-msgstr ""
+msgstr "n'a pas pu surcharger la clause PARTITION BY de window « %s »"
 
 #: parser/parse_clause.c:1599
 #, c-format
 msgid "cannot override ORDER BY clause of window \"%s\""
-msgstr ""
+msgstr "n'a pas pu surcharger la clause ORDER BY de window « %s »"
 
 #: parser/parse_clause.c:1621
 #, c-format
@@ -9130,9 +9143,8 @@ msgid "WITH query name \"%s\" specified more than once"
 msgstr "le nom de la table « %s » est spécifié plus d'une fois"
 
 #: parser/parse_cte.c:269
-#, fuzzy
 msgid "subquery in WITH cannot have SELECT INTO"
-msgstr "la sous-requête du FROM ne peut pas avoir de SELECT INTO"
+msgstr "la sous-requête du WITH ne peut pas avoir de SELECT INTO"
 
 #: parser/parse_cte.c:310
 #, c-format
@@ -9144,14 +9156,13 @@ msgid "Cast the output of the non-recursive term to the correct type."
 msgstr ""
 
 #: parser/parse_cte.c:385
-#, fuzzy, c-format
+#, c-format
 msgid "WITH query \"%s\" has %d columns available but %d columns specified"
-msgstr "la table « %s » a %d colonnes disponibles mais %d colonnes spécifiées"
+msgstr "la requête WITH « %s » a %d colonnes disponibles mais %d colonnes spécifiées"
 
 #: parser/parse_cte.c:564
-#, fuzzy
 msgid "mutual recursion between WITH items is not implemented"
-msgstr "les actions de la règle sur NEW ne sont pas implémentées"
+msgstr "la récursion mutuelle entre des éléments WITH n'est pas implantée"
 
 #: parser/parse_cte.c:615
 #, c-format
@@ -9159,9 +9170,8 @@ msgid "recursive query \"%s\" does not have the form non-recursive-term UNION [A
 msgstr ""
 
 #: parser/parse_cte.c:647
-#, fuzzy
 msgid "ORDER BY in a recursive query is not implemented"
-msgstr "WHERE CURRENT OF n'est pas implémenté sur une vue"
+msgstr "ORDER BY dans une requête récursive n'est pas implanté"
 
 #: parser/parse_cte.c:653
 msgid "OFFSET in a recursive query is not implemented"
@@ -9413,8 +9423,8 @@ msgid "Use an explicit ordering operator or modify the query."
 msgstr "Utilisez un opérateur explicite de tri ou modifiez la requête."
 
 #: parser/parse_oper.c:240
-#: utils/adt/arrayfuncs.c:3064
-#: utils/adt/arrayfuncs.c:3465
+#: utils/adt/arrayfuncs.c:3086
+#: utils/adt/arrayfuncs.c:3487
 #: utils/adt/rowtypes.c:1133
 #, c-format
 msgid "could not identify an equality operator for type %s"
@@ -9655,9 +9665,8 @@ msgid "invalid type name \"%s\""
 msgstr "nom de type « %s » invalide"
 
 #: parser/parse_utilcmd.c:297
-#, fuzzy
 msgid "array of serial is not implemented"
-msgstr "xmlvalidate n'est pas implémenté"
+msgstr "le tableau de type serial n'est pas implanté"
 
 #: parser/parse_utilcmd.c:339
 #, c-format
@@ -12105,8 +12114,8 @@ msgstr ""
 
 #: utils/adt/array_userfuncs.c:425
 #: utils/adt/arrayfuncs.c:1186
-#: utils/adt/arrayfuncs.c:2841
-#: utils/adt/arrayfuncs.c:4509
+#: utils/adt/arrayfuncs.c:2863
+#: utils/adt/arrayfuncs.c:4531
 #, c-format
 msgid "invalid number of dimensions: %d"
 msgstr "nombre de dimensions invalides : %d"
@@ -12125,9 +12134,9 @@ msgid "missing \"]\" in array dimensions"
 msgstr "« ] » dans les dimensions manquant"
 
 #: utils/adt/arrayfuncs.c:240
-#: utils/adt/arrayfuncs.c:2370
-#: utils/adt/arrayfuncs.c:2398
-#: utils/adt/arrayfuncs.c:2413
+#: utils/adt/arrayfuncs.c:2392
+#: utils/adt/arrayfuncs.c:2420
+#: utils/adt/arrayfuncs.c:2435
 msgid "upper bound cannot be less than lower bound"
 msgstr "la limite supérieure ne peut pas être plus petite que la limite inférieure"
 
@@ -12168,9 +12177,9 @@ msgstr "tableau litéral mal formé : « %s »"
 
 #: utils/adt/arrayfuncs.c:819
 #: utils/adt/arrayfuncs.c:1407
-#: utils/adt/arrayfuncs.c:2725
-#: utils/adt/arrayfuncs.c:2873
-#: utils/adt/arrayfuncs.c:4609
+#: utils/adt/arrayfuncs.c:2747
+#: utils/adt/arrayfuncs.c:2895
+#: utils/adt/arrayfuncs.c:4631
 #: utils/adt/arrayutils.c:93
 #: utils/adt/arrayutils.c:102
 #: utils/adt/arrayutils.c:109
@@ -12203,83 +12212,83 @@ msgstr "format binaire mal conçu dans l'élément du tableau %d"
 msgid "no binary output function available for type %s"
 msgstr "aucune fonction de sortie binaire disponible pour le type %s"
 
-#: utils/adt/arrayfuncs.c:1837
+#: utils/adt/arrayfuncs.c:1859
 msgid "slices of fixed-length arrays not implemented"
 msgstr "les morceaux des tableaux à longueur fixe ne sont pas implémentés"
 
-#: utils/adt/arrayfuncs.c:2010
 #: utils/adt/arrayfuncs.c:2032
-#: utils/adt/arrayfuncs.c:2066
-#: utils/adt/arrayfuncs.c:2352
-#: utils/adt/arrayfuncs.c:4489
-#: utils/adt/arrayfuncs.c:4521
+#: utils/adt/arrayfuncs.c:2054
+#: utils/adt/arrayfuncs.c:2088
+#: utils/adt/arrayfuncs.c:2374
+#: utils/adt/arrayfuncs.c:4511
+#: utils/adt/arrayfuncs.c:4543
 msgid "wrong number of array subscripts"
 msgstr "mauvais nombre d'indices du tableau"
 
-#: utils/adt/arrayfuncs.c:2015
-#: utils/adt/arrayfuncs.c:2108
-#: utils/adt/arrayfuncs.c:2403
+#: utils/adt/arrayfuncs.c:2037
+#: utils/adt/arrayfuncs.c:2130
+#: utils/adt/arrayfuncs.c:2425
 msgid "array subscript out of range"
 msgstr "indice du tableau en dehors de l'échelle"
 
-#: utils/adt/arrayfuncs.c:2020
+#: utils/adt/arrayfuncs.c:2042
 msgid "cannot assign null value to an element of a fixed-length array"
 msgstr "ne peut pas affecter une valeur NULL à un élément d'un tableau à longueur fixe"
 
-#: utils/adt/arrayfuncs.c:2306
+#: utils/adt/arrayfuncs.c:2328
 msgid "updates on slices of fixed-length arrays not implemented"
 msgstr ""
 "les mises à jour de morceaux des tableaux à longueur fixe ne sont pas\n"
 "implémentées"
 
-#: utils/adt/arrayfuncs.c:2342
-#: utils/adt/arrayfuncs.c:2429
+#: utils/adt/arrayfuncs.c:2364
+#: utils/adt/arrayfuncs.c:2451
 msgid "source array too small"
 msgstr "tableau source trop petit"
 
-#: utils/adt/arrayfuncs.c:2980
+#: utils/adt/arrayfuncs.c:3002
 msgid "null array element not allowed in this context"
 msgstr "élément NULL de tableau interdit dans ce contexte"
 
-#: utils/adt/arrayfuncs.c:3041
-#: utils/adt/arrayfuncs.c:3248
-#: utils/adt/arrayfuncs.c:3448
+#: utils/adt/arrayfuncs.c:3063
+#: utils/adt/arrayfuncs.c:3270
+#: utils/adt/arrayfuncs.c:3470
 msgid "cannot compare arrays of different element types"
 msgstr "ne peut pas comparer des tableaux ayant des types d'éléments différents"
 
-#: utils/adt/arrayfuncs.c:4387
-#: utils/adt/arrayfuncs.c:4427
+#: utils/adt/arrayfuncs.c:4409
+#: utils/adt/arrayfuncs.c:4449
 msgid "dimension array or low bound array cannot be NULL"
 msgstr ""
 
-#: utils/adt/arrayfuncs.c:4490
-#: utils/adt/arrayfuncs.c:4522
+#: utils/adt/arrayfuncs.c:4512
+#: utils/adt/arrayfuncs.c:4544
 #, fuzzy
 msgid "Dimension array must be one dimensional."
 msgstr "le tableau typmod doit avoir une seule dimension"
 
-#: utils/adt/arrayfuncs.c:4495
-#: utils/adt/arrayfuncs.c:4527
+#: utils/adt/arrayfuncs.c:4517
+#: utils/adt/arrayfuncs.c:4549
 #, fuzzy
 msgid "wrong range of array_subscripts"
 msgstr "mauvais nombre d'indices du tableau"
 
-#: utils/adt/arrayfuncs.c:4496
-#: utils/adt/arrayfuncs.c:4528
+#: utils/adt/arrayfuncs.c:4518
+#: utils/adt/arrayfuncs.c:4550
 msgid "Lower bound of dimension array must be one."
 msgstr "La limite inférieure du tableau doit valoir un."
 
-#: utils/adt/arrayfuncs.c:4501
-#: utils/adt/arrayfuncs.c:4533
+#: utils/adt/arrayfuncs.c:4523
+#: utils/adt/arrayfuncs.c:4555
 msgid "dimension values cannot be null"
 msgstr "les valeurs de dimension ne peuvent pas être NULL"
 
-#: utils/adt/arrayfuncs.c:4538
+#: utils/adt/arrayfuncs.c:4560
 #, fuzzy
 msgid "wrong number of array_subscripts"
 msgstr "mauvais nombre d'indices du tableau"
 
-#: utils/adt/arrayfuncs.c:4539
+#: utils/adt/arrayfuncs.c:4561
 msgid "Low bound array has different size than dimensions array."
 msgstr ""
 
@@ -12614,9 +12623,8 @@ msgstr "ne peut pas calculer la racine carré d'un nombre négatif"
 
 #: utils/adt/float.c:1344
 #: utils/adt/numeric.c:1904
-#, fuzzy
 msgid "zero raised to a negative power is undefined"
-msgstr "zéro à la puissance zéro est indéfini"
+msgstr "zéro à une puissance négative est indéfini"
 
 #: utils/adt/float.c:1348
 #: utils/adt/numeric.c:1910
@@ -12691,9 +12699,8 @@ msgid "cannot use \"V\" and decimal point together"
 msgstr "ne peut pas utiliser « V » et le point décimal ensemble"
 
 #: utils/adt/formatting.c:1125
-#, fuzzy
 msgid "cannot use \"S\" twice"
-msgstr "ne peut pas utiliser « S » et « MI » ensemble"
+msgstr "ne peut pas utiliser « S » deux fois"
 
 #: utils/adt/formatting.c:1132
 msgid "cannot use \"S\" and \"PL\"/\"MI\"/\"SG\"/\"PR\" together"
@@ -12771,9 +12778,8 @@ msgid "Field requires %d characters, but only %d could be parsed."
 msgstr "Le champ nécessite %d caractères, mais seulement %d ont pu être analysés."
 
 #: utils/adt/formatting.c:1897
-#, fuzzy
 msgid "Value must be an integer."
-msgstr "les procédures de hachage doivent renvoyer un entier"
+msgstr "La valeur doit être un entier"
 
 #: utils/adt/formatting.c:1902
 #, fuzzy, c-format
@@ -13095,9 +13101,8 @@ msgid "unreserved"
 msgstr "non réservé"
 
 #: utils/adt/misc.c:353
-#, fuzzy
 msgid "unreserved (cannot be function or type name)"
-msgstr "l'utilisateur courant ne peut pas être renommé"
+msgstr "non réservé (ne peut pas être un nom de fonction ou de type)"
 
 #: utils/adt/misc.c:357
 msgid "reserved (can be function or type name)"
@@ -13423,9 +13428,9 @@ msgstr "il existe plus d'un opérateur nommé%s"
 
 #: utils/adt/regproc.c:641
 #: utils/adt/regproc.c:1501
-#: utils/adt/ruleutils.c:5183
-#: utils/adt/ruleutils.c:5220
-#: utils/adt/ruleutils.c:5254
+#: utils/adt/ruleutils.c:5205
+#: utils/adt/ruleutils.c:5242
+#: utils/adt/ruleutils.c:5276
 msgid "too many arguments"
 msgstr "trop d'arguments"
 
@@ -13994,14 +13999,12 @@ msgid "field position must be greater than zero"
 msgstr "la position du champ doit être plus grand que zéro"
 
 #: utils/adt/windowfuncs.c:244
-#, fuzzy
 msgid "argument of ntile must be greater than zero"
-msgstr "le total doit être supérieur à zéro"
+msgstr "l'argument de ntile doit être supérieur à zéro"
 
 #: utils/adt/windowfuncs.c:466
-#, fuzzy
 msgid "argument of nth_value must be greater than zero"
-msgstr "le total doit être supérieur à zéro"
+msgstr "l'argument de nth_value doit être supérieur à zéro"
 
 #: utils/adt/xml.c:139
 msgid "unsupported XML feature"
@@ -14093,15 +14096,13 @@ msgid "date out of range"
 msgstr "date en dehors des limites"
 
 #: utils/adt/xml.c:1631
-#, fuzzy
 msgid "XML does not support infinite date values."
-msgstr "NULLIF ne supporte pas les arguments d'ensemble"
+msgstr "XML ne supporte pas les valeurs infinies de date."
 
 #: utils/adt/xml.c:1654
 #: utils/adt/xml.c:1681
-#, fuzzy
 msgid "XML does not support infinite timestamp values."
-msgstr "ne peut pas soustraire les valeurs timestamps infinies"
+msgstr "XML ne supporte pas les valeurs infinies de timestamp."
 
 #: utils/adt/xml.c:2027
 msgid "invalid query"
@@ -14708,40 +14709,40 @@ msgstr ""
 "Le cluster de bases de données a été initialisé avec un LC_CTYPE à « %s »,\n"
 "qui n'est pas reconnu par setlocale()."
 
-#: utils/init/postinit.c:405
+#: utils/init/postinit.c:410
 #, c-format
 msgid "database %u does not exist"
 msgstr "la base de données « %u » n'existe pas"
 
-#: utils/init/postinit.c:536
+#: utils/init/postinit.c:541
 msgid "It seems to have just been dropped or renamed."
 msgstr "Cet objet semble avoir été tout juste supprimé ou renommé."
 
-#: utils/init/postinit.c:552
+#: utils/init/postinit.c:557
 #, c-format
 msgid "The database subdirectory \"%s\" is missing."
 msgstr "Le sous-répertoire de la base de données « %s » est manquant."
 
-#: utils/init/postinit.c:557
+#: utils/init/postinit.c:562
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "n'a pas pu accéder au répertoire « %s » : %m"
 
-#: utils/init/postinit.c:590
+#: utils/init/postinit.c:595
 msgid "no roles are defined in this database system"
 msgstr "aucun rôle n'est défini dans le système de bases de données"
 
-#: utils/init/postinit.c:591
+#: utils/init/postinit.c:596
 #, c-format
 msgid "You should immediately run CREATE USER \"%s\" CREATEUSER;."
 msgstr "Vous devez immédiatement exécuter « CREATE USER \"%s\" CREATEUSER; »."
 
-#: utils/init/postinit.c:621
+#: utils/init/postinit.c:626
 #, fuzzy
 msgid "must be superuser to connect during database shutdown"
 msgstr "doit être super-utilisateur pour créer des super-utilisateurs"
 
-#: utils/init/postinit.c:631
+#: utils/init/postinit.c:636
 msgid "connection limit exceeded for non-superusers"
 msgstr "limite de connexions dépassée pour les utilisateurs standards"
 
