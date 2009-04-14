@@ -2,18 +2,20 @@
 #
 # Álvaro Herrera <alvherre@alvh.no-ip.org> 2008-2009
 # Emanuel Calvo Franco <postgres.arg@gmail.com> 2008
+#
+# $Id: plpgsql.po,v 1.3 2009/04/14 15:21:44 alvherre Exp $
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-04-09 23:22+0000\n"
-"PO-Revision-Date: 2009-04-09 20:31-0400\n"
+"POT-Creation-Date: 2009-04-14 03:10+0000\n"
+"PO-Revision-Date: 2009-04-14 11:21-0400\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL-es-Ayuda <pgsql-es-ayuda@postgresql.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: pl_comp.c:418 pl_handler.c:177
 #, c-format
@@ -45,7 +47,8 @@ msgstr "las funciones de disparador no pueden tener argumentos declarados"
 msgid ""
 "The arguments of the trigger can be accessed through TG_NARGS and TG_ARGV "
 "instead."
-msgstr "Los argumentos del disparador puede accederse usando TG_NARGS y TG_ARGV."
+msgstr ""
+"Los argumentos del disparador puede accederse usando TG_NARGS y TG_ARGV."
 
 #: pl_comp.c:769
 #, c-format
@@ -163,7 +166,9 @@ msgstr "los procedimientos disparadores no pueden retornar conjuntos"
 #: pl_exec.c:709
 msgid ""
 "returned row structure does not match the structure of the triggering table"
-msgstr "la estructura de tupla retornada no coincide con la estructura de la tabla que generó el evento de disparador"
+msgstr ""
+"la estructura de fila retornada no coincide con la estructura de la tabla "
+"que generó el evento de disparador"
 
 #. translator: last %s is a phrase such as "during statement block local variable initialization"
 #: pl_exec.c:768
@@ -263,7 +268,7 @@ msgstr "el registro «%s» no ha sido asignado aún"
 #: pl_exec.c:2189 pl_exec.c:3599 pl_exec.c:3891 pl_exec.c:3930
 msgid "The tuple structure of a not-yet-assigned record is indeterminate."
 msgstr ""
-"La estructura de la tupla de un registro no asignado aún no está determinado."
+"La estructura de fila de un registro aún no asignado no está determinado."
 
 #: pl_exec.c:2192 pl_exec.c:2205
 msgid "wrong record type supplied in RETURN NEXT"
@@ -275,7 +280,8 @@ msgstr "RETURN NEXT debe tener un parámetro"
 
 #: pl_exec.c:2281 gram.y:2451
 msgid "cannot use RETURN QUERY in a non-SETOF function"
-msgstr "no se puede usar RETURN QUERY en una función que no ha sido declarada SETOF"
+msgstr ""
+"no se puede usar RETURN QUERY en una función que no ha sido declarada SETOF"
 
 #: pl_exec.c:2300
 msgid "structure of query does not match function result type"
@@ -335,8 +341,7 @@ msgstr "la consulta no tiene un destino para los datos de resultado"
 
 #: pl_exec.c:2876
 msgid "If you want to discard the results of a SELECT, use PERFORM instead."
-msgstr ""
-"Si quiere descartar los resultados de un SELECT, utilice PERFORM."
+msgstr "Si quiere descartar los resultados de un SELECT, utilice PERFORM."
 
 #: pl_exec.c:2909 pl_exec.c:3159 pl_exec.c:5413
 msgid "query string argument of EXECUTE is null"
@@ -364,8 +369,8 @@ msgstr "la posición relativa o absoluta del cursor es null"
 #, c-format
 msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
 msgstr ""
-"no puede asignarse un valor null a la variable «%s» que fue declarada NOT NULL"
-"NULL"
+"no puede asignarse un valor null a la variable «%s» que fue declarada NOT "
+"NULLNULL"
 
 #: pl_exec.c:3496
 msgid "cannot assign non-composite value to a row variable"
@@ -439,12 +444,15 @@ msgstr "N/A (columna eliminada)"
 #, c-format
 msgid ""
 "Number of returned columns (%d) does not match expected column count (%d)."
-msgstr "El número de columnas retornadas (%d) no coincide con la cantidad esperada de columnas (%d)."
+msgstr ""
+"El número de columnas retornadas (%d) no coincide con la cantidad esperada "
+"de columnas (%d)."
 
 #: pl_exec.c:5136
 #, c-format
 msgid "Returned type %s does not match expected type %s in column \"%s\"."
-msgstr "El tipo retornado %s no coincide con el tipo esperado %s en la columna «%s»."
+msgstr ""
+"El tipo retornado %s no coincide con el tipo esperado %s en la columna «%s»."
 
 #: gram.y:359
 msgid "row or record variable cannot be CONSTANT"
@@ -484,13 +492,13 @@ msgid "cursor FOR loop must have only one target variable"
 msgstr "un bucle FOR de un cursor debe tener sólo una variable de destino"
 
 #: gram.y:1058
-#, fuzzy
 msgid "cursor FOR loop must use a bound cursor variable"
-msgstr "«BOUND variable?» el cursor del bucle FOR debe usar una variable relacionada con un cursor"
+msgstr "un bucle FOR en torno a un cursor debe usar un cursor enlazado"
 
 #: gram.y:1134
 msgid "integer FOR loop must have only one target variable"
-msgstr "un bucle FOR de un número entero debe tener sólo una variable de destino"
+msgstr ""
+"un bucle FOR de un número entero debe tener sólo una variable de destino"
 
 #: gram.y:1167
 msgid "cannot specify REVERSE in query FOR loop"
@@ -588,23 +596,22 @@ msgstr ""
 "RETURN no puede tener un parámetro en una función returnando valor vacío"
 
 #: gram.y:2378 gram.y:2382
-#, fuzzy
 msgid "RETURN must specify a record or row variable in function returning row"
 msgstr ""
-"RETURN debe especificar una variable de tipo record o registro en una función que "
-"retorna una tupla"
+"RETURN debe especificar una variable de tipo record o registro en una "
+"función que retorna una fila"
 
 #: gram.y:2415
 msgid "RETURN NEXT cannot have a parameter in function with OUT parameters"
-msgstr "RETURN NEXT no puede tener parámetros en una función con parámetros OUT"
+msgstr ""
+"RETURN NEXT no puede tener parámetros en una función con parámetros OUT"
 
 #: gram.y:2431 gram.y:2435
-#, fuzzy
 msgid ""
 "RETURN NEXT must specify a record or row variable in function returning row"
 msgstr ""
-"RETURN NEXT debe especificar una variable registro o fila en una función que "
-"retorna una tupla"
+"RETURN NEXT debe especificar una variable tipo record o registro en una función que "
+"retorna una fila"
 
 #: gram.y:2498
 #, c-format
@@ -693,18 +700,16 @@ msgid "assignment"
 msgstr "asignación"
 
 #: pl_funcs.c:483
-#, fuzzy
 msgid "FOR with integer loop variable"
-msgstr "se esperaba un nombre de tipo"
+msgstr "bucle FOR con variable entera"
 
 #: pl_funcs.c:485
-#, fuzzy
 msgid "FOR over SELECT rows"
-msgstr "cierra un cursor"
+msgstr "bucle FOR en torno a registros de un SELECT"
 
 #: pl_funcs.c:487
 msgid "FOR over cursor"
-msgstr "FOR sobre un cursor"
+msgstr "bucle FOR en torno a un cursor"
 
 #: pl_funcs.c:499
 msgid "SQL statement"
@@ -715,9 +720,8 @@ msgid "EXECUTE statement"
 msgstr "sentencia EXECUTE"
 
 #: pl_funcs.c:503
-#, fuzzy
 msgid "FOR over EXECUTE statement"
-msgstr "sentencia: %s"
+msgstr "bucle FOR en torno a una sentencia EXECUTE"
 
 #: scan.l:232
 msgid "unterminated quoted identifier"
