@@ -3,15 +3,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL 8.4\n"
+"Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-04-10 23:56+0900\n"
-"PO-Revision-Date: 2009-04-11 00:09+0900\n"
+"POT-Creation-Date: 2009-04-15 22:21+0900\n"
+"PO-Revision-Date: 2009-04-15 22:55+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
-"Language-Team: Japan PostgreSQL Users Group <jpug-doc@ml.postgresql.jp>\n"
+"Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: command.c:112
 #, c-format
@@ -406,10 +407,9 @@ msgstr ""
 #: common.c:827
 #, c-format
 msgid ""
-"The server version (%d) does not support savepoints for ON_ERROR_ROLLBACK.\n"
-msgstr ""
-"このサーバのバージョン (%d) では、ON_ERROR_ROLLBACK 用のセーブポイントをサ"
-"ポートしていません。\n"
+"The server (version %d.%d) does not support savepoints for "
+"ON_ERROR_ROLLBACK.\n"
+msgstr "このサーバ(バージョン%d.%d)では、ON_ERROR_ROLLBACK用のセーブポイントをサポートしていません。\n"
 
 #: copy.c:124
 msgid "\\copy: arguments required\n"
@@ -493,12 +493,11 @@ msgid "Usage:\n"
 msgstr "使用方法:\n"
 
 #: help.c:88
+#, c-format
 msgid ""
 "  psql [OPTION]... [DBNAME [USERNAME]]\n"
 "\n"
-msgstr ""
-"  psql [オプション]... [データベース名 [ユーザ名]]\n"
-"\n"
+msgstr "  psql [オプション]... [データベース名 [ユーザ名]]\n\n"
 
 #: help.c:90
 #, c-format
@@ -515,10 +514,10 @@ msgstr ""
 "了\n"
 
 #: help.c:96
+#, c-format
 msgid ""
 "  -d, --dbname=DBNAME      database name to connect to (default: \"%s\")\n"
-msgstr ""
-"  -d, --dbname=DB名        接続するデータベース名(デフォルト: \"%s\")\n"
+msgstr "  -d, --dbname=DB名         接続するデータベース名を指定(デフォルト: \"%s\")\n"
 
 #: help.c:97
 #, c-format
@@ -769,28 +768,30 @@ msgid "General\n"
 msgstr "一般\n"
 
 #: help.c:170
+#, c-format
 msgid ""
 "  \\copyright             show PostgreSQL usage and distribution terms\n"
-msgstr ""
-"  \\copyright             PostgreSQL の使い方と配布条件を表示します\n"
+msgstr "  \\copyright     PostgreSQL の使い方と配布条件を表示\n"
 
 #: help.c:171
+#, c-format
 msgid ""
 "  \\g [FILE] or ;         execute query (and send results to file or |pipe)\n"
 msgstr ""
-"  \\g [ファイル] または ; クエリー実行（し、結果をファイルまたは |パイプ へ"
+"  \\g [ファイル] または ;  クエリー実行（し、結果をファイルまたは |パイプ へ"
 "書き出す)\n"
 
 #: help.c:172
+#, c-format
 msgid ""
 "  \\h [NAME]              help on syntax of SQL commands, * for all "
 "commands\n"
-msgstr ""
-"  \\h [SQLコマンド名]     SQL コマンドの書式のヘルプ、* で全コマンド\n"
+msgstr "  \\h [名前]      SQL コマンドの書式のヘルプ、* で全コマンド\n"
 
 #: help.c:173
+#, c-format
 msgid "  \\q                     quit psql\n"
-msgstr "  \\q                     psql を終了します\n"
+msgstr "  \\q             psql を終了\n"
 
 #: help.c:176
 #, c-format
@@ -798,35 +799,37 @@ msgid "Query Buffer\n"
 msgstr "クエリーバッファ\n"
 
 #: help.c:177
+#, c-format
 msgid ""
 "  \\e [FILE]              edit the query buffer (or file) with external "
 "editor\n"
-msgstr ""
-"  \\e [ファイル]          クエリーバッファ（やファイル）を外部エディタで"
-"編集します\n"
+msgstr "  \\e [ファイル]  現在のクエリーバッファ(やファイル)を外部エディタで編集\n"
 
 #: help.c:178
+#, c-format
 msgid ""
-"  \\ef [FUNCNAME]         edit a function definition with external editor\n"
-msgstr ""
-"  \\ef [関数名]           関数定義を外部エディタで編集します\n"
+"  \\ef [FUNCNAME]         edit function definition with external editor\n"
+msgstr "  \\e [関数名]    関数定義を外部エディタで編集\n"
 
 #: help.c:179
+#, c-format
 msgid "  \\p                     show the contents of the query buffer\n"
-msgstr "  \\p                     クエリーバッファの内容を表示します\n"
+msgstr "  \\p             クエリーバッファの内容を表示\n"
 
 #: help.c:180
+#, c-format
 msgid "  \\r                     reset (clear) the query buffer\n"
-msgstr "  \\r                     クエリーバッファをリセット（クリア）します\n"
+msgstr "  \\r             クエリーバッファをリセット（クリア）\n"
 
 #: help.c:182
+#, c-format
 msgid "  \\s [FILE]              display history or save it to file\n"
-msgstr "  \\s [ファイル名]        ヒストリを表示またはファイルに保存します\n"
+msgstr "  \\s [ファイル]  ヒストリを表示またはファイルに保存\n"
 
 #: help.c:184
+#, c-format
 msgid "  \\w FILE                write query buffer to file\n"
-msgstr "  \\w ファイル名          クエリーバッファの内容をファイルに"
-"書き出します\n"
+msgstr "  \\w ファイル    クエリーバッファの内容をファイルに書き出す\n"
 
 #: help.c:187
 #, c-format
@@ -834,32 +837,35 @@ msgid "Input/Output\n"
 msgstr "入出力\n"
 
 #: help.c:188
+#, c-format
 msgid ""
 "  \\copy ...              perform SQL COPY with data stream to the client "
 "host\n"
 msgstr ""
-"  \\copy ...              クライアントホストに対し、データストリームを"
-"使って SQL コピーを行います\n"
+"  \\copy ...      クライアントホストに対し、データストリームを使って\n"
+"                  SQL コピーを行う\n"
 
 #: help.c:189
+#, c-format
 msgid "  \\echo [STRING]         write string to standard output\n"
-msgstr "  \\echo [文字列]         文字列を標準出力に書き出します\n"
+msgstr "  \\echo [文字列] 文字列を標準出力に書き出す\n"
 
 #: help.c:190
+#, c-format
 msgid "  \\i FILE                execute commands from file\n"
-msgstr "  \\i ファイル名          ファイルからコマンドを読み込んで実行します\n"
+msgstr "  \\i ファイル    ファイルからコマンドを読み込んで実行\n"
 
 #: help.c:191
+#, c-format
 msgid "  \\o [FILE]              send all query results to file or |pipe\n"
-msgstr ""
-"  \\o [ファイル]          すべてのクエリーの結果をファイルまたは "
-"|パイプ へ書き出します\n"
+msgstr "  \\o [ファイル]  すべてのクエリーの結果をファイルまたは |パイプ へ送る\n"
 
 #: help.c:192
+#, c-format
 msgid ""
 "  \\qecho [STRING]        write string to query output stream (see \\o)\n"
 msgstr ""
-"  \\qecho [文字列]        文字列をクエリー出力ストリームに出力(\\o を参照)\n"
+"  \\qecho [文字列]    文字列をクエリー出力ストリームに出力(\\o を参照)\n"
 
 #: help.c:195
 #, c-format
@@ -867,129 +873,159 @@ msgid "Informational\n"
 msgstr "情報\n"
 
 #: help.c:196
+#, c-format
 msgid "  (options: S = show system objects, + = additional detail)\n"
-msgstr "  (オプション: S = システムオブジェクトを表示, + = 詳細情報)\n"
+msgstr "(修飾子: S = システムオブジェクトを表示 + = 詳細情報)\n"
 
 #: help.c:197
+#, c-format
 msgid "  \\d[S+]                 list tables, views, and sequences\n"
-msgstr "  \\d[S+]                 テーブル、ビュー、シーケンスの一覧を表示\n"
+msgstr "  \\d[S+]                テーブル、ビュー、シーケンスの一覧を表示\n"
 
 #: help.c:198
+#, c-format
 msgid "  \\d[S+]  NAME           describe table, view, sequence, or index\n"
 msgstr ""
-"  \\d[S+]   名前          テーブル、ビュー、シーケンス、インデックスの"
-"説明を表示\n"
+"  \\d[S+]   名前         テーブル、ビュー、シーケンス、インデックスの説明を表"
+"示\n"
 
 #: help.c:199
+#, c-format
 msgid "  \\da[S]  [PATTERN]      list aggregate functions\n"
-msgstr "  \\da[S]  [パターン]     集約関数一覧を表示\n"
+msgstr "  \\da[S]   [パターン]   集約関数一覧を表示\n"
 
 #: help.c:200
+#, c-format
 msgid "  \\db[+]  [PATTERN]      list tablespaces\n"
-msgstr "  \\db[+]  [パターン]     テーブルスペース一覧を表示\n"
+msgstr "  \\db[+]   [パターン]   テーブルスペース一覧を表示\n"
 
 #: help.c:201
+#, c-format
 msgid "  \\dc[S]  [PATTERN]      list conversions\n"
-msgstr "  \\dc[S]  [パターン]     変換ルール(conversion)一覧を表示\n"
+msgstr "  \\dc[S]   [パターン]   変換ルール一覧を表示\n"
 
 #: help.c:202
+#, c-format
 msgid "  \\dC     [PATTERN]      list casts\n"
-msgstr "  \\dC     [パターン]     キャスト一覧を表示\n"
+msgstr "  \\dC      [パターン]   キャスト一覧を表示\n"
 
 #: help.c:203
+#, c-format
 msgid "  \\dd[S]  [PATTERN]      show comments on objects\n"
-msgstr "  \\dd[S]  [パターン]     オブジェクトのコメントを表示\n"
+msgstr "  \\dd[S]   [パターン]   オブジェクトのコメントを表示\n"
 
 #: help.c:204
+#, c-format
 msgid "  \\dD[S]  [PATTERN]      list domains\n"
-msgstr "  \\dD[S]  [パターン]     ドメイン一覧を表示\n"
+msgstr "  \\dD[S]   [パターン]   ドメイン一覧を表示\n"
 
 #: help.c:205
+#, c-format
 msgid "  \\des[+] [PATTERN]      list foreign servers\n"
-msgstr "  \\des[+] [パターン]     外部サーバ一覧を表示\n"
+msgstr "  \\des[+]  [パターン]   外部サーバ一覧を表示\n"
 
 #: help.c:206
+#, c-format
 msgid "  \\deu[+] [PATTERN]      list user mappings\n"
-msgstr "  \\deu[+] [パターン]     ユーザマッピングの一覧を表示\n"
+msgstr "  \\deu[+]  [パターン]   ユーザマッピングの一覧を表示\n"
 
 #: help.c:207
+#, c-format
 msgid "  \\dew[+] [PATTERN]      list foreign-data wrappers\n"
-msgstr "  \\dew[+] [パターン]     外部データラッパーの一覧を表示\n"
+msgstr "  \\dew[+]  [パターン]   外部データラッパーの一覧を表示\n"
 
 #: help.c:208
+#, c-format
 msgid "  \\df[S+] [PATTERN]      list functions\n"
-msgstr "  \\df[S+] [パターン]     関数一覧を表示\n"
+msgstr "  \\df[S+]  [パターン]   関数一覧を表示\n"
 
 #: help.c:209
+#, c-format
 msgid "  \\dF[+]  [PATTERN]      list text search configurations\n"
-msgstr "  \\dF[+]  [パターン]     テキスト検索設定の一覧を表示\n"
+msgstr "  \\dF[+]   [パターン]   テキスト検索設定一覧を表示\n"
 
 #: help.c:210
+#, c-format
 msgid "  \\dFd[+] [PATTERN]      list text search dictionaries\n"
-msgstr "  \\dFd[+] [パターン]     テキスト検索用の辞書一覧を表示\n"
+msgstr "  \\dFd[+]  [パターン]   テキスト検索用の辞書一覧を表示\n"
 
 #: help.c:211
+#, c-format
 msgid "  \\dFp[+] [PATTERN]      list text search parsers\n"
-msgstr "  \\dFp[+] [パターン]     テキスト検索用のパーサ一覧を表示\n"
+msgstr "  \\dFp[+]  [パターン]   テキスト検索用のパーサ一覧を表示\n"
 
 #: help.c:212
+#, c-format
 msgid "  \\dFt[+] [PATTERN]      list text search templates\n"
-msgstr "  \\dFt[+] [パターン]     テキスト検索用のテンプレート一覧を表示\n"
+msgstr "  \\dFt[+]  [パターン]   テキスト検索用のテンプレート一覧を表示\n"
 
 #: help.c:213
+#, c-format
 msgid "  \\dg     [PATTERN]      list roles (groups)\n"
-msgstr "  \\dg     [パターン]     ロール（グループ）の一覧を表示\n"
+msgstr "  \\dg      [パターン]   ロール（グループ）の一覧を表示\n"
 
 #: help.c:214
+#, c-format
 msgid "  \\di[S+] [PATTERN]      list indexes\n"
-msgstr "  \\di[S+] [パターン]     インデックスの一覧を表示\n"
+msgstr "  \\di[S+]  [パターン]   インデックスの一覧を表示\n"
 
 #: help.c:215
+#, c-format
 msgid "  \\dl                    list large objects, same as \\lo_list\n"
 msgstr ""
-"  \\dl                    ラージオブジェクトの一覧を表示。\\lo_list と同じ\n"
+"  \\dl             ラージオブジェクトの一覧を表示。\\lo_list と同じ。\n"
 
 #: help.c:216
+#, c-format
 msgid "  \\dn[+]  [PATTERN]      list schemas\n"
-msgstr "  \\dn[+]  [パターン]     スキーマ一覧を表示\n"
+msgstr "  \\dn[+]   [パターン]   スキーマの一覧を表示\n"
 
 #: help.c:217
+#, c-format
 msgid "  \\do[S]  [PATTERN]      list operators\n"
-msgstr "  \\do[S]  [名前]         演算子一覧を表示\n"
+msgstr "  \\do[S]   [名前]       演算子の一覧を表示\n"
 
 #: help.c:218
+#, c-format
 msgid ""
 "  \\dp     [PATTERN]      list table, view, and sequence access privileges\n"
 msgstr ""
-"  \\dp     [パターン]     テーブル、ビュー、シーケンスのアクセス権一覧を表示\n"
+"  \\dp [パターン]       テーブル、ビュー、シーケンスのアクセス権一覧を表示\n"
 
 #: help.c:219
+#, c-format
 msgid "  \\ds[S+] [PATTERN]      list sequences\n"
-msgstr "  \\ds[S+] [パターン]     シーケンス一覧を表示\n"
+msgstr "  \\ds[S+]  [パターン]   シーケンスの一覧を表示\n"
 
 #: help.c:220
+#, c-format
 msgid "  \\dt[S+] [PATTERN]      list tables\n"
-msgstr "  \\dt[S+] [パターン]     テーブル一覧を表示\n"
+msgstr "  \\dt[S+]  [パターン]   テーブルの一覧を表示\n"
 
 #: help.c:221
+#, c-format
 msgid "  \\dT[S+] [PATTERN]      list data types\n"
-msgstr "  \\dT[S+] [パターン]     データ型の一覧を表示\n"
+msgstr "  \\dT[S+]  [パターン]   データ型の一覧を表示\n"
 
 #: help.c:222
+#, c-format
 msgid "  \\du     [PATTERN]      list roles (users)\n"
-msgstr "  \\du     [パターン]     ロール（ユーザ）の一覧を表示\n"
+msgstr "  \\du      [パターン]   ロール（ユーザ）の一覧を表示\n"
 
 #: help.c:223
+#, c-format
 msgid "  \\dv[S+] [PATTERN]      list views\n"
-msgstr "  \\dv[S+] [パターン]     ビューの一覧を表示\n"
+msgstr "  \\dv[S+]  [パターン]   ビューの一覧を表示\n"
 
 #: help.c:224
+#, c-format
 msgid "  \\l[+]                  list all databases\n"
-msgstr "  \\l[+]                  データベース一覧を表示\n"
+msgstr "  \\l[+]                 データベースの一覧を表示\n"
 
 #: help.c:225
+#, c-format
 msgid "  \\z      [PATTERN]      same as \\dp\n"
-msgstr "   \\z     [パターン]     \\dp と同じ\n"
+msgstr "   \\z      [パターン]   \\dp と同じ\n"
 
 #: help.c:228
 #, c-format
@@ -997,30 +1033,32 @@ msgid "Formatting\n"
 msgstr "書式設定\n"
 
 #: help.c:229
+#, c-format
 msgid ""
 "  \\a                     toggle between unaligned and aligned output mode\n"
-msgstr ""
-"  \\a                     出力時の 'unaligned(桁詰め)' および "
-"'aligned(桁揃え)' モードのトグル\n"
+msgstr "  \\a             'unaligned' および 'aligned' 出力モードのトグル\n"
 
 #: help.c:230
+#, c-format
 msgid "  \\C [STRING]            set table title, or unset if none\n"
-msgstr "  \\C [文字列]            テーブルのタイトルを設定。"
-"指定がなければクリア\n"
+msgstr "  \\C タイトル    テーブルのタイトルをセット、指定がなければ解除\n"
 
 #: help.c:231
+#, c-format
 msgid ""
 "  \\f [STRING]            show or set field separator for unaligned query "
 "output\n"
 msgstr ""
-"  \\f [文字列]            クエリー出力の際に桁揃えを行わない(unaligned)"
-"場合に使用するフィールド区切り文字を表示または指定\n"
+"  \\f [文字列]    クエリー出力の際に桁揃えを行わない(unaligned)場合に\n"
+"                  使用するフィールド区切り文字を表示または指定\n"
 
 #: help.c:232
+#, c-format
 msgid "  \\H                     toggle HTML output mode (currently %s)\n"
-msgstr "  \\H                     HTML の出力モードをトグル(現在: %s)\n"
+msgstr "  \\H             HTML の出力モードをトグル(現在: %s)\n"
 
 #: help.c:234
+#, c-format
 msgid ""
 "  \\pset NAME [VALUE]     set table output option\n"
 "                         (NAME := {format|border|expanded|fieldsep|footer|"
@@ -1028,26 +1066,27 @@ msgid ""
 "                         numericlocale|recordsep|tuples_only|title|tableattr|"
 "pager})\n"
 msgstr ""
-"  \\pset 名前 [値]        テーブル出力時のオプション設定\n"
-"                         (名前 := {format|border|expanded|fieldsep|footer|"
-"null|\n"
-"                         numericlocale|recordsep|tuples_only|title|tableattr|"
+"  \\pset 名前 [値]    テーブル出力のオプション設定\n"
+"                 (名前 := {format|border|expanded|fieldsep|footer|null|\n"
+"                 numericlocale|recordsep|tuples_only|title|tableattr|"
 "pager})\n"
 
 #: help.c:237
+#, c-format
 msgid "  \\t [on|off]            show only rows (currently %s)\n"
-msgstr "  \\t [on|off]            行のみを表示するモード (現在 %s)\n"
+msgstr "  \\t [on|off]    行のみ表示する (現在: %s)\n"
 
 #: help.c:239
+#, c-format
 msgid ""
 "  \\T [STRING]            set HTML <table> tag attributes, or unset if none\n"
 msgstr ""
-"  \\T [文字列]            HTML の <table> タグの属性をセット。"
-"引数がなければクリア\n"
+"  \\T [文字列]    HTML の <table> タグの属性をセット。引数がなければ解除。\n"
 
 #: help.c:240
+#, c-format
 msgid "  \\x [on|off]            toggle expanded output (currently %s)\n"
-msgstr "  \\x [on|off]            拡張出力のトグル(現在 %s)\n"
+msgstr "  \\x [on|off]    拡張出力のトグル(現在: %s)\n"
 
 #: help.c:244
 #, c-format
@@ -1055,66 +1094,79 @@ msgid "Connection\n"
 msgstr "接続\n"
 
 #: help.c:245
+#, c-format
 msgid ""
 "  \\c[onnect] [DBNAME|- USER|- HOST|- PORT|-]\n"
 "                         connect to new database (currently \"%s\")\n"
 msgstr ""
 "  \\c[onnect] [DB名|- ユーザ名|- ホスト名|- ポート番号|-]\n"
-"                         新しいデータベース(現在は \"%s\")に接続する \n"
+"                 新しいデータベースに接続する (現在: \"%s\")\n"
 
 #: help.c:248
+#, c-format
 msgid "  \\encoding [ENCODING]   show or set client encoding\n"
 msgstr ""
-      "  \\encoding [エンコーディング]\n"
-"                              クライアントのエンコーディングを表示または設定\n"
+"  \\encoding [エンコーディング]\n"
+"                 クライアントのエンコーディングを表示またはセット\n"
 
 #: help.c:249
+#, c-format
 msgid "  \\password [USERNAME]   securely change the password for a user\n"
-msgstr "  \\password [USERNAME]   ユーザのパスワードを安全に変更する\n"
+msgstr "  \\password [USERNAME]  ユーザのパスワードを安全に変更する\n"
 
 #: help.c:252
+#, c-format
 msgid "Operating System\n"
 msgstr "オペレーティングシステム\n"
 
 #: help.c:253
+#, c-format
 msgid "  \\cd [DIR]              change the current working directory\n"
-msgstr "  \\cd [DIR]              カレントディレクトリを変更\n"
+msgstr "  \\cd [DIR]         カレントディレクトリを変更\n"
 
 #: help.c:254
+#, c-format
 msgid "  \\timing [on|off]       toggle timing of commands (currently %s)\n"
-msgstr "  \\timing [on|off]       コマンドのタイミングを切り替え(現在 %s)\n"
+msgstr "  \\timing [on|off]  コマンドのタイミングを切り替え(現在: %s)\n"
 
 #: help.c:256
+#, c-format
 msgid ""
 "  \\! [COMMAND]           execute command in shell or start interactive "
 "shell\n"
-msgstr ""
-"  \\! [コマンド]          シェルでコマンドを実行、もしくは会話型シェルを起動\n"
+msgstr "  \\! [コマンド]  シェルでコマンドを実行、もしくは会話型シェルを起動\n"
 
 #: help.c:259
+#, c-format
 msgid "Variables\n"
 msgstr "変数\n"
 
 #: help.c:260
+#, c-format
 msgid "  \\prompt [TEXT] NAME    prompt user to set internal variable\n"
 msgstr "  \\prompt [テキスト] 変数名    ユーザに内部変数をセットするよう促す\n"
 
 #: help.c:261
+#, c-format
 msgid ""
 "  \\set [NAME [VALUE]]    set internal variable, or list all if no "
 "parameters\n"
 msgstr ""
-"  \\set [名前 [値]]       内部変数の値をセット。引数がない場合は一覧表示。\n"
+"  \\set [変数名 [値]]\n"
+"                 内部変数の値をセット。引数がない場合は一覧表示。\n"
 
 #: help.c:262
+#, c-format
 msgid "  \\unset NAME            unset (delete) internal variable\n"
-msgstr "  \\unset 名前            内部変数を削除\n"
+msgstr "  \\unset 変数名          内部変数を削除\n"
 
 #: help.c:265
+#, c-format
 msgid "Large Objects\n"
 msgstr "ラージオブジェクト\n"
 
 #: help.c:266
+#, c-format
 msgid ""
 "  \\lo_export LOBOID FILE\n"
 "  \\lo_import FILE [COMMENT]\n"
@@ -1249,10 +1301,11 @@ msgstr ""
 
 #: print.c:2263
 #, c-format
-msgid "invalid fout format (internal error): %d"
+msgid "invalid output format (internal error): %d"
 msgstr "出力フォーマットが無効（内部エラー）：%d"
 
 #: print.c:2351
+#, c-format
 msgid "(1 row)"
 msgid_plural "(%lu rows)"
 msgstr[0] "(1 行)"
@@ -1705,10 +1758,11 @@ msgid "No connections"
 msgstr "接続なし"
 
 #: describe.c:1899
+#, c-format
 msgid "1 connection"
 msgid_plural "%d connections"
 msgstr[0] "1 個の接続"
-msgstr[1] "%d 個の接続"
+msgstr[1] "%d個の接続"
 
 #: describe.c:1980
 msgid "special"
@@ -1928,16 +1982,16 @@ msgstr ""
 
 #: describe.c:2910
 msgid "Validator"
-msgstr ""
+msgstr "バリデータ"
 
 #: describe.c:2934
 msgid "List of foreign-data wrappers"
 msgstr "外部データラッパーの一覧"
 
 #: describe.c:2957
+#, c-format
 msgid "The server (version %d.%d) does not support foreign servers.\n"
-msgstr ""
-"このサーバのバージョン (%d.%d) は外部サーバをサポートしていません。\n"
+msgstr "このサーバ(バージョン%d.%d)は外部サーバをサポートしていません。\n"
 
 #: describe.c:2969
 msgid "Foreign-data wrapper"
@@ -1952,9 +2006,9 @@ msgid "List of foreign servers"
 msgstr "外部サーバ一覧"
 
 #: describe.c:3023
+#, c-format
 msgid "The server (version %d.%d) does not support user mappings.\n"
-msgstr ""
-"このサーバのバージョン (%d.%d) はユーザマッピングをサポートしていません。\n"
+msgstr "このサーバ(バージョン%d.%d)はユーザマップをサポートしていません。\n"
 
 #: describe.c:3032
 msgid "Server"
@@ -2935,7 +2989,7 @@ msgstr ""
 "           [ TEMPLATE [=] テンプレート名 ]\n"
 "           [ ENCODING [=] エンコーディング ]\n"
 "           [ LC_COLLATE [=] 照合順序 ]\n"
-"           [ LC_CTYPE [=] ctype ]\n"
+"           [ LC_CTYPE [=] lc_ctype ]\n"
 "           [ TABLESPACE [=] テーブルスペース名 ] ]\n"
 "           [ CONNECTION LIMIT [=] 最大接続数 ] ]"
 
@@ -4413,36 +4467,33 @@ msgid ""
 msgstr ""
 "[ WITH [ RECURSIVE ] WITHクエリー [, ...] ]\n"
 "SELECT [ ALL | DISTINCT [ ON ( 評価式 [, ...] ) ] ]\n"
-"    * | 評価式 [ AS 出力項目名 ] [, ...]\n"
-"    [ FROM from項目 [, ...] ]\n"
+"    * | 評価式 [ [ AS ] 出力項目名 ] [, ...]\n"
+"    [ FROM FROM項目 [, ...] ]\n"
 "    [ WHERE 条件 ]\n"
 "    [ GROUP BY 評価式 [, ...] ]\n"
 "    [ HAVING 条件 [, ...] ]\n"
 "    [ WINDOW ウィンドウ名 AS ( ウィンドウ定義 ) [, ...] ]\n"
 "    [ { UNION | INTERSECT | EXCEPT } [ ALL ] SELECT句 ]\n"
-"    [ ORDER BY 評価式 [ ASC | DESC | USING 演算子 ] [ NULLS { FIRST | "
-"LAST } ] [, ...] ]\n"
+"    [ ORDER BY 評価式 [ ASC | DESC | USING 演算子 ] [ NULLS { FIRST | LAST } ] [, ...] ]\n"
 "    [ LIMIT { 行数 | ALL } ]\n"
 "    [ OFFSET 開始行番号 [ ROW | ROWS ] ]\n"
 "    [ FETCH { FIRST | NEXT } [ 行数 ] { ROW | ROWS } ONLY ]\n"
-"    [ FOR { UPDATE | SHARE } [ OF テーブル名 [, ...] ] [ NOWAIT ] [...] ]"
+"    [ FOR { UPDATE | SHARE } [ OF テーブル名 [, ...] ] [ NOWAIT ] [...] ]\n"
 "\n"
-"ここで from項目は以下のいずれか：\n"
+"ここでFROM項目は以下のいずれかです。\n"
 "\n"
-"    [ ONLY ] テーブル名 [ * ] [ [ AS ] 別名 [ ( カラム別名 [, ...] ) ] ]\n"
-"    ( select句 ) [ AS ] 別名 [ ( カラム別名 [, ...] ) ]\n"
-"    withクエリー名 [ [ AS ] 別名 [ ( カラム別名 [, ...] ) ] ]\n"
-"    関数名 ( [ 引数 [, ...] ] ) [ AS ] 別名 [ ( カラム別名 "
-"[, ...] | カラム定義 [, ...] ) ]\n"
-"    関数名 ( [ 引数 [, ...] ] ) AS ( カラム定義 [, ...] )\n"
-"    from項目 [ NATURAL ] joinタイプ from項目 [ ON join条件 | USING "
-"( join対象カラム [, ...] ) ]\n"
+"    [ ONLY ] テーブル名 [ * ] [ [ AS ] 別名 [ ( 列の別名 [, ...] ) ] ]\n"
+"    ( select ) [ AS ] 別名 [ ( 列の別名 [, ...] ) ]\n"
+"    WITHクエリー名 [ [ AS ] 別名 [ ( 列の別名 [, ...] ) ] ]\n"
+"    関数名 ( [ 引数 [, ...] ] ) [ AS ] alias [ ( 列の別名 [, ...] | 列の定義 [, ...] ) ]\n"
+"    関数名 ( [ 引数 [, ...] ] ) AS ( 列の定義 [, ...] )\n"
+"    FROM項目 [ NATURAL ] 結合種類 FROM項目 [ ON 結合条件 | USING \"( 結合列 [, ...] ) ]\n"
 "\n"
-"また、withクエリー は以下の通り：\n"
+"WITHクエリーは以下の通りです。\n"
 "\n"
-"    withクエリー名 [ ( カラム名 [, ...] ) ] AS ( select句 )\n"
+"    WITHクエリー名 [ ( 列名 [, ...] ) ] AS ( select )\n"
 "\n"
-"TABLE { [ ONLY ] テーブル名 [ * ] | withクエリー名 }"
+"TABLE { [ ONLY ] テーブル名 [ * ] | WITHクエリー名 }"
 
 #: sql_help.h:526
 msgid ""
@@ -4714,3 +4765,72 @@ msgstr "子プロセスがシグナル %d で終了させられました。"
 #, c-format
 msgid "child process exited with unrecognized status %d"
 msgstr "子プロセスが認識できないステータス %d により終了しました。"
+
+#~ msgid "External\n"
+#~ msgstr "外部\n"
+
+#~ msgid "(%lu rows)"
+#~ msgstr "(%lu 行)"
+
+#~ msgid "%d connections"
+#~ msgstr "%d 個の接続"
+
+#~ msgid ""
+#~ "[ WITH [ RECURSIVE ] WITHクエリー [, ...] ]\n"
+#~ "SELECT [ ALL | DISTINCT [ ON ( 評価式 [, ...] ) ] ]\n"
+#~ "    * | 評価式 [ [ AS ] 出力名 ] [, ...]\n"
+#~ "    [ FROM FROM項目 [, ...] ]\n"
+#~ "    [ WHERE 条件 ]\n"
+#~ "    [ GROUP BY 評価式 [, ...] ]\n"
+#~ "    [ HAVING 条件 [, ...] ]\n"
+#~ "    [ WINDOW ウィンドウ名 AS ( ウィンドウ定義 ) [, ...] ]\n"
+#~ "    [ { UNION | INTERSECT | EXCEPT } [ ALL ] SELECT句 ]\n"
+#~ "    [ ORDER BY expression [ ASC | DESC | USING 演算子名 ] [ NULLS { FIRST "
+#~ "| LAST } ] [, ...] ]\n"
+#~ "    [ LIMIT { 行数 | ALL } ]\n"
+#~ "    [ OFFSET 開始行番号 [ ROW | ROWS ] ]\n"
+#~ "    [ FETCH { FIRST | NEXT } [ 行数 ] { ROW | ROWS } ONLY ]\n"
+#~ "    [ FOR { UPDATE | SHARE } [ OF テーブル名 [, ...] ] [ NOWAIT ] "
+#~ "[...] ]\n"
+#~ "\n"
+#~ "FROM項目は以下の通り：\n"
+#~ "\n"
+#~ "    [ ONLY ] テーブル名 [ * ] [ [ AS ] 別名 [ ( カラム別名 [, ...] ) ] ]\n"
+#~ "    ( SELECT句 ) [ AS ] 別名 [ ( カラム別名 [, ...] ) ]\n"
+#~ "    WITHクエリー名 [ [ AS ] 別名 [ ( カラム別名 [, ...] ) ] ]\n"
+#~ "    関数名 ( [ 引数 [, ...] ] ) [ AS ] 別名 [ ( カラム別名 [, ...] | カラ"
+#~ "ム定義 [, ...] ) ]\n"
+#~ "    関数名 ( [ 引数 [, ...] ] ) AS ( カラム定義 [, ...] )\n"
+#~ "    FROM項目 [ NATURAL ] JOINタイプ FROM項目 [ ON JOIN条件 | USING ( JOIN"
+#~ "対象カラム [, ...] ) ]\n"
+#~ "\n"
+#~ "WITHクエリーは以下の通り：\n"
+#~ "\n"
+#~ "    WITHクエリー名 [ ( カラム名 [, ...] ) ] AS ( SELECT句 )\n"
+#~ "\n"
+#~ "TABLE { [ ONLY ] テーブル名 [ * ] | WITHクエリー名 }"
+#~ msgstr ""
+#~ "SELECT [ ALL | DISTINCT [ ON ( 評価式 [, ...] ) ] ]\n"
+#~ "    * | 評価式 [ AS 出力項目名 ] [, ...]\n"
+#~ "    [ FROM FROM項目 [, ...] ]\n"
+#~ "    [ WHERE 条件 ]\n"
+#~ "    [ GROUP BY 評価式 [, ...] ]\n"
+#~ "    [ HAVING 条件 [, ...] ]\n"
+#~ "    [ { UNION | INTERSECT | EXCEPT } [ ALL ] SELECT句 ]\n"
+#~ "    [ ORDER BY 評価式 [ ASC | DESC | USING 演算子 ] [ NULLS { FIRST | "
+#~ "LAST } ] [, ...] ]\n"
+#~ "    [ LIMIT { 行数 | ALL } ]\n"
+#~ "    [ OFFSET 開始行番号 ]\n"
+#~ "    [ FOR { UPDATE | SHARE }  [ OF テーブル名 [, ...] ] [ NOWAIT ] "
+#~ "[...] ]\n"
+#~ "\n"
+#~ "FROM項目は以下のいずれか：\n"
+#~ "\n"
+#~ "    [ ONLY ] テーブル名 [ * ] [ [ AS ] 別名 [ ( カラムの別名 "
+#~ "[, ...] ) ] ]\n"
+#~ "    ( SELECT句 ) [ AS ] 別名 [ ( カラムの別名 [, ...] ) ]\n"
+#~ "    関数名 ( [ 引数 [, ...] ] ) [ AS ] 別名 [ ( カラムの別名 [, ...] | カ"
+#~ "ラム定義 [, ...] ) ]\n"
+#~ "    関数名 ( [ 引数 [, ...] ] ) AS ( カラム定義 [, ...] )\n"
+#~ "    FROM項目 [ NATURAL ] JOINタイプ FROM項目 [ ON JOIN条件 | USING ( JOIN"
+#~ "対象カラム [, ...] ) ]"
