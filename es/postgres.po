@@ -40,7 +40,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2009-04-14 18:41+0000\n"
-"PO-Revision-Date: 2009-04-15 20:50-0400\n"
+"PO-Revision-Date: 2009-04-16 12:28-0400\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -335,7 +335,7 @@ msgstr "pam_set_item(PAM_CONV) falló: %s"
 #: libpq/auth.c:2004
 #, c-format
 msgid "pam_authenticate failed: %s"
-msgstr "pam_authenticate fallida: %s"
+msgstr "pam_authenticate falló: %s"
 
 #: libpq/auth.c:2015
 #, c-format
@@ -4438,9 +4438,9 @@ msgid "column \"%s\" does not exist"
 msgstr "no existe la columna «%s»"
 
 #: utils/adt/tsvector_op.c:1344
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" is not of a character type"
-msgstr "la columna «%s» no es de tipo de caracteres"
+msgstr "la columna «%s» no es de un tipo textual"
 
 #: utils/adt/tsvector_parser.c:137
 #, c-format
@@ -8154,7 +8154,7 @@ msgstr "servidor %s"
 #: catalog/dependency.c:2586
 #, c-format
 msgid "user mapping for %s"
-msgstr "mapeo de usuario para %s"
+msgstr "mapeo para el usuario %s"
 
 #: catalog/dependency.c:2630
 #, c-format
@@ -8535,7 +8535,7 @@ msgstr "ya existe la conversión «%s»"
 #: catalog/pg_conversion.c:80
 #, c-format
 msgid "default conversion for %s to %s already exists"
-msgstr "ya existe una conversión por defecto de %s a %s"
+msgstr "ya existe una conversión por omisión desde %s a %s"
 
 #: catalog/pg_depend.c:209
 #, c-format
@@ -8587,29 +8587,24 @@ msgid "only binary operators can hash"
 msgstr "sólo los operadores binarios pueden ser usados en hash"
 
 #: catalog/pg_operator.c:390
-#, fuzzy
 msgid "only boolean operators can have negators"
-msgstr "sólo los operadores binarios pueden tener conmutadores"
+msgstr "sólo los operadores booleanos pueden tener negadores"
 
 #: catalog/pg_operator.c:394
-#, fuzzy
 msgid "only boolean operators can have restriction selectivity"
-msgstr "sólo los operadores binarios pueden tener selectividad de join"
+msgstr "sólo los operadores booleanos pueden tener selectividad de restricción"
 
 #: catalog/pg_operator.c:398
-#, fuzzy
 msgid "only boolean operators can have join selectivity"
-msgstr "sólo los operadores binarios pueden tener selectividad de join"
+msgstr "sólo los operadores booleanos pueden tener selectividad de join"
 
 #: catalog/pg_operator.c:402
-#, fuzzy
 msgid "only boolean operators can merge join"
-msgstr "sólo los operadores binarios pueden ser usados en merge join"
+msgstr "sólo los operadores booleanos pueden ser usados en merge join"
 
 #: catalog/pg_operator.c:406
-#, fuzzy
 msgid "only boolean operators can hash"
-msgstr "sólo los operadores binarios pueden ser usados en hash"
+msgstr "sólo los operadores booleanos pueden ser usados en hash"
 
 #: catalog/pg_operator.c:418
 #, c-format
@@ -8621,10 +8616,10 @@ msgid "operator cannot be its own negator or sort operator"
 msgstr "un operador no puede ser su propio negador u operador de ordenamiento"
 
 #: catalog/pg_proc.c:115 parser/parse_func.c:1422 parser/parse_func.c:1462
-#, fuzzy, c-format
+#, c-format
 msgid "functions cannot have more than %d argument"
 msgid_plural "functions cannot have more than %d arguments"
-msgstr[0] "las funciones no pueden tener más de %d argumentos"
+msgstr[0] "las funciones no pueden tener más de %d argumento"
 msgstr[1] "las funciones no pueden tener más de %d argumentos"
 
 #: catalog/pg_proc.c:197
@@ -8659,22 +8654,20 @@ msgid "Row type defined by OUT parameters is different."
 msgstr "Tipo de registro definido por parámetros OUT es diferente."
 
 #: catalog/pg_proc.c:413
-#, fuzzy
 msgid "cannot remove parameter defaults from existing function"
-msgstr "no se puede cambiar el tipo de retorno de una función existente"
+msgstr "no se puede eliminar el valor por omisión de funciones existentes"
 
 #: catalog/pg_proc.c:439
-#, fuzzy
 msgid "cannot change data type of existing parameter default value"
-msgstr "no se puede cambiar el tipo de retorno de una función existente"
+msgstr "no se puede cambiar el tipo de dato del valor por omisión de un parámetro"
 
 #: catalog/pg_proc.c:451
-#, fuzzy, c-format
+#, c-format
 msgid "function \"%s\" is an aggregate function"
 msgstr "la función «%s» es una función de agregación"
 
 #: catalog/pg_proc.c:456
-#, fuzzy, c-format
+#, c-format
 msgid "function \"%s\" is not an aggregate function"
 msgstr "la función «%s» no es una función de agregación"
 
@@ -8715,9 +8708,9 @@ msgstr "el tamaño interno de tipo %d no es válido"
 
 #: catalog/pg_type.c:240 catalog/pg_type.c:248 catalog/pg_type.c:256
 #: catalog/pg_type.c:265
-#, fuzzy, c-format
+#, c-format
 msgid "alignment \"%c\" is invalid for passed-by-value type of size %d"
-msgstr "el tamaño interno %d no es válido para un tipo pasado por valor"
+msgstr "el alineamiento «%c» no es válido para un tipo pasado por valor de tamaño %d"
 
 #: catalog/pg_type.c:272
 #, c-format
@@ -8725,9 +8718,9 @@ msgid "internal size %d is invalid for passed-by-value type"
 msgstr "el tamaño interno %d no es válido para un tipo pasado por valor"
 
 #: catalog/pg_type.c:281 catalog/pg_type.c:287
-#, fuzzy, c-format
+#, c-format
 msgid "alignment \"%c\" is invalid for variable-length type"
-msgstr "el tamaño interno %d no es válido para un tipo pasado por valor"
+msgstr "el alineamiento «%c» no es válido para un tipo de largo variable"
 
 #: catalog/pg_type.c:295
 msgid "fixed-size types must have storage PLAIN"
@@ -8739,7 +8732,7 @@ msgid "could not form array type name for type \"%s\""
 msgstr "no se pudo formar un nombre de tipo de array para el tipo «%s»"
 
 #: catalog/pg_shdepend.c:665
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "and objects in %d other database (see server log for list)"
@@ -8748,7 +8741,7 @@ msgid_plural ""
 "and objects in %d other databases (see server log for list)"
 msgstr[0] ""
 "\n"
-"y objetos en otras %d bases de datos (vea el registro del servidor para "
+"y objetos en %d base de datos (vea el registro del servidor para "
 "obtener la lista)"
 msgstr[1] ""
 "\n"
@@ -8777,10 +8770,10 @@ msgstr "acceso a %s"
 
 #. translator: %s will always be "database %s"
 #: catalog/pg_shdepend.c:1052
-#, fuzzy, c-format
+#, c-format
 msgid "%d object in %s"
 msgid_plural "%d objects in %s"
-msgstr[0] "%d objetos en %s"
+msgstr[0] "%d objeto en %s"
 msgstr[1] "%d objetos en %s"
 
 #: catalog/pg_shdepend.c:1160 catalog/pg_shdepend.c:1290
@@ -8846,14 +8839,14 @@ msgid "function %s already exists in schema \"%s\""
 msgstr "ya existe una función llamada %s en el esquema «%s»"
 
 #: commands/analyze.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- only superuser can analyze it"
-msgstr "ignorando «%s»: sólo su dueño o el de la base de datos puede analizarla"
+msgstr "ignorando «%s»: sólo un superusuario puede analizarla"
 
 #: commands/analyze.c:184
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- only superuser or database owner can analyze it"
-msgstr "ignorando «%s»: sólo su dueño o el de la base de datos puede analizarla"
+msgstr "ignorando «%s»: sólo un superusuario o el dueño de la base de datos puede analizarla"
 
 #: commands/analyze.c:188
 #, c-format
@@ -8908,9 +8901,9 @@ msgid "index \"%s\" for table \"%s\" does not exist"
 msgstr "no existe el índice «%s» en la tabla «%s»"
 
 #: commands/cluster.c:348
-#, fuzzy, c-format
+#, c-format
 msgid "clustering \"%s.%s\""
-msgstr "haciendo vacuum a «%s.%s»"
+msgstr "reordenando «%s.%s»"
 
 #: commands/cluster.c:378
 #, c-format
@@ -9110,9 +9103,9 @@ msgid "destination encoding \"%s\" does not exist"
 msgstr "no existe la codificación de destino «%s»"
 
 #: commands/conversioncmds.c:90
-#, fuzzy, c-format
+#, c-format
 msgid "encoding conversion function %s must return type \"void\""
-msgstr "la función typmod_in %s debe retornar tipo «integer»"
+msgstr "la función de conversión de codificación %s debe retornar tipo «void»"
 
 #: commands/conversioncmds.c:159
 #, c-format
@@ -9193,9 +9186,8 @@ msgid "cannot specify NULL in BINARY mode"
 msgstr "no se puede especificar NULL en modo BINARY"
 
 #: commands/copy.c:862
-#, fuzzy
 msgid "COPY delimiter must be a single one-byte character"
-msgstr "el delimitador de COPY debe ser un sólo carácter ASCII"
+msgstr "el delimitador de COPY debe ser un solo carácter de un byte"
 
 #: commands/copy.c:869
 msgid "COPY delimiter cannot be newline or carriage return"
@@ -9223,9 +9215,8 @@ msgid "COPY quote available only in CSV mode"
 msgstr "el «quote» de COPY está disponible sólo en modo CSV"
 
 #: commands/copy.c:909
-#, fuzzy
 msgid "COPY quote must be a single one-byte character"
-msgstr "la comilla («quote») de COPY debe ser un sólo carácter ASCII"
+msgstr "la comilla («quote») de COPY debe ser un solo carácter de un byte"
 
 #: commands/copy.c:914
 msgid "COPY delimiter and quote must be different"
@@ -9236,9 +9227,8 @@ msgid "COPY escape available only in CSV mode"
 msgstr "escape de COPY disponible sólo en modo CSV"
 
 #: commands/copy.c:925
-#, fuzzy
 msgid "COPY escape must be a single one-byte character"
-msgstr "el escape de COPY debe ser un sólo carácter ASCII"
+msgstr "el escape de COPY debe ser un sólo carácter de un byte"
 
 #: commands/copy.c:931
 msgid "COPY force quote available only in CSV mode"
@@ -9494,9 +9484,9 @@ msgstr "Considere usar tablespaces."
 
 #: commands/dbcommands.c:252 commands/dbcommands.c:1333 commands/user.c:250
 #: commands/user.c:547
-#, fuzzy, c-format
+#, c-format
 msgid "invalid connection limit: %d"
-msgstr "tipo de conexión no válido: %s"
+msgstr "límite de conexión no válido: %d"
 
 #: commands/dbcommands.c:271
 msgid "permission denied to create database"
@@ -9626,22 +9616,20 @@ msgid "current database cannot be renamed"
 msgstr "no se puede cambiar el nombre de la base de datos activa"
 
 #: commands/dbcommands.c:1013
-#, fuzzy
 msgid "cannot change the tablespace of the currently open database"
-msgstr "no se puede eliminar la base de datos activa"
+msgstr "no se puede cambiar el tablespace de la base de datos activa"
 
 #: commands/dbcommands.c:1100
-#, fuzzy, c-format
+#, c-format
 msgid "some relations of database \"%s\" are already in tablespace \"%s\""
-msgstr "la relación «%s» ya está en el esquema «%s»"
+msgstr "algunas relaciones de la base de datos «%s» ya están en el tablespace «%s»"
 
 #: commands/dbcommands.c:1102
-#, fuzzy
 msgid ""
 "You must move them back to the database's default tablespace before using "
 "this command."
 msgstr ""
-"Una cadena vacía especifica el tablespace por omisión de la base de datos."
+"Debe moverlas de vuelta al tablespace por omisión de la base de datos antes de ejecutar esta orden."
 
 #: commands/dbcommands.c:1232 commands/dbcommands.c:1783
 #: commands/dbcommands.c:1978 commands/dbcommands.c:2014
@@ -9776,49 +9764,47 @@ msgstr ""
 "al cambiar el validador del conector de datos foráneos, las opciones para los objetos dependientes de él pueden volverse no válidas"
 
 #: commands/foreigncmds.c:544
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied to drop foreign-data wrapper \"%s\""
-msgstr "se ha denegado el permiso para copiar la base de datos «%s»"
+msgstr "se ha denegado el permiso para eliminar el conector de datos externos «%s»"
 
 #: commands/foreigncmds.c:546
-#, fuzzy
 msgid "Must be superuser to drop a foreign-data wrapper."
-msgstr "Debe ser superusuario para crear tablespaces."
+msgstr "Debe ser superusuario para eliminar un conector de datos externos."
 
 #: commands/foreigncmds.c:558
-#, fuzzy, c-format
+#, c-format
 msgid "foreign-data wrapper \"%s\" does not exist, skipping"
-msgstr "no existe la base de datos «%s», ignorando"
+msgstr "no existe el conector de datos externos «%s», ignorando"
 
 #: commands/foreigncmds.c:627
-#, fuzzy, c-format
+#, c-format
 msgid "server \"%s\" already exists"
-msgstr "el rol «%s» ya existe"
+msgstr "el servidor «%s» ya existe"
 
 #: commands/foreigncmds.c:816
-#, fuzzy, c-format
+#, c-format
 msgid "server \"%s\" does not exist, skipping"
-msgstr "la vista «%s» no existe, ignorando"
+msgstr "el servidor «%s» no existe, ignorando"
 
 #: commands/foreigncmds.c:922
-#, fuzzy, c-format
+#, c-format
 msgid "user mapping \"%s\" already exists for server %s"
-msgstr "ya existe una relación llamada «%s» en el esquema «%s»"
+msgstr "ya existe un mapeo para el usuario «%s» en el servidor %s"
 
 #: commands/foreigncmds.c:999 commands/foreigncmds.c:1107
-#, fuzzy, c-format
+#, c-format
 msgid "user mapping \"%s\" does not exist for the server"
-msgstr "no existe el esquema «%s»"
+msgstr "no existe el mapeo para el usuario «%s» para el servidor"
 
 #: commands/foreigncmds.c:1093
-#, fuzzy
 msgid "server does not exist, skipping"
-msgstr "el operador %s no existe, ignorando"
+msgstr "el servidor no existe, ignorando"
 
 #: commands/foreigncmds.c:1112
-#, fuzzy, c-format
+#, c-format
 msgid "user mapping \"%s\" does not exist for the server, skipping"
-msgstr "el esquema «%s» no existe, ignorando"
+msgstr "el mapeo para el usuario «%s» no existe para el servidor, ignorando"
 
 #: commands/functioncmds.c:98
 #, c-format
@@ -9873,19 +9859,16 @@ msgid "VARIADIC parameter must be an array"
 msgstr "el parámetro VARIADIC debe ser un array"
 
 #: commands/functioncmds.c:299
-#, fuzzy
 msgid "only input parameters can have default values"
-msgstr "solo ls parámetros posicionados pueden tener alias"
+msgstr "solo los parámetros de entrada pueden tener valores por omisión"
 
 #: commands/functioncmds.c:311
-#, fuzzy
 msgid "cannot use table references in parameter default value"
-msgstr "no se pueden usar referencias a columnas en una cláusula default"
+msgstr "no se pueden usar referencias a tablas en el valor por omisión de un parámetro"
 
 #: commands/functioncmds.c:327
-#, fuzzy
 msgid "cannot use subquery in parameter default value"
-msgstr "no se puede usar una subconsulta en un parámetro a EXECUTE"
+msgstr "no se puede usar una subconsulta en el valor por omisión de un parámetro"
 
 #: commands/functioncmds.c:331
 msgid "cannot use aggregate function in parameter default value"
@@ -9981,12 +9964,11 @@ msgid "cast function must take one to three arguments"
 msgstr "la función de conversión lleva de uno a tres argumentos"
 
 #: commands/functioncmds.c:1544
-#, fuzzy
 msgid ""
 "argument of cast function must match or be binary-coercible from source data "
 "type"
 msgstr ""
-"el argumento de la función de conversión debe coincidir con el tipo de origen"
+"el argumento de la función de conversión debe coincidir o ser binario-convertible con el tipo de origen"
 
 #: commands/functioncmds.c:1548
 msgid "second argument of cast function must be type integer"
@@ -9998,12 +9980,11 @@ msgstr ""
 "el tercer argumento de la función de conversión debe ser de tipo boolean"
 
 #: commands/functioncmds.c:1556
-#, fuzzy
 msgid ""
 "return data type of cast function must match or be binary-coercible to "
 "target data type"
 msgstr ""
-"el tipo de salida de la función de conversión debe coincidir con el tipo de "
+"el tipo de salida de la función de conversión debe coincidir o ser binario-convertible con el tipo de "
 "retorno"
 
 #: commands/functioncmds.c:1567
@@ -10032,19 +10013,16 @@ msgid "source and target data types are not physically compatible"
 msgstr "los tipos de datos de origen y destino no son físicamente compatibles"
 
 #: commands/functioncmds.c:1636
-#, fuzzy
 msgid "composite data types are not binary-compatible"
-msgstr "los tipos de datos de origen y destino no son físicamente compatibles"
+msgstr "los tipos de datos compuestos no son binario-compatibles"
 
 #: commands/functioncmds.c:1642
-#, fuzzy
 msgid "enum data types are not binary-compatible"
-msgstr "los tipos de datos de origen y destino no son físicamente compatibles"
+msgstr "los tipos de datos enum no son binario-compatibles"
 
 #: commands/functioncmds.c:1648
-#, fuzzy
 msgid "array data types are not binary-compatible"
-msgstr "los tipos de datos de origen y destino no son físicamente compatibles"
+msgstr "los tipos de datos de array no son binario-compatibles"
 
 #: commands/functioncmds.c:1658
 msgid "source data type and target data type are the same"
@@ -10559,14 +10537,14 @@ msgid "START value (%s) cannot be greater than MAXVALUE (%s)"
 msgstr "el valor START (%s) no puede ser mayor que MAXVALUE (%s)"
 
 #: commands/sequence.c:1202
-#, fuzzy, c-format
+#, c-format
 msgid "RESTART value (%s) cannot be less than MINVALUE (%s)"
-msgstr "el valor START (%s) no puede ser menor que MINVALUE (%s)"
+msgstr "el valor RESTART (%s) no puede ser menor que MINVALUE (%s)"
 
 #: commands/sequence.c:1214
-#, fuzzy, c-format
+#, c-format
 msgid "RESTART value (%s) cannot be greater than MAXVALUE (%s)"
-msgstr "el valor START (%s) no puede ser mayor que MAXVALUE (%s)"
+msgstr "el valor RESTART (%s) no puede ser mayor que MAXVALUE (%s)"
 
 #: commands/sequence.c:1229
 #, c-format
@@ -10838,9 +10816,9 @@ msgid "child table \"%s\" has different type for column \"%s\""
 msgstr "la tabla hija «%s» tiene un tipo diferente para la columna «%s»"
 
 #: commands/tablecmds.c:3543
-#, fuzzy, c-format
+#, c-format
 msgid "child table \"%s\" has a conflicting \"%s\" column"
-msgstr "tabla hija no tiene la restricción «%s»"
+msgstr "tabla hija «%s» tiene una columna «%s» que entra en conflicto"
 
 #: commands/tablecmds.c:3555
 #, c-format
@@ -10891,9 +10869,8 @@ msgid "cannot drop inherited column \"%s\""
 msgstr "no se puede eliminar la columna heredada «%s»"
 
 #: commands/tablecmds.c:4526
-#, fuzzy
 msgid "constraint must be added to child tables too"
-msgstr "la columna debe ser agregada a las tablas hijas también"
+msgstr "la restricción debe ser agregada a las tablas hijas también"
 
 #: commands/tablecmds.c:4611
 msgid "cannot reference temporary table from permanent table constraint"
@@ -10947,14 +10924,14 @@ msgstr ""
 "referida «%s»"
 
 #: commands/tablecmds.c:5401
-#, fuzzy, c-format
+#, c-format
 msgid "cannot drop inherited constraint \"%s\" of relation \"%s\""
-msgstr "no se puede eliminar la columna heredada «%s»"
+msgstr "no se puede eliminar la restricción «%s» heredada de la relación «%s»"
 
 #: commands/tablecmds.c:5425 commands/tablecmds.c:5526
-#, fuzzy, c-format
+#, c-format
 msgid "constraint \"%s\" of relation \"%s\" does not exist"
-msgstr "no existe la columna «%s» en la relación «%s»"
+msgstr "no existe la restricción «%s» en la relación «%s»"
 
 #: commands/tablecmds.c:5577
 #, c-format
@@ -10980,9 +10957,9 @@ msgstr ""
 "no se puede usar una función ventana en una expresión de transformación"
 
 #: commands/tablecmds.c:5644
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" cannot be cast to type %s"
-msgstr "la columna «%s» no puede convertirse al tipo «%s»"
+msgstr "la columna «%s» no puede convertirse al tipo %s"
 
 #: commands/tablecmds.c:5670
 #, c-format
@@ -10996,10 +10973,10 @@ msgid "cannot alter type of column \"%s\" twice"
 msgstr "no se puede alterar el tipo de la columna «%s» dos veces"
 
 #: commands/tablecmds.c:5743
-#, fuzzy, c-format
+#, c-format
 msgid "default for column \"%s\" cannot be cast to type %s"
 msgstr ""
-"el valor por defecto para la columna «%s» no puede ser convertido al tipo «%s»"
+"el valor por omisión para la columna «%s» no puede ser convertido al tipo %s"
 
 #: commands/tablecmds.c:5869
 msgid "cannot alter type of a column used by a view or rule"
@@ -11078,9 +11055,9 @@ msgid "child table is missing column \"%s\""
 msgstr "tabla hija no tiene la columna «%s»"
 
 #: commands/tablecmds.c:7190
-#, fuzzy, c-format
+#, c-format
 msgid "child table \"%s\" has different definition for check constraint \"%s\""
-msgstr "la tabla hija «%s» tiene un tipo diferente para la columna «%s»"
+msgstr "la tabla hija «%s» tiene una definición diferente para la restricción check «%s»"
 
 #: commands/tablecmds.c:7214
 #, c-format
@@ -11216,9 +11193,8 @@ msgid "multiple UPDATE events specified"
 msgstr "se han especificado múltiples eventos UPDATE"
 
 #: commands/trigger.c:183
-#, fuzzy
 msgid "multiple TRUNCATE events specified"
-msgstr "se han especificado múltiples eventos UPDATE"
+msgstr "se han especificado múltiples eventos TRUNCATE"
 
 #: commands/trigger.c:189
 msgid "TRUNCATE FOR EACH ROW triggers are not supported"
@@ -11428,17 +11404,15 @@ msgstr "no existe la configuración de búsqueda en texto «%s», ignorando"
 msgid "token type \"%s\" does not exist"
 msgstr "no existe el tipo de elemento «%s»"
 
-# XXX mapping?
 #: commands/tsearchcmds.c:2018
 #, c-format
 msgid "mapping for token type \"%s\" does not exist"
-msgstr "no existe un mapping para el tipo de elemento «%s»"
+msgstr "no existe un mapeo para el tipo de elemento «%s»"
 
-# XXX mapping?
 #: commands/tsearchcmds.c:2024
 #, c-format
 msgid "mapping for token type \"%s\" does not exist, skipping"
-msgstr "el mapping para el tipo de elemento «%s» no existe, ignorando"
+msgstr "el mapeo para el tipo de elemento «%s» no existe, ignorando"
 
 #: commands/tsearchcmds.c:2177 commands/tsearchcmds.c:2288
 #, c-format
@@ -11446,9 +11420,8 @@ msgid "invalid parameter list format: \"%s\""
 msgstr "el formato de la lista de parámetros no es válido: «%s»"
 
 #: commands/typecmds.c:163
-#, fuzzy
 msgid "must be superuser to create a base type"
-msgstr "Debe ser superusuario para crear tablespaces."
+msgstr "debe ser superusuario para crear un tipo base"
 
 #: commands/typecmds.c:268
 #, c-format
@@ -11768,16 +11741,16 @@ msgstr ""
 "contador de transacciones."
 
 #: commands/vacuum.c:1111
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- only superuser can vacuum it"
 msgstr ""
-"ignorando «%s»: sólo su dueño o el de la base de datos puede aplicarle VACUUM"
+"ignorando «%s»: sólo un superusuario puede aplicarle VACUUM"
 
 #: commands/vacuum.c:1115
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- only superuser or database owner can vacuum it"
 msgstr ""
-"ignorando «%s»: sólo su dueño o el de la base de datos puede aplicarle VACUUM"
+"ignorando «%s»: sólo un superusuario o el dueño de la base de datos puede aplicarle VACUUM"
 
 #: commands/vacuum.c:1119
 #, c-format
@@ -11938,16 +11911,16 @@ msgid "\"%s\": removed %.0f row versions in %u pages"
 msgstr "«%s»: se eliminaron %.0f versiones de filas en %u páginas"
 
 #: commands/vacuumlazy.c:735
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u out of %u "
 "pages"
 msgstr ""
 "«%s»: se encontraron %.0f versiones de filas eliminables y %.0f no "
-"eliminables en %u páginas"
+"eliminables en %u de %u páginas"
 
 #: commands/vacuumlazy.c:738
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
 "There were %.0f unused item pointers.\n"
@@ -11956,7 +11929,6 @@ msgid ""
 msgstr ""
 "%.0f versiones muertas de filas no pueden ser eliminadas aún.\n"
 "Hubo %.0f punteros de ítem sin uso.\n"
-"%u páginas contienen espacio libre útil.\n"
 "%u páginas están completamente vacías.\n"
 "%s."
 
@@ -12035,19 +12007,18 @@ msgid "view must have at least one column"
 msgstr "una vista debe tener al menos una columna"
 
 #: commands/view.c:259 commands/view.c:271
-#, fuzzy
 msgid "cannot drop columns from view"
-msgstr "no se puede eliminar de una vista"
+msgstr "no se pueden eliminar columnas de una vista"
 
 #: commands/view.c:276
-#, fuzzy, c-format
+#, c-format
 msgid "cannot change name of view column \"%s\" to \"%s\""
-msgstr "no se puede cambiar el nombre de la columna «%s» de la vista"
+msgstr "no se puede cambiar el nombre de la columna «%s» de la vista a «%s»"
 
 #: commands/view.c:284
-#, fuzzy, c-format
+#, c-format
 msgid "cannot change data type of view column \"%s\" from %s to %s"
-msgstr "no se puede cambiar el tipo de dato de la columna «%s» de la vista"
+msgstr "no se puede cambiar el tipo de dato de la columna «%s» de la vista de %s a %s"
 
 #: commands/view.c:440
 msgid "CREATE VIEW specifies more column names than columns"
@@ -12132,9 +12103,8 @@ msgstr ""
 "el tipo de fila de la tabla no coincide con el tipo de la fila de la consulta"
 
 #: executor/execMain.c:1184
-#, fuzzy
 msgid "Query has too many columns."
-msgstr "la subconsulta tiene demasiadas columnas"
+msgstr "La consulta tiene demasiadas columnas."
 
 #: executor/execMain.c:1194 executor/execQual.c:637
 #, c-format
@@ -12143,16 +12113,14 @@ msgstr ""
 "La tabla tiene tipo %s en posición ordinal %d, pero la consulta esperaba %s."
 
 #: executor/execMain.c:1211
-#, fuzzy, c-format
+#, c-format
 msgid "Query provides a value for a dropped column at ordinal position %d."
 msgstr ""
-"Discordancia de almacenamiento físico en atributo eliminado en la posición %"
-"d."
+"La consulta entrega un valor para una columna eliminada en la posición %d."
 
 #: executor/execMain.c:1219
-#, fuzzy
 msgid "Query has too few columns."
-msgstr "la subconsulta tiene muy pocas columnas"
+msgstr "La consulta tiene muy pocas columnas."
 
 #: executor/execMain.c:2228
 #, c-format
@@ -12179,11 +12147,11 @@ msgid "Table has type %s, but query expects %s."
 msgstr "La tabla tiene tipo %s, pero la consulta esperaba %s."
 
 #: executor/execQual.c:619
-#, fuzzy, c-format
+#, c-format
 msgid "Table row contains %d attribute, but query expects %d."
 msgid_plural "Table row contains %d attributes, but query expects %d."
 msgstr[0] ""
-"La fila de la tabla contiene %d atributos, pero la consulta esperaba %d."
+"La fila de la tabla contiene %d atributo, pero la consulta esperaba %d."
 msgstr[1] ""
 "La fila de la tabla contiene %d atributos, pero la consulta esperaba %d."
 
@@ -12196,10 +12164,10 @@ msgstr ""
 
 #: executor/execQual.c:1046 parser/parse_func.c:92 parser/parse_func.c:264
 #: parser/parse_func.c:545
-#, fuzzy, c-format
+#, c-format
 msgid "cannot pass more than %d argument to a function"
 msgid_plural "cannot pass more than %d arguments to a function"
-msgstr[0] "no se pueden pasar más de %d argumentos a una función"
+msgstr[0] "no se pueden pasar más de %d argumento a una función"
 msgstr[1] "no se pueden pasar más de %d argumentos a una función"
 
 #: executor/execQual.c:1224
@@ -12209,13 +12177,12 @@ msgstr ""
 "conjunto"
 
 #: executor/execQual.c:1260
-#, fuzzy
 msgid ""
 "function returning setof record called in context that cannot accept type "
 "record"
 msgstr ""
-"se llamó una función que retorna un registro en un contexto que no puede "
-"aceptarlo"
+"se llamó una función que retorna «setof record» en un contexto que no puede "
+"aceptar el tipo record"
 
 #: executor/execQual.c:1316 executor/execQual.c:1332 executor/execQual.c:1342
 msgid "function return row and query-specified return row do not match"
@@ -12224,10 +12191,10 @@ msgstr ""
 "retorno de la función"
 
 #: executor/execQual.c:1317
-#, fuzzy, c-format
+#, c-format
 msgid "Returned row contains %d attribute, but query expects %d."
 msgid_plural "Returned row contains %d attributes, but query expects %d."
-msgstr[0] "Fila retornada contiene %d atributos, pero la consulta esperaba %d."
+msgstr[0] "Fila retornada contiene %d atributo, pero la consulta esperaba %d."
 msgstr[1] "Fila retornada contiene %d atributos, pero la consulta esperaba %d."
 
 #: executor/execQual.c:1333
@@ -12340,15 +12307,13 @@ msgid "return type mismatch in function declared to return %s"
 msgstr "el tipo de retorno de función declarada para retornar %s no concuerda"
 
 #: executor/functions.c:1079
-#, fuzzy
 msgid ""
 "Function's final statement must be SELECT or INSERT/UPDATE/DELETE RETURNING."
-msgstr "La sentencia final de la función debe ser un SELECT."
+msgstr "La sentencia final de la función debe ser un SELECT o INSERT/UPDATE/DELETE RETURNING."
 
 #: executor/functions.c:1115
-#, fuzzy
 msgid "Final statement must return exactly one column."
-msgstr "El SELECT final debe retornar exactamente una columna."
+msgstr "La sentencia final debe retornar exactamente una columna."
 
 #: executor/functions.c:1127
 #, c-format
@@ -12356,19 +12321,17 @@ msgid "Actual return type is %s."
 msgstr "El verdadero tipo de retorno es %s."
 
 #: executor/functions.c:1214
-#, fuzzy
 msgid "Final statement returns too many columns."
-msgstr "El SELECT final retorna demasiadas columnas."
+msgstr "La sentencia final retorna demasiadas columnas."
 
 #: executor/functions.c:1226
-#, fuzzy, c-format
+#, c-format
 msgid "Final statement returns %s instead of %s at column %d."
-msgstr "El SELECT final retorna %s en lugar de %s en la columna %d."
+msgstr "La sentencia final retorna %s en lugar de %s en la columna %d."
 
 #: executor/functions.c:1251
-#, fuzzy
 msgid "Final statement returns too few columns."
-msgstr "El SELECT final retorna muy pocas columnas."
+msgstr "La sentencia final retorna muy pocas columnas."
 
 #: executor/functions.c:1265
 #, c-format
@@ -12403,14 +12366,12 @@ msgid "could not read from hash-join temporary file: %m"
 msgstr "no se pudo leer el archivo temporal de hash-join: %m"
 
 #: executor/nodeLimit.c:251
-#, fuzzy
 msgid "OFFSET must not be negative"
-msgstr "COST debe ser positivo"
+msgstr "OFFSET no debe ser negativo"
 
 #: executor/nodeLimit.c:278
-#, fuzzy
 msgid "LIMIT must not be negative"
-msgstr "la precisión de TIME(%d)%s no debe ser negativa"
+msgstr "LIMIT no debe ser negativo"
 
 #: executor/nodeMergejoin.c:1509
 msgid "RIGHT JOIN is only supported with merge-joinable join conditions"
@@ -12465,14 +12426,14 @@ msgid "SQL statement \"%s\""
 msgstr "sentencia SQL: «%s»"
 
 #: foreign/foreign.c:240
-#, fuzzy, c-format
+#, c-format
 msgid "user mapping not found for \"%s\""
-msgstr "debe tener opción de admin en rol «%s»"
+msgstr "no se encontró un mapeo para el usuario «%s»"
 
 #: foreign/foreign.c:416
-#, fuzzy, c-format
+#, c-format
 msgid "invalid option \"%s\""
-msgstr "el nombre de tipo «%s» no es válido"
+msgstr "el nombre de opción «%s» no es válido"
 
 #: foreign/foreign.c:417
 #, c-format
@@ -12487,14 +12448,13 @@ msgstr ""
 "adicionales."
 
 #: storage/buffer/bufmgr.c:129 storage/buffer/bufmgr.c:233
-#, fuzzy
 msgid "cannot access temporary tables of other sessions"
-msgstr "no se pueden mover tablas temporales de otras sesiones"
+msgstr "no se pueden acceder tablas temporales de otras sesiones"
 
 #: storage/buffer/bufmgr.c:360
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected data beyond EOF in block %u of relation %s"
-msgstr "datos inesperados más allá del EOF en el bloque %u de relación «%s»"
+msgstr "datos inesperados más allá del EOF en el bloque %u de relación %s"
 
 #: storage/buffer/bufmgr.c:362
 msgid ""
@@ -12505,153 +12465,153 @@ msgstr ""
 "sistema."
 
 #: storage/buffer/bufmgr.c:434
-#, fuzzy, c-format
+#, c-format
 msgid "invalid page header in block %u of relation %s; zeroing out page"
 msgstr ""
-"el encabezado de página no es válido en el bloque %u de relación «%s»; "
+"el encabezado de página no es válido en el bloque %u de la relación «%s»; "
 "reinicializando la página"
 
 #: storage/buffer/bufmgr.c:442
-#, fuzzy, c-format
+#, c-format
 msgid "invalid page header in block %u of relation %s"
-msgstr "el encabezado de página no es válido en el bloque %u de relación «%s»"
+msgstr "el encabezado de página no es válido en el bloque %u de la relación %s"
 
 #: storage/buffer/bufmgr.c:2714
-#, fuzzy, c-format
+#, c-format
 msgid "could not write block %u of %s"
-msgstr "no se pudo escribir el bloque %u de %u/%u/%u"
+msgstr "no se pudo escribir el bloque %u de %s"
 
 #: storage/buffer/bufmgr.c:2716
 msgid "Multiple failures --- write error might be permanent."
 msgstr "Múltiples fallas --- el error de escritura puede ser permanente."
 
 #: storage/buffer/bufmgr.c:2736
-#, fuzzy, c-format
+#, c-format
 msgid "writing block %u of relation %s"
-msgstr "escribiendo el bloque %u de la relación %u/%u/%u"
+msgstr "escribiendo el bloque %u de la relación %s"
 
 #: storage/buffer/localbuf.c:188
 msgid "no empty local buffer available"
 msgstr "no hay ningún búfer local disponible"
 
 #: storage/smgr/md.c:261
-#, fuzzy, c-format
+#, c-format
 msgid "could not create relation %s: %m"
-msgstr "no se pudo crear la relación %u/%u/%u: %m"
+msgstr "no se pudo crear la relación %s: %m"
 
 #: storage/smgr/md.c:348 storage/smgr/md.c:1168
-#, fuzzy, c-format
+#, c-format
 msgid "could not remove relation %s: %m"
-msgstr "no se pudo eliminar la relación %u/%u/%u: %m"
+msgstr "no se pudo eliminar la relación %s: %m"
 
 #: storage/smgr/md.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "could not remove segment %u of relation %s: %m"
-msgstr "no se pudo eliminar el segmento %u de la relación %u/%u/%u: %m"
+msgstr "no se pudo eliminar el segmento %u de la relación %s: %m"
 
 #: storage/smgr/md.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "cannot extend relation %s beyond %u blocks"
-msgstr "no se pudo extender la relación %u/%u/%u a %u bloques"
+msgstr "no se pudo extender la relación %s a %u bloques"
 
 #: storage/smgr/md.c:438 storage/smgr/md.c:597 storage/smgr/md.c:669
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek to block %u of relation %s: %m"
-msgstr "no se pudo posicionar (seek) al bloque %u de la relación %u/%u/%u: %m"
+msgstr "no se pudo posicionar (seek) al bloque %u de la relación %s: %m"
 
 #: storage/smgr/md.c:447
-#, fuzzy, c-format
+#, c-format
 msgid "could not extend relation %s: %m"
-msgstr "no se pudo extender la relación %u/%u/%u: %m"
+msgstr "no se pudo extender la relación %s: %m"
 
 #: storage/smgr/md.c:449 storage/smgr/md.c:456 storage/smgr/md.c:695
 msgid "Check free disk space."
 msgstr "Verifique el espacio libre en disco."
 
 #: storage/smgr/md.c:453
-#, fuzzy, c-format
+#, c-format
 msgid "could not extend relation %s: wrote only %d of %d bytes at block %u"
 msgstr ""
-"no se pudo extender la relación %u/%u/%u: sólo se escribieron %d de %d bytes "
+"no se pudo extender la relación %s: sólo se escribieron %d de %d bytes "
 "en el bloque %u"
 
 #: storage/smgr/md.c:510
-#, fuzzy, c-format
+#, c-format
 msgid "could not open relation %s: %m"
-msgstr "no se pudo abrir la relación %u/%u/%u: %m"
+msgstr "no se pudo abrir la relación %s: %m"
 
 #: storage/smgr/md.c:614
-#, fuzzy, c-format
+#, c-format
 msgid "could not read block %u of relation %s: %m"
-msgstr "no se pudo leer el bloque %u de la relación %u/%u/%u: %m"
+msgstr "no se pudo leer el bloque %u de la relación %s: %m"
 
 #: storage/smgr/md.c:630
-#, fuzzy, c-format
+#, c-format
 msgid "could not read block %u of relation %s: read only %d of %d bytes"
 msgstr ""
-"no se pudo leer el bloque %u de la relación %u/%u/%u: se leyeron sólo %d de %"
+"no se pudo leer el bloque %u de la relación %s: se leyeron sólo %d de %"
 "d bytes"
 
 #: storage/smgr/md.c:686
-#, fuzzy, c-format
+#, c-format
 msgid "could not write block %u of relation %s: %m"
-msgstr "no se pudo escribir el bloque %u de la relación %u/%u/%u: %m"
+msgstr "no se pudo escribir el bloque %u de la relación %s: %m"
 
 #: storage/smgr/md.c:691
-#, fuzzy, c-format
+#, c-format
 msgid "could not write block %u of relation %s: wrote only %d of %d bytes"
 msgstr ""
-"no se pudo escribir el bloque %u de la relación %u/%u/%u: se escribieron "
+"no se pudo escribir el bloque %u de la relación %s: se escribieron "
 "sólo %d de %d bytes"
 
 #: storage/smgr/md.c:760
-#, fuzzy, c-format
+#, c-format
 msgid "could not open segment %u of relation %s: %m"
-msgstr "no se pudo abrir el segmento %u de la relación %u/%u/%u: %m"
+msgstr "no se pudo abrir el segmento %u de la relación %s: %m"
 
 #: storage/smgr/md.c:791
-#, fuzzy, c-format
+#, c-format
 msgid "could not truncate relation %s to %u blocks: it's only %u blocks now"
 msgstr ""
-"no se pudo truncar la relación %u/%u/%u a %u bloques: es de sólo %u bloques "
+"no se pudo truncar la relación %s a %u bloques: es de sólo %u bloques "
 "ahora"
 
 #: storage/smgr/md.c:815 storage/smgr/md.c:839
-#, fuzzy, c-format
+#, c-format
 msgid "could not truncate relation %s to %u blocks: %m"
-msgstr "no se pudo truncar la relación %u/%u/%u a %u bloques: %m"
+msgstr "no se pudo truncar la relación %s a %u bloques: %m"
 
 #: storage/smgr/md.c:884 storage/smgr/md.c:1058 storage/smgr/md.c:1202
-#, fuzzy, c-format
+#, c-format
 msgid "could not fsync segment %u of relation %s: %m"
 msgstr ""
-"no se pudo sincronizar (fsync) el bloque %u de la relación %u/%u/%u: %m"
+"no se pudo sincronizar (fsync) el segment %u de la relación %s: %m"
 
 #: storage/smgr/md.c:1063
-#, fuzzy, c-format
+#, c-format
 msgid "could not fsync segment %u of relation %s but retrying: %m"
 msgstr ""
-"no se pudo sincronizar (fsync) el segmento %u de la relación %u/%u/%u, pero "
+"no se pudo sincronizar (fsync) el segmento %u de la relación %s, pero "
 "se reintentará: %m"
 
 #: storage/smgr/md.c:1549
-#, fuzzy, c-format
+#, c-format
 msgid "could not open segment %u of relation %s (target block %u): %m"
 msgstr ""
-"no se pudo abrir el segmento %u de la relación %u/%u/%u (bloque buscado %u): "
+"no se pudo abrir el segmento %u de la relación %s (bloque buscado %u): "
 "%m"
 
 #: storage/smgr/md.c:1572
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek to end of segment %u of relation %s: %m"
 msgstr ""
-"no se pudo desplazar (seek) al fin del segmento %u de la relación %u/%u/%u: %"
+"no se pudo desplazar (seek) al fin del segmento %u de la relación %s: %"
 "m"
 
 #: storage/file/fd.c:382
-#, fuzzy, c-format
+#, c-format
 msgid "getrlimit failed: %m"
-msgstr "select() fallida: %s\n"
+msgstr "getrlimit falló: %m"
 
 #: storage/file/fd.c:468
 msgid "insufficient file descriptors available to start server process"
@@ -12714,18 +12674,17 @@ msgid "Process %d waits for %s on %s; blocked by process %d."
 msgstr "El proceso %d espera %s en %s; bloqueado por proceso %d."
 
 #: storage/lmgr/deadlock.c:934
-#, fuzzy, c-format
+#, c-format
 msgid "Process %d: %s"
-msgstr "acceso a %s"
+msgstr "Proceso %d: %s"
 
 #: storage/lmgr/deadlock.c:941
 msgid "deadlock detected"
 msgstr "se ha detectado un deadlock"
 
 #: storage/lmgr/deadlock.c:944
-#, fuzzy
 msgid "See server log for query details."
-msgstr "Vea el registro del servidor para obtener más detalles."
+msgstr "Vea el registro del servidor para obtener detalles de las consultas."
 
 #: storage/lmgr/lmgr.c:717
 #, c-format
@@ -13369,14 +13328,12 @@ msgid "SELECT FOR UPDATE/SHARE is not allowed with window functions"
 msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones ventana"
 
 #: parser/analyze.c:2020 parser/analyze.c:2112 rewrite/rewriteHandler.c:1257
-#, fuzzy
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to an outer-level WITH query"
-msgstr "SELECT FOR UPDATE/SHARE no puede ser aplicado a un join"
+msgstr "SELECT FOR UPDATE/SHARE no puede ser aplicado a una consulta WITH de un nivel más externo"
 
 #: parser/analyze.c:2046
-#, fuzzy
 msgid "SELECT FOR UPDATE/SHARE must specify unqualified relation names"
-msgstr "SELECT FOR UPDATE/SHARE no puede ser aplicado a un join"
+msgstr "SELECT FOR UPDATE/SHARE debe especificar nombres de relaciones sin calificar"
 
 #: parser/analyze.c:2075
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a join"
@@ -13433,24 +13390,20 @@ msgid "window functions not allowed in WHERE clause"
 msgstr "no se permiten funciones ventana en la cláusula WHERE"
 
 #: parser/parse_agg.c:370
-#, fuzzy
 msgid "window functions not allowed in JOIN conditions"
-msgstr "no se permiten funciones de agregación en las condiciones JOIN"
+msgstr "no se permiten funciones ventana en las condiciones JOIN"
 
 #: parser/parse_agg.c:376
-#, fuzzy
 msgid "window functions not allowed in HAVING clause"
-msgstr "no se permiten funciones de agregación en la cláusula WHERE"
+msgstr "no se permiten funciones ventana en la cláusula HAVING"
 
 #: parser/parse_agg.c:389
-#, fuzzy
 msgid "window functions not allowed in GROUP BY clause"
-msgstr "no se permiten funciones de agregación en la cláusula GROUP BY"
+msgstr "no se permiten funciones ventana en la cláusula GROUP BY"
 
 #: parser/parse_agg.c:408 parser/parse_agg.c:421
-#, fuzzy
 msgid "window functions not allowed in window definition"
-msgstr "inicializador no permitido en definición de tipo"
+msgstr "no se permiten funciones ventana en definiciones de ventana"
 
 #: parser/parse_agg.c:542
 #, c-format
@@ -13474,12 +13427,12 @@ msgstr "la cláusula JOIN/ON se refiere a «%s», que no es parte de JOIN"
 
 #: parser/parse_clause.c:494
 msgid "subquery in FROM cannot have SELECT INTO"
-msgstr "una subconsulta en FROM no pueden tener SELECT INTO"
+msgstr "una subconsulta en FROM no puede tener SELECT INTO"
 
 #: parser/parse_clause.c:516
 msgid "subquery in FROM cannot refer to other relations of same query level"
 msgstr ""
-"una subconsulta en FROM no pueden referirse a otras relaciones en el mismo "
+"una subconsulta en FROM no puede referirse a otras relaciones en el mismo "
 "nivel de la consulta"
 
 #: parser/parse_clause.c:567
@@ -13495,9 +13448,8 @@ msgid "cannot use aggregate function in function expression in FROM"
 msgstr "no se pueden usar funciones de agregación en una función en FROM"
 
 #: parser/parse_clause.c:587
-#, fuzzy
 msgid "cannot use window function in function expression in FROM"
-msgstr "no se pueden usar funciones de agregación en una función en FROM"
+msgstr "no se pueden usar funciones ventana en una función en FROM"
 
 #: parser/parse_clause.c:863
 #, c-format
@@ -13541,15 +13493,15 @@ msgstr "el argumento de %s no puede contener variables"
 
 #. translator: %s is name of a SQL construct, eg LIMIT
 #: parser/parse_clause.c:1197
-#, fuzzy, c-format
+#, c-format
 msgid "argument of %s must not contain aggregate functions"
 msgstr "el argumento de %s no puede contener funciones de agregación"
 
 #. translator: %s is name of a SQL construct, eg LIMIT
 #: parser/parse_clause.c:1208
-#, fuzzy, c-format
+#, c-format
 msgid "argument of %s must not contain window functions"
-msgstr "el argumento de %s no puede contener subconsultas"
+msgstr "el argumento de %s no puede contener funciones ventana"
 
 #. translator: first %s is name of a SQL construct, eg ORDER BY
 #: parser/parse_clause.c:1322
@@ -13570,9 +13522,9 @@ msgid "%s position %d is not in select list"
 msgstr "la posición %2$d de %1$s no está en la lista de resultados"
 
 #: parser/parse_clause.c:1534
-#, fuzzy, c-format
+#, c-format
 msgid "window \"%s\" is already defined"
-msgstr "el cursor «%s» ya está definido"
+msgstr "la ventana «%s» ya está definida"
 
 #: parser/parse_clause.c:1587
 #, c-format
@@ -13754,7 +13706,7 @@ msgstr "el nombre de consulta WITH «%s» fue especificado más de una vez"
 
 #: parser/parse_cte.c:269
 msgid "subquery in WITH cannot have SELECT INTO"
-msgstr "una subconsulta en WITH no pueden tener SELECT INTO"
+msgstr "una subconsulta en WITH no puede tener SELECT INTO"
 
 #: parser/parse_cte.c:310
 #, c-format
@@ -13819,9 +13771,8 @@ msgid "arguments of row IN must all be row expressions"
 msgstr "los argumentos de IN de registros deben ser expresiones de registro"
 
 #: parser/parse_expr.c:1267
-#, fuzzy
 msgid "subquery cannot have SELECT INTO"
-msgstr "una subconsulta en FROM no pueden tener SELECT INTO"
+msgstr "una subconsulta no puede tener SELECT INTO"
 
 #: parser/parse_expr.c:1295
 msgid "subquery must return a column"
@@ -13848,9 +13799,9 @@ msgid "Explicitly cast to the desired type, for example ARRAY[]::integer[]."
 msgstr "Agregue una conversión de tipo explícita al tipo deseado, por ejemplo ARRAY[]::integer[]."
 
 #: parser/parse_expr.c:1476
-#, fuzzy, c-format
+#, c-format
 msgid "could not find element type for data type %s"
-msgstr "no se pudo encontrar un tipo de array para el tipo de dato %s"
+msgstr "no se pudo encontrar el tipo de dato de elemento para el tipo de dato %s"
 
 #: parser/parse_expr.c:1674
 msgid "unnamed XML attribute value must be a column reference"
@@ -13868,9 +13819,9 @@ msgid "XML attribute name \"%s\" appears more than once"
 msgstr "el nombre de atributo XML «%s» aparece más de una vez"
 
 #: parser/parse_expr.c:1797
-#, fuzzy, c-format
+#, c-format
 msgid "cannot cast XMLSERIALIZE result to %s"
-msgstr "no se puede convertir el tipo %s a %s"
+msgstr "no se puede convertir el resultado de XMLSERIALIZE a %s"
 
 #: parser/parse_expr.c:2065 parser/parse_expr.c:2263
 msgid "unequal number of entries in row expressions"
@@ -13924,10 +13875,10 @@ msgid "DISTINCT specified, but %s is not an aggregate function"
 msgstr "se especificó DISTINCT, pero %s no es una función de agregación"
 
 #: parser/parse_func.c:204
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "OVER specified, but %s is not a window function nor an aggregate function"
-msgstr "se especificó %s(*), pero %s no es una función de agregación"
+msgstr "se especificó OVER, pero %s no es una función ventana ni una función de agregación"
 
 #: parser/parse_func.c:231
 #, c-format
@@ -13965,14 +13916,12 @@ msgid "window function call requires an OVER clause"
 msgstr "la invocación de una función ventana requiere una cláusula OVER"
 
 #: parser/parse_func.c:393
-#, fuzzy
 msgid "DISTINCT is not implemented for window functions"
-msgstr "SSPI no está implementado en este servidor"
+msgstr "DISTINCT no está implementado para funciones ventana"
 
 #: parser/parse_func.c:410
-#, fuzzy
 msgid "window functions cannot return sets"
-msgstr "las funciones SQL no pueden retornar el tipo %s"
+msgstr "las funciones ventana no pueden retornar conjuntos"
 
 #: parser/parse_func.c:1277
 #, c-format
@@ -14067,9 +14016,9 @@ msgstr ""
 "desear agregar conversiones explícitas de tipos."
 
 #: parser/parse_oper.c:804 parser/parse_oper.c:917
-#, fuzzy, c-format
+#, c-format
 msgid "operator is only a shell: %s"
-msgstr "el tipo %s está inconcluso"
+msgstr "el operador está inconcluso: %s"
 
 #: parser/parse_oper.c:905
 msgid "op ANY/ALL (array) requires array on right side"
@@ -14277,9 +14226,8 @@ msgid "invalid type name \"%s\""
 msgstr "el nombre de tipo «%s» no es válido"
 
 #: parser/parse_utilcmd.c:297
-#, fuzzy
 msgid "array of serial is not implemented"
-msgstr "xmlvalidate no está implementado"
+msgstr "array de serial no está implementado"
 
 #: parser/parse_utilcmd.c:339
 #, c-format
@@ -14332,10 +14280,9 @@ msgstr ""
 "no se pueden usar funciones de agregación en condición WHERE de una regla"
 
 #: parser/parse_utilcmd.c:1478
-#, fuzzy
 msgid "cannot use window function in rule WHERE condition"
 msgstr ""
-"no se pueden usar funciones de agregación en condición WHERE de una regla"
+"no se pueden usar funciones ventana en condición WHERE de una regla"
 
 #: parser/parse_utilcmd.c:1550
 msgid ""
@@ -14409,18 +14356,16 @@ msgid "identifier \"%s\" will be truncated to \"%.*s\""
 msgstr "el identificador «%s» se truncará a «%.*s»"
 
 #: gram.y:1191
-#, fuzzy
 msgid "current database cannot be changed"
-msgstr "no se puede cambiar el nombre de la base de datos activa"
+msgstr "no se puede cambiar la base de datos activa"
 
 #: gram.y:1306 gram.y:1321
 msgid "time zone interval must be HOUR or HOUR TO MINUTE"
 msgstr "el intervalo de huso horario debe ser HOUR o HOUR TO MINUTE"
 
 #: gram.y:1326 gram.y:7750 gram.y:10043
-#, fuzzy
 msgid "interval precision specified twice"
-msgstr "la precisión de interval(%d) debe estar entre %d y %d"
+msgstr "la precisión de interval fue especificada dos veces"
 
 #: gram.y:2522
 msgid "CREATE TABLE AS cannot specify INTO"
@@ -14881,14 +14826,14 @@ msgid "autovacuum: processing database \"%s\""
 msgstr "autovacuum: procesando la base de datos «%s»"
 
 #: postmaster/autovacuum.c:1981
-#, fuzzy, c-format
+#, c-format
 msgid "autovacuum: dropping orphan temp table \"%s\".\"%s\" in database \"%s\""
-msgstr "autovacuum: procesando la base de datos «%s»"
+msgstr "autovacuum: eliminando la tabla temporal huérfana «%s».«%s» en la base de datos «%s»"
 
 #: postmaster/autovacuum.c:1993
-#, fuzzy, c-format
+#, c-format
 msgid "autovacuum: found orphan temp table \"%s\".\"%s\" in database \"%s\""
-msgstr "autovacuum: procesando la base de datos «%s»"
+msgstr "autovacuum: se encontró una tabla temporal huérfana «%s».«%s» en la base de datos «%s»"
 
 #: postmaster/autovacuum.c:2254
 #, c-format
@@ -14915,11 +14860,11 @@ msgstr ""
 "autovacuum"
 
 #: postmaster/bgwriter.c:462
-#, fuzzy, c-format
+#, c-format
 msgid "checkpoints are occurring too frequently (%d second apart)"
 msgid_plural "checkpoints are occurring too frequently (%d seconds apart)"
 msgstr[0] ""
-"los checkpoints están ocurriendo con demasiada frecuencia (cada %d segundos)"
+"los checkpoints están ocurriendo con demasiada frecuencia (cada %d segundo)"
 msgstr[1] ""
 "los checkpoints están ocurriendo con demasiada frecuencia (cada %d segundos)"
 
@@ -15184,9 +15129,8 @@ msgid "no socket created for listening"
 msgstr "no se creó el socket de atención"
 
 #: postmaster/postmaster.c:921 postmaster/postmaster.c:3175
-#, fuzzy
 msgid "could not load pg_hba.conf"
-msgstr "no se pudo cargar wldap32.dll"
+msgstr "no se pudo cargar pg_hba.conf"
 
 #: postmaster/postmaster.c:938
 msgid "could not create I/O completion port for child queue"
@@ -15210,9 +15154,9 @@ msgid "could not read permissions of directory \"%s\": %m"
 msgstr "no se pudo obtener los permisos del directorio «%s»: %m"
 
 #: postmaster/postmaster.c:1095
-#, fuzzy, c-format
+#, c-format
 msgid "specified data directory \"%s\" is not a directory"
-msgstr "no existe el directorio de datos «%s»"
+msgstr "el directorio de datos especificado «%s» no es un directorio"
 
 #: postmaster/postmaster.c:1111
 #, c-format
@@ -15447,9 +15391,8 @@ msgid "could not execute server process \"%s\": %m"
 msgstr "no se pudo lanzar el proceso servidor «%s»: %m"
 
 #: postmaster/postmaster.c:3962
-#, fuzzy
 msgid "database system is in consistent recovery mode"
-msgstr "el sistema de base de datos está en modo de recuperación"
+msgstr "el sistema de base de datos está en modo consistente de recuperación"
 
 #: postmaster/postmaster.c:4179
 #, c-format
