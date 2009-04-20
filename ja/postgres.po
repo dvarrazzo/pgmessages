@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-04-15 21:18+0900\n"
-"PO-Revision-Date: 2009-04-15 22:08+0900\n"
+"POT-Creation-Date: 2009-04-20 20:16+0900\n"
+"PO-Revision-Date: 2009-04-20 20:35+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: Shigehiro Honda <fwif0083@mb.infoweb.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,8 @@ msgstr "サーバ側はFLOAT8PASSBYVAL = %sですが、ライブラリ側は%s�
 
 #: utils/fmgr/dfmgr.c:376
 msgid "Magic block has unexpected length or padding difference."
-msgstr "マジックブロックが意図しない長さであるか、またはパディングが異なります。"
+msgstr ""
+"マジックブロックが意図しない長さであるか、またはパディングが異なります。"
 
 #: utils/fmgr/dfmgr.c:379
 #, c-format
@@ -298,7 +299,7 @@ msgstr "ロックファイル\"%s\"に書き出せませんでした: %m"
 
 #: utils/init/miscinit.c:993 utils/init/miscinit.c:1099
 #: utils/init/postinit.c:94 utils/init/postinit.c:134 utils/error/elog.c:1307
-#: libpq/hba.c:1227 postmaster/autovacuum.c:1789 access/transam/xlog.c:2281
+#: libpq/hba.c:1228 postmaster/autovacuum.c:1789 access/transam/xlog.c:2281
 #: access/transam/xlog.c:3736 access/transam/xlog.c:3826
 #: access/transam/xlog.c:3924 ../port/copydir.c:119
 #, c-format
@@ -722,7 +723,7 @@ msgid ""
 msgstr ""
 "設定ファイル\"%s\"をオープンできませんでした: 入れ子長が上限を超えています"
 
-#: guc-file.l:403 libpq/hba.c:1314
+#: guc-file.l:403 libpq/hba.c:1315
 #, c-format
 msgid "could not open configuration file \"%s\": %m"
 msgstr "設定ファイル\"%s\"をオープンできませんでした: %m"
@@ -3838,11 +3839,11 @@ msgstr "エスケープ文字がありません: \"%s\""
 msgid "wrong position info in tsvector: \"%s\""
 msgstr "tsvector内の位置情報が間違っています: \"%s\""
 
-#: utils/adt/selfuncs.c:4482 utils/adt/selfuncs.c:4923
+#: utils/adt/selfuncs.c:4485 utils/adt/selfuncs.c:4926
 msgid "case insensitive matching not supported on type bytea"
 msgstr "型byteaでは大文字小文字の区別をしないマッチをサポートしません"
 
-#: utils/adt/selfuncs.c:4588 utils/adt/selfuncs.c:5083
+#: utils/adt/selfuncs.c:4591 utils/adt/selfuncs.c:5086
 msgid "regular-expression matching not supported on type bytea"
 msgstr "型byteaでは正規表現のマッチをサポートしません"
 
@@ -4097,6 +4098,7 @@ msgstr "固定長配列の部分配列は実装されていません"
 #: utils/adt/arrayfuncs.c:2010 utils/adt/arrayfuncs.c:2032
 #: utils/adt/arrayfuncs.c:2066 utils/adt/arrayfuncs.c:2352
 #: utils/adt/arrayfuncs.c:4489 utils/adt/arrayfuncs.c:4521
+#: utils/adt/arrayfuncs.c:4538
 msgid "wrong number of array subscripts"
 msgstr "配列の添え字が不正な数値です"
 
@@ -4147,7 +4149,7 @@ msgid "Dimension array must be one dimensional."
 msgstr "次元配列は1次元でなければなりません"
 
 #: utils/adt/arrayfuncs.c:4495 utils/adt/arrayfuncs.c:4527
-msgid "wrong range of array_subscripts"
+msgid "wrong range of array subscripts"
 msgstr "配列の添字の範囲が誤っています"
 
 #: utils/adt/arrayfuncs.c:4496 utils/adt/arrayfuncs.c:4528
@@ -4157,10 +4159,6 @@ msgstr "次元配列の添字の下限は１でなければなりません"
 #: utils/adt/arrayfuncs.c:4501 utils/adt/arrayfuncs.c:4533
 msgid "dimension values cannot be null"
 msgstr "次元値に null は許されません"
-
-#: utils/adt/arrayfuncs.c:4538
-msgid "wrong number of array_subscripts"
-msgstr "配列の添字の数が誤っています"
 
 #: utils/adt/arrayfuncs.c:4539
 msgid "Low bound array has different size than dimensions array."
@@ -4592,7 +4590,7 @@ msgstr "SQL関数\"%s\"がインラインになっています"
 msgid "FULL JOIN is only supported with merge-joinable join conditions"
 msgstr "FULL JOINはマージ結合可能な結合条件でのみサポートされています"
 
-#: optimizer/plan/initsplan.c:570
+#: optimizer/plan/initsplan.c:571
 msgid ""
 "SELECT FOR UPDATE/SHARE cannot be applied to the nullable side of an outer "
 "join"
@@ -4669,176 +4667,186 @@ msgid "could not open secondary authentication file \"@%s\" as \"%s\": %m"
 msgstr ""
 "セカンダリ認証ファイル\"@%s\"を\"%s\"としてオープンできませんでした: %m"
 
-#: libpq/hba.c:581
+#. translator: the second %s is a list of auth methods
+#: libpq/hba.c:582
 #, c-format
 msgid ""
-"authentication option \"%s\" is only valid for authentication methods \"%s\""
-msgstr "認証オプション\"%s\"は認証方式\"%s\"でのみ有効です"
+"authentication option \"%s\" is only valid for authentication methods %s"
+msgstr "認証オプション\"%s\"は認証方式%sでのみ有効です"
 
-#: libpq/hba.c:583 libpq/hba.c:599 libpq/hba.c:645 libpq/hba.c:668
-#: libpq/hba.c:680 libpq/hba.c:693 libpq/hba.c:708 libpq/hba.c:736
-#: libpq/hba.c:761 libpq/hba.c:775 libpq/hba.c:788 libpq/hba.c:816
-#: libpq/hba.c:884 libpq/hba.c:895 libpq/hba.c:907 libpq/hba.c:918
-#: libpq/hba.c:941 libpq/hba.c:969 libpq/hba.c:981 libpq/hba.c:994
-#: libpq/hba.c:1028 libpq/hba.c:1072 tsearch/ts_locale.c:173
+#: libpq/hba.c:584 libpq/hba.c:600 libpq/hba.c:646 libpq/hba.c:669
+#: libpq/hba.c:681 libpq/hba.c:694 libpq/hba.c:709 libpq/hba.c:737
+#: libpq/hba.c:762 libpq/hba.c:776 libpq/hba.c:789 libpq/hba.c:817
+#: libpq/hba.c:885 libpq/hba.c:896 libpq/hba.c:908 libpq/hba.c:919
+#: libpq/hba.c:942 libpq/hba.c:970 libpq/hba.c:982 libpq/hba.c:995
+#: libpq/hba.c:1029 libpq/hba.c:1073 tsearch/ts_locale.c:173
 #, c-format
 msgid "line %d of configuration file \"%s\""
 msgstr "設定ファイル \"%2$s\" の %1$d 行目"
 
-#: libpq/hba.c:597
+#: libpq/hba.c:598
 #, c-format
 msgid "authentication method \"%s\" requires argument \"%s\" to be set"
 msgstr "認証方式\"%s\"の場合は引数\"%s\"がセットされなければなりません"
 
-#: libpq/hba.c:643
+#: libpq/hba.c:644
 msgid "hostssl not supported on this platform"
 msgstr "このプラットフォームでは hostssl をサポートしていません"
 
-#: libpq/hba.c:644
+#: libpq/hba.c:645
 msgid "compile with --enable-ssl to use SSL connections"
 msgstr "SSL 接続を有効にするには --enable-ssl でコンパイルしてください"
 
-#: libpq/hba.c:666
+#: libpq/hba.c:667
 #, c-format
 msgid "invalid connection type \"%s\""
 msgstr "接続オプションタイプ \"%s\" は無効です"
 
-#: libpq/hba.c:679
+#: libpq/hba.c:680
 msgid "end-of-line before database specification"
 msgstr "データベース指定の前に行末を検出しました"
 
-#: libpq/hba.c:692
+#: libpq/hba.c:693
 msgid "end-of-line before role specification"
 msgstr "ロール指定の前に行末を検出しました"
 
-#: libpq/hba.c:707
+#: libpq/hba.c:708
 msgid "end-of-line before ip address specification"
 msgstr "IP アドレス指定の前に行末を検出しました"
 
-#: libpq/hba.c:734
+#: libpq/hba.c:735
 #, c-format
 msgid "invalid IP address \"%s\": %s"
 msgstr "IP アドレス \"%s\" は有効ではありません: %s"
 
-#: libpq/hba.c:759
+#: libpq/hba.c:760
 #, c-format
 msgid "invalid CIDR mask in address \"%s\""
 msgstr "IP アドレス \"%s\" 内の CIDR マスクが無効です"
 
-#: libpq/hba.c:774
+#: libpq/hba.c:775
 msgid "end-of-line before netmask specification"
 msgstr "ネットマスク指定の前に行末を検出しました"
 
-#: libpq/hba.c:786
+#: libpq/hba.c:787
 #, c-format
 msgid "invalid IP mask \"%s\": %s"
 msgstr "IP マスク \"%s\" は有効ではありません: %s"
 
-#: libpq/hba.c:802
+#: libpq/hba.c:803
 #, c-format
 msgid "IP address and mask do not match in file \"%s\" line %d"
 msgstr "ファイル\"%s\"の行%dでIPアドレスとマスクが一致しません"
 
-#: libpq/hba.c:815
+#: libpq/hba.c:816
 msgid "end-of-line before authentication method"
 msgstr "認証方式指定の前に行末を検出しました"
 
-#: libpq/hba.c:855 libpq/auth.c:417
+#: libpq/hba.c:856 libpq/auth.c:417
 msgid ""
 "MD5 authentication is not supported when \"db_user_namespace\" is enabled"
 msgstr "\"db_user_namespace\" が有効の場合、MD5 認証はサポートされません"
 
-#: libpq/hba.c:882
+#: libpq/hba.c:883
 #, c-format
 msgid "invalid authentication method \"%s\""
 msgstr "認証方式 \"%s\" が有効ではありません"
 
-#: libpq/hba.c:893
+#: libpq/hba.c:894
 #, c-format
 msgid "invalid authentication method \"%s\": not supported on this platform"
 msgstr "無効な認証方式 \"%s\"：このプラットフォームではサポートされていません"
 
-#: libpq/hba.c:906
+#: libpq/hba.c:907
 msgid "krb5 authentication is not supported on local sockets"
 msgstr "ローカルソケット上の KRB5 認証はサポートしていません"
 
-#: libpq/hba.c:917
+#: libpq/hba.c:918
 msgid "cert authentication is only supported on hostssl connections"
 msgstr "hostssl 接続では証明書認証のみをサポートしています"
 
-#: libpq/hba.c:940
+#: libpq/hba.c:941
 #, c-format
 msgid "authentication option not in name=value format: %s"
 msgstr "認証オプションが 名前=値 形式になっていません：%s"
 
-#: libpq/hba.c:968
+#: libpq/hba.c:956
+msgid "ident, krb5, gssapi, sspi and cert"
+msgstr "ident、krb5、gssapi、sspiおよびcert"
+
+#: libpq/hba.c:969
 msgid "clientcert can only be configured for \"hostssl\" rows"
 msgstr "クライアント証明書は \"hostssl\" な行でのみ設定できます"
 
-#: libpq/hba.c:979
+#: libpq/hba.c:980
 msgid ""
 "client certificates can only be checked if a root certificate store is "
 "available"
 msgstr ""
 "クライアント証明書はルート証明書ストアが利用できる場合にのみ検証されます"
 
-#: libpq/hba.c:980
+#: libpq/hba.c:981
 msgid "make sure the root certificate store is present and readable"
 msgstr ""
 "ルート証明書ストアが存在し、かつ読める状態になっていることを確認してください"
 
-#: libpq/hba.c:993
+#: libpq/hba.c:994
 msgid "clientcert can not be set to 0 when using \"cert\" authentication"
 msgstr "\"cert\" 認証を使う場合は clientcert が 0 であってはなりません"
 
-#: libpq/hba.c:1027
+#: libpq/hba.c:1028
 #, c-format
 msgid "invalid LDAP port number: \"%s\""
 msgstr "無効なLDAPポート番号です: \"%s\""
 
-#: libpq/hba.c:1071
+#: libpq/hba.c:1054 libpq/hba.c:1062
+msgid "krb5, gssapi and sspi"
+msgstr "krb5、gssapiおよびsspi"
+
+#: libpq/hba.c:1072
 #, c-format
 msgid "unknown authentication option name: \"%s\""
 msgstr "認証オプション名を認識できません: \"%s\""
 
-#: libpq/hba.c:1491
+#: libpq/hba.c:1492
 #, c-format
 msgid "invalid regular expression \"%s\": %s"
 msgstr "正規表現\"%s\"が無効です: %s"
 
-#: libpq/hba.c:1513
+#: libpq/hba.c:1514
 #, c-format
 msgid "regular expression match for \"%s\" failed: %s"
 msgstr "正規表現\"%s\"でマッチングに失敗しました: %s"
 
-#: libpq/hba.c:1529
+#: libpq/hba.c:1530
 #, c-format
 msgid ""
 "regular expression \"%s\" has no subexpressions as requested by "
 "backreference in \"%s\""
-msgstr "正規表現\"%s\"には\"%s\"における後方参照が要求する副表現式が含まれていません"
+msgstr ""
+"正規表現\"%s\"には\"%s\"における後方参照が要求する副表現式が含まれていません"
 
-#: libpq/hba.c:1584
+#: libpq/hba.c:1585
 #, c-format
 msgid "missing entry in file \"%s\" at end of line %d"
 msgstr "ファイル\"%s\"の最終行%dでエントリが足りません"
 
-#: libpq/hba.c:1624
+#: libpq/hba.c:1625
 #, c-format
 msgid "provided username (%s) and authenticated username (%s) don't match"
 msgstr "与えられたユーザー名 (%s) と認証されたユーザー名 (%s) が一致しません"
 
-#: libpq/hba.c:1645
+#: libpq/hba.c:1646
 #, c-format
 msgid "no match in usermap for user \"%s\" authenticated as \"%s\""
 msgstr "\"%2$s\"として認証されたユーザ\"%1$s\"はユーザマップに一致しません"
 
-#: libpq/hba.c:1647
+#: libpq/hba.c:1648
 #, c-format
 msgid "usermap \"%s\""
 msgstr "ユーザマップ\"%s\""
 
-#: libpq/hba.c:1670
+#: libpq/hba.c:1671
 #, c-format
 msgid "could not open Ident usermap file \"%s\": %m"
 msgstr "Ident usermapファイル%s\"をオープンできませんでした: %m"
@@ -6810,50 +6818,50 @@ msgstr "ビット文字列リテラルの終端がありません"
 msgid "unterminated hexadecimal string literal"
 msgstr "16進数文字列リテラルの終端がありません"
 
-#: scan.l:517
+#: scan.l:518
 msgid "unsafe use of \\' in a string literal"
 msgstr "文字列リテラルで安全ではない\\'が使用されました。"
 
-#: scan.l:518
+#: scan.l:519
 msgid ""
 "Use '' to write quotes in strings. \\' is insecure in client-only encodings."
 msgstr ""
 "文字列内で引用符を記述するには''を使用してください。\\'はクライアントのみで有"
 "効な符号化形式では安全ではありません。"
 
-#: scan.l:547
+#: scan.l:548
 msgid "unterminated quoted string"
 msgstr "文字列の引用符が閉じていません"
 
-#: scan.l:591
+#: scan.l:592
 msgid "unterminated dollar-quoted string"
 msgstr "文字列のドル引用符が閉じていません"
 
-#: scan.l:608 scan.l:620 scan.l:634
+#: scan.l:609 scan.l:621 scan.l:635
 msgid "zero-length delimited identifier"
 msgstr "区切りつき識別子の長さがゼロです"
 
-#: scan.l:647
+#: scan.l:648
 msgid "unterminated quoted identifier"
 msgstr "識別子の引用符が閉じていません"
 
-#: scan.l:741
+#: scan.l:742
 msgid "operator too long"
 msgstr "演算子が長すぎます"
 
 #. translator: %s is typically the translation of "syntax error"
-#: scan.l:890
+#: scan.l:891
 #, c-format
 msgid "%s at end of input"
 msgstr "入力の最後で %s"
 
 #. translator: first %s is typically the translation of "syntax error"
-#: scan.l:898
+#: scan.l:899
 #, c-format
 msgid "%s at or near \"%s\""
 msgstr "\"%2$s\"またはその近辺で%1$s"
 
-#: scan.l:1018
+#: scan.l:1019
 msgid ""
 "Unicode escape values cannot be used for code point values above 007F when "
 "the server encoding is not UTF8"
@@ -6861,39 +6869,39 @@ msgstr ""
 "サーバーのエンコーディングが UTF-8 ではない場合、コードポイントの値が 007F 以"
 "上については Unicode のエスケープ値は使用できません"
 
-#: scan.l:1035
+#: scan.l:1036
 msgid "invalid Unicode escape character"
 msgstr "Unicode のエスケープ文字が無効です"
 
-#: scan.l:1078
+#: scan.l:1079
 msgid "invalid Unicode escape value"
 msgstr "Unicode のエスケープシーケンスが無効です"
 
-#: scan.l:1126
+#: scan.l:1128
 msgid "nonstandard use of \\' in a string literal"
 msgstr "文字列リテラルで非標準的な\\'が使用されました。"
 
-#: scan.l:1127
+#: scan.l:1129
 msgid ""
 "Use '' to write quotes in strings, or use the escape string syntax (E'...')."
 msgstr ""
 "文字列内で引用符を記述するには''を使用してください。またはエスケープ文字列構"
 "文(E'...')を使用してください。"
 
-#: scan.l:1136
+#: scan.l:1138
 msgid "nonstandard use of \\\\ in a string literal"
 msgstr "文字列リテラルで非標準的な\\\\が使用されました。"
 
-#: scan.l:1137
+#: scan.l:1139
 msgid "Use the escape string syntax for backslashes, e.g., E'\\\\'."
 msgstr ""
 "バックスラッシュ用のエスケープ文字列構文、例えばE'\\\\'を使用してください。"
 
-#: scan.l:1151
+#: scan.l:1153
 msgid "nonstandard use of escape in a string literal"
 msgstr "文字列リテラル内で非標準的なエスケープが使用されました"
 
-#: scan.l:1152
+#: scan.l:1154
 msgid "Use the escape string syntax for escapes, e.g., E'\\r\\n'."
 msgstr ""
 "エスケープ用のエスケープ文字列構文、例えばE'\\\\r\\\\n'を使用してください"
@@ -11377,7 +11385,8 @@ msgstr "符号化方式 %s がロケール %s に合いません"
 #: commands/dbcommands.c:365
 #, c-format
 msgid "The chosen LC_CTYPE setting requires encoding %s."
-msgstr "選択された LC_CTYPE を設定するには、符号化方式 %s である必要があります。"
+msgstr ""
+"選択された LC_CTYPE を設定するには、符号化方式 %s である必要があります。"
 
 #: commands/dbcommands.c:378
 #, c-format
@@ -11395,7 +11404,7 @@ msgstr ""
 #: commands/dbcommands.c:393
 msgid ""
 "Use the same collation as in the template database, or use template0 as "
-"template"
+"template."
 msgstr ""
 "テンプレートデータベースの照合順序と同じものを使うか、もしくは template0 をテ"
 "ンプレートとして使用してください"
@@ -11404,13 +11413,16 @@ msgstr ""
 #, c-format
 msgid ""
 "new LC_CTYPE is incompatible with LC_CTYPE of the template database (%s)"
-msgstr "新しいLC_CTYPEはテンプレートデータベース(%s)のLC_CTYPEと互換性がありません"
+msgstr ""
+"新しいLC_CTYPEはテンプレートデータベース(%s)のLC_CTYPEと互換性がありません"
 
 #: commands/dbcommands.c:398
 msgid ""
 "Use the same LC_CTYPE as in the template database, or use template0 as "
-"template"
-msgstr "テンプレートデータベースのLC_CTYPEと同じものを使うか、もしくはtemplate0をテンプレートとして使用してください"
+"template."
+msgstr ""
+"テンプレートデータベースのLC_CTYPEと同じものを使うか、もしくはtemplate0をテン"
+"プレートとして使用してください"
 
 #: commands/dbcommands.c:425 commands/dbcommands.c:1039
 msgid "pg_global cannot be used as default tablespace"
@@ -14019,14 +14031,16 @@ msgstr "有効な値の範囲は \"%f\" ～ \"%f\" です。"
 #: access/gist/gistsplit.c:372
 #, c-format
 msgid "Picksplit method for %d column of index \"%s\" failed"
-msgstr "インデックス\"%2$s\"の列%1$dに対するピックスプリットメソッドが失敗しました"
+msgstr ""
+"インデックス\"%2$s\"の列%1$dに対するピックスプリットメソッドが失敗しました"
 
 #: access/gist/gistsplit.c:374
 msgid ""
 "Index is not optimal, to optimize it contact developer or try to use the "
 "column as a second one in create index command"
 msgstr ""
-"インデックスは最適ではありません。最適化するためには開発者に連絡するかこの列\n"
+"インデックスは最適ではありません。最適化するためには開発者に連絡するかこの"
+"列\n"
 "をインデックス作成コマンドの2番目のものとして使用することを試みてください"
 
 #: access/gist/gistvacuum.c:566
@@ -15550,6 +15564,9 @@ msgstr ""
 #, c-format
 msgid "unrecognized error %d"
 msgstr "不明なエラー %d"
+
+#~ msgid "wrong number of array_subscripts"
+#~ msgstr "配列の添字の数が誤っています"
 
 #~ msgid "not enough memory to store result of partial match operator"
 #~ msgstr "部分一致演算子の結果を格納するためのメモリが足りません"
