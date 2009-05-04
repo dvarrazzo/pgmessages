@@ -6,12 +6,13 @@ msgstr ""
 "Project-Id-Version: psql-tr\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2009-04-29 07:10+0000\n"
-"PO-Revision-Date: 2009-05-04 21:38+0200\n"
+"PO-Revision-Date: 2009-05-05 00:14+0200\n"
 "Last-Translator: Devrim GÜNDÜZ <devrim@commandprompt.com>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=0;\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -364,7 +365,7 @@ msgstr "Varsayılan alt başlık kapalı."
 #: command.c:1952
 #, c-format
 msgid "Target width for \"wrapped\" format is %d.\n"
-msgstr ""
+msgstr " \"wrapped\" biçimi için hedef genişlik %d.\n"
 
 #: command.c:1957
 #, c-format
@@ -1262,12 +1263,12 @@ msgstr "kesildi\n"
 #: print.c:2027
 #, c-format
 msgid "Cannot add header to table content: column count of %d exceeded.\n"
-msgstr ""
+msgstr "B aşlık tablo içeriğine eklenemedi: %d kolon sayısı aşıldı.\n"
 
 #: print.c:2064
 #, c-format
 msgid "Cannot add cell to table content: total cell count of %d exceeded.\n"
-msgstr ""
+msgstr "Hücre tablo içeriğine eklenemedi: %d olan toplan hücre sayısı açıldı.\n"
 
 #: print.c:2263
 #, c-format
@@ -1278,8 +1279,8 @@ msgstr "geçersiz çıktı biçimi (iç hata): %d"
 #, c-format
 msgid "(1 row)"
 msgid_plural "(%lu rows)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "(%lu satır)"
+msgstr[1] "(1 satır)"
 
 #: startup.c:217
 #, c-format
@@ -1421,7 +1422,7 @@ msgstr "\\df %d.%d sürümünde \"w\" seçeneğini almaz.\n"
 #: describe.c:296
 #: describe.c:313
 msgid "agg"
-msgstr ""
+msgstr "agg"
 
 #: describe.c:251
 msgid "window"
@@ -1641,7 +1642,7 @@ msgstr "Değer"
 
 #: describe.c:1209
 msgid "Storage"
-msgstr ""
+msgstr "Saklama"
 
 #: describe.c:1251
 msgid "not null"
@@ -1702,7 +1703,7 @@ msgstr "İkincil anahtar sınırlamaları:"
 
 #: describe.c:1544
 msgid "Referenced by:"
-msgstr ""
+msgstr "Referans veren:"
 
 #. translator: the first %s is a FK name, the following are
 #. * a table name and the FK definition
@@ -1788,7 +1789,7 @@ msgstr "Rol adı"
 
 #: describe.c:1977
 msgid "Attributes"
-msgstr ""
+msgstr "Özellikler"
 
 #: describe.c:1978
 msgid "Member of"
@@ -1800,7 +1801,7 @@ msgstr "Superuser"
 
 #: describe.c:1992
 msgid "No inheritance"
-msgstr ""
+msgstr "Miras yok"
 
 #: describe.c:1995
 msgid "Create role"
@@ -2043,7 +2044,7 @@ msgstr "Sunucu  (%d.%d sürümü) foreign-data wrapperlarını desteklememektedi
 
 #: describe.c:3023
 msgid "Validator"
-msgstr ""
+msgstr "Onaylayan"
 
 #: describe.c:3047
 msgid "List of foreign-data wrappers"
@@ -2685,6 +2686,9 @@ msgid ""
 "    SERVER servername\n"
 "    OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] )"
 msgstr ""
+"ALTER USER MAPPING FOR { kullanıcı adı | USER | CURRENT_USER | PUBLIC }\n"
+"    SERVER sunucu adı\n"
+"    OPTIONS ( [ ADD | SET | DROP ] seçenek ['değer'] [, ... ] )"
 
 #: sql_help.h:133
 msgid "change the definition of a view"
@@ -2698,6 +2702,11 @@ msgid ""
 "ALTER VIEW name RENAME TO new_name\n"
 "ALTER VIEW name SET SCHEMA new_schema"
 msgstr ""
+"ALTER VIEW ad ALTER [ COLUMN ] kolon SET DEFAULT ifade\n"
+"ALTER VIEW ad ALTER [ COLUMN ] kolon DROP DEFAULT\n"
+"ALTER VIEW ad OWNER TO yeni sahibi\n"
+"ALTER VIEW ad RENAME TO yeni adı\n"
+"ALTER VIEW ad SET SCHEMA yeni şema"
 
 #: sql_help.h:137
 msgid "collect statistics about a database"
@@ -3061,6 +3070,9 @@ msgid ""
 "    [ VALIDATOR valfunction | NO VALIDATOR ]\n"
 "    [ OPTIONS ( option 'value' [, ... ] ) ]"
 msgstr ""
+"CREATE FOREIGN DATA WRAPPER ad\n"
+"    [ VALIDATOR valfunction | NO VALIDATOR ]\n"
+"    [ OPTIONS ( option 'value' [, ... ] ) ]"
 
 #: sql_help.h:201
 msgid "define a new function"
