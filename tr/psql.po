@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: psql-tr\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2009-04-29 07:10+0000\n"
-"PO-Revision-Date: 2009-05-04 14:41+0200\n"
+"PO-Revision-Date: 2009-05-04 20:35+0200\n"
 "Last-Translator: Devrim GÜNDÜZ <devrim@commandprompt.com>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -232,16 +232,15 @@ msgid "SSL connection (unknown cipher)\n"
 msgstr "SSL bağlantısı (bilinmeyen cipher)\n"
 
 #: command.c:1411
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "WARNING: Console code page (%u) differs from Windows code page (%u)\n"
 "         8-bit characters might not work correctly. See psql reference\n"
 "         page \"Notes for Windows users\" for details.\n"
 msgstr ""
-"Dikkat: Uçbirimin kod sayfası (%u), Windows kod syafasından (%u) farklıdır\n"
-"         8-bitlik karakterler doğru çalışmayabilir. Ayrıntılar için psql deferans\n"
-"         dokümanlarında \"Notes for Windows users\" bölümüne bakın.\n"
-"\n"
+"UYARI: Uçbirimin kod sayfası (%u), Windows kod syafasından (%u) farklıdır\n"
+"         8-bitlik karakterler doğru çalışmayabilir. Ayrıntılar için psql referans\n"
+"         belgelerinde \"Windows kullanıcılarına notlar\" bölümüne bakın.\n"
 
 #: command.c:1500
 #, c-format
@@ -263,9 +262,8 @@ msgid "could not open temporary file \"%s\": %s\n"
 msgstr "\"%s\" geçici dosya açılamıyor: %s\n"
 
 #: command.c:1764
-#, fuzzy
 msgid "\\pset: allowed formats are unaligned, aligned, wrapped, html, latex, troff-ms\n"
-msgstr "\\pset: izin verilen biçimler: unaligned, aligned, html, latex, troff-ms\n"
+msgstr "\\pset: izin verilen biçimler: unaligned, aligned, wrapped, html, latex, troff-ms\n"
 
 #: command.c:1769
 #, c-format
@@ -439,9 +437,9 @@ msgstr ""
 "***(devam etmek için return, durdurmak için x ve return'e basınız)********************\n"
 
 #: common.c:827
-#, fuzzy, c-format
+#, c-format
 msgid "The server (version %d.%d) does not support savepoints for ON_ERROR_ROLLBACK.\n"
-msgstr "Sunucunu sürümü (%d) ON_ERROR_ROLLBACK biçiminde tablespace desteklememektedir.\n"
+msgstr "Sunucu (%d.%d sürümü)  ON_ERROR_ROLLBACK için savepointleri desteklememektedir.\n"
 
 #: copy.c:120
 msgid "\\copy: arguments required\n"
@@ -541,9 +539,9 @@ msgid "General options:\n"
 msgstr "Genel seçenekler:\n"
 
 #: help.c:95
-#, fuzzy, c-format
+#, c-format
 msgid "  -c, --command=COMMAND    run only single command (SQL or internal) and exit\n"
-msgstr "  -c COMMAND      tek bir komut çalıştır (SQL ya da dahili) ve çık"
+msgstr "  -c, --command=KOMUT    tek bir komut çalıştır (SQL ya da dahili) ve çık\n"
 
 #: help.c:96
 #, c-format
@@ -551,9 +549,9 @@ msgid "  -d, --dbname=DBNAME      database name to connect to (default: \"%s\")\
 msgstr "  -d, --dbname=DBNAME      bağlanılacak veritabanının adı (öntanımlı: \"%s\")\n"
 
 #: help.c:97
-#, fuzzy, c-format
+#, c-format
 msgid "  -f, --file=FILENAME      execute commands from file, then exit\n"
-msgstr "  -f FILENAME     dosyadan komutları çalıştır ve çık"
+msgstr "  -f, --file=DOSYA ADI     dosyadan komutları çalıştır ve çık\n"
 
 #: help.c:98
 #, c-format
@@ -568,18 +566,18 @@ msgid ""
 msgstr "  -v NAME=VALUE   NAME psql değişkenine VALUE değerini ata"
 
 #: help.c:101
-#, fuzzy, c-format
+#, c-format
 msgid "  -X, --no-psqlrc          do not read startup file (~/.psqlrc)\n"
-msgstr "  -X              başlangıç dosyasını (~/.psqlrc) okuma"
+msgstr "  -X , --no-psqlrc         başlangıç dosyasını (~/.psqlrc) okuma\n"
 
 #: help.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -1 (\"one\"), --single-transaction\n"
 "                           execute command file as a single transaction\n"
 msgstr ""
-"  -1, --single-transaction\n"
-"                           tek bir transaction olarak geri yükle\n"
+"  -1 (\"one\"), --single-transaction\n"
+"                           komut dosyasını tek bir transaction olarak çalıştır\n"
 
 #: help.c:104
 #, c-format
@@ -601,9 +599,9 @@ msgstr ""
 "Giriş ve çıkış tercihleri:\n"
 
 #: help.c:108
-#, fuzzy, c-format
+#, c-format
 msgid "  -a, --echo-all           echo all input from script\n"
-msgstr "  -a              betik dosyasının içeriğini yansıt"
+msgstr "  -a, --echo-all           betik dosyasının içeriğini yansıt\n"
 
 #: help.c:109
 #, c-format
@@ -611,14 +609,14 @@ msgid "  -e, --echo-queries       echo commands sent to server\n"
 msgstr "  -e, --echo-queries       sunucuya gönderilen komutları yansıt\n"
 
 #: help.c:110
-#, fuzzy, c-format
+#, c-format
 msgid "  -E, --echo-hidden        display queries that internal commands generate\n"
-msgstr "  -E              dahili komutların ürettiği sorguları göster"
+msgstr "  -E, --echo-hidden        dahili komutların ürettiği sorguları göster\n"
 
 #: help.c:111
-#, fuzzy, c-format
+#, c-format
 msgid "  -L, --log-file=FILENAME  send session log to file\n"
-msgstr "  -L FILENAME     oturum kaydını dosyaya kaydet"
+msgstr "  -L, --log-file=DOSYA ADI  oturum kaydını dosyaya kaydet\n"
 
 #: help.c:112
 #, c-format
@@ -626,9 +624,9 @@ msgid "  -n, --no-readline        disable enhanced command line editing (readlin
 msgstr "  -n, --no-readline        gelişmiş komut satırı düzenleyicisini devre dışı bırak (readline)\n"
 
 #: help.c:113
-#, fuzzy, c-format
+#, c-format
 msgid "  -o, --output=FILENAME    send query results to file (or |pipe)\n"
-msgstr "  -o FILENAME     sorgu sonuçlarını dosyaya aktar (ya da |pipe)"
+msgstr "  -o, --output=DOSYA ADI    sorgu sonuçlarını dosyaya aktar (ya da |pipe)\n"
 
 #: help.c:114
 #, c-format
@@ -641,9 +639,9 @@ msgid "  -s, --single-step        single-step mode (confirm each query)\n"
 msgstr "  -s, --single-step        tek adım biçimi (her sorguyu onaylama)\n"
 
 #: help.c:116
-#, fuzzy, c-format
+#, c-format
 msgid "  -S, --single-line        single-line mode (end of line terminates SQL command)\n"
-msgstr "  -S              tek satır biçimi (satır sonu SQL komutunu bitirir)"
+msgstr "  -S, --single-line        tek satır modu (satır sonu SQL komutunu sonlandırır)\n"
 
 #: help.c:118
 #, c-format
@@ -655,16 +653,16 @@ msgstr ""
 "Çıktı biçimi seçenekleri:\n"
 
 #: help.c:119
-#, fuzzy, c-format
+#, c-format
 msgid "  -A, --no-align           unaligned table output mode\n"
-msgstr "  -A              dizilmemiş çıkış biçimi (-P format=unaligned)"
+msgstr "  -A, --no-align           dizilmemiş tablo çıktı modu\n"
 
 #: help.c:120
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -F, --field-separator=STRING\n"
 "                           set field separator (default: \"%s\")\n"
-msgstr "  -F STRING       alan ayracını ayarla (varsayılan: \"%s\") (-P fieldsep=)\n"
+msgstr ""
 
 #: help.c:123
 #, c-format
@@ -677,11 +675,13 @@ msgid "  -P, --pset=VAR[=ARG]     set printing option VAR to ARG (see \\pset com
 msgstr "  -P VAR[=ARG]    VAR çıktı ayarınına ARG değerini ata (\\pset komutuna bak)"
 
 #: help.c:125
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -R, --record-separator=STRING\n"
 "                           set record separator (default: newline)\n"
-msgstr "  -R STRING       kayıt ayracını ayarla (varsayılan: newline) (-P recordsep=)"
+msgstr ""
+"  -R, --record-separator=DİZGİ\n"
+"                           kayıt ayracını ayarla (varsayılan: newline)\n"
 
 #: help.c:127
 #, c-format
@@ -689,9 +689,9 @@ msgid "  -t, --tuples-only        print rows only\n"
 msgstr "  -t, --tuples-only        sadece satırları yaz\n"
 
 #: help.c:128
-#, fuzzy, c-format
+#, c-format
 msgid "  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, border)\n"
-msgstr "  -T TEXT         HTML table tag parametreleri ayarla (genişlik, kenarlık) (-P tableattr=)"
+msgstr "  -T, --table-attr=TEXT    HTML tablo tag parametrelerini ayarla (genişlik, kenarlık)\n"
 
 #: help.c:129
 #, c-format
@@ -737,7 +737,7 @@ msgid "  -W, --password           force password prompt (should happen automatic
 msgstr "  -W              şifre sor (otomatik olarak her zaman açık)\n"
 
 #: help.c:148
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "For more information, type \"\\?\" (for internal commands) or \"\\help\" (for SQL\n"
@@ -746,10 +746,10 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Daha fazla bilgi için psql içinde: \"\\?\" (dahili komutlar için) ya da  \"\\help\"\n"
-"(SQL komutlar için), ya da PostgreSQL dokümanların psql bölümüne bakın.\n"
+"Daha fazla bilgi için  yapsql içinde: \"\\?\" (dahili komutlar için) ya  \"\\help\"\n"
+"(SQL komutlar için) yazın, ya da PostgreSQL belgelerinin psql bölümüne \n"
+"bakın.\n"
 "\n"
-"Hataları <pgsql-bugs@postgresql.org> adresine bildirin."
 
 #: help.c:151
 #, c-format
@@ -772,9 +772,9 @@ msgid "  \\g [FILE] or ;         execute query (and send results to file or |pip
 msgstr "  \\g [FILE]      sorgu tamponundaki sorguyu sunucuya gönder (ve sonuçları dosyaya ya da |pipe'e gönder)\n"
 
 #: help.c:172
-#, fuzzy, c-format
+#, c-format
 msgid "  \\h [NAME]              help on syntax of SQL commands, * for all commands\n"
-msgstr "  \\h [NAME]      SQL komutları hakkında yardım göster, tüm komutlar için *\n"
+msgstr "  \\h [NAME]              SQL komutları için sözdizimi yardımı, tüm komutlar için * ekleyin\n"
 
 #: help.c:173
 #, c-format
@@ -807,9 +807,9 @@ msgid "  \\r                     reset (clear) the query buffer\n"
 msgstr "  \\r                     sorgu tamponunu sıfırla (temizle)\n"
 
 #: help.c:182
-#, fuzzy, c-format
+#, c-format
 msgid "  \\s [FILE]              display history or save it to file\n"
-msgstr "  \\s [FILE]      geçmişi göster ya da  dosyaya kaydet\n"
+msgstr "  \\s [DOSYA]              geçmişi göster ya da  dosyaya kaydet\n"
 
 #: help.c:184
 #, c-format
@@ -832,14 +832,14 @@ msgid "  \\echo [STRING]         write string to standard output\n"
 msgstr "  \\echo [METIN]           standart çıktıya bir satır gönder\n"
 
 #: help.c:190
-#, fuzzy, c-format
+#, c-format
 msgid "  \\i FILE                execute commands from file\n"
-msgstr "  \\i FILE        dosyadaki komutları çalıştır\n"
+msgstr "  \\i DOSYA                dosyadaki komutları çalıştıre\n"
 
 #: help.c:191
-#, fuzzy, c-format
+#, c-format
 msgid "  \\o [FILE]              send all query results to file or |pipe\n"
-msgstr "  \\o [FILE]      tüm sorgu sonuçlarını dosyaya ya da |pipe'e gönder\n"
+msgstr "  \\o [DOSYA]            tüm sorgu sonuçlarını dosyaya ya da |pipe'e gönder\n"
 
 #: help.c:192
 #, fuzzy, c-format
@@ -859,9 +859,9 @@ msgid "  (options: S = show system objects, + = additional detail)\n"
 msgstr "  (seçenekler: S = sistem nesnelerini göster, + = ek ayrıntılar)\n"
 
 #: help.c:197
-#, fuzzy, c-format
+#, c-format
 msgid "  \\d[S+]                 list tables, views, and sequences\n"
-msgstr "  \\dp [PATTERN]  tablo, view, ve sequence erişim haklarını göster\n"
+msgstr "  \\d[S+]                 tablo, views, ve sequenceleri listele\n"
 
 #: help.c:198
 #, c-format
@@ -869,19 +869,19 @@ msgid "  \\d[S+]  NAME           describe table, view, sequence, or index\n"
 msgstr "  \\d[S+}  AD                tablo, indeks, sequence, ya da view tanımlarını göster\n"
 
 #: help.c:199
-#, fuzzy, c-format
+#, c-format
 msgid "  \\da[+]  [PATTERN]      list aggregates\n"
-msgstr "  \\da [PATTERN]  aggregate fonksiyonları listele\n"
+msgstr "  \\da[+]  [PATTERN]      aggregateleri listele\n"
 
 #: help.c:200
-#, fuzzy, c-format
+#, c-format
 msgid "  \\db[+]  [PATTERN]      list tablespaces\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\db[+]  [PATTERN]      tablespaceleri listele\n"
 
 #: help.c:201
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dc[S]  [PATTERN]      list conversions\n"
-msgstr "  \\dc [PATTERN]  dönüşümleri listele\n"
+msgstr "  \\dc[S]  [PATTERN]      dönüşümleri listele\n"
 
 #: help.c:202
 #, c-format
@@ -889,9 +889,9 @@ msgid "  \\dC     [PATTERN]      list casts\n"
 msgstr "  \\dC     [PATTERN]      castleri listele\n"
 
 #: help.c:203
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dd[S]  [PATTERN]      show comments on objects\n"
-msgstr "  \\dd [PATTERN]  nesne yorumunu göster\n"
+msgstr "  \\dd[S]  [PATTERN]      nesnelerin yorumlarını göster\n"
 
 #: help.c:204
 #, c-format
@@ -904,64 +904,64 @@ msgid "  \\des[+] [PATTERN]      list foreign servers\n"
 msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
 
 #: help.c:206
-#, fuzzy, c-format
+#, c-format
 msgid "  \\deu[+] [PATTERN]      list user mappings\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\deu[+] [PATTERN]      kullanıcı haritalamasını listele\n"
 
 #: help.c:207
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dew[+] [PATTERN]      list foreign-data wrappers\n"
-msgstr "  \\dg [PATTERN]  grupları göster\n"
+msgstr "  \\dew[+] [PATTERN]      foreign-data wrapperlarını listele\n"
 
 #: help.c:208
-#, fuzzy, c-format
+#, c-format
 msgid "  \\df[antw][S+] [PATRN]  list [only agg/normal/trigger/window] functions\n"
-msgstr "  \\da [PATTERN]  aggregate fonksiyonları listele\n"
+msgstr "  \\df[antw][S+] [PATRN]  [sadece agg/normal/trigger/window] fonksiyonlarını listele\n"
 
 #: help.c:209
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dF[+]  [PATTERN]      list text search configurations\n"
-msgstr "  \\dF [PATTERN]  metin arama yapılandırmalarını listele (daha fazla ayrıntı için \"+\" ekleyin)\n"
+msgstr "  \\dF[+]  [PATTERN]      öetin ama yapılandırmalarını listele\n"
 
 #: help.c:210
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dFd[+] [PATTERN]      list text search dictionaries\n"
-msgstr "  \\dFt [PATTERN]  metin arama şablonlarını listele\n"
+msgstr "  \\dFd[+] [PATTERN]      metin arama sözlüklerini listele\n"
 
 #: help.c:211
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dFp[+] [PATTERN]      list text search parsers\n"
-msgstr "  \\dFt [PATTERN]  metin arama şablonlarını listele\n"
+msgstr "  \\dFp[+] [PATTERN]      metin arama ayrıştırıcılarını listele\n"
 
 #: help.c:212
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dFt[+] [PATTERN]      list text search templates\n"
-msgstr "  \\dFt [PATTERN]  metin arama şablonlarını listele\n"
+msgstr "  \\dFt[+] [PATTERN]      metin arama şablonlarını listele\n"
 
 #: help.c:213
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dg     [PATTERN]      list roles (groups)\n"
-msgstr "  \\dg [PATTERN]  grupları göster\n"
+msgstr "  \\dg     [PATTERN]      rolleri (grupları) listele\n"
 
 #: help.c:214
-#, fuzzy, c-format
+#, c-format
 msgid "  \\di[S+] [PATTERN]      list indexes\n"
-msgstr "  \\dD [PATTERN]  domainleri göster\n"
+msgstr "  \\dD[S+]  [PATTERN]  indexleri göster\n"
 
 #: help.c:215
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dl                    list large objects, same as \\lo_list\n"
-msgstr "  \\dl            large objectleri göster, \\lo_list ile aynı\n"
+msgstr "  \\dl                    large objectleri göster; \\lo_list ile aynıdır\n"
 
 #: help.c:216
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dn[+]  [PATTERN]      list schemas\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\dn[+]  [PATTERN]      şemaları listele\n"
 
 #: help.c:217
-#, fuzzy, c-format
+#, c-format
 msgid "  \\do[S]  [PATTERN]      list operators\n"
-msgstr "  \\do [NAME]     operatörleri göster\n"
+msgstr "  \\do[S] [PATTERN]     operatörleri listele\n"
 
 #: help.c:218
 #, fuzzy, c-format
@@ -969,39 +969,39 @@ msgid "  \\dp     [PATTERN]      list table, view, and sequence access privilege
 msgstr "  \\dp [PATTERN]  tablo, view, ve sequence erişim haklarını göster\n"
 
 #: help.c:219
-#, fuzzy, c-format
+#, c-format
 msgid "  \\ds[S+] [PATTERN]      list sequences\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\ds[S+] [PATTERN]      sequenceları listele\n"
 
 #: help.c:220
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dt[S+] [PATTERN]      list tables\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\dt[S+] [PATTERN]      tabloları listele\n"
 
 #: help.c:221
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dT[S+] [PATTERN]      list data types\n"
-msgstr "  \\dD [PATTERN]  domainleri göster\n"
+msgstr "  \\dT[S+] [PATTERN]      lveri tiplerini listele\n"
 
 #: help.c:222
-#, fuzzy, c-format
+#, c-format
 msgid "  \\du     [PATTERN]      list roles (users)\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\du     [PATTERN]      rolleri (kullanıcıları) listele\n"
 
 #: help.c:223
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dv[S+] [PATTERN]      list views\n"
-msgstr "  \\du [PATTERN]  kullanıcıları listele\n"
+msgstr "  \\dv[S+] [PATTERN]      viewları listele\n"
 
 #: help.c:224
-#, fuzzy, c-format
+#, c-format
 msgid "  \\l[+]                  list all databases\n"
-msgstr "  -a, --all                 tüm veritabanlarını cluster eder\n"
+msgstr "  \\l[+]                  tüm tablespaceleri listele\n"
 
 #: help.c:225
-#, fuzzy, c-format
+#, c-format
 msgid "  \\z      [PATTERN]      same as \\dp\n"
-msgstr "  \\dC            castları listele\n"
+msgstr "  \\z      [PATTERN]       \\dp ile aynı\n"
 
 #: help.c:228
 #, c-format
@@ -1009,9 +1009,9 @@ msgid "Formatting\n"
 msgstr "Biçimlendirme:\n"
 
 #: help.c:229
-#, fuzzy, c-format
+#, c-format
 msgid "  \\a                     toggle between unaligned and aligned output mode\n"
-msgstr "  \\a             düzenli ve düzensiz biçim arasında geçiş yap\n"
+msgstr "  \\a                    düzenli ve düzensiz çıktı modu arasında geçiş yap\n"
 
 #: help.c:230
 #, fuzzy, c-format
@@ -1051,9 +1051,9 @@ msgid "  \\T [STRING]            set HTML <table> tag attributes, or unset if no
 msgstr "  \\T [STRING]    HTML <table> tag parametrelerini tanımla, boş ise tüm parametrelerini kaldır\n"
 
 #: help.c:240
-#, fuzzy, c-format
+#, c-format
 msgid "  \\x [on|off]            toggle expanded output (currently %s)\n"
-msgstr "  \\x             geniş çıktı ayarla (şu an %s)\n"
+msgstr "  \\x [on|off]            geniş çıktı ayarla (şu an %s)\n"
 
 #: help.c:244
 #, c-format
@@ -1061,20 +1061,18 @@ msgid "Connection\n"
 msgstr "Bağlantı\n"
 
 #: help.c:245
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  \\c[onnect] [DBNAME|- USER|- HOST|- PORT|-]\n"
 "                         connect to new database (currently \"%s\")\n"
 msgstr ""
-"  \\c[onnect] [DBNAME|- USER|- HOST|- PORT|-]\n"
-"                 yeni veritabanına bağlan (geçerli veritabanı \"%s\")\n"
+"  \\c[onnect] [VERİTABANI ADI|- KULLANICI ADI|- KARŞI SUNUCU|- PORT|-]\n"
+"                        yeni veritabanına bağlan (geçerli veritabanı \"%s\")\n"
 
 #: help.c:248
-#, fuzzy, c-format
+#, c-format
 msgid "  \\encoding [ENCODING]   show or set client encoding\n"
-msgstr ""
-"  \\encoding [ENCODING]\n"
-"                 istemci dil kodlamasını göster\n"
+msgstr "  \\encoding [KODLAMA]    istemci dil kodlamasını göster\n"
 
 #: help.c:249
 #, c-format
@@ -1087,9 +1085,9 @@ msgid "Operating System\n"
 msgstr "işletim Sistemi\n"
 
 #: help.c:253
-#, fuzzy, c-format
+#, c-format
 msgid "  \\cd [DIR]              change the current working directory\n"
-msgstr "  \\cd [DIR]      geçerli dizini değiştir\n"
+msgstr "  \\cd [DIR]              geçerli çalışma dizinini değiştir\n"
 
 #: help.c:254
 #, c-format
@@ -1240,7 +1238,7 @@ msgid "You are using psql, the command-line interface to PostgreSQL."
 msgstr ""
 
 #: mainloop.c:183
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Type:  \\copyright for distribution terms\n"
 "       \\h for help with SQL commands\n"
@@ -1251,9 +1249,8 @@ msgstr ""
 "Komutlar:  \\copyright dağıtım koşulları için\n"
 "       \\h SQL komutları hakkında yardım için\n"
 "       \\? psql dahili komutların yardımı için\n"
-"       \\g ya da noktalı virgül sorguyu çalıştırmak için\n"
+"       \\g ya da noktalı virgül:  sorguyu çalıştırmak için\n"
 "       \\q çıkmak için\n"
-"\n"
 
 #: print.c:973
 #, c-format
@@ -2064,7 +2061,7 @@ msgstr "Bu sunucu sürümü (%d) tablespace desteklememektedir.\n"
 
 #: describe.c:3082
 msgid "Foreign-data wrapper"
-msgstr ""
+msgstr "Foreign-data wrapper"
 
 #: describe.c:3094
 msgid "Version"
@@ -2132,7 +2129,6 @@ msgid "change a database"
 msgstr "veritabanını değiştir"
 
 #: sql_help.h:38
-#, fuzzy
 msgid ""
 "ALTER DATABASE name [ [ WITH ] option [ ... ] ]\n"
 "\n"
@@ -2151,17 +2147,17 @@ msgid ""
 "ALTER DATABASE name RESET configuration_parameter\n"
 "ALTER DATABASE name RESET ALL"
 msgstr ""
-"ALTER DATABASE veritabanı_adı [ [ WITH ] seçene [ ... ] ]\n"
+"ALTER DATABASE veritabanı_adı [ [ WITH ] seçenek [ ... ] ]\n"
 "\n"
 "seçenek aşağıdakilerden birisi olabilir:\n"
 "\n"
-"    CONNECTION LIMIT connlimit\n"
+"    CONNECTION LIMIT bağlantı limiti\n"
 "\n"
 "ALTER DATABASE veritabanı_adı RENAME TO yeni_adı\n"
 "\n"
 "ALTER DATABASE veritabanı_adı OWNER TO yeni_sahibi\n"
 "\n"
-"ALTER DATABASE veritabanı_adı SET yapılandırma_parametresi { TO | = } { value | DEFAULT }\n"
+"ALTER DATABASE veritabanı_adı SET yapılandırma_parametresi { TO | = } { değer | DEFAULT }\n"
 "ALTER DATABASE veritabanı_adı SET yapılandırma_parametresi FROM CURRENT\n"
 "ALTER DATABASE veritabanı_adı RESET yapılandırma_parametresi\n"
 "ALTER DATABASE veritabanı_adı RESET ALL"
@@ -2210,6 +2206,10 @@ msgid ""
 "    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ]) ]\n"
 "ALTER FOREIGN DATA WRAPPER name OWNER TO new_owner"
 msgstr ""
+"ALTER FOREIGN DATA WRAPPER ad\n"
+"    [ VALIDATOR valfunction | NO VALIDATOR ]\n"
+"    [ SEÇENEKLER ( [ ADD | SET | DROP ] seçenek ['değer'] [, ... ]) ]\n"
+"ALTER FOREIGN DATA WRAPPER ad OWNER TO yeni sahibi"
 
 #: sql_help.h:49
 msgid "change the definition of a function"
@@ -2328,7 +2328,6 @@ msgid "change the definition of an operator family"
 msgstr "operatör ailesinin tanımını değiştir"
 
 #: sql_help.h:74
-#, fuzzy
 msgid ""
 "ALTER OPERATOR FAMILY name USING index_method ADD\n"
 "  {  OPERATOR strategy_number operator_name ( op_type, op_type )\n"
@@ -2341,16 +2340,16 @@ msgid ""
 "ALTER OPERATOR FAMILY name USING index_method RENAME TO newname\n"
 "ALTER OPERATOR FAMILY name USING index_method OWNER TO newowner"
 msgstr ""
-"ALTER OPERATOR FAMILY name USING index_method ADD\n"
-"  {  OPERATOR strategy_number operator_name ( op_type, op_type ) [ RECHECK ]\n"
+"ALTER OPERATOR FAMILY adı USING index_methodu ADD\n"
+"  {  OPERATOR strategy_number operator_name ( op_type, op_type )\n"
 "   | FUNCTION support_number [ ( op_type [ , op_type ] ) ] funcname ( argument_type [, ...] )\n"
 "  } [, ... ]\n"
-"ALTER OPERATOR FAMILY name USING index_method DROP\n"
+"ALTER OPERATOR FAMILY ad USING index_methodu DROP\n"
 "  {  OPERATOR strategy_number ( op_type [ , op_type ] )\n"
 "   | FUNCTION support_number ( op_type [ , op_type ] )\n"
 "  } [, ... ]\n"
-"ALTER OPERATOR FAMILY name USING index_method RENAME TO newname\n"
-"ALTER OPERATOR FAMILY name USING index_method OWNER TO newowner"
+"ALTER OPERATOR FAMILY ad USING index_methodu RENAME TO yeni ad\n"
+"ALTER OPERATOR FAMILY ad USING index_methodu OWNER TO yeni sahibi"
 
 #: sql_help.h:77
 #: sql_help.h:125
@@ -2418,7 +2417,6 @@ msgid "change the definition of a sequence generator"
 msgstr "sequence üretecinin tanımını değiştir"
 
 #: sql_help.h:86
-#, fuzzy
 msgid ""
 "ALTER SEQUENCE name [ INCREMENT [ BY ] increment ]\n"
 "    [ MINVALUE minvalue | NO MINVALUE ] [ MAXVALUE maxvalue | NO MAXVALUE ]\n"
@@ -2430,17 +2428,19 @@ msgid ""
 "ALTER SEQUENCE name RENAME TO new_name\n"
 "ALTER SEQUENCE name SET SCHEMA new_schema"
 msgstr ""
-"ALTER SEQUENCE sequence_adı [ INCREMENT [ BY ] arttırma_değeri ]\n"
-"    [ MINVALUE en_az_değer | NO MINVALUE ] [ MAXVALUE en_fazla_değer | NO MAXVALUE ]\n"
-"    [ RESTART [ WITH ] start ] [ CACHE cache ] [ [ NO ] CYCLE ]\n"
+"ALTER SEQUENCE ad [ INCREMENT [ BY ] arttırma miktarı ]\n"
+"    [ MINVALUE en az değer | NO MINVALUE ] [ MAXVALUE üst değer | NO MAXVALUE ]\n"
+"    [ START [ WITH ] başlama sayısı ]\n"
+"    [ RESTART [ [ WITH ] yeniden başlama sayısı ] ]\n"
+"    [ CACHE önbellek ] [ [ NO ] CYCLE ]\n"
 "    [ OWNED BY { tablo.kolon | NONE } ]\n"
-"ALTER SEQUENCE sequence_adı RENAME TO yeni_şema\n"
-"ALTER SEQUENCE sequence_adı SET SCHEMA yeni_şema"
+"ALTER SEQUENCE ad OWNER TO yeni sahibir\n"
+"ALTER SEQUENCE ad RENAME TO yeni adı\n"
+"ALTER SEQUENCE namade SET SCHEMA yeni şeması"
 
 #: sql_help.h:89
-#, fuzzy
 msgid "change the definition of a foreign server"
-msgstr "trigger tanımını değiştir"
+msgstr "foreign server tanımını değiştir"
 
 #: sql_help.h:90
 msgid ""
@@ -2448,13 +2448,15 @@ msgid ""
 "    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] ) ]\n"
 "ALTER SERVER servername OWNER TO new_owner"
 msgstr ""
+"ALTER SERVER sunucu adı [ VERSION 'yeni sürüm' ]\n"
+"    [ OPTIONS ( [ ADD | SET | DROP ] seçenek ['değer'] [, ... ] ) ]\n"
+"ALTER SERVER sunucu adı OWNER TO yeni sahibi"
 
 #: sql_help.h:93
 msgid "change the definition of a table"
 msgstr "tablonun tanımını değiştir"
 
 #: sql_help.h:94
-#, fuzzy
 msgid ""
 "ALTER TABLE [ ONLY ] name [ * ]\n"
 "    action [, ... ]\n"
@@ -2496,44 +2498,45 @@ msgid ""
 "    OWNER TO new_owner\n"
 "    SET TABLESPACE new_tablespace"
 msgstr ""
-"ALTER TABLE [ ONLY ] name [ * ]\n"
+"ALTER TABLE [ ONLY ] ad [ * ]\n"
 "    action [, ... ]\n"
-"ALTER TABLE [ ONLY ] name [ * ]\n"
-"    RENAME [ COLUMN ] column TO new_column\n"
-"ALTER TABLE name\n"
-"    RENAME TO new_name\n"
-"ALTER TABLE name\n"
-"    SET SCHEMA new_schema\n"
+"ALTER TABLE [ ONLY ] ad [ * ]\n"
+"    RENAME [ COLUMN ] kolon TO yeni kolon\n"
+"ALTER TABLE ad\n"
+"    RENAME TO yeni ad\n"
+"ALTER TABLE ad\n"
+"    SET SCHEMA yeni şema\n"
 "\n"
 "where action is one of:\n"
 "\n"
-"    ADD [ COLUMN ] column type [ column_constraint [ ... ] ]\n"
-"    DROP [ COLUMN ] column [ RESTRICT | CASCADE ]\n"
-"    ALTER [ COLUMN ] column TYPE type [ USING expression ]\n"
-"    ALTER [ COLUMN ] column SET DEFAULT expression\n"
-"    ALTER [ COLUMN ] column DROP DEFAULT\n"
-"    ALTER [ COLUMN ] column { SET | DROP } NOT NULL\n"
-"    ALTER [ COLUMN ] column SET STATISTICS integer\n"
-"    ALTER [ COLUMN ] column SET STORAGE { PLAIN | EXTERNAL | EXTENDED | MAIN }\n"
-"    ADD table_constraint\n"
-"    DROP CONSTRAINT constraint_name [ RESTRICT | CASCADE ]\n"
-"    DISABLE TRIGGER [ trigger_name | ALL | USER ]\n"
-"    ENABLE TRIGGER [ trigger_name | ALL | USER ]\n"
-"    ENABLE REPLICA TRIGGER trigger_name\n"
-"    ENABLE ALWAYS TRIGGER trigger_name\n"
+"    ADD [ COLUMN ] kolon kolon_tipi [ kolon kısıtlaması [ ... ] ]\n"
+"    DROP [ COLUMN ] kolon [ RESTRICT | CASCADE ]\n"
+"    ALTER [ COLUMN ] kolon [ SET DATA ] TYPE type [ USING ifade ]\n"
+"    ALTER [ COLUMN ] kolon SET DEFAULT ifade\n"
+"    ALTER [ COLUMN ] kolon DROP DEFAULT\n"
+"    ALTER [ COLUMN ] kolon { SET | DROP } NOT NULL\n"
+"    ALTER [ COLUMN ] kolon SET STATISTICS tamyısa\n"
+"    ALTER [ COLUMN ] kolon SET STORAGE { PLAIN | EXTERNAL | EXTENDED | MAIN }\n"
+"    ADD tablo kısıtlaması\n"
+"    DROP CONSTRAINT kısıtlama adı [ RESTRICT | CASCADE ]\n"
+"    DISABLE TRIGGER [ trigger adı | ALL | USER ]\n"
+"    ENABLE TRIGGER[ trigger adı | ALL | USER ]\n"
+"    ENABLE REPLICA TRIGGER trigger adı\n"
+"    ENABLE ALWAYS TRIGGER trigger adı\n"
 "    DISABLE RULE rewrite_rule_name\n"
 "    ENABLE RULE rewrite_rule_name\n"
 "    ENABLE REPLICA RULE rewrite_rule_name\n"
 "    ENABLE ALWAYS RULE rewrite_rule_name\n"
-"    CLUSTER ON index_name\n"
+"    CLUSTER ON index adı\n"
 "    SET WITHOUT CLUSTER\n"
+"    SET WITH OIDS\n"
 "    SET WITHOUT OIDS\n"
 "    SET ( storage_parameter = value [, ... ] )\n"
 "    RESET ( storage_parameter [, ... ] )\n"
-"    INHERIT parent_table\n"
-"    NO INHERIT parent_table\n"
-"    OWNER TO new_owner\n"
-"    SET TABLESPACE new_tablespace"
+"    INHERIT üst tablo\n"
+"    NO INHERIT üst tablo\n"
+"    OWNER TO yeni sahibi\n"
+"    SET TABLESPACE yeni tablespace"
 
 #: sql_help.h:97
 msgid "change the definition of a tablespace"
@@ -2626,14 +2629,14 @@ msgid "change the definition of a type"
 msgstr "type tanımını değiştir"
 
 #: sql_help.h:122
-#, fuzzy
 msgid ""
 "ALTER TYPE name RENAME TO new_name\n"
 "ALTER TYPE name OWNER TO new_owner \n"
 "ALTER TYPE name SET SCHEMA new_schema"
 msgstr ""
-"ALTER TYPE name OWNER TO new_owner \n"
-"ALTER TYPE name SET SCHEMA new_schema"
+"ALTER TYPE ad RENAME TO yeni adı\n"
+"ALTER TYPE ad OWNER TO yeni sahibi \n"
+"ALTER TYPE ad SET SCHEMA yeni şema"
 
 #: sql_help.h:126
 msgid ""
@@ -2680,9 +2683,8 @@ msgstr ""
 "ALTER USER kullanıcı_adı RESET ALL"
 
 #: sql_help.h:129
-#, fuzzy
 msgid "change the definition of a user mapping"
-msgstr "domain tanımını değiştir"
+msgstr "kullanıcı haritalama tanımını değiştir"
 
 #: sql_help.h:130
 msgid ""
@@ -2851,7 +2853,6 @@ msgid "copy data between a file and a table"
 msgstr "dosya ile veritabanı tablosu arasında veriyi transfer et"
 
 #: sql_help.h:170
-#, fuzzy
 msgid ""
 "COPY tablename [ ( column [, ...] ) ]\n"
 "    FROM { 'filename' | STDIN }\n"
@@ -2877,8 +2878,8 @@ msgid ""
 "                [ ESCAPE [ AS ] 'escape' ]\n"
 "                [ FORCE QUOTE column [, ...] ]"
 msgstr ""
-"COPY tablename [ ( column [, ...] ) ]\n"
-"    FROM { 'filename' | STDIN }\n"
+"COPY tablo adı [ ( kolon [, ...] ) ]\n"
+"    FROM { 'dosya adı' | STDIN }\n"
 "    [ [ WITH ] \n"
 "          [ BINARY ]\n"
 "          [ OIDS ]\n"
@@ -2889,11 +2890,10 @@ msgstr ""
 "                [ ESCAPE [ AS ] 'escape' ]\n"
 "                [ FORCE NOT NULL column [, ...] ]\n"
 "\n"
-"COPY { tablename [ ( column [, ...] ) ] | ( query ) }\n"
-"    TO { 'filename' | STDOUT }\n"
+"COPY { tablo adı [ ( kolon [, ...] ) ] | ( sorgu ) }\n"
+"    TO { 'dosya adı' | STDOUT }\n"
 "    [ [ WITH ] \n"
 "          [ BINARY ]\n"
-"          [ HEADER ]\n"
 "          [ OIDS ]\n"
 "          [ DELIMITER [ AS ] 'delimiter' ]\n"
 "          [ NULL [ AS ] 'null string' ]\n"
@@ -3012,7 +3012,6 @@ msgid "create a new database"
 msgstr "yeni veritabanı oluştur"
 
 #: sql_help.h:190
-#, fuzzy
 msgid ""
 "CREATE DATABASE name\n"
 "    [ [ WITH ] [ OWNER [=] dbowner ]\n"
@@ -3023,12 +3022,14 @@ msgid ""
 "           [ TABLESPACE [=] tablespace ]\n"
 "           [ CONNECTION LIMIT [=] connlimit ] ]"
 msgstr ""
-"CREATE DATABASE name\n"
-"    [ [ WITH ] [ OWNER [=] dbowner ]\n"
-"           [ TEMPLATE [=] template ]\n"
-"           [ ENCODING [=] encoding ]\n"
+"CREATE DATABASE ad\n"
+"    [ [ WITH ] [ OWNER [=] veritabanı sahibi ]\n"
+"           [ TEMPLATE [=] şablon ]\n"
+"           [ ENCODING [=] dil kodlaması ]\n"
+"           [ LC_COLLATE [=] lc_collate ]\n"
+"           [ LC_CTYPE [=] lc_ctype ]\n"
 "           [ TABLESPACE [=] tablespace ]\n"
-"           [ CONNECTION LIMIT [=] connlimit ] ]"
+"           [ CONNECTION LIMIT [=] bağlantı sınırı ] ]"
 
 #: sql_help.h:193
 msgid "define a new domain"
@@ -3055,9 +3056,8 @@ msgstr ""
 "{ NOT NULL | NULL | CHECK (expression) }"
 
 #: sql_help.h:197
-#, fuzzy
 msgid "define a new foreign-data wrapper"
-msgstr "yeni veri tipi tanımla"
+msgstr "yeni foreign-data wrapper tanımla"
 
 #: sql_help.h:198
 msgid ""
@@ -3319,9 +3319,8 @@ msgstr ""
 "    [ OWNED BY { table.column | NONE } ]"
 
 #: sql_help.h:245
-#, fuzzy
 msgid "define a new foreign server"
-msgstr "yeni trigger tanımla"
+msgstr "yeni foreign sunucu tanımla"
 
 #: sql_help.h:246
 msgid ""
@@ -3737,14 +3736,12 @@ msgid "DROP DOMAIN [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP DOMAIN [ IF EXISTS ] adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:333
-#, fuzzy
 msgid "remove a foreign-data wrapper"
-msgstr "veri tipi kaldır"
+msgstr "foreign-data wrapper'ını kaldır"
 
 #: sql_help.h:334
-#, fuzzy
 msgid "DROP FOREIGN DATA WRAPPER [ IF EXISTS ] name [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] conversion_adı [ CASCADE | RESTRICT ]"
+msgstr "DROP FOREIGN DATA WRAPPER [ IF EXISTS ] ad [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:337
 msgid "remove a function"
@@ -3845,14 +3842,12 @@ msgid "DROP SEQUENCE [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]"
 msgstr "DROP SEQUENCE [ IF EXISTS ] sequence_adı [, ...] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:385
-#, fuzzy
 msgid "remove a foreign server descriptor"
-msgstr "conversion kaldır"
+msgstr "foreign sunucu tanımını kaldır"
 
 #: sql_help.h:386
-#, fuzzy
 msgid "DROP SERVER [ IF EXISTS ] servername [ CASCADE | RESTRICT ]"
-msgstr "DROP CONVERSION [ IF EXISTS ] conversion_adı [ CASCADE | RESTRICT ]"
+msgstr "DROP SERVER [ IF EXISTS ] sunucu adı [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:389
 msgid "remove a table"
@@ -4007,7 +4002,6 @@ msgid "define access privileges"
 msgstr "erişim haklarını tanımla"
 
 #: sql_help.h:450
-#, fuzzy
 msgid ""
 "GRANT { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
@@ -4054,37 +4048,50 @@ msgid ""
 "\n"
 "GRANT role [, ...] TO rolename [, ...] [ WITH ADMIN OPTION ]"
 msgstr ""
-"GRANT { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
+"GRANT { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON [ TABLE ] tablo_adı [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON [ TABLE ] tablo adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { { SELECT | INSERT | UPDATE | REFERENCES } ( kolon [, ...] )\n"
+"    [,...] | ALL [ PRIVILEGES ] ( kolon [, ...] ) }\n"
+"    ON [ TABLE ] tablo adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { { USAGE | SELECT | UPDATE }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SEQUENCE sequence_adı [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON SEQUENCE sequence adı [, ...]\n"
+"    TO { [ GROUP ] rolename | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON DATABASE veritabanı_adı [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
-"\n"
-"GRANT { EXECUTE | ALL [ PRIVILEGES ] }\n"
-"    ON FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] ) [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON DATABASE veritabanı adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
-"    ON LANGUAGE dil_adı [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON FOREIGN DATA WRAPPER fdw adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN SERVER sunucu adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { EXECUTE | ALL [ PRIVILEGES ] }\n"
+"    ON FUNCTION fonksiyon adı ( [ [ argüman modu ] [ argüman adı ] argüman tipi [, ...] ] ) [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"\n"
+"GRANT { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON LANGUAGE dil adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { { CREATE | USAGE } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SCHEMA şema_adı [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON SCHEMA şema adı [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
 "GRANT { CREATE | ALL [ PRIVILEGES ] }\n"
-"    ON TABLESPACE tablo_uzayı_adı [, ...]\n"
-"    TO { [ GROUP ] rol_adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
+"    ON TABLESPACE tablespacename [, ...]\n"
+"    TO { [ GROUP ] rol adı | PUBLIC } [, ...] [ WITH GRANT OPTION ]\n"
 "\n"
-"GRANT role [, ...] TO rol_adı [, ...] [ WITH ADMIN OPTION ]"
+"GRANT role [, ...] TO rol adı [, ...] [ WITH ADMIN OPTION ]"
 
 #: sql_help.h:453
 msgid "create new rows in a table"
@@ -4121,7 +4128,6 @@ msgid "lock a table"
 msgstr "tabloyu kilitle"
 
 #: sql_help.h:466
-#, fuzzy
 msgid ""
 "LOCK [ TABLE ] [ ONLY ] name [, ...] [ IN lockmode MODE ] [ NOWAIT ]\n"
 "\n"
@@ -4130,9 +4136,9 @@ msgid ""
 "    ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE\n"
 "    | SHARE | SHARE ROW EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE"
 msgstr ""
-"LOCK [ TABLE ] name [, ...] [ IN kilitleme_modu MODE ] [ NOWAIT ]\n"
+"LOCK [ TABLE ] [ ONLY ] ad [, ...] [ IN kilit modu MODE ] [ NOWAIT ]\n"
 "\n"
-"kilitleme_modu aşağıdakilerden birisi olabilir:\n"
+"kilit modu aşağıdakilerden birisi olabilir:\n"
 "\n"
 "    ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE\n"
 "    | SHARE | SHARE ROW EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE"
@@ -4210,7 +4216,6 @@ msgid "remove access privileges"
 msgstr "erişim hakkını kaldır"
 
 #: sql_help.h:502
-#, fuzzy
 msgid ""
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | TRIGGER }\n"
@@ -4280,51 +4285,70 @@ msgid ""
 "    [ CASCADE | RESTRICT ]"
 msgstr ""
 "REVOKE [ GRANT OPTION FOR ]\n"
-"    { { SELECT | INSERT | UPDATE | DELETE | REFERENCES | TRIGGER }\n"
+"    { { SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | TRIGGER }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON [ TABLE ] tablo_adı [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
+"    ON [ TABLE ] tablo adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { { SELECT | INSERT | UPDATE | REFERENCES } ( kolon [, ...] )\n"
+"    [,...] | ALL [ PRIVILEGES ] ( kolon [, ...] ) }\n"
+"    ON [ TABLE ] tablo adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { USAGE | SELECT | UPDATE }\n"
 "    [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SEQUENCE sequence_adı [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
+"    ON SEQUENCE sequence adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { CREATE | CONNECT | TEMPORARY | TEMP } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON DATABASE veritabanı_adı [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
-"    [ CASCADE | RESTRICT ]\n"
-"\n"
-"REVOKE [ GRANT OPTION FOR ]\n"
-"    { EXECUTE | ALL [ PRIVILEGES ] }\n"
-"    ON FUNCTION fonksiyon_adı ( [ [ argmode ] [ argname ] argtype [, ...] ] ) [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
+"    ON DATABASE veritabanı adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { USAGE | ALL [ PRIVILEGES ] }\n"
-"    ON LANGUAGE dil_adı [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
+"    ON FOREIGN DATA WRAPPER fdw adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı  | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON FOREIGN SERVER sunucu adu [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { EXECUTE | ALL [ PRIVILEGES ] }\n"
+"    ON FUNCTION fonksiyon adı ( [ [ argüman modu ] [ argüman adı ] argüman tipi [, ...] ] ) [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
+"    [ CASCADE | RESTRICT ]\n"
+"\n"
+"REVOKE [ GRANT OPTION FOR ]\n"
+"    { USAGE | ALL [ PRIVILEGES ] }\n"
+"    ON LANGUAGE dil adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { { CREATE | USAGE } [,...] | ALL [ PRIVILEGES ] }\n"
-"    ON SCHEMA şema_adı [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
+"    ON SCHEMA şema adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ GRANT OPTION FOR ]\n"
 "    { CREATE | ALL [ PRIVILEGES ] }\n"
-"    ON TABLESPACE tablo_uzayı_adı [, ...]\n"
-"    FROM { [ GROUP ] rol_adı | PUBLIC } [, ...]\n"
+"    ON TABLESPACE tablespace adı [, ...]\n"
+"    FROM { [ GROUP ] rol adı | PUBLIC } [, ...]\n"
 "    [ CASCADE | RESTRICT ]\n"
 "\n"
 "REVOKE [ ADMIN OPTION FOR ]\n"
-"    rol [, ...] FROM rol_adı [, ...]\n"
+"    role [, ...] FROM rol adı [, ...]\n"
 "    [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:506
@@ -4551,11 +4575,12 @@ msgid "empty a table or set of tables"
 msgstr "bir veya birden fazla tabloyu kısalt"
 
 #: sql_help.h:562
-#, fuzzy
 msgid ""
 "TRUNCATE [ TABLE ] [ ONLY ] name [, ... ]\n"
 "    [ RESTART IDENTITY | CONTINUE IDENTITY ] [ CASCADE | RESTRICT ]"
-msgstr "TRUNCATE [ TABLE ] tablo_adı [, ...] [ CASCADE | RESTRICT ]"
+msgstr ""
+"TRUNCATE [ TABLE ] [ ONLY ] ad [, ... ]\n"
+"    [ RESTART IDENTITY | CONTINUE IDENTITY ] [ CASCADE | RESTRICT ]"
 
 #: sql_help.h:565
 msgid "stop listening for a notification"
@@ -4602,7 +4627,6 @@ msgid "compute a set of rows"
 msgstr "compute a set of rows"
 
 #: sql_help.h:578
-#, fuzzy
 msgid ""
 "VALUES ( expression [, ...] ) [, ...]\n"
 "    [ ORDER BY sort_expression [ ASC | DESC | USING operator ] [, ...] ]\n"
@@ -4613,7 +4637,8 @@ msgstr ""
 "VALUES ( expression [, ...] ) [, ...]\n"
 "    [ ORDER BY sort_expression [ ASC | DESC | USING operator ] [, ...] ]\n"
 "    [ LIMIT { count | ALL } ]\n"
-"    [ OFFSET start ]"
+"    [ OFFSET start [ ROW | ROWS ] ]\n"
+"    [ FETCH { FIRST | NEXT } [ count ] { ROW | ROWS } ONLY ]"
 
 #: ../../port/exec.c:195
 #: ../../port/exec.c:309
