@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump-tr\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-04-29 07:17+0000\n"
-"PO-Revision-Date: 2009-05-04 23:13+0200\n"
+"POT-Creation-Date: 2009-05-05 03:15+0000\n"
+"PO-Revision-Date: 2009-05-05 09:54+0200\n"
 "Last-Translator: Devrim GÜNDÜZ <devrim@commandprompt.com>\n"
 "Language-Team: Turkish <devrim@gunduz.org>\n"
 "MIME-Version: 1.0\n"
@@ -141,9 +141,9 @@ msgid "  -f, --file=FILENAME         output file name\n"
 msgstr "  -f, --file=DOSYA ADI         çıktı dosya adı\n"
 
 #: pg_dump.c:795
-#, fuzzy, c-format
+#, c-format
 msgid "  -F, --format=c|t|p          output file format (custom, tar, plain text)\n"
-msgstr "  -F, --format=c|t|p       çıktı dosya biçimi (özel, tar, düz metin)\n"
+msgstr "  -F, --format=c|t|p          çıktı dosya biçimi (özel, tar, düz metin)\n"
 
 #: pg_dump.c:796
 #, c-format
@@ -159,7 +159,7 @@ msgstr "  -Z, --compress=0-9          sıkıştırılmış biçimler için sık�
 #: pg_dumpall.c:531
 #, c-format
 msgid "  --lock-wait-timeout=TIMEOUT fail after waiting TIMEOUT for a table lock\n"
-msgstr ""
+msgstr "  --lock-wait-timeout=ZAMAN AŞIMI Tablo kilitlemesi için belirtilen süreden fazla beklendiğinde hata ver\n"
 
 #: pg_dump.c:799
 #: pg_dumpall.c:532
@@ -226,13 +226,13 @@ msgid "  -o, --oids                  include OIDs in dump\n"
 msgstr "  -o, --oids                  yedeğin içine OID'leri de ekle\n"
 
 #: pg_dump.c:811
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -O, --no-owner              skip restoration of object ownership in\n"
 "                              plain-text format\n"
 msgstr ""
-"  -O, --no-owner           düz metin biçiminde nesne sahipliğini \n"
-"                          ayarlayan komutlarının oluşturmasını engelle\n"
+"  -O, --no-owner              düz metin biçiminde nesne \n"
+"                              sahipliğinin yüklenmesini atla\n"
 
 #: pg_dump.c:813
 #: pg_dumpall.c:541
@@ -241,11 +241,9 @@ msgid "  -s, --schema-only           dump only the schema, no data\n"
 msgstr "  -s, --schema-only        sadece şemayı dump et, veriyi etme\n"
 
 #: pg_dump.c:814
-#, fuzzy, c-format
+#, c-format
 msgid "  -S, --superuser=NAME        superuser user name to use in plain-text format\n"
-msgstr ""
-"  -S, --superuser=NAME     kullanılacak superuser kullanıcısının adı\n"
-"                           düz metin olarak ayarla\n"
+msgstr "  -S, --superuser=NAME        düz metin formatında kullanılacak superuser kullanıcı adı\n"
 
 #: pg_dump.c:815
 #, c-format
@@ -271,15 +269,15 @@ msgstr "  --binary-upgrade            sadece yükseltme araçlarının kullanım
 
 #: pg_dump.c:819
 #: pg_dumpall.c:546
-#, fuzzy, c-format
+#, c-format
 msgid "  --inserts                   dump data as INSERT commands, rather than COPY\n"
-msgstr "  -d, --inserts               verileri COPY komutları yerine INSERT olarak yedekle\n"
+msgstr "  --inserts                   verileri COPY yerine INSERT komutları olarak yedekle\n"
 
 #: pg_dump.c:820
 #: pg_dumpall.c:547
-#, fuzzy, c-format
+#, c-format
 msgid "  --column-inserts            dump data as INSERT commands with column names\n"
-msgstr "  -D, --column-inserts     veriyi kolon adları ile insert komutları olarak yedekle.\n"
+msgstr "  --column-inserts            veriyi kolon adları ile INSERT komutları olarak yedekle\n"
 
 #: pg_dump.c:821
 #: pg_dumpall.c:548
@@ -307,15 +305,15 @@ msgstr "  --role=ROL ADI             dump'dan önce SET ROLE çalıştır\n"
 
 #: pg_dump.c:825
 #: pg_dumpall.c:552
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  --use-set-session-authorization\n"
 "                              use SET SESSION AUTHORIZATION commands instead of\n"
 "                              ALTER OWNER commands to set ownership\n"
 msgstr ""
 "  --use-set-session-authorization\n"
-"                              ALTER OWNER komutun yerine\n"
-"                              SESSION AUTHORIZATION komutunu kullanın\n"
+"                              Sahipliği ayarlamak için ALTER OWNER komutları yerine\n"
+"                              SET SESSION AUTHORIZATION komutlarını kullan\n"
 
 #: pg_dump.c:829
 #: pg_restore.c:440
@@ -552,11 +550,11 @@ msgid "finding check constraints for table \"%s\"\n"
 msgstr "\"%s\" tablosu için bütünlük kısıtlamaları bulunuyor\n"
 
 #: pg_dump.c:5011
-#, fuzzy, c-format
+#, c-format
 msgid "expected %d check constraint on table \"%s\" but found %d\n"
 msgid_plural "expected %d check constraints on table \"%s\" but found %d\n"
-msgstr[0] "\"%2$s\" tablosu üzerinde %1$dbütünlük kısıtlaması beklenirken %3$d bulundu\n"
-msgstr[1] "\"%2$s\" tablosu üzerinde %1$dbütünlük kısıtlaması beklenirken %3$d bulundu\n"
+msgstr[0] "%d check kısıtlamasının \"%s\" tablosunda bulunması beklendi; ancak  %d bulundu\n"
+msgstr[1] "%d check kısıtlamasının \"%s\" tablosunda bulunması beklendi; ancak  %d bulundu\n"
 
 #: pg_dump.c:5015
 msgid "(The system catalogs might be corrupted.)\n"
@@ -570,11 +568,11 @@ msgstr "%u enum ID'si için etiket tanımları bulunamadı \n"
 #: pg_dump.c:6344
 #: pg_dump.c:6543
 #: pg_dump.c:7194
-#, fuzzy, c-format
+#, c-format
 msgid "query returned %d row instead of one: %s\n"
 msgid_plural "query returned %d rows instead of one: %s\n"
-msgstr[0] "sorgu bir yerine %d satır döndirdi: %s\n"
-msgstr[1] "sorgu bir yerine %d satır döndirdi: %s\n"
+msgstr[0] "sorgu 1 yerine %d satır döndürdü: %s\n"
+msgstr[1] "sorgu 1 yerine %d satır döndürdü: %s\n"
 
 #: pg_dump.c:6665
 #, c-format
@@ -686,11 +684,11 @@ msgid "found more than one entry for pg_indexes in pg_class\n"
 msgstr "pg_class içinde pg_indexes için birden çok kayıt bulundu\n"
 
 #: pg_dump.c:10539
-#, fuzzy, c-format
+#, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)\n"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)\n"
-msgstr[0] "\"%s\" sequence verisini getirecek sorgu %d satır getirdi tanımı getirdi (bir satır bekleniyordu)\n"
-msgstr[1] "\"%s\" sequence verisini getirecek sorgu %d satır getirdi tanımı getirdi (bir satır bekleniyordu)\n"
+msgstr[0] "\"%s\" sequence verisini getirecek sorgu %d satır döndürdü (bir satır bekleniyordu)\n"
+msgstr[1] "\"%s\" sequence verisini getirecek sorgu %d satır döndürdü (bir satır bekleniyordu)\n"
 
 #: pg_dump.c:10550
 #, c-format
@@ -760,14 +758,12 @@ msgid "reading user-defined text search configurations\n"
 msgstr "kullanıcı-tanımlı metin arama yapılandırmaları okunuyor\n"
 
 #: common.c:162
-#, fuzzy
 msgid "reading user-defined foreign-data wrappers\n"
-msgstr "kullanıcı tanımlı operatörler okunuyor\n"
+msgstr "kullanıcı tanımlı foreign-data wrapperlar okunuyor\n"
 
 #: common.c:166
-#, fuzzy
 msgid "reading user-defined foreign servers\n"
-msgstr "kullanıcı tanımlı dönüşümler okunuyor\n"
+msgstr "kullanıcı tanımlı foreign sunucular okunuyor\n"
 
 #: common.c:170
 msgid "reading user-defined operator families\n"
@@ -1019,11 +1015,11 @@ msgid "could not open output file: %s\n"
 msgstr "çıktı dosyası açılamadı: %s\n"
 
 #: pg_backup_archiver.c:1237
-#, fuzzy, c-format
+#, c-format
 msgid "wrote %lu byte of large object data (result = %lu)\n"
 msgid_plural "wrote %lu bytes of large object data (result = %lu)\n"
-msgstr[0] "large object verisinn %lu baytı yazıldı (sonuç = %lu)\n"
-msgstr[1] "large object verisinn %lu baytı yazıldı (sonuç = %lu)\n"
+msgstr[0] "large object verisinin %lu baytı yazıldı (sonuç = %lu)\n"
+msgstr[1] "large object verisinin %lu baytı yazıldı (sonuç = %lu)\n"
 
 #: pg_backup_archiver.c:1243
 #, c-format
@@ -1120,11 +1116,11 @@ msgid "input file does not appear to be a valid archive\n"
 msgstr "girdi geçerli bir arşiv değildir\n"
 
 #: pg_backup_archiver.c:1790
-#, fuzzy, c-format
+#, c-format
 msgid "read %lu byte into lookahead buffer\n"
 msgid_plural "read %lu bytes into lookahead buffer\n"
-msgstr[0] "ileri bakma art alanına %lu bayt okundu\n"
-msgstr[1] "ileri bakma art alanına %lu bayt okundu\n"
+msgstr[0] "lookahead artalanına %lu bayt okundu\n"
+msgstr[1] "lookahead artalanına %lu bayt okundu\n"
 
 #: pg_backup_archiver.c:1799
 #, c-format
@@ -1214,30 +1210,30 @@ msgstr "UTAYI: veri başlığında geçersiz tarih\n"
 
 #: pg_backup_archiver.c:3081
 msgid "entering restore_toc_entries_parallel\n"
-msgstr ""
+msgstr "restore_toc_entries_parallel'e giriliyor\n"
 
 #: pg_backup_archiver.c:3085
 msgid "parallel restore is not supported with this archive file format\n"
 msgstr "paralel geri yükleme bu arşiv biçimini desteklemiyor\n"
 
 #: pg_backup_archiver.c:3105
-#, fuzzy, c-format
+#, c-format
 msgid "processing item %d %s %s\n"
-msgstr "%s %s kaldırılıyor\n"
+msgstr "%d %s %s öğesi işleniyor\n"
 
 #: pg_backup_archiver.c:3142
 msgid "entering main parallel loop\n"
 msgstr "ana paralel döngüye giriyor\n"
 
 #: pg_backup_archiver.c:3156
-#, fuzzy, c-format
+#, c-format
 msgid "skipping item %d %s %s\n"
-msgstr "%s tar öğesi atlandı\n"
+msgstr "%d %s %s öğesi atlanıyor\n"
 
 #: pg_backup_archiver.c:3172
 #, c-format
 msgid "launching item %d %s %s\n"
-msgstr ""
+msgstr "%d %s %s öğesi başlatılıyor\n"
 
 #: pg_backup_archiver.c:3208
 #, c-format
@@ -1246,40 +1242,39 @@ msgstr "worker sürecii çöktü: Durum %d\n"
 
 #: pg_backup_archiver.c:3213
 msgid "finished main parallel loop\n"
-msgstr ""
+msgstr "ana paralel döngü bitti\n"
 
 #: pg_backup_archiver.c:3233
 #, c-format
 msgid "processing missed item %d %s %s\n"
-msgstr ""
+msgstr "atlanan %d %s %s öğesi işleniyor\n"
 
 #: pg_backup_archiver.c:3260
 msgid "parallel_restore should not return\n"
-msgstr ""
+msgstr "parallel_restore dönmemeli\n"
 
 #: pg_backup_archiver.c:3266
-#, fuzzy, c-format
+#, c-format
 msgid "could not create worker process: %s\n"
-msgstr "soket yaratılamadı: %s\n"
+msgstr "işçi süreci yaratılamadı: %s\n"
 
 #: pg_backup_archiver.c:3274
-#, fuzzy, c-format
+#, c-format
 msgid "could not create worker thread: %s\n"
-msgstr "soket yaratılamadı: %s\n"
+msgstr "işçi threadi yaratılamadı: %s\n"
 
 #: pg_backup_archiver.c:3476
 msgid "no item ready\n"
-msgstr ""
+msgstr "hiç bir öğe hazır değil\n"
 
 #: pg_backup_archiver.c:3571
-#, fuzzy
 msgid "could not find slot of finished worker\n"
-msgstr "%s dosyası arşivde bulunamadı\n"
+msgstr "bitmiş sürecin yuvasu bulunamadı\n"
 
 #: pg_backup_archiver.c:3573
 #, c-format
 msgid "finished item %d %s %s\n"
-msgstr ""
+msgstr "%d %s %s öğesi bitirildi\n"
 
 #: pg_backup_archiver.c:3586
 #, c-format
@@ -1287,9 +1282,9 @@ msgid "worker process failed: exit code %d\n"
 msgstr "alt süreç başarısız oldu: çıkış kodu %d\n"
 
 #: pg_backup_archiver.c:3728
-#, fuzzy, c-format
+#, c-format
 msgid "transferring dependency %d -> %d to %d\n"
-msgstr "bağımlılık verileri okunuyor\n"
+msgstr "%d -> %d bağımlılığı %d olarak aktarılıyor\n"
 
 #: pg_backup_archiver.c:3799
 #, c-format
@@ -1383,17 +1378,17 @@ msgstr "stdin açılamıyor\n"
 
 #: pg_backup_custom.c:856
 msgid "cannot reopen non-seekable file\n"
-msgstr ""
+msgstr "aranamayan dosya yeniden açılamadı\n"
 
 #: pg_backup_custom.c:861
-#, fuzzy, c-format
+#, c-format
 msgid "could not determine seek position in archive file: %s\n"
-msgstr "arşiv dosyası kapatma hatası: %s\n"
+msgstr "arşiv dosyasınde arama pozisyonu belirlenemedi: %s\n"
 
 #: pg_backup_custom.c:876
-#, fuzzy, c-format
+#, c-format
 msgid "could not set seek position in archive file: %s\n"
-msgstr "arşiv dosyası kapatma hatası: %s\n"
+msgstr "arşiv dosyasında arama pozisyonu ayarlanamadı: %s\n"
 
 #: pg_backup_custom.c:898
 msgid "WARNING: ftell mismatch with expected position -- ftell used\n"
@@ -1612,11 +1607,11 @@ msgid "internal error -- neither th nor fh specified in tarReadRaw()\n"
 msgstr "iç hata - th ya da fh, tarReadRaw() içinde belirtilmedi\n"
 
 #: pg_backup_tar.c:553
-#, fuzzy, c-format
+#, c-format
 msgid "requested %d byte, got %d from lookahead and %d from file\n"
 msgid_plural "requested %d bytes, got %d from lookahead and %d from file\n"
-msgstr[0] "%d bayt istenildi, ileri bakıştan %d, dosyadan ise %d alındı\n"
-msgstr[1] "%d bayt istenildi, ileri bakıştan %d, dosyadan ise %d alındı\n"
+msgstr[0] "%d bayt istenildi, lookahead'denn %d, dosyadan ise %d alındı\n"
+msgstr[1] "%d bayt istenildi, lookahead'denn %d, dosyadan ise %d alındı\n"
 
 #: pg_backup_tar.c:682
 #, c-format
@@ -1689,7 +1684,9 @@ msgstr "gerçek ile beklenilen dosya pozisyonunda uyumsuzluk (%s ile %s)\n"
 #: pg_backup_tar.c:1251
 #, c-format
 msgid "incomplete tar header found (%lu byte)\n"
-msgstr "Eksik tar başlığı bulundu (%lu byte)\n"
+msgid_plural "incomplete tar header found (%lu bytes)\n"
+msgstr[0] "Eksik tar başlığı bulundu (%lu byte)\n"
+msgstr[1] "Eksik tar başlığı bulundu (%lu byte)\n"
 
 #: pg_backup_tar.c:1289
 #, c-format
@@ -1702,9 +1699,9 @@ msgid "corrupt tar header found in %s (expected %d, computed %d) file position %
 msgstr "%s dosyasında bozuk tar başlığı (beklenen: %d, hesaplanan: %d) dosya pozisyonu %s\n"
 
 #: pg_restore.c:307
-#, fuzzy, c-format
+#, c-format
 msgid "%s: options -d/--dbname and -f/--file cannot be used together\n"
-msgstr "%s: -g/--globals-only ve -r/--roles-only seçenekleri beraber kullanılamaz\n"
+msgstr "%s: -d/--dbname ve -f/--file seçenekleri birarada kullanılamazlar\n"
 
 #: pg_restore.c:319
 #, c-format
@@ -1785,9 +1782,9 @@ msgid "  -a, --data-only          restore only the data, no schema\n"
 msgstr "  -s, --schema-only        sadece şemayı aktar, veriyi aktarma\n"
 
 #: pg_restore.c:412
-#, fuzzy, c-format
+#, c-format
 msgid "  -c, --clean              clean (drop) database objects before recreating\n"
-msgstr "  -c, --clean              şemayı yaratmadan önce onu temizle (kaldır)\n"
+msgstr "  -c, --clean              veritabanı nesnelerini yeniden yaratmadan önce onları kaldır (sil)\n"
 
 #: pg_restore.c:413
 #, c-format
@@ -1810,13 +1807,13 @@ msgid "  -j, --jobs=NUM           use this many parallel jobs to restore\n"
 msgstr "  -j, --jobs=SAYI           gerü yükleme için belirtilen sayı kadar paralel süreç kullan\n"
 
 #: pg_restore.c:417
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -L, --use-list=FILENAME  use table of contents from this file for\n"
 "                           selecting/ordering output\n"
 msgstr ""
-"  -L, --use-list=FILENAME  bu dosyadan çıkışını sıralamak için belirli bir\n"
-"                           içerik tablosuınu kullan\n"
+"  -L, --use-list=DOSYA ADI  çıktıyı seçmek/sıralamak için\n"
+"                           bu dosyadaki içindekiler tablosunu kullan\n"
 
 #: pg_restore.c:419
 #, c-format
@@ -1889,15 +1886,15 @@ msgid "  --role=ROLENAME          do SET ROLE before restore\n"
 msgstr "  --role=ROL ADI          geri yüklemeden önce SET ROLE işlemini gerçekleştir\n"
 
 #: pg_restore.c:434
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  --use-set-session-authorization\n"
 "                           use SET SESSION AUTHORIZATION commands instead of\n"
 "                           ALTER OWNER commands to set ownership\n"
 msgstr ""
 "  --use-set-session-authorization\n"
-"                              ALTER OWNER komutun yerine\n"
-"                              SESSION AUTHORIZATION komutunu kullanın\n"
+"                           Sahipliği ayarlamak için ALTER OWNER komutunun yerine\n"
+"                              SET SESSION AUTHORIZATION komutunu kullan\n"
 
 #: pg_restore.c:437
 #, c-format
