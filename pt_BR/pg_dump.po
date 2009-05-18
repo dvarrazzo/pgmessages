@@ -128,9 +128,9 @@ msgstr ""
 "texto)\n"
 
 #: pg_dump.c:796
-#, fuzzy, c-format
+#, c-format
 msgid "  -v, --verbose               verbose mode\n"
-msgstr "  -v, --verbose            modo de detalhe\n"
+msgstr "  -v, --verbose            modo informações detalhadas\n"
 
 #: pg_dump.c:797
 #, c-format
@@ -144,6 +144,7 @@ msgstr ""
 msgid ""
 "  --lock-wait-timeout=TIMEOUT fail after waiting TIMEOUT for a table lock\n"
 msgstr ""
+"  --lock-wait-timeout=TEMPO   falha após esperar TEMPO por um travamento da tabela\n"
 
 #: pg_dump.c:799 pg_dumpall.c:532
 #, c-format
@@ -177,13 +178,12 @@ msgstr ""
 "  -b, --blobs                  inclui objetos grandes na cópia de segurança\n"
 
 #: pg_dump.c:805
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -c, --clean                 clean (drop) database objects before "
 "recreating\n"
 msgstr ""
-"  -c, --clean              exclui (remove) bancos de dados anteriormente "
-"criados\n"
+"  -c, --clean              exclui (remove) bancos de dados antes de criá-lo novamente\n"
 
 #: pg_dump.c:806
 #, c-format
@@ -233,13 +233,12 @@ msgstr ""
 "  -s, --schema-only            copia somente o esquema, e não os dados\n"
 
 #: pg_dump.c:814
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -S, --superuser=NAME        superuser user name to use in plain-text "
 "format\n"
 msgstr ""
-"  -S, --superuser=NOME     especifica o super-usuário a ser usado na cópia "
-"de segurança\n"
+"  -S, --superuser=NOME     nome de super-usuário a ser usado no formato texto\n"
 
 #: pg_dump.c:815
 #, c-format
@@ -262,7 +261,7 @@ msgstr ""
 #: pg_dump.c:818 pg_dumpall.c:545
 #, c-format
 msgid "  --binary-upgrade            for use by upgrade utilities only\n"
-msgstr ""
+msgstr "  --binary-upgrade            usado somente por utilitários de atualização\n"
 
 #: pg_dump.c:819 pg_dumpall.c:546
 #, c-format
@@ -300,17 +299,17 @@ msgstr ""
 "tipo somente dados\n"
 
 #: pg_dump.c:823 pg_dumpall.c:550
-#, fuzzy, c-format
+#, c-format
 msgid "  --no-tablespaces            do not dump tablespace assignments\n"
-msgstr "  -n, --noclean                não remove após erros\n"
+msgstr "  --no-tablespaces       não copia atribuições a tablespaces\n"
 
 #: pg_dump.c:824 pg_dumpall.c:551
 #, c-format
 msgid "  --role=ROLENAME             do SET ROLE before dump\n"
-msgstr ""
+msgstr "  --role=NOMEROLE             executa SET ROLE antes da cópia de segurança\n"
 
 #: pg_dump.c:825 pg_dumpall.c:552
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  --use-set-session-authorization\n"
 "                              use SET SESSION AUTHORIZATION commands instead "
@@ -318,8 +317,7 @@ msgid ""
 "                              ALTER OWNER commands to set ownership\n"
 msgstr ""
 "  --use-set-session-authorization\n"
-"                               usa comandos SESSION AUTHORIZATION ao invés "
-"de\n"
+"                               usa comandos SET SESSION AUTHORIZATION ao invés de\n"
 "                               comandos ALTER OWNER para definir o dono\n"
 
 #: pg_dump.c:829 pg_restore.c:440 pg_dumpall.c:556
@@ -1217,10 +1215,9 @@ msgstr "AVISO: data de criação inválida no cabeçalho\n"
 
 #: pg_backup_archiver.c:3081
 msgid "entering restore_toc_entries_parallel\n"
-msgstr ""
+msgstr "executando restore_toc_entries_parallel\n"
 
 #: pg_backup_archiver.c:3085
-#, fuzzy
 msgid "parallel restore is not supported with this archive file format\n"
 msgstr "restauração paralela não é suportada por este formato de arquivo\n"
 
@@ -1231,7 +1228,7 @@ msgstr "processando item %d %s %s\n"
 
 #: pg_backup_archiver.c:3142
 msgid "entering main parallel loop\n"
-msgstr ""
+msgstr "executando laço paralelo principal\n"
 
 #: pg_backup_archiver.c:3156
 #, c-format
@@ -1241,21 +1238,21 @@ msgstr "ignorando item %d %s %s\n"
 #: pg_backup_archiver.c:3172
 #, c-format
 msgid "launching item %d %s %s\n"
-msgstr ""
+msgstr "iniciando item %d %s %s\n"
 
 #: pg_backup_archiver.c:3208
 #, c-format
 msgid "worker process crashed: status %d\n"
-msgstr ""
+msgstr "processo worker falhou: status %d\n"
 
 #: pg_backup_archiver.c:3213
 msgid "finished main parallel loop\n"
-msgstr ""
+msgstr "laço paralelo principal terminado\n"
 
 #: pg_backup_archiver.c:3233
 #, c-format
 msgid "processing missed item %d %s %s\n"
-msgstr ""
+msgstr "iniciando item adiado %d %s %s\n"
 
 #: pg_backup_archiver.c:3260
 msgid "parallel_restore should not return\n"
@@ -1273,17 +1270,17 @@ msgstr "não pôde criar thread worker: %s\n"
 
 #: pg_backup_archiver.c:3476
 msgid "no item ready\n"
-msgstr ""
+msgstr "nenhum item está pronto\n"
 
 #: pg_backup_archiver.c:3571
 #, fuzzy
 msgid "could not find slot of finished worker\n"
-msgstr "não pôde encontrar arquivo %s no arquivo de dados\n"
+msgstr "não pôde encontrar lacuna do processo worker terminado\n"
 
 #: pg_backup_archiver.c:3573
 #, c-format
 msgid "finished item %d %s %s\n"
-msgstr ""
+msgstr "item terminado %d %s %s\n"
 
 #: pg_backup_archiver.c:3586
 #, fuzzy, c-format
@@ -1379,13 +1376,12 @@ msgid "could not close archive file: %s\n"
 msgstr "não pôde fechar arquivo: %s\n"
 
 #: pg_backup_custom.c:852
-#, fuzzy
 msgid "can only reopen input archives\n"
-msgstr "não pôde abrir arquivo de entrada: %s\n"
+msgstr "não pôde abrir arquivos de entrada novamente\n"
 
 #: pg_backup_custom.c:854
 msgid "cannot reopen stdin\n"
-msgstr ""
+msgstr "não pôde abrir entrada padrão novamente\n"
 
 #: pg_backup_custom.c:856
 msgid "cannot reopen non-seekable file\n"
@@ -1394,12 +1390,12 @@ msgstr ""
 #: pg_backup_custom.c:861
 #, fuzzy, c-format
 msgid "could not determine seek position in archive file: %s\n"
-msgstr "não pôde fechar arquivo: %s\n"
+msgstr "não pôde determinar posição de busca no arquivo: %s\n"
 
 #: pg_backup_custom.c:876
 #, fuzzy, c-format
 msgid "could not set seek position in archive file: %s\n"
-msgstr "não pôde fechar arquivo: %s\n"
+msgstr "não pôde definir posição de busca no arquivo: %s\n"
 
 #: pg_backup_custom.c:898
 msgid "WARNING: ftell mismatch with expected position -- ftell used\n"
@@ -1429,7 +1425,7 @@ msgid "server version: %s; %s version: %s\n"
 msgstr "versão do servidor: %s; versão do %s: %s\n"
 
 #: pg_backup_db.c:74 pg_dumpall.c:1566
-#, fuzzy, c-format
+#, c-format
 msgid "aborting because of server version mismatch\n"
 msgstr "interrompendo porque a versão do servidor não corresponde\n"
 
@@ -1717,9 +1713,9 @@ msgid "%s: options -d/--dbname and -f/--file cannot be used together\n"
 msgstr "%s: opções -d/--dbname e -f/--file não podem ser utilizadas juntas\n"
 
 #: pg_restore.c:319
-#, fuzzy, c-format
+#, c-format
 msgid "%s: cannot specify both --single-transaction and multiple jobs\n"
-msgstr "%s: não pode especificar ambas opções --single-transaction e múltiplos jobs\n"
+msgstr "%s: não pode especificar ambas opções --single-transaction e múltiplas tarefas\n"
 
 #: pg_restore.c:349
 #, c-format
@@ -1759,9 +1755,9 @@ msgid "  -f, --file=FILENAME      output file name\n"
 msgstr "  -f, --file=ARQUIVO       nome do arquivo de saída\n"
 
 #: pg_restore.c:404
-#, fuzzy, c-format
+#, c-format
 msgid "  -F, --format=c|t         backup file format (should be automatic)\n"
-msgstr "  -F, --format=c|t         formato de arquivo de cópia de segurança (pode ser automático)\n"
+msgstr "  -F, --format=c|t         formato de arquivo de cópia de segurança (deve ser automático)\n"
 
 #: pg_restore.c:405
 #, c-format
@@ -1799,12 +1795,11 @@ msgid "  -a, --data-only          restore only the data, no schema\n"
 msgstr "  -a, --data-only          restaura somente os dados, não o esquema\n"
 
 #: pg_restore.c:412
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -c, --clean              clean (drop) database objects before recreating\n"
 msgstr ""
-"  -c, --clean              exclui (remove) bancos de dados anteriormente "
-"criados\n"
+"  -c, --clean              exclui (remove) bancos de dados antes de criá-los novamente\n"
 
 #: pg_restore.c:413
 #, c-format
@@ -1825,7 +1820,7 @@ msgstr "  -I, --index=NOME         restaura o índice especificado\n"
 #: pg_restore.c:416
 #, c-format
 msgid "  -j, --jobs=NUM           use this many parallel jobs to restore\n"
-msgstr ""
+msgstr "  -j, --jobs=NUM           use esse número de tarefas paralelas para restaurar\n"
 
 #: pg_restore.c:417
 #, c-format
@@ -1909,14 +1904,14 @@ msgstr ""
 "                           criadas\n"
 
 #: pg_restore.c:432
-#, fuzzy, c-format
+#, c-format
 msgid "  --no-tablespaces         do not dump tablespace assignments\n"
 msgstr "  --no-tablespaces         não copia as atribuições de tablespaces\n"
 
 #: pg_restore.c:433
 #, c-format
 msgid "  --role=ROLENAME          do SET ROLE before restore\n"
-msgstr ""
+msgstr "  --role=NOMEROLE          executa SET ROLE antes da restauração\n"
 
 #: pg_restore.c:434
 #, c-format
@@ -2033,12 +2028,11 @@ msgid "  %s [OPTION]...\n"
 msgstr "  %s [OPÇÃO]...\n"
 
 #: pg_dumpall.c:536
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -c, --clean                 clean (drop) databases before recreating\n"
 msgstr ""
-"  -c, --clean              exclui (remove) bancos de dados anteriormente "
-"criados\n"
+"  -c, --clean              exclui (remove) bancos de dados antes de criá-los novamente\n"
 
 #: pg_dumpall.c:537
 #, c-format
