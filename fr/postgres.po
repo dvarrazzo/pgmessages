@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-83-fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-09 17:18+0000\n"
-"PO-Revision-Date: 2009-06-09 19:51+0100\n"
+"POT-Creation-Date: 2009-06-23 22:38+0000\n"
+"PO-Revision-Date: 2009-06-24 07:59+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team:  <pgsql-fr-generale@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -1509,15 +1509,15 @@ msgstr "l'index « %s » contient une page corrompue au bloc %u"
 
 #: access/gist/gistsplit.c:371
 #, c-format
-msgid "Picksplit method for %d column of index \"%s\" failed"
-msgstr "Échec de la méthode Picksplit pour la colonne %d de l'index « %s »"
+msgid "picksplit method for %d column of index \"%s\" failed"
+msgstr "échec de la méthode picksplit pour la colonne %d de l'index « %s »"
 
 #: access/gist/gistsplit.c:373
-msgid "Index is not optimal, to optimize it contact developer or try to use the column as a second one in create index command"
+msgid "The index is not optimal. To optimize it, contact a developer, or try to use the column as the second one in the CREATE INDEX command."
 msgstr ""
 "L'index n'est pas optimal. Pour l'optimiser, contactez un développeur ou\n"
-"essayez d'utiliser la colonne comme deuxième colonne dans la commande de\n"
-"création d'index."
+"essayez d'utiliser la colonne comme deuxième colonne dans la commande\n"
+"CREATE INDEX."
 
 #: access/gist/gistutil.c:405
 #, c-format
@@ -1546,25 +1546,25 @@ msgstr ""
 "Insertion incomplète détectée lors de la ré-exécution des requêtes suite à\n"
 "l'arrêt brutal."
 
-#: access/heap/heapam.c:954
+#: access/heap/heapam.c:963
 #, c-format
 msgid "could not obtain lock on relation \"%s\""
 msgstr "n'a pas pu obtenir un verrou sur la relation « %s »"
 
-#: access/heap/heapam.c:959
+#: access/heap/heapam.c:968
 #, c-format
 msgid "could not obtain lock on relation with OID %u"
 msgstr "n'a pas pu obtenir un verrou sur la relation d'OID « %u »"
 
-#: access/heap/heapam.c:1054
-#: access/heap/heapam.c:1082
+#: access/heap/heapam.c:1063
+#: access/heap/heapam.c:1091
 #: catalog/aclchk.c:572
 #, c-format
 msgid "\"%s\" is an index"
 msgstr "« %s » est un index"
 
-#: access/heap/heapam.c:1059
-#: access/heap/heapam.c:1087
+#: access/heap/heapam.c:1068
+#: access/heap/heapam.c:1096
 #: catalog/aclchk.c:579
 #: commands/tablecmds.c:5465
 #: commands/tablecmds.c:6563
@@ -1572,9 +1572,9 @@ msgstr "« %s » est un index"
 msgid "\"%s\" is a composite type"
 msgstr "« %s » est un type composite"
 
-#: access/heap/heapam.c:3047
-#: access/heap/heapam.c:3078
-#: access/heap/heapam.c:3113
+#: access/heap/heapam.c:3056
+#: access/heap/heapam.c:3087
+#: access/heap/heapam.c:3122
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "n'a pas pu obtenir un verrou sur la relation « %s »"
@@ -2361,21 +2361,21 @@ msgstr "%d n'est pas un code d'encodage valide"
 msgid "invalid input syntax for type boolean: \"%s\""
 msgstr "syntaxe en entrée invalide pour le type booléen : « %s »"
 
-#: utils/adt/cash.c:250
+#: utils/adt/cash.c:248
 #, c-format
 msgid "invalid input syntax for type money: \"%s\""
 msgstr "syntaxe en entrée invalide pour le type money : « %s »"
 
-#: utils/adt/cash.c:543
-#: utils/adt/cash.c:594
-#: utils/adt/cash.c:643
-#: utils/adt/cash.c:695
-#: utils/adt/cash.c:745
+#: utils/adt/cash.c:541
+#: utils/adt/cash.c:592
+#: utils/adt/cash.c:641
+#: utils/adt/cash.c:693
+#: utils/adt/cash.c:743
 #: utils/adt/float.c:767
 #: utils/adt/float.c:832
 #: utils/adt/float.c:2467
 #: utils/adt/float.c:2530
-#: utils/adt/geo_ops.c:3959
+#: utils/adt/geo_ops.c:3958
 #: utils/adt/int.c:719
 #: utils/adt/int.c:859
 #: utils/adt/int.c:953
@@ -2474,10 +2474,10 @@ msgstr "date en dehors des limites pour un timestamp"
 #: utils/adt/timestamp.c:4588
 #: utils/adt/timestamp.c:4592
 #: utils/adt/timestamp.c:4651
-#: utils/adt/xml.c:1726
-#: utils/adt/xml.c:1732
-#: utils/adt/xml.c:1752
-#: utils/adt/xml.c:1758
+#: utils/adt/xml.c:1728
+#: utils/adt/xml.c:1734
+#: utils/adt/xml.c:1754
+#: utils/adt/xml.c:1760
 msgid "timestamp out of range"
 msgstr "timestamp en dehors des limites"
 
@@ -3028,8 +3028,8 @@ msgid "could not open directory \"%s\": %m"
 msgstr "n'a pas pu ouvrir le répertoire « %s » : %m"
 
 #: utils/adt/geo_ops.c:292
-#: utils/adt/geo_ops.c:4080
-#: utils/adt/geo_ops.c:4997
+#: utils/adt/geo_ops.c:4079
+#: utils/adt/geo_ops.c:4996
 msgid "too many points requested"
 msgstr "trop de points demandé"
 
@@ -3074,67 +3074,67 @@ msgstr "syntaxe en entrée invalide pour le type point : « %s »"
 msgid "invalid input syntax for type lseg: \"%s\""
 msgstr "syntaxe en entrée invalide pour le type lseg : « %s »"
 
-#: utils/adt/geo_ops.c:2624
+#: utils/adt/geo_ops.c:2623
 msgid "function \"dist_lb\" not implemented"
 msgstr "la fonction « dist_lb » n'est pas implémentée"
 
-#: utils/adt/geo_ops.c:3137
+#: utils/adt/geo_ops.c:3136
 msgid "function \"close_lb\" not implemented"
 msgstr "la fonction « close_lb » n'est pas implémentée"
 
-#: utils/adt/geo_ops.c:3416
+#: utils/adt/geo_ops.c:3415
 msgid "cannot create bounding box for empty polygon"
 msgstr "ne peut pas créer une boîte entourée pour un polygône vide"
 
-#: utils/adt/geo_ops.c:3440
-#: utils/adt/geo_ops.c:3452
+#: utils/adt/geo_ops.c:3439
+#: utils/adt/geo_ops.c:3451
 #, c-format
 msgid "invalid input syntax for type polygon: \"%s\""
 msgstr "syntaxe en entrée invalide pour le type polygon : « %s »"
 
-#: utils/adt/geo_ops.c:3492
+#: utils/adt/geo_ops.c:3491
 msgid "invalid number of points in external \"polygon\" value"
 msgstr "nombre de points invalide dans la valeur externe de « polygon »"
 
-#: utils/adt/geo_ops.c:3878
+#: utils/adt/geo_ops.c:3877
 msgid "function \"poly_distance\" not implemented"
 msgstr "la fonction « poly_distance » n'est pas implémentée"
 
-#: utils/adt/geo_ops.c:4190
+#: utils/adt/geo_ops.c:4189
 msgid "function \"path_center\" not implemented"
 msgstr "la fonction « path_center » n'est pas implémentée"
 
-#: utils/adt/geo_ops.c:4207
+#: utils/adt/geo_ops.c:4206
 msgid "open path cannot be converted to polygon"
 msgstr "le chemin ouvert ne peut être converti en polygône"
 
-#: utils/adt/geo_ops.c:4374
-#: utils/adt/geo_ops.c:4384
-#: utils/adt/geo_ops.c:4399
-#: utils/adt/geo_ops.c:4405
+#: utils/adt/geo_ops.c:4373
+#: utils/adt/geo_ops.c:4383
+#: utils/adt/geo_ops.c:4398
+#: utils/adt/geo_ops.c:4404
 #, c-format
 msgid "invalid input syntax for type circle: \"%s\""
 msgstr "syntaxe en entrée invalide pour le type circle : « %s »"
 
-#: utils/adt/geo_ops.c:4427
-#: utils/adt/geo_ops.c:4435
+#: utils/adt/geo_ops.c:4426
+#: utils/adt/geo_ops.c:4434
 msgid "could not format \"circle\" value"
 msgstr "n'a pas pu formater la valeur « circle »"
 
-#: utils/adt/geo_ops.c:4462
+#: utils/adt/geo_ops.c:4461
 msgid "invalid radius in external \"circle\" value"
 msgstr "diamètre invalide pour la valeur externe de « circle »"
 
-#: utils/adt/geo_ops.c:4983
+#: utils/adt/geo_ops.c:4982
 msgid "cannot convert circle with radius zero to polygon"
 msgstr "ne peut pas convertir le cercle avec un diamètre zéro en un polygône"
 
-#: utils/adt/geo_ops.c:4988
+#: utils/adt/geo_ops.c:4987
 msgid "must request at least 2 points"
 msgstr "doit demander au moins deux points"
 
-#: utils/adt/geo_ops.c:5032
-#: utils/adt/geo_ops.c:5055
+#: utils/adt/geo_ops.c:5031
+#: utils/adt/geo_ops.c:5054
 msgid "cannot convert empty polygon to circle"
 msgstr "ne peut pas convertir un polygône vide en cercle"
 
@@ -4308,10 +4308,10 @@ msgstr ""
 "libxml2 a un type de caractère incompatible : sizeof(char)=%u,\n"
 "sizeof(xmlChar)=%u."
 
-#: utils/adt/xml.c:1369
-#: utils/adt/xml.c:1370
-#: utils/adt/xml.c:1376
-#: utils/adt/xml.c:1447
+#: utils/adt/xml.c:1371
+#: utils/adt/xml.c:1372
+#: utils/adt/xml.c:1378
+#: utils/adt/xml.c:1449
 #: tcop/postgres.c:4007
 #: catalog/pg_shdepend.c:674
 #: commands/user.c:893
@@ -4321,37 +4321,37 @@ msgstr ""
 msgid "%s"
 msgstr "%s"
 
-#: utils/adt/xml.c:1423
+#: utils/adt/xml.c:1425
 msgid "Invalid character value."
 msgstr "Valeur invalide pour le caractère."
 
-#: utils/adt/xml.c:1426
+#: utils/adt/xml.c:1428
 msgid "Space required."
 msgstr "Espace requis."
 
-#: utils/adt/xml.c:1429
+#: utils/adt/xml.c:1431
 msgid "standalone accepts only 'yes' or 'no'."
 msgstr "la version autonome accepte seulement 'yes' et 'no'."
 
-#: utils/adt/xml.c:1432
+#: utils/adt/xml.c:1434
 msgid "Malformed declaration: missing version."
 msgstr "Déclaration mal formée : version manquante."
 
-#: utils/adt/xml.c:1435
+#: utils/adt/xml.c:1437
 msgid "Missing encoding in text declaration."
 msgstr "Encodage manquant dans la déclaration du texte."
 
-#: utils/adt/xml.c:1438
+#: utils/adt/xml.c:1440
 msgid "Parsing XML declaration: '?>' expected."
 msgstr "Analyse de la déclaration XML : « ?> » attendu."
 
-#: utils/adt/xml.c:1441
+#: utils/adt/xml.c:1443
 #, c-format
 msgid "Unrecognized libxml error code: %d."
 msgstr "code d'erreur libxml inconnu : %d"
 
-#: utils/adt/xml.c:2019
-#: utils/adt/xml.c:2183
+#: utils/adt/xml.c:2021
+#: utils/adt/xml.c:2185
 #: commands/portalcmds.c:168
 #: commands/portalcmds.c:222
 #: executor/execCurrent.c:69
@@ -4359,34 +4359,34 @@ msgstr "code d'erreur libxml inconnu : %d"
 msgid "cursor \"%s\" does not exist"
 msgstr "le curseur « %s » n'existe pas"
 
-#: utils/adt/xml.c:2098
+#: utils/adt/xml.c:2100
 msgid "invalid query"
 msgstr "requête invalide"
 
-#: utils/adt/xml.c:3314
+#: utils/adt/xml.c:3316
 msgid "invalid array for XML namespace mapping"
 msgstr "tableau invalide pour la correspondance de l'espace de nom XML"
 
-#: utils/adt/xml.c:3315
+#: utils/adt/xml.c:3317
 msgid "The array must be two-dimensional with length of the second axis equal to 2."
 msgstr ""
 "Le tableau doit avoir deux dimensions avec une longueur de 2 pour le\n"
 "deuxième axe."
 
-#: utils/adt/xml.c:3339
+#: utils/adt/xml.c:3341
 msgid "empty XPath expression"
 msgstr "expression XPath vide"
 
-#: utils/adt/xml.c:3453
+#: utils/adt/xml.c:3455
 msgid "neither namespace name nor URI may be null"
 msgstr "ni le nom de l'espace de noms ni l'URI ne peuvent être NULL"
 
-#: utils/adt/xml.c:3460
+#: utils/adt/xml.c:3462
 #, c-format
 msgid "could not register XML namespace with name \"%s\" and URI \"%s\""
 msgstr "n'a pas pu enregistrer l'espace de noms XML de nom « %s » et d'URI « %s »"
 
-#: utils/adt/xml.c:3473
+#: utils/adt/xml.c:3475
 msgid "could not create XPath object"
 msgstr "n'a pas pu créer l'objet XPath"
 
