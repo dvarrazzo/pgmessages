@@ -7,6 +7,9 @@
 #
 # Traduttori:
 #  * Flavio Spada <f.spada@sbv.mi.it>
+# 
+# Revisori:
+#  * Gabriele Bartolini <gabriele.bartolini@2ndQuadrant.it>
 #
 # Copyright (c) 2009, Associazione Culturale ITPUG
 # Distributed under the same license of the PostgreSQL project
@@ -16,7 +19,7 @@ msgstr ""
 "Project-Id-Version: plpython-it\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2009-07-11 05:48+0000\n"
-"PO-Revision-Date: 2009-07-16 00:46:59+0200\n"
+"PO-Revision-Date: 2009-07-17 00:38:50+0200\n"
 "Last-Translator: Gabriele Bartolini <gabriele.bartolini@2ndquadrant.it>\n"
 "Language-Team: Gruppo traduzioni ITPUG <traduzioni@itpug.org>\n"
 "MIME-Version: 1.0\n"
@@ -58,16 +61,16 @@ msgstr "il nome dell'attributo TD[\"new\"] alla posizione %d non è una stringa"
 #: plpython.c:527
 #, c-format
 msgid "key \"%s\" found in TD[\"new\"] does not exist as a column in the triggering row"
-msgstr "la chiave \"%s\" trovata in TD[\"new\"] non esiste come colonna nella riga di triggering"
+msgstr "la chiave \"%s\" trovata in TD[\"new\"] non esiste come colonna nella riga del trigger"
 
 #: plpython.c:548
 #, c-format
 msgid "could not compute string representation of Python object in PL/Python function \"%s\" while modifying trigger row"
-msgstr "impossibile calcolare la rappresentazione di stringa dell'oggetto Python nella funzione PL/Python \"%s\" mentre si sta modificando la riga di trigger"
+msgstr "impossibile calcolare la rappresentazione di tipo stringa dell'oggetto Python nella funzione PL/Python \"%s\" mentre si sta modificando la riga di trigger"
 
 #: plpython.c:630
 msgid "could not create new dictionary while building trigger arguments"
-msgstr "impossibile creare un nuovo dizionario mentre si stanno costruendo gli argomenti di trigger"
+msgstr "impossibile creare un nuovo dizionario mentre si stanno costruendo gli argomenti del trigger"
 
 #: plpython.c:838
 msgid "unsupported set function return mode"
@@ -87,31 +90,31 @@ msgstr "le funzioni set-returning di PL/Python devono tornare un oggetto iterabi
 
 #: plpython.c:880
 msgid "error fetching next item from iterator"
-msgstr "errore nel raggiungere il prossimo elemento dall'iteratore"
+msgstr "errore nell'ottenere l'elemento successivo dall'iteratore"
 
 #: plpython.c:898
 msgid "PL/Python function with return type \"void\" did not return None"
-msgstr "la funzione PL/Python con valore di ritorno \"void\" non è tornata None"
+msgstr "la funzione PL/Python con valore di ritorno \"void\" non ha restituito None"
 
 #: plpython.c:945
 #, c-format
 msgid "could not create string representation of Python object in PL/Python function \"%s\" while creating return value"
-msgstr "impossibile creare una rappresentazione di stringa dell'oggetto Python nella funzione PL/Python \"%s\" mentre si sta creando il valore di ritorno"
+msgstr "impossibile creare una rappresentazione di tipo stringa dell'oggetto Python nella funzione PL/Python \"%s\" durante la creazione del valore di ritorno"
 
 #: plpython.c:994
 #, c-format
 msgid "PL/Python function \"%s\" failed"
-msgstr "la funzione PL/Python \"%s\" ha fallito"
+msgstr "la funzione PL/Python \"%s\" è fallita"
 
 #: plpython.c:1064
 #, c-format
 msgid "PyList_SetItem() failed for PL/Python function \"%s\" while setting up arguments"
-msgstr "PyList_SetItem() ha fallito eseguendo la funzione PL/Python \"%s\" mentre si stavano impostando gli argomenti"
+msgstr "PyList_SetItem() è fallita eseguendo la funzione PL/Python \"%s\" durante l'impostazione degli argomenti"
 
 #: plpython.c:1068
 #, c-format
 msgid "PyDict_SetItemString() failed for PL/Python function \"%s\" while setting up arguments"
-msgstr "PyDict_SetItemString() ha fallito eseguendo la funzione PL/Python \"%s\" mentre si stavano impostando gli argomenti"
+msgstr "PyDict_SetItemString() è fallita eseguendo la funzione PL/Python \"%s\" durante l'impostazione degli argomenti"
 
 #: plpython.c:1246
 msgid "trigger functions can only be called as triggers"
@@ -140,16 +143,16 @@ msgstr "impossibile creare il nuovo dizionario"
 #: plpython.c:1911
 #: plpython.c:1982
 msgid "could not compute string representation of Python object"
-msgstr "impossibile calcolare la rappresentazione di stringa dell'oggetto Python"
+msgstr "impossibile calcolare la rappresentazione di tipo stringa dell'oggetto Python"
 
 #: plpython.c:1836
 #, c-format
 msgid "key \"%s\" not found in mapping"
-msgstr "la chiave \"%s\" non è stata trovata nella mappatura"
+msgstr "la chiave \"%s\" non è stata trovata nel dizionario"
 
 #: plpython.c:1837
 msgid "To return null in a column, add the value None to the mapping with the key named after the column."
-msgstr "Per ritornare null in una colonna, aggiungere il valore None alla mappatura con la chiave nominata dopo la colonna"
+msgstr "Per ritornare null in una colonna, inserire nella mappa il valore None in corrispondenza del nome di colonna come chiave."
 
 #: plpython.c:1881
 msgid "length of returned sequence did not match number of columns in row"
@@ -162,11 +165,11 @@ msgstr "l'attributo \"%s\" non esiste nell'oggetto Python"
 
 #: plpython.c:1996
 msgid "To return null in a column, let the returned object have an attribute named after column with value None."
-msgstr "Per ritornare null in una colonna, attribuire all'oggetto di ritorno un attributo nominato dopo la colonna con valore None"
+msgstr "Per ritornare null in una colonna, assicurarsi che all'oggetto di ritorno corrisponda nel dizionario un attributo con valore None."
 
 #: plpython.c:2218
 msgid "plan.status takes no arguments"
-msgstr "plan.status non vuole argomenti"
+msgstr "plan.status non accetta argomenti"
 
 #: plpython.c:2348
 #: plpython.c:2487
@@ -213,7 +216,7 @@ msgstr "plpy.execute richiede una sequenza come secondo argomento"
 #: plpython.c:2562
 #, c-format
 msgid "PL/Python function \"%s\" could not execute plan"
-msgstr "la funzione PL/Python \"%s\" non può eseguire plan"
+msgstr "la funzione PL/Python \"%s\" non può eseguire il piano"
 
 #: plpython.c:2537
 #, c-format
