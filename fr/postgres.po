@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2009-11-29 20:41+0000\n"
-"PO-Revision-Date: 2009-11-29 23:46+0100\n"
+"POT-Creation-Date: 2009-11-30 18:41+0000\n"
+"PO-Revision-Date: 2009-12-01 00:02+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "MIME-Version: 1.0\n"
@@ -1081,9 +1081,9 @@ msgid "column \"%s\" cannot be declared SETOF"
 msgstr "la colonne « %s » ne peut pas être déclarée SETOF"
 
 #: access/common/tupconvert.c:107
-#, fuzzy, c-format
+#, c-format
 msgid "Returned type %s does not match expected type %s in column %d."
-msgstr "Le type %s renvoyé ne correspond pas au type %s attendu dans la colonne « %s »."
+msgstr "Le type %s renvoyé ne correspond pas au type %s attendu dans la colonne %d."
 
 #: access/common/tupconvert.c:135
 #, c-format
@@ -1095,12 +1095,12 @@ msgstr ""
 #: access/common/tupconvert.c:240
 #, c-format
 msgid "Attribute \"%s\" of type %s does not match corresponding attribute of type %s."
-msgstr ""
+msgstr "L'attribut « %s » du type %s ne correspond pas à l'attribut correspondant de type %s."
 
 #: access/common/tupconvert.c:252
-#, fuzzy, c-format
+#, c-format
 msgid "Attribute \"%s\" of type %s does not exist in type %s."
-msgstr "l'attribut « %s » n'existe pas dans l'objet Python"
+msgstr "L'attribut « %s » du type %s n'existe pas dans le type %s."
 
 #: access/transam/slru.c:614
 #, c-format
@@ -1345,7 +1345,6 @@ msgstr ""
 
 #: access/transam/varsup.c:115
 #: access/transam/varsup.c:122
-#, fuzzy
 msgid ""
 "Stop the postmaster and use a standalone backend to vacuum that database.\n"
 "You might also need to commit or roll back old prepared transactions."
@@ -1355,12 +1354,12 @@ msgstr ""
 "Vous pouvez avoir besoin d'enregistrer ou d'annuler les anciennes transactions préparées."
 
 #: access/transam/varsup.c:120
-#, fuzzy, c-format
+#, c-format
 msgid "database is not accepting commands to avoid wraparound data loss in database with OID %u"
 msgstr ""
 "la base de données n'accepte plus de requêtes pour éviter des pertes de\n"
 "données à cause de la réinitialisation de l'identifiant de transaction dans\n"
-"la base de données « %s »"
+"la base de données %u"
 
 #: access/transam/varsup.c:132
 #: access/transam/varsup.c:358
@@ -1374,29 +1373,28 @@ msgstr ""
 #: access/transam/varsup.c:142
 #: access/transam/varsup.c:361
 #: access/transam/varsup.c:368
-#, fuzzy
 msgid ""
 "To avoid a database shutdown, execute a database-wide VACUUM in that database.\n"
 "You might also need to commit or roll back old prepared transactions."
 msgstr ""
-"Pour éviter un arrêt de la base de données, exécutez un VACUUM complet dans\n"
-"« %s ».\n"
-"Vous pouvez avoir besoin d'enregistrer ou d'annuler les anciennes transactions préparées."
+"Pour éviter un arrêt de la base de données, exécutez un VACUUM sur toute la\n"
+"base « %s ». Vous pouvez avoir besoin d'enregistrer ou d'annuler les anciennes\n"
+"transactions préparées."
 
 #: access/transam/varsup.c:139
 #: access/transam/varsup.c:365
-#, fuzzy, c-format
+#, c-format
 msgid "database with OID %u must be vacuumed within %u transactions"
 msgstr ""
-"Un VACUUM doit être exécuté sur la base de données « %s » dans un maximum de\n"
+"un VACUUM doit être exécuté sur la base de données d'OID %u dans un maximum de\n"
 "%u transactions"
 
 #: access/transam/varsup.c:332
-#, fuzzy, c-format
+#, c-format
 msgid "transaction ID wrap limit is %u, limited by database with OID %u"
 msgstr ""
-"La limite de réinitialisation de l'identifiant de transaction est %u,\n"
-"limité par la base de données « %s »"
+"la limite de réinitialisation de l'identifiant de transaction est %u,\n"
+"limité par la base de données d'OID %u"
 
 #: access/transam/xact.c:620
 msgid "cannot have more than 2^32-1 commands in a transaction"
@@ -1659,14 +1657,14 @@ msgid "removing transaction log file \"%s\""
 msgstr "suppression du journal de transactions « %s »"
 
 #: access/transam/xlog.c:3132
-#, fuzzy, c-format
+#, c-format
 msgid "could not rename old transaction log file \"%s\": %m"
-msgstr "n'a pas pu ouvrir le répertoire des journaux de transactions « %s » : %m"
+msgstr "n'a pas pu renommer l'ancien journal de transactions « %s » : %m"
 
 #: access/transam/xlog.c:3144
-#, fuzzy, c-format
+#, c-format
 msgid "could not remove old transaction log file \"%s\": %m"
-msgstr "n'a pas pu supprimer le vieux fichier verrou « %s » : %m"
+msgstr "n'a pas pu supprimer l'ancien journal de transaction « %s » : %m"
 
 #: access/transam/xlog.c:3182
 #: access/transam/xlog.c:3192
@@ -2288,9 +2286,11 @@ msgid "next MultiXactId: %u; next MultiXactOffset: %u"
 msgstr "prochain MultiXactId : %u ; prochain MultiXactOffset : %u"
 
 #: access/transam/xlog.c:5401
-#, fuzzy, c-format
+#, c-format
 msgid "oldest unfrozen transaction ID: %u, in database %u"
-msgstr "extension de la relation %u de la base de données %u"
+msgstr ""
+"identifiant de transaction non gelé le plus ancien : %u, dans la base de\n"
+"données %u"
 
 #: access/transam/xlog.c:5405
 msgid "invalid next transaction ID"
@@ -2587,9 +2587,9 @@ msgstr "le tableau ne doit pas contenir de valeurs NULL"
 #: access/gin/ginentrypage.c:118
 #: access/nbtree/nbtinsert.c:521
 #: access/nbtree/nbtsort.c:483
-#, fuzzy, c-format
+#, c-format
 msgid "index row size %lu exceeds maximum %lu for index \"%s\""
-msgstr "la taille de la ligne index, %lu, dépasse le hachage maximum, %lu"
+msgstr "la taille de la ligne index, %lu, dépasse le maximum, %lu, pour l'index « %s »"
 
 #: access/gin/ginscan.c:164
 #: access/gin/ginscan.c:227
@@ -2602,18 +2602,18 @@ msgid "duplicate key value violates unique constraint \"%s\""
 msgstr "la valeur d'une clé dupliquée rompt la contrainte unique « %s »"
 
 #: access/nbtree/nbtinsert.c:386
-#, fuzzy, c-format
+#, c-format
 msgid "Key %s already exists."
-msgstr "le type « %s » existe déjà"
+msgstr "La clé « %s » existe déjà."
 
 #: access/nbtree/nbtinsert.c:448
 #, c-format
 msgid "failed to re-find tuple within index \"%s\""
-msgstr ""
+msgstr "échec pour retrouver la ligne dans l'index « %s »"
 
 #: access/nbtree/nbtinsert.c:450
 msgid "This may be because of a non-immutable index expression."
-msgstr ""
+msgstr "Ceci peut être dû à une expression d'index immutable."
 
 #: access/nbtree/nbtinsert.c:525
 #: access/nbtree/nbtsort.c:487
@@ -3687,7 +3687,7 @@ msgstr "Les intervalles ne sont pas liés aux dates de calendriers spécifiques."
 
 #: utils/adt/formatting.c:1058
 msgid "\"EEEE\" must be the last pattern used"
-msgstr ""
+msgstr "« EEEE » doit être le dernier motif utilisé"
 
 #: utils/adt/formatting.c:1066
 msgid "\"9\" must be ahead of \"PR\""
@@ -3731,17 +3731,16 @@ msgid "cannot use \"PR\" and \"S\"/\"PL\"/\"MI\"/\"SG\" together"
 msgstr "ne peut pas utiliser « PR » et « S »/« PL »/« MI »/« SG » ensemble"
 
 #: utils/adt/formatting.c:1203
-#, fuzzy
 msgid "cannot use \"EEEE\" twice"
-msgstr "ne peut pas utiliser « S » deux fois"
+msgstr "ne peut pas utiliser « EEEE » deux fois"
 
 #: utils/adt/formatting.c:1209
 msgid "\"EEEE\" is incompatible with other formats"
-msgstr ""
+msgstr "« EEEE » est incompatible avec les autres formats"
 
 #: utils/adt/formatting.c:1210
 msgid "\"EEEE\" may only be used together with digit and decimal point patterns."
-msgstr ""
+msgstr "« EEEE » peut seulement être utilisé avec les motifs de chiffres et de points décimaux."
 
 #: utils/adt/formatting.c:1410
 #, c-format
@@ -3841,14 +3840,12 @@ msgid "cannot calculate day of year without year information"
 msgstr "ne peut pas calculer le jour de l'année sans information sur l'année"
 
 #: utils/adt/formatting.c:4150
-#, fuzzy
 msgid "\"EEEE\" not supported for input"
-msgstr "« E » n'est pas supporté"
+msgstr "« EEEE » non supporté en entrée"
 
 #: utils/adt/formatting.c:4162
-#, fuzzy
 msgid "\"RN\" not supported for input"
-msgstr "« RN » non supporté"
+msgstr "« RN » non supporté en entrée"
 
 #: utils/adt/genfile.c:57
 msgid "reference to parent directory (\"..\") not allowed"
@@ -4788,9 +4785,8 @@ msgid "date/time value \"%s\" is no longer supported"
 msgstr "la valeur date/time « %s » n'est plus supportée"
 
 #: utils/adt/timestamp.c:260
-#, fuzzy
 msgid "timestamp cannot be NaN"
-msgstr "timestamp en dehors des limites"
+msgstr "timestamp ne peut pas valoir NaN"
 
 #: utils/adt/timestamp.c:370
 #, c-format
@@ -5417,7 +5413,7 @@ msgstr "n'a pas pu créer l'index unique « %s »"
 #: utils/sort/tuplesort.c:2808
 #, c-format
 msgid "Key %s is duplicated."
-msgstr ""
+msgstr "La clé %s est dupliquée."
 
 #: utils/hash/dynahash.c:925
 #: storage/lmgr/lock.c:583
@@ -5622,7 +5618,7 @@ msgstr "Affiche si l'utilisateur actuel est un super-utilisateur."
 
 #: utils/misc/guc.c:684
 msgid "Enables advertising the server via Bonjour."
-msgstr ""
+msgstr "Active la publication du serveur via Bonjour."
 
 #: utils/misc/guc.c:692
 msgid "Enables SSL connections."
@@ -6416,9 +6412,8 @@ msgid "GEQO: selective pressure within the population."
 msgstr "GEQO : pression sélective dans la population."
 
 #: utils/misc/guc.c:2037
-#, fuzzy
 msgid "GEQO: seed for random path selection."
-msgstr "Initialise la clé pour la génération de nombres aléatoires."
+msgstr "GEQO : graine pour la sélection du chemin aléatoire."
 
 #: utils/misc/guc.c:2046
 msgid "Multiple of the average buffer usage to free per round."
@@ -6508,9 +6503,8 @@ msgid "Sets the name of the Kerberos service."
 msgstr "Initialise le nom du service Kerberos."
 
 #: utils/misc/guc.c:2200
-#, fuzzy
 msgid "Sets the Bonjour service name."
-msgstr "Initialise le nom du service broadcast Bonjour."
+msgstr "Initialise le nom du service Bonjour."
 
 #: utils/misc/guc.c:2211
 msgid "Shows the collation order locale."
@@ -6661,19 +6655,20 @@ msgstr "Initialise la liste des chiffrements SSL autorisés."
 #: utils/misc/guc.c:2533
 msgid "Sets the language used in DO statement if LANGUAGE is not specified."
 msgstr ""
+"Configure le langage utilisé dans une instruction DO si la clause LANGUAGE n'est\n"
+"pas spécifiée."
 
 #: utils/misc/guc.c:2542
 msgid "Sets the application name to be reported in statistics and logs."
-msgstr ""
+msgstr "Configure le nom de l'application à indiquer dans les statistiques et les journaux."
 
 #: utils/misc/guc.c:2561
 msgid "Sets whether \"\\'\" is allowed in string literals."
 msgstr "Indique si « \\' » est autorisé dans une constante de chaîne."
 
 #: utils/misc/guc.c:2570
-#, fuzzy
 msgid "Sets the output format for bytea."
-msgstr "Initialise le format d'affichage des valeurs interval."
+msgstr "Initialise le format de sortie pour bytea."
 
 #: utils/misc/guc.c:2579
 msgid "Sets the message levels that are sent to the client."
@@ -6835,9 +6830,9 @@ msgstr "le paramètre « %s » ne peut pas être changé"
 #: utils/misc/guc.c:4602
 #: utils/misc/guc.c:4610
 #: guc-file.l:264
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" cannot be changed without restarting the server"
-msgstr "le paramètre « %s » ne peut pas être modifié maintenant"
+msgstr "le paramètre « %s » ne peut pas être modifié sans redémarrer le serveur"
 
 #: utils/misc/guc.c:4620
 #, c-format
@@ -6855,9 +6850,11 @@ msgid "permission denied to set parameter \"%s\""
 msgstr "droit refusé pour initialiser le paramètre « %s »"
 
 #: utils/misc/guc.c:4692
-#, fuzzy, c-format
+#, c-format
 msgid "cannot set parameter \"%s\" within security-definer function"
-msgstr "ne peut pas modifier le rôle avec une fonction SECURITY DEFINER"
+msgstr ""
+"ne peut pas configurer le paramètre « %s » à l'intérieur d'une fonction\n"
+"SECURITY DEFINER"
 
 #: utils/misc/guc.c:4740
 #, c-format
@@ -6950,9 +6947,8 @@ msgid "assertion checking is not supported by this build"
 msgstr "la vérification de l'assertion n'a pas été intégrée lors de la compilation"
 
 #: utils/misc/guc.c:7419
-#, fuzzy
 msgid "Bonjour is not supported by this build"
-msgstr "SSL n'est pas supporté dans cette installation"
+msgstr "Bonjour n'est pas supporté dans cette installation"
 
 #: utils/misc/guc.c:7434
 msgid "SSL is not supported by this build"
@@ -7072,16 +7068,16 @@ msgstr ""
 "ligne %d"
 
 #: guc-file.l:288
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" removed from configuration file, reset to default"
 msgstr ""
-"le paramètre « %s » ne peut pas être modifié après le lancement du serveur ;\n"
-"changement du fichier de configuration ignoré"
+"paramètre « %s » supprimé du fichier de configuration ;\n"
+"réinitialisation à la valeur par défaut"
 
 #: guc-file.l:344
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" changed to \"%s\""
-msgstr "le paramètre « %s » ne peut pas être modifié maintenant"
+msgstr "paramètre « %s » modifié par « %s »"
 
 #: guc-file.l:412
 #, c-format
@@ -7338,7 +7334,7 @@ msgid "no roles are defined in this database system"
 msgstr "aucun rôle n'est défini dans le système de bases de données"
 
 #: utils/init/postinit.c:706
-#, fuzzy, c-format
+#, c-format
 msgid "You should immediately run CREATE USER \"%s\" SUPERUSER;."
 msgstr "Vous devez immédiatement exécuter « CREATE USER \"%s\" CREATEUSER; »."
 
@@ -7709,19 +7705,19 @@ msgstr "fin de ligne ou lexeme inattendu"
 msgid "unexpected end of line"
 msgstr "fin de ligne inattendue"
 
-#: tsearch/dict_thesaurus.c:413
+#: tsearch/dict_thesaurus.c:412
 #, c-format
 msgid "thesaurus sample word \"%s\" isn't recognized by subdictionary (rule %d)"
 msgstr ""
 "le mot d'exemple « %s » du thésaurus n'est pas reconnu par le\n"
 "sous-dictionnaire (règle %d)"
 
-#: tsearch/dict_thesaurus.c:419
+#: tsearch/dict_thesaurus.c:418
 #, c-format
 msgid "thesaurus sample word \"%s\" is a stop word (rule %d)"
 msgstr "le mot d'exemple « %s » du thésaurus est un terme courant (règle %d)"
 
-#: tsearch/dict_thesaurus.c:422
+#: tsearch/dict_thesaurus.c:421
 msgid "Use \"?\" to represent a stop word within a sample phrase."
 msgstr "Utilisez « ? » pour représenter un terme courant dans une phrase."
 
@@ -8026,9 +8022,8 @@ msgid "terminating connection due to administrator command"
 msgstr "arrêt des connexions suite à la demande de l'administrateur"
 
 #: tcop/postgres.c:2727
-#, fuzzy
 msgid "canceling authentication due to timeout"
-msgstr "annulation de la requête à cause du délai écoulé pour l'exécution de l'instruction"
+msgstr "annulation de l'authentification à cause du délai écoulé"
 
 #: tcop/postgres.c:2731
 msgid "canceling statement due to statement timeout"
@@ -8350,9 +8345,8 @@ msgid "conflicting or redundant options"
 msgstr "options en conflit ou redondantes"
 
 #: catalog/aclchk.c:907
-#, fuzzy
 msgid "default privileges cannot be set for columns"
-msgstr "type de droit %s invalide pour la colonne"
+msgstr "les droits par défaut ne peuvent pas être configurés pour les colonnes"
 
 #: catalog/aclchk.c:1660
 #, c-format
@@ -8857,27 +8851,27 @@ msgstr "correspondance utilisateur pour %s"
 #: catalog/dependency.c:2641
 #, c-format
 msgid "default privileges on new relations belonging to role %s"
-msgstr ""
+msgstr "droits par défaut pour les nouvelles relations appartenant au rôle %s"
 
 #: catalog/dependency.c:2646
 #, c-format
 msgid "default privileges on new sequences belonging to role %s"
-msgstr ""
+msgstr "droits par défaut pour les nouvelles séquences appartenant au rôle %s"
 
 #: catalog/dependency.c:2651
 #, c-format
 msgid "default privileges on new functions belonging to role %s"
-msgstr ""
+msgstr "droits par défaut pour les nouvelles fonctions appartenant au rôle %s"
 
 #: catalog/dependency.c:2657
 #, c-format
 msgid "default privileges belonging to role %s"
-msgstr ""
+msgstr "droits par défaut appartenant au rôle %s"
 
 #: catalog/dependency.c:2665
-#, fuzzy, c-format
+#, c-format
 msgid " in schema %s"
-msgstr "schéma %s"
+msgstr " dans le schéma %s"
 
 #: catalog/dependency.c:2714
 #, c-format
@@ -9419,9 +9413,9 @@ msgid "Row type defined by OUT parameters is different."
 msgstr "Le type de ligne défini par les paramètres OUT est différent."
 
 #: catalog/pg_proc.c:435
-#, fuzzy, c-format
+#, c-format
 msgid "cannot change name of input parameter \"%s\""
-msgstr "ne peut pas modifier le propriétaire de l'index « %s »"
+msgstr "ne peut pas modifier le nom du paramètre en entrée « %s »"
 
 #: catalog/pg_proc.c:459
 msgid "cannot remove parameter defaults from existing function"
@@ -9537,9 +9531,9 @@ msgid "tablespace %u was concurrently dropped"
 msgstr "le tablespace %u a été supprimé simultanément"
 
 #: catalog/pg_shdepend.c:1014
-#, fuzzy, c-format
+#, c-format
 msgid "database %u was concurrently dropped"
-msgstr "le tablespace %u a été supprimé simultanément"
+msgstr "la base de données %u a été supprimé simultanément"
 
 #: catalog/pg_shdepend.c:1058
 #, c-format
@@ -9954,20 +9948,20 @@ msgid "unexpected message type 0x%02X during COPY from stdin"
 msgstr "type 0x%02X du message, inattendu, lors d'une opération COPY à partir de stdin"
 
 #: commands/copy.c:762
-#, fuzzy, c-format
+#, c-format
 msgid "COPY format \"%s\" not recognized"
-msgstr "stockage « %s » non reconnu"
+msgstr "format COPY « %s » non reconnu"
 
 #: commands/copy.c:825
 #: commands/copy.c:839
-#, fuzzy, c-format
+#, c-format
 msgid "argument to option \"%s\" must be a list of column names"
-msgstr "l'argument de %s doit être un nom de type"
+msgstr "l'argument de l'option « %s » doit être une liste de noms de colonnes"
 
 #: commands/copy.c:845
-#, fuzzy, c-format
+#, c-format
 msgid "option \"%s\" not recognized"
-msgstr "le fuseau horaire « %s » n'est pas reconnu"
+msgstr "option « %s » non reconnu"
 
 #: commands/copy.c:856
 msgid "cannot specify DELIMITER in BINARY mode"
@@ -10518,14 +10512,14 @@ msgid "invalid argument for %s: \"%s\""
 msgstr "argument invalide pour %s : « %s »"
 
 #: commands/explain.c:141
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized value for EXPLAIN option \"%s\": \"%s\""
-msgstr "valeur invalide pour l'option booléenne « %s » : %s"
+msgstr "valeur non reconnue pour l'option EXPLAIN « %s » : %s"
 
 #: commands/explain.c:147
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized EXPLAIN option \"%s\""
-msgstr "jeton « %s » non reconnu"
+msgstr "option EXPLAIN « %s » non reconnu"
 
 #: commands/foreigncmds.c:131
 #: commands/foreigncmds.c:140
@@ -10699,9 +10693,9 @@ msgid "VARIADIC parameter must be an array"
 msgstr "le paramètre VARIADIC doit être un tableau"
 
 #: commands/functioncmds.c:317
-#, fuzzy, c-format
+#, c-format
 msgid "parameter name \"%s\" used more than once"
-msgstr "le paramètre « %s » est spécifié plus d'une fois"
+msgstr "le nom du paramètre « %s » est utilisé plus d'une fois"
 
 #: commands/functioncmds.c:332
 msgid "only input parameters can have default values"
@@ -10907,14 +10901,13 @@ msgid "function \"%s\" already exists in schema \"%s\""
 msgstr "la fonction « %s » existe déjà dans le schéma « %s »"
 
 #: commands/functioncmds.c:2002
-#, fuzzy
 msgid "no inline code specified"
-msgstr "aucun corps de fonction spécifié"
+msgstr "aucun code en ligne spécifié"
 
 #: commands/functioncmds.c:2052
-#, fuzzy, c-format
+#, c-format
 msgid "language \"%s\" does not support inline code execution"
-msgstr "le langage « %s » n'existe pas"
+msgstr "le langage « %s » ne supporte pas l'exécution de code en ligne"
 
 #: commands/indexcmds.c:153
 msgid "must specify at least one column"
@@ -11581,9 +11574,9 @@ msgid "%s versus %s"
 msgstr "%s versus %s"
 
 #: commands/tablecmds.c:1357
-#, fuzzy, c-format
+#, c-format
 msgid "inherited column \"%s\" has a storage parameter conflict"
-msgstr "la colonne héritée « %s » a un conflit de type"
+msgstr "la colonne héritée « %s » a un conflit de paramètre de stockage"
 
 #: commands/tablecmds.c:1509
 #, c-format
@@ -11596,9 +11589,9 @@ msgid "column \"%s\" has a type conflict"
 msgstr "la colonne « %s » a un conflit de type"
 
 #: commands/tablecmds.c:1529
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" has a storage parameter conflict"
-msgstr "la colonne « %s » a un conflit de type"
+msgstr "la colonne « %s » a un conflit de paramètre de stockage"
 
 #: commands/tablecmds.c:1581
 #, c-format
@@ -11748,9 +11741,9 @@ msgid "lowering statistics target to %d"
 msgstr "abaissement de la cible statistique à %d"
 
 #: commands/tablecmds.c:4270
-#, fuzzy, c-format
+#, c-format
 msgid "number of distinct values %g is too low"
-msgstr "la cible statistique %d est trop basse"
+msgstr "le nombre de valeurs distinctes %g est trop basse"
 
 #: commands/tablecmds.c:4330
 #, c-format
@@ -11765,9 +11758,9 @@ msgstr ""
 "(PLAIN)"
 
 #: commands/tablecmds.c:4414
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist, skipping"
-msgstr "la colonne « %s » de la relation « %s » n'existe pas"
+msgstr "la colonne « %s » de la relation « %s » n'existe pas, ignore"
 
 #: commands/tablecmds.c:4427
 #, c-format
@@ -11820,9 +11813,9 @@ msgid "cannot have more than %d keys in a foreign key"
 msgstr "ne peut pas avoir plus de %d clés dans une clé étrangère"
 
 #: commands/tablecmds.c:5169
-#, fuzzy, c-format
+#, c-format
 msgid "cannot use a deferrable primary key for referenced table \"%s\""
-msgstr "il n'existe pas de clé étrangère pour la table « %s » référencée"
+msgstr "ne peut pas utiliser une clé primaire déferrable pour la table « %s » référencée"
 
 #: commands/tablecmds.c:5186
 #, c-format
@@ -11830,11 +11823,11 @@ msgid "there is no primary key for referenced table \"%s\""
 msgstr "il n'existe pas de clé étrangère pour la table « %s » référencée"
 
 #: commands/tablecmds.c:5338
-#, fuzzy, c-format
+#, c-format
 msgid "cannot use a deferrable unique constraint for referenced table \"%s\""
 msgstr ""
-"il n'existe aucune contrainte unique correspondant aux clés données pour la\n"
-"table « %s » référencée"
+"ne peut pas utiliser une contrainte unique déferrable pour la table\n"
+"référencée « %s »"
 
 #: commands/tablecmds.c:5343
 #, c-format
@@ -11855,9 +11848,9 @@ msgid "constraint \"%s\" of relation \"%s\" does not exist"
 msgstr "la contrainte « %s » de la relation « %s » n'existe pas"
 
 #: commands/tablecmds.c:5707
-#, fuzzy, c-format
+#, c-format
 msgid "constraint \"%s\" of relation \"%s\" does not exist, skipping"
-msgstr "la contrainte « %s » de la relation « %s » n'existe pas"
+msgstr "la contrainte « %s » de la relation « %s » n'existe pas, ignore"
 
 #: commands/tablecmds.c:5865
 #, c-format
@@ -12118,39 +12111,37 @@ msgid "TRUNCATE FOR EACH ROW triggers are not supported"
 msgstr "les triggers TRUNCATE FOR EACH ROW ne sont pas supportés"
 
 #: commands/trigger.c:234
-#, fuzzy
 msgid "cannot use subquery in trigger WHEN condition"
-msgstr "ne peut pas utiliser une sous-requête dans la contrainte de vérification"
+msgstr "ne peut pas utiliser une sous-requête dans la condition WHEN d'un trigger"
 
 #: commands/trigger.c:238
-#, fuzzy
 msgid "cannot use aggregate function in trigger WHEN condition"
-msgstr "ne peut pas utiliser la fonction d'agrégat dans la condition d'une règle WHERE"
+msgstr "ne peut pas utiliser la fonction d'agrégat dans la condition WHEN d'un trigger"
 
 #: commands/trigger.c:242
-#, fuzzy
 msgid "cannot use window function in trigger WHEN condition"
-msgstr "ne peut pas utiliser la fonction window dans la condition d'une règle WHERE"
+msgstr "ne peut pas utiliser la fonction window dans la condition WHEN d'un trigger"
 
 #: commands/trigger.c:262
 #: commands/trigger.c:275
 msgid "statement trigger's WHEN condition cannot reference column values"
 msgstr ""
+"la condition WHEN de l'instruction du trigger ne peut pas référencer les valeurs\n"
+"des colonnes"
 
 #: commands/trigger.c:267
 msgid "INSERT trigger's WHEN condition cannot reference OLD values"
-msgstr ""
+msgstr "la condition WHEN du trigger INSERT ne peut pas référencer les valeurs OLD"
 
 #: commands/trigger.c:280
 msgid "DELETE trigger's WHEN condition cannot reference NEW values"
-msgstr ""
+msgstr "la condition WHEN du trigger DELETE ne peut pas référencer les valeurs NEW"
 
 #: commands/trigger.c:285
-#, fuzzy
 msgid "BEFORE trigger's WHEN condition cannot reference NEW system columns"
 msgstr ""
-"la condition WHERE d'une règle ne devrait pas contenir de références à d'autres\n"
-"relations"
+"la condition WHEN d'un trigger BEFORE ne doit pas référencer les colonnes\n"
+"système avec NEW"
 
 #: commands/trigger.c:323
 #, c-format
@@ -12621,9 +12612,9 @@ msgid "permission denied"
 msgstr "droit refusé"
 
 #: commands/user.c:810
-#, fuzzy, c-format
+#, c-format
 msgid "database \"%s\" not found"
-msgstr "option « %s » non trouvé"
+msgstr "base de données « %s » non trouvée"
 
 #: commands/user.c:832
 msgid "permission denied to drop role"
@@ -13050,9 +13041,9 @@ msgstr "le curseur « %s » n'est pas un parcours modifiable de la table « %s »"
 
 #: executor/execCurrent.c:230
 #: executor/execQual.c:920
-#, fuzzy, c-format
+#, c-format
 msgid "type of parameter %d (%s) does not match that when preparing the plan (%s)"
-msgstr "le type de « %s » ne correspond pas à ce qui est préparé dans le plan"
+msgstr "le type de paramètre %d (%s) ne correspond pas à ce qui est préparé dans le plan (%s)"
 
 #: executor/execCurrent.c:242
 #: executor/execQual.c:931
@@ -13204,9 +13195,8 @@ msgstr ""
 "d'ensemble"
 
 #: executor/execQual.c:2626
-#, fuzzy
 msgid "could not convert row type"
-msgstr "%s n'a pas pu convertir le type %s en %s"
+msgstr "n'a pas pu convertir le type de ligne"
 
 #: executor/execQual.c:2857
 msgid "cannot merge incompatible arrays"
@@ -13497,26 +13487,26 @@ msgstr "aucun tampon local vide disponible"
 
 #: storage/smgr/md.c:371
 #: storage/smgr/md.c:839
-#, fuzzy, c-format
+#, c-format
 msgid "could not truncate file \"%s\": %m"
-msgstr "n'a pas pu créer le fichier « %s » : %m"
+msgstr "n'a pas pu tronquer le fichier « %s » : %m"
 
 #: storage/smgr/md.c:439
-#, fuzzy, c-format
+#, c-format
 msgid "cannot extend file \"%s\" beyond %u blocks"
-msgstr "ne peut pas étendre la relation %s de plus de %u blocs"
+msgstr "ne peut pas étendre le fichier « %s » de plus de %u blocs"
 
 #: storage/smgr/md.c:461
 #: storage/smgr/md.c:621
 #: storage/smgr/md.c:694
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek to block %u in file \"%s\": %m"
-msgstr "n'a pas pu parcourir le fichier « %s » : %m"
+msgstr "n'a pas pu trouver le bloc %u dans le fichier « %s » : %m"
 
 #: storage/smgr/md.c:469
-#, fuzzy, c-format
+#, c-format
 msgid "could not extend file \"%s\": %m"
-msgstr "n'a pas pu créer le fichier « %s » : %m"
+msgstr "n'a pas pu étendre le fichier « %s » : %m"
 
 #: storage/smgr/md.c:471
 #: storage/smgr/md.c:478
@@ -13525,60 +13515,62 @@ msgid "Check free disk space."
 msgstr "Vérifiez l'espace disque disponible."
 
 #: storage/smgr/md.c:475
-#, fuzzy, c-format
+#, c-format
 msgid "could not extend file \"%s\": wrote only %d of %d bytes at block %u"
 msgstr ""
-"n'a pas pu étendre la relation %s : a écrit seulement %d octets sur %d\n"
+"n'a pas pu étendre le fichier « %s » : a écrit seulement %d octets sur %d\n"
 "au bloc %u"
 
 #: storage/smgr/md.c:638
-#, fuzzy, c-format
+#, c-format
 msgid "could not read block %u in file \"%s\": %m"
-msgstr "n'a pas pu lire le fichier verrou « %s » : %m"
+msgstr "n'a pas pu lire le bloc %u dans le fichier « %s » : %m"
 
 #: storage/smgr/md.c:654
-#, fuzzy, c-format
+#, c-format
 msgid "could not read block %u in file \"%s\": read only %d of %d bytes"
 msgstr ""
-"n'a pas pu lire le bloc %u de la relation %s : a lu seulement %d octets\n"
+"n'a pas pu lire le bloc %u du fichier « %s » : a lu seulement %d octets\n"
 "sur %d"
 
 #: storage/smgr/md.c:711
-#, fuzzy, c-format
+#, c-format
 msgid "could not write block %u in file \"%s\": %m"
-msgstr "n'a pas pu écrire le fichier verrou « %s » : %m"
+msgstr "n'a pas pu écrire le bloc %u dans le fichier « %s » : %m"
 
 #: storage/smgr/md.c:716
-#, fuzzy, c-format
+#, c-format
 msgid "could not write block %u in file \"%s\": wrote only %d of %d bytes"
 msgstr ""
-"n'a pas pu écrire le bloc %u de la relation %s : a seulement écrit %d\n"
+"n'a pas pu écrire le bloc %u du fichier « %s » : a seulement écrit %d\n"
 "octets sur %d"
 
 #: storage/smgr/md.c:815
-#, fuzzy, c-format
+#, c-format
 msgid "could not truncate file \"%s\" to %u blocks: it's only %u blocks now"
-msgstr "n'a pas pu tronquer la relation %s en %u blocs : il y a seulement %u blocs"
+msgstr "n'a pas pu tronquer le fichier « %s » en %u blocs : il y a seulement %u blocs"
 
 #: storage/smgr/md.c:864
-#, fuzzy, c-format
+#, c-format
 msgid "could not truncate file \"%s\" to %u blocks: %m"
-msgstr "n'a pas pu tronquer la relation %s en %u blocs : %m"
+msgstr "n'a pas pu tronquer le fichier « %s » en %u blocs : %m"
 
 #: storage/smgr/md.c:1087
-#, fuzzy, c-format
+#, c-format
 msgid "could not fsync file \"%s\" but retrying: %m"
-msgstr "n'a pas pu synchroniser sur disque (fsync) le fichier « %s » : %m"
+msgstr ""
+"n'a pas pu synchroniser sur disque (fsync) le fichier « %s », nouvelle\n"
+"tentative : %m"
 
 #: storage/smgr/md.c:1586
-#, fuzzy, c-format
+#, c-format
 msgid "could not open file \"%s\" (target block %u): %m"
-msgstr "n'a pas pu ouvrir le segment %u de la relation %s (bloc cible %u) : %m"
+msgstr "n'a pas pu ouvrir le fichier « %s » (bloc cible %u) : %m"
 
 #: storage/smgr/md.c:1608
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek to end of file \"%s\": %m"
-msgstr "n'a pas pu parcourir le fichier « %s » : %m"
+msgstr "n'a pas pu trouver la fin du fichier « %s » : %m"
 
 #: storage/file/fd.c:383
 #, c-format
@@ -14890,7 +14882,7 @@ msgstr "nom « %s » de l'argument spécifié plus d'une fois"
 
 #: parser/parse_func.c:156
 msgid "positional argument cannot follow named argument"
-msgstr ""
+msgstr "l'argument positionné ne doit pas suivre l'argument nommé"
 
 #: parser/parse_func.c:233
 #, c-format
@@ -15523,9 +15515,8 @@ msgstr ""
 #: scan.l:1292
 #: scan.l:1296
 #: scan.l:1318
-#, fuzzy
 msgid "invalid Unicode surrogate pair"
-msgstr "valeur d'échappement Unicode invalide"
+msgstr "paire surrogate Unicode invalide"
 
 #: scan.l:588
 msgid "invalid Unicode escape"
@@ -15533,7 +15524,7 @@ msgstr "échappement Unicode invalide"
 
 #: scan.l:589
 msgid "Unicode escapes must be \\uXXXX or \\UXXXXXXXX."
-msgstr ""
+msgstr "Les échappements Unicode doivent être de la forme \\uXXXX ou \\UXXXXXXXX."
 
 #: scan.l:600
 msgid "unsafe use of \\' in a string literal"
