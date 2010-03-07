@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-03-06 03:28+0000\n"
-"PO-Revision-Date: 2010-03-06 19:05+0100\n"
+"POT-Creation-Date: 2010-03-07 01:27+0000\n"
+"PO-Revision-Date: 2010-03-07 22:37+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "MIME-Version: 1.0\n"
@@ -1666,7 +1666,7 @@ msgstr ""
 #: access/heap/heapam.c:1074
 #: access/heap/heapam.c:1102
 #: access/heap/heapam.c:1132
-#: catalog/aclchk.c:880
+#: catalog/aclchk.c:916
 #, c-format
 msgid "\"%s\" is an index"
 msgstr "« %s » est un index"
@@ -1674,7 +1674,7 @@ msgstr "« %s » est un index"
 #: access/heap/heapam.c:1079
 #: access/heap/heapam.c:1107
 #: access/heap/heapam.c:1137
-#: catalog/aclchk.c:887
+#: catalog/aclchk.c:923
 #: commands/tablecmds.c:2071
 #: commands/tablecmds.c:6268
 #: commands/tablecmds.c:7559
@@ -1822,7 +1822,7 @@ msgstr "type de droit non reconnu : « %s »"
 
 #: utils/adt/acl.c:2303
 #: utils/adt/ruleutils.c:1360
-#: catalog/aclchk.c:636
+#: catalog/aclchk.c:672
 #: commands/analyze.c:281
 #: commands/comment.c:579
 #: commands/copy.c:3404
@@ -1849,7 +1849,7 @@ msgstr "la colonne « %s » de la relation « %s » n'existe pas"
 #: utils/init/postinit.c:421
 #: utils/init/postinit.c:540
 #: utils/init/postinit.c:556
-#: catalog/aclchk.c:500
+#: catalog/aclchk.c:536
 #: commands/comment.c:626
 #: commands/dbcommands.c:759
 #: commands/dbcommands.c:903
@@ -1871,7 +1871,7 @@ msgid "function \"%s\" does not exist"
 msgstr "la fonction « %s » n'existe pas"
 
 #: utils/adt/acl.c:3115
-#: catalog/aclchk.c:528
+#: catalog/aclchk.c:564
 #: commands/comment.c:1195
 #: commands/functioncmds.c:805
 #: commands/proclang.c:433
@@ -1882,7 +1882,7 @@ msgid "language \"%s\" does not exist"
 msgstr "le langage « %s » n'existe pas"
 
 #: utils/adt/acl.c:3321
-#: catalog/aclchk.c:548
+#: catalog/aclchk.c:584
 #: catalog/namespace.c:338
 #: catalog/namespace.c:2124
 #: catalog/namespace.c:2165
@@ -1898,7 +1898,7 @@ msgstr "le schéma « %s » n'existe pas"
 
 #: utils/adt/acl.c:3695
 #: utils/adt/dbsize.c:246
-#: catalog/aclchk.c:577
+#: catalog/aclchk.c:613
 #: commands/comment.c:665
 #: commands/dbcommands.c:431
 #: commands/dbcommands.c:1043
@@ -2453,8 +2453,8 @@ msgid "could not open tablespace directory \"%s\": %m"
 msgstr "n'a pas pu ouvrir le répertoire du tablespace « %s » : %m"
 
 #: utils/adt/dbsize.c:126
-#: catalog/aclchk.c:2486
-#: catalog/aclchk.c:3499
+#: catalog/aclchk.c:2522
+#: catalog/aclchk.c:3535
 #, c-format
 msgid "database with OID %u does not exist"
 msgstr "la base de données d'OID %u n'existe pas"
@@ -6972,8 +6972,8 @@ msgid "invalid argument size %d in function call message"
 msgstr "taille de l'argument %d invalide dans le message d'appel de la fonction"
 
 #: tcop/fastpath.c:223
-#: catalog/aclchk.c:2542
-#: catalog/aclchk.c:3230
+#: catalog/aclchk.c:2578
+#: catalog/aclchk.c:3266
 #, c-format
 msgid "function with OID %u does not exist"
 msgstr "la fonction d'OID %u n'existe pas"
@@ -7283,76 +7283,96 @@ msgstr "%s : arguments invalides en ligne de commande\n"
 msgid "grant options can only be granted to roles"
 msgstr "les options grant peuvent seulement être données aux rôles"
 
-#: catalog/aclchk.c:252
+#: catalog/aclchk.c:254
+#, c-format
+msgid "no privileges were granted for column \"%s\" of relation \"%s\""
+msgstr "aucun droit n'a été accordé pour la colonne « %s » de la relation « %s »"
+
+#: catalog/aclchk.c:259
 #, c-format
 msgid "no privileges were granted for \"%s\""
 msgstr "aucun droit n'a été accordé pour « %s »"
 
-#: catalog/aclchk.c:256
+#: catalog/aclchk.c:267
+#, c-format
+msgid "not all privileges were granted for column \"%s\" of relation \"%s\""
+msgstr "tous les droits n'ont pas été accordés pour la colonne « %s » de la relation « %s »"
+
+#: catalog/aclchk.c:272
 #, c-format
 msgid "not all privileges were granted for \"%s\""
 msgstr "tous les droits n'ont pas été accordés pour « %s »"
 
-#: catalog/aclchk.c:263
+#: catalog/aclchk.c:283
+#, c-format
+msgid "no privileges could be revoked for column \"%s\" of relation \"%s\""
+msgstr "aucun droit n'a pu être révoqué pour la colonne « %s » de la relation « %s »"
+
+#: catalog/aclchk.c:288
 #, c-format
 msgid "no privileges could be revoked for \"%s\""
 msgstr "aucun droit n'a pu être révoqué pour « %s »"
 
-#: catalog/aclchk.c:267
+#: catalog/aclchk.c:296
+#, c-format
+msgid "not all privileges could be revoked for column \"%s\" of relation \"%s\""
+msgstr "certains droits n'ont pu être révoqué pour la colonne « %s » de la relation « %s »"
+
+#: catalog/aclchk.c:301
 #, c-format
 msgid "not all privileges could be revoked for \"%s\""
 msgstr "certains droits n'ont pu être révoqué pour « %s »"
 
-#: catalog/aclchk.c:329
+#: catalog/aclchk.c:365
 #, c-format
 msgid "invalid privilege type %s for relation"
 msgstr "droit %s invalide pour la relation"
 
-#: catalog/aclchk.c:333
+#: catalog/aclchk.c:369
 #, c-format
 msgid "invalid privilege type %s for sequence"
 msgstr "droit %s invalide pour la séquence"
 
-#: catalog/aclchk.c:337
+#: catalog/aclchk.c:373
 #, c-format
 msgid "invalid privilege type %s for database"
 msgstr "droit %s invalide pour la base de données"
 
-#: catalog/aclchk.c:341
+#: catalog/aclchk.c:377
 #, c-format
 msgid "invalid privilege type %s for function"
 msgstr "droit %s invalide pour la fonction"
 
-#: catalog/aclchk.c:345
+#: catalog/aclchk.c:381
 #, c-format
 msgid "invalid privilege type %s for language"
 msgstr "droit %s invalide pour le langage"
 
-#: catalog/aclchk.c:349
+#: catalog/aclchk.c:385
 #, c-format
 msgid "invalid privilege type %s for schema"
 msgstr "droit %s invalide pour le schéma"
 
-#: catalog/aclchk.c:353
+#: catalog/aclchk.c:389
 #, c-format
 msgid "invalid privilege type %s for tablespace"
 msgstr "droit %s invalide pour le tablespace"
 
-#: catalog/aclchk.c:357
+#: catalog/aclchk.c:393
 #, c-format
 msgid "invalid privilege type %s for foreign-data wrapper"
 msgstr "type de droit %s invalide pour le wrapper de données distantes"
 
-#: catalog/aclchk.c:361
+#: catalog/aclchk.c:397
 #, c-format
 msgid "invalid privilege type %s for foreign server"
 msgstr "type de droit %s invalide pour le serveur distant"
 
-#: catalog/aclchk.c:400
+#: catalog/aclchk.c:436
 msgid "column privileges are only valid for relations"
 msgstr "les droits sur la colonne sont seulement valides pour les relations"
 
-#: catalog/aclchk.c:895
+#: catalog/aclchk.c:931
 #: commands/comment.c:509
 #: commands/sequence.c:945
 #: commands/tablecmds.c:199
@@ -7363,52 +7383,52 @@ msgstr "les droits sur la colonne sont seulement valides pour les relations"
 msgid "\"%s\" is not a sequence"
 msgstr "« %s » n'est pas une séquence"
 
-#: catalog/aclchk.c:933
+#: catalog/aclchk.c:969
 #, c-format
 msgid "sequence \"%s\" only supports USAGE, SELECT, and UPDATE privileges"
 msgstr "la séquence « %s » accepte seulement les droits USAGE, SELECT et UPDATE"
 
-#: catalog/aclchk.c:950
+#: catalog/aclchk.c:986
 msgid "invalid privilege type USAGE for table"
 msgstr "droit USAGE invalide pour la table"
 
-#: catalog/aclchk.c:1094
+#: catalog/aclchk.c:1130
 #, c-format
 msgid "invalid privilege type %s for column"
 msgstr "type de droit %s invalide pour la colonne"
 
-#: catalog/aclchk.c:1107
+#: catalog/aclchk.c:1143
 #, c-format
 msgid "sequence \"%s\" only supports SELECT column privileges"
 msgstr "la séquence « %s » accepte seulement le droit SELECT pour les colonnes"
 
-#: catalog/aclchk.c:1668
+#: catalog/aclchk.c:1704
 #, c-format
 msgid "language \"%s\" is not trusted"
 msgstr "le langage « %s » n'est pas de confiance"
 
-#: catalog/aclchk.c:1670
+#: catalog/aclchk.c:1706
 msgid "Only superusers can use untrusted languages."
 msgstr ""
 "Seuls les super-utilisateurs peuvent utiliser des langages qui ne sont pas\n"
 "de confiance."
 
-#: catalog/aclchk.c:2024
+#: catalog/aclchk.c:2060
 #, c-format
 msgid "unrecognized privilege type \"%s\""
 msgstr "droit « %s » non reconnu"
 
-#: catalog/aclchk.c:2073
+#: catalog/aclchk.c:2109
 #, c-format
 msgid "permission denied for column %s"
 msgstr "droit refusé pour la colonne %s"
 
-#: catalog/aclchk.c:2075
+#: catalog/aclchk.c:2111
 #, c-format
 msgid "permission denied for relation %s"
 msgstr "droit refusé pour la relation %s"
 
-#: catalog/aclchk.c:2077
+#: catalog/aclchk.c:2113
 #: commands/sequence.c:467
 #: commands/sequence.c:662
 #: commands/sequence.c:706
@@ -7417,239 +7437,239 @@ msgstr "droit refusé pour la relation %s"
 msgid "permission denied for sequence %s"
 msgstr "droit refusé pour la séquence %s"
 
-#: catalog/aclchk.c:2079
+#: catalog/aclchk.c:2115
 #, c-format
 msgid "permission denied for database %s"
 msgstr "droit refusé pour la base de données %s"
 
-#: catalog/aclchk.c:2081
+#: catalog/aclchk.c:2117
 #, c-format
 msgid "permission denied for function %s"
 msgstr "droit refusé pour la fonction %s"
 
-#: catalog/aclchk.c:2083
+#: catalog/aclchk.c:2119
 #, c-format
 msgid "permission denied for operator %s"
 msgstr "droit refusé pour l'opérateur %s"
 
-#: catalog/aclchk.c:2085
+#: catalog/aclchk.c:2121
 #, c-format
 msgid "permission denied for type %s"
 msgstr "droit refusé pour le type %s"
 
-#: catalog/aclchk.c:2087
+#: catalog/aclchk.c:2123
 #, c-format
 msgid "permission denied for language %s"
 msgstr "droit refusé pour le langage %s"
 
-#: catalog/aclchk.c:2089
+#: catalog/aclchk.c:2125
 #, c-format
 msgid "permission denied for schema %s"
 msgstr "droit refusé pour le schéma %s"
 
-#: catalog/aclchk.c:2091
+#: catalog/aclchk.c:2127
 #, c-format
 msgid "permission denied for operator class %s"
 msgstr "droit refusé pour la classe d'opérateur %s"
 
-#: catalog/aclchk.c:2093
+#: catalog/aclchk.c:2129
 #, c-format
 msgid "permission denied for operator family %s"
 msgstr "droit refusé pour la famille d'opérateur %s"
 
-#: catalog/aclchk.c:2095
+#: catalog/aclchk.c:2131
 #, c-format
 msgid "permission denied for conversion %s"
 msgstr "droit refusé pour la conversion %s"
 
-#: catalog/aclchk.c:2097
+#: catalog/aclchk.c:2133
 #, c-format
 msgid "permission denied for tablespace %s"
 msgstr "droit refusé pour le tablespace %s"
 
-#: catalog/aclchk.c:2099
+#: catalog/aclchk.c:2135
 #, c-format
 msgid "permission denied for text search dictionary %s"
 msgstr "droit refusé pour le dictionnaire de recherche plein texte %s"
 
-#: catalog/aclchk.c:2101
+#: catalog/aclchk.c:2137
 #, c-format
 msgid "permission denied for text search configuration %s"
 msgstr "droit refusé pour la configuration de recherche plein texte %s"
 
-#: catalog/aclchk.c:2103
+#: catalog/aclchk.c:2139
 #, c-format
 msgid "permission denied for foreign-data wrapper %s"
 msgstr "droit refusé pour le wrapper de données distantes %s"
 
-#: catalog/aclchk.c:2105
+#: catalog/aclchk.c:2141
 #, c-format
 msgid "permission denied for foreign server %s"
 msgstr "droit refusé pour le serveur distant %s"
 
-#: catalog/aclchk.c:2111
-#: catalog/aclchk.c:2113
+#: catalog/aclchk.c:2147
+#: catalog/aclchk.c:2149
 #, c-format
 msgid "must be owner of relation %s"
 msgstr "doit être le propriétaire de la relation %s"
 
-#: catalog/aclchk.c:2115
+#: catalog/aclchk.c:2151
 #, c-format
 msgid "must be owner of sequence %s"
 msgstr "doit être le propriétaire de la séquence %s"
 
-#: catalog/aclchk.c:2117
+#: catalog/aclchk.c:2153
 #, c-format
 msgid "must be owner of database %s"
 msgstr "doit être le propriétaire de la base de données %s"
 
-#: catalog/aclchk.c:2119
+#: catalog/aclchk.c:2155
 #, c-format
 msgid "must be owner of function %s"
 msgstr "doit être le propriétaire de la fonction %s"
 
-#: catalog/aclchk.c:2121
+#: catalog/aclchk.c:2157
 #, c-format
 msgid "must be owner of operator %s"
 msgstr "doit être le prorpriétaire de l'opérateur %s"
 
-#: catalog/aclchk.c:2123
+#: catalog/aclchk.c:2159
 #, c-format
 msgid "must be owner of type %s"
 msgstr "doit être le propriétaire du type %s"
 
-#: catalog/aclchk.c:2125
+#: catalog/aclchk.c:2161
 #, c-format
 msgid "must be owner of language %s"
 msgstr "doit être le propriétaire du langage %s"
 
-#: catalog/aclchk.c:2127
+#: catalog/aclchk.c:2163
 #, c-format
 msgid "must be owner of schema %s"
 msgstr "doit être le propriétaire du schéma %s"
 
-#: catalog/aclchk.c:2129
+#: catalog/aclchk.c:2165
 #, c-format
 msgid "must be owner of operator class %s"
 msgstr "doit être le propriétaire de la classe d'opérateur %s"
 
-#: catalog/aclchk.c:2131
+#: catalog/aclchk.c:2167
 #, c-format
 msgid "must be owner of operator family %s"
 msgstr "doit être le prorpriétaire de la famille d'opérateur %s"
 
-#: catalog/aclchk.c:2133
+#: catalog/aclchk.c:2169
 #, c-format
 msgid "must be owner of conversion %s"
 msgstr "doit être le propriétaire de la conversion %s"
 
-#: catalog/aclchk.c:2135
+#: catalog/aclchk.c:2171
 #, c-format
 msgid "must be owner of tablespace %s"
 msgstr "doit être le propriétaire du tablespace %s"
 
-#: catalog/aclchk.c:2137
+#: catalog/aclchk.c:2173
 #, c-format
 msgid "must be owner of text search dictionary %s"
 msgstr "doit être le propriétaire du dictionnaire de recherche plein texte %s"
 
-#: catalog/aclchk.c:2139
+#: catalog/aclchk.c:2175
 #, c-format
 msgid "must be owner of text search configuration %s"
 msgstr "doit être le propriétaire de la configuration de recherche plein texte %s"
 
-#: catalog/aclchk.c:2141
+#: catalog/aclchk.c:2177
 #, c-format
 msgid "must be owner of foreign-data wrapper %s"
 msgstr "doit être le propriétaire du wrapper de données distantes %s"
 
-#: catalog/aclchk.c:2143
+#: catalog/aclchk.c:2179
 #, c-format
 msgid "must be owner of foreign server %s"
 msgstr "doit être le propriétaire de serveur distant %s"
 
-#: catalog/aclchk.c:2185
+#: catalog/aclchk.c:2221
 #, c-format
-msgid "permission denied for column %s of relation %s"
-msgstr "droit refusé pour la colonne %s de la relation %s"
+msgid "permission denied for column \"%s\" of relation \"%s\""
+msgstr "droit refusé pour la colonne « %s » de la relation « %s »"
 
-#: catalog/aclchk.c:2214
+#: catalog/aclchk.c:2250
 #, c-format
 msgid "role with OID %u does not exist"
 msgstr "le rôle d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2305
-#: catalog/aclchk.c:2313
+#: catalog/aclchk.c:2341
+#: catalog/aclchk.c:2349
 #, c-format
 msgid "attribute %d of relation with OID %u does not exist"
 msgstr "l'attribut %d de la relation d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2390
-#: catalog/aclchk.c:3146
+#: catalog/aclchk.c:2426
+#: catalog/aclchk.c:3182
 #, c-format
 msgid "relation with OID %u does not exist"
 msgstr "la relation d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2598
-#: catalog/aclchk.c:3258
+#: catalog/aclchk.c:2634
+#: catalog/aclchk.c:3294
 #, c-format
 msgid "language with OID %u does not exist"
 msgstr "le langage d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2682
-#: catalog/aclchk.c:3286
+#: catalog/aclchk.c:2718
+#: catalog/aclchk.c:3322
 #, c-format
 msgid "schema with OID %u does not exist"
 msgstr "le schéma d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2748
-#: catalog/aclchk.c:3325
+#: catalog/aclchk.c:2784
+#: catalog/aclchk.c:3361
 #, c-format
 msgid "tablespace with OID %u does not exist"
 msgstr "le tablespace d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2808
+#: catalog/aclchk.c:2844
 #, c-format
 msgid "foreign-data wrapper with OID %u does not exist"
 msgstr "le wrapper de données distantes d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:2871
-#: catalog/aclchk.c:3470
+#: catalog/aclchk.c:2907
+#: catalog/aclchk.c:3506
 #, c-format
 msgid "foreign server with OID %u does not exist"
 msgstr "le serveur distant d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3174
+#: catalog/aclchk.c:3210
 #, c-format
 msgid "type with OID %u does not exist"
 msgstr "le type d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3202
+#: catalog/aclchk.c:3238
 #, c-format
 msgid "operator with OID %u does not exist"
 msgstr "l'opérateur d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3354
+#: catalog/aclchk.c:3390
 #, c-format
 msgid "operator class with OID %u does not exist"
 msgstr "la classe d'opérateur d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3383
+#: catalog/aclchk.c:3419
 #, c-format
 msgid "operator family with OID %u does not exist"
 msgstr "la famille d'opérateur d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3412
+#: catalog/aclchk.c:3448
 #, c-format
 msgid "text search dictionary with OID %u does not exist"
 msgstr "le dictionnaire de recherche plein texte d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3441
+#: catalog/aclchk.c:3477
 #, c-format
 msgid "text search configuration with OID %u does not exist"
 msgstr "la configuration de recherche plein texte d'OID %u n'existe pas"
 
-#: catalog/aclchk.c:3527
+#: catalog/aclchk.c:3563
 #, c-format
 msgid "conversion with OID %u does not exist"
 msgstr "la conversion d'OID %u n'existe pas"
