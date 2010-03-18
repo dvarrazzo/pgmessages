@@ -1,7 +1,7 @@
 # German message translation file for pg_dump and friends
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: pg_dump.po,v 1.22 2010/03/18 19:15:04 petere Exp $
+# $Id: pg_dump.po,v 1.23 2010/03/18 23:20:45 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-03-18 17:21+0000\n"
-"PO-Revision-Date: 2010-03-18 21:14+0200\n"
+"POT-Creation-Date: 2010-03-18 21:20+0000\n"
+"PO-Revision-Date: 2010-03-19 01:20+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -454,15 +454,15 @@ msgstr "lese Large Objects\n"
 msgid "saving large objects\n"
 msgstr "sichere Large Objects\n"
 
-#: pg_dump.c:2120
+#: pg_dump.c:2120 pg_backup_archiver.c:943
 #, c-format
-msgid "dumpBlobs(): could not open large object %u: %s"
-msgstr "dumpBlobs(): konnte Large Object %u nicht öffnen: %s"
+msgid "could not open large object %u: %s"
+msgstr "konnte Large Object %u nicht öffnen: %s"
 
 #: pg_dump.c:2133
 #, c-format
-msgid "dumpBlobs(): error reading large object %u: %s"
-msgstr "dumpBlobs(): Fehler beim Lesen von Large Object %u: %s"
+msgid "error reading large object %u: %s"
+msgstr "Fehler beim Lesen von Large Object %u: %s"
 
 #: pg_dump.c:2180 pg_dump.c:2228 pg_dump.c:2290 pg_dump.c:6911 pg_dump.c:7114
 #: pg_dump.c:7930 pg_dump.c:8468 pg_dump.c:8718 pg_dump.c:8824 pg_dump.c:9209
@@ -993,13 +993,8 @@ msgstr "Wiederherstellung von Large Object mir OID %u\n"
 
 #: pg_backup_archiver.c:938
 #, c-format
-msgid "could not create large object %u\n"
-msgstr "konnte Large Object %u nicht erstellen\n"
-
-#: pg_backup_archiver.c:943
-#, c-format
-msgid "could not open large object %u\n"
-msgstr "konnte Large Object %u nicht öffnen\n"
+msgid "could not create large object %u: %s"
+msgstr "konnte Large Object %u nicht erstellen: %s"
 
 #: pg_backup_archiver.c:1007
 #, c-format
@@ -1689,7 +1684,9 @@ msgstr "Tar-Mitglied %s übersprungen\n"
 msgid ""
 "restoring data out of order is not supported in this archive format: \"%s\" "
 "is required, but comes before \"%s\" in the archive file.\n"
-msgstr "Ausgabe der Daten in anderer Reihenfolge wird in diesem Archivformat nicht unterstützt: »%s« wird benötigt, aber es kommt vor »%s« in der Archivdatei.\n"
+msgstr ""
+"Ausgabe der Daten in anderer Reihenfolge wird in diesem Archivformat nicht "
+"unterstützt: »%s« wird benötigt, aber es kommt vor »%s« in der Archivdatei.\n"
 
 #: pg_backup_tar.c:1226
 #, c-format
