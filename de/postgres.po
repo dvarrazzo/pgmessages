@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.64 2010/03/21 00:18:21 petere Exp $
+# $Id: postgres.po,v 1.65 2010/03/21 08:39:10 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-03-20 08:41+0000\n"
-"PO-Revision-Date: 2010-03-21 02:06+0200\n"
+"POT-Creation-Date: 2010-03-21 02:41+0000\n"
+"PO-Revision-Date: 2010-03-21 10:37+0200\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -355,43 +355,52 @@ msgid "LDAP server not specified"
 msgstr "LDAP-Server nicht angegeben"
 
 #: libpq/auth.c:2274
-msgid "invalid character in username for LDAP authentication"
-msgstr ""
+msgid "invalid character in user name for LDAP authentication"
+msgstr "ungültiges Zeichen im Benutzernamen für LDAP-Authentifizierung"
 
 #: libpq/auth.c:2289
 #, c-format
 msgid ""
 "could not perform initial LDAP bind for ldapbinddn \"%s\" on server \"%s\": "
 "error code %d"
-msgstr "erstes LDAP-Binden für ldapbinddn »%s« auf Server »%s« fehlgeschlagen: Fehlercode %d"
+msgstr ""
+"erstes LDAP-Binden für ldapbinddn »%s« auf Server »%s« fehlgeschlagen: "
+"Fehlercode %d"
 
 #: libpq/auth.c:2314
 #, c-format
 msgid "could not search LDAP for filter \"%s\" on server \"%s\": error code %d"
-msgstr "konnte LDAP nicht mit Filter »%s« auf Server »%s« durchsuchen: Fehlercode %d"
+msgstr ""
+"konnte LDAP nicht mit Filter »%s« auf Server »%s« durchsuchen: Fehlercode %d"
 
 #: libpq/auth.c:2324
 #, c-format
 msgid "LDAP search failed for filter \"%s\" on server \"%s\": no such user"
-msgstr "LDAP-Suche fehlgeschlagen für Filter »%s« auf Server »%s«: Benutzer existiert nicht"
+msgstr ""
+"LDAP-Suche fehlgeschlagen für Filter »%s« auf Server »%s«: Benutzer existiert "
+"nicht"
 
 #: libpq/auth.c:2328
 #, c-format
 msgid ""
 "LDAP search failed for filter \"%s\" on server \"%s\": user is not unique (%"
 "ld matches)"
-msgstr "LDAP-Suche fehlgeschlagen für Filter »%s« auf Server »%s«: Benutzer ist nicht eindeutig (%ld Treffer)"
+msgstr ""
+"LDAP-Suche fehlgeschlagen für Filter »%s« auf Server »%s«: Benutzer ist nicht "
+"eindeutig (%ld Treffer)"
 
 #: libpq/auth.c:2345
 #, c-format
 msgid ""
 "could not get dn for the first entry matching \"%s\" on server \"%s\": %s"
-msgstr "konnte DN fũr den ersten Treffer für »%s« auf Server »%s« nicht lesen: %s"
+msgstr ""
+"konnte DN fũr den ersten Treffer für »%s« auf Server »%s« nicht lesen: %s"
 
 #: libpq/auth.c:2365
 #, c-format
 msgid "could not unbind after searching for user \"%s\" on server \"%s\": %s"
-msgstr "Losbinden fehlgeschlagen nach Suche nach Benutzer »%s« auf Server »%s«: %s"
+msgstr ""
+"Losbinden fehlgeschlagen nach Suche nach Benutzer »%s« auf Server »%s«: %s"
 
 #: libpq/auth.c:2402
 #, c-format
@@ -432,7 +441,7 @@ msgid "could not generate random encryption vector"
 msgstr "konnte zufälligen Verschlüsselungsvektor nicht erzeugen"
 
 #: libpq/auth.c:2639
-msgid "could not perform md5 encryption of password"
+msgid "could not perform MD5 encryption of password"
 msgstr "konnte MD5-Verschlüsselung des Passworts nicht durchführen"
 
 #: libpq/auth.c:2661
@@ -494,8 +503,8 @@ msgstr "RADIUS-Antwort hat falsche MD5-Signatur"
 
 #: libpq/auth.c:2828
 #, c-format
-msgid "RADIUS response has invalid code (%i) for user '%s'"
-msgstr ""
+msgid "RADIUS response has invalid code (%i) for user \"%s\""
+msgstr "RADIUS-Antwort hat ungültigen Code (%i) für Benutzer »%s«"
 
 #: libpq/be-fsstubs.c:133 libpq/be-fsstubs.c:163 libpq/be-fsstubs.c:189
 #: libpq/be-fsstubs.c:225 libpq/be-fsstubs.c:272 libpq/be-fsstubs.c:518
@@ -841,16 +850,15 @@ msgstr "unbekannter Authentifizierungsoptionsname: »%s«"
 
 #: libpq/hba.c:1274
 msgid ""
-"cannot use ldapbasedn, ldapbinddn, ldapbindpasswd or ldapsearchattribute "
+"cannot use ldapbasedn, ldapbinddn, ldapbindpasswd, or ldapsearchattribute "
 "together with ldapprefix"
-msgstr ""
+msgstr "ldapbasedn, ldapbinddn, ldapbindpasswd oder ldapsearchattribute kann nicht zusammen mit ldapprefix verwendet werden"
 
 #: libpq/hba.c:1284
-#, fuzzy
 msgid ""
 "authentication method \"ldap\" requires argument \"ldapbasedn\", \"ldapprefix"
-"\" or \"ldapsuffix\" to be set"
-msgstr "Authentifizierungsmethode »%s« benötigt Argument »%s«"
+"\", or \"ldapsuffix\" to be set"
+msgstr "Authentifizierungsmethode »ldap« benötigt Argument »ldapbasedn«, »ldapprefix« oder »ldapsuffix«"
 
 #: libpq/hba.c:1472 guc-file.l:436
 #, c-format
@@ -883,7 +891,7 @@ msgstr "fehlender Eintrag in Datei »%s« am Ende von Zeile %d"
 
 #: libpq/hba.c:1750
 #, c-format
-msgid "provided username (%s) and authenticated username (%s) don't match"
+msgid "provided user name (%s) and authenticated user name (%s) do not match"
 msgstr ""
 "angegebener Benutzername (%s) und authentifizierter Benutzername (%s) "
 "stimmen nicht überein"
@@ -1009,14 +1017,14 @@ msgid "could not receive data from client: %m"
 msgstr "konnte Daten vom Client nicht empfangen: %m"
 
 #: libpq/pqcomm.c:846
-#, fuzzy, c-format
-msgid "couldn't put socket to non-blocking mode: %m"
-msgstr "konnte Socket nicht auf nicht-blockierenden Modus umstellen: %s\n"
+#, c-format
+msgid "could not set socket to non-blocking mode: %m"
+msgstr "konnte Socket nicht auf nicht-blockierenden Modus umstellen: %m"
 
 #: libpq/pqcomm.c:892 libpq/pqcomm.c:903
-#, fuzzy, c-format
-msgid "couldn't put socket to blocking mode: %m"
-msgstr "konnte Socket nicht auf blockierenden Modus umstellen: %s\n"
+#, c-format
+msgid "could not set socket to blocking mode: %m"
+msgstr "konnte Socket nicht auf blockierenden Modus umstellen: %m"
 
 #: libpq/pqcomm.c:1048
 msgid "unexpected EOF within message length word"
@@ -1426,7 +1434,9 @@ msgstr "Wiederherstellung der vorbereiteten Transaktion %u"
 msgid ""
 "database is not accepting commands to avoid wraparound data loss in database "
 "\"%s\""
-msgstr "Datenbank nimmt keine Befehle an, um Datenverlust wegen Transaktionsnummernüberlauf in Datenbank »%s« zu vermeiden"
+msgstr ""
+"Datenbank nimmt keine Befehle an, um Datenverlust wegen "
+"Transaktionsnummernüberlauf in Datenbank »%s« zu vermeiden"
 
 #: access/transam/varsup.c:115 access/transam/varsup.c:122
 msgid ""
@@ -1443,7 +1453,9 @@ msgstr ""
 msgid ""
 "database is not accepting commands to avoid wraparound data loss in database "
 "with OID %u"
-msgstr "Datenbank nimmt keine Befehle an, um Datenverlust wegen Transaktionsnummernüberlauf in Datenbank mit OID %u zu vermeiden"
+msgstr ""
+"Datenbank nimmt keine Befehle an, um Datenverlust wegen "
+"Transaktionsnummernüberlauf in Datenbank mit OID %u zu vermeiden"
 
 #: access/transam/varsup.c:132 access/transam/varsup.c:358
 #, c-format
@@ -1457,8 +1469,10 @@ msgid ""
 "database.\n"
 "You might also need to commit or roll back old prepared transactions."
 msgstr ""
-"Um ein Abschalten der Datenbank zu vermeiden, führen Sie ein komplettes VACUUM über diese Datenbank aus.\n"
-"Eventuell müssen Sie auch alte vorbereitete Transaktionen committen oder zurückrollen."
+"Um ein Abschalten der Datenbank zu vermeiden, führen Sie ein komplettes "
+"VACUUM über diese Datenbank aus.\n"
+"Eventuell müssen Sie auch alte vorbereitete Transaktionen committen oder "
+"zurückrollen."
 
 #: access/transam/varsup.c:139 access/transam/varsup.c:365
 #, c-format
@@ -1799,13 +1813,15 @@ msgstr "ungültige Infobits %04X in Logdatei %u, Segment %u, Offset %u"
 
 #: access/transam/xlog.c:3879 access/transam/xlog.c:3887
 #: access/transam/xlog.c:3894
-msgid "WAL file is from different system"
-msgstr "WAL-Datei stammt von einem anderen System"
+msgid "WAL file is from different database system"
+msgstr "WAL-Datei stammt von einem anderen Datenbanksystem"
 
 #: access/transam/xlog.c:3880
 #, c-format
-msgid "WAL file SYSID is %s, pg_control SYSID is %s"
-msgstr "SYSID in WAL-Datei ist %s, SYSID in pg_control ist %s"
+msgid ""
+"WAL file database system identifier is %s, pg_control database system "
+"identifier is %s."
+msgstr "Datenbanksystemidentifikator in der WAL-Datei ist %s, Datenbanksystemidentifikator in pg_control ist %s."
 
 #: access/transam/xlog.c:3888
 msgid "Incorrect XLOG_SEG_SIZE in page header."
@@ -2248,13 +2264,17 @@ msgstr "Wiederherstellung beendet vor Abbruch der Transaktion %u, Zeit %s"
 msgid ""
 "recovery connections cannot continue because %s = %u is a lower setting than "
 "on WAL source server (value was %u)"
-msgstr "Wiederherstellungsverbindungen können nicht fortgesetzt werden, weil %s = %u eine niedrigere Einstellung als auf dem WAL-Quellserver ist (Wert war %u)"
+msgstr ""
+"Wiederherstellungsverbindungen können nicht fortgesetzt werden, weil %s = %u "
+"eine niedrigere Einstellung als auf dem WAL-Quellserver ist (Wert war %u)"
 
 #: access/transam/xlog.c:5418
 msgid ""
 "recovery connections cannot start because the recovery_connections parameter "
 "is disabled on the WAL source server"
-msgstr "Wiederherstellungsverbindungen können nicht starten, weil Parameter recovery_connections auf dem WAL-Quellserver ausgeschaltet ist"
+msgstr ""
+"Wiederherstellungsverbindungen können nicht starten, weil Parameter "
+"recovery_connections auf dem WAL-Quellserver ausgeschaltet ist"
 
 #: access/transam/xlog.c:5456
 msgid "control file contains invalid data"
@@ -2631,21 +2651,28 @@ msgstr "ungültige Daten in Datei »%s«"
 #: access/transam/xlog.c:8187
 msgid ""
 "pg_stop_backup cleanup done, waiting for required WAL segments to be archived"
-msgstr "Aufräumen nach pg_stop_backup beendet, warte bis die benötigten WAL-Segmente archiviert sind"
+msgstr ""
+"Aufräumen nach pg_stop_backup beendet, warte bis die benötigten WAL-Segmente "
+"archiviert sind"
 
 #: access/transam/xlog.c:8203
 #, c-format
 msgid ""
 "pg_stop_backup still waiting for all required WAL segments to be archived (%"
 "d seconds elapsed)"
-msgstr "pg_stop_backup wartet immer noch, bis alle benötigten WAL-Segmente archiviert sind (%d Sekunden abgelaufen)"
+msgstr ""
+"pg_stop_backup wartet immer noch, bis alle benötigten WAL-Segmente "
+"archiviert sind (%d Sekunden abgelaufen)"
 
 #: access/transam/xlog.c:8205
 msgid ""
-"Check that your archive_command is executing properly. pg_stop_backup can be "
-"cancelled safely, but the database backup will not be usable without all the "
-"WAL segments."
-msgstr "Prüfen Sie, ob das archive_command korrekt ausführt. pg_stop_backup kann sicher abgebrochen werden, aber die Datenbank ist nicht benutzbar ohne die fehlenden WAL-Segmente."
+"Check that your archive_command is executing properly.  pg_stop_backup can "
+"be cancelled safely, but the database backup will not be usable without all "
+"the WAL segments."
+msgstr ""
+"Prüfen Sie, ob das archive_command korrekt ausführt. pg_stop_backup kann "
+"sicher abgebrochen werden, aber die Datenbank ist nicht benutzbar ohne die "
+"fehlenden WAL-Segmente."
 
 #: access/transam/xlog.c:8231
 msgid "must be superuser to switch transaction log files"
@@ -2806,40 +2833,44 @@ msgstr "Index »%s« hat falsche Hash-Version"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:93
 #, c-format
 msgid "could not connect to the primary server : %s"
-msgstr "konnte nicht mit dem primären Server verbinden: %s"
+msgstr "konnte nicht mit dem Primärserver verbinden: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:105
 #, c-format
-msgid "could not receive the SYSID and timeline ID from the primary server: %s"
-msgstr "konnte SYSID und Timeline-ID nicht vom primären Server empfangen: %s"
+msgid ""
+"could not receive database system identifier and timeline ID from the "
+"primary server: %s"
+msgstr "konnte Datenbanksystemidentifikator und Timeline-ID nicht vom Primärserver empfangen: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:116
 msgid "invalid response from primary server"
-msgstr "ungültige Antwort vom primären Server"
+msgstr "ungültige Antwort vom Primärserver"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:117
 #, c-format
-msgid "expected 1 tuple with 2 fields, got %d tuples with %d fields"
-msgstr "1 Tupel mit 2 Feldern erwartet, %d Tupel mit %d Feldern erhalten"
+msgid "Expected 1 tuple with 2 fields, got %d tuples with %d fields."
+msgstr "1 Tupel mit 2 Feldern erwartet, %d Tupel mit %d Feldern erhalten."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:132
-msgid "system differs between the primary and standby"
-msgstr ""
+msgid "database system identifier differs between the primary and standby"
+msgstr "Datenbanksystemidentifikator unterscheidet sich zwischen Primär- und Standby-Server"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:133
-#, fuzzy, c-format
-msgid "the primary SYSID is %s, standby SYSID is %s"
-msgstr "SYSID in WAL-Datei ist %s, SYSID in pg_control ist %s"
+#, c-format
+msgid "The primary's identifier is %s, the standby's identifier is %s."
+msgstr "Identifikator des Primärservers ist %s, Identifikator des Standby ist %s."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:145
 #, c-format
 msgid "timeline %u of the primary does not match recovery target timeline %u"
-msgstr "Timeline %u des primären Servers stimmt nicht mit der Timeline %u des Wiederherstellungsziels überein"
+msgstr ""
+"Timeline %u des primären Servers stimmt nicht mit der Timeline %u des "
+"Wiederherstellungsziels überein"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:155
-#, fuzzy, c-format
-msgid "could not start XLOG streaming: %s"
-msgstr "konnte SSL-Socket nicht setzen: %s"
+#, c-format
+msgid "could not start WAL streaming: %s"
+msgstr "konnte WAL-Streaming nicht starten: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:161
 msgid "streaming replication successfully connected to primary"
@@ -2857,13 +2888,13 @@ msgstr "select() fehlgeschlagen: %m"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:278
 #: replication/libpqwalreceiver/libpqwalreceiver.c:300
 #: replication/libpqwalreceiver/libpqwalreceiver.c:305
-#, fuzzy, c-format
-msgid "could not receive data from XLOG stream: %s"
-msgstr "konnte keine Daten vom Server empfangen: %s\n"
+#, c-format
+msgid "could not receive data from WAL stream: %s"
+msgstr "konnte keine Daten vom WAL-Stream empfangen: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:296
 msgid "replication terminated by primary server"
-msgstr "Replikation wurde durch primären Server beendet"
+msgstr "Replikation wurde durch Primärserver beendet"
 
 #: replication/walsender.c:120
 msgid "must be superuser to start walsender"
@@ -2871,7 +2902,9 @@ msgstr "nur Superuser können WAL-Sender starten"
 
 #: replication/walsender.c:125
 msgid "recovery is still in progress, can't accept WAL streaming connections"
-msgstr "Wiederherstellung läuft noch, WAL-Streaming-Verbindungen können nicht akzeptiert werden"
+msgstr ""
+"Wiederherstellung läuft noch, WAL-Streaming-Verbindungen können nicht "
+"akzeptiert werden"
 
 #: replication/walsender.c:280
 #, c-format
@@ -2899,7 +2932,8 @@ msgstr "tut mir leid, schon zu viele Standbys"
 #: replication/walsender.c:555
 #, c-format
 msgid "could not read from log file %u, segment %u, offset %u, length %lu: %m"
-msgstr "konnte nicht aus Logdatei %u, Segment %u bei Position %u, Länge %lu lesen: %m"
+msgstr ""
+"konnte nicht aus Logdatei %u, Segment %u bei Position %u, Länge %lu lesen: %m"
 
 #: replication/walsender.c:786
 msgid "not enough shared memory for walsender"
@@ -2907,12 +2941,12 @@ msgstr "nicht genug Shared-Memory für WAL-Sender"
 
 #: replication/walreceiver.c:116
 msgid "terminating walreceiver process due to administrator command"
-msgstr "breche WAL-Receiver-Prozess ab aufgrund von Anweisung des Administrators"
+msgstr ""
+"breche WAL-Receiver-Prozess ab aufgrund von Anweisung des Administrators"
 
 #: replication/walreceiver.c:286
-#, fuzzy
-msgid "cannot continue XLOG streaming, recovery has already ended"
-msgstr "Restart-Punkt übersprungen, Wiederherstellung ist bereits beendet"
+msgid "cannot continue WAL streaming, recovery has already ended"
+msgstr "kann WAL-Streaming nicht fortsetzen, Wiederherstellung ist bereits beendet"
 
 #: replication/walreceiver.c:400
 msgid "invalid WAL message received from primary"
@@ -5429,7 +5463,7 @@ msgstr "Bibliothek »%s« geladen"
 msgid "could not load pg_hba.conf"
 msgstr "konnte pg_hba.conf nicht laden"
 
-#: utils/init/postinit.c:229
+#: utils/init/postinit.c:225 utils/init/postinit.c:229
 #, c-format
 msgid "connection authorized: user=%s database=%s"
 msgstr "Verbindung authorisiert: Benutzer=%s Datenbank=%s"
@@ -6062,7 +6096,10 @@ msgid ""
 "During recovery, allows connections and queries.  During normal running, "
 "causes additional info to be written to WAL to enable hot standby mode on "
 "WAL standby nodes."
-msgstr "Erlaubt Verbindungen und Anfragen während der Wiederherstellung.  Im Normalbetrieb werden zusätzliche Informationen in den WAL geschrieben, um den Hot-Standby-Modus auf WAL-Standby-Knoten zu ermöglichen."
+msgstr ""
+"Erlaubt Verbindungen und Anfragen während der Wiederherstellung.  Im "
+"Normalbetrieb werden zusätzliche Informationen in den WAL geschrieben, um "
+"den Hot-Standby-Modus auf WAL-Standby-Knoten zu ermöglichen."
 
 #: utils/misc/guc.c:1228
 msgid "Allows modifications of the structure of system tables."
@@ -6082,14 +6119,18 @@ msgstr ""
 
 #: utils/misc/guc.c:1249
 msgid ""
-"Enables backward compatibility mode for privilege checks on large objects"
-msgstr "Schaltet den rückwärtskompatiblen Modus für Privilegienprüfungen bei Large Objects ein."
+"Enables backward compatibility mode for privilege checks on large objects."
+msgstr ""
+"Schaltet den rückwärtskompatiblen Modus für Privilegienprüfungen bei Large "
+"Objects ein."
 
 #: utils/misc/guc.c:1250
 msgid ""
 "Skips privilege checks when reading or modifying large objects, for "
 "compatibility with PostgreSQL releases prior to 9.0."
-msgstr "Überspringt Privilegienprüfungen beim Lesen oder Ändern von Large Objects, zur Kompatibilität mit PostgreSQL-Versionen vor 9.0."
+msgstr ""
+"Überspringt Privilegienprüfungen beim Lesen oder Ändern von Large Objects, "
+"zur Kompatibilität mit PostgreSQL-Versionen vor 9.0."
 
 #: utils/misc/guc.c:1268
 msgid ""
@@ -6180,7 +6221,7 @@ msgstr "Setzt die maximale Anzahl gleichzeitiger Verbindungen."
 
 #: utils/misc/guc.c:1381
 msgid ""
-"Sets the maximum delay to avoid conflict processing on Hot Standby servers."
+"Sets the maximum delay to avoid conflict processing on hot standby servers."
 msgstr ""
 
 #: utils/misc/guc.c:1390
@@ -6527,7 +6568,9 @@ msgstr "Zeit zwischen TCP-Keepalive-Neuübertragungen."
 msgid ""
 "Set the amount of traffic to send and receive before renegotiating the "
 "encryption keys."
-msgstr "Setzt die Traffic-Menge, die gesendet oder empfangen wird, bevor der Verschlüsselungsschlüssel neu ausgehandelt wird."
+msgstr ""
+"Setzt die Traffic-Menge, die gesendet oder empfangen wird, bevor der "
+"Verschlüsselungsschlüssel neu ausgehandelt wird."
 
 #: utils/misc/guc.c:1984
 msgid "Maximum number of TCP keepalive retransmits."
@@ -6972,7 +7015,8 @@ msgstr "Setzt das Sitzungsverhalten für Trigger und Regeln."
 
 #: utils/misc/guc.c:2753
 msgid "Sets the message levels that are logged during recovery."
-msgstr "Setzt die Meldungstypen, die während der Wiederherstellung geloggt werden."
+msgstr ""
+"Setzt die Meldungstypen, die während der Wiederherstellung geloggt werden."
 
 #: utils/misc/guc.c:2763
 msgid "Collects function-level statistics on database activity."
@@ -7202,7 +7246,9 @@ msgstr ""
 
 #: utils/misc/guc.c:7594
 msgid "cannot set transaction read-write mode during recovery"
-msgstr "kann den Read/Write-Modus einer Transaktion nicht während der Wiederherstellung setzen"
+msgstr ""
+"kann den Read/Write-Modus einer Transaktion nicht während der "
+"Wiederherstellung setzen"
 
 #: utils/misc/help_config.c:131
 msgid "internal error: unrecognized run-time parameter type\n"
@@ -7376,7 +7422,9 @@ msgstr "Record-Typ wurde nicht registriert"
 
 #: utils/cache/relmapper.c:454
 msgid "cannot PREPARE a transaction that modified relation mapping"
-msgstr "PREPARE kann nicht in einer Transaktion ausgeführt werden, die das Relation-Mapping geändert hat"
+msgstr ""
+"PREPARE kann nicht in einer Transaktion ausgeführt werden, die das Relation-"
+"Mapping geändert hat"
 
 #: utils/cache/relmapper.c:596 utils/cache/relmapper.c:702
 #, c-format
@@ -10633,7 +10681,8 @@ msgstr "Operator %s ist nicht kommutativ"
 
 #: commands/indexcmds.c:965
 msgid "Only commutative operators can be used in exclusion constraints."
-msgstr "In Exclusion-Constraints können nur kommutative Operatoren verwendet werden."
+msgstr ""
+"In Exclusion-Constraints können nur kommutative Operatoren verwendet werden."
 
 #: commands/indexcmds.c:991
 #, c-format
@@ -10644,7 +10693,9 @@ msgstr "Operator %s ist kein Mitglied der Operatorfamilie »%s«"
 msgid ""
 "The exclusion operator must be related to the index operator class for the "
 "constraint."
-msgstr "Der Exklusionsoperator muss in Beziehung zur Indexoperatorklasse des Constraints stehen."
+msgstr ""
+"Der Exklusionsoperator muss in Beziehung zur Indexoperatorklasse des "
+"Constraints stehen."
 
 #: commands/indexcmds.c:1029
 #, c-format
@@ -11465,7 +11516,9 @@ msgstr "Fremdschlüssel kann nicht mehr als %d Schlüssel haben"
 #: commands/tablecmds.c:5125
 #, c-format
 msgid "cannot use a deferrable primary key for referenced table \"%s\""
-msgstr "aufschiebbarer Primärschlüssel kann nicht für Tabelle »%s«, auf die verwiesen wird, verwendet werden"
+msgstr ""
+"aufschiebbarer Primärschlüssel kann nicht für Tabelle »%s«, auf die verwiesen "
+"wird, verwendet werden"
 
 #: commands/tablecmds.c:5142
 #, c-format
@@ -11475,7 +11528,9 @@ msgstr "in Tabelle »%s«, auf die verwiesen wird, gibt es keinen Primärschlüs
 #: commands/tablecmds.c:5292
 #, c-format
 msgid "cannot use a deferrable unique constraint for referenced table \"%s\""
-msgstr "aufschiebbarer Unique-Constraint kann nicht für Tabelle »%s«, auf die verwiesen wird, verwendet werden"
+msgstr ""
+"aufschiebbarer Unique-Constraint kann nicht für Tabelle »%s«, auf die "
+"verwiesen wird, verwendet werden"
 
 #: commands/tablecmds.c:5297
 #, c-format
@@ -11764,15 +11819,21 @@ msgstr "TRUNCATE FOR EACH ROW-Trigger werden nicht unterstützt"
 
 #: commands/trigger.c:233
 msgid "cannot use subquery in trigger WHEN condition"
-msgstr "Unteranfragen können nicht in der WHEN-Bedingung eines Triggers verwendet werden"
+msgstr ""
+"Unteranfragen können nicht in der WHEN-Bedingung eines Triggers verwendet "
+"werden"
 
 #: commands/trigger.c:237
 msgid "cannot use aggregate function in trigger WHEN condition"
-msgstr "Aggregatfunktionen können nicht in der WHEN-Bedingung eines Triggers verwendet werden"
+msgstr ""
+"Aggregatfunktionen können nicht in der WHEN-Bedingung eines Triggers "
+"verwendet werden"
 
 #: commands/trigger.c:241
 msgid "cannot use window function in trigger WHEN condition"
-msgstr "Fensterfunktionen können nicht in der WHEN-Bedingung eines Triggers verwendet werden"
+msgstr ""
+"Fensterfunktionen können nicht in der WHEN-Bedingung eines Triggers "
+"verwendet werden"
 
 #: commands/trigger.c:261 commands/trigger.c:274
 msgid "statement trigger's WHEN condition cannot reference column values"
@@ -12563,7 +12624,9 @@ msgstr "Cursor »%s« ist kein einfach aktualisierbarer Scan der Tabelle »%s«"
 #, c-format
 msgid ""
 "type of parameter %d (%s) does not match that when preparing the plan (%s)"
-msgstr "Typ von Parameter %d (%s) stimmt nicht mit dem überein, als der Plan vorbereitet worden ist (%s)"
+msgstr ""
+"Typ von Parameter %d (%s) stimmt nicht mit dem überein, als der Plan "
+"vorbereitet worden ist (%s)"
 
 #: executor/execCurrent.c:242 executor/execQual.c:1035
 #, c-format
@@ -12883,17 +12946,16 @@ msgid "more than one row returned by a subquery used as an expression"
 msgstr "als Ausdruck verwendete Unteranfrage ergab mehr als eine Zeile"
 
 #: executor/nodeWindowAgg.c:1233
-#, fuzzy
-msgid "frame starting offset must not be NULL"
-msgstr "%s: Multitransaktions-Offset (-O) darf nicht -1 sein\n"
+msgid "frame starting offset must not be null"
+msgstr "Frame-Start-Offset darf nicht NULL sein"
 
 #: executor/nodeWindowAgg.c:1246
 msgid "frame starting offset must not be negative"
 msgstr "Frame-Start-Offset darf nicht negativ sein"
 
 #: executor/nodeWindowAgg.c:1259
-msgid "frame ending offset must not be NULL"
-msgstr ""
+msgid "frame ending offset must not be null"
+msgstr "Frame-Ende-Offset darf nicht NULL sein"
 
 #: executor/nodeWindowAgg.c:1272
 msgid "frame ending offset must not be negative"
@@ -13092,16 +13154,20 @@ msgid "User was holding a relation lock for too long."
 msgstr "Benutzer hat Relationssperre zu lange gehalten."
 
 #: tcop/postgres.c:2276
-msgid "User was or may have been using tablespace that must be dropped."
-msgstr ""
+msgid "User was or might have been using tablespace that must be dropped."
+msgstr "Benutzer hat (möglicherweise) einen Tablespace verwendet, der gelöscht werden muss."
 
 #: tcop/postgres.c:2279
 msgid "User query might have needed to see row versions that must be removed."
-msgstr "Benutzeranfrage hat möglicherweise Zeilenversionen sehen müssen, die entfernt werden müssen."
+msgstr ""
+"Benutzeranfrage hat möglicherweise Zeilenversionen sehen müssen, die "
+"entfernt werden müssen."
 
 #: tcop/postgres.c:2282 storage/ipc/standby.c:514
 msgid "User transaction caused buffer deadlock with recovery."
-msgstr "Benutzertransaktion hat Verklemmung (Deadlock) mit Wiederherstellung verursacht."
+msgstr ""
+"Benutzertransaktion hat Verklemmung (Deadlock) mit Wiederherstellung "
+"verursacht."
 
 #: tcop/postgres.c:2285
 msgid "User was connected to a database that must be dropped."
@@ -13832,7 +13898,9 @@ msgstr "SELECT FOR UPDATE/SHARE ist nicht mit Fensterfunktionen erlaubt"
 msgid ""
 "SELECT FOR UPDATE/SHARE is not allowed with set-returning functions in the "
 "target list"
-msgstr "SELECT FOR UPDATE/SHARE ist nicht mit Funktionen mit Ergebnismenge in der Targetliste erlaubt"
+msgstr ""
+"SELECT FOR UPDATE/SHARE ist nicht mit Funktionen mit Ergebnismenge in der "
+"Targetliste erlaubt"
 
 #: parser/analyze.c:2126
 msgid "SELECT FOR UPDATE/SHARE must specify unqualified relation names"
@@ -13852,7 +13920,8 @@ msgstr "SELECT FOR UPDATE/SHARE kann nicht auf eine Funktion angewendet werden"
 
 #: parser/analyze.c:2180
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a WITH query"
-msgstr "SELECT FOR UPDATE/SHARE kann nicht auf eine WITH-Anfrage angewendet werden"
+msgstr ""
+"SELECT FOR UPDATE/SHARE kann nicht auf eine WITH-Anfrage angewendet werden"
 
 #: parser/analyze.c:2194
 #, c-format
@@ -14058,7 +14127,9 @@ msgstr "Frame-Klausel von Fenster »%s« kann nicht aufgehoben werden"
 msgid ""
 "in an aggregate with DISTINCT, ORDER BY expressions must appear in argument "
 "list"
-msgstr "in einer Aggregatfunktion mit DISTINCT müssen ORDER-BY-Ausdrücke in der Argumentliste erscheinen"
+msgstr ""
+"in einer Aggregatfunktion mit DISTINCT müssen ORDER-BY-Ausdrücke in der "
+"Argumentliste erscheinen"
 
 #: parser/parse_clause.c:1750
 msgid "for SELECT DISTINCT, ORDER BY expressions must appear in select list"
@@ -14489,7 +14560,8 @@ msgstr "DISTINCT ist für Fensterfunktionen nicht implementiert"
 
 #: parser/parse_func.c:471
 msgid "aggregate ORDER BY is not implemented for window functions"
-msgstr "ORDER BY in Aggregatfunktion ist für Fensterfunktionen nicht implementiert"
+msgstr ""
+"ORDER BY in Aggregatfunktion ist für Fensterfunktionen nicht implementiert"
 
 #: parser/parse_func.c:477
 msgid "window functions cannot return sets"
@@ -15007,7 +15079,9 @@ msgstr "Frame-Beginn kann nicht UNBOUNDED FOLLOWING sein"
 
 #: gram.y:10026
 msgid "frame starting from following row cannot end with current row"
-msgstr "Frame der in der folgenden Zeile beginnt kann nicht in der aktuellen Zeile enden"
+msgstr ""
+"Frame der in der folgenden Zeile beginnt kann nicht in der aktuellen Zeile "
+"enden"
 
 #: gram.y:10049
 msgid "frame end cannot be UNBOUNDED PRECEDING"
@@ -15015,11 +15089,15 @@ msgstr "Frame-Ende kann nicht UNBOUNDED PRECEDING sein"
 
 #: gram.y:10055
 msgid "frame starting from current row cannot have preceding rows"
-msgstr "Frame der in der aktuellen Zeile beginnt kann keine vorhergehenden Zeilen haben"
+msgstr ""
+"Frame der in der aktuellen Zeile beginnt kann keine vorhergehenden Zeilen "
+"haben"
 
 #: gram.y:10062
 msgid "frame starting from following row cannot have preceding rows"
-msgstr "Frame der in der folgenden Zeile beginnt kann keine vorhergehenden Zeilen haben"
+msgstr ""
+"Frame der in der folgenden Zeile beginnt kann keine vorhergehenden Zeilen "
+"haben"
 
 #: gram.y:10701
 msgid "type modifier cannot have AS name"
@@ -16126,7 +16204,8 @@ msgstr "konnte neue Logdatei »%s« nicht öffnen: %m"
 
 #: postmaster/syslogger.c:1079 postmaster/syslogger.c:1146
 msgid "disabling automatic rotation (use SIGHUP to re-enable)"
-msgstr "automatische Rotation abgeschaltet (SIGHUP zum Wiederanschalten verwenden)"
+msgstr ""
+"automatische Rotation abgeschaltet (SIGHUP zum Wiederanschalten verwenden)"
 
 #: rewrite/rewriteDefine.c:108 rewrite/rewriteDefine.c:756
 #, c-format
@@ -16448,7 +16527,9 @@ msgstr "Prüfen Sie den freien Festplattenplatz."
 #: storage/smgr/md.c:475
 #, c-format
 msgid "could not extend file \"%s\": wrote only %d of %d bytes at block %u"
-msgstr "konnte Datei »%s« nicht erweitern: es wurden nur %d von %d Bytes bei Block %u geschrieben"
+msgstr ""
+"konnte Datei »%s« nicht erweitern: es wurden nur %d von %d Bytes bei Block %u "
+"geschrieben"
 
 #: storage/smgr/md.c:638
 #, c-format
@@ -16458,7 +16539,9 @@ msgstr "konnte Block %u in Datei »%s« nicht lesen: %m"
 #: storage/smgr/md.c:654
 #, c-format
 msgid "could not read block %u in file \"%s\": read only %d of %d bytes"
-msgstr "konnte Block %u in Datei »%s« nicht lesen: es wurden nur %d von %d Bytes gelesen"
+msgstr ""
+"konnte Block %u in Datei »%s« nicht lesen: es wurden nur %d von %d Bytes "
+"gelesen"
 
 #: storage/smgr/md.c:711
 #, c-format
@@ -16468,12 +16551,15 @@ msgstr "konnte Block %u in Datei »%s« nicht schreiben: %m"
 #: storage/smgr/md.c:716
 #, c-format
 msgid "could not write block %u in file \"%s\": wrote only %d of %d bytes"
-msgstr "konnte Block %u in Datei »%s« nicht schreiben: es wurden nur %d von %d Bytes geschrieben"
+msgstr ""
+"konnte Block %u in Datei »%s« nicht schreiben: es wurden nur %d von %d Bytes "
+"geschrieben"
 
 #: storage/smgr/md.c:815
 #, c-format
 msgid "could not truncate file \"%s\" to %u blocks: it's only %u blocks now"
-msgstr "konnte Datei »%s« nicht auf %u Blöcke kürzen: es sind jetzt nur %u Blöcke"
+msgstr ""
+"konnte Datei »%s« nicht auf %u Blöcke kürzen: es sind jetzt nur %u Blöcke"
 
 #: storage/smgr/md.c:864
 #, c-format
@@ -16626,14 +16712,16 @@ msgstr "unbekannter Locktag-Typ %d"
 #: storage/lmgr/lock.c:519
 #, c-format
 msgid ""
-"cannot acquire lockmode %s on database objects while recovery is in progress"
+"cannot acquire lock mode %s on database objects while recovery is in progress"
 msgstr ""
 
 #: storage/lmgr/lock.c:521
 msgid ""
 "Only RowExclusiveLock or less can be acquired on database objects during "
 "recovery."
-msgstr "Nur Sperren gleich oder unter RowExclusiveLock können während der Wiederherstellung auf Datenbankobjekte gesetzt werden."
+msgstr ""
+"Nur Sperren gleich oder unter RowExclusiveLock können während der "
+"Wiederherstellung auf Datenbankobjekte gesetzt werden."
 
 #: storage/lmgr/lock.c:615 storage/lmgr/lock.c:684 storage/lmgr/lock.c:2503
 #: storage/lmgr/lock.c:2568
@@ -16680,7 +16768,9 @@ msgstr "Prozess %d konnte %s für %s nach %ld.%03d ms nicht erlangen"
 
 #: storage/ipc/procarray.c:506
 msgid "consistent state delayed because recovery snapshot incomplete"
-msgstr "konsistenter Zustand ist verzögert, weil Wiederherstellungs-Snapshot unvollständig ist"
+msgstr ""
+"konsistenter Zustand ist verzögert, weil Wiederherstellungs-Snapshot "
+"unvollständig ist"
 
 #: storage/ipc/procarray.c:2224
 #, c-format
