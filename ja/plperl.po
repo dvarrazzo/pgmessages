@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL 8.5lpha3\n"
+"Project-Id-Version: PostgreSQL 9.0alpha4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-02-21 21:24+0900\n"
-"PO-Revision-Date: 2010-02-21 22:15+0900\n"
+"POT-Creation-Date: 2010-03-27 16:28+0900\n"
+"PO-Revision-Date: 2010-03-27 16:42+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
 "MIME-Version: 1.0\n"
@@ -16,98 +16,157 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: plperl.c:206
+#: plperl.c:241
 msgid ""
 "If true, trusted and untrusted Perl code will be compiled in strict mode."
 msgstr ""
-"真ならば、trusted/untrusted の Perl コードは strict モードでコンパイルされます。"
+"真ならば、trusted および untrusted な Perl コードは "
+"strict モードでコンパイルされます。"
 
-#: plperl.c:630 plperl.c:823
-msgid "Perl hash contains nonexistent column \"%s\""
-msgstr "Perl ハッシュに存在しない列 \"%s\" が含まれます"
+#: plperl.c:249
+msgid ""
+"Perl initialization code to execute when a perl interpreter is initialized."
+msgstr "perl インタープリターが初期化される時に実行される perl の初期化コード"
 
-#: plperl.c:799
-msgid "$_TD->{new} does not exist"
-msgstr "$_TD->{new} は存在しません"
+#: plperl.c:265
+msgid "Perl initialization code to execute once when plperl is first used."
+msgstr "plperl が最初に使われる時に一度だけ実行される perl の初期化コード"
 
-#: plperl.c:803
-msgid "$_TD->{new} is not a hash reference"
-msgstr "$_TD->{new}はハッシュへの参照ではありません"
+#: plperl.c:273
+msgid "Perl initialization code to execute once when plperlu is first used."
+msgstr "plperlu が最初に使われる時に一度だけ実行される perl の初期化コード"
 
-#: plperl.c:1040 plperl.c:1755
-msgid "PL/Perl functions cannot return type %s"
-msgstr "PL/Perl 関数は %s 型を返すことができません"
-
-#: plperl.c:1052 plperl.c:1802
+#: plperl.c:419 plperl.c:554 plperl.c:559 plperl.c:693 plperl.c:701
+#: plperl.c:714 plperl.c:734 plperl.c:750 plperl.c:1288 plperl.c:1401
+#: plperl.c:1457
 #, c-format
-msgid "PL/Perl functions cannot accept type %s"
-msgstr "PL/Perl関数は%s型を受け付けられません"
-
-#: plperl.c:1128 plperl.c:1256 plperl.c:1312
 msgid "%s"
 msgstr "%s"
 
-#: plperl.c:1364
+#: plperl.c:420
+msgid "While executing PostgreSQL::InServer::SPI::bootstrap."
+msgstr "PostgreSQL::InServer::SPI::bootstrap の実行中"
+
+#: plperl.c:555
+msgid "While parsing perl initialization."
+msgstr "perl の初期化部分のパース中"
+
+#: plperl.c:560
+msgid "While running perl initialization."
+msgstr "perl の初期化部分の実行中"
+
+#: plperl.c:694
+msgid "While executing PLC_SAFE_BAD."
+msgstr "PLC_SAFE_BAD の実行中"
+
+#: plperl.c:702
+msgid "While executing PLC_SAFE_OK."
+msgstr "PLC_SAFE_OK の実行中"
+
+#: plperl.c:715
+msgid "While executing utf8fix."
+msgstr "utf8fix の実行中"
+
+#: plperl.c:735
+msgid "While executing plperl.on_plperl_init."
+msgstr "plperl.on_plperl_init の実行中"
+
+#: plperl.c:751
+msgid "While executing plperl.on_plperlu_init."
+msgstr "plperl.on_plperlu_init の実行中"
+
+#: plperl.c:793 plperl.c:989
+#, c-format
+msgid "Perl hash contains nonexistent column \"%s\""
+msgstr "Perl ハッシュに存在しない列 \"%s\" が含まれます"
+
+#: plperl.c:965
+msgid "$_TD->{new} does not exist"
+msgstr "$_TD->{new} は存在しません"
+
+#: plperl.c:969
+msgid "$_TD->{new} is not a hash reference"
+msgstr "$_TD->{new}はハッシュへの参照ではありません"
+
+#: plperl.c:1202 plperl.c:1898
+#, c-format
+msgid "PL/Perl functions cannot return type %s"
+msgstr "PL/Perl 関数は %s 型を返すことができません"
+
+#: plperl.c:1214 plperl.c:1944
+#, c-format
+msgid "PL/Perl functions cannot accept type %s"
+msgstr "PL/Perl 関数は %s 型を受け付けることができません"
+
+#: plperl.c:1292
+#, c-format
+msgid "didn't get a GLOB from compiling %s via %s"
+msgstr "%$2s 経由の %$1s のコンパイルから GLOB を取得しませんでした"
+
+#: plperl.c:1509
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "このコンテキストでは、集合値の関数は集合を受け付けられません"
 
-#: plperl.c:1407
+#: plperl.c:1552
 msgid ""
 "set-returning PL/Perl function must return reference to array or use "
 "return_next"
 msgstr ""
-"集合を返す PL/Perl 関数は配列への参照を返すか、または return_next"
-"を使用する必要があります"
+"集合を返す PL/Perl 関数は配列への参照を返すか、"
+"または return_next を使用する必要があります"
 
-#: plperl.c:1440
+#: plperl.c:1585
 msgid "composite-returning PL/Perl function must return reference to hash"
 msgstr "複合型を返す PL/Perl 関数はハッシュへの参照を返す必要があります"
 
-#: plperl.c:1449
+#: plperl.c:1594
 msgid ""
 "function returning record called in context that cannot accept type record"
 msgstr ""
-"レコード型を受け付けられないコンテキストでレコードを返す関数が"
-"呼び出されました"
+"レコード型を受け付けられないコンテキストでレコードを返す関数が呼び出されまし"
+"た"
 
-#: plperl.c:1571
+#: plperl.c:1714
 msgid "ignoring modified row in DELETE trigger"
 msgstr "DELETE トリガで変更された行を無視します"
 
-#: plperl.c:1579
+#: plperl.c:1722
 msgid ""
 "result of PL/Perl trigger function must be undef, \"SKIP\", or \"MODIFY\""
-msgstr "PL/Perl トリガ関数の結果は undef, \"SKIP\", \"MODIFY\""
-"のいずれかでなければなりません"
+msgstr ""
+"PL/Perl トリガ関数の結果は undef, \"SKIP\", \"MODIFY\"のいずれかでなければな"
+"りません"
 
-#: plperl.c:1689
+#: plperl.c:1833
 msgid "out of memory"
 msgstr "メモリ不足です"
 
-#: plperl.c:1746
+#: plperl.c:1889
 msgid "trigger functions can only be called as triggers"
 msgstr "トリガー関数はトリガーとしてのみコールできます"
 
-#: plperl.c:2042
+#: plperl.c:2199
 msgid "cannot use return_next in a non-SETOF function"
 msgstr "SETOF 関数以外では return_next を使用することはできません"
 
-#: plperl.c:2048
+#: plperl.c:2205
 msgid ""
 "SETOF-composite-returning PL/Perl function must call return_next with "
 "reference to hash"
 msgstr ""
-"複合型の SETOF を返す PL/Perl 関数は、ハッシュへの参照を持つ"
-"return_next を呼び出さなければなりません"
+"複合型の SETOF を返す PL/Perl 関数は、ハッシュへの参照を持つreturn_next を呼"
+"び出さなければなりません"
 
-#: plperl.c:2828
+#: plperl.c:2992
+#, c-format
 msgid "PL/Perl function \"%s\""
 msgstr "PL/perl 関数 \"%s\""
 
-#: plperl.c:2839
+#: plperl.c:3003
+#, c-format
 msgid "compilation of PL/Perl function \"%s\""
 msgstr "PL/perl 関数 \"%s\" のコンパイル"
 
-#: plperl.c:2848
+#: plperl.c:3012
 msgid "PL/Perl anonymous code block"
 msgstr "PL/Perl の無名コードブロックを実行する"
