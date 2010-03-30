@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.65 2010/03/21 08:39:10 petere Exp $
+# $Id: postgres.po,v 1.66 2010/03/30 16:08:30 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-03-21 02:41+0000\n"
-"PO-Revision-Date: 2010-03-21 10:37+0200\n"
+"POT-Creation-Date: 2010-03-30 14:41+0000\n"
+"PO-Revision-Date: 2010-03-30 15:58+0000\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -175,8 +175,8 @@ msgstr "GSSAPI wird in Protokollversion 2 nicht unterstützt"
 #: utils/hash/dynahash.c:363 utils/hash/dynahash.c:435
 #: utils/hash/dynahash.c:929 commands/sequence.c:936 lib/stringinfo.c:265
 #: postmaster/postmaster.c:1961 postmaster/postmaster.c:1994
-#: postmaster/postmaster.c:3123 postmaster/postmaster.c:3793
-#: postmaster/postmaster.c:3874 postmaster/postmaster.c:4460
+#: postmaster/postmaster.c:3123 postmaster/postmaster.c:3800
+#: postmaster/postmaster.c:3881 postmaster/postmaster.c:4467
 #: storage/buffer/buf_init.c:154 storage/buffer/localbuf.c:348
 #: storage/file/fd.c:355 storage/file/fd.c:738 storage/file/fd.c:856
 #: storage/ipc/procarray.c:715 storage/ipc/procarray.c:1067
@@ -852,13 +852,17 @@ msgstr "unbekannter Authentifizierungsoptionsname: »%s«"
 msgid ""
 "cannot use ldapbasedn, ldapbinddn, ldapbindpasswd, or ldapsearchattribute "
 "together with ldapprefix"
-msgstr "ldapbasedn, ldapbinddn, ldapbindpasswd oder ldapsearchattribute kann nicht zusammen mit ldapprefix verwendet werden"
+msgstr ""
+"ldapbasedn, ldapbinddn, ldapbindpasswd oder ldapsearchattribute kann nicht "
+"zusammen mit ldapprefix verwendet werden"
 
 #: libpq/hba.c:1284
 msgid ""
 "authentication method \"ldap\" requires argument \"ldapbasedn\", \"ldapprefix"
 "\", or \"ldapsuffix\" to be set"
-msgstr "Authentifizierungsmethode »ldap« benötigt Argument »ldapbasedn«, »ldapprefix« oder »ldapsuffix«"
+msgstr ""
+"Authentifizierungsmethode »ldap« benötigt Argument »ldapbasedn«, »ldapprefix« "
+"oder »ldapsuffix«"
 
 #: libpq/hba.c:1472 guc-file.l:436
 #, c-format
@@ -1557,7 +1561,7 @@ msgid "could not write archive status file \"%s\": %m"
 msgstr "konnte Archivstatusdatei »%s« nicht schreiben: %m"
 
 #: access/transam/xlog.c:1682 access/transam/xlog.c:8955
-#: replication/walsender.c:540 replication/walreceiver.c:475
+#: replication/walsender.c:541 replication/walreceiver.c:475
 #, c-format
 msgid "could not seek in log file %u, segment %u to offset %u: %m"
 msgstr ""
@@ -1577,14 +1581,14 @@ msgstr "minimaler Recovery-Punkt auf %X/%X aktualisiert"
 
 #: access/transam/xlog.c:2229 access/transam/xlog.c:2333
 #: access/transam/xlog.c:2562 access/transam/xlog.c:2620
-#: access/transam/xlog.c:2680 replication/walsender.c:529
+#: access/transam/xlog.c:2680 replication/walsender.c:530
 #, c-format
 msgid "could not open file \"%s\" (log file %u, segment %u): %m"
 msgstr "konnte Datei »%s« nicht öffnen (Logdatei %u, Segment %u): %m"
 
 #: access/transam/xlog.c:2254 access/transam/xlog.c:2387
 #: access/transam/xlog.c:4160 access/transam/xlog.c:7977
-#: access/transam/xlog.c:8131 postmaster/postmaster.c:3572
+#: access/transam/xlog.c:8131 postmaster/postmaster.c:3579
 #: storage/smgr/md.c:278 ../port/copydir.c:168
 #, c-format
 msgid "could not create file \"%s\": %m"
@@ -1593,8 +1597,8 @@ msgstr "kann Datei »%s« nicht erstellen: %m"
 #: access/transam/xlog.c:2286 access/transam/xlog.c:2419
 #: access/transam/xlog.c:4212 access/transam/xlog.c:4268
 #: utils/init/miscinit.c:1039 utils/init/miscinit.c:1048 utils/misc/guc.c:6939
-#: utils/misc/guc.c:6964 commands/copy.c:1316 postmaster/postmaster.c:3582
-#: postmaster/postmaster.c:3592 ../port/copydir.c:190
+#: utils/misc/guc.c:6964 commands/copy.c:1316 postmaster/postmaster.c:3589
+#: postmaster/postmaster.c:3599 ../port/copydir.c:190
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "konnte nicht in Datei »%s« schreiben: %m"
@@ -1821,7 +1825,9 @@ msgstr "WAL-Datei stammt von einem anderen Datenbanksystem"
 msgid ""
 "WAL file database system identifier is %s, pg_control database system "
 "identifier is %s."
-msgstr "Datenbanksystemidentifikator in der WAL-Datei ist %s, Datenbanksystemidentifikator in pg_control ist %s."
+msgstr ""
+"Datenbanksystemidentifikator in der WAL-Datei ist %s, "
+"Datenbanksystemidentifikator in pg_control ist %s."
 
 #: access/transam/xlog.c:3888
 msgid "Incorrect XLOG_SEG_SIZE in page header."
@@ -2721,7 +2727,7 @@ msgid "array must not contain null values"
 msgstr "Array darf keine NULL-Werte enthalten"
 
 #: access/gin/ginentrypage.c:83 access/gin/ginentrypage.c:118
-#: access/nbtree/nbtinsert.c:521 access/nbtree/nbtsort.c:496
+#: access/nbtree/nbtinsert.c:523 access/nbtree/nbtsort.c:496
 #, c-format
 msgid "index row size %lu exceeds maximum %lu for index \"%s\""
 msgstr "Größe %lu der Indexzeile überschreitet Maximum %lu für Index »%s«"
@@ -2730,26 +2736,26 @@ msgstr "Größe %lu der Indexzeile überschreitet Maximum %lu für Index »%s«"
 msgid "GIN indexes do not support whole-index scans"
 msgstr "GIN-Indexe unterstützen keine Scans des ganzen Index"
 
-#: access/nbtree/nbtinsert.c:384
+#: access/nbtree/nbtinsert.c:385
 #, c-format
 msgid "duplicate key value violates unique constraint \"%s\""
 msgstr "doppelter Schlüsselwert verletzt Unique-Constraint »%s«"
 
-#: access/nbtree/nbtinsert.c:386
+#: access/nbtree/nbtinsert.c:387
 #, c-format
 msgid "Key %s already exists."
 msgstr "Schlüssel »%s« existiert bereits."
 
-#: access/nbtree/nbtinsert.c:448 executor/execUtils.c:1318
+#: access/nbtree/nbtinsert.c:449 executor/execUtils.c:1318
 #, c-format
 msgid "failed to re-find tuple within index \"%s\""
 msgstr ""
 
-#: access/nbtree/nbtinsert.c:450 executor/execUtils.c:1320
+#: access/nbtree/nbtinsert.c:451 executor/execUtils.c:1320
 msgid "This may be because of a non-immutable index expression."
 msgstr ""
 
-#: access/nbtree/nbtinsert.c:525 access/nbtree/nbtsort.c:500
+#: access/nbtree/nbtinsert.c:527 access/nbtree/nbtsort.c:500
 msgid ""
 "Values larger than 1/3 of a buffer page cannot be indexed.\n"
 "Consider a function index of an MD5 hash of the value, or use full text "
@@ -2840,7 +2846,9 @@ msgstr "konnte nicht mit dem Primärserver verbinden: %s"
 msgid ""
 "could not receive database system identifier and timeline ID from the "
 "primary server: %s"
-msgstr "konnte Datenbanksystemidentifikator und Timeline-ID nicht vom Primärserver empfangen: %s"
+msgstr ""
+"konnte Datenbanksystemidentifikator und Timeline-ID nicht vom Primärserver "
+"empfangen: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:116
 msgid "invalid response from primary server"
@@ -2853,12 +2861,15 @@ msgstr "1 Tupel mit 2 Feldern erwartet, %d Tupel mit %d Feldern erhalten."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:132
 msgid "database system identifier differs between the primary and standby"
-msgstr "Datenbanksystemidentifikator unterscheidet sich zwischen Primär- und Standby-Server"
+msgstr ""
+"Datenbanksystemidentifikator unterscheidet sich zwischen Primär- und Standby-"
+"Server"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:133
 #, c-format
 msgid "The primary's identifier is %s, the standby's identifier is %s."
-msgstr "Identifikator des Primärservers ist %s, Identifikator des Standby ist %s."
+msgstr ""
+"Identifikator des Primärservers ist %s, Identifikator des Standby ist %s."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:145
 #, c-format
@@ -2906,36 +2917,36 @@ msgstr ""
 "Wiederherstellung läuft noch, WAL-Streaming-Verbindungen können nicht "
 "akzeptiert werden"
 
-#: replication/walsender.c:280
+#: replication/walsender.c:281
 #, c-format
 msgid "invalid standby query string: %s"
 msgstr "ungültige Standby-Anfragezeichenkette: %s"
 
-#: replication/walsender.c:293 replication/walsender.c:319
+#: replication/walsender.c:294 replication/walsender.c:320
 msgid "unexpected EOF on standby connection"
 msgstr "unerwartetes EOF auf Standby-Verbindung"
 
-#: replication/walsender.c:299
+#: replication/walsender.c:300
 #, c-format
 msgid "invalid standby handshake message type %d"
 msgstr "ungültiger Standby-Handshake-Message-Typ %d"
 
-#: replication/walsender.c:340
+#: replication/walsender.c:341
 #, c-format
 msgid "invalid standby closing message type %d"
 msgstr "ungültiger Standby-Closing-Message-Typ %d"
 
-#: replication/walsender.c:478
+#: replication/walsender.c:479
 msgid "sorry, too many standbys already"
 msgstr "tut mir leid, schon zu viele Standbys"
 
-#: replication/walsender.c:555
+#: replication/walsender.c:556
 #, c-format
 msgid "could not read from log file %u, segment %u, offset %u, length %lu: %m"
 msgstr ""
 "konnte nicht aus Logdatei %u, Segment %u bei Position %u, Länge %lu lesen: %m"
 
-#: replication/walsender.c:786
+#: replication/walsender.c:787
 msgid "not enough shared memory for walsender"
 msgstr "nicht genug Shared-Memory für WAL-Sender"
 
@@ -2946,7 +2957,8 @@ msgstr ""
 
 #: replication/walreceiver.c:286
 msgid "cannot continue WAL streaming, recovery has already ended"
-msgstr "kann WAL-Streaming nicht fortsetzen, Wiederherstellung ist bereits beendet"
+msgstr ""
+"kann WAL-Streaming nicht fortsetzen, Wiederherstellung ist bereits beendet"
 
 #: replication/walreceiver.c:400
 msgid "invalid WAL message received from primary"
@@ -3109,8 +3121,8 @@ msgstr "»%s« ist keine Sequenz"
 msgid "column \"%s\" of relation \"%s\" does not exist"
 msgstr "Spalte »%s« von Relation »%s« existiert nicht"
 
-#: utils/adt/acl.c:2975 utils/adt/dbsize.c:149 utils/init/postinit.c:584
-#: utils/init/postinit.c:652 utils/init/postinit.c:669 catalog/aclchk.c:613
+#: utils/adt/acl.c:2975 utils/adt/dbsize.c:149 utils/init/postinit.c:594
+#: utils/init/postinit.c:662 utils/init/postinit.c:679 catalog/aclchk.c:613
 #: commands/comment.c:698 commands/dbcommands.c:760 commands/dbcommands.c:905
 #: commands/dbcommands.c:1004 commands/dbcommands.c:1181
 #: commands/dbcommands.c:1366 commands/dbcommands.c:1410
@@ -5463,45 +5475,55 @@ msgstr "Bibliothek »%s« geladen"
 msgid "could not load pg_hba.conf"
 msgstr "konnte pg_hba.conf nicht laden"
 
-#: utils/init/postinit.c:225 utils/init/postinit.c:229
+#: utils/init/postinit.c:227
+#, c-format
+msgid "replication connection authorized: user=%s host=%s port=%s"
+msgstr "Replikationsverbindung authorisiert: Benutzer=%s Host=%s Port=%s"
+
+#: utils/init/postinit.c:233
+#, c-format
+msgid "replication connection authorized: user=%s host=%s"
+msgstr "Replikationsverbindung authorisiert: Benutzer=%s Host=%s"
+
+#: utils/init/postinit.c:239
 #, c-format
 msgid "connection authorized: user=%s database=%s"
 msgstr "Verbindung authorisiert: Benutzer=%s Datenbank=%s"
 
-#: utils/init/postinit.c:259
+#: utils/init/postinit.c:269
 #, c-format
 msgid "database \"%s\" has disappeared from pg_database"
 msgstr "Datenbank »%s« ist aus pg_database verschwunden"
 
-#: utils/init/postinit.c:261
+#: utils/init/postinit.c:271
 #, c-format
 msgid "Database OID %u now seems to belong to \"%s\"."
 msgstr "Datenbank-OID %u gehört jetzt anscheinend zu »%s«."
 
-#: utils/init/postinit.c:281
+#: utils/init/postinit.c:291
 #, c-format
 msgid "database \"%s\" is not currently accepting connections"
 msgstr "Datenbank »%s« akzeptiert gegenwärtig keine Verbindungen"
 
-#: utils/init/postinit.c:294
+#: utils/init/postinit.c:304
 #, c-format
 msgid "permission denied for database \"%s\""
 msgstr "keine Berechtigung für Datenbank »%s«"
 
-#: utils/init/postinit.c:295
+#: utils/init/postinit.c:305
 msgid "User does not have CONNECT privilege."
 msgstr "Benutzer hat das CONNECT-Privileg nicht."
 
-#: utils/init/postinit.c:312
+#: utils/init/postinit.c:322
 #, c-format
 msgid "too many connections for database \"%s\""
 msgstr "zu viele Verbindungen für Datenbank »%s«"
 
-#: utils/init/postinit.c:334 utils/init/postinit.c:341
+#: utils/init/postinit.c:344 utils/init/postinit.c:351
 msgid "database locale is incompatible with operating system"
 msgstr "Datenbank-Locale ist inkompatibel mit Betriebssystem"
 
-#: utils/init/postinit.c:335
+#: utils/init/postinit.c:345
 #, c-format
 msgid ""
 "The database was initialized with LC_COLLATE \"%s\",  which is not "
@@ -5510,14 +5532,14 @@ msgstr ""
 "Die Datenbank wurde mit LC_COLLATE »%s« initialisiert, was von setlocale() "
 "nicht erkannt wird."
 
-#: utils/init/postinit.c:337 utils/init/postinit.c:344
+#: utils/init/postinit.c:347 utils/init/postinit.c:354
 msgid ""
 "Recreate the database with another locale or install the missing locale."
 msgstr ""
 "Erzeugen Sie die Datenbank neu mit einer anderen Locale oder installieren "
 "Sie die fehlende Locale."
 
-#: utils/init/postinit.c:342
+#: utils/init/postinit.c:352
 #, c-format
 msgid ""
 "The database was initialized with LC_CTYPE \"%s\",  which is not recognized "
@@ -5526,40 +5548,40 @@ msgstr ""
 "Die Datenbank wurde mit LC_CTYPE »%s« initialisiert, was von setlocale() "
 "nicht erkannt wird."
 
-#: utils/init/postinit.c:601
+#: utils/init/postinit.c:611
 #, c-format
 msgid "database %u does not exist"
 msgstr "Datenbank %u existiert nicht"
 
-#: utils/init/postinit.c:653
+#: utils/init/postinit.c:663
 msgid "It seems to have just been dropped or renamed."
 msgstr "Sie wurde anscheinend gerade gelöscht oder umbenannt."
 
-#: utils/init/postinit.c:671
+#: utils/init/postinit.c:681
 #, c-format
 msgid "The database subdirectory \"%s\" is missing."
 msgstr "Das Datenbankunterverzeichnis »%s« fehlt."
 
-#: utils/init/postinit.c:676
+#: utils/init/postinit.c:686
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "konnte nicht auf Verzeichnis »%s« zugreifen: %m"
 
-#: utils/init/postinit.c:712
+#: utils/init/postinit.c:722
 msgid "no roles are defined in this database system"
 msgstr "in diesem Datenbanksystem sind keine Rollen definiert"
 
-#: utils/init/postinit.c:713
+#: utils/init/postinit.c:723
 #, c-format
 msgid "You should immediately run CREATE USER \"%s\" SUPERUSER;."
 msgstr "Sie sollten sofort CREATE USER \"%s\" SUPERUSER; ausführen."
 
-#: utils/init/postinit.c:748
+#: utils/init/postinit.c:758
 msgid "must be superuser to connect during database shutdown"
 msgstr ""
 "nur Superuser können während des Herunterfahrens der Datenbank verbinden"
 
-#: utils/init/postinit.c:758
+#: utils/init/postinit.c:768
 msgid "connection limit exceeded for non-superusers"
 msgstr "Verbindungshöchstgrenze für Nicht-Superuser überschritten"
 
@@ -6222,7 +6244,7 @@ msgstr "Setzt die maximale Anzahl gleichzeitiger Verbindungen."
 #: utils/misc/guc.c:1381
 msgid ""
 "Sets the maximum delay to avoid conflict processing on hot standby servers."
-msgstr ""
+msgstr "Setzt die maximale Verzögerung bevor Konfliktauflösung auf Hot-Standby-Servern beginnt."
 
 #: utils/misc/guc.c:1390
 msgid "Sets the number of connection slots reserved for superusers."
@@ -7201,36 +7223,36 @@ msgstr "Versuch, den Parameter »%s« zu redefinieren"
 msgid "could not parse setting for parameter \"%s\""
 msgstr "konnte Wert von Parameter »%s« nicht lesen"
 
-#: utils/misc/guc.c:7334
+#: utils/misc/guc.c:7415
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "ungültige Listensyntax für Parameter »log_destination«"
 
-#: utils/misc/guc.c:7358
+#: utils/misc/guc.c:7439
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "unbekanntes »log_destination«-Schlüsselwort: »%s«"
 
-#: utils/misc/guc.c:7433
+#: utils/misc/guc.c:7514
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF wird nicht mehr unterstützt"
 
-#: utils/misc/guc.c:7505
+#: utils/misc/guc.c:7586
 msgid "assertion checking is not supported by this build"
 msgstr "Assert-Prüfungen werden von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:7520
+#: utils/misc/guc.c:7601
 msgid "Bonjour is not supported by this build"
 msgstr "Bonjour wird von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:7535
+#: utils/misc/guc.c:7616
 msgid "SSL is not supported by this build"
 msgstr "SSL wird von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:7549
+#: utils/misc/guc.c:7630
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "kann Parameter nicht einschalten, wenn »log_statement_stats« an ist"
 
-#: utils/misc/guc.c:7565
+#: utils/misc/guc.c:7646
 msgid ""
 "cannot enable \"log_statement_stats\" when \"log_parser_stats\", "
 "\"log_planner_stats\", or \"log_executor_stats\" is true"
@@ -7238,13 +7260,13 @@ msgstr ""
 "kann »log_statement_stats« nicht einschalten, wenn »log_parser_stats«, "
 "»log_planner_stats« oder »log_executor_stats« an ist"
 
-#: utils/misc/guc.c:7583
+#: utils/misc/guc.c:7664
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr ""
 "kann den Read/Write-Modus einer Transaktion nicht in einer Read-Only-"
 "Transaktion setzen"
 
-#: utils/misc/guc.c:7594
+#: utils/misc/guc.c:7675
 msgid "cannot set transaction read-write mode during recovery"
 msgstr ""
 "kann den Read/Write-Modus einer Transaktion nicht während der "
@@ -12935,7 +12957,7 @@ msgid "RIGHT JOIN is only supported with merge-joinable join conditions"
 msgstr ""
 "RIGHT JOIN wird nur für Merge-Verbund-fähige Verbundbedingungen unterstützt"
 
-#: executor/nodeMergejoin.c:1564 optimizer/path/joinpath.c:1258
+#: executor/nodeMergejoin.c:1564 optimizer/path/joinpath.c:1070
 msgid "FULL JOIN is only supported with merge-joinable join conditions"
 msgstr ""
 "FULL JOIN wird nur für Merge-Verbund-fähige Verbundbedingungen unterstützt"
@@ -13155,7 +13177,9 @@ msgstr "Benutzer hat Relationssperre zu lange gehalten."
 
 #: tcop/postgres.c:2276
 msgid "User was or might have been using tablespace that must be dropped."
-msgstr "Benutzer hat (möglicherweise) einen Tablespace verwendet, der gelöscht werden muss."
+msgstr ""
+"Benutzer hat (möglicherweise) einen Tablespace verwendet, der gelöscht "
+"werden muss."
 
 #: tcop/postgres.c:2279
 msgid "User query might have needed to see row versions that must be removed."
@@ -15736,20 +15760,20 @@ msgstr "konnte temporäre Statistikdatei »%s« nicht schließen: %m"
 msgid "could not rename temporary statistics file \"%s\" to \"%s\": %m"
 msgstr "konnte temporäre Statistikdatei »%s« nicht in »%s« umbenennen: %m"
 
-#: postmaster/pgstat.c:3370 postmaster/pgstat.c:3599
+#: postmaster/pgstat.c:3379 postmaster/pgstat.c:3608
 #, c-format
 msgid "could not open statistics file \"%s\": %m"
 msgstr "konnte Statistikdatei »%s« nicht öffnen: %m"
 
-#: postmaster/pgstat.c:3382 postmaster/pgstat.c:3392 postmaster/pgstat.c:3414
-#: postmaster/pgstat.c:3429 postmaster/pgstat.c:3492 postmaster/pgstat.c:3510
-#: postmaster/pgstat.c:3526 postmaster/pgstat.c:3544 postmaster/pgstat.c:3560
-#: postmaster/pgstat.c:3611 postmaster/pgstat.c:3622
+#: postmaster/pgstat.c:3391 postmaster/pgstat.c:3401 postmaster/pgstat.c:3423
+#: postmaster/pgstat.c:3438 postmaster/pgstat.c:3501 postmaster/pgstat.c:3519
+#: postmaster/pgstat.c:3535 postmaster/pgstat.c:3553 postmaster/pgstat.c:3569
+#: postmaster/pgstat.c:3620 postmaster/pgstat.c:3631
 #, c-format
 msgid "corrupted statistics file \"%s\""
 msgstr "verfälschte Statistikdatei »%s«"
 
-#: postmaster/pgstat.c:3916
+#: postmaster/pgstat.c:3925
 msgid "database hash table corrupted during cleanup --- abort"
 msgstr "Datenbank-Hash-Tabelle beim Aufräumen verfälscht --- Abbruch"
 
@@ -16069,87 +16093,92 @@ msgstr "konnte neuen Prozess für Verbindung nicht starten (fork-Fehler): %m"
 msgid "could not fork new process for connection: "
 msgstr "konnte neuen Prozess für Verbindung nicht starten (fork-Fehler): "
 
-#: postmaster/postmaster.c:3344
+#: postmaster/postmaster.c:3346
 #, c-format
-msgid "connection received: host=%s%s%s"
-msgstr "Verbindung empfangen: Host=%s%s%s"
+msgid "connection received: host=%s port=%s"
+msgstr "Verbindung empfangen: Host=%s Port=%s"
 
-#: postmaster/postmaster.c:3611
+#: postmaster/postmaster.c:3351
+#, c-format
+msgid "connection received: host=%s"
+msgstr "Verbindung empfangen: Host=%s"
+
+#: postmaster/postmaster.c:3618
 #, c-format
 msgid "could not execute server process \"%s\": %m"
 msgstr "konnte Serverprozess »%s« nicht ausführen: %m"
 
-#: postmaster/postmaster.c:4124
+#: postmaster/postmaster.c:4131
 msgid "database system is ready to accept read only connections"
 msgstr "Datenbanksystem ist bereit um lesende Verbindungen anzunehmen"
 
-#: postmaster/postmaster.c:4363
+#: postmaster/postmaster.c:4370
 #, c-format
 msgid "could not fork startup process: %m"
 msgstr "konnte Startprozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:4367
+#: postmaster/postmaster.c:4374
 #, c-format
 msgid "could not fork background writer process: %m"
 msgstr "konnte Background-Writer-Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:4371
+#: postmaster/postmaster.c:4378
 #, c-format
 msgid "could not fork WAL writer process: %m"
 msgstr "konnte WAL-Writer-Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:4375
+#: postmaster/postmaster.c:4382
 #, c-format
 msgid "could not fork WAL receiver process: %m"
 msgstr "konnte WAL-Receiver-Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:4379
+#: postmaster/postmaster.c:4386
 #, c-format
 msgid "could not fork process: %m"
 msgstr "konnte Prozess nicht starten (fork-Fehler): %m"
 
-#: postmaster/postmaster.c:4661
+#: postmaster/postmaster.c:4668
 #, c-format
 msgid "could not duplicate socket %d for use in backend: error code %d"
 msgstr ""
 "konnte Socket %d nicht für Verwendung in Backend duplizieren: Fehlercode %d"
 
-#: postmaster/postmaster.c:4693
+#: postmaster/postmaster.c:4700
 #, c-format
 msgid "could not create inherited socket: error code %d\n"
 msgstr "konnte geerbtes Socket nicht erzeugen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:4722 postmaster/postmaster.c:4729
+#: postmaster/postmaster.c:4729 postmaster/postmaster.c:4736
 #, c-format
 msgid "could not read from backend variables file \"%s\": %s\n"
 msgstr "konnte nicht aus Servervariablendatei »%s« lesen: %s\n"
 
-#: postmaster/postmaster.c:4738
+#: postmaster/postmaster.c:4745
 #, c-format
 msgid "could not remove file \"%s\": %s\n"
 msgstr "konnte Datei »%s« nicht löschen: %s\n"
 
-#: postmaster/postmaster.c:4751
+#: postmaster/postmaster.c:4758
 #, c-format
 msgid "could not map view of backend variables: error code %d\n"
 msgstr "konnte Sicht der Backend-Variablen nicht mappen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:4760
+#: postmaster/postmaster.c:4767
 #, c-format
 msgid "could not unmap view of backend variables: error code %d\n"
 msgstr "konnte Sicht der Backend-Variablen nicht unmappen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:4767
+#: postmaster/postmaster.c:4774
 #, c-format
 msgid "could not close handle to backend parameter variables: error code %d\n"
 msgstr ""
 "konnte Handle für Backend-Parametervariablen nicht schließen: Fehlercode %d\n"
 
-#: postmaster/postmaster.c:4910
+#: postmaster/postmaster.c:4917
 msgid "could not read exit code for process\n"
 msgstr "konnte Exitcode des Prozesses nicht lesen\n"
 
-#: postmaster/postmaster.c:4915
+#: postmaster/postmaster.c:4922
 msgid "could not post child completion status\n"
 msgstr "konnte Child-Completion-Status nicht versenden\n"
 
@@ -16713,7 +16742,7 @@ msgstr "unbekannter Locktag-Typ %d"
 #, c-format
 msgid ""
 "cannot acquire lock mode %s on database objects while recovery is in progress"
-msgstr ""
+msgstr "Sperrmodus %s kann während der Wiederherstellung nicht auf Datenbankobjekte gesetzt werden"
 
 #: storage/lmgr/lock.c:521
 msgid ""
