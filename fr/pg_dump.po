@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-03-06 17:20+0000\n"
-"PO-Revision-Date: 2010-03-06 19:09+0100\n"
+"POT-Creation-Date: 2010-04-24 01:20+0000\n"
+"PO-Revision-Date: 2010-04-24 13:23+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: PostgreSQLfr <pgsql-fr-generale@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -448,13 +448,13 @@ msgstr ""
 "PQgetCopyData().\n"
 
 #: pg_dump.c:1217
-#: pg_dump.c:12400
+#: pg_dump.c:12402
 #, c-format
 msgid "Error message from server: %s"
 msgstr "Message d'erreur du serveur : %s"
 
 #: pg_dump.c:1218
-#: pg_dump.c:12401
+#: pg_dump.c:12403
 #, c-format
 msgid "The command was: %s\n"
 msgstr "La commande était : %s\n"
@@ -498,31 +498,32 @@ msgid "saving large objects\n"
 msgstr "sauvegarde des « Large Objects »\n"
 
 #: pg_dump.c:2120
+#: pg_backup_archiver.c:943
 #, c-format
-msgid "dumpBlobs(): could not open large object %u: %s"
-msgstr "dumpBlobs() : n'a pas pu ouvrir le « Large Object » %u : %s"
+msgid "could not open large object %u: %s"
+msgstr "n'a pas pu ouvrir le « Large Object » %u : %s"
 
 #: pg_dump.c:2133
 #, c-format
-msgid "dumpBlobs(): error reading large object %u: %s"
-msgstr "dumpBlobs() : n'a pas pu lire le « Large Object » %u : %s"
+msgid "error reading large object %u: %s"
+msgstr "erreur lors de la lecture du « Large Object » %u : %s"
 
 #: pg_dump.c:2180
 #: pg_dump.c:2228
 #: pg_dump.c:2290
-#: pg_dump.c:6909
-#: pg_dump.c:7112
-#: pg_dump.c:7928
-#: pg_dump.c:8466
-#: pg_dump.c:8716
-#: pg_dump.c:8822
-#: pg_dump.c:9207
-#: pg_dump.c:9383
-#: pg_dump.c:9580
-#: pg_dump.c:9807
-#: pg_dump.c:9962
-#: pg_dump.c:10148
-#: pg_dump.c:12206
+#: pg_dump.c:6911
+#: pg_dump.c:7114
+#: pg_dump.c:7930
+#: pg_dump.c:8468
+#: pg_dump.c:8718
+#: pg_dump.c:8824
+#: pg_dump.c:9209
+#: pg_dump.c:9385
+#: pg_dump.c:9582
+#: pg_dump.c:9809
+#: pg_dump.c:9964
+#: pg_dump.c:10150
+#: pg_dump.c:12208
 #, c-format
 msgid "query returned %d row instead of one: %s\n"
 msgid_plural "query returned %d rows instead of one: %s\n"
@@ -585,56 +586,56 @@ msgstr "ATTENTION : le propriétaire de la table « %s » semble être invalide\n"
 msgid "reading indexes for table \"%s\"\n"
 msgstr "lecture des index de la table « %s »\n"
 
-#: pg_dump.c:4266
+#: pg_dump.c:4268
 #, c-format
 msgid "reading foreign key constraints for table \"%s\"\n"
 msgstr "lecture des contraintes de clés étrangères pour la table « %s »\n"
 
-#: pg_dump.c:4498
+#: pg_dump.c:4500
 #, c-format
 msgid "failed sanity check, parent table OID %u of pg_rewrite entry OID %u not found\n"
 msgstr ""
 "vérification échouée, OID %u de la table parent de l'OID %u de l'entrée de\n"
 "pg_rewrite introuvable\n"
 
-#: pg_dump.c:4582
+#: pg_dump.c:4584
 #, c-format
 msgid "reading triggers for table \"%s\"\n"
 msgstr "lecture des triggers pour la table « %s »\n"
 
-#: pg_dump.c:4745
+#: pg_dump.c:4747
 #, c-format
 msgid "query produced null referenced table name for foreign key trigger \"%s\" on table \"%s\" (OID of table: %u)\n"
 msgstr ""
 "la requête a produit une réference de nom de table null pour le trigger de\n"
 "clé étrangère « %s » sur la table « %s » (OID de la table : %u)\n"
 
-#: pg_dump.c:5115
+#: pg_dump.c:5117
 #, c-format
 msgid "finding the columns and types of table \"%s\"\n"
 msgstr "recherche des colonnes et types de la table « %s »\n"
 
-#: pg_dump.c:5234
+#: pg_dump.c:5236
 #, c-format
 msgid "invalid column numbering in table \"%s\"\n"
 msgstr "numérotation des colonnes invalide pour la table « %s »\n"
 
-#: pg_dump.c:5270
+#: pg_dump.c:5272
 #, c-format
 msgid "finding default expressions of table \"%s\"\n"
 msgstr "recherche des expressions par défaut de la table « %s »\n"
 
-#: pg_dump.c:5355
+#: pg_dump.c:5357
 #, c-format
 msgid "invalid adnum value %d for table \"%s\"\n"
 msgstr "valeur adnum %d invalide pour la table « %s »\n"
 
-#: pg_dump.c:5373
+#: pg_dump.c:5375
 #, c-format
 msgid "finding check constraints for table \"%s\"\n"
 msgstr "recherche des contraintes de vérification pour la table « %s »\n"
 
-#: pg_dump.c:5453
+#: pg_dump.c:5455
 #, c-format
 msgid "expected %d check constraint on table \"%s\" but found %d\n"
 msgid_plural "expected %d check constraints on table \"%s\" but found %d\n"
@@ -645,123 +646,123 @@ msgstr[1] ""
 "%d contraintes de vérification attendues pour la table « %s » mais %d\n"
 "trouvées\n"
 
-#: pg_dump.c:5457
+#: pg_dump.c:5459
 msgid "(The system catalogs might be corrupted.)\n"
 msgstr "(Les catalogues système sont peut-être corrompus.)\n"
 
-#: pg_dump.c:7239
-#: pg_dump.c:7346
+#: pg_dump.c:7241
+#: pg_dump.c:7348
 #, c-format
 msgid "query returned no rows: %s\n"
 msgstr "la requête n'a renvoyé aucune ligne : %s\n"
 
-#: pg_dump.c:7696
+#: pg_dump.c:7698
 msgid "WARNING: bogus value in proargmodes array\n"
 msgstr "ATTENTION : valeur erronée dans le tableau proargmodes\n"
 
-#: pg_dump.c:8008
+#: pg_dump.c:8010
 msgid "WARNING: could not parse proallargtypes array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proallargtypes\n"
 
-#: pg_dump.c:8024
+#: pg_dump.c:8026
 msgid "WARNING: could not parse proargmodes array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proargmodes\n"
 
-#: pg_dump.c:8038
+#: pg_dump.c:8040
 msgid "WARNING: could not parse proargnames array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proargnames\n"
 
-#: pg_dump.c:8049
+#: pg_dump.c:8051
 msgid "WARNING: could not parse proconfig array\n"
 msgstr "ATTENTION : n'a pas pu analyser le tableau proconfig\n"
 
-#: pg_dump.c:8105
+#: pg_dump.c:8107
 #, c-format
 msgid "unrecognized provolatile value for function \"%s\"\n"
 msgstr "valeur provolatile non reconnue pour la fonction « %s »\n"
 
-#: pg_dump.c:8308
+#: pg_dump.c:8310
 msgid "WARNING: bogus value in pg_cast.castmethod field\n"
 msgstr "ATTENTION : valeur erronée dans pg_cast.castmethod\n"
 
-#: pg_dump.c:8685
+#: pg_dump.c:8687
 #, c-format
 msgid "WARNING: could not find operator with OID %s\n"
 msgstr "ATTENTION : n'a pas pu trouver l'opérateur d'OID %s\n"
 
-#: pg_dump.c:9606
+#: pg_dump.c:9608
 #, c-format
 msgid "WARNING: aggregate function %s could not be dumped correctly for this database version; ignored\n"
 msgstr ""
 "ATTENTION : la fonction d'aggrégat %s n'a pas pu être sauvegardée\n"
 " correctement avec cette version de la base de données ; ignorée\n"
 
-#: pg_dump.c:10324
+#: pg_dump.c:10326
 #, c-format
 msgid "unknown object type (%d) in default privileges\n"
 msgstr "type d'objet inconnu (%d) dans les droits par défaut\n"
 
-#: pg_dump.c:10341
+#: pg_dump.c:10343
 #, c-format
 msgid "could not parse default ACL list (%s)\n"
 msgstr "n'a pas pu analyser la liste ACL par défaut (%s)\n"
 
-#: pg_dump.c:10398
+#: pg_dump.c:10400
 #, c-format
 msgid "could not parse ACL list (%s) for object \"%s\" (%s)\n"
 msgstr "n'a pas pu analyser la liste ACL (%s) de l'objet « %s » (%s)\n"
 
-#: pg_dump.c:10541
+#: pg_dump.c:10543
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned no data\n"
 msgstr ""
 "la requête permettant d'obtenir la définition de la vue « %s » n'a renvoyé\n"
 "aucune donnée\n"
 
-#: pg_dump.c:10544
+#: pg_dump.c:10546
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned more than one definition\n"
 msgstr ""
 "la requête permettant d'obtenir la définition de la vue « %s » a renvoyé\n"
 " plusieurs définitions\n"
 
-#: pg_dump.c:10553
+#: pg_dump.c:10555
 #, c-format
 msgid "definition of view \"%s\" appears to be empty (length zero)\n"
 msgstr "la définition de la vue « %s » semble être vide (longueur nulle)\n"
 
-#: pg_dump.c:11029
+#: pg_dump.c:11031
 #, c-format
 msgid "invalid column number %d for table \"%s\"\n"
 msgstr "numéro de colonne %d invalide pour la table « %s »\n"
 
-#: pg_dump.c:11137
+#: pg_dump.c:11139
 #, c-format
 msgid "missing index for constraint \"%s\"\n"
 msgstr "index manquant pour la contrainte « %s »\n"
 
-#: pg_dump.c:11325
+#: pg_dump.c:11327
 #, c-format
 msgid "unrecognized constraint type: %c\n"
 msgstr "type de contrainte inconnu : %c\n"
 
-#: pg_dump.c:11388
+#: pg_dump.c:11390
 msgid "missing pg_database entry for this database\n"
 msgstr "entrée pg_database manquante pour cette base de données\n"
 
-#: pg_dump.c:11393
+#: pg_dump.c:11395
 msgid "found more than one pg_database entry for this database\n"
 msgstr "a trouvé plusieurs entrées dans pg_database pour cette base de données\n"
 
-#: pg_dump.c:11425
+#: pg_dump.c:11427
 msgid "could not find entry for pg_indexes in pg_class\n"
 msgstr "n'a pas pu trouver l'entrée de pg_indexes dans pg_class\n"
 
-#: pg_dump.c:11430
+#: pg_dump.c:11432
 msgid "found more than one entry for pg_indexes in pg_class\n"
 msgstr "a trouvé plusieurs entrées pour pg_indexes dans la table pg_class\n"
 
-#: pg_dump.c:11501
+#: pg_dump.c:11503
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)\n"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)\n"
@@ -772,30 +773,30 @@ msgstr[1] ""
 "la requête permettant d'obtenir les données de la séquence « %s » a renvoyé\n"
 "%d lignes (une seule attendue)\n"
 
-#: pg_dump.c:11512
+#: pg_dump.c:11514
 #, c-format
 msgid "query to get data of sequence \"%s\" returned name \"%s\"\n"
 msgstr ""
 "la requête permettant d'obtenir les données de la séquence « %s » a renvoyé\n"
 "le nom « %s »\n"
 
-#: pg_dump.c:11806
+#: pg_dump.c:11808
 #, c-format
 msgid "invalid argument string (%s) for trigger \"%s\" on table \"%s\"\n"
 msgstr "chaîne argument invalide (%s) pour le trigger « %s » sur la table « %s »\n"
 
-#: pg_dump.c:11922
+#: pg_dump.c:11924
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned\n"
 msgstr ""
 "la requête permettant d'obtenir la règle « %s » associée à la table « %s »\n"
 "a échoué : mauvais nombre de lignes renvoyées\n"
 
-#: pg_dump.c:12017
+#: pg_dump.c:12019
 msgid "reading dependency data\n"
 msgstr "lecture des données de dépendance\n"
 
-#: pg_dump.c:12395
+#: pg_dump.c:12397
 msgid "SQL command failed\n"
 msgstr "la commande SQL a échoué\n"
 
@@ -1068,13 +1069,8 @@ msgstr "restauration du « Large Object » d'OID %u\n"
 
 #: pg_backup_archiver.c:938
 #, c-format
-msgid "could not create large object %u\n"
-msgstr "n'a pas pu créer le « Large Object » %u\n"
-
-#: pg_backup_archiver.c:943
-#, c-format
-msgid "could not open large object %u\n"
-msgstr "n'a pas pu ouvrir le « Large Object » %u\n"
+msgid "could not create large object %u: %s"
+msgstr "n'a pas pu créer le « Large Object » %u : %s"
 
 #: pg_backup_archiver.c:1007
 #, c-format
@@ -2320,6 +2316,8 @@ msgstr "le processus fils a été terminé par le signal %d"
 msgid "child process exited with unrecognized status %d"
 msgstr "le processus fils a quitté avec un statut %d non reconnu"
 
+#~ msgid "dumpBlobs(): could not open large object %u: %s"
+#~ msgstr "dumpBlobs() : n'a pas pu ouvrir le « Large Object » %u : %s"
 #~ msgid "saving large object properties\n"
 #~ msgstr "sauvegarde des propriétés des « Large Objects »\n"
 #~ msgid "could not parse ACL (%s) for large object %u"
