@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2010-04-24 00:42+0000\n"
-"PO-Revision-Date: 2010-04-24 17:17+0100\n"
+"PO-Revision-Date: 2010-04-24 22:20+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "MIME-Version: 1.0\n"
@@ -455,30 +455,30 @@ msgstr ""
 "code d'erreur %d"
 
 #: libpq/auth.c:2400
-#, fuzzy, c-format
+#, c-format
 msgid "LDAP search failed for filter \"%s\" on server \"%s\": no such user"
 msgstr ""
-"échec de connexion LDAP pour l'utilisateur « %s » sur le serveur « %s » :\n"
-"code d'erreur %d"
+"échec de la recherche LDAP pour le filtre « %s » sur le serveur « %s » :\n"
+"utilisateur non trouvé"
 
 #: libpq/auth.c:2404
-#, fuzzy, c-format
+#, c-format
 msgid "LDAP search failed for filter \"%s\" on server \"%s\": user is not unique (%ld matches)"
 msgstr ""
-"échec de connexion LDAP pour l'utilisateur « %s » sur le serveur « %s » :\n"
-"code d'erreur %d"
+"échec de la recherche LDAP pour le filtre « %s » sur le serveur « %s » :\n"
+"utilisateur non unique (%ld correspondances)"
 
 #: libpq/auth.c:2421
-#, fuzzy, c-format
+#, c-format
 msgid "could not get dn for the first entry matching \"%s\" on server \"%s\": %s"
-msgstr "n'a pas pu lire la clé privée SSL « %s » à partir du moteur « %s » : %s\n"
+msgstr ""
+"n'a pas pu obtenir le dn pour la première entrée correspondante « %s » sur\n"
+"le serveur « %s » : %s"
 
 #: libpq/auth.c:2441
-#, fuzzy, c-format
+#, c-format
 msgid "could not unbind after searching for user \"%s\" on server \"%s\": %s"
 msgstr ""
-"échec de connexion LDAP pour l'utilisateur « %s » sur le serveur « %s » :\n"
-"code d'erreur %d"
 
 #: libpq/auth.c:2478
 #, c-format
@@ -763,9 +763,8 @@ msgid "could not accept SSL connection: %s"
 msgstr "n'a pas pu accepter la connexion SSL : %s"
 
 #: libpq/be-secure.c:983
-#, fuzzy
 msgid "SSL certificate's common name contains embedded null"
-msgstr "le nom commun du certificat SSL contient des NULL\n"
+msgstr "le nom commun du certificat SSL contient des NULL"
 
 #: libpq/be-secure.c:990
 #, c-format
@@ -1007,10 +1006,10 @@ msgid "missing entry in file \"%s\" at end of line %d"
 msgstr "entrée manquante dans le fichier « %s » à la fin de la ligne %d"
 
 #: libpq/hba.c:1755
-#, fuzzy, c-format
+#, c-format
 msgid "provided user name (%s) and authenticated user name (%s) do not match"
 msgstr ""
-"le nom d'utilisateur (%s) et le nom d'utilisateur authentifié (%s) ne\n"
+"le nom d'utilisateur (%s) et le nom d'utilisateur authentifié (%s) fournis ne\n"
 "correspondent pas"
 
 #: libpq/hba.c:1776
@@ -2037,6 +2036,8 @@ msgstr "le journal de transactions provient d'un système de bases de données dif
 #, c-format
 msgid "WAL file database system identifier is %s, pg_control database system identifier is %s."
 msgstr ""
+"L'identifiant du journal de transactions du système de base de données est %s,\n"
+"l'identifiant de pg_control du système de base de données est %s."
 
 #: access/transam/xlog.c:3961
 msgid "Incorrect XLOG_SEG_SIZE in page header."
@@ -2878,7 +2879,7 @@ msgstr "données invalides dans le fichier « %s »"
 
 #: access/transam/xlog.c:8446
 msgid "pg_stop_backup cleanup done, waiting for required WAL segments to be archived"
-msgstr ""
+msgstr "nettoyage de pg_stop_backup terminé, en attente des journaux de transactions requis à archiver"
 
 #: access/transam/xlog.c:8456
 #, c-format
@@ -2895,9 +2896,8 @@ msgstr ""
 "utilisable sans tous les segments WAL."
 
 #: access/transam/xlog.c:8465
-#, fuzzy
 msgid "pg_stop_backup complete, all required WAL segments have been archived"
-msgstr "pg_stop_backup toujours en attente de la fin de l'archive (%d secondes passées)"
+msgstr "pg_stop_backup terminé, tous les journaux de transactions requis ont été archivés"
 
 #: access/transam/xlog.c:8487
 msgid "must be superuser to switch transaction log files"
@@ -3089,9 +3089,11 @@ msgid "could not connect to the primary server: %s"
 msgstr "n'a pas pu se connecter au serveur principal : %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:106
-#, fuzzy, c-format
+#, c-format
 msgid "could not receive database system identifier and timeline ID from the primary server: %s"
-msgstr "n'a pas pu recevoir des données depuis le serveur : %s\n"
+msgstr ""
+"n'a pas pu recevoir l'identifiant du système de bases de données et\n"
+"l'identifiant de la timeline à partir du serveur principal : %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:117
 msgid "invalid response from primary server"
@@ -3100,7 +3102,7 @@ msgstr "réponse invalide du serveur principal"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:118
 #, c-format
 msgid "Expected 1 tuple with 2 fields, got %d tuples with %d fields."
-msgstr ""
+msgstr "Attendait 1 ligne avec 2 champs, a obtenu %d lignes avec %d champs."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:133
 msgid "database system identifier differs between the primary and standby"
@@ -3116,11 +3118,11 @@ msgstr ""
 "est %s."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:146
-#, fuzzy, c-format
+#, c-format
 msgid "timeline %u of the primary does not match recovery target timeline %u"
 msgstr ""
-"le timeline requis %u n'est pas un fils du timeline %u du système de bases\n"
-"de données"
+"le timeline %u du serveur principal ne correspond pas au timeline %u de la\n"
+"cible de restauration"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:158
 #, c-format
@@ -3156,9 +3158,9 @@ msgid "recovery is still in progress, can't accept WAL streaming connections"
 msgstr "la restauration est en cours, ne peut pas accepter les connexions de flux WAL"
 
 #: replication/walsender.c:276
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby query string: %s"
-msgstr "chaîne d'échappement invalide"
+msgstr "chaîne de requête invalide sur le serveur en attente : %s"
 
 #: replication/walsender.c:289
 #: replication/walsender.c:315
@@ -3166,14 +3168,14 @@ msgid "unexpected EOF on standby connection"
 msgstr "fin de fichier (EOF) inattendue de la connexion du serveur en attente"
 
 #: replication/walsender.c:295
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby handshake message type %d"
-msgstr "type %d du message de l'interface invalide"
+msgstr "type %d du message de handshake du serveur en attente invalide"
 
 #: replication/walsender.c:336
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby closing message type %d"
-msgstr "type %d du message de l'interface invalide"
+msgstr "type %d du message de fermeture du serveur en attente invalide"
 
 #: replication/walsender.c:474
 #, c-format
@@ -6724,6 +6726,10 @@ msgstr "Autorise l'archivage des journaux de transactions en utilisant archive_c
 #: utils/misc/guc.c:1225
 msgid "During recovery, allows connections and queries.  During normal running, causes additional info to be written to WAL to enable hot standby mode on WAL standby nodes."
 msgstr ""
+"Lors de la restauration, autorise les connexions et les requêtes. Lors d'une\n"
+"exécution normale, fait que des informations supplémentaires sont écrites dans\n"
+"les journaux de transactions pour activer le mode Hot Standby sur les n½uds\n"
+"en attente."
 
 #: utils/misc/guc.c:1236
 msgid "Allows modifications of the structure of system tables."
@@ -6740,15 +6746,17 @@ msgstr ""
 "toute sécurité. La pire conséquence est la lenteur."
 
 #: utils/misc/guc.c:1257
-#, fuzzy
 msgid "Enables backward compatibility mode for privilege checks on large objects."
 msgstr ""
 "Active la compatibilité ascendante pour la vérification des droits sur les\n"
-"Large Objects"
+"Large Objects."
 
 #: utils/misc/guc.c:1258
 msgid "Skips privilege checks when reading or modifying large objects, for compatibility with PostgreSQL releases prior to 9.0."
 msgstr ""
+"Ignore la vérification des droits lors de la lecture et de la modification\n"
+"des Larges Objects, pour la compatibilité avec les versions antérieures à la\n"
+"9.0."
 
 #: utils/misc/guc.c:1276
 msgid "Forces a switch to the next xlog file if a new file has not been started within N seconds."
@@ -6833,7 +6841,7 @@ msgstr "Nombre maximum de connexions simultanées."
 
 #: utils/misc/guc.c:1389
 msgid "Sets the maximum delay to avoid conflict processing on hot standby servers."
-msgstr ""
+msgstr "Initialise le délai maximum pour éviter le traitement des conflits sur les serveurs en Hot Standby."
 
 #: utils/misc/guc.c:1398
 msgid "Sets the number of connection slots reserved for superusers."
@@ -6943,7 +6951,7 @@ msgstr ""
 
 #: utils/misc/guc.c:1616
 msgid "Age by which VACUUM and HOT cleanup should be deferred, if any."
-msgstr ""
+msgstr "Âge à partir duquel les nettoyages VACUUM et HOT doivent être déferrés."
 
 #: utils/misc/guc.c:1628
 msgid "Sets the maximum number of locks per transaction."
@@ -7161,6 +7169,8 @@ msgstr "Secondes entre les retransmissions de « TCP keepalive »."
 #: utils/misc/guc.c:1991
 msgid "Set the amount of traffic to send and receive before renegotiating the encryption keys."
 msgstr ""
+"Configure la quantité de trafic à envoyer et recevoir avant la renégotiation\n"
+"des clés d'enchiffrement."
 
 #: utils/misc/guc.c:2001
 msgid "Maximum number of TCP keepalive retransmits."
@@ -10031,9 +10041,8 @@ msgid "channel name too long"
 msgstr "nom du canal trop long"
 
 #: commands/async.c:582
-#, fuzzy
 msgid "payload string too long"
-msgstr "opérateur trop long"
+msgstr ""
 
 #: commands/async.c:766
 msgid "cannot PREPARE a transaction that has executed LISTEN, UNLISTEN or NOTIFY"
@@ -10053,7 +10062,7 @@ msgstr "la queue NOTIFY est pleine à %.0f%%"
 #: commands/async.c:1426
 #, c-format
 msgid "The server process with PID %d is among those with the oldest transactions."
-msgstr ""
+msgstr "Le processus serveur de PID %d est parmi ceux qui ont les transactions les plus anciennes."
 
 #: commands/async.c:1429
 msgid "The NOTIFY queue cannot be emptied until that process ends its current transaction."
@@ -13779,24 +13788,20 @@ msgid "more than one row returned by a subquery used as an expression"
 msgstr "plus d'une ligne renvoyée par une sous-requête utilisée comme une expression"
 
 #: executor/nodeWindowAgg.c:1233
-#, fuzzy
 msgid "frame starting offset must not be null"
-msgstr "%s : le décalage de multi-transaction (-O) ne doit pas être -1\n"
+msgstr ""
 
 #: executor/nodeWindowAgg.c:1246
-#, fuzzy
 msgid "frame starting offset must not be negative"
-msgstr "la précision de TIME(%d)%s ne doit pas être négative"
+msgstr ""
 
 #: executor/nodeWindowAgg.c:1259
-#, fuzzy
 msgid "frame ending offset must not be null"
-msgstr "LIMIT ne doit pas être négative"
+msgstr ""
 
 #: executor/nodeWindowAgg.c:1272
-#, fuzzy
 msgid "frame ending offset must not be negative"
-msgstr "LIMIT ne doit pas être négative"
+msgstr ""
 
 #: executor/spi.c:210
 msgid "transaction left non-empty SPI stack"
@@ -14003,7 +14008,7 @@ msgstr ""
 
 #: tcop/postgres.c:2273
 msgid "User was holding a relation lock for too long."
-msgstr ""
+msgstr "L'utilisateur conservait un verrou sur une relation depuis trop longtemps."
 
 #: tcop/postgres.c:2276
 msgid "User was or might have been using tablespace that must be dropped."
@@ -14012,6 +14017,8 @@ msgstr "L'utilisateur utilisait ou pouvait utiliser un tablespace qui doit être 
 #: tcop/postgres.c:2279
 msgid "User query might have needed to see row versions that must be removed."
 msgstr ""
+"La requête de l'utilisateur pourrait avoir eu besoin de voir des versions de\n"
+"lignes qui doivent être supprimées."
 
 #: tcop/postgres.c:2282
 #: storage/ipc/standby.c:532
@@ -14790,7 +14797,7 @@ msgstr "n'a pas pu identifier un opérateur de tri pour le type %s"
 
 #: parser/parse_agg.c:129
 msgid "Aggregates with DISTINCT must be able to sort their inputs."
-msgstr ""
+msgstr "Les agrégats avec DISTINCT doivent être capable de trier leur entrée."
 
 #: parser/parse_agg.c:170
 msgid "aggregate function calls cannot contain window function calls"
@@ -17631,6 +17638,8 @@ msgstr ""
 #: storage/lmgr/lock.c:521
 msgid "Only RowExclusiveLock or less can be acquired on database objects during recovery."
 msgstr ""
+"Seuls RowExclusiveLock et les verrous inférieurs peuvent être acquis sur les\n"
+"objets d'une base pendant une restauration."
 
 #: storage/lmgr/lock.c:615
 #: storage/lmgr/lock.c:684
