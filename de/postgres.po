@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.70 2010/04/22 19:51:25 petere Exp $
+# $Id: postgres.po,v 1.71 2010/04/26 17:24:06 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-04-22 08:41+0000\n"
-"PO-Revision-Date: 2010-04-22 16:07+0300\n"
+"POT-Creation-Date: 2010-04-25 00:41+0000\n"
+"PO-Revision-Date: 2010-04-26 16:22+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,8 @@ msgstr "SSL aus"
 #, c-format
 msgid ""
 "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\", %s"
-msgstr "pg_hba.conf lehnt Replikationsverbindung ab für Host »%s«, Benutzer »%s«, %s"
+msgstr ""
+"pg_hba.conf lehnt Replikationsverbindung ab für Host »%s«, Benutzer »%s«, %s"
 
 #: libpq/auth.c:396
 #, c-format
@@ -111,26 +112,32 @@ msgstr "pg_hba.conf lehnt Replikationsverbindung ab für Host »%s«, Benutzer �
 msgid ""
 "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s"
 "\", %s"
-msgstr "pg_hba.conf lehnt Verbindung ab für Host »%s«, Benutzer »%s«, Datenbank »%s«, %s"
+msgstr ""
+"pg_hba.conf lehnt Verbindung ab für Host »%s«, Benutzer »%s«, Datenbank »%s«, %s"
 
 #: libpq/auth.c:412
 #, c-format
 msgid ""
 "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s\""
-msgstr "pg_hba.conf lehnt Verbindung ab für Host »%s«, Benutzer »%s«, Datenbank »%s«"
+msgstr ""
+"pg_hba.conf lehnt Verbindung ab für Host »%s«, Benutzer »%s«, Datenbank »%s«"
 
 #: libpq/auth.c:443
 #, c-format
 msgid ""
 "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s"
 "\", %s"
-msgstr "kein pg_hba.conf-Eintrag für Replikationsverbindung von Host »%s«, Benutzer »%s«, %s"
+msgstr ""
+"kein pg_hba.conf-Eintrag für Replikationsverbindung von Host »%s«, Benutzer »%"
+"s«, %s"
 
 #: libpq/auth.c:449
 #, c-format
 msgid ""
 "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s\""
-msgstr "kein pg_hba.conf-Eintrag für Replikationsverbindung von Host »%s«, Benutzer »%s«"
+msgstr ""
+"kein pg_hba.conf-Eintrag für Replikationsverbindung von Host »%s«, Benutzer »%"
+"s«"
 
 #: libpq/auth.c:458
 #, c-format
@@ -2279,14 +2286,16 @@ msgstr ""
 msgid ""
 "The database server will regularly poll the pg_xlog subdirectory to check "
 "for files placed there."
-msgstr ""
+msgstr "Der Datenbankserver prüft das Unterverzeichnis pg_xlog regelmäßig auf dort abgelegte Dateien."
 
 #: access/transam/xlog.c:5228
 #, c-format
 msgid ""
 "recovery command file \"%s\" must specify restore_command when standby mode "
 "is not enabled"
-msgstr "Recovery-Kommandodatei »%s« muss restore_command angeben, wenn der Standby-Modus nicht eingeschaltet ist"
+msgstr ""
+"Recovery-Kommandodatei »%s« muss restore_command angeben, wenn der Standby-"
+"Modus nicht eingeschaltet ist"
 
 #: access/transam/xlog.c:5248
 #, c-format
@@ -2735,7 +2744,8 @@ msgstr ""
 
 #: access/transam/xlog.c:8465
 msgid "pg_stop_backup complete, all required WAL segments have been archived"
-msgstr "pg_stop_backup abgeschlossen, alle benötigten WAL-Segmente wurden archiviert"
+msgstr ""
+"pg_stop_backup abgeschlossen, alle benötigten WAL-Segmente wurden archiviert"
 
 #: access/transam/xlog.c:8487
 msgid "must be superuser to switch transaction log files"
@@ -2743,7 +2753,9 @@ msgstr "nur Superuser können Transaktionslogdateien umschalten"
 
 #: access/transam/xlog.c:8640
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
-msgstr "pg_xlogfile_name_offset() kann nicht während der Wiederherstellung ausgeführt werden."
+msgstr ""
+"pg_xlogfile_name_offset() kann nicht während der Wiederherstellung "
+"ausgeführt werden."
 
 #: access/transam/xlog.c:8650 access/transam/xlog.c:8722
 #, c-format
@@ -2752,7 +2764,9 @@ msgstr "konnte Transaktionslogposition »%s« nicht interpretieren"
 
 #: access/transam/xlog.c:8715
 msgid "pg_xlogfile_name() cannot be executed during recovery."
-msgstr "pg_xlogfile_name() kann nicht während der Wiederherstellung ausgeführt werden."
+msgstr ""
+"pg_xlogfile_name() kann nicht während der Wiederherstellung ausgeführt "
+"werden."
 
 #: access/transam/xlog.c:8812
 #, c-format
@@ -6465,9 +6479,8 @@ msgstr ""
 "Wartet beim Starten einer Verbindung N Sekunden vor der Authentifizierung."
 
 #: utils/misc/guc.c:1660
-#, fuzzy
-msgid "Sets the number of WAL files held for standby servers"
-msgstr "Setzt die Anzahl der vom Server verwendeten Shared-Memory-Puffer."
+msgid "Sets the number of WAL files held for standby servers."
+msgstr "Setzt die maximale Anzahl der für Standby-Server vorgehaltenen WAL-Dateien."
 
 #: utils/misc/guc.c:1669
 msgid ""
