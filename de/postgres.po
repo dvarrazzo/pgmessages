@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.71 2010/04/26 17:24:06 petere Exp $
+# $Id: postgres.po,v 1.72 2010/04/27 16:22:46 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-04-25 00:41+0000\n"
-"PO-Revision-Date: 2010-04-26 16:22+0300\n"
+"POT-Creation-Date: 2010-04-27 10:41+0000\n"
+"PO-Revision-Date: 2010-04-27 16:24+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -1605,7 +1605,7 @@ msgstr "konnte Archivstatusdatei »%s« nicht erstellen: %m"
 msgid "could not write archive status file \"%s\": %m"
 msgstr "konnte Archivstatusdatei »%s« nicht schreiben: %m"
 
-#: access/transam/xlog.c:1702 access/transam/xlog.c:9273
+#: access/transam/xlog.c:1702 access/transam/xlog.c:9283
 #: replication/walsender.c:560 replication/walreceiver.c:477
 #, c-format
 msgid "could not seek in log file %u, segment %u to offset %u: %m"
@@ -1632,8 +1632,8 @@ msgid "could not open file \"%s\" (log file %u, segment %u): %m"
 msgstr "konnte Datei »%s« nicht öffnen (Logdatei %u, Segment %u): %m"
 
 #: access/transam/xlog.c:2274 access/transam/xlog.c:2407
-#: access/transam/xlog.c:4231 access/transam/xlog.c:8225
-#: access/transam/xlog.c:8380 postmaster/postmaster.c:3612
+#: access/transam/xlog.c:4231 access/transam/xlog.c:8235
+#: access/transam/xlog.c:8390 postmaster/postmaster.c:3612
 #: storage/smgr/md.c:278 ../port/copydir.c:168
 #, c-format
 msgid "could not create file \"%s\": %m"
@@ -1671,8 +1671,8 @@ msgid "could not open file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht öffnen: %m"
 
 #: access/transam/xlog.c:2420 access/transam/xlog.c:4262
-#: access/transam/xlog.c:8328 access/transam/xlog.c:8402
-#: access/transam/xlog.c:8765 access/transam/xlog.c:8790
+#: access/transam/xlog.c:8338 access/transam/xlog.c:8412
+#: access/transam/xlog.c:8775 access/transam/xlog.c:8800
 #: utils/adt/genfile.c:133 ../port/copydir.c:179
 #, c-format
 msgid "could not read file \"%s\": %m"
@@ -1707,14 +1707,14 @@ msgid "could not close log file %u, segment %u: %m"
 msgstr "konnte Logdatei %u, Segment %u nicht schließen: %m"
 
 #: access/transam/xlog.c:2804 access/transam/xlog.c:2969
-#: access/transam/xlog.c:8208 utils/adt/dbsize.c:65 utils/adt/dbsize.c:217
+#: access/transam/xlog.c:8218 utils/adt/dbsize.c:65 utils/adt/dbsize.c:217
 #: utils/adt/dbsize.c:288 utils/adt/genfile.c:170 ../port/copydir.c:82
 #: ../port/copydir.c:121
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "konnte »stat« für Datei »%s« nicht ausführen: %m"
 
-#: access/transam/xlog.c:2812 access/transam/xlog.c:8407 storage/smgr/md.c:348
+#: access/transam/xlog.c:2812 access/transam/xlog.c:8417 storage/smgr/md.c:348
 #: storage/smgr/md.c:395 storage/smgr/md.c:1192
 #, c-format
 msgid "could not remove file \"%s\": %m"
@@ -2286,7 +2286,9 @@ msgstr ""
 msgid ""
 "The database server will regularly poll the pg_xlog subdirectory to check "
 "for files placed there."
-msgstr "Der Datenbankserver prüft das Unterverzeichnis pg_xlog regelmäßig auf dort abgelegte Dateien."
+msgstr ""
+"Der Datenbankserver prüft das Unterverzeichnis pg_xlog regelmäßig auf dort "
+"abgelegte Dateien."
 
 #: access/transam/xlog.c:5228
 #, c-format
@@ -2612,21 +2614,25 @@ msgstr "Restart-Punkt wird übersprungen, schon bei %X/%X erledigt"
 msgid "recovery restart point at %X/%X with latest known log time %s"
 msgstr "Recovery-Restart-Punkt bei %X/%X mit letzter bekannter Logzeit %s"
 
-#: access/transam/xlog.c:7761
+#: access/transam/xlog.c:7724
+msgid "online backup was cancelled, recovery cannot continue"
+msgstr "Online-Sicherung wurde storniert, Wiederherstellung kann nicht fortgesetzt werden"
+
+#: access/transam/xlog.c:7771
 #, c-format
 msgid "unexpected timeline ID %u (after %u) in checkpoint record"
 msgstr "unerwartete Timeline-ID %u (nach %u) im Checkpoint-Datensatz"
 
-#: access/transam/xlog.c:7797
+#: access/transam/xlog.c:7807
 #, c-format
 msgid "unexpected timeline ID %u (should be %u) in checkpoint record"
 msgstr "unerwartete Timeline-ID %u (sollte %u sein) im Checkpoint-Datensatz"
 
-#: access/transam/xlog.c:7846
+#: access/transam/xlog.c:7856
 msgid "unlogged operation performed, data may be missing"
 msgstr "ungeloggte Operationen durchgeführt, Daten könnten fehlen"
 
-#: access/transam/xlog.c:7847
+#: access/transam/xlog.c:7857
 msgid ""
 "This can happen if you temporarily disable archive_mode without taking a new "
 "base backup."
@@ -2634,65 +2640,65 @@ msgstr ""
 "Das kann passieren, wenn archive_mode vorübergehen deaktiviert war und kein "
 "neues Base-Backup erzeugt wurde."
 
-#: access/transam/xlog.c:8013 access/transam/xlog.c:8039
+#: access/transam/xlog.c:8023 access/transam/xlog.c:8049
 #, c-format
 msgid "could not fsync log file %u, segment %u: %m"
 msgstr "konnte Logdatei %u, Segment %u nicht fsyncen: %m"
 
-#: access/transam/xlog.c:8047
+#: access/transam/xlog.c:8057
 #, c-format
 msgid "could not fsync write-through log file %u, segment %u: %m"
 msgstr "konnte Write-Through-Logdatei %u, Segment %u nicht fsyncen: %m"
 
-#: access/transam/xlog.c:8056
+#: access/transam/xlog.c:8066
 #, c-format
 msgid "could not fdatasync log file %u, segment %u: %m"
 msgstr "konnte Logdatei %u, Segment %u nicht fdatasyncen: %m"
 
-#: access/transam/xlog.c:8099 access/transam/xlog.c:8298
+#: access/transam/xlog.c:8109 access/transam/xlog.c:8308
 msgid "must be superuser to run a backup"
 msgstr "nur Superuser können ein Backup ausführen"
 
-#: access/transam/xlog.c:8104 access/transam/xlog.c:8303
-#: access/transam/xlog.c:8492 access/transam/xlog.c:8520
-#: access/transam/xlog.c:8553 access/transam/xlog.c:8639
-#: access/transam/xlog.c:8714
+#: access/transam/xlog.c:8114 access/transam/xlog.c:8313
+#: access/transam/xlog.c:8502 access/transam/xlog.c:8530
+#: access/transam/xlog.c:8563 access/transam/xlog.c:8649
+#: access/transam/xlog.c:8724
 msgid "recovery is in progress"
 msgstr "Wiederherstellung läuft"
 
-#: access/transam/xlog.c:8105 access/transam/xlog.c:8304
-#: access/transam/xlog.c:8493 access/transam/xlog.c:8521
-#: access/transam/xlog.c:8554
+#: access/transam/xlog.c:8115 access/transam/xlog.c:8314
+#: access/transam/xlog.c:8503 access/transam/xlog.c:8531
+#: access/transam/xlog.c:8564
 msgid "WAL control functions cannot be executed during recovery."
 msgstr ""
 "während der Wiederherstellung können keine WAL-Kontrollfunktionen ausgeführt "
 "werden"
 
-#: access/transam/xlog.c:8110 access/transam/xlog.c:8116
-#: access/transam/xlog.c:8309
+#: access/transam/xlog.c:8120 access/transam/xlog.c:8126
+#: access/transam/xlog.c:8319
 msgid "WAL archiving is not active"
 msgstr "WAL-Archivierung ist nicht aktiv"
 
-#: access/transam/xlog.c:8111 access/transam/xlog.c:8310
+#: access/transam/xlog.c:8121 access/transam/xlog.c:8320
 msgid "archive_mode must be enabled at server start."
 msgstr "archive_mode muss beim Start des Servers eingeschaltet sein."
 
-#: access/transam/xlog.c:8117
+#: access/transam/xlog.c:8127
 msgid ""
 "archive_command must be defined before online backups can be made safely."
 msgstr ""
 "archive_command muss definiert werden, bevor sichere Online-Backups gemacht "
 "werden können."
 
-#: access/transam/xlog.c:8145 access/transam/xlog.c:8214
+#: access/transam/xlog.c:8155 access/transam/xlog.c:8224
 msgid "a backup is already in progress"
 msgstr "ein Backup läuft bereits"
 
-#: access/transam/xlog.c:8146
+#: access/transam/xlog.c:8156
 msgid "Run pg_stop_backup() and try again."
 msgstr "Führen Sie pg_stop_backup() aus und versuchen Sie es nochmal."
 
-#: access/transam/xlog.c:8215
+#: access/transam/xlog.c:8225
 #, c-format
 msgid ""
 "If you're sure there is no backup in progress, remove file \"%s\" and try "
@@ -2701,29 +2707,29 @@ msgstr ""
 "Wenn Sie sicher sind, dass noch kein Backup läuft, entfernen Sie die Datei »%"
 "s« und versuchen Sie es noch einmal."
 
-#: access/transam/xlog.c:8236 access/transam/xlog.c:8393
+#: access/transam/xlog.c:8246 access/transam/xlog.c:8403
 #, c-format
 msgid "could not write file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht schreiben: %m"
 
-#: access/transam/xlog.c:8332
+#: access/transam/xlog.c:8342
 msgid "a backup is not in progress"
 msgstr "es läuft kein Backup"
 
-#: access/transam/xlog.c:8344 access/transam/xlog.c:8780
-#: access/transam/xlog.c:8786
+#: access/transam/xlog.c:8354 access/transam/xlog.c:8790
+#: access/transam/xlog.c:8796
 #, c-format
 msgid "invalid data in file \"%s\""
 msgstr "ungültige Daten in Datei »%s«"
 
-#: access/transam/xlog.c:8446
+#: access/transam/xlog.c:8456
 msgid ""
 "pg_stop_backup cleanup done, waiting for required WAL segments to be archived"
 msgstr ""
 "Aufräumen nach pg_stop_backup beendet, warte bis die benötigten WAL-Segmente "
 "archiviert sind"
 
-#: access/transam/xlog.c:8456
+#: access/transam/xlog.c:8466
 #, c-format
 msgid ""
 "pg_stop_backup still waiting for all required WAL segments to be archived (%"
@@ -2732,7 +2738,7 @@ msgstr ""
 "pg_stop_backup wartet immer noch, bis alle benötigten WAL-Segmente "
 "archiviert sind (%d Sekunden abgelaufen)"
 
-#: access/transam/xlog.c:8458
+#: access/transam/xlog.c:8468
 msgid ""
 "Check that your archive_command is executing properly.  pg_stop_backup can "
 "be cancelled safely, but the database backup will not be usable without all "
@@ -2742,61 +2748,61 @@ msgstr ""
 "sicher abgebrochen werden, aber die Datenbank ist nicht benutzbar ohne die "
 "fehlenden WAL-Segmente."
 
-#: access/transam/xlog.c:8465
+#: access/transam/xlog.c:8475
 msgid "pg_stop_backup complete, all required WAL segments have been archived"
 msgstr ""
 "pg_stop_backup abgeschlossen, alle benötigten WAL-Segmente wurden archiviert"
 
-#: access/transam/xlog.c:8487
+#: access/transam/xlog.c:8497
 msgid "must be superuser to switch transaction log files"
 msgstr "nur Superuser können Transaktionslogdateien umschalten"
 
-#: access/transam/xlog.c:8640
+#: access/transam/xlog.c:8650
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
 msgstr ""
 "pg_xlogfile_name_offset() kann nicht während der Wiederherstellung "
 "ausgeführt werden."
 
-#: access/transam/xlog.c:8650 access/transam/xlog.c:8722
+#: access/transam/xlog.c:8660 access/transam/xlog.c:8732
 #, c-format
 msgid "could not parse transaction log location \"%s\""
 msgstr "konnte Transaktionslogposition »%s« nicht interpretieren"
 
-#: access/transam/xlog.c:8715
+#: access/transam/xlog.c:8725
 msgid "pg_xlogfile_name() cannot be executed during recovery."
 msgstr ""
 "pg_xlogfile_name() kann nicht während der Wiederherstellung ausgeführt "
 "werden."
 
-#: access/transam/xlog.c:8812
+#: access/transam/xlog.c:8822
 #, c-format
 msgid "xlog redo %s"
 msgstr "xlog redo %s"
 
-#: access/transam/xlog.c:8852
+#: access/transam/xlog.c:8862
 msgid "online backup mode cancelled"
 msgstr "Online-Sicherungsmodus storniert"
 
-#: access/transam/xlog.c:8853
+#: access/transam/xlog.c:8863
 #, c-format
 msgid "\"%s\" was renamed to \"%s\"."
 msgstr "»%s« wurde in »%s« umbenannt."
 
-#: access/transam/xlog.c:8860
+#: access/transam/xlog.c:8870
 msgid "online backup mode was not cancelled"
 msgstr "Online-Sicherungsmodus wurde nicht storniert"
 
-#: access/transam/xlog.c:8861
+#: access/transam/xlog.c:8871
 #, c-format
 msgid "Could not rename \"%s\" to \"%s\": %m."
 msgstr "Konnte »%s« nicht in »%s« umbenennen: %m."
 
-#: access/transam/xlog.c:9259 access/transam/xlog.c:9281
+#: access/transam/xlog.c:9269 access/transam/xlog.c:9291
 #, c-format
 msgid "could not read from log file %u, segment %u, offset %u: %m"
 msgstr "konnte nicht aus Logdatei %u, Segment %u, Position %u lesen: %m"
 
-#: access/transam/xlog.c:9388
+#: access/transam/xlog.c:9398
 #, c-format
 msgid "trigger file found: %s"
 msgstr "Triggerdatei gefunden: %s"
@@ -3197,8 +3203,8 @@ msgstr "»%s« ist keine Sequenz"
 msgid "column \"%s\" of relation \"%s\" does not exist"
 msgstr "Spalte »%s« von Relation »%s« existiert nicht"
 
-#: utils/adt/acl.c:2975 utils/adt/dbsize.c:149 utils/init/postinit.c:660
-#: utils/init/postinit.c:728 utils/init/postinit.c:745 catalog/aclchk.c:613
+#: utils/adt/acl.c:2975 utils/adt/dbsize.c:149 utils/init/postinit.c:691
+#: utils/init/postinit.c:759 utils/init/postinit.c:776 catalog/aclchk.c:613
 #: commands/comment.c:698 commands/dbcommands.c:760 commands/dbcommands.c:905
 #: commands/dbcommands.c:1004 commands/dbcommands.c:1181
 #: commands/dbcommands.c:1366 commands/dbcommands.c:1410
@@ -5636,36 +5642,42 @@ msgid "You should immediately run CREATE USER \"%s\" SUPERUSER;."
 msgstr "Sie sollten sofort CREATE USER \"%s\" SUPERUSER; ausführen."
 
 #: utils/init/postinit.c:631
-msgid "must be superuser to start walsender"
-msgstr "nur Superuser können WAL-Sender starten"
+msgid "new replication connections are not allowed during database shutdown"
+msgstr "während des Herunterfahrens der Datenbank sind keine neuen Replikationsverbindungen erlaubt"
 
-#: utils/init/postinit.c:677
-#, c-format
-msgid "database %u does not exist"
-msgstr "Datenbank %u existiert nicht"
-
-#: utils/init/postinit.c:729
-msgid "It seems to have just been dropped or renamed."
-msgstr "Sie wurde anscheinend gerade gelöscht oder umbenannt."
-
-#: utils/init/postinit.c:747
-#, c-format
-msgid "The database subdirectory \"%s\" is missing."
-msgstr "Das Datenbankunterverzeichnis »%s« fehlt."
-
-#: utils/init/postinit.c:752
-#, c-format
-msgid "could not access directory \"%s\": %m"
-msgstr "konnte nicht auf Verzeichnis »%s« zugreifen: %m"
-
-#: utils/init/postinit.c:789
+#: utils/init/postinit.c:635
 msgid "must be superuser to connect during database shutdown"
 msgstr ""
 "nur Superuser können während des Herunterfahrens der Datenbank verbinden"
 
-#: utils/init/postinit.c:799
-msgid "connection limit exceeded for non-superusers"
-msgstr "Verbindungshöchstgrenze für Nicht-Superuser überschritten"
+#: utils/init/postinit.c:649
+msgid ""
+"remaining connection slots are reserved for non-replication superuser "
+"connections"
+msgstr "die verbleibenden Verbindungen sind für Superuser auf Nicht-Replikationsverbindungen reserviert"
+
+#: utils/init/postinit.c:662
+msgid "must be superuser to start walsender"
+msgstr "nur Superuser können WAL-Sender starten"
+
+#: utils/init/postinit.c:708
+#, c-format
+msgid "database %u does not exist"
+msgstr "Datenbank %u existiert nicht"
+
+#: utils/init/postinit.c:760
+msgid "It seems to have just been dropped or renamed."
+msgstr "Sie wurde anscheinend gerade gelöscht oder umbenannt."
+
+#: utils/init/postinit.c:778
+#, c-format
+msgid "The database subdirectory \"%s\" is missing."
+msgstr "Das Datenbankunterverzeichnis »%s« fehlt."
+
+#: utils/init/postinit.c:783
+#, c-format
+msgid "could not access directory \"%s\": %m"
+msgstr "konnte nicht auf Verzeichnis »%s« zugreifen: %m"
 
 #: utils/misc/guc.c:476
 msgid "Ungrouped"
@@ -6480,7 +6492,8 @@ msgstr ""
 
 #: utils/misc/guc.c:1660
 msgid "Sets the number of WAL files held for standby servers."
-msgstr "Setzt die maximale Anzahl der für Standby-Server vorgehaltenen WAL-Dateien."
+msgstr ""
+"Setzt die maximale Anzahl der für Standby-Server vorgehaltenen WAL-Dateien."
 
 #: utils/misc/guc.c:1669
 msgid ""
