@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2009.
 #
-# $Id: postgres.po,v 1.47.2.9 2010/03/17 20:36:49 petere Exp $
+# $Id: postgres.po,v 1.47.2.10 2010/05/11 16:13:23 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-17 20:04+0000\n"
-"PO-Revision-Date: 2010-03-17 22:36+0200\n"
+"POT-Creation-Date: 2010-05-08 20:03+0000\n"
+"PO-Revision-Date: 2010-05-11 08:44+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -1571,7 +1571,7 @@ msgstr ""
 "kann Parameter »%s« nicht in einer sicherheitsbeschränkten Operation setzen"
 
 #: utils/init/miscinit.c:479 utils/cache/lsyscache.c:2695 commands/user.c:552
-#: commands/user.c:734 commands/user.c:843 commands/user.c:995
+#: commands/user.c:734 commands/user.c:864 commands/user.c:1016
 #: commands/variable.c:737 commands/variable.c:849
 #, c-format
 msgid "role \"%s\" does not exist"
@@ -1760,7 +1760,7 @@ msgstr "Datenbank %u existiert nicht"
 #: utils/init/postinit.c:522 utils/adt/acl.c:1749 utils/adt/dbsize.c:148
 #: catalog/aclchk.c:434 commands/comment.c:624 commands/dbcommands.c:633
 #: commands/dbcommands.c:779 commands/dbcommands.c:902
-#: commands/dbcommands.c:974 commands/dbcommands.c:1061
+#: commands/dbcommands.c:974 commands/dbcommands.c:1082
 #, c-format
 msgid "database \"%s\" does not exist"
 msgstr "Datenbank »%s« existiert nicht"
@@ -3866,7 +3866,7 @@ msgstr ""
 
 #: utils/adt/xml.c:1407 utils/adt/xml.c:1408 utils/adt/xml.c:1414
 #: utils/adt/xml.c:1485 tcop/postgres.c:4007 catalog/pg_shdepend.c:674
-#: commands/user.c:893 storage/lmgr/deadlock.c:918 nodes/print.c:83
+#: commands/user.c:914 storage/lmgr/deadlock.c:918 nodes/print.c:83
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -4995,7 +4995,9 @@ msgstr "Zeit zwischen TCP-Keepalive-Neuübertragungen."
 msgid ""
 "Set the amount of traffic to send and receive before renegotiating the "
 "encryption keys."
-msgstr "Setzt die Traffic-Menge, die gesendet oder empfangen wird, bevor der Verschlüsselungsschlüssel neu ausgehandelt wird."
+msgstr ""
+"Setzt die Traffic-Menge, die gesendet oder empfangen wird, bevor der "
+"Verschlüsselungsschlüssel neu ausgehandelt wird."
 
 #: utils/misc/guc.c:1736
 msgid "Maximum number of TCP keepalive retransmits."
@@ -5654,32 +5656,32 @@ msgstr "Versuch, den Parameter »%s« zu redefinieren"
 msgid "could not parse setting for parameter \"%s\""
 msgstr "konnte Wert von Parameter »%s« nicht lesen"
 
-#: utils/misc/guc.c:6529
+#: utils/misc/guc.c:6610
 msgid "invalid list syntax for parameter \"log_destination\""
 msgstr "ungültige Listensyntax für Parameter »log_destination«"
 
-#: utils/misc/guc.c:6553
+#: utils/misc/guc.c:6634
 #, c-format
 msgid "unrecognized \"log_destination\" key word: \"%s\""
 msgstr "unbekanntes »log_destination«-Schlüsselwort: »%s«"
 
-#: utils/misc/guc.c:6840
+#: utils/misc/guc.c:6921
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
 msgstr "SET AUTOCOMMIT TO OFF wird nicht mehr unterstützt"
 
-#: utils/misc/guc.c:6912
+#: utils/misc/guc.c:6993
 msgid "assertion checking is not supported by this build"
 msgstr "Assert-Prüfungen werden von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:6927
+#: utils/misc/guc.c:7008
 msgid "SSL is not supported by this build"
 msgstr "SSL wird von dieser Installation nicht unterstützt"
 
-#: utils/misc/guc.c:6941
+#: utils/misc/guc.c:7022
 msgid "cannot enable parameter when \"log_statement_stats\" is true"
 msgstr "kann Parameter nicht einschalten, wenn »log_statement_stats« an ist"
 
-#: utils/misc/guc.c:6957
+#: utils/misc/guc.c:7038
 msgid ""
 "cannot enable \"log_statement_stats\" when \"log_parser_stats\", "
 "\"log_planner_stats\", or \"log_executor_stats\" is true"
@@ -5687,7 +5689,7 @@ msgstr ""
 "kann »log_statement_stats« nicht einschalten, wenn »log_parser_stats«, "
 "»log_planner_stats« oder »log_executor_stats« an ist"
 
-#: utils/misc/guc.c:6975
+#: utils/misc/guc.c:7056
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr ""
 "kann den Read/Write-Modus einer Transaktion nicht in einer Read-Only-"
@@ -6066,12 +6068,12 @@ msgstr "keine Ausgabefunktion verfügbar für Typ %s"
 msgid "cached plan must not change result type"
 msgstr "gecachter Plan darf den Ergebnistyp nicht ändern"
 
-#: utils/cache/relcache.c:3830
+#: utils/cache/relcache.c:3848
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "konnte Initialisierungsdatei für Relationscache »%s« nicht erzeugen: %m"
 
-#: utils/cache/relcache.c:3832
+#: utils/cache/relcache.c:3850
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Setze trotzdem fort, aber irgendwas stimmt nicht."
 
@@ -8462,12 +8464,12 @@ msgstr "keine Berechtigung um Datenbank umzubenennen"
 msgid "current database cannot be renamed"
 msgstr "aktuelle Datenbank kann nicht umbenannt werden"
 
-#: commands/dbcommands.c:1100
+#: commands/dbcommands.c:1121
 msgid "permission denied to change owner of database"
 msgstr "keine Berechtigung um Eigentümer der Datenbank zu ändern"
 
-#: commands/dbcommands.c:1328 commands/dbcommands.c:1497
-#: commands/dbcommands.c:1536
+#: commands/dbcommands.c:1349 commands/dbcommands.c:1518
+#: commands/dbcommands.c:1557
 #, c-format
 msgid "some useless files may be left behind in old database directory \"%s\""
 msgstr ""
@@ -10119,18 +10121,18 @@ msgstr "nur Superuser können Superuser anlegen"
 msgid "permission denied to create role"
 msgstr "keine Berechtigung um Rolle zu erzeugen"
 
-#: commands/user.c:273 commands/user.c:1028
+#: commands/user.c:273 commands/user.c:1049
 #, c-format
 msgid "role name \"%s\" is reserved"
 msgstr "Rollenname »%s« ist reserviert"
 
-#: commands/user.c:289 commands/user.c:1022
+#: commands/user.c:289 commands/user.c:1043
 #, c-format
 msgid "role \"%s\" already exists"
 msgstr "Rolle »%s« existiert bereits"
 
-#: commands/user.c:565 commands/user.c:745 commands/user.c:1266
-#: commands/user.c:1405
+#: commands/user.c:565 commands/user.c:745 commands/user.c:1287
+#: commands/user.c:1426
 msgid "must be superuser to alter superusers"
 msgstr "nur Superuser können Superuser ändern"
 
@@ -10138,80 +10140,80 @@ msgstr "nur Superuser können Superuser ändern"
 msgid "permission denied"
 msgstr "keine Berechtigung"
 
-#: commands/user.c:815
+#: commands/user.c:836
 msgid "permission denied to drop role"
 msgstr "keine Berechtigung um Rolle zu entfernen"
 
-#: commands/user.c:848
+#: commands/user.c:869
 #, c-format
 msgid "role \"%s\" does not exist, skipping"
 msgstr "Rolle »%s« existiert nicht, wird übersprungen"
 
-#: commands/user.c:860 commands/user.c:864
+#: commands/user.c:881 commands/user.c:885
 msgid "current user cannot be dropped"
 msgstr "aktueller Benutzer kann nicht entfernt werden"
 
-#: commands/user.c:868
+#: commands/user.c:889
 msgid "session user cannot be dropped"
 msgstr "aktueller Sitzungsbenutzer kann nicht entfernt werden"
 
-#: commands/user.c:879
+#: commands/user.c:900
 msgid "must be superuser to drop superusers"
 msgstr "nur Superuser können Superuser löschen"
 
-#: commands/user.c:891
+#: commands/user.c:912
 #, c-format
 msgid "role \"%s\" cannot be dropped because some objects depend on it"
 msgstr "kann Rolle »%s« nicht löschen, weil andere Objekte davon abhängen"
 
-#: commands/user.c:1010
+#: commands/user.c:1031
 msgid "session user cannot be renamed"
 msgstr "aktueller Sitzungsbenutzer kann nicht umbenannt werden"
 
-#: commands/user.c:1014
+#: commands/user.c:1035
 msgid "current user cannot be renamed"
 msgstr "aktueller Benutzer kann nicht umbenannt werden"
 
-#: commands/user.c:1039
+#: commands/user.c:1060
 msgid "must be superuser to rename superusers"
 msgstr "nur Superuser können Superuser umbenennen"
 
-#: commands/user.c:1046
+#: commands/user.c:1067
 msgid "permission denied to rename role"
 msgstr "keine Berechtigung um Rolle umzubenennen"
 
-#: commands/user.c:1067
+#: commands/user.c:1088
 msgid "MD5 password cleared because of role rename"
 msgstr "MD5-Passwort wegen Rollenumbenennung gelöscht"
 
-#: commands/user.c:1165
+#: commands/user.c:1186
 msgid "permission denied to drop objects"
 msgstr "keine Berechtigung um Objekte zu löschen"
 
-#: commands/user.c:1192 commands/user.c:1201
+#: commands/user.c:1213 commands/user.c:1222
 msgid "permission denied to reassign objects"
 msgstr "keine Berechtigung um Objekte neu zuzuordnen"
 
-#: commands/user.c:1274 commands/user.c:1413
+#: commands/user.c:1295 commands/user.c:1434
 #, c-format
 msgid "must have admin option on role \"%s\""
 msgstr "Admin-Option für Rolle »%s« wird benötigt"
 
-#: commands/user.c:1282
+#: commands/user.c:1303
 msgid "must be superuser to set grantor"
 msgstr "nur Superuser können Grantor setzen"
 
-#: commands/user.c:1307
+#: commands/user.c:1328
 #, c-format
 msgid "role \"%s\" is a member of role \"%s\""
 msgstr "Rolle »%s« ist ein Mitglied der Rolle »%s«"
 
-#: commands/user.c:1323
+#: commands/user.c:1344
 #, c-format
 msgid "role \"%s\" is already a member of role \"%s\""
 msgstr "Rolle »%s« ist schon Mitglied der Rolle »%s«"
 
-#: commands/user.c:1436
+#: commands/user.c:1457
 #, c-format
 msgid "role \"%s\" is not a member of role \"%s\""
 msgstr "Rolle »%s« ist kein Mitglied der Rolle »%s«"
@@ -13225,10 +13227,10 @@ msgstr ""
 "CREATE gibt ein Schema an (%s) welches nicht gleich dem zu erzeugenden "
 "Schema ist (%s)"
 
-#: parser/scansup.c:181
+#: parser/scansup.c:190
 #, c-format
-msgid "identifier \"%s\" will be truncated to \"%.*s\""
-msgstr "Bezeichner »%s« wird auf »%.*s« gekürzt"
+msgid "identifier \"%s\" will be truncated to \"%s\""
+msgstr "Bezeichner »%s« wird auf »%s« gekürzt"
 
 #: scan.l:360
 msgid "unterminated /* comment"
@@ -13435,17 +13437,17 @@ msgstr ""
 msgid "could not create signal dispatch thread: error code %d\n"
 msgstr "konnte Signal-Dispatch-Thread nicht erzeugen: Fehlercode %d\n"
 
-#: port/sysv_shmem.c:99 port/pg_shmem.c:99
+#: port/sysv_shmem.c:141 port/pg_shmem.c:141
 #, c-format
 msgid "could not create shared memory segment: %m"
 msgstr "konnte Shared-Memory-Segment nicht erzeugen: %m"
 
-#: port/sysv_shmem.c:100 port/pg_shmem.c:100
+#: port/sysv_shmem.c:142 port/pg_shmem.c:142
 #, c-format
 msgid "Failed system call was shmget(key=%lu, size=%lu, 0%o)."
 msgstr "Fehlgeschlagener Systemaufruf war shmget(key=%lu, größe=%lu, 0%o)."
 
-#: port/sysv_shmem.c:104 port/pg_shmem.c:104
+#: port/sysv_shmem.c:146 port/pg_shmem.c:146
 #, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
@@ -13472,7 +13474,7 @@ msgstr ""
 "Die PostgreSQL-Dokumentation enthält weitere Informationen über die\n"
 "Konfiguration von Shared Memory."
 
-#: port/sysv_shmem.c:117 port/pg_shmem.c:117
+#: port/sysv_shmem.c:159 port/pg_shmem.c:159
 #, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
@@ -13490,7 +13492,7 @@ msgstr ""
 "Die PostgreSQL-Dokumentation enthält weitere Informationen über die "
 "Konfiguration von Shared Memory."
 
-#: port/sysv_shmem.c:126 port/pg_shmem.c:126
+#: port/sysv_shmem.c:168 port/pg_shmem.c:168
 #, c-format
 msgid ""
 "This error does *not* mean that you have run out of disk space. It occurs "
@@ -13514,7 +13516,7 @@ msgstr ""
 "Die PostgreSQL-Dokumentation enthält weitere Informationen über die "
 "Konfiguration von Shared Memory."
 
-#: port/sysv_shmem.c:381 port/pg_shmem.c:381
+#: port/sysv_shmem.c:423 port/pg_shmem.c:423
 #, c-format
 msgid "could not stat data directory \"%s\": %m"
 msgstr "konnte »stat« für Datenverzeichnis »%s« nicht ausführen: %m"
@@ -14243,56 +14245,56 @@ msgstr "konnte Exitcode des Prozesses nicht lesen\n"
 msgid "could not post child completion status\n"
 msgstr "konnte Child-Completion-Status nicht versenden\n"
 
-#: postmaster/syslogger.c:384
+#: postmaster/syslogger.c:388
 #, c-format
 msgid "select() failed in logger process: %m"
 msgstr "select() fehlgeschlagen im Logger-Prozess: %m"
 
-#: postmaster/syslogger.c:396 postmaster/syslogger.c:960
+#: postmaster/syslogger.c:400 postmaster/syslogger.c:974
 #, c-format
 msgid "could not read from logger pipe: %m"
 msgstr "konnte nicht aus Logger-Pipe lesen: %m"
 
-#: postmaster/syslogger.c:435
+#: postmaster/syslogger.c:447
 msgid "logger shutting down"
 msgstr "Logger fährt herunter"
 
-#: postmaster/syslogger.c:479 postmaster/syslogger.c:493
+#: postmaster/syslogger.c:491 postmaster/syslogger.c:505
 #, c-format
 msgid "could not create pipe for syslog: %m"
 msgstr "konnte Pipe für Syslog nicht erzeugen: %m"
 
-#: postmaster/syslogger.c:513 postmaster/syslogger.c:997
+#: postmaster/syslogger.c:525 postmaster/syslogger.c:1013
 #, c-format
 msgid "could not create log file \"%s\": %m"
 msgstr "konnte Logdatei »%s« nicht erstellen: %m"
 
-#: postmaster/syslogger.c:528
+#: postmaster/syslogger.c:540
 #, c-format
 msgid "could not fork system logger: %m"
 msgstr "konnte Systemlogger nicht starten (fork-Fehler): %m"
 
-#: postmaster/syslogger.c:559
+#: postmaster/syslogger.c:571
 #, c-format
 msgid "could not redirect stdout: %m"
 msgstr "konnte Standardausgabe nicht umleiten: %m"
 
-#: postmaster/syslogger.c:564 postmaster/syslogger.c:582
+#: postmaster/syslogger.c:576 postmaster/syslogger.c:594
 #, c-format
 msgid "could not redirect stderr: %m"
 msgstr "konnte Standardfehlerausgabe nicht umleiten: %m"
 
-#: postmaster/syslogger.c:925
+#: postmaster/syslogger.c:929
 #, c-format
 msgid "could not write to log file: %s\n"
 msgstr "konnte nicht in Logdatei schreiben: %s\n"
 
-#: postmaster/syslogger.c:1068 postmaster/syslogger.c:1135
+#: postmaster/syslogger.c:1084 postmaster/syslogger.c:1142
 #, c-format
 msgid "could not open new log file \"%s\": %m"
 msgstr "konnte neue Logdatei »%s« nicht öffnen: %m"
 
-#: postmaster/syslogger.c:1080 postmaster/syslogger.c:1147
+#: postmaster/syslogger.c:1096 postmaster/syslogger.c:1154
 msgid "disabling automatic rotation (use SIGHUP to reenable)"
 msgstr "automatische Rotation abgeschaltet (SIGHUP zum Anschalten verwenden)"
 
