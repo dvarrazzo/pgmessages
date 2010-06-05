@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.73 2010/06/03 20:53:47 petere Exp $
+# $Id: postgres.po,v 1.74 2010/06/05 21:53:26 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-06-03 16:41+0000\n"
-"PO-Revision-Date: 2010-06-03 22:54+0300\n"
+"POT-Creation-Date: 2010-06-04 10:41+0000\n"
+"PO-Revision-Date: 2010-06-04 15:32+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -776,9 +776,8 @@ msgid "hostssl not supported on this platform"
 msgstr "hostssl wird auf dieser Plattform nicht unterstützt"
 
 #: libpq/hba.c:714
-#, fuzzy
-msgid "Compile with --enable-ssl to use SSL connections."
-msgstr "kompilieren Sie mit --enable-ssl um SSL-Verbindungen zu verwenden"
+msgid "Compile with --with-openssl to use SSL connections."
+msgstr "Kompilieren Sie mit --with-openssl, um SSL-Verbindungen zu verwenden."
 
 #: libpq/hba.c:736
 #, c-format
@@ -953,7 +952,9 @@ msgstr ""
 #: libpq/hba.c:1782
 #, c-format
 msgid "no match in usermap \"%s\" for user \"%s\" authenticated as \"%s\""
-msgstr "kein passender Eintrag in Usermap »%s« für Benutzer »%s«, authentifiziert als »%s«"
+msgstr ""
+"kein passender Eintrag in Usermap »%s« für Benutzer »%s«, authentifiziert als "
+"»%s«"
 
 #: libpq/hba.c:1806
 #, c-format
@@ -1606,13 +1607,13 @@ msgid "could not write archive status file \"%s\": %m"
 msgstr "konnte Archivstatusdatei »%s« nicht schreiben: %m"
 
 #: access/transam/xlog.c:1723 access/transam/xlog.c:9425
-#: replication/walsender.c:587 replication/walreceiver.c:477
+#: replication/walsender.c:595 replication/walreceiver.c:478
 #, c-format
 msgid "could not seek in log file %u, segment %u to offset %u: %m"
 msgstr ""
 "konnte Positionszeiger von Logdatei %u, Segment %u nicht auf %u setzen: %m"
 
-#: access/transam/xlog.c:1740 replication/walreceiver.c:494
+#: access/transam/xlog.c:1740 replication/walreceiver.c:495
 #, c-format
 msgid "could not write to log file %u, segment %u at offset %u, length %lu: %m"
 msgstr ""
@@ -1626,7 +1627,7 @@ msgstr "minimaler Recovery-Punkt auf %X/%X aktualisiert"
 
 #: access/transam/xlog.c:2270 access/transam/xlog.c:2374
 #: access/transam/xlog.c:2603 access/transam/xlog.c:2667
-#: access/transam/xlog.c:2724 replication/walsender.c:575
+#: access/transam/xlog.c:2724 replication/walsender.c:583
 #, c-format
 msgid "could not open file \"%s\" (log file %u, segment %u): %m"
 msgstr "konnte Datei »%s« nicht öffnen (Logdatei %u, Segment %u): %m"
@@ -1701,7 +1702,7 @@ msgstr ""
 "konnte Datei »%s« nicht in »%s« umbenennen (Initialisierung von Logdatei %u, "
 "Segment %u): %m"
 
-#: access/transam/xlog.c:2751 replication/walreceiver.c:451
+#: access/transam/xlog.c:2751 replication/walreceiver.c:452
 #, c-format
 msgid "could not close log file %u, segment %u: %m"
 msgstr "konnte Logdatei %u, Segment %u nicht schließen: %m"
@@ -2333,32 +2334,35 @@ msgstr "Wiederherstellung beendet vor Abbruch der Transaktion %u, Zeit %s"
 msgid ""
 "hot standby is not possible because %s = %d is a lower setting than on the "
 "master server (its value was %d)"
-msgstr "Hot Standby ist nicht möglich, weil %s = %d eine niedrigere Einstellung als auf dem Masterserver ist (Wert dort war %d)"
+msgstr ""
+"Hot Standby ist nicht möglich, weil %s = %d eine niedrigere Einstellung als "
+"auf dem Masterserver ist (Wert dort war %d)"
 
 #: access/transam/xlog.c:5597
-msgid "WAL was generated with wal_level=\"minimal\", data may be missing"
-msgstr "WAL wurde mit wal_level=\"minimal\" erzeugt, eventuell fehlen Daten"
+msgid "WAL was generated with wal_level=minimal, data may be missing"
+msgstr "WAL wurde mit wal_level=minimal erzeugt, eventuell fehlen Daten"
 
 #: access/transam/xlog.c:5598
-#, fuzzy
 msgid ""
-"This happens if you temporarily set wal_level=\"minimal\" without taking a "
-"new base backup."
-msgstr ""
-"Das kann passieren, wenn archive_mode vorübergehen deaktiviert war und kein "
-"neues Base-Backup erzeugt wurde."
+"This happens if you temporarily set wal_level=minimal without taking a new "
+"base backup."
+msgstr "Das passiert, wenn vorübergehend wal_level=minimal gesetzt wurde, ohne ein neues Base-Backup zu erzeugen."
 
 #: access/transam/xlog.c:5609
 msgid ""
 "hot standby is not possible because wal_level was not set to \"hot_standby\" "
 "on the master server"
-msgstr "Hot Standby ist nicht möglich, weil wal_level auf dem Masterserver nicht auf »hot_standby« gesetzt wurde"
+msgstr ""
+"Hot Standby ist nicht möglich, weil wal_level auf dem Masterserver nicht auf "
+"»hot_standby« gesetzt wurde"
 
 #: access/transam/xlog.c:5610
 msgid ""
 "Either set wal_level to \"hot_standby\" on the master, or turn off "
 "hot_standby here."
-msgstr "Setzen Sie entweder wal_level auf »hot_standby« auf dem Master oder schalten Sie hot_standby hier aus."
+msgstr ""
+"Setzen Sie entweder wal_level auf »hot_standby« auf dem Master oder schalten "
+"Sie hot_standby hier aus."
 
 #: access/transam/xlog.c:5658
 msgid "control file contains invalid data"
@@ -2370,9 +2374,9 @@ msgid "database system was shut down at %s"
 msgstr "Datenbanksystem wurde am %s heruntergefahren"
 
 #: access/transam/xlog.c:5666
-#, fuzzy, c-format
+#, c-format
 msgid "database system was shut down in recovery at %s"
-msgstr "Datenbanksystem wurde am %s heruntergefahren"
+msgstr "Datenbanksystem wurde während der Wiederherstellung am %s heruntergefahren"
 
 #: access/transam/xlog.c:5670
 #, c-format
@@ -2505,9 +2509,8 @@ msgstr ""
 "Wiederherstellung läuft"
 
 #: access/transam/xlog.c:5974
-#, fuzzy
 msgid "initializing for hot standby"
-msgstr "initialisiere Wiederherstellungsverbindungen"
+msgstr "initialisiere für Hot Standby"
 
 #: access/transam/xlog.c:6095
 #, c-format
@@ -2692,7 +2695,9 @@ msgstr "WAL-Level nicht ausreichend, um Online-Sicherung durchzuführen"
 #: access/transam/xlog.c:8252 access/transam/xlog.c:8444
 msgid ""
 "wal_level must be set to \"archive\" or \"hot_standby\" at server start."
-msgstr "wal_level muss beim Serverstart auf »archive« oder »hot_standby« gesetzt werden."
+msgstr ""
+"wal_level muss beim Serverstart auf »archive« oder »hot_standby« gesetzt "
+"werden."
 
 #: access/transam/xlog.c:8279 access/transam/xlog.c:8348
 msgid "a backup is already in progress"
@@ -2761,7 +2766,10 @@ msgstr ""
 msgid ""
 "WAL archiving is not enabled; you must ensure that all required WAL segments "
 "are copied through other means to complete the backup"
-msgstr "WAL-Archivierung ist nicht eingeschaltet; Sie müssen dafür sorgen, dass alle benötigten WAL-Segmente auf andere Art kopiert werden, um die Sicherung abzuschließen"
+msgstr ""
+"WAL-Archivierung ist nicht eingeschaltet; Sie müssen dafür sorgen, dass alle "
+"benötigten WAL-Segmente auf andere Art kopiert werden, um die Sicherung "
+"abzuschließen"
 
 #: access/transam/xlog.c:8635
 msgid "must be superuser to switch transaction log files"
@@ -3002,36 +3010,36 @@ msgstr "konnte keine Daten vom WAL-Stream empfangen: %s"
 msgid "replication terminated by primary server"
 msgstr "Replikation wurde durch Primärserver beendet"
 
-#: replication/walsender.c:126
+#: replication/walsender.c:116
 msgid "recovery is still in progress, can't accept WAL streaming connections"
 msgstr ""
 "Wiederherstellung läuft noch, WAL-Streaming-Verbindungen können nicht "
 "akzeptiert werden"
 
-#: replication/walsender.c:277
-msgid "standby connections not allowed because wal_level=\"minimal\""
-msgstr "Standby-Verbindungen sind nicht erlaubt, weil wal_level=\"minimal\""
+#: replication/walsender.c:278
+msgid "standby connections not allowed because wal_level=minimal"
+msgstr "Standby-Verbindungen sind nicht erlaubt, weil wal_level=minimal"
 
-#: replication/walsender.c:299
+#: replication/walsender.c:300
 #, c-format
 msgid "invalid standby query string: %s"
 msgstr "ungültige Standby-Anfragezeichenkette: %s"
 
-#: replication/walsender.c:312 replication/walsender.c:338
+#: replication/walsender.c:313 replication/walsender.c:339
 msgid "unexpected EOF on standby connection"
 msgstr "unerwartetes EOF auf Standby-Verbindung"
 
-#: replication/walsender.c:318
+#: replication/walsender.c:319
 #, c-format
 msgid "invalid standby handshake message type %d"
 msgstr "ungültiger Standby-Handshake-Message-Typ %d"
 
-#: replication/walsender.c:359
+#: replication/walsender.c:360
 #, c-format
 msgid "invalid standby closing message type %d"
 msgstr "ungültiger Standby-Closing-Message-Typ %d"
 
-#: replication/walsender.c:501
+#: replication/walsender.c:506
 #, c-format
 msgid ""
 "number of requested standby connections exceeds max_wal_senders (currently %"
@@ -3040,23 +3048,23 @@ msgstr ""
 "Anzahl angeforderter Standby-Verbindungen überschreitet max_wal_senders "
 "(aktuell %d)"
 
-#: replication/walsender.c:569 replication/walsender.c:630
+#: replication/walsender.c:577 replication/walsender.c:638
 #, c-format
 msgid "requested WAL segment %s has already been removed"
 msgstr "das angeforderte WAL-Segment %s wurde schon entfernt"
 
-#: replication/walsender.c:602
+#: replication/walsender.c:610
 #, c-format
 msgid "could not read from log file %u, segment %u, offset %u, length %lu: %m"
 msgstr ""
 "konnte nicht aus Logdatei %u, Segment %u bei Position %u, Länge %lu lesen: %m"
 
-#: replication/walreceiver.c:137
+#: replication/walreceiver.c:138
 msgid "terminating walreceiver process due to administrator command"
 msgstr ""
 "breche WAL-Receiver-Prozess ab aufgrund von Anweisung des Administrators"
 
-#: replication/walreceiver.c:285
+#: replication/walreceiver.c:286
 msgid "cannot continue WAL streaming, recovery has already ended"
 msgstr ""
 "kann WAL-Streaming nicht fortsetzen, Wiederherstellung ist bereits beendet"
@@ -7154,9 +7162,8 @@ msgid "Collects function-level statistics on database activity."
 msgstr "Sammelt Statistiken auf Funktionsebene über Datenbankaktivität."
 
 #: utils/misc/guc.c:2789
-#, fuzzy
 msgid "Set the level of information written to the WAL."
-msgstr "Setzt die Locale für die Formatierung von Datums- und Zeitwerten."
+msgstr "Setzt den Umfang der in den WAL geschriebenen Informationen."
 
 #: utils/misc/guc.c:2798
 msgid "Selects the method used for forcing WAL updates to disk."
@@ -15908,15 +15915,15 @@ msgstr ""
 
 #: postmaster/postmaster.c:733
 msgid ""
-"WAL archival (archive_mode='on') requires wal_level 'archive' or "
-"'hot_standby'"
-msgstr "WAL-Archivierung (archive_mode='on') benötigt wal_level 'archive' oder 'hot_standby'"
+"WAL archival (archive_mode=on) requires wal_level \"archive\" or "
+"\"hot_standby\""
+msgstr "WAL-Archivierung (archive_mode=on) benötigt wal_level »archive« oder »hot_standby«"
 
 #: postmaster/postmaster.c:736
 msgid ""
-"WAL streaming (max_wal_senders > 0) requires wal_level 'archive' or "
-"'hot_standby"
-msgstr ""
+"WAL streaming (max_wal_senders > 0) requires wal_level \"archive\" or "
+"\"hot_standby\""
+msgstr "WAL-Streaming (max_wal_senders > 0) benötigt wal_level »archive« oder »hot_standby«"
 
 #: postmaster/postmaster.c:744
 #, c-format
@@ -16927,7 +16934,8 @@ msgstr ""
 #, c-format
 msgid ""
 "not enough shared memory for data structure \"%s\" (%lu bytes requested)"
-msgstr "nicht genug Shared-Memory für Datenstruktur »%s« (%lu Bytes angefordert)"
+msgstr ""
+"nicht genug Shared-Memory für Datenstruktur »%s« (%lu Bytes angefordert)"
 
 #: storage/ipc/shmem.c:365
 #, c-format
@@ -16939,7 +16947,9 @@ msgstr "konnte ShmemIndex-Eintrag für Datenstruktur »%s« nicht erzeugen"
 msgid ""
 "ShmemIndex entry size is wrong for data structure \"%s\": expected %lu, "
 "actual %lu"
-msgstr "ShmemIndex-Eintraggröße ist falsch für Datenstruktur »%s«: erwartet %lu, tatsächlich %lu"
+msgstr ""
+"ShmemIndex-Eintraggröße ist falsch für Datenstruktur »%s«: erwartet %lu, "
+"tatsächlich %lu"
 
 #: storage/ipc/shmem.c:427 storage/ipc/shmem.c:446
 msgid "requested shared memory size overflows size_t"
@@ -17083,34 +17093,3 @@ msgstr "win32-Fehlercode %lu nach %d abgebildet"
 #, c-format
 msgid "unrecognized win32 error code: %lu"
 msgstr "unbekannter win32-Fehlercode: %lu"
-
-#~ msgid "usermap \"%s\""
-#~ msgstr "Usermap »%s«"
-
-#~ msgid ""
-#~ "recovery connections cannot start because the recovery_connections "
-#~ "parameter is disabled on the WAL source server"
-#~ msgstr ""
-#~ "Wiederherstellungsverbindungen können nicht starten, weil Parameter "
-#~ "recovery_connections auf dem WAL-Quellserver ausgeschaltet ist"
-
-#~ msgid "WAL archiving is not active"
-#~ msgstr "WAL-Archivierung ist nicht aktiv"
-
-#~ msgid "archive_mode must be enabled at server start."
-#~ msgstr "archive_mode muss beim Start des Servers eingeschaltet sein."
-
-#~ msgid ""
-#~ "archive_command must be defined before online backups can be made safely."
-#~ msgstr ""
-#~ "archive_command muss definiert werden, bevor sichere Online-Backups "
-#~ "gemacht werden können."
-
-#~ msgid ""
-#~ "During recovery, allows connections and queries.  During normal running, "
-#~ "causes additional info to be written to WAL to enable hot standby mode on "
-#~ "WAL standby nodes."
-#~ msgstr ""
-#~ "Erlaubt Verbindungen und Anfragen während der Wiederherstellung.  Im "
-#~ "Normalbetrieb werden zusätzliche Informationen in den WAL geschrieben, um "
-#~ "den Hot-Standby-Modus auf WAL-Standby-Knoten zu ermöglichen."
