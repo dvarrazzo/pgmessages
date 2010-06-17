@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-03-06 17:14+0000\n"
-"PO-Revision-Date: 2010-03-06 19:11+0100\n"
+"POT-Creation-Date: 2010-06-17 03:15+0000\n"
+"PO-Revision-Date: 2010-06-17 13:48+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "MIME-Version: 1.0\n"
@@ -239,18 +239,18 @@ msgid "BY value of FOR loop must be greater than zero"
 msgstr "la valeur BY d'une boucle FOR doit être plus grande que zéro"
 
 #: pl_exec.c:1919
-#: pl_exec.c:3179
+#: pl_exec.c:3180
 #, c-format
 msgid "cursor \"%s\" already in use"
 msgstr "curseur « %s » déjà en cours d'utilisation"
 
 #: pl_exec.c:1942
-#: pl_exec.c:3241
+#: pl_exec.c:3242
 msgid "arguments given for cursor without arguments"
 msgstr "arguments donnés pour le curseur sans arguments"
 
 #: pl_exec.c:1961
-#: pl_exec.c:3260
+#: pl_exec.c:3261
 msgid "arguments required for cursor"
 msgstr "arguments requis pour le curseur"
 
@@ -265,23 +265,23 @@ msgid "wrong result type supplied in RETURN NEXT"
 msgstr "mauvais type de résultat fourni dans RETURN NEXT"
 
 #: pl_exec.c:2228
-#: pl_exec.c:3629
-#: pl_exec.c:3908
-#: pl_exec.c:3942
-#: pl_exec.c:4004
-#: pl_exec.c:4023
-#: pl_exec.c:4060
+#: pl_exec.c:3630
+#: pl_exec.c:3909
+#: pl_exec.c:3943
+#: pl_exec.c:4005
+#: pl_exec.c:4024
+#: pl_exec.c:4061
 #, c-format
 msgid "record \"%s\" is not assigned yet"
 msgstr "l'enregistrement « %s » n'est pas encore affectée"
 
 #: pl_exec.c:2230
-#: pl_exec.c:3631
-#: pl_exec.c:3910
-#: pl_exec.c:3944
-#: pl_exec.c:4006
-#: pl_exec.c:4025
-#: pl_exec.c:4062
+#: pl_exec.c:3632
+#: pl_exec.c:3911
+#: pl_exec.c:3945
+#: pl_exec.c:4007
+#: pl_exec.c:4026
+#: pl_exec.c:4063
 msgid "The tuple structure of a not-yet-assigned record is indeterminate."
 msgstr "La structure de ligne d'un enregistrement pas encore affecté est indéterminée."
 
@@ -330,32 +330,32 @@ msgid "%s"
 msgstr "%s"
 
 #: pl_exec.c:2741
-#: pl_exec.c:3044
+#: pl_exec.c:3045
 msgid "cannot COPY to/from client in PL/pgSQL"
 msgstr "ne peut pas utiliser COPY TO/FROM dans PL/pgsql"
 
 #: pl_exec.c:2745
-#: pl_exec.c:3048
+#: pl_exec.c:3049
 msgid "cannot begin/end transactions in PL/pgSQL"
 msgstr "ne peut pas utiliser les instructions BEGIN/END de transactions dans PL/pgsql"
 
 #: pl_exec.c:2746
-#: pl_exec.c:3049
+#: pl_exec.c:3050
 msgid "Use a BEGIN block with an EXCEPTION clause instead."
 msgstr "Utiliser un bloc BEGIN dans une clause EXCEPTION à la place."
 
 #: pl_exec.c:2894
-#: pl_exec.c:3073
+#: pl_exec.c:3074
 msgid "INTO used with a command that cannot return data"
 msgstr "INTO utilisé dans une commande qui ne peut pas envoyer de données"
 
 #: pl_exec.c:2914
-#: pl_exec.c:3093
+#: pl_exec.c:3094
 msgid "query returned no rows"
 msgstr "la requête n'a renvoyé aucune ligne"
 
 #: pl_exec.c:2923
-#: pl_exec.c:3102
+#: pl_exec.c:3103
 msgid "query returned more than one row"
 msgstr "la requête a renvoyé plus d'une ligne"
 
@@ -368,7 +368,7 @@ msgid "If you want to discard the results of a SELECT, use PERFORM instead."
 msgstr "Si vous voulez annuler les résultats d'un SELECT, utilisez PERFORM à la place."
 
 #: pl_exec.c:2971
-#: pl_exec.c:5528
+#: pl_exec.c:5537
 msgid "query string argument of EXECUTE is null"
 msgstr "l'argument de la requête de EXECUTE est NULL"
 
@@ -376,76 +376,80 @@ msgstr "l'argument de la requête de EXECUTE est NULL"
 msgid "EXECUTE of SELECT ... INTO is not implemented"
 msgstr "EXECUTE de SELECT ... INTO n'est pas implanté"
 
-#: pl_exec.c:3324
-#: pl_exec.c:3415
+#: pl_exec.c:3037
+msgid "You might want to use EXECUTE ... INTO instead."
+msgstr "Vous pouvez aussi utiliser EXECUTE ... INTO à la place."
+
+#: pl_exec.c:3325
+#: pl_exec.c:3416
 #, c-format
 msgid "cursor variable \"%s\" is null"
 msgstr "la variable du curseur « %s » est NULL"
 
-#: pl_exec.c:3331
-#: pl_exec.c:3422
+#: pl_exec.c:3332
+#: pl_exec.c:3423
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "le curseur « %s » n'existe pas"
 
-#: pl_exec.c:3345
+#: pl_exec.c:3346
 msgid "relative or absolute cursor position is null"
 msgstr "la position relative ou absolue du curseur est NULL"
 
-#: pl_exec.c:3482
+#: pl_exec.c:3483
 #, c-format
 msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
 msgstr ""
 "une valeur NULL ne peut pas être affectée à la variable « %s » déclarée\n"
 "non NULL"
 
-#: pl_exec.c:3540
+#: pl_exec.c:3541
 msgid "cannot assign non-composite value to a row variable"
 msgstr "ne peut pas affecter une valeur non composite à une variable de type ROW"
 
-#: pl_exec.c:3582
+#: pl_exec.c:3583
 msgid "cannot assign non-composite value to a record variable"
 msgstr "ne peut pas affecter une valeur non composite à une variable RECORD"
 
-#: pl_exec.c:3642
-#: pl_exec.c:3949
-#: pl_exec.c:4030
-#: pl_exec.c:4067
+#: pl_exec.c:3643
+#: pl_exec.c:3950
+#: pl_exec.c:4031
+#: pl_exec.c:4068
 #, c-format
 msgid "record \"%s\" has no field \"%s\""
 msgstr "l'enregistrement « %s » n'a pas de champs « %s »"
 
-#: pl_exec.c:3740
+#: pl_exec.c:3741
 #, c-format
 msgid "number of array dimensions (%d) exceeds the maximum allowed (%d)"
 msgstr "le nombre de dimensions du tableau (%d) dépasse la maximum autorisé (%d)"
 
-#: pl_exec.c:3754
+#: pl_exec.c:3755
 msgid "subscripted object is not an array"
 msgstr "l'objet souscrit n'est pas un tableau"
 
-#: pl_exec.c:3777
+#: pl_exec.c:3778
 msgid "array subscript in assignment must not be null"
 msgstr "un indice de tableau dans une affectation ne peut pas être NULL"
 
-#: pl_exec.c:4158
+#: pl_exec.c:4159
 #, c-format
 msgid "query \"%s\" did not return data"
 msgstr "la requête « %s » ne renvoie pas de données"
 
-#: pl_exec.c:4175
-#, c-format
-msgid "query \"%s\" returned more than one row"
-msgstr "la requête « %s » a renvoyé plus d'une ligne"
-
-#: pl_exec.c:4180
+#: pl_exec.c:4167
 #, c-format
 msgid "query \"%s\" returned %d column"
 msgid_plural "query \"%s\" returned %d columns"
 msgstr[0] "la requête « %s » a renvoyé %d colonne"
 msgstr[1] "la requête « %s » a renvoyé %d colonnes"
 
-#: pl_exec.c:4242
+#: pl_exec.c:4193
+#, c-format
+msgid "query \"%s\" returned more than one row"
+msgstr "la requête « %s » a renvoyé plus d'une ligne"
+
+#: pl_exec.c:4251
 #, c-format
 msgid "query \"%s\" is not a SELECT"
 msgstr "la requête « %s » n'est pas un SELECT"
