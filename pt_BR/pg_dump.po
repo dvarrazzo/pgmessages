@@ -2,16 +2,17 @@
 # Copyright (C) 2009 PostgreSQL Global Development Group
 # This file is distributed under the same license as the PostgreSQL package.
 # Roberto Mello <rmello@fslc.usu.edu>, 2002.
-# Euler Taveira de Oliveira <euler@timbira.com>, 2003-2009.
+# Euler Taveira de Oliveira <euler@timbira.com>, 2003-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-05-09 11:21-0300\n"
+"POT-Creation-Date: 2010-06-18 19:28-0300\n"
 "PO-Revision-Date: 2005-10-04 23:16-0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -526,8 +527,8 @@ msgid ""
 "failed sanity check, parent table OID %u of pg_rewrite entry OID %u not "
 "found\n"
 msgstr ""
-"verificação de sanidade falhou, OID %u da tabela pai de pg_rewrite com OID %"
-"u não foi encontrado\n"
+"verificação de sanidade falhou, OID %u da tabela pai de pg_rewrite com OID "
+"%u não foi encontrado\n"
 
 #: pg_dump.c:4257
 #, c-format
@@ -575,8 +576,8 @@ msgid_plural "expected %d check constraints on table \"%s\" but found %d\n"
 msgstr[0] ""
 "esperado %d restrição de verificação na tabela \"%s\" mas foi encontrado %d\n"
 msgstr[1] ""
-"esperado %d restrições de verificação na tabela \"%s\" mas foi encontrado %"
-"d\n"
+"esperado %d restrições de verificação na tabela \"%s\" mas foi encontrado "
+"%d\n"
 
 #: pg_dump.c:5052
 msgid "(The system catalogs might be corrupted.)\n"
@@ -784,12 +785,10 @@ msgid "reading user-defined text search configurations\n"
 msgstr "lendo configurações de busca textual definidas pelo usuário\n"
 
 #: common.c:162
-#, fuzzy
 msgid "reading user-defined foreign-data wrappers\n"
-msgstr "lendo operadores definidos pelo usuário\n"
+msgstr "lendo adaptadores de dados externos definidos pelo usuário\n"
 
 #: common.c:166
-#, fuzzy
 msgid "reading user-defined foreign servers\n"
 msgstr "lendo servidores externos definidos pelo usuário\n"
 
@@ -1225,7 +1224,9 @@ msgstr "restauração paralela não é suportada por este formato de arquivo\n"
 #: pg_backup_archiver.c:3082
 msgid ""
 "parallel restore is not supported with archives made by pre-8.0 pg_dump\n"
-msgstr "restauração paralela não é suportada por arquivos produzidos por pg_dum anterior a 8.0\n"
+msgstr ""
+"restauração paralela não é suportada por arquivos produzidos por pg_dum "
+"anterior a 8.0\n"
 
 #: pg_backup_archiver.c:3102
 #, c-format
@@ -1265,23 +1266,22 @@ msgid "parallel_restore should not return\n"
 msgstr "parallel_restore não pode retornar\n"
 
 #: pg_backup_archiver.c:3263
-#, fuzzy, c-format
+#, c-format
 msgid "could not create worker process: %s\n"
-msgstr "não pôde criar processo worker: %s\n"
+msgstr "não pôde criar processo de restauração: %s\n"
 
 #: pg_backup_archiver.c:3271
-#, fuzzy, c-format
+#, c-format
 msgid "could not create worker thread: %s\n"
-msgstr "não pôde criar thread worker: %s\n"
+msgstr "não pôde criar thread de restauração: %s\n"
 
 #: pg_backup_archiver.c:3477
 msgid "no item ready\n"
 msgstr "nenhum item está pronto\n"
 
 #: pg_backup_archiver.c:3571
-#, fuzzy
 msgid "could not find slot of finished worker\n"
-msgstr "não pôde encontrar lacuna do processo worker terminado\n"
+msgstr "não pôde encontrar lacuna do restaurador terminado\n"
 
 #: pg_backup_archiver.c:3573
 #, c-format
@@ -1289,9 +1289,9 @@ msgid "finished item %d %s %s\n"
 msgstr "item terminado %d %s %s\n"
 
 #: pg_backup_archiver.c:3586
-#, fuzzy, c-format
+#, c-format
 msgid "worker process failed: exit code %d\n"
-msgstr "processo worker falhou: código de saída %d\n"
+msgstr "processo de restauração falhou: código de saída %d\n"
 
 #: pg_backup_archiver.c:3735
 #, c-format
@@ -1338,8 +1338,8 @@ msgstr "erro durante busca no arquivo: %s\n"
 #, c-format
 msgid "found unexpected block ID (%d) when reading data -- expected %d\n"
 msgstr ""
-"encontrado ID de bloco inesperado (%d) durante leitura de dados -- esperado %"
-"d\n"
+"encontrado ID de bloco inesperado (%d) durante leitura de dados -- esperado "
+"%d\n"
 
 #: pg_backup_custom.c:508
 #, c-format
@@ -1383,23 +1383,23 @@ msgstr "não pôde fechar arquivo: %s\n"
 
 #: pg_backup_custom.c:852
 msgid "can only reopen input archives\n"
-msgstr "não pôde abrir arquivos de entrada novamente\n"
+msgstr "não pode reabrir arquivos de entrada\n"
 
 #: pg_backup_custom.c:854
 msgid "cannot reopen stdin\n"
-msgstr "não pôde abrir entrada padrão novamente\n"
+msgstr "não pode reabrir entrada padrão\n"
 
 #: pg_backup_custom.c:856
 msgid "cannot reopen non-seekable file\n"
-msgstr ""
+msgstr "não pode reabrir arquivo que não realiza busca\n"
 
 #: pg_backup_custom.c:861
-#, fuzzy, c-format
+#, c-format
 msgid "could not determine seek position in archive file: %s\n"
 msgstr "não pôde determinar posição de busca no arquivo: %s\n"
 
 #: pg_backup_custom.c:876
-#, fuzzy, c-format
+#, c-format
 msgid "could not set seek position in archive file: %s\n"
 msgstr "não pôde definir posição de busca no arquivo: %s\n"
 
@@ -1912,7 +1912,8 @@ msgstr ""
 #: pg_restore.c:433
 #, c-format
 msgid "  --no-tablespaces         do not restore tablespace assignments\n"
-msgstr "  --no-tablespaces         não restaura as atribuições de tablespaces\n"
+msgstr ""
+"  --no-tablespaces         não restaura as atribuições de tablespaces\n"
 
 #: pg_restore.c:434
 #, c-format
@@ -2216,16 +2217,3 @@ msgstr "processo filho foi terminado pelo sinal %d"
 #, c-format
 msgid "child process exited with unrecognized status %d"
 msgstr "processo filho terminou com status desconhecido %d"
-
-#~ msgid "query returned %d rows instead of one: %s\n"
-#~ msgstr "consulta retornou %d registros ao invés de um: %s\n"
-
-#~ msgid "read %lu byte into lookahead buffer\n"
-#~ msgid_plural "read %lu bytes into lookahead buffer\n"
-#~ msgstr[0] "lido %lu byte no buffer lookahead\n"
-#~ msgstr[1] "lido %lu bytes no buffer lookahead\n"
-
-#~ msgid "requested %d byte, got %d from lookahead and %d from file\n"
-#~ msgid_plural "requested %d bytes, got %d from lookahead and %d from file\n"
-#~ msgstr[0] "pedido %d byte, obtido %d do lookahead e %d do arquivo\n"
-#~ msgstr[1] "pedido %d bytes, obtido %d do lookahead e %d do arquivo\n"
