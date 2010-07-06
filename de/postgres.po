@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.47.2.11 2010/07/01 16:20:32 petere Exp $
+# $Id: postgres.po,v 1.47.2.12 2010/07/06 21:45:25 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-01 15:59+0000\n"
-"PO-Revision-Date: 2010-07-01 12:19-0400\n"
+"POT-Creation-Date: 2010-07-05 12:40+0000\n"
+"PO-Revision-Date: 2010-07-07 00:45+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -3865,7 +3865,7 @@ msgstr ""
 "libxml2 hat inkompatiblen char-Typ: sizeof(char)=%u, sizeof(xmlChar)=%u."
 
 #: utils/adt/xml.c:1407 utils/adt/xml.c:1408 utils/adt/xml.c:1414
-#: utils/adt/xml.c:1485 tcop/postgres.c:4007 catalog/pg_shdepend.c:674
+#: utils/adt/xml.c:1485 tcop/postgres.c:4007 catalog/pg_shdepend.c:676
 #: commands/user.c:914 storage/lmgr/deadlock.c:918 nodes/print.c:83
 #, c-format
 msgid "%s"
@@ -5826,13 +5826,18 @@ msgstr "Cursor »%s« existiert bereits"
 msgid "closing existing cursor \"%s\""
 msgstr "bestehender Cursor »%s« wird geschlossen"
 
-#: utils/mmgr/portalmem.c:585
+#: utils/mmgr/portalmem.c:409
+#, c-format
+msgid "cannot drop active portal \"%s\""
+msgstr "aktives Portal »%s« kann nicht gelöscht werden"
+
+#: utils/mmgr/portalmem.c:614
 msgid "cannot PREPARE a transaction that has created a cursor WITH HOLD"
 msgstr ""
 "PREPARE kann nicht in einer Transaktion ausgeführt werden, die einen Cursor "
 "mit WITH HOLD erzeugt hat"
 
-#: utils/mmgr/portalmem.c:882 utils/fmgr/funcapi.c:60 commands/prepare.c:729
+#: utils/mmgr/portalmem.c:926 utils/fmgr/funcapi.c:60 commands/prepare.c:729
 #: executor/execQual.c:1260 executor/execQual.c:1303 executor/execQual.c:1595
 #: executor/execQual.c:4703 executor/functions.c:680 executor/functions.c:719
 msgid "set-valued function called in context that cannot accept a set"
@@ -5840,7 +5845,7 @@ msgstr ""
 "Funktion mit Mengenergebnis in einem Zusammenhang aufgerufen, der keine "
 "Mengenergebnisse verarbeiten kann"
 
-#: utils/mmgr/portalmem.c:886 commands/prepare.c:733
+#: utils/mmgr/portalmem.c:930 commands/prepare.c:733
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr ""
 "Materialisierungsmodus wird benötigt, ist aber in diesem Zusammenhang nicht "
@@ -7020,7 +7025,7 @@ msgstr ""
 msgid "failed to drop all objects depending on %s"
 msgstr "konnte nicht alle von %s abhängenden Objekte löschen"
 
-#: catalog/dependency.c:477 catalog/dependency.c:903 catalog/pg_shdepend.c:526
+#: catalog/dependency.c:477 catalog/dependency.c:903 catalog/pg_shdepend.c:528
 #, c-format
 msgid "cannot drop %s because it is required by the database system"
 msgstr "kann %s nicht löschen, wird vom Datenbanksystem benötigt"
@@ -7670,7 +7675,7 @@ msgstr "Typen mit fester Größe müssen Storage-Typ PLAIN haben"
 msgid "could not form array type name for type \"%s\""
 msgstr "konnte keinen Arraytypnamen für Datentyp »%s« erzeugen"
 
-#: catalog/pg_shdepend.c:656
+#: catalog/pg_shdepend.c:658
 #, c-format
 msgid ""
 "\n"
@@ -7679,7 +7684,7 @@ msgstr ""
 "\n"
 "und %d weitere Objekte (Liste im Serverlog)"
 
-#: catalog/pg_shdepend.c:660
+#: catalog/pg_shdepend.c:662
 #, c-format
 msgid ""
 "\n"
@@ -7688,38 +7693,38 @@ msgstr ""
 "\n"
 "und Objekte in %d anderen Datenbanken (Liste im Serverlog)"
 
-#: catalog/pg_shdepend.c:672
+#: catalog/pg_shdepend.c:674
 #, c-format
 msgid "there are objects dependent on %s"
 msgstr "es gibt von %s abhängige Objekte"
 
-#: catalog/pg_shdepend.c:962
+#: catalog/pg_shdepend.c:964
 #, c-format
 msgid "role %u was concurrently dropped"
 msgstr "Rolle %u wurde gleichzeitig gelöscht"
 
-#: catalog/pg_shdepend.c:981
+#: catalog/pg_shdepend.c:983
 #, c-format
 msgid "tablespace %u was concurrently dropped"
 msgstr "Tablespace %u wurde gleichzeitig gelöscht"
 
-#: catalog/pg_shdepend.c:1025
+#: catalog/pg_shdepend.c:1027
 #, c-format
 msgid "owner of %s"
 msgstr "Eigentümer von %s"
 
-#: catalog/pg_shdepend.c:1027
+#: catalog/pg_shdepend.c:1029
 #, c-format
 msgid "access to %s"
 msgstr "Zugriff auf %s"
 
 #. translator: %s will always be "database %s"
-#: catalog/pg_shdepend.c:1035
+#: catalog/pg_shdepend.c:1037
 #, c-format
 msgid "%d objects in %s"
 msgstr "%d Objekte in %s"
 
-#: catalog/pg_shdepend.c:1143 catalog/pg_shdepend.c:1275
+#: catalog/pg_shdepend.c:1145 catalog/pg_shdepend.c:1277
 #, c-format
 msgid ""
 "cannot drop objects owned by %s because they are required by the database "
@@ -7968,7 +7973,7 @@ msgstr "nur Superuser können Kommentare für prozedurale Sprachen erzeugen"
 #: commands/opclasscmds.c:784 commands/opclasscmds.c:1518
 #: commands/opclasscmds.c:1581 commands/opclasscmds.c:1749
 #: commands/opclasscmds.c:1849 commands/opclasscmds.c:1946
-#: commands/opclasscmds.c:2073
+#: commands/opclasscmds.c:2094
 #, c-format
 msgid "access method \"%s\" does not exist"
 msgstr "Zugriffsmethode »%s« existiert nicht"
@@ -7985,8 +7990,8 @@ msgstr "Operatorklasse »%s« existiert nicht für Zugriffsmethode »%s«"
 #: commands/comment.c:1351 commands/comment.c:1361 commands/opclasscmds.c:350
 #: commands/opclasscmds.c:804 commands/opclasscmds.c:1593
 #: commands/opclasscmds.c:1597 commands/opclasscmds.c:1871
-#: commands/opclasscmds.c:1882 commands/opclasscmds.c:2097
-#: commands/opclasscmds.c:2108
+#: commands/opclasscmds.c:1882 commands/opclasscmds.c:2118
+#: commands/opclasscmds.c:2129
 #, c-format
 msgid "operator family \"%s\" does not exist for access method \"%s\""
 msgstr "Operatorfamilie »%s« existiert nicht für Zugriffsmethode »%s«"
