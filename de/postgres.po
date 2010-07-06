@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.57.2.8 2010/07/01 16:22:01 petere Exp $
+# $Id: postgres.po,v 1.57.2.9 2010/07/06 21:46:14 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-07-01 15:28+0000\n"
-"PO-Revision-Date: 2010-07-01 12:21-0400\n"
+"POT-Creation-Date: 2010-07-05 11:29+0000\n"
+"PO-Revision-Date: 2010-07-07 00:45+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -438,8 +438,8 @@ msgstr "konnte Datei »%s« nicht öffnen (Logdatei %u, Segment %u): %m"
 
 #: access/transam/xlog.c:2215 access/transam/xlog.c:2348
 #: access/transam/xlog.c:4090 access/transam/xlog.c:7402
-#: access/transam/xlog.c:7537 postmaster/postmaster.c:3539
-#: ../port/copydir.c:126
+#: access/transam/xlog.c:7537 storage/file/copydir.c:130
+#: postmaster/postmaster.c:3539
 #, c-format
 msgid "could not create file \"%s\": %m"
 msgstr "kann Datei »%s« nicht erstellen: %m"
@@ -448,20 +448,20 @@ msgstr "kann Datei »%s« nicht erstellen: %m"
 #: access/transam/xlog.c:4142 access/transam/xlog.c:4180 utils/misc/guc.c:6830
 #: utils/misc/guc.c:6855 utils/init/miscinit.c:1101 utils/init/miscinit.c:1110
 #: commands/copy.c:1290 commands/tablespace.c:706 commands/tablespace.c:712
-#: postmaster/postmaster.c:3549 postmaster/postmaster.c:3559
-#: ../port/copydir.c:148
+#: storage/file/copydir.c:155 postmaster/postmaster.c:3549
+#: postmaster/postmaster.c:3559
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "konnte nicht in Datei »%s« schreiben: %m"
 
 #: access/transam/xlog.c:2255 access/transam/xlog.c:2387
-#: access/transam/xlog.c:4186 ../port/copydir.c:158
+#: access/transam/xlog.c:4186 storage/file/copydir.c:165
 #, c-format
 msgid "could not fsync file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht fsyncen: %m"
 
 #: access/transam/xlog.c:2260 access/transam/xlog.c:2392
-#: access/transam/xlog.c:4191 ../port/copydir.c:163
+#: access/transam/xlog.c:4191 storage/file/copydir.c:170
 #, c-format
 msgid "could not close file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht schließen: %m"
@@ -470,7 +470,7 @@ msgstr "konnte Datei »%s« nicht schließen: %m"
 #: access/transam/xlog.c:4011 access/transam/xlog.c:4109
 #: utils/init/miscinit.c:1052 utils/init/miscinit.c:1158
 #: utils/init/postinit.c:95 utils/init/postinit.c:135 utils/error/elog.c:1399
-#: libpq/hba.c:1259 postmaster/autovacuum.c:1808 ../port/copydir.c:119
+#: storage/file/copydir.c:123 libpq/hba.c:1259 postmaster/autovacuum.c:1808
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht öffnen: %m"
@@ -478,7 +478,8 @@ msgstr "konnte Datei »%s« nicht öffnen: %m"
 #: access/transam/xlog.c:2361 access/transam/xlog.c:4121
 #: access/transam/xlog.c:7509 access/transam/xlog.c:7559
 #: access/transam/xlog.c:7851 access/transam/xlog.c:7876
-#: access/transam/xlog.c:7914 utils/adt/genfile.c:132 ../port/copydir.c:137
+#: access/transam/xlog.c:7914 utils/adt/genfile.c:132
+#: storage/file/copydir.c:144
 #, c-format
 msgid "could not read file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht lesen: %m"
@@ -513,7 +514,7 @@ msgstr "konnte Logdatei %u, Segment %u nicht schließen: %m"
 
 #: access/transam/xlog.c:2696 access/transam/xlog.c:2848
 #: access/transam/xlog.c:7385 utils/adt/dbsize.c:64 utils/adt/dbsize.c:215
-#: utils/adt/dbsize.c:286 utils/adt/genfile.c:166 ../port/copydir.c:81
+#: utils/adt/dbsize.c:286 utils/adt/genfile.c:166 storage/file/copydir.c:85
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "konnte »stat« für Datei »%s« nicht ausführen: %m"
@@ -2538,8 +2539,8 @@ msgid "must be superuser to get directory listings"
 msgstr "nur Superuser können Verzeichnislisten lesen"
 
 #: utils/adt/genfile.c:240 utils/adt/misc.c:210 utils/misc/tzparser.c:345
-#: commands/tablespace.c:581 storage/file/fd.c:1540
-#: postmaster/postmaster.c:1090 ../port/copydir.c:65
+#: commands/tablespace.c:581 storage/file/fd.c:1540 storage/file/copydir.c:66
+#: postmaster/postmaster.c:1090
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "konnte Verzeichnis »%s« nicht öffnen: %m"
@@ -5952,13 +5953,18 @@ msgstr "Cursor »%s« existiert bereits"
 msgid "closing existing cursor \"%s\""
 msgstr "bestehender Cursor »%s« wird geschlossen"
 
-#: utils/mmgr/portalmem.c:595
+#: utils/mmgr/portalmem.c:419
+#, c-format
+msgid "cannot drop active portal \"%s\""
+msgstr "aktives Portal »%s« kann nicht gelöscht werden"
+
+#: utils/mmgr/portalmem.c:624
 msgid "cannot PREPARE a transaction that has created a cursor WITH HOLD"
 msgstr ""
 "PREPARE kann nicht in einer Transaktion ausgeführt werden, die einen Cursor "
 "mit WITH HOLD erzeugt hat"
 
-#: utils/mmgr/portalmem.c:882 utils/fmgr/funcapi.c:60 commands/prepare.c:749
+#: utils/mmgr/portalmem.c:926 utils/fmgr/funcapi.c:60 commands/prepare.c:749
 #: executor/execQual.c:1577 executor/execQual.c:1602 executor/execQual.c:1963
 #: executor/execQual.c:5119 executor/functions.c:649 foreign/foreign.c:281
 msgid "set-valued function called in context that cannot accept a set"
@@ -5966,7 +5972,7 @@ msgstr ""
 "Funktion mit Mengenergebnis in einem Zusammenhang aufgerufen, der keine "
 "Mengenergebnisse verarbeiten kann"
 
-#: utils/mmgr/portalmem.c:886 commands/prepare.c:753 foreign/foreign.c:286
+#: utils/mmgr/portalmem.c:930 commands/prepare.c:753 foreign/foreign.c:286
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr ""
 "Materialisierungsmodus wird benötigt, ist aber in diesem Zusammenhang nicht "
@@ -7196,7 +7202,7 @@ msgstr "kann %s nicht löschen, wird von %s benötigt"
 msgid "You can drop %s instead."
 msgstr "Sie können stattdessen %s löschen."
 
-#: catalog/dependency.c:729 catalog/pg_shdepend.c:547
+#: catalog/dependency.c:729 catalog/pg_shdepend.c:549
 #, c-format
 msgid "cannot drop %s because it is required by the database system"
 msgstr "kann %s nicht löschen, wird vom Datenbanksystem benötigt"
@@ -7216,7 +7222,7 @@ msgstr "%s hängt von %s ab"
 msgid "drop cascades to %s"
 msgstr "Löschvorgang löscht ebenfalls %s"
 
-#: catalog/dependency.c:893 catalog/pg_shdepend.c:658
+#: catalog/dependency.c:893 catalog/pg_shdepend.c:660
 #, c-format
 msgid ""
 "\n"
@@ -7959,7 +7965,7 @@ msgstr "Typen mit fester Größe müssen Storage-Typ PLAIN haben"
 msgid "could not form array type name for type \"%s\""
 msgstr "konnte keinen Arraytypnamen für Datentyp »%s« erzeugen"
 
-#: catalog/pg_shdepend.c:665
+#: catalog/pg_shdepend.c:667
 #, c-format
 msgid ""
 "\n"
@@ -7974,35 +7980,35 @@ msgstr[1] ""
 "\n"
 "und Objekte in %d anderen Datenbanken (Liste im Serverlog)"
 
-#: catalog/pg_shdepend.c:979
+#: catalog/pg_shdepend.c:981
 #, c-format
 msgid "role %u was concurrently dropped"
 msgstr "Rolle %u wurde gleichzeitig gelöscht"
 
-#: catalog/pg_shdepend.c:998
+#: catalog/pg_shdepend.c:1000
 #, c-format
 msgid "tablespace %u was concurrently dropped"
 msgstr "Tablespace %u wurde gleichzeitig gelöscht"
 
-#: catalog/pg_shdepend.c:1042
+#: catalog/pg_shdepend.c:1044
 #, c-format
 msgid "owner of %s"
 msgstr "Eigentümer von %s"
 
-#: catalog/pg_shdepend.c:1044
+#: catalog/pg_shdepend.c:1046
 #, c-format
 msgid "access to %s"
 msgstr "Zugriff auf %s"
 
 #. translator: %s will always be "database %s"
-#: catalog/pg_shdepend.c:1052
+#: catalog/pg_shdepend.c:1054
 #, c-format
 msgid "%d object in %s"
 msgid_plural "%d objects in %s"
 msgstr[0] "%d Objekt in %s"
 msgstr[1] "%d Objekte in %s"
 
-#: catalog/pg_shdepend.c:1163 catalog/pg_shdepend.c:1293
+#: catalog/pg_shdepend.c:1165 catalog/pg_shdepend.c:1295
 #, c-format
 msgid ""
 "cannot drop objects owned by %s because they are required by the database "
@@ -8282,7 +8288,7 @@ msgstr "nur Superuser können Kommentare für prozedurale Sprachen erzeugen"
 #: commands/opclasscmds.c:785 commands/opclasscmds.c:1517
 #: commands/opclasscmds.c:1580 commands/opclasscmds.c:1748
 #: commands/opclasscmds.c:1848 commands/opclasscmds.c:1945
-#: commands/opclasscmds.c:2072
+#: commands/opclasscmds.c:2093
 #, c-format
 msgid "access method \"%s\" does not exist"
 msgstr "Zugriffsmethode »%s« existiert nicht"
@@ -8299,8 +8305,8 @@ msgstr "Operatorklasse »%s« existiert nicht für Zugriffsmethode »%s«"
 #: commands/comment.c:1353 commands/comment.c:1363 commands/opclasscmds.c:352
 #: commands/opclasscmds.c:805 commands/opclasscmds.c:1592
 #: commands/opclasscmds.c:1596 commands/opclasscmds.c:1870
-#: commands/opclasscmds.c:1881 commands/opclasscmds.c:2096
-#: commands/opclasscmds.c:2107
+#: commands/opclasscmds.c:1881 commands/opclasscmds.c:2117
+#: commands/opclasscmds.c:2128
 #, c-format
 msgid "operator family \"%s\" does not exist for access method \"%s\""
 msgstr "Operatorfamilie »%s« existiert nicht für Zugriffsmethode »%s«"
@@ -10340,7 +10346,7 @@ msgid "relation \"%s\" already exists in schema \"%s\""
 msgstr "Relation »%s« existiert bereits in Schema »%s«"
 
 #: commands/tablespace.c:146 commands/tablespace.c:154
-#: commands/tablespace.c:160 ../port/copydir.c:59
+#: commands/tablespace.c:160 storage/file/copydir.c:60
 #, c-format
 msgid "could not create directory \"%s\": %m"
 msgstr "konnte Verzeichnis »%s« nicht erzeugen: %m"
