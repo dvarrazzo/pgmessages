@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2010-06-18 19:53-0300\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2010-07-08 17:13-0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
 "Language: pt_BR\n"
@@ -139,7 +139,7 @@ msgstr ""
 
 #: pl_exec.c:391
 msgid "returned record type does not match expected record type"
-msgstr ""
+msgstr "tipo record retornado não corresponde ao tipo record esperado"
 
 #: pl_exec.c:447 pl_exec.c:686
 msgid "during function exit"
@@ -156,7 +156,7 @@ msgstr "função de gatilho não pode retornar um conjunto"
 #: pl_exec.c:709
 msgid ""
 "returned row structure does not match the structure of the triggering table"
-msgstr ""
+msgstr "estrutura de registro retornada não corresponde a estrutura da tabela que disparou o evento"
 
 #: pl_exec.c:771
 #, c-format
@@ -198,7 +198,7 @@ msgstr "durante saída em bloco de comandos"
 
 #: pl_exec.c:1057
 msgid "during exception cleanup"
-msgstr ""
+msgstr "durante término de exceção"
 
 #: pl_exec.c:1523
 msgid "case not found"
@@ -238,17 +238,15 @@ msgid "arguments required for cursor"
 msgstr "argumentos requeridos pelo cursor"
 
 #: pl_exec.c:2149 gram.y:2419
-#, fuzzy
 msgid "cannot use RETURN NEXT in a non-SETOF function"
-msgstr "não pode utilizar RETURN NEXT em uma função não SETOF"
+msgstr "não pode utilizar RETURN NEXT em uma função que não foi declarada SETOF"
 
 #: pl_exec.c:2173 pl_exec.c:2231
-#, fuzzy
 msgid "wrong result type supplied in RETURN NEXT"
 msgstr "tipo resultante incorreto foi fornecido em RETURN NEXT"
 
 #: pl_exec.c:2194 pl_exec.c:3619 pl_exec.c:3911 pl_exec.c:3950
-#, fuzzy, c-format
+#, c-format
 msgid "record \"%s\" is not assigned yet"
 msgstr "registro \"%s\" não foi atribuído ainda"
 
@@ -257,7 +255,6 @@ msgid "The tuple structure of a not-yet-assigned record is indeterminate."
 msgstr "A estrutura da tupla de um registro não atribuído é indeterminada."
 
 #: pl_exec.c:2199 pl_exec.c:2212
-#, fuzzy
 msgid "wrong record type supplied in RETURN NEXT"
 msgstr "tipo registro incorreto foi fornecido em RETURN NEXT"
 
@@ -266,9 +263,8 @@ msgid "RETURN NEXT must have a parameter"
 msgstr "RETURN NEXT deve ter um parâmetro"
 
 #: pl_exec.c:2284 gram.y:2466
-#, fuzzy
 msgid "cannot use RETURN QUERY in a non-SETOF function"
-msgstr "não pode utilizar RETURN QUERY em uma função não SETOF"
+msgstr "não pode utilizar RETURN QUERY em uma função que não foi declarada SETOF"
 
 #: pl_exec.c:2303
 msgid "structure of query does not match function result type"
@@ -356,14 +352,12 @@ msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
 msgstr "valor nulo não pode ser atribuído a variável \"%s\" declarada NOT NULL"
 
 #: pl_exec.c:3530
-#, fuzzy
 msgid "cannot assign non-composite value to a row variable"
-msgstr "não pode atribuir valor não-composto a variável de registro"
+msgstr "não pode atribuir valor que não é composto a variável do tipo row"
 
 #: pl_exec.c:3572
-#, fuzzy
 msgid "cannot assign non-composite value to a record variable"
-msgstr "não pode atribuir valor não-composto a variável de registro"
+msgstr "não pode atribuir valor que não é composto a variável do tipo record"
 
 #: pl_exec.c:3632 pl_exec.c:3957
 #, c-format
@@ -377,7 +371,7 @@ msgstr "número de dimensões da matriz (%d) excede o máximo permitido (%d)"
 
 #: pl_exec.c:3744
 msgid "subscripted object is not an array"
-msgstr ""
+msgstr "objeto com índice não é uma matriz"
 
 #: pl_exec.c:3767
 msgid "array subscript in assignment must not be null"
@@ -386,17 +380,17 @@ msgstr "índice da matriz em atribuição não deve ser nulo"
 #: pl_exec.c:3873 pl_exec.c:3898 pl_exec.c:3935
 #, c-format
 msgid "type of \"%s\" does not match that when preparing the plan"
-msgstr ""
+msgstr "tipo de \"%s\" não corresponde àquele que foi utilizado para preparar o plano"
 
 #: pl_exec.c:3964
 #, c-format
 msgid "type of \"%s.%s\" does not match that when preparing the plan"
-msgstr ""
+msgstr "tipo de \"%s.%s\" não corresponde àquele que foi utilizando para preparar o plano"
 
 #: pl_exec.c:3989
 #, c-format
 msgid "type of tg_argv[%d] does not match that when preparing the plan"
-msgstr ""
+msgstr "tipo de tg_argv[%d] não corresponde àquele que foi utilizado para preparar o plano"
 
 #: pl_exec.c:4082
 #, c-format
@@ -421,7 +415,6 @@ msgid "query \"%s\" is not a SELECT"
 msgstr "consulta \"%s\" não é um SELECT"
 
 #: pl_exec.c:5153
-#, fuzzy
 msgid "N/A (dropped column)"
 msgstr "N/D (coluna removida)"
 
@@ -438,19 +431,16 @@ msgid "Returned type %s does not match expected type %s in column \"%s\"."
 msgstr "Tipo %s retornado não corresponde ao tipo %s esperado na coluna \"%s\"."
 
 #: gram.y:355
-#, fuzzy
 msgid "row or record variable cannot be CONSTANT"
-msgstr "variável de registro não pode ser CONSTANT"
+msgstr "variável do tipo row ou record não pode ser CONSTANT"
 
 #: gram.y:364
-#, fuzzy
 msgid "row or record variable cannot be NOT NULL"
-msgstr "variável de registro não pode ser NOT NULL"
+msgstr "variável do tipo row ou record não pode ser NOT NULL"
 
 #: gram.y:373
-#, fuzzy
 msgid "default value for row or record variable is not supported"
-msgstr "valor padrão para variável de registro não é suportado"
+msgstr "valor padrão para variável do tipo row ou record não é suportado"
 
 #: gram.y:522
 msgid "only positional parameters can be aliased"
@@ -473,23 +463,23 @@ msgstr "uma variável inteira esperada"
 msgid ""
 "loop variable of loop over rows must be a record or row variable or list of "
 "scalar variables"
-msgstr ""
+msgstr "variável de laço sobre registros deve ser uma variável do tipo record ou row or lista de variáveis escalares"
 
 #: gram.y:1061
 msgid "cursor FOR loop must have only one target variable"
-msgstr ""
+msgstr "cursor do laço FOR deve ter somente uma variável alvo"
 
 #: gram.y:1073
 msgid "cursor FOR loop must use a bound cursor variable"
-msgstr ""
+msgstr "cursor do laço FOR deve utilizar uma variável cursor limitado"
 
 #: gram.y:1149
 msgid "integer FOR loop must have only one target variable"
-msgstr ""
+msgstr "inteiro do laço FOR deve ter somente uma variável alvo"
 
 #: gram.y:1182
 msgid "cannot specify REVERSE in query FOR loop"
-msgstr ""
+msgstr "não pode especificar REVERSE na consulta do laço FOR"
 
 #: gram.y:1273 gram.y:2631
 #, c-format
@@ -516,7 +506,7 @@ msgstr "erro de sintaxe em \"%s\""
 
 #: gram.y:1588
 msgid "Expected \"FOR\", to open a cursor for an unbound cursor variable."
-msgstr ""
+msgstr "\"FOR\" esperado, para abrir um cursor para uma variável cursor ilimitado."
 
 #: gram.y:1675
 msgid "cursor variable must be a simple variable"
@@ -581,19 +571,17 @@ msgid "RETURN cannot have a parameter in function returning void"
 msgstr "RETURN não pode ter um parâmetro na função que retorna void"
 
 #: gram.y:2393 gram.y:2397
-#, fuzzy
 msgid "RETURN must specify a record or row variable in function returning row"
-msgstr "RETURN deve especificar uma variável de registro na função que retorna registro"
+msgstr "RETURN deve especificar uma variável do tipo record ou row na função que retorna registro"
 
 #: gram.y:2430
 msgid "RETURN NEXT cannot have a parameter in function with OUT parameters"
 msgstr "RETURN NEXT não pode ter um parâmetro na função com parâmetros OUT"
 
 #: gram.y:2446 gram.y:2450
-#, fuzzy
 msgid ""
 "RETURN NEXT must specify a record or row variable in function returning row"
-msgstr "RETURN NEXT deve especificar uma variável de registro na função que retorna registro"
+msgstr "RETURN NEXT deve especificar uma variável do tipo record ou row na função que retorna registro"
 
 #: gram.y:2513
 #, c-format
@@ -608,7 +596,7 @@ msgstr "não pode atribuir a tg_argv"
 msgid ""
 "Expected record variable, row variable, or list of scalar variables "
 "following INTO."
-msgstr ""
+msgstr "Esperada variável do tipo record, variável do tipo row ou lista de variáveis escalares seguindo INTO."
 
 #: gram.y:2615
 msgid "too many INTO variables specified"
@@ -631,12 +619,12 @@ msgstr "rótulo não existe"
 #: gram.y:2819
 #, c-format
 msgid "end label \"%s\" specified for unlabelled block"
-msgstr ""
+msgstr "rótulo de fim \"%s\" especificado para bloco sem rótulo"
 
 #: gram.y:2828
 #, c-format
 msgid "end label \"%s\" differs from block's label \"%s\""
-msgstr ""
+msgstr "rótulo de fim \"%s\" difere de rótulo do bloco \"%s\""
 
 #: gram.y:2858
 #, c-format
@@ -690,11 +678,11 @@ msgstr "FOR com variável de laço inteira"
 
 #: pl_funcs.c:485
 msgid "FOR over SELECT rows"
-msgstr ""
+msgstr "FOR sobre registros de SELECT"
 
 #: pl_funcs.c:487
 msgid "FOR over cursor"
-msgstr ""
+msgstr "FOR sobre cursor"
 
 #: pl_funcs.c:499
 msgid "SQL statement"
@@ -706,7 +694,7 @@ msgstr "comando EXECUTE"
 
 #: pl_funcs.c:503
 msgid "FOR over EXECUTE statement"
-msgstr ""
+msgstr "FOR sobre comando EXECUTE"
 
 #: scan.l:263
 msgid "unterminated quoted identifier"
