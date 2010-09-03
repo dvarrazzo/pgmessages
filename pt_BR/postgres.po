@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-08 00:05-0300\n"
+"POT-Creation-Date: 2010-09-03 17:59-0300\n"
 "PO-Revision-Date: 2010-05-11 08:44+0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
@@ -119,7 +119,7 @@ msgstr ""
 msgid "DISTINCT is supported only for single-argument aggregates"
 msgstr "DISTINCT é suportado somente para agregações de argumento único"
 
-#: executor/execQual.c:280 executor/execQual.c:308 executor/execQual.c:2623
+#: executor/execQual.c:280 executor/execQual.c:308 executor/execQual.c:2633
 #: utils/adt/array_userfuncs.c:428 utils/adt/arrayfuncs.c:198
 #: utils/adt/arrayfuncs.c:450 utils/adt/arrayfuncs.c:1191
 #: utils/adt/arrayfuncs.c:2808
@@ -131,12 +131,12 @@ msgstr "número de dimensões da matriz (%d) excede o máximo permitido (%d)"
 msgid "array subscript in assignment must not be null"
 msgstr "índice da matriz em atribuição não deve ser nulo"
 
-#: executor/execQual.c:605 executor/execQual.c:3537
+#: executor/execQual.c:605 executor/execQual.c:3547
 #, c-format
 msgid "attribute %d has wrong type"
 msgstr "atributo %d tem tipo incorreto"
 
-#: executor/execQual.c:606 executor/execQual.c:3538
+#: executor/execQual.c:606 executor/execQual.c:3548
 #, c-format
 msgid "Table has type %s, but query expects %s."
 msgstr "Tabela tem tipo %s, mas consulta espera %s."
@@ -159,7 +159,7 @@ msgstr "Registro da tabela contém %d atributos, mas consulta espera %d."
 msgid "Table has type %s at ordinal position %d, but query expects %s."
 msgstr "Tabela tem tipo %s na posição ordinal %d, mas consulta espera %s."
 
-#: executor/execQual.c:1089 parser/parse_func.c:88 parser/parse_func.c:416
+#: executor/execQual.c:1089 parser/parse_func.c:91 parser/parse_func.c:422
 #, c-format
 msgid "cannot pass more than %d arguments to a function"
 msgstr "não pode passar mais do que %d argumentos para uma função"
@@ -170,8 +170,8 @@ msgstr ""
 "funções e operadores podem receber no máximo um argumento do tipo conjunto"
 
 #: executor/execQual.c:1260 executor/execQual.c:1303 executor/execQual.c:1595
-#: executor/execQual.c:4703 executor/functions.c:680 executor/functions.c:719
-#: utils/fmgr/funcapi.c:60 utils/mmgr/portalmem.c:926 commands/prepare.c:729
+#: executor/execQual.c:4713 executor/functions.c:680 executor/functions.c:719
+#: utils/fmgr/funcapi.c:60 utils/mmgr/portalmem.c:937 commands/prepare.c:729
 msgid "set-valued function called in context that cannot accept a set"
 msgstr ""
 "função que tem argumento do tipo conjunto foi chamada em um contexto que não "
@@ -181,28 +181,32 @@ msgstr ""
 msgid "function returning set of rows cannot return null value"
 msgstr "função que retorna conjunto de registros não pode retornar valor nulo"
 
-#: executor/execQual.c:1754
+#: executor/execQual.c:1735
+msgid "rows returned by function are not all of the same row type"
+msgstr "registros retornados pela função não são todos do mesmo tipo de registro"
+
+#: executor/execQual.c:1764
 msgid "table-function protocol for materialize mode was not followed"
 msgstr "protocolo de função tabular para modo materializado não foi seguido"
 
-#: executor/execQual.c:1761
+#: executor/execQual.c:1771
 #, c-format
 msgid "unrecognized table-function returnMode: %d"
 msgstr "modo de retorno (returnMode) da função tabular desconhecido: %d"
 
-#: executor/execQual.c:1907
+#: executor/execQual.c:1917
 msgid "IS DISTINCT FROM does not support set arguments"
 msgstr "IS DISTINCT FROM não suporta conjunto de argumentos"
 
-#: executor/execQual.c:1982
+#: executor/execQual.c:1992
 msgid "op ANY/ALL (array) does not support set arguments"
 msgstr "op ANY/ALL (array) não suporta conjunto de argumentos"
 
-#: executor/execQual.c:2601
+#: executor/execQual.c:2611
 msgid "cannot merge incompatible arrays"
 msgstr "não pode mesclar matrizes incompatíveis"
 
-#: executor/execQual.c:2602
+#: executor/execQual.c:2612
 #, c-format
 msgid ""
 "Array with element type %s cannot be included in ARRAY construct with "
@@ -211,7 +215,7 @@ msgstr ""
 "Matriz com tipo de elemento %s não pode ser incluído em uma construção ARRAY "
 "com tipo de elemento %s."
 
-#: executor/execQual.c:2643 executor/execQual.c:2670
+#: executor/execQual.c:2653 executor/execQual.c:2680
 #: utils/adt/arrayfuncs.c:485
 msgid ""
 "multidimensional arrays must have array expressions with matching dimensions"
@@ -219,34 +223,34 @@ msgstr ""
 "matrizes multidimensionais devem ter expressões de matriz com dimensões "
 "correspondentes"
 
-#: executor/execQual.c:3189
+#: executor/execQual.c:3199
 msgid "NULLIF does not support set arguments"
 msgstr "NULLIF não suporta conjunto de argumentos"
 
-#: executor/execQual.c:3419 utils/adt/domains.c:127
+#: executor/execQual.c:3429 utils/adt/domains.c:127
 #, c-format
 msgid "domain %s does not allow null values"
 msgstr "domínio %s não permite valores nulos"
 
-#: executor/execQual.c:3448 utils/adt/domains.c:163
+#: executor/execQual.c:3458 utils/adt/domains.c:163
 #, c-format
 msgid "value for domain %s violates check constraint \"%s\""
 msgstr "valor para domínio %s viola restrição de verificação \"%s\""
 
-#: executor/execQual.c:3914 parser/parse_agg.c:73 optimizer/util/clauses.c:490
+#: executor/execQual.c:3924 parser/parse_agg.c:73 optimizer/util/clauses.c:490
 msgid "aggregate function calls cannot be nested"
 msgstr "chamadas de função de agregação não podem ser aninhadas"
 
-#: executor/execQual.c:4101
+#: executor/execQual.c:4111
 msgid "target type is not an array"
 msgstr "tipo alvo não é uma matriz"
 
-#: executor/execQual.c:4214
+#: executor/execQual.c:4224
 #, c-format
 msgid "ROW() column has type %s instead of type %s"
 msgstr "coluna ROW() tem tipo %s ao invés do tipo %s"
 
-#: executor/execQual.c:4347 utils/adt/arrayfuncs.c:3228
+#: executor/execQual.c:4357 utils/adt/arrayfuncs.c:3228
 #, c-format
 msgid "could not identify a comparison function for type %s"
 msgstr "não pôde identificar uma função de comparação para tipo %s"
@@ -266,7 +270,7 @@ msgstr "não pôde escrever em arquivo temporário de junção hash: %m"
 msgid "could not read from hash-join temporary file: %m"
 msgstr "não pôde ler do arquivo temporário de junção hash: %m"
 
-#: executor/nodeSubplan.c:297 executor/nodeSubplan.c:336
+#: executor/nodeSubplan.c:290 executor/nodeSubplan.c:329
 #: executor/nodeSubplan.c:959
 msgid "more than one row returned by a subquery used as an expression"
 msgstr ""
@@ -2261,7 +2265,7 @@ msgstr ""
 "nome da configuração de busca textual \"%s\" deve ser qualificada pelo "
 "esquema"
 
-#: utils/adt/tsvector_op.c:1393 parser/parse_expr.c:422 commands/copy.c:3377
+#: utils/adt/tsvector_op.c:1393 parser/parse_expr.c:419 commands/copy.c:3377
 #: commands/indexcmds.c:778 commands/tablecmds.c:1522
 #, c-format
 msgid "column \"%s\" does not exist"
@@ -2340,7 +2344,7 @@ msgstr "Forneça dois tipos de argumento para operador."
 msgid "relation \"%s\" does not exist"
 msgstr "relação \"%s\" não existe"
 
-#: utils/adt/regproc.c:980 parser/parse_func.c:1223 parser/parse_type.c:198
+#: utils/adt/regproc.c:980 parser/parse_func.c:1229 parser/parse_type.c:198
 #: tcop/utility.c:101 commands/typecmds.c:509 commands/typecmds.c:953
 #: commands/typecmds.c:2371 commands/functioncmds.c:118
 #, c-format
@@ -2451,7 +2455,7 @@ msgstr "linguagem \"%s\" não existe"
 #: utils/adt/acl.c:2376 commands/comment.c:734 commands/schemacmds.c:177
 #: commands/schemacmds.c:249 commands/schemacmds.c:325 catalog/aclchk.c:482
 #: catalog/namespace.c:335 catalog/namespace.c:1943 catalog/namespace.c:1984
-#: catalog/namespace.c:2032 catalog/namespace.c:2898
+#: catalog/namespace.c:2032 catalog/namespace.c:2906
 #, c-format
 msgid "schema \"%s\" does not exist"
 msgstr "esquema \"%s\" não existe"
@@ -2708,7 +2712,7 @@ msgstr ""
 "não pôde determinar descrição de registro para função que retorna record"
 
 #: utils/init/postinit.c:90 utils/init/postinit.c:130
-#: utils/init/miscinit.c:1052 utils/init/miscinit.c:1158
+#: utils/init/miscinit.c:1066 utils/init/miscinit.c:1179
 #: utils/error/elog.c:1246 postmaster/autovacuum.c:1797
 #: access/transam/xlog.c:2108 access/transam/xlog.c:3529
 #: access/transam/xlog.c:3619 access/transam/xlog.c:3717 libpq/hba.c:964
@@ -2789,7 +2793,7 @@ msgid "cannot set parameter \"%s\" within security-restricted operation"
 msgstr ""
 "não pode definir parâmetro \"%s\" em operação com restrição de segurança"
 
-#: utils/init/miscinit.c:479 utils/cache/lsyscache.c:2695 commands/user.c:552
+#: utils/init/miscinit.c:479 utils/cache/lsyscache.c:2707 commands/user.c:552
 #: commands/user.c:734 commands/user.c:864 commands/user.c:1016
 #: commands/variable.c:737 commands/variable.c:849
 #, c-format
@@ -2857,14 +2861,14 @@ msgstr "Outro postgres (PID %d) está utilizando arquivo de soquete \"%s\"?"
 msgid "Is another postmaster (PID %d) using socket file \"%s\"?"
 msgstr "Outro postmaster (PID %d) está utilizando arquivo de soquete \"%s\"?"
 
-#: utils/init/miscinit.c:898
+#: utils/init/miscinit.c:901
 #, c-format
 msgid "pre-existing shared memory block (key %lu, ID %lu) is still in use"
 msgstr ""
 "bloco de memória compartilhada existente (chave %lu, ID %lu) ainda está em "
 "uso"
 
-#: utils/init/miscinit.c:901
+#: utils/init/miscinit.c:904
 #, c-format
 msgid ""
 "If you're sure there are no old server processes still running, remove the "
@@ -2875,12 +2879,12 @@ msgstr ""
 "remova o bloco de memória compartilhada com o comando \"ipcclean\", \"ipcrm"
 "\", ou apague o arquivo \"%s\"."
 
-#: utils/init/miscinit.c:919
+#: utils/init/miscinit.c:922
 #, c-format
 msgid "could not remove old lock file \"%s\": %m"
 msgstr "não pôde remover arquivo de bloqueio antigo \"%s\": %m"
 
-#: utils/init/miscinit.c:921
+#: utils/init/miscinit.c:924
 msgid ""
 "The file seems accidentally left over, but it could not be removed. Please "
 "remove the file by hand and try again."
@@ -2888,46 +2892,47 @@ msgstr ""
 "O arquivo parece ter sido deixado acidentalmente, mas ele não pôde ser "
 "removido. Por favor remova o arquivo manualmente e tente novamente."
 
-#: utils/init/miscinit.c:943 utils/init/miscinit.c:953
+#: utils/init/miscinit.c:946 utils/init/miscinit.c:957
+#: utils/init/miscinit.c:967
 #, c-format
 msgid "could not write lock file \"%s\": %m"
 msgstr "não pôde escrever no arquivo de bloqueio \"%s\": %m"
 
-#: utils/init/miscinit.c:1061 utils/misc/guc.c:6227 commands/copy.c:2163
+#: utils/init/miscinit.c:1075 utils/misc/guc.c:6227 commands/copy.c:2163
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "não pôde ler do arquivo \"%s\": %m"
 
-#: utils/init/miscinit.c:1101 utils/init/miscinit.c:1110 utils/misc/guc.c:6096
-#: utils/misc/guc.c:6159 postmaster/postmaster.c:3316
-#: postmaster/postmaster.c:3326 access/transam/xlog.c:2022
-#: access/transam/xlog.c:2155 access/transam/xlog.c:3750
-#: access/transam/xlog.c:3788 commands/copy.c:1274 commands/tablespace.c:703
-#: commands/tablespace.c:709 ../port/copydir.c:148
+#: utils/init/miscinit.c:1115 utils/init/miscinit.c:1124
+#: utils/init/miscinit.c:1131 utils/misc/guc.c:6096 utils/misc/guc.c:6159
+#: postmaster/postmaster.c:3316 postmaster/postmaster.c:3326
+#: access/transam/xlog.c:2022 access/transam/xlog.c:2155
+#: access/transam/xlog.c:3750 access/transam/xlog.c:3788 commands/copy.c:1274
+#: commands/tablespace.c:703 commands/tablespace.c:709 ../port/copydir.c:148
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "não pôde escrever no arquivo \"%s\": %m"
 
-#: utils/init/miscinit.c:1152 utils/init/miscinit.c:1165
+#: utils/init/miscinit.c:1173 utils/init/miscinit.c:1186
 #, c-format
 msgid "\"%s\" is not a valid data directory"
 msgstr "\"%s\" não é um diretório de dados válido"
 
-#: utils/init/miscinit.c:1154
+#: utils/init/miscinit.c:1175
 #, c-format
 msgid "File \"%s\" is missing."
 msgstr "Arquivo \"%s\" não foi encontrado."
 
-#: utils/init/miscinit.c:1167
+#: utils/init/miscinit.c:1188
 #, c-format
 msgid "File \"%s\" does not contain valid data."
 msgstr "Arquivo \"%s\" não contém dados válidos."
 
-#: utils/init/miscinit.c:1169
+#: utils/init/miscinit.c:1190
 msgid "You might need to initdb."
 msgstr "Você precisa executar o initdb."
 
-#: utils/init/miscinit.c:1176 access/transam/xlog.c:3975
+#: utils/init/miscinit.c:1197 access/transam/xlog.c:3975
 #: access/transam/xlog.c:3984 access/transam/xlog.c:4014
 #: access/transam/xlog.c:4021 access/transam/xlog.c:4028
 #: access/transam/xlog.c:4033 access/transam/xlog.c:4040
@@ -2938,7 +2943,7 @@ msgstr "Você precisa executar o initdb."
 msgid "database files are incompatible with server"
 msgstr "arquivos do banco de dados são incompatíveis com o servidor"
 
-#: utils/init/miscinit.c:1177
+#: utils/init/miscinit.c:1198
 #, c-format
 msgid ""
 "The data directory was initialized by PostgreSQL version %ld.%ld, which is "
@@ -2947,12 +2952,12 @@ msgstr ""
 "O diretório de dados foi inicializado pelo PostgreSQL versão %ld.%ld, que "
 "não é compatível com essa versão %s."
 
-#: utils/init/miscinit.c:1221
+#: utils/init/miscinit.c:1242
 #, c-format
 msgid "invalid list syntax in parameter \"%s\""
 msgstr "sintaxe de lista é inválida para parâmetro \"%s\""
 
-#: utils/init/miscinit.c:1246
+#: utils/init/miscinit.c:1267
 #, c-format
 msgid "loaded library \"%s\""
 msgstr "biblioteca \"%s\" foi carregada"
@@ -3070,17 +3075,17 @@ msgstr "cursor \"%s\" já existe"
 msgid "closing existing cursor \"%s\""
 msgstr "fechando cursor existente \"%s\""
 
-#: utils/mmgr/portalmem.c:409
+#: utils/mmgr/portalmem.c:412
 #, c-format
 msgid "cannot drop active portal \"%s\""
 msgstr "não pode remover portal ativo \"%s\""
 
-#: utils/mmgr/portalmem.c:614
+#: utils/mmgr/portalmem.c:617
 msgid "cannot PREPARE a transaction that has created a cursor WITH HOLD"
 msgstr ""
 "não pode executar PREPARE em uma transação que criou um cursor WITH HOLD"
 
-#: utils/mmgr/portalmem.c:930 commands/prepare.c:733
+#: utils/mmgr/portalmem.c:941 commands/prepare.c:733
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr ""
 "modo de materialização é requerido, mas ele não é permitido neste contexto"
@@ -5023,31 +5028,31 @@ msgstr "nenhuma função de entrada disponível para tipo %s"
 msgid "no output function available for type %s"
 msgstr "nenhuma função de saída disponível para tipo %s"
 
-#: utils/cache/relcache.c:3848
+#: utils/cache/relcache.c:3839
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr ""
 "não pôde criar arquivo de inicialização de cache de relações \"%s\": %m"
 
-#: utils/cache/relcache.c:3850
+#: utils/cache/relcache.c:3841
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Continuando mesmo assim, mas há algo errado."
 
-#: utils/cache/typcache.c:145 parser/parse_type.c:204
+#: utils/cache/typcache.c:151 parser/parse_type.c:204
 #, c-format
 msgid "type \"%s\" is only a shell"
 msgstr "tipo \"%s\" é indefinido"
 
-#: utils/cache/typcache.c:325
+#: utils/cache/typcache.c:331
 #, c-format
 msgid "type %s is not composite"
 msgstr "tipo %s não é composto"
 
-#: utils/cache/typcache.c:339
+#: utils/cache/typcache.c:345
 msgid "record type has not been registered"
 msgstr "tipo record não foi registrado"
 
-#: utils/cache/plancache.c:540
+#: utils/cache/plancache.c:542
 msgid "cached plan must not change result type"
 msgstr "plano em cache não deve mudar tipo resultante"
 
@@ -5170,82 +5175,78 @@ msgstr ""
 msgid "adding missing FROM-clause entry for table \"%s\""
 msgstr "adicionando entrada para tabela \"%s\" que faltava na cláusula FROM"
 
-#: parser/parse_expr.c:504 parser/parse_target.c:871 catalog/namespace.c:1895
+#: parser/parse_expr.c:501 parser/parse_target.c:871 catalog/namespace.c:1895
 #, c-format
 msgid "cross-database references are not implemented: %s"
 msgstr "referências cruzadas entre bancos de dados não estão implementadas: %s"
 
-#: parser/parse_expr.c:535 parser/parse_target.c:881 gram.y:2966 gram.y:8790
+#: parser/parse_expr.c:532 parser/parse_target.c:881 gram.y:2966 gram.y:8790
 #: catalog/namespace.c:1901
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "nome qualificado é inválido (nomes com muitos pontos): %s"
 
-#: parser/parse_expr.c:564 parser/parse_expr.c:570 parser/parse_coerce.c:250
+#: parser/parse_expr.c:561 parser/parse_expr.c:567 parser/parse_coerce.c:250
 #: parser/analyze.c:1944
 #, c-format
 msgid "there is no parameter $%d"
 msgstr "não há parâmetro $%d"
 
-#: parser/parse_expr.c:809
+#: parser/parse_expr.c:806
 msgid "NULLIF requires = operator to yield boolean"
 msgstr "NULLIF requer que operador = retorne booleano"
 
-#: parser/parse_expr.c:976
+#: parser/parse_expr.c:973
 msgid "arguments of row IN must all be row expressions"
 msgstr "argumentos de registro IN devem ser todos expressões de registro"
 
-#: parser/parse_expr.c:1101 tcop/fastpath.c:360
-msgid "argument to pg_get_expr() must come from system catalogs"
-msgstr "argumento para pg_get_expr() deve vir dos catálogos do sistema"
-
-#: parser/parse_expr.c:1269
+#: parser/parse_expr.c:1190
 msgid "subquery must return a column"
 msgstr "subconsulta deve retornar uma coluna"
 
-#: parser/parse_expr.c:1275
+#: parser/parse_expr.c:1196
 msgid "subquery must return only one column"
 msgstr "subconsulta deve retornar somente uma coluna"
 
-#: parser/parse_expr.c:1332
+#: parser/parse_expr.c:1253
 msgid "subquery has too many columns"
 msgstr "subconsulta tem muitas colunas"
 
-#: parser/parse_expr.c:1336
+#: parser/parse_expr.c:1257
 msgid "subquery has too few columns"
 msgstr "subconsulta tem poucas colunas"
 
-#: parser/parse_expr.c:1406 parser/parse_expr.c:1924 parser/parse_expr.c:1955
+#: parser/parse_expr.c:1327 parser/parse_expr.c:1845 parser/parse_expr.c:1876
 #: parser/parse_oper.c:1043 parser/parse_coerce.c:1456
 #: parser/parse_coerce.c:1473 parser/parse_coerce.c:1531
 #, c-format
 msgid "could not find array type for data type %s"
 msgstr "não pôde encontrar tipo array para tipo de dado %s"
 
-#: parser/parse_expr.c:1547
+#: parser/parse_expr.c:1468
 msgid "unnamed XML attribute value must be a column reference"
 msgstr "valor do atributo XML sem nome deve ser uma referência a coluna"
 
-#: parser/parse_expr.c:1548
+#: parser/parse_expr.c:1469
 msgid "unnamed XML element value must be a column reference"
 msgstr "valor do elemento XML sem nome deve ser uma referência a coluna"
 
-#: parser/parse_expr.c:1569
+#: parser/parse_expr.c:1490
 #, c-format
 msgid "XML attribute name \"%s\" appears more than once"
 msgstr "nome de atributo XML \"%s\" aparece mais do que uma vez"
 
-#: parser/parse_expr.c:1667
+#: parser/parse_expr.c:1588
 #, c-format
 msgid "cannot cast XMLSERIALIZE result to %s"
 msgstr "não pode converter resultado de XMLSERIALIZE para %s"
 
-#: parser/parse_expr.c:1738 parser/parse_coerce.c:266
+#: parser/parse_expr.c:1659 parser/parse_coerce.c:266
 #, c-format
 msgid "inconsistent types deduced for parameter $%d"
 msgstr "tipos inconsitentes deduzidos do parâmetro $%d"
 
-#: parser/parse_expr.c:1740 parser/parse_coerce.c:268
+#: parser/parse_expr.c:1661 parser/parse_coerce.c:268
 #: parser/parse_coerce.c:1326 parser/parse_coerce.c:1345
 #: parser/parse_coerce.c:1390 commands/tablecmds.c:919
 #: commands/tablecmds.c:1065
@@ -5253,49 +5254,49 @@ msgstr "tipos inconsitentes deduzidos do parâmetro $%d"
 msgid "%s versus %s"
 msgstr "%s versus %s"
 
-#: parser/parse_expr.c:2343 parser/parse_coerce.c:801
+#: parser/parse_expr.c:2264 parser/parse_coerce.c:801
 #: parser/parse_coerce.c:828 parser/parse_coerce.c:844
 #: parser/parse_coerce.c:858
 #, c-format
 msgid "cannot cast type %s to %s"
 msgstr "não pode converter tipo %s para %s"
 
-#: parser/parse_expr.c:2384 parser/parse_expr.c:2582
+#: parser/parse_expr.c:2305 parser/parse_expr.c:2503
 msgid "unequal number of entries in row expressions"
 msgstr "número desigual de entradas em expressões de registro"
 
-#: parser/parse_expr.c:2394
+#: parser/parse_expr.c:2315
 msgid "cannot compare rows of zero length"
 msgstr "não pode comparar registros de tamanho zero"
 
-#: parser/parse_expr.c:2419
+#: parser/parse_expr.c:2340
 #, c-format
 msgid "row comparison operator must yield type boolean, not type %s"
 msgstr ""
 "operador de comparação de registro deve retornar tipo boolean, e não tipo %s"
 
-#: parser/parse_expr.c:2426
+#: parser/parse_expr.c:2347
 msgid "row comparison operator must not return a set"
 msgstr "operador de comparação de registro não deve retornar um conjunto"
 
-#: parser/parse_expr.c:2485 parser/parse_expr.c:2529
+#: parser/parse_expr.c:2406 parser/parse_expr.c:2450
 #, c-format
 msgid "could not determine interpretation of row comparison operator %s"
 msgstr ""
 "não pôde determinar interpretação do operador de comparação de registro %s"
 
-#: parser/parse_expr.c:2487
+#: parser/parse_expr.c:2408
 msgid ""
 "Row comparison operators must be associated with btree operator families."
 msgstr ""
 "Operadores de comparação de registro devem ser associados com famílias de "
 "operadores de árvore B."
 
-#: parser/parse_expr.c:2531
+#: parser/parse_expr.c:2452
 msgid "There are multiple equally-plausible candidates."
 msgstr "Há múltiplos candidatos igualmente plausíveis."
 
-#: parser/parse_expr.c:2621
+#: parser/parse_expr.c:2542
 msgid "IS DISTINCT FROM requires = operator to yield boolean"
 msgstr "IS DISTINCT FROM requer que operador = retorne booleano"
 
@@ -6050,22 +6051,22 @@ msgstr "múltiplas cláusulas LIMIT não são permitidas"
 msgid "identifier \"%s\" will be truncated to \"%s\""
 msgstr "identificador \"%s\" será truncado para \"%s\""
 
-#: parser/parse_func.c:180
+#: parser/parse_func.c:183
 #, c-format
 msgid "%s(*) specified, but %s is not an aggregate function"
 msgstr "%s(*) especificado, mas %s não é uma função de agregação"
 
-#: parser/parse_func.c:187
+#: parser/parse_func.c:190
 #, c-format
 msgid "DISTINCT specified, but %s is not an aggregate function"
 msgstr "DISTINCT especificado, mas %s não é uma função de agregação"
 
-#: parser/parse_func.c:213
+#: parser/parse_func.c:216
 #, c-format
 msgid "function %s is not unique"
 msgstr "função %s não é única"
 
-#: parser/parse_func.c:216
+#: parser/parse_func.c:219
 msgid ""
 "Could not choose a best candidate function. You might need to add explicit "
 "type casts."
@@ -6073,7 +6074,7 @@ msgstr ""
 "Não pôde escolher uma função que se enquadra melhor. Você precisa adicionar "
 "conversões de tipo explícitas."
 
-#: parser/parse_func.c:222 parser/parse_func.c:1203 commands/typecmds.c:1183
+#: parser/parse_func.c:225 parser/parse_func.c:1209 commands/typecmds.c:1183
 #: commands/typecmds.c:1234 commands/typecmds.c:1265 commands/typecmds.c:1288
 #: commands/typecmds.c:1309 commands/typecmds.c:1336 commands/typecmds.c:1363
 #: catalog/pg_aggregate.c:315
@@ -6081,7 +6082,7 @@ msgstr ""
 msgid "function %s does not exist"
 msgstr "função %s não existe"
 
-#: parser/parse_func.c:225
+#: parser/parse_func.c:228
 msgid ""
 "No function matches the given name and argument types. You might need to add "
 "explicit type casts."
@@ -6089,55 +6090,59 @@ msgstr ""
 "Nenhuma função corresponde com o nome e os tipos de argumentos informados. "
 "Você precisa adicionar conversões de tipo explícitas."
 
-#: parser/parse_func.c:275
+#: parser/parse_func.c:278
 #, c-format
 msgid "%s(*) must be used to call a parameterless aggregate function"
 msgstr ""
 "%s(*) deve ser utilizado para chamar uma função de agregação sem parâmetros"
 
-#: parser/parse_func.c:287
+#: parser/parse_func.c:290
 msgid "aggregates cannot return sets"
 msgstr "agregações não podem retornar conjuntos"
 
-#: parser/parse_func.c:1102
+#: parser/parse_func.c:1108
 #, c-format
 msgid "column %s.%s does not exist"
 msgstr "coluna %s.%s não existe"
 
-#: parser/parse_func.c:1114
+#: parser/parse_func.c:1120
 #, c-format
 msgid "column \"%s\" not found in data type %s"
 msgstr "coluna \"%s\" não foi encontrada no tipo de dado %s"
 
-#: parser/parse_func.c:1120
+#: parser/parse_func.c:1126
 #, c-format
 msgid "could not identify column \"%s\" in record data type"
 msgstr "não pôde identificar coluna \"%s\" no tipo de dado record"
 
-#: parser/parse_func.c:1126
+#: parser/parse_func.c:1132
 #, c-format
 msgid "column notation .%s applied to type %s, which is not a composite type"
 msgstr "notação de coluna .%s aplicada ao tipo %s, que não é um tipo composto"
 
-#: parser/parse_func.c:1247 parser/parse_func.c:1285 catalog/pg_proc.c:112
+#: parser/parse_func.c:1253 parser/parse_func.c:1291 catalog/pg_proc.c:112
 #, c-format
 msgid "functions cannot have more than %d arguments"
 msgstr "funções não podem ter mais do que %d argumentos"
 
-#: parser/parse_func.c:1306
+#: parser/parse_func.c:1312
 #, c-format
 msgid "aggregate %s(*) does not exist"
 msgstr "agregação %s(*) não existe"
 
-#: parser/parse_func.c:1311
+#: parser/parse_func.c:1317
 #, c-format
 msgid "aggregate %s does not exist"
 msgstr "agregação %s não existe"
 
-#: parser/parse_func.c:1332
+#: parser/parse_func.c:1338
 #, c-format
 msgid "function %s is not an aggregate"
 msgstr "função %s não é uma agregação"
+
+#: parser/parse_func.c:1444 tcop/fastpath.c:360
+msgid "argument to pg_get_expr() must come from system catalogs"
+msgstr "argumento para pg_get_expr() deve vir dos catálogos do sistema"
 
 #: parser/parse_type.c:82
 #, c-format
@@ -7668,7 +7673,7 @@ msgid "\"%s\" is an index"
 msgstr "\"%s\" é um índice"
 
 #: access/heap/heapam.c:1068 access/heap/heapam.c:1096
-#: commands/tablecmds.c:5475 commands/tablecmds.c:6576 catalog/aclchk.c:579
+#: commands/tablecmds.c:5475 commands/tablecmds.c:6587 catalog/aclchk.c:579
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" é um tipo composto"
@@ -7788,13 +7793,13 @@ msgstr "índice GIN não suporta busca com consulta vazia"
 msgid "array must not contain null values"
 msgstr "matriz não deve conter valores nulos"
 
-#: access/nbtree/nbtsort.c:477 access/nbtree/nbtinsert.c:418
+#: access/nbtree/nbtsort.c:477 access/nbtree/nbtinsert.c:417
 #, c-format
 msgid "index row size %lu exceeds btree maximum, %lu"
 msgstr ""
 "tamanho do registro do índice %lu excede tamanho máximo da árvore B, %lu"
 
-#: access/nbtree/nbtsort.c:480 access/nbtree/nbtinsert.c:421
+#: access/nbtree/nbtsort.c:480 access/nbtree/nbtinsert.c:420
 msgid ""
 "Values larger than 1/3 of a buffer page cannot be indexed.\n"
 "Consider a function index of an MD5 hash of the value, or use full text "
@@ -7804,7 +7809,7 @@ msgstr ""
 "Considere um índice de uma função de um hash MD5 de um valor ou utilize uma "
 "indexação de texto completa."
 
-#: access/nbtree/nbtinsert.c:297
+#: access/nbtree/nbtinsert.c:296
 #, c-format
 msgid "duplicate key value violates unique constraint \"%s\""
 msgstr "duplicar valor da chave viola a restrição de unicidade \"%s\""
@@ -7821,34 +7826,34 @@ msgstr ""
 "versão não corresponde no índice \"%s\": versão do arquivo %d, versão do "
 "código %d"
 
-#: access/transam/xact.c:618
+#: access/transam/xact.c:640
 msgid "cannot have more than 2^32-1 commands in a transaction"
 msgstr "não pode ter mais do que 2^32-1 comandos em uma transação"
 
-#: access/transam/xact.c:1112
+#: access/transam/xact.c:1134
 #, c-format
 msgid "maximum number of committed subtransactions (%d) exceeded"
 msgstr "número máximo de subtransações efetivadas (%d) foi excedido"
 
-#: access/transam/xact.c:1862
+#: access/transam/xact.c:1884
 msgid "cannot PREPARE a transaction that has operated on temporary tables"
 msgstr ""
 "não pode executar PREPARE em uma transação que utilizou tabelas temporárias"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2648
+#: access/transam/xact.c:2670
 #, c-format
 msgid "%s cannot run inside a transaction block"
 msgstr "%s não pode executar dentro de um bloco de transação"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2658
+#: access/transam/xact.c:2680
 #, c-format
 msgid "%s cannot run inside a subtransaction"
 msgstr "%s não pode executar dentro de uma subtransação"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2668
+#: access/transam/xact.c:2690
 #, c-format
 msgid "%s cannot be executed from a function or multi-command string"
 msgstr ""
@@ -7856,26 +7861,26 @@ msgstr ""
 "múltiplos comandos"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:2719
+#: access/transam/xact.c:2741
 #, c-format
 msgid "%s can only be used in transaction blocks"
 msgstr "%s só pode ser utilizado em blocos de transação"
 
-#: access/transam/xact.c:2901
+#: access/transam/xact.c:2923
 msgid "there is already a transaction in progress"
 msgstr "há uma transação em execução"
 
-#: access/transam/xact.c:3068 access/transam/xact.c:3160
+#: access/transam/xact.c:3090 access/transam/xact.c:3182
 msgid "there is no transaction in progress"
 msgstr "não há uma transação em execução"
 
-#: access/transam/xact.c:3254 access/transam/xact.c:3304
-#: access/transam/xact.c:3310 access/transam/xact.c:3354
-#: access/transam/xact.c:3402 access/transam/xact.c:3408
+#: access/transam/xact.c:3276 access/transam/xact.c:3326
+#: access/transam/xact.c:3332 access/transam/xact.c:3376
+#: access/transam/xact.c:3424 access/transam/xact.c:3430
 msgid "no such savepoint"
 msgstr "ponto de salvamento inexistente"
 
-#: access/transam/xact.c:4037
+#: access/transam/xact.c:4059
 msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "não pode ter mais do que 2^32-1 subtransações em uma transação"
 
@@ -10399,12 +10404,12 @@ msgstr "não pode truncar tabelas temporárias de outras sessões"
 msgid "tables can have at most %d columns"
 msgstr "tabelas podem ter no máximo %d colunas"
 
-#: commands/tablecmds.c:837 commands/tablecmds.c:6083
+#: commands/tablecmds.c:837 commands/tablecmds.c:6094
 #, c-format
 msgid "cannot inherit from temporary relation \"%s\""
 msgstr "não pode herdar de uma tabela temporária \"%s\""
 
-#: commands/tablecmds.c:854 commands/tablecmds.c:6111
+#: commands/tablecmds.c:854 commands/tablecmds.c:6122
 #, c-format
 msgid "relation \"%s\" would be inherited from more than once"
 msgstr "relação \"%s\" seria herdada de mais de uma vez"
@@ -10533,7 +10538,7 @@ msgstr "não pode alterar tipo \"%s\" porque coluna \"%s\".\"%s\" utiliza-o"
 msgid "column must be added to child tables too"
 msgstr "coluna deve ser adicionada as tabelas descendentes também"
 
-#: commands/tablecmds.c:3067 commands/tablecmds.c:6242
+#: commands/tablecmds.c:3067 commands/tablecmds.c:6253
 #, c-format
 msgid "child table \"%s\" has different type for column \"%s\""
 msgstr "tabela descendente \"%s\" tem tipo diferente da coluna \"%s\""
@@ -10715,16 +10720,16 @@ msgstr "Ao invés disso, mude o dono da tabela do índice."
 msgid "cannot change owner of sequence \"%s\""
 msgstr "não pode mudar dono da sequência \"%s\""
 
-#: commands/tablecmds.c:5465 commands/tablecmds.c:6568
+#: commands/tablecmds.c:5465 commands/tablecmds.c:6579
 #, c-format
 msgid "Sequence \"%s\" is linked to table \"%s\"."
 msgstr "Sequência \"%s\" está ligada a tabela \"%s\"."
 
-#: commands/tablecmds.c:5477 commands/tablecmds.c:6578
+#: commands/tablecmds.c:5477 commands/tablecmds.c:6589
 msgid "Use ALTER TYPE instead."
 msgstr "Ao invés disso utilize ALTER TYPE."
 
-#: commands/tablecmds.c:5486 commands/tablecmds.c:6586
+#: commands/tablecmds.c:5486 commands/tablecmds.c:6597
 #, c-format
 msgid "\"%s\" is not a table, view, or sequence"
 msgstr "\"%s\" não é uma tabela, visão ou sequência"
@@ -10757,66 +10762,66 @@ msgstr ""
 msgid "cannot move temporary tables of other sessions"
 msgstr "não pode mover tabelas temporárias de outras sessões"
 
-#: commands/tablecmds.c:6135
+#: commands/tablecmds.c:6146
 msgid "circular inheritance not allowed"
 msgstr "herança circular não é permitida"
 
-#: commands/tablecmds.c:6136
+#: commands/tablecmds.c:6147
 #, c-format
 msgid "\"%s\" is already a child of \"%s\"."
 msgstr "\"%s\" já é um descendente de \"%s\"."
 
-#: commands/tablecmds.c:6144
+#: commands/tablecmds.c:6155
 #, c-format
 msgid "table \"%s\" without OIDs cannot inherit from table \"%s\" with OIDs"
 msgstr "tabela \"%s\" sem OIDs não pode herdar de tabela \"%s\" com OIDs"
 
-#: commands/tablecmds.c:6249
+#: commands/tablecmds.c:6260
 #, c-format
 msgid "column \"%s\" in child table must be marked NOT NULL"
 msgstr "coluna \"%s\" na tabela descendente deve ser definida como NOT NULL"
 
-#: commands/tablecmds.c:6265
+#: commands/tablecmds.c:6276
 #, c-format
 msgid "child table is missing column \"%s\""
 msgstr "tabela descendente está faltando coluna \"%s\""
 
-#: commands/tablecmds.c:6357
+#: commands/tablecmds.c:6368
 #, c-format
 msgid "child table is missing constraint \"%s\""
 msgstr "tabela descendente está faltando restrição \"%s\""
 
-#: commands/tablecmds.c:6366
+#: commands/tablecmds.c:6377
 #, c-format
 msgid "constraint definition for check constraint \"%s\" does not match"
 msgstr ""
 "definição de restrição para restrição de verificação \"%s\" não corresponde"
 
-#: commands/tablecmds.c:6447
+#: commands/tablecmds.c:6458
 #, c-format
 msgid "relation \"%s\" is not a parent of relation \"%s\""
 msgstr "relação \"%s\" não é um ancestral da relação \"%s\""
 
-#: commands/tablecmds.c:6567
+#: commands/tablecmds.c:6578
 msgid "cannot move an owned sequence into another schema"
 msgstr "não pode mover uma sequência ligada para outro esquema"
 
-#: commands/tablecmds.c:6596
+#: commands/tablecmds.c:6607
 #, c-format
 msgid "relation \"%s\" is already in schema \"%s\""
 msgstr "relação \"%s\" já está no esquema \"%s\""
 
-#: commands/tablecmds.c:6604 commands/typecmds.c:2597
+#: commands/tablecmds.c:6615 commands/typecmds.c:2597
 #: commands/functioncmds.c:1708
 msgid "cannot move objects into or out of temporary schemas"
 msgstr "não pode mover objetos para ou de esquemas temporários"
 
-#: commands/tablecmds.c:6610 commands/typecmds.c:2603
+#: commands/tablecmds.c:6621 commands/typecmds.c:2603
 #: commands/functioncmds.c:1714
 msgid "cannot move objects into or out of TOAST schema"
 msgstr "não pode mover objetos para ou de esquema TOAST"
 
-#: commands/tablecmds.c:6661
+#: commands/tablecmds.c:6672
 #, c-format
 msgid "relation \"%s\" already exists in schema \"%s\""
 msgstr "relação \"%s\" já existe no esquema \"%s\""
@@ -13756,7 +13761,7 @@ msgstr "nenhum esquema foi selecionado para criá-lo(a)"
 msgid "improper relation name (too many dotted names): %s"
 msgstr "nome de relação é inválido (nomes com muitos pontos): %s"
 
-#: catalog/namespace.c:2614
+#: catalog/namespace.c:2622
 #, c-format
 msgid "permission denied to create temporary tables in database \"%s\""
 msgstr "permissão negada ao criar tabelas temporárias no banco de dados \"%s\""
