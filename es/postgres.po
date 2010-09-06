@@ -8,7 +8,7 @@
 # Jaime Casanova <systemguards@gmail.com> 2005, 2006
 # Emanuel Calvo Franco <postgres-arg@gmail.com> 2008
 #
-# $Id: postgres.po,v 1.27 2010/09/01 22:30:34 alvherre Exp $
+# $Id: postgres.po,v 1.28 2010/09/06 22:51:26 alvherre Exp $
 #
 #
 # Glosario:
@@ -52,8 +52,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL server 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-09-01 21:25+0000\n"
-"PO-Revision-Date: 2010-09-01 18:29-0400\n"
+"POT-Creation-Date: 2010-09-04 19:23+0000\n"
+"PO-Revision-Date: 2010-09-06 18:51-0400\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -5482,10 +5482,13 @@ msgstr ""
 "(freeze) las filas."
 
 #: utils/misc/guc.c:1635
+#, fuzzy
 msgid ""
 "Number of transactions by which VACUUM and HOT cleanup should be deferred, "
 "if any."
 msgstr ""
+"Número de transacciones por las cuales VACUUM y la limpieza HOT deberían "
+"postergarse."
 
 #: utils/misc/guc.c:1647
 msgid "Sets the maximum number of locks per transaction."
@@ -6141,7 +6144,7 @@ msgstr ""
 
 #: utils/misc/guc.c:2789
 msgid "Enables logging of recovery-related debugging information."
-msgstr ""
+msgstr "Recolectar información de depuración relacionada con la recuperación."
 
 #: utils/misc/guc.c:2803
 msgid "Collects function-level statistics on database activity."
@@ -6530,26 +6533,26 @@ msgstr "no hay una función de salida para el tipo %s"
 msgid "cached plan must not change result type"
 msgstr "el plan almacenado no debe cambiar el tipo de resultado"
 
-#: utils/cache/relcache.c:4298
+#: utils/cache/relcache.c:4289
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "no se pudo crear el archivo de cache de catálogos de sistema «%s»: %m"
 
-#: utils/cache/relcache.c:4300
+#: utils/cache/relcache.c:4291
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Prosiguiendo de todas maneras, pero hay algo mal."
 
-#: utils/cache/typcache.c:145 parser/parse_type.c:202
+#: utils/cache/typcache.c:151 parser/parse_type.c:202
 #, c-format
 msgid "type \"%s\" is only a shell"
 msgstr "el tipo «%s» está inconcluso"
 
-#: utils/cache/typcache.c:325
+#: utils/cache/typcache.c:331
 #, c-format
 msgid "type %s is not composite"
 msgstr "el tipo %s no es compuesto"
 
-#: utils/cache/typcache.c:339
+#: utils/cache/typcache.c:345
 msgid "record type has not been registered"
 msgstr "el tipo record no ha sido registrado"
 
@@ -12027,7 +12030,7 @@ msgstr ""
 
 #: executor/execQual.c:2145
 msgid "rows returned by function are not all of the same row type"
-msgstr ""
+msgstr "las filas retornadas por la función no tienen todas el mismo tipo"
 
 #: executor/execQual.c:2338
 msgid "IS DISTINCT FROM does not support set arguments"
@@ -12365,7 +12368,7 @@ msgstr "llamada a función fastpath: «%s» (OID %u)"
 
 #: tcop/fastpath.c:359 parser/parse_func.c:1705
 msgid "argument to pg_get_expr() must come from system catalogs"
-msgstr ""
+msgstr "el argumento a pg_get_expr() debe venir de catálogos del sistema"
 
 #: tcop/fastpath.c:418 tcop/postgres.c:1121 tcop/postgres.c:1408
 #: tcop/postgres.c:1825 tcop/postgres.c:2042
@@ -12525,7 +12528,8 @@ msgstr "La transacción del usuario causó un «deadlock» con la recuperación.
 
 #: tcop/postgres.c:2286
 msgid "User was connected to a database that must be dropped."
-msgstr "El usuario estaba conectado a una base de datos que debía ser eliminada."
+msgstr ""
+"El usuario estaba conectado a una base de datos que debía ser eliminada."
 
 #: tcop/postgres.c:2620
 msgid "terminating connection because of crash of another server process"
@@ -12574,12 +12578,14 @@ msgstr "terminando la conexión debido a una orden del administrador"
 
 #: tcop/postgres.c:2926
 msgid "canceling authentication due to timeout"
-msgstr "cancelando la autentificación debido a que se agotó el tiempo de espera"
+msgstr ""
+"cancelando la autentificación debido a que se agotó el tiempo de espera"
 
 #: tcop/postgres.c:2935
 msgid "canceling statement due to statement timeout"
 msgstr ""
-"cancelando la sentencia debido a que se agotó el tiempo de espera de sentencias"
+"cancelando la sentencia debido a que se agotó el tiempo de espera de "
+"sentencias"
 
 #: tcop/postgres.c:2944
 msgid "canceling autovacuum task"
@@ -13063,13 +13069,15 @@ msgstr "SSL inactivo"
 msgid ""
 "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\", %s"
 msgstr ""
-"pg_hba.conf rechaza la conexión de replicación para el servidor «%s», usuario «%s», %s"
+"pg_hba.conf rechaza la conexión de replicación para el servidor «%s», usuario "
+"«%s», %s"
 
 #: libpq/auth.c:399
 #, c-format
 msgid "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\""
 msgstr ""
-"pg_hba.conf rechaza la conexión de replicación para el servidor «%s», usuario «%s»"
+"pg_hba.conf rechaza la conexión de replicación para el servidor «%s», usuario "
+"«%s»"
 
 #: libpq/auth.c:408
 #, c-format
@@ -13077,14 +13085,16 @@ msgid ""
 "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s"
 "\", %s"
 msgstr ""
-"pg_hba.conf rechaza la conexión para el servidor «%s», usuario «%s», base de datos «%s», %s"
+"pg_hba.conf rechaza la conexión para el servidor «%s», usuario «%s», base de "
+"datos «%s», %s"
 
 #: libpq/auth.c:415
 #, c-format
 msgid ""
 "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s\""
 msgstr ""
-"pg_hba.conf rechaza la conexión para el servidor «%s», usuario «%s», base de datos «%s»"
+"pg_hba.conf rechaza la conexión para el servidor «%s», usuario «%s», base de "
+"datos «%s»"
 
 #: libpq/auth.c:446
 #, c-format
@@ -13092,15 +13102,16 @@ msgid ""
 "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s"
 "\", %s"
 msgstr ""
-"no hay una línea en pg_hba.conf para la conexión de replicación desde el servidor «%s», usuario «%s», %s"
+"no hay una línea en pg_hba.conf para la conexión de replicación desde el "
+"servidor «%s», usuario «%s», %s"
 
 #: libpq/auth.c:452
 #, c-format
 msgid ""
 "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s\""
 msgstr ""
-"no hay una línea en pg_hba.conf para la conexión de replicación desde el servidor «%s», usuario «%s»"
-
+"no hay una línea en pg_hba.conf para la conexión de replicación desde el "
+"servidor «%s», usuario «%s»"
 
 #: libpq/auth.c:461
 #, c-format
@@ -13341,7 +13352,7 @@ msgstr "servidor LDAP no especificado"
 
 #: libpq/auth.c:2353
 msgid "invalid character in user name for LDAP authentication"
-msgstr ""
+msgstr "carácter no válido en nombre de usuario para autentificación LDAP"
 
 #: libpq/auth.c:2368
 #, c-format
@@ -13349,30 +13360,29 @@ msgid ""
 "could not perform initial LDAP bind for ldapbinddn \"%s\" on server \"%s\": "
 "error code %d"
 msgstr ""
-"no se pudo hacer el enlace LDAP inicial para el ldapbinddb «%s» en el servidor «%s»: código de error %d"
+"no se pudo hacer el enlace LDAP inicial para el ldapbinddb «%s» en el "
+"servidor «%s»: código de error %d"
 
 #: libpq/auth.c:2393
-#, fuzzy, c-format
+#, c-format
 msgid "could not search LDAP for filter \"%s\" on server \"%s\": error code %d"
 msgstr ""
-"Falló el inicio de sesión LDAP para el usuario «%s» en el servidor «%s»: "
+"no se pudo hacer la búsqueda LDAP para el filtro «%s» en el servidor «%s»: "
 "código de error %d"
 
 #: libpq/auth.c:2403
-#, fuzzy, c-format
+#, c-format
 msgid "LDAP search failed for filter \"%s\" on server \"%s\": no such user"
 msgstr ""
-"Falló el inicio de sesión LDAP para el usuario «%s» en el servidor «%s»: "
-"código de error %d"
+"La búsqueda LDAP falló para el filtro «%s» en el servidor «%s»: no existe el usuario"
 
 #: libpq/auth.c:2407
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "LDAP search failed for filter \"%s\" on server \"%s\": user is not unique (%"
 "ld matches)"
 msgstr ""
-"Falló el inicio de sesión LDAP para el usuario «%s» en el servidor «%s»: "
-"código de error %d"
+"La búsqueda LDAP falló para el filtro «%s» en el servidor «%s»: el usuario no es único (%ld coincidencias)"
 
 #: libpq/auth.c:2424
 #, fuzzy, c-format
@@ -13383,11 +13393,10 @@ msgstr ""
 "s\n"
 
 #: libpq/auth.c:2444
-#, fuzzy, c-format
+#, c-format
 msgid "could not unbind after searching for user \"%s\" on server \"%s\": %s"
 msgstr ""
-"Falló el inicio de sesión LDAP para el usuario «%s» en el servidor «%s»: "
-"código de error %d"
+"no se pudo desconectar después de buscar al usuario «%s» en el servidor «%s»: %s"
 
 #: libpq/auth.c:2481
 #, c-format
@@ -13397,12 +13406,12 @@ msgstr ""
 "código de error %d"
 
 #: libpq/auth.c:2509
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "certificate authentication failed for user \"%s\": client certificate "
 "contains no user name"
 msgstr ""
-"Inicio de sesión con certificado falló para el usuario «%s»: el certificado "
+"la autentificación con certificado falló para el usuario «%s»: el certificado "
 "de cliente no contiene un nombre de usuario"
 
 #: libpq/auth.c:2633
@@ -13804,8 +13813,7 @@ msgstr ""
 
 #: libpq/hba.c:1093
 msgid "Make sure the root.crt file is present and readable."
-msgstr ""
-"Asegúrese que el archivo root.crt está presente y es legible."
+msgstr "Asegúrese que el archivo root.crt está presente y es legible."
 
 #: libpq/hba.c:1106
 msgid "clientcert can not be set to 0 when using \"cert\" authentication"
@@ -13836,14 +13844,16 @@ msgid ""
 "cannot use ldapbasedn, ldapbinddn, ldapbindpasswd, or ldapsearchattribute "
 "together with ldapprefix"
 msgstr ""
-"no se puede usar ldapbasedn, ldapbinddn, ldapbindpasswd or ldapsearchattribute junto con ldapprefix"
+"no se puede usar ldapbasedn, ldapbinddn, ldapbindpasswd or "
+"ldapsearchattribute junto con ldapprefix"
 
 #: libpq/hba.c:1294
 msgid ""
 "authentication method \"ldap\" requires argument \"ldapbasedn\", \"ldapprefix"
 "\", or \"ldapsuffix\" to be set"
 msgstr ""
-"el método de autentificación «ldap» requiere que los argumento «ldapbasedn», «ldapprefix» o «ldapsuffix» estén definidos"
+"el método de autentificación «ldap» requiere que los argumento «ldapbasedn», "
+"«ldapprefix» o «ldapsuffix» estén definidos"
 
 #: libpq/hba.c:1614
 #, c-format
@@ -14487,8 +14497,8 @@ msgid ""
 "in an aggregate with DISTINCT, ORDER BY expressions must appear in argument "
 "list"
 msgstr ""
-"en una agregación con DISTINCT, las expresiones en ORDER BY deben aparecer en la lista "
-"de argumentos"
+"en una agregación con DISTINCT, las expresiones en ORDER BY deben aparecer "
+"en la lista de argumentos"
 
 #: parser/parse_clause.c:1763
 msgid "for SELECT DISTINCT, ORDER BY expressions must appear in select list"
