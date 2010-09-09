@@ -8,7 +8,7 @@
 # Jaime Casanova <systemguards@gmail.com> 2005, 2006
 # Emanuel Calvo Franco <postgres-arg@gmail.com> 2008
 #
-# $Id: postgres.po,v 1.28 2010/09/06 22:51:26 alvherre Exp $
+# $Id: postgres.po,v 1.29 2010/09/09 16:30:05 alvherre Exp $
 #
 #
 # Glosario:
@@ -30,6 +30,7 @@
 # parser				analizador sintáctico
 # to parse 				interpretar
 # permission denied 			permiso denegado
+# to poll				monitorear
 # privilege				privilegio
 # to revoke				revocar
 # row					registro, fila
@@ -53,7 +54,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL server 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2010-09-04 19:23+0000\n"
-"PO-Revision-Date: 2010-09-06 18:51-0400\n"
+"PO-Revision-Date: 2010-09-09 12:29-0400\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -1213,11 +1214,10 @@ msgstr ""
 "restore_command"
 
 #: access/transam/xlog.c:5284
-#, fuzzy
 msgid ""
 "The database server will regularly poll the pg_xlog subdirectory to check "
 "for files placed there."
-msgstr "El servidor de bases de datos ..."
+msgstr "El servidor de bases de datos monitoreará el subdirectorio pg_xlog con regularidad en búsqueda de archivos almacenados ahí."
 
 #: access/transam/xlog.c:5290
 #, c-format
@@ -5482,7 +5482,6 @@ msgstr ""
 "(freeze) las filas."
 
 #: utils/misc/guc.c:1635
-#, fuzzy
 msgid ""
 "Number of transactions by which VACUUM and HOT cleanup should be deferred, "
 "if any."
@@ -13385,12 +13384,11 @@ msgstr ""
 "La búsqueda LDAP falló para el filtro «%s» en el servidor «%s»: el usuario no es único (%ld coincidencias)"
 
 #: libpq/auth.c:2424
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "could not get dn for the first entry matching \"%s\" on server \"%s\": %s"
 msgstr ""
-"no se pudo leer el archivo de la llave privada SSL «%s» desde el motor «%s»: %"
-"s\n"
+"no se pudo obtener el dn para la primera entrada que coincide con «%s» en el servidor «%s»: %s"
 
 #: libpq/auth.c:2444
 #, c-format
@@ -13415,97 +13413,92 @@ msgstr ""
 "de cliente no contiene un nombre de usuario"
 
 #: libpq/auth.c:2633
-#, fuzzy
 msgid "RADIUS server not specified"
-msgstr "servidor LDAP no especificado"
+msgstr "servidor RADIUS no especificado"
 
 #: libpq/auth.c:2640
-#, fuzzy
 msgid "RADIUS secret not specified"
-msgstr "servidor LDAP no especificado"
+msgstr "secreto RADIUS no especificado"
 
 #: libpq/auth.c:2656 libpq/hba.c:1213
-#, fuzzy, c-format
+#, c-format
 msgid "could not translate RADIUS server name \"%s\" to address: %s"
-msgstr "no se pudo traducir el servicio «%s» a dirección: %s"
+msgstr "no se pudo traducir el nombre de servidor RADIUS «%s» a dirección: %s"
 
 #: libpq/auth.c:2684
-#, fuzzy
 msgid ""
 "RADIUS authentication does not support passwords longer than 16 characters"
-msgstr "la autentificación krb5 no está soportada en conexiones locales"
+msgstr "la autentificación RADIUS no soporta contraseñas más largas de 16 caracteres"
 
 #: libpq/auth.c:2695
-#, fuzzy
 msgid "could not generate random encryption vector"
-msgstr "no se pudo localizar un registro de punto de control válido"
+msgstr "no se pudo generar un vector aleatorio de encriptación"
 
 #: libpq/auth.c:2718
 msgid "could not perform MD5 encryption of password"
-msgstr ""
+msgstr "no se pudo efectuar cifrado MD5 de la contraseña"
 
 #: libpq/auth.c:2740
-#, fuzzy, c-format
+#, c-format
 msgid "could not create RADIUS socket: %m"
-msgstr "no se pudo crear el socket %s: %m"
+msgstr "no se pudo crear el socket RADIUS: %m"
 
 #: libpq/auth.c:2761
-#, fuzzy, c-format
+#, c-format
 msgid "could not bind local RADIUS socket: %m"
-msgstr "no se pudo enlazar al socket %s: %m"
+msgstr "no se pudo enlazar el socket RADIUS local: %m"
 
 #: libpq/auth.c:2771
-#, fuzzy, c-format
+#, c-format
 msgid "could not send RADIUS packet: %m"
-msgstr "no se pudo enviar el paquete de inicio: %s\n"
+msgstr "no se pudo enviar el paquete RADIUS: %m"
 
 #: libpq/auth.c:2796
-#, fuzzy, c-format
+#, c-format
 msgid "could not check status on RADIUS socket: %m"
-msgstr "no se pudo crear el socket %s: %m"
+msgstr "no se pudo verificar el estado en el socket %m"
 
 #: libpq/auth.c:2803
-#, fuzzy
 msgid "timeout waiting for RADIUS response"
-msgstr "Se agotó el tiempo de espera al inicio del servidor\n"
+msgstr "se agotó el tiempo de espera de la respuesta RADIUS"
 
 #: libpq/auth.c:2819
-#, fuzzy, c-format
+#, c-format
 msgid "could not read RADIUS response: %m"
-msgstr "no se pudo crear la relación %s: %m"
+msgstr "no se pudo leer la respuesta RADIUS: %m"
 
 #: libpq/auth.c:2834 libpq/auth.c:2838
 #, c-format
 msgid "RADIUS response was sent from incorrect port: %i"
-msgstr ""
+msgstr "la respuesta RADIUS fue enviada desde el port incorrecto: %i"
 
 #: libpq/auth.c:2847
 #, c-format
 msgid "RADIUS response too short: %i"
-msgstr ""
+msgstr "la respuesta RADIUS es demasiado corta: %i"
 
 #: libpq/auth.c:2854
 #, c-format
 msgid "RADIUS response has corrupt length: %i (actual length %i)"
-msgstr ""
+msgstr "la respuesta RADIUS tiene largo corrupto: %i (largo real %i)"
 
 #: libpq/auth.c:2862
 #, c-format
 msgid "RADIUS response is to a different request: %i (should be %i)"
-msgstr ""
+msgstr "la respuesta RADIUS es a una petición diferente: %i (debería ser %i)"
 
 #: libpq/auth.c:2887
 msgid "could not perform MD5 encryption of received packet"
-msgstr ""
+msgstr "no se pudo realizar cifrado MD5 del paquete recibido"
 
 #: libpq/auth.c:2896
 msgid "RADIUS response has incorrect MD5 signature"
-msgstr ""
+msgstr "la respuesta RADIUS tiene firma MD5 incorrecta"
 
 #: libpq/auth.c:2907
 #, c-format
 msgid "RADIUS response has invalid code (%i) for user \"%s\""
-msgstr ""
+msgstr "la respuesta RADIUS tiene código no válido (%i) para el usuario «%s»"
 
 #: libpq/be-fsstubs.c:133 libpq/be-fsstubs.c:163 libpq/be-fsstubs.c:189
 #: libpq/be-fsstubs.c:225 libpq/be-fsstubs.c:272 libpq/be-fsstubs.c:518
@@ -13514,9 +13507,9 @@ msgid "invalid large-object descriptor: %d"
 msgstr "el descriptor de objeto grande no es válido: %d"
 
 #: libpq/be-fsstubs.c:173 libpq/be-fsstubs.c:205 libpq/be-fsstubs.c:528
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied for large object %u"
-msgstr "permiso denegado al lenguaje %s"
+msgstr "permiso denegado al objeto grande %u"
 
 #: libpq/be-fsstubs.c:194
 #, c-format
@@ -13672,7 +13665,7 @@ msgstr "no se pudo aceptar una conexión SSL: %s"
 
 #: libpq/be-secure.c:991
 msgid "SSL certificate's common name contains embedded null"
-msgstr ""
+msgstr "el «common name» del certificado SSL contiene un carácter null"
 
 #: libpq/be-secure.c:998
 #, c-format
@@ -13887,15 +13880,15 @@ msgstr ""
 "s) no coinciden"
 
 #: libpq/hba.c:1783
-#, fuzzy, c-format
+#, c-format
 msgid "no match in usermap \"%s\" for user \"%s\" authenticated as \"%s\""
 msgstr ""
-"no hay coincidencia en el mapa para el usuario «%s» autentificado como «%s»"
+"no hay coincidencia en el mapa «%s» para el usuario «%s» autentificado como «%s»"
 
 #: libpq/hba.c:1807
-#, fuzzy, c-format
+#, c-format
 msgid "could not open usermap file \"%s\": %m"
-msgstr "no se pudo abrir el mapa de usuarios Ident «%s»: %m"
+msgstr "no se pudo abrir el archivo de mapa de usuarios «%s»: %m"
 
 #: libpq/pqcomm.c:294
 #, c-format
@@ -14004,9 +13997,9 @@ msgid "could not receive data from client: %m"
 msgstr "no se pudo recibir datos del cliente: %m"
 
 #: libpq/pqcomm.c:854
-#, fuzzy, c-format
+#, c-format
 msgid "could not set socket to non-blocking mode: %m"
-msgstr "no se pudo establecer el socket en modo no bloqueante: %s\n"
+msgstr "no se pudo establecer el socket en modo no bloqueante: %m"
 
 #: libpq/pqcomm.c:900 libpq/pqcomm.c:911
 #, c-format
@@ -14261,11 +14254,10 @@ msgid "SELECT FOR UPDATE/SHARE is not allowed with window functions"
 msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones ventana"
 
 #: parser/analyze.c:2050
-#, fuzzy
 msgid ""
 "SELECT FOR UPDATE/SHARE is not allowed with set-returning functions in the "
 "target list"
-msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones ventana"
+msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones que retornan conjuntos en la lista de resultados"
 
 #: parser/analyze.c:2126
 msgid "SELECT FOR UPDATE/SHARE must specify unqualified relation names"
@@ -14285,11 +14277,9 @@ msgid "SELECT FOR UPDATE/SHARE cannot be applied to a function"
 msgstr "SELECT FOR UPDATE/SHARE no puede ser aplicado a una función"
 
 #: parser/analyze.c:2180
-#, fuzzy
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a WITH query"
 msgstr ""
-"SELECT FOR UPDATE/SHARE no puede ser aplicado a una consulta WITH de un "
-"nivel más externo"
+"SELECT FOR UPDATE/SHARE no puede ser aplicado a una consulta WITH"
 
 #: parser/analyze.c:2194
 #, c-format
@@ -14305,7 +14295,7 @@ msgstr "no se pudo identificar un operador de ordenamiento para el tipo %s"
 
 #: parser/parse_agg.c:129
 msgid "Aggregates with DISTINCT must be able to sort their inputs."
-msgstr ""
+msgstr "Las funciones de agregación con DISTINCT deben ser capaces de ordenar sus valores de entrada."
 
 #: parser/parse_agg.c:170
 msgid "aggregate function calls cannot contain window function calls"
@@ -14911,14 +14901,14 @@ msgstr ""
 "conversiones explícitas de tipos."
 
 #: parser/parse_func.c:295
-#, fuzzy
 msgid ""
 "No aggregate function matches the given name and argument types. Perhaps you "
 "misplaced ORDER BY; ORDER BY must appear after all regular arguments of the "
 "aggregate."
 msgstr ""
-"Ninguna función coincide en el nombre y tipos de argumentos. Puede desear "
-"agregar conversión explícita de tipos."
+"Ninguna función coincide en el nombre y tipos de argumentos. Quizás puso ORDER BY en "
+"una mala posición; ORDER BY debe aparecer después de todos los argumentos normales de la "
+"función de agregación."
 
 #: parser/parse_func.c:306
 msgid ""
@@ -14939,9 +14929,8 @@ msgid "aggregates cannot return sets"
 msgstr "las funciones de agregación no pueden retornar conjuntos"
 
 #: parser/parse_func.c:432
-#, fuzzy
 msgid "aggregates cannot use named arguments"
-msgstr "las funciones de agregación no pueden retornar conjuntos"
+msgstr "las funciones de agregación no pueden usar argumentos con nombre"
 
 #: parser/parse_func.c:451
 msgid "window function call requires an OVER clause"
@@ -14952,18 +14941,16 @@ msgid "DISTINCT is not implemented for window functions"
 msgstr "DISTINCT no está implementado para funciones ventana"
 
 #: parser/parse_func.c:488
-#, fuzzy
 msgid "aggregate ORDER BY is not implemented for window functions"
-msgstr "DISTINCT no está implementado para funciones ventana"
+msgstr "el ORDER BY de funciones de agregación no está implementado para funciones ventana"
 
 #: parser/parse_func.c:494
 msgid "window functions cannot return sets"
 msgstr "las funciones ventana no pueden retornar conjuntos"
 
 #: parser/parse_func.c:505
-#, fuzzy
 msgid "window functions cannot use named arguments"
-msgstr "las funciones ventana no pueden retornar conjuntos"
+msgstr "las funciones ventana no pueden usar argumentos con nombre"
 
 #: parser/parse_func.c:1570
 #, c-format
@@ -15254,9 +15241,9 @@ msgid "multiple default values specified for column \"%s\" of table \"%s\""
 msgstr "múltiples valores default especificados para columna «%s» de tabla «%s»"
 
 #: parser/parse_utilcmd.c:832
-#, fuzzy, c-format
+#, c-format
 msgid "type %s is not a composite type"
-msgstr "el tipo %s no es compuesto"
+msgstr "el tipo %s no es un tipo compuesto"
 
 #: parser/parse_utilcmd.c:1457
 #, c-format
@@ -15383,9 +15370,8 @@ msgid "interval precision specified twice"
 msgstr "la precisión de interval fue especificada dos veces"
 
 #: gram.y:2521
-#, fuzzy
 msgid "CHECK constraints cannot be deferred"
-msgstr "la restricción «%s» no es postergable"
+msgstr "las restricciones CHECK no puede ser postergadas"
 
 #: gram.y:2725
 msgid "CREATE TABLE AS cannot specify INTO"
@@ -15461,11 +15447,11 @@ msgstr "el predicado UNIQUE no está implementado"
 
 #: gram.y:9993
 msgid "RANGE PRECEDING is only supported with UNBOUNDED"
-msgstr ""
+msgstr "RANGE PRECEDING sólo está soportado con UNBOUNDED"
 
 #: gram.y:9999
 msgid "RANGE FOLLOWING is only supported with UNBOUNDED"
-msgstr ""
+msgstr "RANGE FOLLOWING sólo está soportado con UNBOUNDED"
 
 #: gram.y:10026 gram.y:10049
 msgid "frame start cannot be UNBOUNDED FOLLOWING"
@@ -15473,7 +15459,7 @@ msgstr "el inicio de «frame» no puede ser UNBOUNDED FOLLOWING"
 
 #: gram.y:10031
 msgid "frame starting from following row cannot end with current row"
-msgstr ""
+msgstr "el «frame» que se inicia desde la siguiente fila no puede terminar en la fila actual"
 
 #: gram.y:10054
 msgid "frame end cannot be UNBOUNDED PRECEDING"
@@ -15481,17 +15467,15 @@ msgstr "el fin de «frame» no puede ser UNBOUNDED PRECEDING"
 
 #: gram.y:10060
 msgid "frame starting from current row cannot have preceding rows"
-msgstr ""
+msgstr "el «frame» que se inicia desde la fila actual no puede tener filas precedentes"
 
 #: gram.y:10067
 msgid "frame starting from following row cannot have preceding rows"
-msgstr ""
+msgstr "el «frame» que se inicia desde la fila siguiente no puede tener filas precedentes"
 
 #: gram.y:10706
-#, fuzzy
 msgid "type modifier cannot have parameter name"
-msgstr ""
-"no se puede especificar un modificador de tipo para el tipo inconcluso «%s»"
+msgstr "el modificador de tipo no puede tener nombre de parámetro"
 
 #: gram.y:11303 gram.y:11511
 msgid "improper use of \"*\""
@@ -15555,18 +15539,16 @@ msgstr ""
 
 #: scan.l:564 scan.l:572 scan.l:580 scan.l:581 scan.l:582 scan.l:1238
 #: scan.l:1265 scan.l:1269 scan.l:1307 scan.l:1311 scan.l:1333
-#, fuzzy
 msgid "invalid Unicode surrogate pair"
-msgstr "valor de escape Unicode no válido"
+msgstr "par sustituto (surrogate) Unicode no válido"
 
 #: scan.l:586
-#, fuzzy
 msgid "invalid Unicode escape"
 msgstr "valor de escape Unicode no válido"
 
 #: scan.l:587
 msgid "Unicode escapes must be \\uXXXX or \\UXXXXXXXX."
-msgstr ""
+msgstr "Los escapes Unicode deben ser \\uXXXX o \\UXXXXXXXX."
 
 #: scan.l:598
 msgid "unsafe use of \\' in a string literal"
@@ -15777,7 +15759,7 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Este error generalmente significa que una petición de PostgreSQL para "
+"Este error normalmente significa que una petición de PostgreSQL para "
 "obtener un segmento de memoria compartida excedió el parámetro SHMMAX del "
 "kernel.  Puede reducir el tamaño de la petición o reconfigurar el kernel con "
 "un SHMMAX superior.  Para reducir el tamaño de la petición (actualmente %lu "
@@ -15790,7 +15772,7 @@ msgstr ""
 "configuración de memoria compartida."
 
 #: port/sysv_shmem.c:165 port/pg_shmem.c:165
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded available memory or swap space, or exceeded your kernel's "
@@ -15801,9 +15783,9 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Este error usualmente significa que la petición de un segmento de memoria "
+"Este error normalmente significa que la petición de un segmento de memoria "
 "compartida de PostgreSQL excedía la memoria disponible o el espacio de "
-"intercambio (swap).  Para reducir el tamaño de la petición (actualmente %lu "
+"intercambio (swap), o excedía el valor SHMALL del kernel.  Para reducir el tamaño de la petición (actualmente %lu "
 "bytes), reduzca el parámetro de PostgreSQL shared_buffers (actualmente %d) y/"
 "o el parámetro max_connections (actualmente %d).\n"
 "La documentación de PostgreSQL contiene más información acerca de la "
@@ -16094,14 +16076,13 @@ msgstr ""
 "debe ser superusuario para reinicializar los contadores de estadísticas"
 
 #: postmaster/pgstat.c:1182
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized reset target: \"%s\""
-msgstr "parámetro Ispell no reconocido: «%s»"
+msgstr "destino de reset no reconocido: «%s»"
 
 #: postmaster/pgstat.c:1183
-#, fuzzy
 msgid "Target must be \"bgwriter\"."
-msgstr "El valor debe ser un entero."
+msgstr "El destino debe ser «bgwriter»."
 
 #: postmaster/pgstat.c:2888
 #, c-format
@@ -16136,17 +16117,17 @@ msgstr ""
 "s»: %m"
 
 #: postmaster/pgstat.c:3379 postmaster/pgstat.c:3608
-#, fuzzy, c-format
+#, c-format
 msgid "could not open statistics file \"%s\": %m"
-msgstr "no se pudo abrir el archivo temporal de estadísticas «%s»: %m"
+msgstr "no se pudo abrir el archivo de estadísticas «%s»: %m"
 
 #: postmaster/pgstat.c:3391 postmaster/pgstat.c:3401 postmaster/pgstat.c:3423
 #: postmaster/pgstat.c:3438 postmaster/pgstat.c:3501 postmaster/pgstat.c:3519
 #: postmaster/pgstat.c:3535 postmaster/pgstat.c:3553 postmaster/pgstat.c:3569
 #: postmaster/pgstat.c:3620 postmaster/pgstat.c:3631
-#, fuzzy, c-format
+#, c-format
 msgid "corrupted statistics file \"%s\""
-msgstr "el archivo pgstat.stat está corrupto"
+msgstr "el archivo de estadísticas «%s» está corrupto"
 
 #: postmaster/pgstat.c:3925
 msgid "database hash table corrupted during cleanup --- abort"
@@ -16179,12 +16160,14 @@ msgid ""
 "WAL archival (archive_mode=on) requires wal_level \"archive\" or "
 "\"hot_standby\""
 msgstr ""
+"el archivado de WAL (archive_mode=on) requiere wal_level «archive» o «hot_standby»"
 
 #: postmaster/postmaster.c:736
 msgid ""
 "WAL streaming (max_wal_senders > 0) requires wal_level \"archive\" or "
 "\"hot_standby\""
 msgstr ""
+"el flujo de WAL (max_wal_senders > 0) requiere wal_level «archive» o «hot_standby»"
 
 #: postmaster/postmaster.c:744
 #, c-format
@@ -16279,9 +16262,9 @@ msgid "%s: could not open file \"%s\": %s\n"
 msgstr "%s: no se pudo abrir el archivo «%s»: %s\n"
 
 #: postmaster/postmaster.c:1279
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not open log file \"%s/%s\": %s\n"
-msgstr "%s: no se pudo abrir archivo de log «%s»: %s\n"
+msgstr "%s: no se pudo abrir archivo de log «%s/%s»: %s\n"
 
 #: postmaster/postmaster.c:1290
 #, c-format
@@ -16318,9 +16301,8 @@ msgstr ""
 "el protocolo %u.%u no está soportado: servidor soporta %u.0 hasta %u.%u"
 
 #: postmaster/postmaster.c:1713
-#, fuzzy
 msgid "invalid value for boolean option \"replication\""
-msgstr "valor no válido para la opción booleana «%s»: «%s»"
+msgstr "valor no válido para la opción booleana «replication»"
 
 #: postmaster/postmaster.c:1733
 msgid "invalid startup packet layout: expected terminator as last byte"
@@ -16405,9 +16387,8 @@ msgid "WAL writer process"
 msgstr "proceso escritor de WAL"
 
 #: postmaster/postmaster.c:2487
-#, fuzzy
 msgid "WAL receiver process"
-msgstr "proceso escritor de WAL"
+msgstr "proceso receptor de WAL"
 
 #: postmaster/postmaster.c:2502
 msgid "autovacuum launcher process"
@@ -16523,14 +16504,14 @@ msgid "could not fork WAL writer process: %m"
 msgstr "no se pudo lanzar el proceso escritor de WAL: %m"
 
 #: postmaster/postmaster.c:4432
-#, fuzzy, c-format
+#, c-format
 msgid "could not fork WAL receiver process: %m"
-msgstr "no se pudo lanzar el proceso escritor de WAL: %m"
+msgstr "no se pudo lanzar el proceso receptor de WAL: %m"
 
 #: postmaster/postmaster.c:4436
 #, c-format
 msgid "could not fork process: %m"
-msgstr "No se pudo lanzar el proceso: %m"
+msgstr "no se pudo lanzar el proceso: %m"
 
 #: postmaster/postmaster.c:4718
 #, c-format
@@ -17234,6 +17215,7 @@ msgid ""
 "ShmemIndex entry size is wrong for data structure \"%s\": expected %lu, "
 "actual %lu"
 msgstr ""
+"el tamaño de la entrada ShmemIndex es incorrecto para la estructura «%s»: se esperaba %lu, real %lu"
 
 #: storage/ipc/shmem.c:427 storage/ipc/shmem.c:446
 msgid "requested shared memory size overflows size_t"
