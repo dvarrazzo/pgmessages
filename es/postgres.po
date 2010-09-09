@@ -8,7 +8,7 @@
 # Jaime Casanova <systemguards@gmail.com> 2005, 2006
 # Emanuel Calvo Franco <postgres-arg@gmail.com> 2008
 #
-# $Id: postgres.po,v 1.30 2010/09/09 16:33:44 alvherre Exp $
+# $Id: postgres.po,v 1.31 2010/09/09 16:38:14 alvherre Exp $
 #
 #
 # Glosario:
@@ -38,7 +38,7 @@
 # schema				esquema
 # to skip				ignorar
 # trigger				disparador
-# window function			función ventana
+# window function			función de ventana deslizante
 #
 # FIXME varios:
 # * "port" se traduce en forma inconsistente; corregir
@@ -54,7 +54,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL server 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2010-09-04 19:23+0000\n"
-"PO-Revision-Date: 2010-09-09 12:33-0400\n"
+"PO-Revision-Date: 2010-09-09 12:37-0400\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "MIME-Version: 1.0\n"
@@ -7930,7 +7930,7 @@ msgstr "no se puede usar una función de agregación en expresión default"
 
 #: catalog/heap.c:2261
 msgid "cannot use window function in default expression"
-msgstr "no se puede usar una función ventana en expresión default"
+msgstr "no se puede usar una función de ventana deslizante en expresión default"
 
 #: catalog/heap.c:2280 rewrite/rewriteHandler.c:952
 #, c-format
@@ -7958,7 +7958,7 @@ msgstr "no se pueden usar funciones de agregación en una restricción check"
 
 #: catalog/heap.c:2338 commands/typecmds.c:2306
 msgid "cannot use window function in check constraint"
-msgstr "no se pueden usar funciones ventana en una restricción check"
+msgstr "no se pueden usar funciones de ventana deslizante en una restricción check"
 
 #: catalog/heap.c:2577
 msgid "unsupported ON COMMIT and foreign key combination"
@@ -9616,7 +9616,7 @@ msgstr ""
 #: commands/functioncmds.c:368
 msgid "cannot use window function in parameter default value"
 msgstr ""
-"no se puede usar una función ventana en el valor por omisión de un parámetro"
+"no se puede usar una función de ventana deslizante en el valor por omisión de un parámetro"
 
 #: commands/functioncmds.c:378
 msgid "input parameters after one with a default value must also have defaults"
@@ -9740,7 +9740,7 @@ msgstr "la función de conversión no debe ser una función de agregación"
 
 #: commands/functioncmds.c:1587
 msgid "cast function must not be a window function"
-msgstr "la función de conversión no debe ser una función ventana"
+msgstr "la función de conversión no debe ser una función de ventana deslizante"
 
 #: commands/functioncmds.c:1591
 msgid "cast function must not return a set"
@@ -10222,7 +10222,7 @@ msgstr "no se puede usar una función de agregación en un parámetro a EXECUTE"
 
 #: commands/prepare.c:352
 msgid "cannot use window function in EXECUTE parameter"
-msgstr "no se puede usar una función ventana en un parámetro a EXECUTE"
+msgstr "no se puede usar una función de ventana deslizante en un parámetro a EXECUTE"
 
 #: commands/prepare.c:365
 #, c-format
@@ -10828,7 +10828,7 @@ msgstr ""
 #: commands/tablecmds.c:5902
 msgid "cannot use window function in transform expression"
 msgstr ""
-"no se puede usar una función ventana en una expresión de transformación"
+"no se puede usar una función de ventana deslizante en una expresión de transformación"
 
 #: commands/tablecmds.c:5920
 #, c-format
@@ -11089,7 +11089,7 @@ msgstr ""
 
 #: commands/trigger.c:241
 msgid "cannot use window function in trigger WHEN condition"
-msgstr "no se pueden usar funciones ventana en condición WHEN de un trigger"
+msgstr "no se pueden usar funciones de ventana deslizante en condición WHEN de un trigger"
 
 #: commands/trigger.c:261 commands/trigger.c:274
 msgid "statement trigger's WHEN condition cannot reference column values"
@@ -12064,7 +12064,7 @@ msgstr "no se pueden anidar llamadas a funciones de agregación"
 #: executor/execQual.c:4315 optimizer/util/clauses.c:646
 #: parser/parse_agg.c:207
 msgid "window function calls cannot be nested"
-msgstr "no se pueden anidar llamadas a funciones ventana"
+msgstr "no se pueden anidar llamadas a funciones de ventana deslizante"
 
 #: executor/execQual.c:4515
 msgid "target type is not an array"
@@ -14132,7 +14132,7 @@ msgstr "no se puede usar una función de agregación en VALUES"
 
 #: parser/analyze.c:695 parser/analyze.c:1106
 msgid "cannot use window function in VALUES"
-msgstr "no se puede usar una función ventana en VALUES"
+msgstr "no se puede usar una función de ventana deslizante en VALUES"
 
 #: parser/analyze.c:727
 msgid "INSERT has more expressions than target columns"
@@ -14195,7 +14195,7 @@ msgstr "no se puede usar una función de agregación en UPDATE"
 
 #: parser/analyze.c:1769
 msgid "cannot use window function in UPDATE"
-msgstr "no se puede usar una función ventana en UPDATE"
+msgstr "no se puede usar una función de ventana deslizante en UPDATE"
 
 #: parser/analyze.c:1876
 msgid "cannot use aggregate function in RETURNING"
@@ -14203,7 +14203,7 @@ msgstr "no se puede usar una función de agregación en RETURNING"
 
 #: parser/analyze.c:1882
 msgid "cannot use window function in RETURNING"
-msgstr "no se puede usar una función ventana en RETURNING"
+msgstr "no se puede usar una función de ventana deslizante en RETURNING"
 
 #: parser/analyze.c:1901
 msgid "RETURNING cannot contain references to other relations"
@@ -14251,7 +14251,7 @@ msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones de agregación"
 
 #: parser/analyze.c:2046
 msgid "SELECT FOR UPDATE/SHARE is not allowed with window functions"
-msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones ventana"
+msgstr "SELECT FOR UPDATE/SHARE no está permitido con funciones de ventana deslizante"
 
 #: parser/analyze.c:2050
 msgid ""
@@ -14301,7 +14301,7 @@ msgstr "Las funciones de agregación con DISTINCT deben ser capaces de ordenar s
 msgid "aggregate function calls cannot contain window function calls"
 msgstr ""
 "las llamadas a funciones de agregación no pueden contener llamadas a "
-"funciones ventana"
+"funciones de ventana deslizante"
 
 #: parser/parse_agg.c:241 parser/parse_clause.c:1620
 #, c-format
@@ -14328,23 +14328,23 @@ msgstr ""
 
 #: parser/parse_agg.c:451
 msgid "window functions not allowed in WHERE clause"
-msgstr "no se permiten funciones ventana en la cláusula WHERE"
+msgstr "no se permiten funciones de ventana deslizante en la cláusula WHERE"
 
 #: parser/parse_agg.c:457
 msgid "window functions not allowed in JOIN conditions"
-msgstr "no se permiten funciones ventana en las condiciones JOIN"
+msgstr "no se permiten funciones de ventana deslizante en las condiciones JOIN"
 
 #: parser/parse_agg.c:463
 msgid "window functions not allowed in HAVING clause"
-msgstr "no se permiten funciones ventana en la cláusula HAVING"
+msgstr "no se permiten funciones de ventana deslizante en la cláusula HAVING"
 
 #: parser/parse_agg.c:476
 msgid "window functions not allowed in GROUP BY clause"
-msgstr "no se permiten funciones ventana en la cláusula GROUP BY"
+msgstr "no se permiten funciones de ventana deslizante en la cláusula GROUP BY"
 
 #: parser/parse_agg.c:495 parser/parse_agg.c:508
 msgid "window functions not allowed in window definition"
-msgstr "no se permiten funciones ventana en definiciones de ventana"
+msgstr "no se permiten funciones de ventana deslizante en definiciones de ventana deslizante"
 
 #: parser/parse_agg.c:630
 #, c-format
@@ -14390,7 +14390,7 @@ msgstr "no se pueden usar funciones de agregación en una función en FROM"
 
 #: parser/parse_clause.c:594
 msgid "cannot use window function in function expression in FROM"
-msgstr "no se pueden usar funciones ventana en una función en FROM"
+msgstr "no se pueden usar funciones de ventana deslizante en una función en FROM"
 
 #: parser/parse_clause.c:870
 #, c-format
@@ -14442,7 +14442,7 @@ msgstr "el argumento de %s no puede contener funciones de agregación"
 #: parser/parse_clause.c:1233
 #, c-format
 msgid "argument of %s must not contain window functions"
-msgstr "el argumento de %s no puede contener funciones ventana"
+msgstr "el argumento de %s no puede contener funciones de ventana deslizante"
 
 #. translator: first %s is name of a SQL construct, eg ORDER BY
 #: parser/parse_clause.c:1350
@@ -14884,7 +14884,7 @@ msgstr "se especificó ORDER BY, pero %s no es una función de agregación"
 msgid ""
 "OVER specified, but %s is not a window function nor an aggregate function"
 msgstr ""
-"se especificó OVER, pero %s no es una función ventana ni una función de "
+"se especificó OVER, pero %s no es una función de ventana deslizante ni una función de "
 "agregación"
 
 #: parser/parse_func.c:281
@@ -14934,23 +14934,23 @@ msgstr "las funciones de agregación no pueden usar argumentos con nombre"
 
 #: parser/parse_func.c:451
 msgid "window function call requires an OVER clause"
-msgstr "la invocación de una función ventana requiere una cláusula OVER"
+msgstr "la invocación de una función de ventana deslizante requiere una cláusula OVER"
 
 #: parser/parse_func.c:468
 msgid "DISTINCT is not implemented for window functions"
-msgstr "DISTINCT no está implementado para funciones ventana"
+msgstr "DISTINCT no está implementado para funciones de ventana deslizante"
 
 #: parser/parse_func.c:488
 msgid "aggregate ORDER BY is not implemented for window functions"
-msgstr "el ORDER BY de funciones de agregación no está implementado para funciones ventana"
+msgstr "el ORDER BY de funciones de agregación no está implementado para funciones de ventana deslizante"
 
 #: parser/parse_func.c:494
 msgid "window functions cannot return sets"
-msgstr "las funciones ventana no pueden retornar conjuntos"
+msgstr "las funciones de ventana deslizante no pueden retornar conjuntos"
 
 #: parser/parse_func.c:505
 msgid "window functions cannot use named arguments"
-msgstr "las funciones ventana no pueden usar argumentos con nombre"
+msgstr "las funciones de ventana deslizante no pueden usar argumentos con nombre"
 
 #: parser/parse_func.c:1570
 #, c-format
@@ -15279,7 +15279,7 @@ msgstr ""
 
 #: parser/parse_utilcmd.c:1730
 msgid "cannot use window function in rule WHERE condition"
-msgstr "no se pueden usar funciones ventana en condición WHERE de una regla"
+msgstr "no se pueden usar funciones de ventana deslizante en condición WHERE de una regla"
 
 #: parser/parse_utilcmd.c:1802
 msgid ""
