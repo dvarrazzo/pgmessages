@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-tr\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2010-08-31 19:55+0000\n"
-"PO-Revision-Date: 2010-09-01 14:24+0200\n"
+"POT-Creation-Date: 2010-09-14 09:47+0000\n"
+"PO-Revision-Date: 2010-09-14 14:31+0200\n"
 "Last-Translator: Devrim GÜNDÜZ <devrim@gunduz.org>\n"
 "Language-Team: Turkish <ceviri@postgresql.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -73,9 +73,9 @@ msgid "invalid value for boolean option \"%s\": %s"
 msgstr "\"%s\" boolean seçeneği için geçersiz değer: \"%s\""
 
 #: access/common/reloptions.c:946
-#, fuzzy, c-format
+#, c-format
 msgid "invalid value for integer option \"%s\": %s"
-msgstr "\"%s\" seçeneği için geçersiz değer: \"%s\""
+msgstr "\"%s\" tamsayı seçeneği için geçersiz değer: %s"
 
 #: access/common/reloptions.c:951
 #: access/common/reloptions.c:969
@@ -84,9 +84,9 @@ msgid "value %s out of bounds for option \"%s\""
 msgstr "setval: %s değeri kapsam dışıdır, sequence \"%s\" (%s..%s)"
 
 #: access/common/reloptions.c:953
-#, fuzzy, c-format
+#, c-format
 msgid "Valid values are between \"%d\" and \"%d\"."
-msgstr "Geçerli değerler: \"terse\", \"default\", ve \"verbose\"."
+msgstr "Geçerli değerler \"%d\" ile \"%d\" arasındadır."
 
 #: access/common/reloptions.c:964
 #, fuzzy, c-format
@@ -120,9 +120,9 @@ msgid "Attribute \"%s\" of type %s does not match corresponding attribute of typ
 msgstr ""
 
 #: access/common/tupconvert.c:252
-#, fuzzy, c-format
+#, c-format
 msgid "Attribute \"%s\" of type %s does not exist in type %s."
-msgstr "\"%s\" niteliği Python nesnesinde bulunmaz"
+msgstr "%2s tipinin \"%1s\" niteliği %s tipinde bulunmaz."
 
 #: access/transam/slru.c:595
 #, c-format
@@ -185,9 +185,8 @@ msgid "transaction identifier \"%s\" is too long"
 msgstr "transaction identifier \"%s\" çok uzun"
 
 #: access/transam/twophase.c:254
-#, fuzzy
 msgid "prepared transactions are disabled"
-msgstr "prepared transaction başka bir veritabanına aittir"
+msgstr "prepared transactionlar devre dışıdır"
 
 #: access/transam/twophase.c:255
 #, fuzzy
@@ -1152,7 +1151,7 @@ msgstr ""
 
 #: access/transam/xlog.c:5660
 msgid "hot standby is not possible because wal_level was not set to \"hot_standby\" on the master server"
-msgstr ""
+msgstr "Ana sunucudaki wal_level seçeneği \"hot_standby\" olarak ayarlanmadığı için hot standby devreye alınamaz."
 
 #: access/transam/xlog.c:5661
 msgid "Either set wal_level to \"hot_standby\" on the master, or turn off hot_standby here."
@@ -1536,7 +1535,7 @@ msgstr "transaction log dosyaları değiştirmek için superuser olmalısınız"
 
 #: access/transam/xlog.c:8878
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
-msgstr ""
+msgstr "pg_xlogfile_name_offset() kurtarma aşamasında çalıştırılamaz."
 
 #: access/transam/xlog.c:8888
 #: access/transam/xlog.c:8960
@@ -1546,7 +1545,7 @@ msgstr "\"%s\" transaction log konumu ayrıştıramadı"
 
 #: access/transam/xlog.c:8953
 msgid "pg_xlogfile_name() cannot be executed during recovery."
-msgstr ""
+msgstr "pg_xlogfile_name() kurtarma aşamasında çalıştırılamaz."
 
 #: access/transam/xlog.c:9050
 #, c-format
@@ -1558,9 +1557,9 @@ msgid "online backup mode cancelled"
 msgstr "çevrimiçi yedekleme modu iptal edildi"
 
 #: access/transam/xlog.c:9091
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" was renamed to \"%s\"."
-msgstr "\"%s\" zaten \"%s\" nesnesinin alt nesnesidir"
+msgstr "\"%s\" , \"%s\" olarak yeniden adlandırıldı."
 
 #: access/transam/xlog.c:9098
 msgid "online backup mode was not cancelled"
@@ -1578,9 +1577,9 @@ msgid "could not read from log file %u, segment %u, offset %u: %m"
 msgstr "log dosyası %u, segment %u, offset %u okuma başarısız: %m"
 
 #: access/transam/xlog.c:9677
-#, fuzzy, c-format
+#, c-format
 msgid "trigger file found: %s"
-msgstr "%s triggeri etkin"
+msgstr "trigger dosyası bulunamadı: %s"
 
 #: access/gin/ginarrayproc.c:30
 msgid "array must not contain null values"
@@ -1605,9 +1604,9 @@ msgid "duplicate key value violates unique constraint \"%s\""
 msgstr "tekrar eden kayıt, \"%s\" tekil kısıtlamasını ihlal etmektedir"
 
 #: access/nbtree/nbtinsert.c:386
-#, fuzzy, c-format
+#, c-format
 msgid "Key %s already exists."
-msgstr "\"%s\" tipi zaten mevcut"
+msgstr "\"%s\" anahtarı zaten mevcut"
 
 #: access/nbtree/nbtinsert.c:448
 #: executor/execUtils.c:1319
@@ -1798,30 +1797,29 @@ msgid "timeline %u of the primary does not match recovery target timeline %u"
 msgstr "talep edilmiş timeline %u veritabanı sistem timeline %u için geçerli bir timeline değildir"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:164
-#, fuzzy, c-format
+#, c-format
 msgid "could not start WAL streaming: %s"
-msgstr "SSL socket kurulamıyor: %s"
+msgstr "WAL streaming başlatılamadı: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:171
 msgid "streaming replication successfully connected to primary"
 msgstr "streaming replication başarılı olarak ana sunucuya bağlandı"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:193
-#, fuzzy
 msgid "socket not open"
-msgstr "soket açık değil\n"
+msgstr "soket açık değil"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:233
-#, fuzzy, c-format
+#, c-format
 msgid "select() failed: %m"
-msgstr "select() başarısız oldu: %s\n"
+msgstr "select() başarısız oldu: %m"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:364
 #: replication/libpqwalreceiver/libpqwalreceiver.c:386
 #: replication/libpqwalreceiver/libpqwalreceiver.c:391
-#, fuzzy, c-format
+#, c-format
 msgid "could not receive data from WAL stream: %s"
-msgstr "Sunucudan veri alınamadı: %s\n"
+msgstr "Sunucudan WAL stream alınamadı: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:382
 msgid "replication terminated by primary server"
@@ -1838,18 +1836,17 @@ msgid "cannot continue WAL streaming, recovery has already ended"
 msgstr "restartpoint (yeniden başlama noktası) atlanıyor, kurtarma zaten sona erdi"
 
 #: replication/walsender.c:116
-#, fuzzy
 msgid "recovery is still in progress, can't accept WAL streaming connections"
-msgstr "Sunucu başladı ve bağlantı kabul ediyor\n"
+msgstr "kurtarma işlemi devam ediyor, WAL streaming bağlantıları kabul edilemiyor"
 
 #: replication/walsender.c:278
 msgid "standby connections not allowed because wal_level=minimal"
 msgstr ""
 
 #: replication/walsender.c:300
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby query string: %s"
-msgstr "escape satırı geçersiz"
+msgstr "geçersiz standby sorgu katarı: %s"
 
 #: replication/walsender.c:313
 #: replication/walsender.c:339
@@ -2016,9 +2013,9 @@ msgstr "\"%s\" kolonu \"%s\" tablosunda mevcut değil"
 
 #: utils/adt/acl.c:2975
 #: utils/adt/dbsize.c:149
-#: utils/init/postinit.c:692
-#: utils/init/postinit.c:760
-#: utils/init/postinit.c:777
+#: utils/init/postinit.c:708
+#: utils/init/postinit.c:776
+#: utils/init/postinit.c:793
 #: catalog/aclchk.c:614
 #: commands/comment.c:698
 #: commands/dbcommands.c:760
@@ -2187,9 +2184,8 @@ msgid "number of array dimensions (%d) exceeds the maximum allowed (%d)"
 msgstr "dizin boyut sayısı (%d), izin verilern en yüksek değerini (%d) aşmaktadır"
 
 #: utils/adt/array_userfuncs.c:484
-#, fuzzy
 msgid "could not determine input data type"
-msgstr "giriş veri tipleri belirlenemiyor"
+msgstr "giriş veri tipleri belirlenemedi"
 
 #: utils/adt/arrayfuncs.c:211
 #: utils/adt/arrayfuncs.c:223
@@ -3960,9 +3956,8 @@ msgid "date/time value \"%s\" is no longer supported"
 msgstr "\"%s\" tarih/saat değeri artık desteklenemektedir"
 
 #: utils/adt/timestamp.c:260
-#, fuzzy
 msgid "timestamp cannot be NaN"
-msgstr "timestamp sıra dışıdır"
+msgstr "timestamp NaN olamaz"
 
 #: utils/adt/timestamp.c:370
 #, c-format
@@ -4343,9 +4338,8 @@ msgid "unsupported XML feature"
 msgstr "desteklenmeyen XML özelliği"
 
 #: utils/adt/xml.c:136
-#, fuzzy
 msgid "This functionality requires the server to be built with libxml support."
-msgstr "Bu özellik libxml desteği gerektirmektedir."
+msgstr "Bu özellik sunucunun libxml desteği ile derlenmesini gerektirir."
 
 #: utils/adt/xml.c:137
 msgid "You need to rebuild PostgreSQL using --with-libxml."
@@ -4422,9 +4416,8 @@ msgid "%s"
 msgstr "%s"
 
 #: utils/adt/xml.c:1417
-#, fuzzy
 msgid "Invalid character value."
-msgstr "karakter kapsamı için geçersiz isimler"
+msgstr "geçersiz karakter değeri"
 
 #: utils/adt/xml.c:1420
 msgid "Space required."
@@ -4743,72 +4736,71 @@ msgstr "\"%s\" parametresinde geçersiz list söz dizimi"
 msgid "loaded library \"%s\""
 msgstr "\"%s\" kütüphanesi yüklendi"
 
-#: utils/init/postinit.c:196
+#: utils/init/postinit.c:197
 #: postmaster/postmaster.c:1074
 msgid "could not load pg_hba.conf"
 msgstr "pg_hba.conf yüklenemedi"
 
-#: utils/init/postinit.c:228
+#: utils/init/postinit.c:229
 #, fuzzy, c-format
 msgid "replication connection authorized: user=%s host=%s port=%s"
 msgstr "bağlantı tanımı: kullanıcı=%s veritabanı=%s"
 
-#: utils/init/postinit.c:234
+#: utils/init/postinit.c:235
 #, fuzzy, c-format
 msgid "replication connection authorized: user=%s host=%s"
 msgstr "bağlantı tanımı: kullanıcı=%s veritabanı=%s"
 
-#: utils/init/postinit.c:240
+#: utils/init/postinit.c:241
 #, c-format
 msgid "connection authorized: user=%s database=%s"
 msgstr "bağlantı tanımı: kullanıcı=%s veritabanı=%s"
 
-#: utils/init/postinit.c:270
+#: utils/init/postinit.c:271
 #, c-format
 msgid "database \"%s\" has disappeared from pg_database"
 msgstr "\"%s\" veritabanı pg_database tablosundan yok olmuş"
 
-#: utils/init/postinit.c:272
+#: utils/init/postinit.c:273
 #, c-format
 msgid "Database OID %u now seems to belong to \"%s\"."
 msgstr "OID %u olan veritabanı \"%s\" kullanıcıya aittir."
 
-#: utils/init/postinit.c:292
+#: utils/init/postinit.c:293
 #, c-format
 msgid "database \"%s\" is not currently accepting connections"
 msgstr "\"%s\" veritabanı şu anda bağlatı kabul etmiyor"
 
-#: utils/init/postinit.c:305
+#: utils/init/postinit.c:306
 #, c-format
 msgid "permission denied for database \"%s\""
 msgstr "\"%s\" veritabanına erişim engellendi"
 
-#: utils/init/postinit.c:306
+#: utils/init/postinit.c:307
 msgid "User does not have CONNECT privilege."
 msgstr "Kullanicinin CONNECT yetkisi verilmemiştir."
 
-#: utils/init/postinit.c:323
+#: utils/init/postinit.c:324
 #, c-format
 msgid "too many connections for database \"%s\""
 msgstr "\"%s\" veritabanı bağlantı sayısı aşılmıştır"
 
-#: utils/init/postinit.c:345
-#: utils/init/postinit.c:352
-#, fuzzy
-msgid "database locale is incompatible with operating system"
-msgstr "veritabanı dosyaları işletim sistemi ile uyumlu değildir"
-
 #: utils/init/postinit.c:346
+#: utils/init/postinit.c:353
+msgid "database locale is incompatible with operating system"
+msgstr "veritabanı yereli işletim sistemi ile uyumlu değildir"
+
+#: utils/init/postinit.c:347
 #, fuzzy, c-format
 msgid "The database was initialized with LC_COLLATE \"%s\",  which is not recognized by setlocale()."
 msgstr "Veritabanı LC_COLLATE \"%s\", ile ilklendirilmiştir, ancak setlocale() bu yereli tanımamaktadır.."
 
-#: utils/init/postinit.c:348
-#: utils/init/postinit.c:355
+#: utils/init/postinit.c:349
+#: utils/init/postinit.c:356
 msgid "Recreate the database with another locale or install the missing locale."
 msgstr ""
 
-#: utils/init/postinit.c:353
+#: utils/init/postinit.c:354
 #, fuzzy, c-format
 msgid "The database was initialized with LC_CTYPE \"%s\",  which is not recognized by setlocale()."
 msgstr "Veritabanı LC_CTYPE \"%s\", ile ilklendirilmiştir, ancak setlocale() bunu tanımamaktadır.."
@@ -4833,29 +4825,28 @@ msgid "must be superuser to connect during database shutdown"
 msgstr "superuser kullanıcısını oluşturmak için superuser olmalısınız"
 
 #: utils/init/postinit.c:650
-#, fuzzy
 msgid "remaining connection slots are reserved for non-replication superuser connections"
-msgstr "Superuser için rezerve edilmiş bağlantı sayısını ayarlıyor."
+msgstr "kalan bağlantı sayısı, replikasyon dışındaki superuser bağlantıları için ayrıldı"
 
-#: utils/init/postinit.c:663
+#: utils/init/postinit.c:665
 msgid "must be superuser to start walsender"
 msgstr "walsender sürecini başlatmak için superuser olmak gereklidir"
 
-#: utils/init/postinit.c:709
+#: utils/init/postinit.c:725
 #, c-format
 msgid "database %u does not exist"
 msgstr "%u veritabanı mevcut değil"
 
-#: utils/init/postinit.c:761
+#: utils/init/postinit.c:777
 msgid "It seems to have just been dropped or renamed."
 msgstr "Az önce kaldırılmış veya adını değiştirilmiştir."
 
-#: utils/init/postinit.c:779
+#: utils/init/postinit.c:795
 #, c-format
 msgid "The database subdirectory \"%s\" is missing."
 msgstr "Veritabanı alt dizini \"%s\" eksik."
 
-#: utils/init/postinit.c:784
+#: utils/init/postinit.c:800
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "\"%s\" dizine erişim hatası: %m"
@@ -5584,9 +5575,8 @@ msgid "WAL writer sleep time between WAL flushes."
 msgstr "Background writer'in seferleri arasında hareketsiz kalacağı zaman süresi."
 
 #: utils/misc/guc.c:1741
-#, fuzzy
 msgid "Sets the maximum number of simultaneously running WAL sender processes."
-msgstr "Aynı anda çalışacak autovacuum süreç sayısını ayarlıyor."
+msgstr "Aynı anda çalışacak WAL gönderici süreç sayısını ayarlıyor."
 
 #: utils/misc/guc.c:1750
 #, fuzzy
@@ -5825,9 +5815,8 @@ msgid "If blank, no prefix is used."
 msgstr "Boş ise ön ek kullanlmayacak."
 
 #: utils/misc/guc.c:2248
-#, fuzzy
 msgid "Sets the time zone to use in log messages."
-msgstr "Log mesajlarının ayrıntı düzei belirtiyor."
+msgstr ""
 
 #: utils/misc/guc.c:2257
 msgid "Sets the display format for date and time values."
@@ -6443,27 +6432,27 @@ msgstr "%s tipi için çıkış fonksiyonu mevcut değil"
 msgid "cached plan must not change result type"
 msgstr "önbelleğe alınmış plan sonuç tipini değiştiremez"
 
-#: utils/cache/relcache.c:4298
+#: utils/cache/relcache.c:4289
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "relation-cache tanımlama dosyası \"%s\" açılamadı: %m"
 
-#: utils/cache/relcache.c:4300
+#: utils/cache/relcache.c:4291
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Devam ediyorum, ama bu işlem yanlıştır."
 
-#: utils/cache/typcache.c:145
+#: utils/cache/typcache.c:151
 #: parser/parse_type.c:202
 #, c-format
 msgid "type \"%s\" is only a shell"
 msgstr "\"%s\" tipi bir shelldir"
 
-#: utils/cache/typcache.c:325
+#: utils/cache/typcache.c:331
 #, c-format
 msgid "type %s is not composite"
 msgstr "%s tipi composite değildir"
 
-#: utils/cache/typcache.c:339
+#: utils/cache/typcache.c:345
 msgid "record type has not been registered"
 msgstr "kayıt tipi tecil edilmemiştir"
 
@@ -7683,9 +7672,9 @@ msgid "language %s"
 msgstr "%s dili"
 
 #: catalog/dependency.c:2248
-#, fuzzy, c-format
+#, c-format
 msgid "large object %u"
-msgstr "Large objectler"
+msgstr "%u large objecti"
 
 #: catalog/dependency.c:2253
 #, c-format
@@ -7758,9 +7747,9 @@ msgid "tablespace %s"
 msgstr "%s tablespace"
 
 #: catalog/dependency.c:2571
-#, fuzzy, c-format
+#, c-format
 msgid "foreign-data wrapper %s"
-msgstr "kullanıcı tanımlı operatörler okunuyor\n"
+msgstr "%s foreign-data wrapper"
 
 #: catalog/dependency.c:2580
 #, c-format
@@ -7793,9 +7782,9 @@ msgid "default privileges belonging to role %s"
 msgstr ""
 
 #: catalog/dependency.c:2663
-#, fuzzy, c-format
+#, c-format
 msgid " in schema %s"
-msgstr "%s şeması"
+msgstr "%s şeması içinde"
 
 #: catalog/dependency.c:2711
 #, c-format
@@ -8217,9 +8206,9 @@ msgstr "Etiketler %d karakter ya da daha az olmalıdır."
 #: catalog/pg_largeobject.c:200
 #: commands/comment.c:1422
 #: libpq/be-fsstubs.c:287
-#, fuzzy, c-format
+#, c-format
 msgid "must be owner of large object %u"
-msgstr "%s dilinin sahibi olmalısınız"
+msgstr "%u large objectinin saibi olmalı"
 
 #: catalog/pg_namespace.c:50
 #: commands/schemacmds.c:272
@@ -8629,9 +8618,9 @@ msgid "cannot vacuum temporary tables of other sessions"
 msgstr "diğer oturumların geçici tabloları taşınamaz"
 
 #: commands/cluster.c:384
-#, fuzzy, c-format
+#, c-format
 msgid "clustering \"%s.%s\""
-msgstr "\"%s.%s\" veritabanına vacuum yapılıyor"
+msgstr "\"%s.%s\" CLUSTER ediliyor"
 
 #: commands/cluster.c:389
 #: commands/vacuumlazy.c:320
@@ -8904,9 +8893,9 @@ msgid "argument to option \"%s\" must be a list of column names"
 msgstr "%s argümanı tip adı olmalıdır"
 
 #: commands/copy.c:845
-#, fuzzy, c-format
+#, c-format
 msgid "option \"%s\" not recognized"
-msgstr "time zone \"%s\" tanınmadı"
+msgstr "\"%s\" seçeneği tanımlanamadı"
 
 #: commands/copy.c:856
 msgid "cannot specify DELIMITER in BINARY mode"
@@ -9230,9 +9219,9 @@ msgstr "Onun yerine tablespace kullanabilirsiniz."
 #: commands/dbcommands.c:1347
 #: commands/user.c:255
 #: commands/user.c:562
-#, fuzzy, c-format
+#, c-format
 msgid "invalid connection limit: %d"
-msgstr "geçersiz bağlantı seçeneği \"%s\"\n"
+msgstr "geçersiz bağlantı sayısı sınırı: %d"
 
 #: commands/dbcommands.c:272
 msgid "permission denied to create database"
@@ -9395,9 +9384,9 @@ msgid "There are %d other session(s) using the database."
 msgstr ""
 
 #: commands/dbcommands.c:1813
-#, fuzzy, c-format
+#, c-format
 msgid "There are %d prepared transaction(s) using the database."
-msgstr "prepared transaction başka bir veritabanına aittir"
+msgstr "Veritabanını kullanan %d prepared transaction var."
 
 #: commands/define.c:67
 #: commands/define.c:222
@@ -9446,9 +9435,9 @@ msgid "unrecognized value for EXPLAIN option \"%s\": \"%s\""
 msgstr "\"%s\" seçeneği için geçersiz değer: \"%s\""
 
 #: commands/explain.c:155
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized EXPLAIN option \"%s\""
-msgstr "tanımlanmayan imge \"%s\""
+msgstr "tanımsız EXPLAIN seçeneği \"%s\""
 
 #: commands/explain.c:162
 msgid "EXPLAIN option BUFFERS requires ANALYZE"
@@ -9456,14 +9445,14 @@ msgstr ""
 
 #: commands/foreigncmds.c:132
 #: commands/foreigncmds.c:141
-#, fuzzy, c-format
+#, c-format
 msgid "option \"%s\" not found"
-msgstr "time zone \"%s\" tanınmadı"
+msgstr "\"%s\" seçeneği bulunamadı"
 
 #: commands/foreigncmds.c:151
-#, fuzzy, c-format
+#, c-format
 msgid "option \"%s\" provided more than once"
-msgstr "\"%s\" sütunu birden fazla belirtilmiş"
+msgstr "\"%s\" seçeneği birden fazla belirtilmiş"
 
 #: commands/foreigncmds.c:209
 #: commands/foreigncmds.c:217
@@ -9493,9 +9482,9 @@ msgstr "\"%s\" veritabanı mevcut değil"
 #: commands/foreigncmds.c:813
 #: commands/foreigncmds.c:1089
 #: foreign/foreign.c:179
-#, fuzzy, c-format
+#, c-format
 msgid "server \"%s\" does not exist"
-msgstr "\"%s\" rule'u mevcut değil"
+msgstr "\"%s\" sunucusu mevcut değil"
 
 #: commands/foreigncmds.c:347
 #, fuzzy, c-format
@@ -9542,14 +9531,14 @@ msgid "foreign-data wrapper \"%s\" does not exist, skipping"
 msgstr "\"%s\" veritabanı mevcut değil, atlanıyor"
 
 #: commands/foreigncmds.c:625
-#, fuzzy, c-format
+#, c-format
 msgid "server \"%s\" already exists"
-msgstr "\"%s\" rolü zaten mevcut"
+msgstr "\"%s\" sunucusu zaten mevcut"
 
 #: commands/foreigncmds.c:817
-#, fuzzy, c-format
+#, c-format
 msgid "server \"%s\" does not exist, skipping"
-msgstr "rol \"%s\" mevcut değil, atlanıyor"
+msgstr "\"%s\" sunucusu mevcut değil, atlanıyor"
 
 #: commands/foreigncmds.c:920
 #, fuzzy, c-format
@@ -9563,9 +9552,8 @@ msgid "user mapping \"%s\" does not exist for the server"
 msgstr "\"%s\" şeması mevcut değil"
 
 #: commands/foreigncmds.c:1092
-#, fuzzy
 msgid "server does not exist, skipping"
-msgstr "%s operatorü mevcut değil, atlanıyor"
+msgstr "sunucu mevcut değil, atlanıyor"
 
 #: commands/foreigncmds.c:1110
 #, fuzzy, c-format
@@ -9989,9 +9977,9 @@ msgid "can only reindex the currently open database"
 msgstr "ancak açık olan veritabanı üzerinde reindex işlemi yapılabilir"
 
 #: commands/indexcmds.c:1752
-#, fuzzy, c-format
+#, c-format
 msgid "table \"%s.%s\" was reindexed"
-msgstr "\"%s\" tablosu yeniden indexlenmiştir"
+msgstr "\"%s.%s\" tablosu yeniden indexlenmiştir"
 
 #: commands/lockcmds.c:93
 #, c-format
@@ -10140,9 +10128,8 @@ msgid "operator family \"%s\" for access method \"%s\" already exists in schema 
 msgstr "\"%2$s\" erişim yöntemi için kullanılacak \"%1$s\" operator ailesi zaten \"%3$s\" şemasında mevcuttur"
 
 #: commands/operatorcmds.c:98
-#, fuzzy
 msgid "=> is deprecated as an operator name"
-msgstr "\"%s\" geçerli bir operatör adı değildir"
+msgstr "=> geçerli bir operatör adı değildir"
 
 #: commands/operatorcmds.c:99
 msgid "This name may be disallowed altogether in future versions of PostgreSQL."
@@ -10851,9 +10838,9 @@ msgid "cannot use window function in transform expression"
 msgstr "transform ifadesinde aggregate function kullanılamaz"
 
 #: commands/tablecmds.c:5920
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" cannot be cast to type %s"
-msgstr "\"%s\" sütunu \"%s\" tipine dönüştürülemez"
+msgstr "\"%s\" kolonu %s tipine dönüştürülemez"
 
 #: commands/tablecmds.c:5946
 #, c-format
@@ -11056,9 +11043,9 @@ msgid "tablespace \"%s\" is not empty"
 msgstr "\"%s\" tablespace boş değil"
 
 #: commands/tablespace.c:555
-#, fuzzy, c-format
+#, c-format
 msgid "directory \"%s\" does not exist"
-msgstr "veritabanı deizini \"%s\" mevcut değil"
+msgstr "\"%s\" dizini mevcut değil"
 
 #: commands/tablespace.c:556
 #, c-format
@@ -11071,9 +11058,9 @@ msgid "could not set permissions on directory \"%s\": %m"
 msgstr "dizin \"%s\" için erişim hakları ayarlanamadı: %m"
 
 #: commands/tablespace.c:593
-#, fuzzy, c-format
+#, c-format
 msgid "directory \"%s\" already in use as a tablespace"
-msgstr "\"%s\" imleci kullanımda"
+msgstr "\"%s\" dizini tablespace olarak kullanımda"
 
 #: commands/tablespace.c:608
 #: commands/tablespace.c:745
@@ -12595,9 +12582,8 @@ msgid "terminating connection due to administrator command"
 msgstr "yönetici talimatı doğrultusunda bağlantı kesildi"
 
 #: tcop/postgres.c:2926
-#, fuzzy
 msgid "canceling authentication due to timeout"
-msgstr "sorgu zaman aşımına uğradı ve iptal edildi"
+msgstr "zamanaşımı nedeniyle yetkilendirme iptal edildi"
 
 #: tcop/postgres.c:2935
 msgid "canceling statement due to statement timeout"
@@ -13020,9 +13006,9 @@ msgid "certificate authentication failed for user \"%s\""
 msgstr "\"%s\" kullanıcısı için Ident kimlik doğrulaması başarısız oldu"
 
 #: libpq/auth.c:288
-#, fuzzy, c-format
+#, c-format
 msgid "RADIUS authentication failed for user \"%s\""
-msgstr "\"%s\" kullanıcısı için PAM kimlik doğrulaması başarısız oldu"
+msgstr "\"%s\" kullanıcısı için RADIUS kimlik doğrulaması başarısız oldu"
 
 #: libpq/auth.c:291
 #, c-format
@@ -13056,34 +13042,34 @@ msgid "SSL off"
 msgstr "SSL etkisiz"
 
 #: libpq/auth.c:393
-#, fuzzy, c-format
+#, c-format
 msgid "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\", %s"
-msgstr "\"%s\" adresi, \"%s\" kullanıcısı, \"%s\" veritabanı için pg_hba.conf içinde bir tanım yok"
+msgstr "pg_hba.conf \"%s\" istemcisinden \"%s\" kullanıcısı ile gelen replikasyon bağlantısını reddetti, %s"
 
 #: libpq/auth.c:399
-#, fuzzy, c-format
+#, c-format
 msgid "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\""
-msgstr "\"%s\" adresi, \"%s\" kullanıcısı, \"%s\" veritabanı için pg_hba.conf içinde bir tanım yok"
+msgstr "pg_hba.conf \"%s\" istemcisinden \"%s\" kullanıcısı ile gelen replikasyon bağlantısını reddetti"
 
 #: libpq/auth.c:408
-#, fuzzy, c-format
+#, c-format
 msgid "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s\", %s"
-msgstr "\"%s\" adresi, \"%s\" kullanıcısı, \"%s\" veritabanı için pg_hba.conf içinde bir tanım yok, %s"
+msgstr "pg_hba.conf \"%s\" istemcisinden \"%s\" kullanıcısı ile \"%s\" veritabanına gelen replikasyon bağlantısını reddetti, %s"
 
 #: libpq/auth.c:415
-#, fuzzy, c-format
+#, c-format
 msgid "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s\""
-msgstr "\"%s\" adresi, \"%s\" kullanıcısı, \"%s\" veritabanı için pg_hba.conf içinde bir tanım yok"
+msgstr "pg_hba.conf \"%s\" istemcisinden \"%s\" kullanıcısı ile \"%s\" veritabanına gelen replikasyon bağlantısını reddetti"
 
 #: libpq/auth.c:446
-#, fuzzy, c-format
+#, c-format
 msgid "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s\", %s"
-msgstr "\"%s\" adresi, \"%s\" kullanıcısı, \"%s\" veritabanı için pg_hba.conf içinde bir tanım yok"
+msgstr "\"%s\" istemcisinden \"%s\" kullanıcısı ile  gelen replikasyon bağlantısı için pg_hba.conf girdisi yok, %s"
 
 #: libpq/auth.c:452
-#, fuzzy, c-format
+#, c-format
 msgid "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s\""
-msgstr "\"%s\" adresi, \"%s\" kullanıcısı, \"%s\" veritabanı için pg_hba.conf içinde bir tanım yok"
+msgstr " \"%s\" istemcisinden \"%s\" kullanıcısı ile gelen replikasyon bağlantısı için pg_hba.conf girdisi yok."
 
 #: libpq/auth.c:461
 #, c-format
@@ -13193,9 +13179,8 @@ msgid "could not accept SSPI security context"
 msgstr "SSPI güvenlik içeriği kabul edilemedi"
 
 #: libpq/auth.c:1422
-#, fuzzy
 msgid "could not get token from SSPI security context"
-msgstr "SSL context oluşturma hatası: %s"
+msgstr ""
 
 #: libpq/auth.c:1665
 #, c-format
@@ -13370,25 +13355,22 @@ msgid "certificate authentication failed for user \"%s\": client certificate con
 msgstr "\"%s\" kullanıcısının kimlik doğrulaması başarısız: geçersiz kimlik doğrulama yöntemi"
 
 #: libpq/auth.c:2633
-#, fuzzy
 msgid "RADIUS server not specified"
-msgstr "LDAP sunucu belirtilmedi"
+msgstr "RADIUS sunucusu belirtilmedi"
 
 #: libpq/auth.c:2640
-#, fuzzy
 msgid "RADIUS secret not specified"
-msgstr "LDAP sunucu belirtilmedi"
+msgstr "RADIUS parolası belirtilmedi"
 
 #: libpq/auth.c:2656
 #: libpq/hba.c:1213
-#, fuzzy, c-format
+#, c-format
 msgid "could not translate RADIUS server name \"%s\" to address: %s"
-msgstr "\"%s\" servesi adrese çevirilemedi: %s"
+msgstr "\"%s\" RADIUS sunucu adı adrese çevirilemedi: %s"
 
 #: libpq/auth.c:2684
-#, fuzzy
 msgid "RADIUS authentication does not support passwords longer than 16 characters"
-msgstr "yerel soketlerde krb5 yetkilendirmesi desteklenmemektedir"
+msgstr "RADIUS yetkilendirmesi 16 karakterden uzun parolalası desteklememektedir"
 
 #: libpq/auth.c:2695
 #, fuzzy
@@ -13400,24 +13382,24 @@ msgid "could not perform MD5 encryption of password"
 msgstr ""
 
 #: libpq/auth.c:2740
-#, fuzzy, c-format
+#, c-format
 msgid "could not create RADIUS socket: %m"
-msgstr "%s: socket oluşturma hatası: %m"
+msgstr "RADIUS soketi yaratılamadı: %m"
 
 #: libpq/auth.c:2761
-#, fuzzy, c-format
+#, c-format
 msgid "could not bind local RADIUS socket: %m"
-msgstr "%s socket bind hatası: %m"
+msgstr "yerel RADIUS soketine bağlanılamadı: %m"
 
 #: libpq/auth.c:2771
-#, fuzzy, c-format
+#, c-format
 msgid "could not send RADIUS packet: %m"
-msgstr "başlangıç paketi gönderilemedi: %s\n"
+msgstr "RADIUS paketi gönderilemedi: %m"
 
 #: libpq/auth.c:2796
-#, fuzzy, c-format
+#, c-format
 msgid "could not check status on RADIUS socket: %m"
-msgstr "%s: socket oluşturma hatası: %m"
+msgstr "RADIUS soketindeki durum kontrol edilemedi: %m"
 
 #: libpq/auth.c:2803
 #, fuzzy
@@ -13671,14 +13653,12 @@ msgid "authentication method \"%s\" requires argument \"%s\" to be set"
 msgstr "%u yetkilendirme sistemi desteklenmiyor\n"
 
 #: libpq/hba.c:713
-#, fuzzy
 msgid "hostssl not supported on this platform"
-msgstr "bu platformda tablespace desteklenmiyor"
+msgstr "bu platformda hostssl desteklenmiyor"
 
 #: libpq/hba.c:714
-#, fuzzy
 msgid "Compile with --with-openssl to use SSL connections."
-msgstr "SSL bağlantısı sağlanamadı: %s\n"
+msgstr "SSL bağlantısı kullanabilmek için --with-openssl ile derleyiniz."
 
 #: libpq/hba.c:736
 #, c-format
@@ -13720,9 +13700,8 @@ msgid "invalid IP mask \"%s\": %s"
 msgstr "geçersiz IP maskesi \"%s\" : %s"
 
 #: libpq/hba.c:893
-#, fuzzy
 msgid "IP address and mask do not match"
-msgstr "\"%s\" dosyasında  %d satırında IP adresi ve maske uyuşmamaktadır"
+msgstr "IP adresi ve maske uyuşmamaktadır"
 
 #: libpq/hba.c:908
 msgid "end-of-line before authentication method"
@@ -13788,9 +13767,9 @@ msgid "krb5, gssapi and sspi"
 msgstr "krb5, gssapi ve sspi"
 
 #: libpq/hba.c:1232
-#, fuzzy, c-format
+#, c-format
 msgid "invalid RADIUS port number: \"%s\""
-msgstr "Geçersiz LDAP port numarası: \"%s\""
+msgstr "Geçersiz RADIUS port numarası: \"%s\""
 
 #: libpq/hba.c:1252
 #, fuzzy, c-format
@@ -14233,9 +14212,9 @@ msgstr "aggregate fonksiyon çağırmaları içiçe olamaz"
 
 #: parser/parse_agg.c:241
 #: parser/parse_clause.c:1620
-#, fuzzy, c-format
+#, c-format
 msgid "window \"%s\" does not exist"
-msgstr "\"%s\" indexi mevcut değil"
+msgstr "\"%s\" window'u mevcut değil"
 
 #: parser/parse_agg.c:331
 msgid "aggregates not allowed in WHERE clause"
@@ -14254,24 +14233,20 @@ msgid "aggregate functions not allowed in a recursive query's recursive term"
 msgstr ""
 
 #: parser/parse_agg.c:451
-#, fuzzy
 msgid "window functions not allowed in WHERE clause"
-msgstr "WHERE ifadesinde aggregate kullanılamaz"
+msgstr "WHERE ifadesinde window fonksiyonları kullanılamaz"
 
 #: parser/parse_agg.c:457
-#, fuzzy
 msgid "window functions not allowed in JOIN conditions"
-msgstr "JOIN ifadesinde aggregate kullanılamaz"
+msgstr "JOIN ifadesinde window fonksiyonları kullanılamaz"
 
 #: parser/parse_agg.c:463
-#, fuzzy
 msgid "window functions not allowed in HAVING clause"
-msgstr "WHERE ifadesinde aggregate kullanılamaz"
+msgstr "HAVING ifadesinde window fonksiyonları kullanılamaz"
 
 #: parser/parse_agg.c:476
-#, fuzzy
 msgid "window functions not allowed in GROUP BY clause"
-msgstr "GROUP BY ifadesinde aggregate kullanılamaz"
+msgstr "GROUP BY ifadesinde window fonksiyonları kullanılamaz"
 
 #: parser/parse_agg.c:495
 #: parser/parse_agg.c:508
@@ -14382,9 +14357,9 @@ msgid "%s position %d is not in select list"
 msgstr "%s ifadesi, %d terinde select listesinde değildir"
 
 #: parser/parse_clause.c:1608
-#, fuzzy, c-format
+#, c-format
 msgid "window \"%s\" is already defined"
-msgstr "\"%s\" zanten bir view'dur"
+msgstr "\"%s\" window'u zaten tanımlıdır"
 
 #: parser/parse_clause.c:1662
 #, c-format
@@ -15240,14 +15215,12 @@ msgid "DROP ASSERTION is not yet implemented"
 msgstr "DROP ASSERTION implemente edilmemiştir"
 
 #: gram.y:3881
-#, fuzzy
 msgid "RECHECK is no longer required"
-msgstr "aclinsert artık desteklenmemktedir"
+msgstr "RECHECK artık gerekmemektedir"
 
 #: gram.y:3882
-#, fuzzy
 msgid "Update your data type."
-msgstr "Veri tiplerinin listesi"
+msgstr "Veri tipinizi güncelleyin."
 
 #: gram.y:6357
 #: gram.y:6363
@@ -15365,7 +15338,7 @@ msgstr "birden çok LIMIT ifadesi kullanılamaz"
 
 #: gram.y:11757
 msgid "OUT and INOUT arguments aren't allowed in TABLE functions"
-msgstr ""
+msgstr "TABLE fonksiyonlarında OUT Ve INOUT argümanlarına izin verilmez"
 
 #: scan.l:411
 msgid "unterminated /* comment"
@@ -15956,7 +15929,7 @@ msgstr "%s: superuser_reserved_connections parametresi, max_connections parametr
 
 #: postmaster/postmaster.c:733
 msgid "WAL archival (archive_mode=on) requires wal_level \"archive\" or \"hot_standby\""
-msgstr ""
+msgstr "WAL arşivlemesi (archive_mode=on) wal_level parametresinin değerinin \"archive\" ya da \"hot_standby\" olmasını gerektirir"
 
 #: postmaster/postmaster.c:736
 msgid "WAL streaming (max_wal_senders > 0) requires wal_level \"archive\" or \"hot_standby\""
@@ -16179,9 +16152,8 @@ msgid "WAL writer process"
 msgstr "WAL yazma süreci"
 
 #: postmaster/postmaster.c:2487
-#, fuzzy
 msgid "WAL receiver process"
-msgstr "WAL yazma süreci"
+msgstr "WAL alıcı süreci"
 
 #: postmaster/postmaster.c:2502
 msgid "autovacuum launcher process"
@@ -16262,14 +16234,14 @@ msgid "could not fork new process for connection: "
 msgstr "bağlantı için yeni süreç başlatılamadı:"
 
 #: postmaster/postmaster.c:3394
-#, fuzzy, c-format
+#, c-format
 msgid "connection received: host=%s port=%s"
-msgstr "bağlantı alındı: istemci=%s%s%s"
+msgstr "bağlantı alındı: istemci=%s port=%s"
 
 #: postmaster/postmaster.c:3399
-#, fuzzy, c-format
+#, c-format
 msgid "connection received: host=%s"
-msgstr "bağlantı alındı: istemci=%s%s%s"
+msgstr "bağlantı alındı: istemci=%s"
 
 #: postmaster/postmaster.c:3666
 #, c-format
@@ -16277,9 +16249,8 @@ msgid "could not execute server process \"%s\": %m"
 msgstr "\"%s\" sunucu süreci başlatma hatası: %m"
 
 #: postmaster/postmaster.c:4179
-#, fuzzy
 msgid "database system is ready to accept read only connections"
-msgstr "veritabanı sunucusu bağlantı kabul etmeye hazır"
+msgstr "veritabanı sunucusu salt okunur bağlantı kabul etmeye hazır"
 
 #: postmaster/postmaster.c:4420
 #, c-format
@@ -16297,9 +16268,9 @@ msgid "could not fork WAL writer process: %m"
 msgstr "WAL yazıcı süreci başlatılamadı: %m"
 
 #: postmaster/postmaster.c:4432
-#, fuzzy, c-format
+#, c-format
 msgid "could not fork WAL receiver process: %m"
-msgstr "WAL yazıcı süreci başlatılamadı: %m"
+msgstr "WAL alıcı süreci başlatılamadı: %m"
 
 #: postmaster/postmaster.c:4436
 #, c-format
@@ -16956,9 +16927,9 @@ msgid "not enough shared memory for data structure \"%s\" (%lu bytes requested)"
 msgstr "otomatik vacuum için shared memory yeterli değildir"
 
 #: storage/ipc/shmem.c:365
-#, fuzzy, c-format
+#, c-format
 msgid "could not create ShmemIndex entry for data structure \"%s\""
-msgstr "%s pipi için array tipi bulunamıyor"
+msgstr "\"%s\" veri tipi için ShmemIndex girdisi oluşturulamıyor"
 
 #: storage/ipc/shmem.c:380
 #, c-format
