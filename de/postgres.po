@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.83 2010/09/24 23:11:36 petere Exp $
+# $Id: postgres.po,v 1.84 2010/09/27 20:28:50 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2010-09-07 17:27+0000\n"
-"PO-Revision-Date: 2010-09-25 01:19+0300\n"
+"PO-Revision-Date: 2010-09-27 23:13+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -8856,9 +8856,7 @@ msgstr "nur Superuser können COPY mit Dateien verwenden"
 msgid ""
 "Anyone can COPY to stdout or from stdin. psql's \\copy command also works "
 "for anyone."
-msgstr ""
-"Jeder kann COPY mit STDOUT oder STDIN verwenden. Der Befehl \\\\copy in psql "
-"funktioniert auch für jeden."
+msgstr "Jeder kann COPY mit STDOUT oder STDIN verwenden. Der Befehl \\copy in psql funktioniert auch für jeden."
 
 #: commands/copy.c:1032
 #, c-format
@@ -15562,7 +15560,7 @@ msgstr "konnte Shared-Memory-Segment nicht erzeugen: %m"
 #: port/sysv_shmem.c:148 port/pg_shmem.c:148
 #, c-format
 msgid "Failed system call was shmget(key=%lu, size=%lu, 0%o)."
-msgstr "Fehlgeschlagener Systemaufruf war shmget(key=%lu, größe=%lu, 0%o)."
+msgstr "Fehlgeschlagener Systemaufruf war shmget(Key=%lu, Größe=%lu, 0%o)."
 
 #: port/sysv_shmem.c:152 port/pg_shmem.c:152
 #, c-format
@@ -15579,17 +15577,9 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Dieser Fehler bedeutet gewöhnlich, dass das von PostgreSQL angeforderte "
-"Shared-Memory-Segment den Kernelparameter SHMMAX überschreitet.  Sie können "
-"entweder die benötigte Shared-Memory-Größe reduzieren oder SHMMAX im Kernel "
-"größer konfigurieren.  Um die benötigte Shared-Memory-Größe zu reduzieren "
-"(aktuell %lu Bytes), reduzieren Sie den PostgreSQL-Parameter "
-"»shared_buffers« (aktuell %d) und/oder »max_connections« (aktuell %d).\n"
-"Wenn die angeforderte Größe schon klein ist, ist es möglich, dass sie "
-"kleiner ist als der Kernelparameter SHMMIN.  Dann müssen Sie die benötigte "
-"Shared-Memory-Größe erhöhen oder SHMMIN ändern.\n"
-"Die PostgreSQL-Dokumentation enthält weitere Informationen über die\n"
-"Konfiguration von Shared Memory."
+"Dieser Fehler bedeutet gewöhnlich, dass das von PostgreSQL angeforderte Shared-Memory-Segment den Kernelparameter SHMMAX überschreitet.  Sie können entweder die benötigte Shared-Memory-Größe reduzieren oder SHMMAX im Kernel größer konfigurieren.  Um die benötigte Shared-Memory-Größe zu reduzieren (aktuell %lu Bytes), reduzieren Sie den PostgreSQL-Parameter »shared_buffers« (aktuell %d) und/oder »max_connections« (aktuell %d).\n"
+"Wenn die angeforderte Größe schon klein ist, ist es möglich, dass sie kleiner ist als der Kernelparameter SHMMIN.  Dann müssen Sie die benötigte Shared-Memory-Größe erhöhen oder SHMMIN ändern.\n"
+"Die PostgreSQL-Dokumentation enthält weitere Informationen über die Konfiguration von Shared Memory."
 
 #: port/sysv_shmem.c:165 port/pg_shmem.c:165
 #, c-format
@@ -15650,8 +15640,7 @@ msgstr "konnte Shared-Memory-Segment nicht erzeugen: %lu"
 #: port/win32_shmem.c:169
 #, c-format
 msgid "Failed system call was CreateFileMapping(size=%lu, name=%s)."
-msgstr ""
-"Fehlgeschlagener Systemaufruf war CreateFileMapping(größe=%lu, name=%s)."
+msgstr "Fehlgeschlagener Systemaufruf war CreateFileMapping(Größe=%lu, Name=%s)."
 
 #: port/win32_shmem.c:193
 msgid "pre-existing shared memory block is still in use"
