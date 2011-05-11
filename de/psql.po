@@ -1,7 +1,7 @@
 # German message translation file for psql
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: psql.po,v 1.44 2011/05/10 18:41:29 petere Exp $
+# $Id: psql.po,v 1.45 2011/05/11 17:25:43 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-10 02:42+0000\n"
-"PO-Revision-Date: 2011-05-10 21:03+0300\n"
+"POT-Creation-Date: 2011-05-11 10:41+0000\n"
+"PO-Revision-Date: 2011-05-11 19:11+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -50,18 +50,18 @@ msgid "You are not connected.\n"
 msgstr "Sie sind gegenwärtig nicht mit einer Datenbank verbunden.\n"
 
 #: command.c:312
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are connected to database \"%s\" as user \"%s\" via socket in \"%s\" at "
 "port \"%s\".\n"
-msgstr "verbinde mit Datenbank »%s« als Benutzer »%s«\n"
+msgstr "Sie sind verbunden mit der Datenbank »%s« als Benutzer »%s« via Socket in »%s« auf Port »%s«.\n"
 
 #: command.c:315
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are connected to database \"%s\" as user \"%s\" on host \"%s\" at port "
 "\"%s\".\n"
-msgstr "verbinde mit Datenbank »%s« als Benutzer »%s«\n"
+msgstr "Sie sind verbunden mit der Datenbank »%s« als Benutzer »%s« auf Host »%s« auf Port »%s«.\n"
 
 #: command.c:339 common.c:940
 #, c-format
@@ -136,9 +136,8 @@ msgid "out of memory\n"
 msgstr "Speicher aufgebraucht\n"
 
 #: command.c:1115
-#, fuzzy
 msgid "function name is required\n"
-msgstr "\\copy: benötigt Argumente\n"
+msgstr "Funktionsname wird benötigt\n"
 
 #: command.c:1250
 msgid "Timing is on."
@@ -180,23 +179,23 @@ msgid "\\connect: %s"
 msgstr "\\connect: %s"
 
 #: command.c:1582
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are now connected to database \"%s\" as user \"%s\" via socket in \"%s\" "
 "at port \"%s\".\n"
-msgstr "Sie sind jetzt verbunden mit der Datenbank »%s«"
+msgstr "Sie sind jetzt verbunden mit der Datenbank »%s« als Benutzer »%s« via Socket in »%s« auf Port »%s«.\n"
 
 #: command.c:1585
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are now connected to database \"%s\" as user \"%s\" on host \"%s\" at "
 "port \"%s\".\n"
-msgstr "Sie sind jetzt verbunden mit der Datenbank »%s«"
+msgstr "Sie sind jetzt verbunden mit der Datenbank »%s« als Benutzer »%s« auf Host »%s« auf Port »%s«.\n"
 
 #: command.c:1589
-#, fuzzy, c-format
+#, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\".\n"
-msgstr "Sie sind jetzt verbunden mit der Datenbank »%s«"
+msgstr "Sie sind jetzt verbunden mit der Datenbank »%s« als Benutzer »%s«.\n"
 
 #: command.c:1623
 #, c-format
@@ -878,13 +877,17 @@ msgstr "Anfragepuffer\n"
 msgid ""
 "  \\e [FILE] [LINE]       edit the query buffer (or file) with external "
 "editor\n"
-msgstr "  \\e [DATEI] [ZEILE]     Anfragepuffer (oder Datei) mit externem Editor bearbeiten\n"
+msgstr ""
+"  \\e [DATEI] [ZEILE]     Anfragepuffer (oder Datei) mit externem Editor "
+"bearbeiten\n"
 
 #: help.c:174
 #, c-format
 msgid ""
 "  \\ef [FUNCNAME [LINE]]  edit function definition with external editor\n"
-msgstr "  \\ef [FUNKNAME [LINE]]  Funktionsdefinition mit externem Editor bearbeiten\n"
+msgstr ""
+"  \\ef [FUNKNAME [LINE]]  Funktionsdefinition mit externem Editor "
+"bearbeiten\n"
 
 #: help.c:175
 #, c-format
@@ -1068,9 +1071,9 @@ msgid "  \\dl                    list large objects, same as \\lo_list\n"
 msgstr "  \\dl                    Large Objects auflisten, wie \\lo_list\n"
 
 #: help.c:214
-#, fuzzy, c-format
+#, c-format
 msgid "  \\dL[S+] [PATTERN]      list procedural languages\n"
-msgstr "  \\dt[S+] [MUSTER]       Tabellen auflisten\n"
+msgstr "  \\dL[S+] [MUSTER]       prozedurale Sprachen auflisten\n"
 
 #: help.c:215
 #, c-format
@@ -1143,11 +1146,9 @@ msgid "  \\l[+]                  list all databases\n"
 msgstr "  \\l[+]                  alle Datenbanken auflisten\n"
 
 #: help.c:228
-#, fuzzy, c-format
+#, c-format
 msgid "  \\sf[+] FUNCNAME        show a function's definition\n"
-msgstr ""
-"  \\ef [FUNKNAME]         Funktionsdefinition mit externem Editor "
-"bearbeiten\n"
+msgstr "  \\sf[+] [FUNKNAME]      Funktionsdefinition zeigen\n"
 
 #: help.c:229
 #, c-format
@@ -1249,7 +1250,8 @@ msgstr ""
 #, c-format
 msgid ""
 "  \\conninfo              display information about current connection\n"
-msgstr "  \\conninfo              Informationen über aktuelle Verbindung anzeigen\n"
+msgstr ""
+"  \\conninfo              Informationen über aktuelle Verbindung anzeigen\n"
 
 #: help.c:257
 #, c-format
@@ -1637,7 +1639,6 @@ msgid "Encoding"
 msgstr "Kodierung"
 
 #: describe.c:643 describe.c:2910
-#, fuzzy
 msgid "Collate"
 msgstr "Sortierfolge"
 
@@ -1807,9 +1808,9 @@ msgid "Storage"
 msgstr "Speicherung"
 
 #: describe.c:1427
-#, fuzzy, c-format
+#, c-format
 msgid "collate %s"
-msgstr "lc_collate"
+msgstr ""
 
 #: describe.c:1435
 msgid "not null"
@@ -2047,9 +2048,8 @@ msgid "List of relations"
 msgstr "Liste der Relationen"
 
 #: describe.c:2640
-#, fuzzy
 msgid "Trusted"
-msgstr "Vertraut?"
+msgstr "Vertraut"
 
 #: describe.c:2648
 msgid "Internal Language"
@@ -2328,14 +2328,14 @@ msgid "List of installed extensions"
 msgstr "Liste der installierten Erweiterungen"
 
 #: describe.c:3919
-#, fuzzy, c-format
+#, c-format
 msgid "Did not find any extension named \"%s\".\n"
-msgstr "Keine Relationen namens »%s« gefunden\n"
+msgstr "Keine Erweiterungen namens »%s« gefunden\n"
 
 #: describe.c:3922
-#, fuzzy, c-format
+#, c-format
 msgid "Did not find any extensions.\n"
-msgstr "Keine Relationen namens »%s« gefunden\n"
+msgstr "Keine Erweiterungen gefunden\n"
 
 #: describe.c:3966
 msgid "Object Description"
@@ -3251,9 +3251,8 @@ msgid "op_type"
 msgstr "Optyp"
 
 #: sql_help.c:491 sql_help.c:1499
-#, fuzzy
 msgid "sort_family_name"
-msgstr "Familienname"
+msgstr "Sortierfamilienname"
 
 #: sql_help.c:492 sql_help.c:502 sql_help.c:1500
 msgid "support_number"
@@ -3337,9 +3336,8 @@ msgid "table_constraint"
 msgstr "Tabellen-Constraint"
 
 #: sql_help.c:708
-#, fuzzy
 msgid "table_constraint_using_index"
-msgstr "Tabellen-Constraint"
+msgstr "Tabellen-Constraint-für-Index"
 
 #: sql_help.c:712 sql_help.c:713 sql_help.c:714 sql_help.c:715 sql_help.c:1095
 msgid "trigger_name"
@@ -3362,9 +3360,8 @@ msgid "type_name"
 msgstr "Typname"
 
 #: sql_help.c:729
-#, fuzzy
 msgid "and table_constraint_using_index is:"
-msgstr "und Tabellen-Constraint Folgendes ist:"
+msgstr "und Tabellen-Constraint-für-Index Folgendes ist:"
 
 #: sql_help.c:747 sql_help.c:750
 msgid "tablespace_option"
@@ -3391,14 +3388,12 @@ msgid "attribute_name"
 msgstr "Attributname"
 
 #: sql_help.c:870
-#, fuzzy
 msgid "new_attribute_name"
-msgstr "Attributname"
+msgstr "neuer_Attributname"
 
 #: sql_help.c:876
-#, fuzzy
 msgid "new_enum_value"
-msgstr "neuer_Name"
+msgstr "neuer_Enum-Wert"
 
 #: sql_help.c:877
 msgid "existing_enum_value"
@@ -3528,9 +3523,8 @@ msgid "lc_ctype"
 msgstr "lc_ctype"
 
 #: sql_help.c:1242
-#, fuzzy
 msgid "existing_collation"
-msgstr "Ziel"
+msgstr "existierende_Sortierfolge"
 
 #: sql_help.c:1252
 msgid "source_encoding"
@@ -3777,9 +3771,8 @@ msgid "arguments"
 msgstr "Argumente"
 
 #: sql_help.c:1849
-#, fuzzy
 msgid "where event can be one of:"
-msgstr "wobei Option eins der folgenden sein kann:"
+msgstr "wobei Ereignis eins der folgenden sein kann:"
 
 #: sql_help.c:1890 sql_help.c:2787
 msgid "label"
