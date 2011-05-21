@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: postgres.po,v 1.92 2011/05/19 18:33:10 petere Exp $
+# $Id: postgres.po,v 1.93 2011/05/21 22:26:04 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-19 04:43+0000\n"
-"PO-Revision-Date: 2011-05-19 21:27+0300\n"
+"POT-Creation-Date: 2011-05-21 20:43+0000\n"
+"PO-Revision-Date: 2011-05-22 01:25+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -193,10 +193,9 @@ msgid "  -t pa|pl|ex     show timings after each query\n"
 msgstr "  -t pa|pl|ex     zeige Zeitmessung nach jeder Anfrage\n"
 
 #: main/main.c:312
-#, fuzzy, c-format
+#, c-format
 msgid "  -T              send SIGSTOP to all backend processes if one dies\n"
-msgstr ""
-"  -T              SIGSTOP an alle Kindprozesse senden wenn einer stirbt\n"
+msgstr "  -T              SIGSTOP an alle Backend-Prozesse senden wenn einer stirbt\n"
 
 #: main/main.c:313
 #, c-format
@@ -1620,9 +1619,9 @@ msgid "recovery stopping before abort of transaction %u, time %s"
 msgstr "Wiederherstellung beendet vor Abbruch der Transaktion %u, Zeit %s"
 
 #: access/transam/xlog.c:5704
-#, fuzzy, c-format
+#, c-format
 msgid "recovery stopping at restore point \"%s\", time %s"
-msgstr "Wiederherstellung beendet nach Abbruch der Transaktion %u, Zeit %s"
+msgstr "Wiederherstellung beendet bei Restore-Punkt »%s«, Zeit %s"
 
 #: access/transam/xlog.c:5732
 msgid "recovery has paused"
@@ -1644,11 +1643,8 @@ msgstr "Wiederherstellung läuft nicht"
 
 #: access/transam/xlog.c:5782 access/transam/xlog.c:5804
 #: access/transam/xlog.c:5826
-#, fuzzy
 msgid "Recovery control functions can only be executed during recovery."
-msgstr ""
-"während der Wiederherstellung können keine WAL-Kontrollfunktionen ausgeführt "
-"werden"
+msgstr "Wiederherstellungskontrollfunktionen können nur während der Wiederherstellung ausgeführt werden."
 
 #: access/transam/xlog.c:5918
 #, c-format
@@ -1763,9 +1759,9 @@ msgid "starting point-in-time recovery to %s"
 msgstr "starte Point-in-Time-Recovery bis %s"
 
 #: access/transam/xlog.c:6106
-#, fuzzy, c-format
+#, c-format
 msgid "starting point-in-time recovery to \"%s\""
-msgstr "starte Point-in-Time-Recovery bis %s"
+msgstr "starte Point-in-Time-Recovery bis »%s«"
 
 #: access/transam/xlog.c:6110
 msgid "starting archive recovery"
@@ -1870,15 +1866,14 @@ msgid "requested recovery stop point is before consistent recovery point"
 msgstr "angeforderter Recovery-Endpunkt ist vor konsistentem Recovery-Punkt"
 
 #: access/transam/xlog.c:6673
-#, fuzzy
 msgid "WAL ends before end of online backup"
-msgstr "WAL-Level nicht ausreichend, um Online-Sicherung durchzuführen"
+msgstr "WAL endet vor dem Ende der Online-Sicherung"
 
 #: access/transam/xlog.c:6674
 msgid ""
 "Online backup started with pg_start_backup() must be ended with "
 "pg_stop_backup(), and all WAL up to that point must be available at recovery."
-msgstr ""
+msgstr "Die mit pg_start_backup() begonnene Online-Sicherung muss mit pg_stop_backup() beendet werden und der ganze WAL bis zu diesem Punkt muss bei der Wiederherstellung verfügbar sein."
 
 #: access/transam/xlog.c:6677
 msgid "WAL ends before consistent recovery point"
@@ -1984,9 +1979,9 @@ msgid "recovery restart point at %X/%X"
 msgstr "Recovery-Restart-Punkt bei %X/%X"
 
 #: access/transam/xlog.c:8276
-#, fuzzy, c-format
+#, c-format
 msgid "restore point \"%s\" created at %X/%X"
-msgstr "Recovery-Restart-Punkt bei %X/%X"
+msgstr "Restore-Punkt »%s« erzeugt bei %X/%X"
 
 #: access/transam/xlog.c:8373
 msgid "online backup was cancelled, recovery cannot continue"
@@ -2133,19 +2128,17 @@ msgid "must be superuser to switch transaction log files"
 msgstr "nur Superuser können Transaktionslogdateien umschalten"
 
 #: access/transam/xlog.c:9418
-#, fuzzy
 msgid "must be superuser to create a restore point"
-msgstr "nur Superuser können Basistypen anlegen"
+msgstr "nur Superuser können Restore-Punkte anlegen"
 
 #: access/transam/xlog.c:9429
-#, fuzzy
 msgid "WAL level not sufficient for creating a restore point"
-msgstr "WAL-Level nicht ausreichend, um Online-Sicherung durchzuführen"
+msgstr "WAL-Level nicht ausreichend, um Restore-Punkt anzulegen"
 
 #: access/transam/xlog.c:9437
-#, fuzzy, c-format
+#, c-format
 msgid "value too long for restore point (maximum %d characters)"
-msgstr "Wert zu lang für Typ character(%d)"
+msgstr "Wert zu lang für Restore-Punkt (maximal %d Zeichen)"
 
 #: access/transam/xlog.c:9605
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
@@ -2319,7 +2312,9 @@ msgstr "Größe %lu der Indexzeile überschreitet Maximum %lu für Index »%s«"
 
 #: access/gin/ginscan.c:401
 msgid "old GIN indexes do not support whole-index scans nor searches for nulls"
-msgstr "alte GIN-Indexe unterstützen keine Scans des ganzen Index oder Suchen nach NULL-Werten"
+msgstr ""
+"alte GIN-Indexe unterstützen keine Scans des ganzen Index oder Suchen nach "
+"NULL-Werten"
 
 #: access/gin/ginscan.c:402
 #, c-format
@@ -3514,9 +3509,9 @@ msgid "shared indexes cannot be created after initdb"
 msgstr "Cluster-globale Indexe können nicht nach initdb erzeugt werden"
 
 #: catalog/index.c:1719
-#, fuzzy, c-format
+#, c-format
 msgid "building index \"%s\" on table \"%s\""
-msgstr "lese Indexe von Tabelle »%s«\n"
+msgstr "baue Index »%s« von Tabelle »%s«"
 
 #: catalog/index.c:2777
 msgid "cannot reindex temporary tables of other sessions"
@@ -3579,9 +3574,9 @@ msgid "improper qualified name (too many dotted names): %s"
 msgstr "falscher qualifizierter Name (zu viele Namensteile): %s"
 
 #: catalog/namespace.c:2482
-#, fuzzy, c-format
+#, c-format
 msgid "%s is already in schema \"%s\""
-msgstr "Typ %s ist bereits in Schema »%s«"
+msgstr "%s ist bereits in Schema »%s«"
 
 #: catalog/namespace.c:2490
 msgid "cannot move objects into or out of temporary schemas"
@@ -3626,7 +3621,7 @@ msgstr ""
 #: catalog/namespace.c:3516 commands/tablespace.c:1121 commands/variable.c:59
 #: replication/syncrep.c:657 utils/misc/guc.c:8151
 msgid "List syntax is invalid."
-msgstr ""
+msgstr "Die Listensyntax ist ungültig."
 
 #: catalog/objectaddress.c:286
 msgid "database name cannot be qualified"
@@ -3654,14 +3649,12 @@ msgid "language name cannot be qualified"
 msgstr "Sprachname kann nicht qualifiziert werden"
 
 #: catalog/objectaddress.c:304
-#, fuzzy
 msgid "foreign-data wrapper name cannot be qualified"
-msgstr "Datenbankname kann nicht qualifiziert werden"
+msgstr "Fremddaten-Wrapper-Name kann nicht qualifiziert werden"
 
 #: catalog/objectaddress.c:307
-#, fuzzy
 msgid "server name cannot be qualified"
-msgstr "Rollenname kann nicht qualifiziert werden"
+msgstr "Servername kann nicht qualifiziert werden"
 
 #: catalog/objectaddress.c:405 catalog/toasting.c:91 commands/indexcmds.c:199
 #: commands/indexcmds.c:1573 commands/lockcmds.c:149 commands/tablecmds.c:201
@@ -3681,9 +3674,9 @@ msgstr "»%s« ist keine Sicht"
 #: catalog/objectaddress.c:419 commands/tablecmds.c:231
 #: commands/tablecmds.c:2249 commands/tablecmds.c:2508
 #: commands/tablecmds.c:3796 commands/tablecmds.c:8928
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a foreign table"
-msgstr "»%s« ist keine Tabelle"
+msgstr "»%s« ist keine Fremdtabelle"
 
 #: catalog/objectaddress.c:819 catalog/pg_largeobject.c:200
 #: libpq/be-fsstubs.c:287
@@ -4139,14 +4132,14 @@ msgid "must be superuser to SET SCHEMA of %s"
 msgstr "nur Superuser können Dateien lesen"
 
 #: commands/alter.c:451
-#, fuzzy, c-format
+#, c-format
 msgid "%s already exists in schema \"%s\""
-msgstr "Typ %s existiert bereits in Schema »%s«"
+msgstr "%s existiert bereits in Schema »%s«"
 
 #: commands/analyze.c:163
 #, c-format
 msgid "skipping analyze of \"%s\" --- lock not available"
-msgstr ""
+msgstr "überspringe Analyze von »%s« --- Sperre nicht verfügbar"
 
 #: commands/analyze.c:180
 #, c-format
@@ -4294,12 +4287,12 @@ msgstr "kann nicht anhand des ungültigen Index »%s« clustern"
 #: commands/cluster.c:870
 #, c-format
 msgid "clustering \"%s.%s\" using index scan on \"%s\""
-msgstr ""
+msgstr "clustere »%s.%s« durch Index-Scan von »%s«"
 
 #: commands/cluster.c:876
 #, c-format
 msgid "clustering \"%s.%s\" using sequential scan and sort"
-msgstr ""
+msgstr "clustere »%s.%s« durch sequenziellen Scan und Sortieren"
 
 #: commands/cluster.c:881 commands/vacuumlazy.c:320
 #, c-format
@@ -6130,8 +6123,8 @@ msgstr ""
 #: postmaster/postmaster.c:4610 utils/adt/formatting.c:1529
 #: utils/adt/formatting.c:1650 utils/adt/formatting.c:1783
 #: utils/adt/regexp.c:210 utils/adt/varlena.c:3474 utils/adt/varlena.c:3495
-#: utils/mmgr/aset.c:417 utils/mmgr/aset.c:596 utils/mmgr/aset.c:779
-#: utils/mmgr/aset.c:985 utils/fmgr/dfmgr.c:224 utils/hash/dynahash.c:364
+#: utils/mmgr/aset.c:416 utils/mmgr/aset.c:587 utils/mmgr/aset.c:765
+#: utils/mmgr/aset.c:966 utils/fmgr/dfmgr.c:224 utils/hash/dynahash.c:364
 #: utils/hash/dynahash.c:436 utils/hash/dynahash.c:932
 #: utils/init/miscinit.c:150 utils/init/miscinit.c:171
 #: utils/init/miscinit.c:181 utils/mb/mbutils.c:374 utils/mb/mbutils.c:675
@@ -6646,18 +6639,17 @@ msgstr "Constraint muss ebenso in den abgeleiteten Tabellen hinzugefügt werden"
 
 #: commands/tablecmds.c:5493
 msgid "constraints on permanent tables may reference only permanent tables"
-msgstr ""
+msgstr "Constraints für permanente Tabellen dürfen nur auf permanente Tabellen verweisen"
 
 #: commands/tablecmds.c:5500
 msgid ""
 "constraints on unlogged tables may reference only permanent or unlogged "
 "tables"
-msgstr ""
+msgstr "Constraints für ungeloggte Tabellen dürfen nur auf permanente oder ungeloggte Tabellen verweisen"
 
 #: commands/tablecmds.c:5506
-#, fuzzy
 msgid "constraints on temporary tables may reference only temporary tables"
-msgstr "kann keine Indexe für temporäre Tabellen anderer Sitzungen erzeugen"
+msgstr "Constraints für temporäre Tabellen dürfen nur auf temporäre Tabellen verweisen"
 
 #: commands/tablecmds.c:5567
 msgid "number of referencing and referenced columns for foreign key disagree"
@@ -7821,7 +7813,8 @@ msgstr "Sichten dürfen kein SELECT INTO enthalten"
 
 #: commands/view.c:451
 msgid "views must not contain data-modifying statements in WITH"
-msgstr "Sichten dürfen keine datenmodifizierenden Anweisungen in WITH enthalten"
+msgstr ""
+"Sichten dürfen keine datenmodifizierenden Anweisungen in WITH enthalten"
 
 #: commands/view.c:479
 msgid "CREATE VIEW specifies more column names than columns"
@@ -8470,7 +8463,9 @@ msgstr "kann eine Sicht nicht aktualisieren"
 msgid ""
 "You need an unconditional ON UPDATE DO INSTEAD rule or an INSTEAD OF UPDATE "
 "trigger."
-msgstr "Sie benötigen eine ON UPDATE DO INSTEAD Regel ohne Bedingung oder einen INSTEAD OF UPDATE Trigger."
+msgstr ""
+"Sie benötigen eine ON UPDATE DO INSTEAD Regel ohne Bedingung oder einen "
+"INSTEAD OF UPDATE Trigger."
 
 #: executor/execMain.c:1026
 #, fuzzy, c-format
@@ -10197,7 +10192,7 @@ msgstr ""
 
 #: storage/ipc/shmem.c:190 storage/lmgr/predicate.c:2054
 #: storage/lmgr/predicate.c:2069 storage/lmgr/predicate.c:3296
-#: storage/lmgr/predicate.c:4302 storage/lmgr/lock.c:631
+#: storage/lmgr/predicate.c:4253 storage/lmgr/lock.c:631
 #: storage/lmgr/lock.c:700 storage/lmgr/lock.c:2170 storage/lmgr/lock.c:2549
 #: storage/lmgr/lock.c:2614 storage/lmgr/proc.c:193 storage/lmgr/proc.c:212
 #: utils/hash/dynahash.c:928
@@ -10271,7 +10266,9 @@ msgstr ""
 msgid ""
 "not enough shared memory for elements of data structure \"%s\" (%lu bytes "
 "requested)"
-msgstr "nicht genug Shared-Memory für Elemente der Datenstruktur »%s« (%lu Bytes angefordert)"
+msgstr ""
+"nicht genug Shared-Memory für Elemente der Datenstruktur »%s« (%lu Bytes "
+"angefordert)"
 
 #: storage/lmgr/predicate.c:1408
 msgid "deferrable snapshot was unsafe; trying a new one"
@@ -10284,8 +10281,8 @@ msgstr "Sie müssen möglicherweise max_pred_locks_per_transaction erhöhen."
 
 #: storage/lmgr/predicate.c:3449 storage/lmgr/predicate.c:3538
 #: storage/lmgr/predicate.c:3546 storage/lmgr/predicate.c:3587
-#: storage/lmgr/predicate.c:3877 storage/lmgr/predicate.c:4044
-#: storage/lmgr/predicate.c:4053 storage/lmgr/predicate.c:4094
+#: storage/lmgr/predicate.c:3828 storage/lmgr/predicate.c:3995
+#: storage/lmgr/predicate.c:4004 storage/lmgr/predicate.c:4045
 #, fuzzy
 msgid ""
 "could not serialize access due to read/write dependencies among transactions"
@@ -10297,8 +10294,8 @@ msgstr ""
 
 #: storage/lmgr/predicate.c:3451 storage/lmgr/predicate.c:3540
 #: storage/lmgr/predicate.c:3548 storage/lmgr/predicate.c:3589
-#: storage/lmgr/predicate.c:3879 storage/lmgr/predicate.c:4046
-#: storage/lmgr/predicate.c:4055 storage/lmgr/predicate.c:4096
+#: storage/lmgr/predicate.c:3830 storage/lmgr/predicate.c:3997
+#: storage/lmgr/predicate.c:4006 storage/lmgr/predicate.c:4047
 msgid "The transaction might succeed if retried."
 msgstr ""
 
@@ -10318,20 +10315,20 @@ msgstr ""
 msgid "Cancelled on conflict out to old pivot."
 msgstr ""
 
-#: storage/lmgr/predicate.c:3878
+#: storage/lmgr/predicate.c:3829
 msgid "Cancelled on identification as a pivot, during conflict in checking."
 msgstr ""
 
-#: storage/lmgr/predicate.c:4045
+#: storage/lmgr/predicate.c:3996
 msgid "Cancelled on identification as pivot, during write."
 msgstr ""
 
-#: storage/lmgr/predicate.c:4054
+#: storage/lmgr/predicate.c:4005
 #, c-format
 msgid "Cancelled on conflict out to pivot %u, during read."
 msgstr ""
 
-#: storage/lmgr/predicate.c:4095
+#: storage/lmgr/predicate.c:4046
 msgid "Cancelled on identification as a pivot, during commit attempt."
 msgstr ""
 
@@ -10564,7 +10561,9 @@ msgstr "konnte %s nicht implementieren"
 msgid ""
 "FULL JOIN is only supported with merge-joinable or hash-joinable join "
 "conditions"
-msgstr "FULL JOIN wird nur für Merge- oder Hash-Verbund-fähige Verbundbedingungen unterstützt"
+msgstr ""
+"FULL JOIN wird nur für Merge- oder Hash-Verbund-fähige Verbundbedingungen "
+"unterstützt"
 
 #: parser/parse_collate.c:214 parser/parse_collate.c:538
 #, c-format
@@ -10701,7 +10700,8 @@ msgstr "DECLARE CURSOR kann nicht INTO verwenden"
 
 #: parser/analyze.c:2192
 msgid "DECLARE CURSOR must not contain data-modifying statements in WITH"
-msgstr "DECLARE CURSOR darf keine datenmodifizierenden Anweisungen in WITH enthalten"
+msgstr ""
+"DECLARE CURSOR darf keine datenmodifizierenden Anweisungen in WITH enthalten"
 
 #: parser/analyze.c:2198
 msgid "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE is not supported"
@@ -11130,7 +11130,9 @@ msgstr "Unteranfrage in WITH kann kein SELECT INTO enthalten"
 #: parser/parse_cte.c:271
 msgid ""
 "WITH clause containing a data-modifying statement must be at the top level"
-msgstr "WITH-Klausel mit datenmodifizierender Anweisung muss auf der obersten Ebene sein"
+msgstr ""
+"WITH-Klausel mit datenmodifizierender Anweisung muss auf der obersten Ebene "
+"sein"
 
 #: parser/parse_cte.c:320
 #, c-format
@@ -11173,7 +11175,8 @@ msgstr "gegenseitige Rekursion zwischen WITH-Elementen ist nicht implementiert"
 #: parser/parse_cte.c:658
 #, c-format
 msgid "recursive query \"%s\" must not contain data-modifying statements"
-msgstr "rekursive Anfrage »%s« darf keine datenmodifizierenden Anweisungen enthalten"
+msgstr ""
+"rekursive Anfrage »%s« darf keine datenmodifizierenden Anweisungen enthalten"
 
 #: parser/parse_cte.c:666
 #, c-format
@@ -12376,14 +12379,14 @@ msgid "Failed system call was semget(%lu, %d, 0%o)."
 msgstr "Fehlgeschlagener Systemaufruf war semget(%lu, %d, 0%o)."
 
 #: port/sysv_sema.c:119 port/pg_sema.c:119
-#, c-format
+#, fuzzy
 msgid ""
-"This error does *not* mean that you have run out of disk space.\n"
-"It occurs when either the system limit for the maximum number of semaphore "
-"sets (SEMMNI), or the system wide maximum number of semaphores (SEMMNS), "
-"would be exceeded.  You need to raise the respective kernel parameter.  "
+"This error does *not* mean that you have run out of disk space.  It occurs "
+"when either the system limit for the maximum number of semaphore sets "
+"(SEMMNI), or the system wide maximum number of semaphores (SEMMNS), would be "
+"exceeded.  You need to raise the respective kernel parameter.  "
 "Alternatively, reduce PostgreSQL's consumption of semaphores by reducing its "
-"max_connections parameter (currently %d).\n"
+"max_connections parameter.\n"
 "The PostgreSQL documentation contains more information about configuring "
 "your system for PostgreSQL."
 msgstr ""
@@ -12398,7 +12401,7 @@ msgstr ""
 "Die PostgreSQL-Dokumentation enthält weitere Informationen, wie Sie Ihr "
 "System für PostgreSQL konfigurieren können."
 
-#: port/sysv_sema.c:148 port/pg_sema.c:148
+#: port/sysv_sema.c:146 port/pg_sema.c:146
 #, c-format
 msgid ""
 "You possibly need to raise your kernel's SEMVMX value to be at least %d.  "
@@ -12431,9 +12434,18 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Dieser Fehler bedeutet gewöhnlich, dass das von PostgreSQL angeforderte Shared-Memory-Segment den Kernelparameter SHMMAX überschreitet.  Sie können entweder die benötigte Shared-Memory-Größe reduzieren oder SHMMAX im Kernel größer konfigurieren.  Um die benötigte Shared-Memory-Größe zu reduzieren (aktuell %lu Bytes), reduzieren Sie den Shared-Memory-Verbrauch von PostgreSQL, beispielsweise indem Sie »shared_buffers« oder »max_connections« reduzieren.\n"
-"Wenn die angeforderte Größe schon klein ist, ist es möglich, dass sie kleiner ist als der Kernelparameter SHMMIN.  Dann müssen Sie die benötigte Shared-Memory-Größe erhöhen oder SHMMIN ändern.\n"
-"Die PostgreSQL-Dokumentation enthält weitere Informationen über die Konfiguration von Shared Memory."
+"Dieser Fehler bedeutet gewöhnlich, dass das von PostgreSQL angeforderte "
+"Shared-Memory-Segment den Kernelparameter SHMMAX überschreitet.  Sie können "
+"entweder die benötigte Shared-Memory-Größe reduzieren oder SHMMAX im Kernel "
+"größer konfigurieren.  Um die benötigte Shared-Memory-Größe zu reduzieren "
+"(aktuell %lu Bytes), reduzieren Sie den Shared-Memory-Verbrauch von "
+"PostgreSQL, beispielsweise indem Sie »shared_buffers« oder »max_connections« "
+"reduzieren.\n"
+"Wenn die angeforderte Größe schon klein ist, ist es möglich, dass sie "
+"kleiner ist als der Kernelparameter SHMMIN.  Dann müssen Sie die benötigte "
+"Shared-Memory-Größe erhöhen oder SHMMIN ändern.\n"
+"Die PostgreSQL-Dokumentation enthält weitere Informationen über die "
+"Konfiguration von Shared Memory."
 
 #: port/sysv_shmem.c:165 port/pg_shmem.c:165
 #, c-format
@@ -12447,13 +12459,20 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Dieser Fehler bedeutet gewöhnlich, dass das von PostgreSQL angeforderte Shared-Memory-Segment den verfügbaren Speicher oder Swap-Space oder den Kernel-Parameter SHMALL überschreitet.  Sie können entweder die benötigte Shared-Memory-Größe reduzieren oder SHMALL im Kernel größer konfigurieren.  Um die benötigte Shared-Memory-Größe zu reduzieren (aktuell %lu Bytes), reduzieren Sie den Shared-Memory-Verbrauch von PostgreSQL, beispielsweise indem Sie »shared_buffers« oder »max_connections« reduzieren.\n"
-"Die PostgreSQL-Dokumentation enthält weitere Informationen über die Konfiguration von Shared Memory."
+"Dieser Fehler bedeutet gewöhnlich, dass das von PostgreSQL angeforderte "
+"Shared-Memory-Segment den verfügbaren Speicher oder Swap-Space oder den "
+"Kernel-Parameter SHMALL überschreitet.  Sie können entweder die benötigte "
+"Shared-Memory-Größe reduzieren oder SHMALL im Kernel größer konfigurieren.  "
+"Um die benötigte Shared-Memory-Größe zu reduzieren (aktuell %lu Bytes), "
+"reduzieren Sie den Shared-Memory-Verbrauch von PostgreSQL, beispielsweise "
+"indem Sie »shared_buffers« oder »max_connections« reduzieren.\n"
+"Die PostgreSQL-Dokumentation enthält weitere Informationen über die "
+"Konfiguration von Shared Memory."
 
 #: port/sysv_shmem.c:176 port/pg_shmem.c:176
 #, fuzzy, c-format
 msgid ""
-"This error does *not* mean that you have run out of disk space. It occurs "
+"This error does *not* mean that you have run out of disk space.  It occurs "
 "either if all available shared memory IDs have been taken, in which case you "
 "need to raise the SHMMNI parameter in your kernel, or because the system's "
 "overall limit for shared memory has been reached.  If you cannot increase "
@@ -12463,8 +12482,16 @@ msgid ""
 "The PostgreSQL documentation contains more information about shared memory "
 "configuration."
 msgstr ""
-"Dieser Fehler bedeutet *nicht*, dass kein Platz mehr auf der Festplatte ist.  Er tritt auf, wenn entweder alle verfügbaren Shared-Memory-IDs aufgebraucht sind, dann müssen den Kernelparameter SHMMNI erhöhen, oder weil die Systemhöchstgrenze für Shared Memory insgesamt erreicht wurde.  Wenn Sie die Höchstgrenze für Shared Memory nicht erhöhen können, verkleinern Sie das von PostgreSQL benötigte Shared Memory (aktuell %lu Bytes), indem Sie den PostgreSQL-Parameter »shared_buffers« (aktuell %d) und/oder »max_connections« (aktuell %d) reduzieren.\n"
-"Die PostgreSQL-Dokumentation enthält weitere Informationen über die Konfiguration von Shared Memory."
+"Dieser Fehler bedeutet *nicht*, dass kein Platz mehr auf der Festplatte "
+"ist.  Er tritt auf, wenn entweder alle verfügbaren Shared-Memory-IDs "
+"aufgebraucht sind, dann müssen den Kernelparameter SHMMNI erhöhen, oder weil "
+"die Systemhöchstgrenze für Shared Memory insgesamt erreicht wurde.  Wenn Sie "
+"die Höchstgrenze für Shared Memory nicht erhöhen können, verkleinern Sie das "
+"von PostgreSQL benötigte Shared Memory (aktuell %lu Bytes), indem Sie den "
+"PostgreSQL-Parameter »shared_buffers« (aktuell %d) und/oder "
+"»max_connections« (aktuell %d) reduzieren.\n"
+"Die PostgreSQL-Dokumentation enthält weitere Informationen über die "
+"Konfiguration von Shared Memory."
 
 #: port/sysv_shmem.c:439 port/pg_shmem.c:439
 #, c-format
@@ -13512,7 +13539,9 @@ msgstr "Regeln für SELECT müssen als Aktion INSTEAD SELECT haben"
 
 #: rewrite/rewriteDefine.c:337
 msgid "rules on SELECT must not contain data-modifying statements in WITH"
-msgstr "Regeln für SELECT dürfen keine datenmodifizierenden Anweisungen in WITH enthalten"
+msgstr ""
+"Regeln für SELECT dürfen keine datenmodifizierenden Anweisungen in WITH "
+"enthalten"
 
 #: rewrite/rewriteDefine.c:345
 msgid "event qualifications are not implemented for rules on SELECT"
@@ -13679,23 +13708,31 @@ msgstr ""
 msgid ""
 "DO INSTEAD NOTHING rules are not supported for data-modifying statements in "
 "WITH"
-msgstr "DO INSTEAD NOTHING-Regeln werden für datenmodifizierende Anweisungen in WITH nicht unterstützt"
+msgstr ""
+"DO INSTEAD NOTHING-Regeln werden für datenmodifizierende Anweisungen in WITH "
+"nicht unterstützt"
 
 #: rewrite/rewriteHandler.c:2034
 msgid ""
 "conditional DO INSTEAD rules are not supported for data-modifying statements "
 "in WITH"
-msgstr "Do INSTEAD-Regeln mit Bedingung werden für datenmodifizierende Anweisungen in WITH nicht unterstützt"
+msgstr ""
+"Do INSTEAD-Regeln mit Bedingung werden für datenmodifizierende Anweisungen "
+"in WITH nicht unterstützt"
 
 #: rewrite/rewriteHandler.c:2038
 msgid "DO ALSO rules are not supported for data-modifying statements in WITH"
-msgstr "DO ALSO-Regeln werden für datenmodifizierende Anweisungen in WITH nicht unterstützt"
+msgstr ""
+"DO ALSO-Regeln werden für datenmodifizierende Anweisungen in WITH nicht "
+"unterstützt"
 
 #: rewrite/rewriteHandler.c:2043
 msgid ""
 "multi-statement DO INSTEAD rules are not supported for data-modifying "
 "statements in WITH"
-msgstr "DO INSTEAD-Regeln mit mehreren Anweisungen werden für datenmodifizierende Anweisungen in WITH nicht unterstützt"
+msgstr ""
+"DO INSTEAD-Regeln mit mehreren Anweisungen werden für datenmodifizierende "
+"Anweisungen in WITH nicht unterstützt"
 
 #: rewrite/rewriteManip.c:1012
 msgid "conditional utility statements are not implemented"
@@ -14253,7 +14290,8 @@ msgid "could not identify a hash function for type %s"
 msgstr "konnte keine Vergleichsfunktion für Typ %s ermitteln"
 
 #: utils/adt/arrayfuncs.c:4808 utils/adt/arrayfuncs.c:4848
-msgid "dimension array or low bound array cannot be NULL"
+#, fuzzy
+msgid "dimension array or low bound array cannot be null"
 msgstr "Dimensions-Array oder Untergrenzen-Array kann nicht NULL sein"
 
 #: utils/adt/arrayfuncs.c:4911 utils/adt/arrayfuncs.c:4943
@@ -16022,12 +16060,12 @@ msgstr "konnte Relation-Mapping-Datei »%s« nicht fsyncen: %m"
 msgid "could not close relation mapping file \"%s\": %m"
 msgstr "konnte Relation-Mapping-Datei »%s« nicht schließen: %m"
 
-#: utils/mmgr/aset.c:418
+#: utils/mmgr/aset.c:417
 #, c-format
 msgid "Failed while creating memory context \"%s\"."
 msgstr "Fehler während der Erzeugung des Speicherkontexts »%s«."
 
-#: utils/mmgr/aset.c:597 utils/mmgr/aset.c:780 utils/mmgr/aset.c:986
+#: utils/mmgr/aset.c:588 utils/mmgr/aset.c:766 utils/mmgr/aset.c:967
 #, c-format
 msgid "Failed on request of size %lu."
 msgstr "Fehler bei Anfrage mit Größe %lu."
@@ -18611,9 +18649,6 @@ msgstr "unbekannter win32-Fehlercode: %lu"
 
 #~ msgid "EnumValuesCreate() can only set a single OID"
 #~ msgstr "EnumValuesCreate() kann nur eine einzelne OID setzen"
-
-#~ msgid "clustering \"%s.%s\""
-#~ msgstr "clustere »%s.%s«"
 
 #~ msgid ""
 #~ "cannot cluster on index \"%s\" because access method does not handle null "
