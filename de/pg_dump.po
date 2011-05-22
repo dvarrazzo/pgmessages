@@ -1,7 +1,7 @@
 # German message translation file for pg_dump and friends
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: pg_dump.po,v 1.27 2011/05/10 18:41:26 petere Exp $
+# $Id: pg_dump.po,v 1.28 2011/05/22 17:06:16 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-10 02:42+0000\n"
-"PO-Revision-Date: 2011-05-10 21:30+0300\n"
+"POT-Creation-Date: 2011-05-21 22:40+0000\n"
+"PO-Revision-Date: 2011-05-22 16:31+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -320,14 +320,16 @@ msgid "  --role=ROLENAME             do SET ROLE before dump\n"
 msgstr "  --role=ROLLENNAME           vor der Ausgabe SET ROLE ausführen\n"
 
 #: pg_dump.c:865 pg_dumpall.c:556
-#, fuzzy, c-format
-msgid "  --no-security-label         do not dump security label assignments\n"
-msgstr "  --no-tablespaces            Tablespace-Zuordnungen nicht ausgeben\n"
+#, c-format
+msgid "  --no-security-labels        do not dump security label assignments\n"
+msgstr "  --no-security-labels        Security-Label-Zuweisungen nicht ausgeben\n"
 
 #: pg_dump.c:866 pg_dumpall.c:557
 #, c-format
 msgid "  --no-unlogged-table-data    do not dump unlogged table data\n"
-msgstr "  --no-unlogged-table-data    Daten in nicht geloggten Tabellen nicht ausgeben\n"
+msgstr ""
+"  --no-unlogged-table-data    Daten in nicht geloggten Tabellen nicht "
+"ausgeben\n"
 
 #: pg_dump.c:867 pg_dumpall.c:558
 #, c-format
@@ -427,12 +429,12 @@ msgstr ""
 "Ausgabe des Inhalts der Tabelle »%s« fehlgeschlagen: PQendcopy() "
 "fehlgeschlagen.\n"
 
-#: pg_dump.c:1331 pg_dump.c:14053
+#: pg_dump.c:1331 pg_dump.c:14125
 #, c-format
 msgid "Error message from server: %s"
 msgstr "Fehlermeldung vom Server: %s"
 
-#: pg_dump.c:1332 pg_dump.c:14054
+#: pg_dump.c:1332 pg_dump.c:14126
 #, c-format
 msgid "The command was: %s\n"
 msgstr "Die Anweisung war: %s\n"
@@ -459,7 +461,8 @@ msgstr "dumpDatabase(): konnte pg_largeobject.relfrozenxid nicht finden\n"
 
 #: pg_dump.c:1987
 msgid "dumpDatabase(): could not find pg_largeobject_metadata.relfrozenxid\n"
-msgstr "dumpDatabase(): konnte pg_largeobject_metadata.relfrozenxid nicht finden\n"
+msgstr ""
+"dumpDatabase(): konnte pg_largeobject_metadata.relfrozenxid nicht finden\n"
 
 #: pg_dump.c:2066
 #, c-format
@@ -490,9 +493,9 @@ msgid "error reading large object %u: %s"
 msgstr "Fehler beim Lesen von Large Object %u: %s"
 
 #: pg_dump.c:2360 pg_dump.c:2408 pg_dump.c:2463 pg_dump.c:7591 pg_dump.c:7822
-#: pg_dump.c:8720 pg_dump.c:9267 pg_dump.c:9521 pg_dump.c:9635 pg_dump.c:10091
-#: pg_dump.c:10277 pg_dump.c:10383 pg_dump.c:10583 pg_dump.c:10825
-#: pg_dump.c:10992 pg_dump.c:11205 pg_dump.c:13859
+#: pg_dump.c:8788 pg_dump.c:9340 pg_dump.c:9594 pg_dump.c:9708 pg_dump.c:10164
+#: pg_dump.c:10350 pg_dump.c:10456 pg_dump.c:10656 pg_dump.c:10898
+#: pg_dump.c:11065 pg_dump.c:11278 pg_dump.c:13931
 #, c-format
 msgid "query returned %d row instead of one: %s\n"
 msgid_plural "query returned %d rows instead of one: %s\n"
@@ -620,41 +623,41 @@ msgstr[1] "%d Check-Constraints für Tabelle %s erwartet, aber %d gefunden\n"
 msgid "(The system catalogs might be corrupted.)\n"
 msgstr "(Die Systemkataloge sind wahrscheinlich verfälscht.)\n"
 
-#: pg_dump.c:8486
+#: pg_dump.c:8554
 msgid "WARNING: bogus value in proargmodes array\n"
 msgstr "WARNUNG: unsinniger Wert in proargmodes-Array\n"
 
-#: pg_dump.c:8800
+#: pg_dump.c:8868
 msgid "WARNING: could not parse proallargtypes array\n"
 msgstr "WARNUNG: konnte proallargtypes-Array nicht interpretieren\n"
 
-#: pg_dump.c:8816
+#: pg_dump.c:8884
 msgid "WARNING: could not parse proargmodes array\n"
 msgstr "WARNUNG: konnte proargmodes-Array nicht interpretieren\n"
 
-#: pg_dump.c:8830
+#: pg_dump.c:8898
 msgid "WARNING: could not parse proargnames array\n"
 msgstr "WARNUNG: konnte proargnames-Array nicht interpretieren\n"
 
-#: pg_dump.c:8841
+#: pg_dump.c:8909
 msgid "WARNING: could not parse proconfig array\n"
 msgstr "WARNUNG: konnte proconfig-Array nicht interpretieren\n"
 
-#: pg_dump.c:8897
+#: pg_dump.c:8965
 #, c-format
 msgid "unrecognized provolatile value for function \"%s\"\n"
 msgstr "ungültiger provolatile-Wert für Funktion »%s«\n"
 
-#: pg_dump.c:9108
+#: pg_dump.c:9181
 msgid "WARNING: bogus value in pg_cast.castmethod field\n"
 msgstr "WARNUNG: unsinniger Wert in Feld pg_cast.castmethod\n"
 
-#: pg_dump.c:9490
+#: pg_dump.c:9563
 #, c-format
 msgid "WARNING: could not find operator with OID %s\n"
 msgstr "WARNUNG: konnte Operator mit OID %s nicht finden\n"
 
-#: pg_dump.c:10609
+#: pg_dump.c:10682
 #, c-format
 msgid ""
 "WARNING: aggregate function %s could not be dumped correctly for this "
@@ -663,29 +666,29 @@ msgstr ""
 "WARNUNG: Aggregatfunktion %s konnte für diese Datenbankversion nicht korrekt "
 "ausgegeben werden - ignoriert\n"
 
-#: pg_dump.c:11401
+#: pg_dump.c:11474
 #, c-format
 msgid "unknown object type (%d) in default privileges\n"
 msgstr "unbekannter Objekttyp (%d) in Vorgabeprivilegien\n"
 
-#: pg_dump.c:11418
+#: pg_dump.c:11491
 #, c-format
 msgid "could not parse default ACL list (%s)\n"
 msgstr "konnte Vorgabe-ACL-Liste (%s) nicht interpretieren\n"
 
-#: pg_dump.c:11475
+#: pg_dump.c:11548
 #, c-format
 msgid "could not parse ACL list (%s) for object \"%s\" (%s)\n"
 msgstr ""
 "konnte ACL-Zeichenkette (%s) für Objekt »%s« (%s) nicht interpretieren\n"
 
-#: pg_dump.c:11916
+#: pg_dump.c:11988
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned no data\n"
 msgstr ""
 "Anfrage um die Definition der Sicht »%s« zu ermitteln lieferte keine Daten\n"
 
-#: pg_dump.c:11919
+#: pg_dump.c:11991
 #, c-format
 msgid ""
 "query to obtain definition of view \"%s\" returned more than one definition\n"
@@ -693,43 +696,43 @@ msgstr ""
 "Anfrage um die Definition der Sicht »%s« zu ermitteln lieferte mehr als eine "
 "Definition\n"
 
-#: pg_dump.c:11928
+#: pg_dump.c:12000
 #, c-format
 msgid "definition of view \"%s\" appears to be empty (length zero)\n"
 msgstr "Definition der Sicht »%s« scheint leer zu sein (Länge null)\n"
 
-#: pg_dump.c:12494
+#: pg_dump.c:12566
 #, c-format
 msgid "invalid column number %d for table \"%s\"\n"
 msgstr "ungültige Spaltennummer %d in Tabelle »%s«\n"
 
-#: pg_dump.c:12605
+#: pg_dump.c:12677
 #, c-format
 msgid "missing index for constraint \"%s\"\n"
 msgstr "fehlender Index für Constraint »%s«\n"
 
-#: pg_dump.c:12793
+#: pg_dump.c:12865
 #, c-format
 msgid "unrecognized constraint type: %c\n"
 msgstr "unbekannter Constraint-Typ: %c\n"
 
-#: pg_dump.c:12856
+#: pg_dump.c:12928
 msgid "missing pg_database entry for this database\n"
 msgstr "fehlender pg_database-Eintrag für diese Datenbank\n"
 
-#: pg_dump.c:12861
+#: pg_dump.c:12933
 msgid "found more than one pg_database entry for this database\n"
 msgstr "mehr als einen pg_database-Eintrag für diese Datenbank gefunden\n"
 
-#: pg_dump.c:12893
+#: pg_dump.c:12965
 msgid "could not find entry for pg_indexes in pg_class\n"
 msgstr "konnte Eintrag für pg_indexes in pg_class nicht finden\n"
 
-#: pg_dump.c:12898
+#: pg_dump.c:12970
 msgid "found more than one entry for pg_indexes in pg_class\n"
 msgstr "mehr als ein Eintrag für pg_indexes in pg_class gefunden\n"
 
-#: pg_dump.c:12970
+#: pg_dump.c:13042
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)\n"
 msgid_plural ""
@@ -737,23 +740,23 @@ msgid_plural ""
 msgstr[0] "Anfrage nach Daten der Sequenz %s ergab %d Zeile (erwartete 1)\n"
 msgstr[1] "Anfrage nach Daten der Sequenz %s ergab %d Zeilen (erwartete 1)\n"
 
-#: pg_dump.c:12981
+#: pg_dump.c:13053
 #, c-format
 msgid "query to get data of sequence \"%s\" returned name \"%s\"\n"
 msgstr "Anfrage nach Daten der Sequenz %s ergab Name »%s«\n"
 
-#: pg_dump.c:13209
-#, fuzzy, c-format
+#: pg_dump.c:13281
+#, c-format
 msgid "unexpected tgtype value: %d\n"
-msgstr "unerwarteter asyncStatus: %d\n"
+msgstr "unerwarteter tgtype-Wert: %d\n"
 
-#: pg_dump.c:13291
+#: pg_dump.c:13363
 #, c-format
 msgid "invalid argument string (%s) for trigger \"%s\" on table \"%s\"\n"
 msgstr ""
 "fehlerhafte Argumentzeichenkette (%s) für Trigger »%s« von Tabelle »%s«\n"
 
-#: pg_dump.c:13409
+#: pg_dump.c:13481
 #, c-format
 msgid ""
 "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows "
@@ -762,11 +765,11 @@ msgstr ""
 "Anfrage nach Regel »%s« der Tabelle »%s« fehlgeschlagen: falsche Anzahl "
 "Zeilen zurückgegeben\n"
 
-#: pg_dump.c:13666
+#: pg_dump.c:13738
 msgid "reading dependency data\n"
 msgstr "lese Abhängigkeitsdaten\n"
 
-#: pg_dump.c:14048
+#: pg_dump.c:14120
 msgid "SQL command failed\n"
 msgstr "SQL-Anweisung schlug fehl\n"
 
@@ -1137,7 +1140,9 @@ msgstr "Verzeichnisname zu lang: »%s«\n"
 msgid ""
 "directory \"%s\" does not appear to be a valid archive (\"toc.dat\" does not "
 "exist)\n"
-msgstr "Verzeichnis »%s« scheint kein gültiges Archiv zu sein (»toc.dat« existiert nicht)\n"
+msgstr ""
+"Verzeichnis »%s« scheint kein gültiges Archiv zu sein (»toc.dat« existiert "
+"nicht)\n"
 
 #: pg_backup_archiver.c:1812 pg_backup_custom.c:171 pg_backup_custom.c:757
 #: pg_backup_files.c:155 pg_backup_files.c:307
@@ -1782,10 +1787,10 @@ msgstr ""
 "werden\n"
 
 #: pg_restore.c:348
-#, fuzzy, c-format
+#, c-format, fuzzy
 msgid ""
 "unrecognized archive format \"%s\"; please specify \"c\", \"d\" or \"t\"\n"
-msgstr "unbekanntes Archivformat »%s«; bitte »c« oder »t« angeben\n"
+msgstr "unbekanntes Archivformat »%s«; bitte »c«, »d« oder »t« angeben\n"
 
 #: pg_restore.c:382
 #, c-format
@@ -1820,7 +1825,9 @@ msgstr "  -f, --file=DATEINAME     Name der Ausgabedatei\n"
 #: pg_restore.c:403
 #, c-format
 msgid "  -F, --format=c|d|t       backup file format (should be automatic)\n"
-msgstr "  -F, --format=c|d|t       Format der Backup-Datei (sollte automatisch gehen)\n"
+msgstr ""
+"  -F, --format=c|d|t       Format der Backup-Datei (sollte automatisch "
+"gehen)\n"
 
 #: pg_restore.c:404
 #, c-format
@@ -1979,12 +1986,12 @@ msgstr ""
 #: pg_restore.c:431
 #, c-format
 msgid "  --no-tablespaces         do not restore tablespace assignments\n"
-msgstr "  --no-tablespaces         Tablespace-Zuordnungen nicht ausgeben\n"
+msgstr "  --no-tablespaces         Tablespace-Zuordnungen nicht wiederherstellen\n"
 
 #: pg_restore.c:432
-#, fuzzy, c-format
-msgid "  --no-security-label      do not restore security labels\n"
-msgstr "  --no-tablespaces         Tablespace-Zuordnungen nicht ausgeben\n"
+#, c-format
+msgid "  --no-security-labels     do not restore security labels\n"
+msgstr "  --no-security-labels     Security-Labels nicht wiederherstellen\n"
 
 #: pg_restore.c:433
 #, c-format
@@ -2298,24 +2305,3 @@ msgstr "Kindprozess wurde von Signal %d beendet"
 #, c-format
 msgid "child process exited with unrecognized status %d"
 msgstr "Kindprozess hat mit unbekanntem Status %d beendet"
-
-#~ msgid "%s: invalid -X option -- %s\n"
-#~ msgstr "%s: ungültige »-X«-Option -- %s\n"
-
-#~ msgid "query returned no rows: %s\n"
-#~ msgstr "Anfrage ergab keine Zeilen: %s\n"
-
-#~ msgid "could not initialize compression library: %s\n"
-#~ msgstr "konnte Komprimierungsbibliothek nicht initialisieren: %s\n"
-
-#~ msgid "could not uncompress data: %s\n"
-#~ msgstr "konnte Daten nicht dekomprimieren: %s\n"
-
-#~ msgid "could not close compression library: %s\n"
-#~ msgstr "konnte Komprimierungsbibliothek nicht schließen: %s\n"
-
-#~ msgid "could not compress data: %s\n"
-#~ msgstr "konnte Daten nicht komprimieren: %s\n"
-
-#~ msgid "could not close compression stream: %s\n"
-#~ msgstr "konnte Komprimierungsstrom nicht schließen: %s\n"
