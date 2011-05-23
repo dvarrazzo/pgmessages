@@ -1,7 +1,7 @@
 # German message translation file for pg_dump and friends
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: pg_dump.po,v 1.28 2011/05/22 17:06:16 petere Exp $
+# $Id: pg_dump.po,v 1.29 2011/05/23 20:15:50 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-21 22:40+0000\n"
-"PO-Revision-Date: 2011-05-22 16:31+0300\n"
+"POT-Creation-Date: 2011-05-23 18:40+0000\n"
+"PO-Revision-Date: 2011-05-23 23:12+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -111,9 +111,9 @@ msgstr ""
 "Allgemeine Optionen:\n"
 
 #: pg_dump.c:832
-#, fuzzy, c-format
-msgid "  -f, --file=OUTPUT           output file or directory name\n"
-msgstr "  -f, --file=DATEINAME        Name der Ausgabedatei\n"
+#, c-format
+msgid "  -f, --file=FILENAME         output file or directory name\n"
+msgstr "  -f, --file=DATEINAME        Name der Ausgabedatei oder des -verzeichnisses\n"
 
 #: pg_dump.c:833
 #, c-format
@@ -305,14 +305,16 @@ msgstr "  --no-tablespaces            Tablespace-Zuordnungen nicht ausgeben\n"
 #: pg_dump.c:862 pg_dumpall.c:554
 #, c-format
 msgid ""
-"  --quote-all-identifiers     quote all identifiers, even if not keywords\n"
+"  --quote-all-identifiers     quote all identifiers, even if not key words\n"
 msgstr ""
+"  --quote-all-identifiers     alle Bezeichner in Anführungszeichen, selbst wenn\n"
+"                              kein Schlüsselwort\n"
 
 #: pg_dump.c:863
 #, c-format
 msgid ""
 "  --serializable-deferrable   wait until the dump can run without anomalies\n"
-msgstr ""
+msgstr "  --serializable-deferrable   warten bis der Dump ohne Anomalien laufen kann\n"
 
 #: pg_dump.c:864 pg_dumpall.c:555
 #, c-format
@@ -322,7 +324,8 @@ msgstr "  --role=ROLLENNAME           vor der Ausgabe SET ROLE ausführen\n"
 #: pg_dump.c:865 pg_dumpall.c:556
 #, c-format
 msgid "  --no-security-labels        do not dump security label assignments\n"
-msgstr "  --no-security-labels        Security-Label-Zuweisungen nicht ausgeben\n"
+msgstr ""
+"  --no-security-labels        Security-Label-Zuweisungen nicht ausgeben\n"
 
 #: pg_dump.c:866 pg_dumpall.c:557
 #, c-format
@@ -503,9 +506,9 @@ msgstr[0] "Anfrage ergab %d Zeile anstatt einer: %s\n"
 msgstr[1] "Anfrage ergab %d Zeilen anstatt einer: %s\n"
 
 #: pg_dump.c:2544
-#, fuzzy, c-format
-msgid "failed to find parent extension for %s"
-msgstr "konnte Tupel mit Index »%s« nicht erneut finden"
+#, c-format
+msgid "could not find parent extension for %s"
+msgstr "konnte Erweiterung, zu der %s gehört, nicht finden"
 
 #: pg_dump.c:2651
 #, c-format
@@ -1787,9 +1790,9 @@ msgstr ""
 "werden\n"
 
 #: pg_restore.c:348
-#, c-format, fuzzy
+#, c-format
 msgid ""
-"unrecognized archive format \"%s\"; please specify \"c\", \"d\" or \"t\"\n"
+"unrecognized archive format \"%s\"; please specify \"c\", \"d\", or \"t\"\n"
 msgstr "unbekanntes Archivformat »%s«; bitte »c«, »d« oder »t« angeben\n"
 
 #: pg_restore.c:382
@@ -1986,7 +1989,8 @@ msgstr ""
 #: pg_restore.c:431
 #, c-format
 msgid "  --no-tablespaces         do not restore tablespace assignments\n"
-msgstr "  --no-tablespaces         Tablespace-Zuordnungen nicht wiederherstellen\n"
+msgstr ""
+"  --no-tablespaces         Tablespace-Zuordnungen nicht wiederherstellen\n"
 
 #: pg_restore.c:432
 #, c-format
