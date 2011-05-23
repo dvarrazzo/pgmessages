@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: postgres.po,v 1.93 2011/05/21 22:26:04 petere Exp $
+# $Id: postgres.po,v 1.94 2011/05/23 18:21:57 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-21 20:43+0000\n"
-"PO-Revision-Date: 2011-05-22 01:25+0300\n"
+"POT-Creation-Date: 2011-05-23 02:43+0000\n"
+"PO-Revision-Date: 2011-05-23 20:42+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -195,7 +195,8 @@ msgstr "  -t pa|pl|ex     zeige Zeitmessung nach jeder Anfrage\n"
 #: main/main.c:312
 #, c-format
 msgid "  -T              send SIGSTOP to all backend processes if one dies\n"
-msgstr "  -T              SIGSTOP an alle Backend-Prozesse senden wenn einer stirbt\n"
+msgstr ""
+"  -T              SIGSTOP an alle Backend-Prozesse senden wenn einer stirbt\n"
 
 #: main/main.c:313
 #, c-format
@@ -1644,7 +1645,9 @@ msgstr "Wiederherstellung läuft nicht"
 #: access/transam/xlog.c:5782 access/transam/xlog.c:5804
 #: access/transam/xlog.c:5826
 msgid "Recovery control functions can only be executed during recovery."
-msgstr "Wiederherstellungskontrollfunktionen können nur während der Wiederherstellung ausgeführt werden."
+msgstr ""
+"Wiederherstellungskontrollfunktionen können nur während der "
+"Wiederherstellung ausgeführt werden."
 
 #: access/transam/xlog.c:5918
 #, c-format
@@ -1873,7 +1876,10 @@ msgstr "WAL endet vor dem Ende der Online-Sicherung"
 msgid ""
 "Online backup started with pg_start_backup() must be ended with "
 "pg_stop_backup(), and all WAL up to that point must be available at recovery."
-msgstr "Die mit pg_start_backup() begonnene Online-Sicherung muss mit pg_stop_backup() beendet werden und der ganze WAL bis zu diesem Punkt muss bei der Wiederherstellung verfügbar sein."
+msgstr ""
+"Die mit pg_start_backup() begonnene Online-Sicherung muss mit pg_stop_backup"
+"() beendet werden und der ganze WAL bis zu diesem Punkt muss bei der "
+"Wiederherstellung verfügbar sein."
 
 #: access/transam/xlog.c:6677
 msgid "WAL ends before consistent recovery point"
@@ -2047,9 +2053,9 @@ msgstr ""
 "werden."
 
 #: access/transam/xlog.c:8864
-#, fuzzy, c-format
+#, c-format
 msgid "backup label too long (max %d bytes)"
-msgstr "Wort ist zu lang (%ld Bytes, maximal %ld Bytes)"
+msgstr "Backup-Label zu lang (maximal %d Bytes)"
 
 #: access/transam/xlog.c:8905 access/transam/xlog.c:9006
 msgid "a backup is already in progress"
@@ -3691,14 +3697,12 @@ msgid "must be owner of type %s or type %s"
 msgstr "Berechtigung nur für Eigentümer des Typs %s oder des Typs %s"
 
 #: catalog/objectaddress.c:865 catalog/objectaddress.c:881
-#, fuzzy
 msgid "must be superuser"
-msgstr "nur Superuser können Dateien lesen"
+msgstr "Berechtigung nur für Superuser"
 
 #: catalog/objectaddress.c:872
-#, fuzzy
 msgid "must have CREATEROLE privilege"
-msgstr "Benutzer hat das CONNECT-Privileg nicht."
+msgstr "Berechtigung nur mit CREATEROLE-Privileg"
 
 #: catalog/pg_aggregate.c:100
 msgid "cannot determine transition data type"
@@ -3814,9 +3818,9 @@ msgid "Labels must be %d characters or less."
 msgstr "Labels müssen %d oder weniger Zeichen haben."
 
 #: catalog/pg_enum.c:264
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not an existing enum label"
-msgstr "»%s« ist keine Zahl"
+msgstr "»%s« ist kein existierendes Enum-Label"
 
 #: catalog/pg_enum.c:325
 msgid "ALTER TYPE ADD BEFORE/AFTER is incompatible with binary upgrade"
@@ -4161,11 +4165,9 @@ msgstr ""
 "analysieren"
 
 #: commands/analyze.c:204
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- cannot analyze non-tables or special system tables"
-msgstr ""
-"überspringe »%s« --- kann Indexe, Sichten oder spezielle Systemtabellen "
-"nicht analysieren"
+msgstr "überspringe »%s« --- kann Nicht-Tabellen oder besondere Systemtabellen nicht analysieren"
 
 #: commands/analyze.c:297
 #, c-format
@@ -5076,13 +5078,10 @@ msgid "Must be superuser to alter a foreign-data wrapper."
 msgstr "Nur Superuser können Fremddaten-Wrapper ändern."
 
 #: commands/foreigncmds.c:575
-#, fuzzy
 msgid ""
 "changing the foreign-data wrapper handler can change behavior of existing "
 "foreign tables"
-msgstr ""
-"durch Ändern des Validators des Fremddaten-Wrappers können die Optionen von "
-"abhängigen Objekten ungültig werden"
+msgstr "das Ändern des Handlers des Fremddaten-Wrappers kann das Verhalten von bestehenden Fremdtabellen verändern"
 
 #: commands/foreigncmds.c:589
 msgid ""
@@ -5386,9 +5385,8 @@ msgid "array data types are not binary-compatible"
 msgstr "Array-Datentypen sind nicht binärkompatibel"
 
 #: commands/functioncmds.c:1679
-#, fuzzy
 msgid "domain data types must not be marked binary-compatible"
-msgstr "zusammengesetzte Datentypen sind nicht binärkompatibel"
+msgstr "Domänendatentypen dürfen nicht als binärkompatibel markiert werden"
 
 #: commands/functioncmds.c:1689
 msgid "source data type and target data type are the same"
@@ -5433,9 +5431,9 @@ msgid "cannot use more than %d columns in an index"
 msgstr "Index kann nicht mehr als %d Spalten enthalten"
 
 #: commands/indexcmds.c:194
-#, fuzzy, c-format
+#, c-format
 msgid "cannot create index on foreign table \"%s\""
-msgstr "»%s« ist kein Index für Tabelle »%s«"
+msgstr "kann keinen Index für Fremdtabelle »%s« erzeugen"
 
 #: commands/indexcmds.c:209
 msgid "cannot create indexes on temporary tables of other sessions"
@@ -5506,11 +5504,8 @@ msgid "functions in index expression must be marked IMMUTABLE"
 msgstr "Funktionen im Indexausdruck müssen als IMMUTABLE markiert sein"
 
 #: commands/indexcmds.c:929
-#, fuzzy
 msgid "could not determine which collation to use for index expression"
-msgstr ""
-"konnte Zeilenbeschreibung für Funktion, die »record« zurückgibt, nicht "
-"ermitteln"
+msgstr "konnte die für den Indexausdruck zu verwendende Sortierfolge nicht bestimmen"
 
 #: commands/indexcmds.c:937 commands/typecmds.c:843 parser/parse_expr.c:2140
 #: parser/parse_type.c:492 parser/parse_utilcmd.c:2553
@@ -5683,9 +5678,9 @@ msgid "index operators must be binary"
 msgstr "Indexoperatoren müssen binär sein"
 
 #: commands/opclasscmds.c:1111
-#, fuzzy, c-format
+#, c-format
 msgid "access method \"%s\" does not support ordering operators"
-msgstr "Zugriffsmethode »%s« unterstützt keine Exclusion-Constraints"
+msgstr "Zugriffsmethode »%s« unterstützt keine Sortieroperatoren"
 
 #: commands/opclasscmds.c:1124
 msgid "index search operators must return boolean"
@@ -5904,9 +5899,8 @@ msgid "must be superuser to create superusers"
 msgstr "nur Superuser können Superuser anlegen"
 
 #: commands/user.c:291
-#, fuzzy
 msgid "must be superuser to create replication users"
-msgstr "nur Superuser können Superuser anlegen"
+msgstr "nur Superuser können Replikationsbenutzer anlegen"
 
 #: commands/user.c:298
 msgid "permission denied to create role"
@@ -6264,14 +6258,13 @@ msgid "foreign table \"%s\" does not exist"
 msgstr "Fremdtabelle »%s« existiert nicht"
 
 #: commands/tablecmds.c:230
-#, fuzzy, c-format
+#, c-format
 msgid "foreign table \"%s\" does not exist, skipping"
-msgstr "Tabelle »%s« existiert nicht, wird übersprungen"
+msgstr "Fremdtabelle »%s« existiert nicht, wird übersprungen"
 
 #: commands/tablecmds.c:232
-#, fuzzy
 msgid "Use DROP FOREIGN TABLE to remove a foreign table."
-msgstr "Verwenden Sie DROP TABLE, um eine Tabelle zu löschen."
+msgstr "Verwenden Sie DROP FOREIGN TABLE, um eine Fremdtabelle zu löschen."
 
 #: commands/tablecmds.c:424 executor/execMain.c:2363
 msgid "ON COMMIT can only be used on temporary tables"
@@ -6401,9 +6394,9 @@ msgid "cannot rename column of typed table"
 msgstr "Spalte einer getypten Tabelle kann nicht umbenannt werden"
 
 #: commands/tablecmds.c:2048
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a table, view, composite type, index or foreign table"
-msgstr "»%s« ist weder Tabelle, Sicht, zusammengesetzter Typ noch Index"
+msgstr "»%s« ist weder Tabelle, Sicht, zusammengesetzter Typ, Index noch Fremdtabelle"
 
 #: commands/tablecmds.c:2114
 #, c-format
@@ -6464,14 +6457,14 @@ msgid "cannot rewrite temporary tables of other sessions"
 msgstr "kann temporäre Tabellen anderer Sitzungen nicht neu schreiben"
 
 #: commands/tablecmds.c:3525
-#, fuzzy, c-format
+#, c-format
 msgid "rewriting table \"%s\""
-msgstr "entferne Datei »%s«"
+msgstr "schreibe Tabelle »%s« neu"
 
 #: commands/tablecmds.c:3529
-#, fuzzy, c-format
+#, c-format
 msgid "verifying table \"%s\""
-msgstr "für Tabelle »%s.%s«"
+msgstr "überprüfe Tabelle »%s«"
 
 #: commands/tablecmds.c:3626
 #, c-format
@@ -6495,19 +6488,19 @@ msgid "\"%s\" is not a table or view"
 msgstr "»%s« ist keine Tabelle oder Sicht"
 
 #: commands/tablecmds.c:3787
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a table or foreign table"
-msgstr "»%s« ist keine Tabelle und kein Index"
+msgstr "»%s« ist keine Tabelle oder Fremdtabelle"
 
 #: commands/tablecmds.c:3790
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a table, composite type, or foreign table"
-msgstr "»%s« ist weder Tabelle, Sicht, zusammengesetzter Typ noch Index"
+msgstr "»%s« ist weder Tabelle, Sicht, zusammengesetzter Typ noch Fremdtabelle"
 
 #: commands/tablecmds.c:3800
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is of the wrong type"
-msgstr "»%s« ist kein Typ"
+msgstr "»%s« hat den falschen Typ"
 
 #: commands/tablecmds.c:3949 commands/tablecmds.c:3956
 #, c-format
@@ -6529,16 +6522,13 @@ msgstr ""
 "kann Tabelle »%s« nicht ändern, weil Spalte »%s.%s« ihren Zeilentyp verwendet"
 
 #: commands/tablecmds.c:4032
-#, fuzzy, c-format
+#, c-format
 msgid "cannot alter type \"%s\" because it is the type of a typed table"
-msgstr "Spaltentyp einer getypten Tabelle kann nicht geändert werden"
+msgstr "kann Typ »%s« nicht ändern, weil er der Typ einer getypten Tabelle ist"
 
 #: commands/tablecmds.c:4034
-#, fuzzy
 msgid "Use ALTER ... CASCADE to alter the typed tables too."
-msgstr ""
-"Verwenden Sie DROP ... CASCADE, um die abhängigen Objekte ebenfalls zu "
-"löschen."
+msgstr "Verwenden Sie ALTER ... CASCADE, um die getypten Tabellen ebenfalls zu ändern."
 
 #: commands/tablecmds.c:4077
 #, c-format
@@ -6639,17 +6629,23 @@ msgstr "Constraint muss ebenso in den abgeleiteten Tabellen hinzugefügt werden"
 
 #: commands/tablecmds.c:5493
 msgid "constraints on permanent tables may reference only permanent tables"
-msgstr "Constraints für permanente Tabellen dürfen nur auf permanente Tabellen verweisen"
+msgstr ""
+"Constraints für permanente Tabellen dürfen nur auf permanente Tabellen "
+"verweisen"
 
 #: commands/tablecmds.c:5500
 msgid ""
 "constraints on unlogged tables may reference only permanent or unlogged "
 "tables"
-msgstr "Constraints für ungeloggte Tabellen dürfen nur auf permanente oder ungeloggte Tabellen verweisen"
+msgstr ""
+"Constraints für ungeloggte Tabellen dürfen nur auf permanente oder "
+"ungeloggte Tabellen verweisen"
 
 #: commands/tablecmds.c:5506
 msgid "constraints on temporary tables may reference only temporary tables"
-msgstr "Constraints für temporäre Tabellen dürfen nur auf temporäre Tabellen verweisen"
+msgstr ""
+"Constraints für temporäre Tabellen dürfen nur auf temporäre Tabellen "
+"verweisen"
 
 #: commands/tablecmds.c:5567
 msgid "number of referencing and referenced columns for foreign key disagree"
@@ -6667,9 +6663,9 @@ msgid "Key columns \"%s\" and \"%s\" are of incompatible types: %s and %s."
 msgstr "Schlüsselspalten »%s« und »%s« haben inkompatible Typen: %s und %s."
 
 #: commands/tablecmds.c:5772
-#, fuzzy, c-format
+#, c-format
 msgid "foreign key constraint \"%s\" of relation \"%s\" does not exist"
-msgstr "Constraint »%s« von Relation »%s« existiert nicht"
+msgstr "Fremdschlüssel-Constraint »%s« von Relation »%s« existiert nicht"
 
 #: commands/tablecmds.c:5834
 #, c-format
@@ -6888,9 +6884,8 @@ msgid "relation \"%s\" is not a parent of relation \"%s\""
 msgstr "Relation »%s« ist keine Basisrelation von Relation »%s«"
 
 #: commands/tablecmds.c:8675
-#, fuzzy
 msgid "typed tables cannot inherit"
-msgstr "Typ %s existiert nicht"
+msgstr "getypte Tabellen können nicht erben"
 
 #: commands/tablecmds.c:8706
 #, fuzzy, c-format
@@ -6913,9 +6908,9 @@ msgid "table has extra column \"%s\""
 msgstr "Spalte »%s« fehlt in abgeleiteter Tabelle"
 
 #: commands/tablecmds.c:8784
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a typed table"
-msgstr "»%s« ist keine Tabelle"
+msgstr "»%s« ist keine getypte Tabelle"
 
 #: commands/tablecmds.c:8953
 msgid "cannot move an owned sequence into another schema"
@@ -6924,9 +6919,9 @@ msgstr ""
 "verschoben werden"
 
 #: commands/tablecmds.c:8972
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a table, view, sequence, or foreign table"
-msgstr "»%s« ist keine Tabelle, Sicht oder Sequenz"
+msgstr "»%s« ist keine Tabelle, Sicht, Sequenz oder Fremdtabelle"
 
 #: commands/tablecmds.c:9029
 #, c-format
@@ -7013,11 +7008,8 @@ msgid "directory \"%s\" does not exist"
 msgstr "Verzeichnis »%s« existiert nicht"
 
 #: commands/tablespace.c:561
-#, fuzzy
 msgid "Create this directory for the tablespace before restarting the server."
-msgstr ""
-"Erzeugen Sie das Verzeichnis »%s« für diesen Tablespace bevor Sie den Server "
-"neu starten."
+msgstr "Erzeugen Sie dieses Verzeichnis für den Tablespace bevor Sie den Server neu starten."
 
 #: commands/tablespace.c:566
 #, c-format
@@ -7054,9 +7046,9 @@ msgid "could not remove directory \"%s\": %m"
 msgstr "konnte Verzeichnis »%s« nicht löschen: %m"
 
 #: commands/tablespace.c:1039
-#, fuzzy, c-format
+#, c-format
 msgid "Tablespace \"%s\" does not exist."
-msgstr "Tablespace »%s« existiert nicht"
+msgstr "Tablespace »%s« existiert nicht."
 
 #: commands/tablespace.c:1450
 #, c-format
@@ -7518,9 +7510,9 @@ msgstr ""
 "verletzen"
 
 #: commands/typecmds.c:2286
-#, fuzzy, c-format
+#, c-format
 msgid "%s is not a domain"
-msgstr "»%s« ist keine Domäne"
+msgstr "%s ist keine Domäne"
 
 #: commands/typecmds.c:2368 commands/typecmds.c:2377
 msgid "cannot use table references in domain check constraint"
@@ -7599,11 +7591,9 @@ msgstr ""
 "vacuumen"
 
 #: commands/vacuum.c:902
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- cannot vacuum non-tables or special system tables"
-msgstr ""
-"überspringe »%s« --- kann Indexe, Sichten oder spezielle Systemtabellen "
-"nicht vacuumen"
+msgstr "überspringe »%s« --- kann Nicht-Tabellen oder besondere Systemtabellen nicht vacuumen"
 
 #: commands/vacuumlazy.c:234
 #, c-format
@@ -7914,9 +7904,9 @@ msgid "parameter \"%s\" must be a list of extension names"
 msgstr "Argument von Option »%s« muss eine Liste aus Spaltennamen sein"
 
 #: commands/extension.c:563
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized parameter \"%s\" in file \"%s\""
-msgstr "unbekannter Parameter »%s«"
+msgstr "unbekannter Parameter »%s« in Datei »%s«"
 
 #: commands/extension.c:572
 #, fuzzy
@@ -8455,9 +8445,9 @@ msgid ""
 msgstr "Sie benötigen eine ON INSERT DO INSTEAD Regel ohne Bedingung."
 
 #: executor/execMain.c:1018
-#, fuzzy, c-format
+#, c-format
 msgid "cannot update view \"%s\""
-msgstr "kann eine Sicht nicht aktualisieren"
+msgstr "kann Sicht »%s« nicht aktualisieren"
 
 #: executor/execMain.c:1020
 msgid ""
@@ -11735,9 +11725,9 @@ msgid "invalid type name \"%s\""
 msgstr "ungültiger Typname: »%s«"
 
 #: parser/parse_utilcmd.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" already exists, skipping"
-msgstr "Relation »%s« existiert bereits"
+msgstr "Relation »%s« existiert bereits, wird übersprungen"
 
 #: parser/parse_utilcmd.c:333
 msgid "array of serial is not implemented"
