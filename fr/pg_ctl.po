@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2011-06-13 14:54+0000\n"
-"PO-Revision-Date: 2011-06-13 18:16+0100\n"
+"PO-Revision-Date: 2011-06-14 21:10+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: PostgreSQLfr <pgsql-fr-generale@postgresql.org>\n"
 "Language: \n"
@@ -43,6 +43,8 @@ msgid ""
 "\n"
 "%s: -w option is not supported when starting a pre-9.1 server\n"
 msgstr ""
+"\n"
+"%s : l'option -w n'est pas supportée lors du démarrage d'un serveur pré-9.1\n"
 
 #: pg_ctl.c:540
 #, c-format
@@ -50,6 +52,9 @@ msgid ""
 "\n"
 "%s: -w option cannot use a relative socket directory specification\n"
 msgstr ""
+"\n"
+"%s : l'option -w ne peut pas utiliser un chemin relatif vers le répertoire de\n"
+"la socket\n"
 
 #: pg_ctl.c:588
 #, c-format
@@ -57,6 +62,8 @@ msgid ""
 "\n"
 "%s: this data directory appears to be running a pre-existing postmaster\n"
 msgstr ""
+"\n"
+"%s : ce répertoire des données semble être utilisé par un postmaster déjà existant\n"
 
 #: pg_ctl.c:638
 #, c-format
@@ -131,7 +138,7 @@ msgstr "serveur démarré\n"
 #: pg_ctl.c:823
 #: pg_ctl.c:827
 msgid " stopped waiting\n"
-msgstr ""
+msgstr " attente arrêtée\n"
 
 #: pg_ctl.c:824
 msgid "server is still starting up\n"
@@ -153,9 +160,9 @@ msgid " failed\n"
 msgstr " a échoué\n"
 
 #: pg_ctl.c:835
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not wait for server because of misconfiguration\n"
-msgstr "autovacuum non exécuté à cause d'une mauvaise configuration"
+msgstr "%s : n'a pas pu attendre le serveur à cause d'une mauvaise configuration\n"
 
 #: pg_ctl.c:841
 msgid "server starting\n"
@@ -221,6 +228,8 @@ msgid ""
 "HINT: The \"-m fast\" option immediately disconnects sessions rather than\n"
 "waiting for session-initiated disconnection.\n"
 msgstr ""
+"ASTUCE : l'option « -m fast » déconnecte immédiatement les sessions plutôt que\n"
+"d'attendre la déconnexion des sessions déjà présentes.\n"
 
 #: pg_ctl.c:922
 #: pg_ctl.c:1012
@@ -266,38 +275,36 @@ msgid "server signaled\n"
 msgstr "envoi d'un signal au serveur\n"
 
 #: pg_ctl.c:1079
-#, fuzzy, c-format
+#, c-format
 msgid "%s: cannot promote server; single-user server is running (PID: %ld)\n"
 msgstr ""
-"%s : ne peut pas recharger le serveur ; le serveur mono-utilisateur est en\n"
+"%s : ne peut pas promouvoir le serveur ; le serveur mono-utilisateur est en\n"
 "cours d'exécution (PID : %ld)\n"
 
 #: pg_ctl.c:1088
-#, fuzzy, c-format
+#, c-format
 msgid "%s: cannot promote server; server is not in standby mode\n"
-msgstr ""
-"%s : ne peut pas recharger le serveur ; le serveur mono-utilisateur est en\n"
-"cours d'exécution (PID : %ld)\n"
+msgstr "%s : ne peut pas promouvoir le serveur ; le serveur n'est pas en standby\n"
 
 #: pg_ctl.c:1096
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not create promote signal file \"%s\": %s\n"
-msgstr "%s : n'a pas pu écrire le fichier PID externe « %s » : %s\n"
+msgstr "%s : n'a pas pu créer le fichier « %s » signalant la promotion : %s\n"
 
 #: pg_ctl.c:1102
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not write promote signal file \"%s\": %s\n"
-msgstr "%s : n'a pas pu écrire le fichier PID externe « %s » : %s\n"
+msgstr "%s : n'a pas pu écrire le fichier « %s » signalant la promotion : %s\n"
 
 #: pg_ctl.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not send promote signal (PID: %ld): %s\n"
-msgstr "%s : n'a pas pu envoyer le signal de rechargement (PID : %ld) : %s\n"
+msgstr "%s : n'a pas pu envoyer le signal de promotion (PID : %ld) : %s\n"
 
 #: pg_ctl.c:1113
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not remove promote signal file \"%s\": %s\n"
-msgstr "%s : n'a pas pu ouvrir le fichier « %s » : %s\n"
+msgstr "%s : n'a pas pu supprimer le fichier « %s » signalant la promotion : %s\n"
 
 #: pg_ctl.c:1118
 msgid "server promoting\n"
@@ -392,6 +399,9 @@ msgid ""
 "%s is a utility to initialize, start, stop, or control a PostgreSQL server.\n"
 "\n"
 msgstr ""
+"%s est un outil pour initialiser, démarrer, arrêter et contrôler un serveur\n"
+"PostgreSQL.\n"
+"\n"
 
 #: pg_ctl.c:1747
 #, c-format
@@ -435,9 +445,9 @@ msgid "  %s status  [-D DATADIR]\n"
 msgstr "  %s status     [-D RÉP_DONNÉES]\n"
 
 #: pg_ctl.c:1755
-#, fuzzy, c-format
+#, c-format
 msgid "  %s promote [-D DATADIR] [-s]\n"
-msgstr "  %s reload     [-D RÉP_DONNÉES] [-s]\n"
+msgstr "  %s promote    [-D RÉP_DONNÉES] [-s]\n"
 
 #: pg_ctl.c:1756
 #, c-format
@@ -445,13 +455,13 @@ msgid "  %s kill    SIGNALNAME PID\n"
 msgstr "  %s kill       SIGNAL ID_PROCESSUS\n"
 
 #: pg_ctl.c:1758
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  %s register   [-N SERVICENAME] [-U USERNAME] [-P PASSWORD] [-D DATADIR]\n"
 "                    [-S START-TYPE] [-w] [-t SECS] [-o \"OPTIONS\"]\n"
 msgstr ""
 "  %s register   [-N NOM_SERVICE] [-U NOM_UTILISATEUR] [-P MOTDEPASSE]\n"
-"                [-D RÉP_DONNÉES] [-w] [-t SECS] [-o \"OPTIONS\"]\n"
+"                [-D RÉP_DONNÉES] [-S TYPE_DÉMARRAGE] [-w] [-t SECS] [-o \"OPTIONS\"]\n"
 
 #: pg_ctl.c:1760
 #, c-format
@@ -642,10 +652,10 @@ msgstr ""
 "                           l'enregistrement du serveur PostgreSQL\n"
 
 #: pg_ctl.c:1800
-#, fuzzy, c-format
+#, c-format
 msgid "  -S START-TYPE   service start type to register PostgreSQL server\n"
 msgstr ""
-"  -N NOM_SERVICE           nom du service utilisé pour l'enregistrement du\n"
+"  -S TYPE_DÉMARRAGE        type de démarrage du service pour enregistrer le\n"
 "                           serveur PostgreSQL\n"
 
 #: pg_ctl.c:1802
@@ -661,11 +671,13 @@ msgstr ""
 #, c-format
 msgid "  auto       start service automatically during system startup (default)\n"
 msgstr ""
+"  auto       démarre le service automatiquement lors du démarrage du système\n"
+"             (par défaut)\n"
 
 #: pg_ctl.c:1804
 #, c-format
 msgid "  demand     start service on demand\n"
-msgstr ""
+msgstr "  demand     démarre le service à la demande\n"
 
 #: pg_ctl.c:1807
 #, c-format
