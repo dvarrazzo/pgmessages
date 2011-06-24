@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-06-10 23:07+0000\n"
-"PO-Revision-Date: 2011-06-13 17:36+0100\n"
+"POT-Creation-Date: 2011-06-24 01:21+0000\n"
+"PO-Revision-Date: 2011-06-24 20:05+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "Language: fr\n"
@@ -3125,7 +3125,7 @@ msgid "tablespace \"%s\" does not exist"
 msgstr "le tablespace « %s » n'existe pas"
 
 #: catalog/aclchk.c:672
-#: commands/analyze.c:272
+#: commands/analyze.c:271
 #: commands/comment.c:579
 #: commands/copy.c:3404
 #: commands/sequence.c:1317
@@ -4334,12 +4334,18 @@ msgstr[0] "%d objet dans %s"
 msgstr[1] "%d objets dans %s"
 
 #: catalog/pg_shdepend.c:1165
-#: catalog/pg_shdepend.c:1295
 #, c-format
 msgid "cannot drop objects owned by %s because they are required by the database system"
 msgstr ""
 "n'a pas pu supprimer les objets appartenant à %s car ils sont nécessaires au\n"
 "système de bases de données"
+
+#: catalog/pg_shdepend.c:1295
+#, c-format
+msgid "cannot reassign ownership of objects owned by %s because they are required by the database system"
+msgstr ""
+"n'a pas pu réaffecter le propriétaire des objets appartenant à %s car ils\n"
+"sont nécessaires au système de bases de données"
 
 #: catalog/pg_type.c:224
 #, c-format
@@ -4449,41 +4455,41 @@ msgstr "L'agrégat %s(%s) n'existe pas, poursuite du traitement"
 msgid "function %s already exists in schema \"%s\""
 msgstr "la fonction %s existe déjà dans le schéma « %s »"
 
-#: commands/analyze.c:173
+#: commands/analyze.c:172
 #, c-format
 msgid "skipping \"%s\" --- only superuser can analyze it"
 msgstr "ignore « %s » --- seul le super-utilisateur peut l'analyser"
 
-#: commands/analyze.c:177
+#: commands/analyze.c:176
 #, c-format
 msgid "skipping \"%s\" --- only superuser or database owner can analyze it"
 msgstr ""
 "ignore « %s » --- seul le super-utilisateur ou le propriétaire de la base de\n"
 "données peut l'analyser"
 
-#: commands/analyze.c:181
+#: commands/analyze.c:180
 #, c-format
 msgid "skipping \"%s\" --- only table or database owner can analyze it"
 msgstr ""
 "ignore « %s » --- seul le propriétaire de la table ou de la base de données\n"
 "peut l'analyser"
 
-#: commands/analyze.c:197
+#: commands/analyze.c:196
 #, c-format
 msgid "skipping \"%s\" --- cannot analyze indexes, views, or special system tables"
 msgstr "ignore « %s » --- ne peut pas analyser les index, vues ou tables système"
 
-#: commands/analyze.c:225
+#: commands/analyze.c:224
 #, c-format
 msgid "analyzing \"%s.%s\""
 msgstr "analyse « %s.%s »"
 
-#: commands/analyze.c:516
+#: commands/analyze.c:503
 #, c-format
 msgid "automatic analyze of table \"%s.%s.%s\" system usage: %s"
 msgstr "ANALYZE automatique de la table « %s.%s.%s » ; utilisation système : %s"
 
-#: commands/analyze.c:1131
+#: commands/analyze.c:1118
 #, c-format
 msgid "\"%s\": scanned %d of %u pages, containing %.0f live rows and %.0f dead rows; %d rows in sample, %.0f estimated total rows"
 msgstr ""
