@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-06-10 22:56+0000\n"
-"PO-Revision-Date: 2011-06-13 17:39+0100\n"
+"POT-Creation-Date: 2011-06-24 04:46+0000\n"
+"PO-Revision-Date: 2011-06-24 20:05+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "Language: fr\n"
@@ -2815,7 +2815,7 @@ msgid "default privileges cannot be set for columns"
 msgstr "les droits par défaut ne peuvent pas être configurés pour les colonnes"
 
 #: catalog/aclchk.c:1470
-#: commands/analyze.c:330
+#: commands/analyze.c:329
 #: commands/comment.c:651
 #: commands/copy.c:3441
 #: commands/sequence.c:1325
@@ -4091,12 +4091,18 @@ msgstr[0] "%d objet dans %s"
 msgstr[1] "%d objets dans %s"
 
 #: catalog/pg_shdepend.c:1189
-#: catalog/pg_shdepend.c:1285
 #, c-format
 msgid "cannot drop objects owned by %s because they are required by the database system"
 msgstr ""
 "n'a pas pu supprimer les objets appartenant à %s car ils sont nécessaires au\n"
 "système de bases de données"
+
+#: catalog/pg_shdepend.c:1285
+#, c-format
+msgid "cannot reassign ownership of objects owned by %s because they are required by the database system"
+msgstr ""
+"n'a pas pu réaffecter le propriétaire des objets appartenant à %s car ils\n"
+"sont nécessaires au système de bases de données"
 
 #: catalog/pg_type.c:231
 #, c-format
@@ -4230,22 +4236,22 @@ msgstr ""
 msgid "skipping \"%s\" --- cannot analyze indexes, views, or special system tables"
 msgstr "ignore « %s » --- ne peut pas analyser les index, vues ou tables système"
 
-#: commands/analyze.c:272
+#: commands/analyze.c:271
 #, c-format
 msgid "analyzing \"%s.%s\" inheritance tree"
 msgstr "analyse l'arbre d'héritage « %s.%s »"
 
-#: commands/analyze.c:277
+#: commands/analyze.c:276
 #, c-format
 msgid "analyzing \"%s.%s\""
 msgstr "analyse « %s.%s »"
 
-#: commands/analyze.c:597
+#: commands/analyze.c:584
 #, c-format
 msgid "automatic analyze of table \"%s.%s.%s\" system usage: %s"
 msgstr "ANALYZE automatique de la table « %s.%s.%s » ; utilisation système : %s"
 
-#: commands/analyze.c:1238
+#: commands/analyze.c:1225
 #, c-format
 msgid "\"%s\": scanned %d of %u pages, containing %.0f live rows and %.0f dead rows; %d rows in sample, %.0f estimated total rows"
 msgstr ""
@@ -4254,7 +4260,7 @@ msgstr ""
 "  %d lignes dans l'échantillon,\n"
 "  %.0f lignes totales estimées"
 
-#: commands/analyze.c:1499
+#: commands/analyze.c:1486
 #: executor/execQual.c:2735
 msgid "could not convert row type"
 msgstr "n'a pas pu convertir le type de ligne"
