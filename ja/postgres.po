@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 9.1 beta 2\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2011-06-15 21:32+0900\n"
-"PO-Revision-Date: 2011-06-16 22:36+0900\n"
+"PO-Revision-Date: 2011-06-29 06:12+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
 "MIME-Version: 1.0\n"
@@ -376,7 +376,7 @@ msgstr "修復するには REINDEX INDEX \"%s\" をおこなってください"
 #, c-format
 msgid "index row size %lu exceeds maximum %lu for index \"%s\""
 msgstr ""
-"インデックス \"%3$s\" でインデックス行のサイズ %l1$u が最大値 %l2$u を"
+"インデックス \"%3$s\" でインデックス行のサイズ %1$lu が最大値 %2$lu を"
 "超えています"
 
 #: access/index/indexam.c:161 catalog/objectaddress.c:391
@@ -1514,7 +1514,7 @@ msgstr "ポイント %X/%X でリカバリを再開します"
 #: access/transam/xlog.c:8276
 #, c-format
 msgid "restore point \"%s\" created at %X/%X"
-msgstr "%2$X/%3$X にリストアポイント \"%s\" を書き込みました"
+msgstr "%2$X/%3$X にリストアポイント \"%1$s\" を書き込みました"
 
 #: access/transam/xlog.c:8373
 msgid "online backup was cancelled, recovery cannot continue"
@@ -5291,7 +5291,7 @@ msgid ""
 "ld matches)"
 msgstr ""
 "サーバ \"%2$s\" でフィルタ \"%1$s\" による LDAP 検索に失敗しました：ユーザー"
-"が一意ではありません（%l3$d 個見つかりました）"
+"が一意ではありません（%3$ld 個見つかりました）"
 
 #: libpq/auth.c:2239
 #, c-format
@@ -6992,7 +6992,7 @@ msgstr "演算子族%sに権限がありません"
 #: catalog/aclchk.c:3092
 #, c-format
 msgid "permission denied for collation %s"
-msgstr "照合順序への権限がありません"
+msgstr "照合順序 %s への権限がありません"
 
 #: catalog/aclchk.c:3094
 #, c-format
@@ -9083,7 +9083,7 @@ msgid ""
 "not enough shared memory for elements of data structure \"%s\" (%lu bytes "
 "requested)"
 msgstr "データ構造体 \"%s\" の要素のための共有メモリが不足しています"
-"（ %u バイト必要）"
+"（ %lu バイト必要）"
 
 #: storage/lmgr/predicate.c:1445
 msgid "deferrable snapshot was unsafe; trying a new one"
@@ -15735,10 +15735,10 @@ msgstr ""
 "できます"
 
 #: commands/analyze.c:194
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- cannot analyze non-tables or special system tables"
 msgstr ""
-"\"%s\" をスキップしています --- インデックス、ビュー、特殊なシステムテーブル"
+"\"%s\" をスキップしています --- テーブルでないものや特殊なシステムテーブル"
 "を解析することはできません"
 
 #: commands/analyze.c:286
@@ -15817,19 +15817,19 @@ msgid "clustering \"%s.%s\" using sequential scan and sort"
 msgstr ""
 
 #: commands/cluster.c:1050
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
-msgstr ""
-"\"%1$s\": 全 %5$u ページ中の %4$u ページで見つかった行バージョン：移動可能 %2"
-"$.0f 行、削除不可 %3$.0f 行"
+msgstr "\"%1$s\": 全 %4$u ページ中に見つかった行バージョン"
+"：移動可能 %2$.0f 行、削除不可 %3$.0f 行"
 
 #: commands/cluster.c:1054
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
 "%s."
-msgstr ""
+msgstr "%.0f 個の無効な行を今はまだ削除できません。\n"
+"%s."
 
 #: commands/portalcmds.c:61 commands/portalcmds.c:160
 #: commands/portalcmds.c:212
@@ -16065,9 +16065,9 @@ msgid "array data types are not binary-compatible"
 msgstr "配列データ型はバイナリ互換ではありません"
 
 #: commands/functioncmds.c:1679
-#, fuzzy
+#, 
 msgid "domain data types must not be marked binary-compatible"
-msgstr "複合データ型はバイナリ互換ではありません"
+msgstr "ドメインデータ型はバイナリ互換としてマークされていてはなりません"
 
 #: commands/functioncmds.c:1689
 msgid "source data type and target data type are the same"
@@ -16291,204 +16291,211 @@ msgid "invalid parameter list format: \"%s\""
 msgstr "無効なパラメータリストの書式です: \"%s\""
 
 #: commands/extension.c:147 commands/extension.c:2431
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" does not exist"
-msgstr "リレーション\"%s\"は存在しません"
+msgstr "拡張機能 \"%s\" は存在しません"
 
 #: commands/extension.c:246 commands/extension.c:255 commands/extension.c:267
 #: commands/extension.c:277
-#, fuzzy, c-format
+#, c-format
 msgid "invalid extension name: \"%s\""
-msgstr "時間帯名称が無効です: \"%s\""
+msgstr "拡張機能名が無効です: \"%s\""
 
 #: commands/extension.c:247
-#, fuzzy
+#, 
 msgid "Extension names must not be empty."
-msgstr "カーソル名が無効です: 空ではいけません"
+msgstr "拡張機能名が無効です: 空であってはなりません"
 
 #: commands/extension.c:256
-#, fuzzy
+#, 
 msgid "Extension names must not contain \"--\"."
-msgstr "typmod配列にはNULL値を含めてはいけません"
+msgstr "拡張機能名に \"--\" が含まれていてはなりません"
 
 #: commands/extension.c:268
 msgid "Extension names must not begin or end with \"-\"."
-msgstr ""
+msgstr "拡張機能名が \"-\" で始まったり終わったりしてはなりません"
 
 #: commands/extension.c:278
 msgid "Extension names must not contain directory separator characters."
-msgstr ""
+msgstr "拡張機能名にディレクトリの区切り文字が含まれていてはなりません"
 
 #: commands/extension.c:293 commands/extension.c:302 commands/extension.c:311
 #: commands/extension.c:321
-#, fuzzy, c-format
+#, c-format
 msgid "invalid extension version name: \"%s\""
-msgstr "変換先符号化方式が無効です: \"%s\""
+msgstr "拡張機能のバージョン名が無効です: \"%s\""
 
 #: commands/extension.c:294
-#, fuzzy
+#, 
 msgid "Version names must not be empty."
-msgstr "カーソル名が無効です: 空ではいけません"
+msgstr "バージョン名が無効です: 空であってはなりません"
 
 #: commands/extension.c:303
-#, fuzzy
+#, 
 msgid "Version names must not contain \"--\"."
-msgstr "XML処理命令には\"?>\"を含めることはできません。"
+msgstr "バージョン名に \"--\" が含まれていてはなりません"
 
 #: commands/extension.c:312
 msgid "Version names must not begin or end with \"-\"."
-msgstr ""
+msgstr "バージョン名が\"-\" で始まったり終わったりしてはなりません"
 
 #: commands/extension.c:322
 msgid "Version names must not contain directory separator characters."
-msgstr ""
+msgstr "バージョン名にディレクトリの区切り文字が含まれていてはなりません"
 
 #: commands/extension.c:472
-#, fuzzy, c-format
+#, c-format
 msgid "could not open extension control file \"%s\": %m"
-msgstr "制御ファイル\"%s\"をオープンできませんでした: %m"
+msgstr "拡張機能の制御ファイル \"%s\" をオープンできませんでした: %m"
 
 #: commands/extension.c:493 commands/extension.c:503
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" cannot be set in a secondary extension control file"
-msgstr "接続開始後にパラメータ\"%s\"を変更できません"
+msgstr "セカンダリの拡張機能制御ファイルにパラメータ \"%s\" を設定できません"
 
 #: commands/extension.c:542
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a valid encoding name"
-msgstr "%sは有効な符号化方式名ではありません"
+msgstr "\"%s\" は有効な符号化方式名ではありません"
 
 #: commands/extension.c:556
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" must be a list of extension names"
-msgstr "オプション \"%s\" の引数は列名の並びでなければなりません"
+msgstr "パラメータ \"%s\" は拡張機能名のリストでなければなりません"
 
 #: commands/extension.c:563
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized parameter \"%s\" in file \"%s\""
-msgstr "未知のパラメータ \"%s\""
+msgstr "ファイル \"%2$s\" 中に認識できないパラメータ \"%1$s\" があります"
 
 #: commands/extension.c:572
-#, fuzzy
+#, 
 msgid "parameter \"schema\" cannot be specified when \"relocatable\" is true"
-msgstr "接続開始後にパラメータ\"%s\"を変更できません"
+msgstr "\"relocatable\" が真の場合はパラメータ \"schema\" は指定できません"
 
 #: commands/extension.c:724
 msgid ""
 "transaction control statements are not allowed within an extension script"
-msgstr ""
+msgstr "トランザクション制御ステートメントを拡張機能スクリプトの中に"
+"書くことはできません"
 
 #: commands/extension.c:794
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied to create extension \"%s\""
-msgstr "テーブル空間\"%s\"を作成する権限がありません"
+msgstr "拡張機能 \"%s\" を作成する権限がありません"
 
 #: commands/extension.c:796
-#, fuzzy
+#, 
 msgid "Must be superuser to create this extension."
-msgstr "テーブル空間を作成するにはスーパーユーザでなければなりません"
+msgstr "この拡張機能を作成するにはスーパーユーザでなければなりません"
 
 #: commands/extension.c:800
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied to update extension \"%s\""
-msgstr "テーブル空間\"%s\"を作成する権限がありません"
+msgstr "拡張機能 \"%s\" を更新する権限がありません"
 
 #: commands/extension.c:802
-#, fuzzy
+#, 
 msgid "Must be superuser to update this extension."
-msgstr "テーブル空間を作成するにはスーパーユーザでなければなりません"
+msgstr "この拡張機能を更新するにはスーパーユーザでなければなりません"
 
 #: commands/extension.c:1082
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "extension \"%s\" has no update path from version \"%s\" to version \"%s\""
-msgstr "リレーション\"%s\"はリレーション\"%s\"の親ではありません"
+msgstr "拡張機能 \"%s\" について、バージョン \"%s\" から"
+"バージョン \"%s\" へのアップデートパスがありません"
 
 #: commands/extension.c:1209
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" already exists, skipping"
-msgstr "リレーション\"%s\"はすでに存在します"
+msgstr "拡張機能 \"%s\" はすでに存在します。スキップしています"
 
 #: commands/extension.c:1216
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" already exists"
-msgstr "リレーション\"%s\"はすでに存在します"
+msgstr "拡張機能 \"%s\" はすでに存在します"
 
 #: commands/extension.c:1227
-#, fuzzy
+#, 
 msgid "nested CREATE EXTENSION is not supported"
-msgstr "LOCATIONはもはやサポートされません"
+msgstr "入れ子の CREATE EXTENSION はサポートされません"
 
 #: commands/extension.c:1282 commands/extension.c:2491
-#, fuzzy
+#, 
 msgid "version to install must be specified"
-msgstr "ホスト名を指定しなければなりません\n"
+msgstr "インストールするバージョンを指定しなければなりません"
 
 #: commands/extension.c:1299
 #, c-format
 msgid "FROM version must be different from installation target version \"%s\""
-msgstr ""
+msgstr "FROM のバージョンはターゲットのバージョン \"%s\" と異なって"
+"いなければなりません"
 
 #: commands/extension.c:1354
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" must be installed in schema \"%s\""
-msgstr "リレーション\"%s\"はスキーマ\"%s\"内にすでに存在します"
+msgstr ""
+"拡張機能 \"%s\" はスキーマ \"%s\" 内にインストールされていなければなりません"
 
 #: commands/extension.c:1424 commands/extension.c:2632
-#, fuzzy, c-format
+#, c-format
 msgid "required extension \"%s\" is not installed"
-msgstr "参照先のリレーション\"%s\"はテーブルではありません"
+msgstr "要求された拡張機能　\"%s\" はインストールされていません"
 
 #: commands/extension.c:1593
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" does not exist, skipping"
-msgstr "変換\"%sは存在しません。省略します"
+msgstr "拡張機能　\"%s\" は存在しません。スキップしています"
 
 #: commands/extension.c:2101
 msgid ""
 "pg_extension_config_dump() can only be called from a SQL script executed by "
 "CREATE EXTENSION"
 msgstr ""
+"pg_extension_config_dump() は CREATE EXTENSION により実行される SQL "
+"スクリプトからのみコールできます"
 
 #: commands/extension.c:2113
 #, c-format
 msgid "OID %u does not refer to a table"
-msgstr ""
+msgstr "OID %u がテーブルを参照していません"
 
 #: commands/extension.c:2118
-#, fuzzy, c-format
+#, c-format
 msgid "table \"%s\" is not a member of the extension being created"
-msgstr "ロール\"%s\"はロール\"%s\"のメンバではありません"
+msgstr "テーブル \"%s\" は生成されようとしている拡張機能のメンバではありません"
 
 #: commands/extension.c:2301 commands/extension.c:2360
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" does not support SET SCHEMA"
-msgstr "アクセスメソッド\"%s\"はASC/DESCオプションをサポートしません"
+msgstr "拡張機能 \"%s\" は SET SCHEMAをサポートしていません"
 
 #: commands/extension.c:2362
-#, fuzzy, c-format
+#, c-format
 msgid "%s is not in the extension's schema \"%s\""
-msgstr "\"%s\" という名前の拡張が見つかりません。\n"
+msgstr "拡張機能のスキーマ \"%2$s\" に %1$s が見つかりません"
 
 #: commands/extension.c:2411
-#, fuzzy
+#, 
 msgid "nested ALTER EXTENSION is not supported"
-msgstr "COPY (SELECT INTO)はサポートされていません"
+msgstr "入れ子になった ALTER EXTENSION はサポートされていません"
 
 #: commands/extension.c:2502
-#, fuzzy, c-format
+#, c-format
 msgid "version \"%s\" of extension \"%s\" is already installed"
-msgstr "リレーション\"%2$s\"の列\"%1$s\"はすでに存在します"
+msgstr ""
+"拡張機能 \"%2$s\" のバージョン \"%1$s\" はすでにインストールされています"
 
 #: commands/extension.c:2725
-#, fuzzy, c-format
+#, c-format
 msgid "%s is already a member of extension \"%s\""
-msgstr "ロール\"%s\"はすでにロール\"%s\"のメンバです"
+msgstr "%s はすでに拡張機能 \"%s\" のメンバです"
 
 #: commands/extension.c:2742
-#, fuzzy, c-format
+#, c-format
 msgid "%s is not a member of extension \"%s\""
-msgstr "ロール\"%s\"はロール\"%s\"のメンバではありません"
+msgstr "%s は拡張機能 \"%s\" のメンバではありません"
 
 #: commands/proclang.c:93
 msgid "using pg_pltemplate information instead of CREATE LANGUAGE parameters"
@@ -16646,9 +16653,10 @@ msgid "directory \"%s\" does not exist"
 msgstr "ディレクトリ \"%s\" は存在しません"
 
 #: commands/tablespace.c:561
-#, fuzzy
+#, 
 msgid "Create this directory for the tablespace before restarting the server."
-msgstr "パラメータ \"%s\" を変更するにはサーバーの再起動が必要です"
+msgstr ""
+"サーバを再起動する前にテーブルスペース用のディレクトリを作成してください"
 
 #: commands/tablespace.c:566
 #, c-format
@@ -16686,36 +16694,36 @@ msgid "could not remove directory \"%s\": %m"
 msgstr "ディレクトリ\"%s\"を削除できませんでした: %m"
 
 #: commands/tablespace.c:1039
-#, fuzzy, c-format
+#, c-format
 msgid "Tablespace \"%s\" does not exist."
-msgstr "テーブル空間\"%s\"は存在しません"
+msgstr "テーブル空間 \"%s\" は存在しません"
 
 #: commands/tablespace.c:1450
 #, c-format
 msgid "tablespace %u is not empty"
-msgstr "テーブル空間%uは空ではありません"
+msgstr "テーブル空間 %u は空ではありません"
 
 #: commands/trigger.c:166
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is a table"
-msgstr "\"%s\"はテーブルではありません"
+msgstr "\"%s\" はテーブルではありません"
 
 #: commands/trigger.c:168
 msgid "Tables cannot have INSTEAD OF triggers."
-msgstr ""
+msgstr "テーブルは INSTEAD OF トリガーを持つことができません"
 
 #: commands/trigger.c:179 commands/trigger.c:186
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is a view"
-msgstr "\"%s\"はビューではありません"
+msgstr "\"%s\" はビューです"
 
 #: commands/trigger.c:181
 msgid "Views cannot have row-level BEFORE or AFTER triggers."
-msgstr ""
+msgstr "ビューは行レベルの BEFORE / AFTER トリガーを持つことができません"
 
 #: commands/trigger.c:188
 msgid "Views cannot have TRUNCATE triggers."
-msgstr ""
+msgstr "ビューは TRUNCATE トリガーを持つことができません"
 
 #: commands/trigger.c:235
 msgid "TRUNCATE FOR EACH ROW triggers are not supported"
@@ -16723,16 +16731,16 @@ msgstr "TRUNCATE FOR EACH ROW トリガーはサポートされていません"
 
 #: commands/trigger.c:243
 msgid "INSTEAD OF triggers must be FOR EACH ROW"
-msgstr ""
+msgstr "INSTEAD OF トリガーは FOR EACH ROW でなければなりません"
 
 #: commands/trigger.c:247
 msgid "INSTEAD OF triggers cannot have WHEN conditions"
-msgstr ""
+msgstr "INSTEAD OF トリガーは WHEN 条件を持つことができません"
 
 #: commands/trigger.c:251
-#, fuzzy
+#, 
 msgid "INSTEAD OF triggers cannot have column lists"
-msgstr "トリガー関数には引数を宣言できません"
+msgstr "INSTEAD OF トリガーは列リストを持つことができません"
 
 #: commands/trigger.c:295
 msgid "cannot use subquery in trigger WHEN condition"
@@ -16849,9 +16857,9 @@ msgid "must be superuser to create superusers"
 msgstr "スーパーユーザを作成するにはスーパーユーザでなければなりません"
 
 #: commands/user.c:291
-#, fuzzy
+#, 
 msgid "must be superuser to create replication users"
-msgstr "スーパーユーザを作成するにはスーパーユーザでなければなりません"
+msgstr "レプリケーションユーザを作成するにはスーパーユーザでなければなりません"
 
 #: commands/user.c:298
 msgid "permission denied to create role"
@@ -16873,9 +16881,9 @@ msgid "must be superuser to alter superusers"
 msgstr "スーパーユーザを変更するにはスーパーユーザでなければなりません"
 
 #: commands/user.c:643
-#, fuzzy
+#, 
 msgid "must be superuser to alter replication users"
-msgstr "スーパーユーザを変更するにはスーパーユーザでなければなりません"
+msgstr "レプリケーションユーザを変更するにはスーパーユーザでなければなりません"
 
 #: commands/user.c:659 commands/user.c:850
 msgid "permission denied"
@@ -17016,9 +17024,9 @@ msgid "argument to option \"%s\" must be a list of column names"
 msgstr "オプション \"%s\" の引数は列名の並びでなければなりません"
 
 #: commands/copy.c:964
-#, fuzzy, c-format
+#, c-format
 msgid "argument to option \"%s\" must be a valid encoding name"
-msgstr "オプション \"%s\" の引数は列名の並びでなければなりません"
+msgstr "オプション \"%s\" の引数は有効なエンコーディング名でなければなりません"
 
 #: commands/copy.c:970
 #, c-format
@@ -17131,9 +17139,9 @@ msgid "Try the COPY (SELECT ...) TO variant."
 msgstr "COPY (SELECT ...) TO構文を試してください"
 
 #: commands/copy.c:1362
-#, fuzzy, c-format
+#, c-format
 msgid "cannot copy from foreign table \"%s\""
-msgstr "ビュー\"%s\"からのコピーはできません"
+msgstr "外部テーブル \"%s\" からのコピーはできません"
 
 #: commands/copy.c:1368
 #, c-format
@@ -17190,9 +17198,9 @@ msgid "cannot copy to view \"%s\""
 msgstr "ビュー\"%s\"へのコピーはできません"
 
 #: commands/copy.c:1862
-#, fuzzy, c-format
+#, c-format
 msgid "cannot copy to foreign table \"%s\""
-msgstr "ビュー\"%s\"へのコピーはできません"
+msgstr "外部テーブル \"%s\" へのコピーはできません"
 
 #: commands/copy.c:1867
 #, c-format
@@ -17320,9 +17328,9 @@ msgid "cannot use more than %d columns in an index"
 msgstr "インデックスには%dを超える列を使用できません"
 
 #: commands/indexcmds.c:195
-#, fuzzy, c-format
+#, c-format
 msgid "cannot create index on foreign table \"%s\""
-msgstr "\"%s\"はテーブル\"%s\"のインデックスではありません"
+msgstr "外部テーブル \"%s\" のインデックスを作成できません"
 
 #: commands/indexcmds.c:210
 msgid "cannot create indexes on temporary tables of other sessions"
@@ -17377,9 +17385,9 @@ msgid "functions in index expression must be marked IMMUTABLE"
 msgstr "式インデックスの関数はIMMUTABLEマークが必要です"
 
 #: commands/indexcmds.c:930
-#, fuzzy
+#, 
 msgid "could not determine which collation to use for index expression"
-msgstr "レコードを返す関数についての説明の行を決定できませんでした"
+msgstr "インデックス式で使用する照合順序を決定できませんでした"
 
 #: commands/indexcmds.c:976
 #, c-format
@@ -17876,9 +17884,9 @@ msgid ""
 msgstr "テーブル\"%2$s\"の列\"%1$s\"に新しい制約に違反する値があります"
 
 #: commands/typecmds.c:2286
-#, fuzzy, c-format
+#, c-format
 msgid "%s is not a domain"
-msgstr "\"%s\"はドメインではありません"
+msgstr "%s はドメインではありません"
 
 #: commands/typecmds.c:2368 commands/typecmds.c:2377
 msgid "cannot use table references in domain check constraint"
@@ -17919,10 +17927,9 @@ msgid "could not obtain lock on relation with OID %u"
 msgstr "OID %u のリレーションに対するロックを獲得できませんでした"
 
 #: commands/view.c:143
-#, fuzzy, c-format
+#, c-format
 msgid "could not determine which collation to use for view column \"%s\""
-msgstr ""
-"関数 \"%s\" が多様な形を持つため、実際の戻り値の型を特定できませんでした"
+msgstr "ビューの列 \"%s\" で使用する照合順序を決定できませんでした"
 
 #: commands/view.c:158
 msgid "view must have at least one column"
@@ -17943,13 +17950,14 @@ msgid "cannot change data type of view column \"%s\" from %s to %s"
 msgstr "ビューのカラム \"%s\" のデータ型を %s から %s に変更できません"
 
 #: commands/view.c:447
-#, fuzzy
+#, 
 msgid "views must not contain SELECT INTO"
-msgstr "副問い合わせでは SELECT INTO を使用できません"
+msgstr "ビューでは SELECT INTO を使用できません"
 
 #: commands/view.c:451
 msgid "views must not contain data-modifying statements in WITH"
 msgstr ""
+"ビューでは WITH 句にデータを変更するステートメントを含むことはできません"
 
 #: commands/view.c:479
 msgid "CREATE VIEW specifies more column names than columns"
@@ -17962,7 +17970,7 @@ msgstr "ビュー\"%s\"は一時ビューとなります"
 
 #: commands/view.c:504
 msgid "views cannot be unlogged because they do not have storage"
-msgstr ""
+msgstr "ビューはそれ用の格納領域を持たないので、ログを取らないのは許されません"
 
 #: lib/stringinfo.c:267
 #, c-format
@@ -18001,6 +18009,8 @@ msgid ""
 "WITH query name \"%s\" appears in both a rule action and the query being "
 "rewritten"
 msgstr ""
+"WITH のクエリー名 \"%s\" が、ルールのアクションと書き換えられようとしている"
+"クエリーの両方に現れています"
 
 #: rewrite/rewriteHandler.c:543
 msgid "cannot have RETURNING lists in multiple rules"
@@ -18261,9 +18271,9 @@ msgid "could not set junction for \"%s\": %s\n"
 msgstr "\"%s\"の接合を設定できませんでした: %s\n"
 
 #: ../port/dirmod.c:358
-#, fuzzy, c-format
+#, c-format
 msgid "could not get junction for \"%s\": %s"
-msgstr "\"%s\"のjunctionを入手できませんでした:  %s\n"
+msgstr "\"%s\" の分岐点 (junction) を取得できませんでした:  %s"
 
 #: ../port/dirmod.c:361
 #, c-format
