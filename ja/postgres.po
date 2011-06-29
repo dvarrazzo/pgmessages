@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 9.1 beta 2\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2011-06-15 21:32+0900\n"
-"PO-Revision-Date: 2011-06-29 06:12+0900\n"
+"PO-Revision-Date: 2011-06-29 23:47+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
 "MIME-Version: 1.0\n"
@@ -192,7 +192,7 @@ msgstr "いくつかの計画型を禁止します\n"
 #, c-format
 msgid ""
 "  -n              do not reinitialize shared memory after abnormal exit\n"
-msgstr "  -n              異常終了後に共有メモリの初期化を行いません\n"
+msgstr "  -n              異常終了後に共有メモリの再初期化を行いません\n"
 
 #: main/main.c:309
 #, c-format
@@ -358,7 +358,7 @@ msgstr "正規表現の際にどの照合規則を使うべきかを決定でき
 #: utils/adt/selfuncs.c:4853 utils/adt/selfuncs.c:4970
 #: commands/indexcmds.c:931 commands/view.c:145
 msgid "Use the COLLATE clause to set the collation explicitly."
-msgstr ""
+msgstr "照合順序を明示するには COLLATE 句を使います"
 
 #: access/gin/ginscan.c:401
 #,
@@ -567,7 +567,7 @@ msgstr "WAL ディレクトリ\"%s\"は存在しません"
 #: access/transam/xlog.c:3498
 #, c-format
 msgid "creating missing WAL directory \"%s\""
-msgstr "WAL ディレクトリ%sを作成しています ... "
+msgstr "見つからなかった WAL ディレクトリ \"%s\" を作成しています ... "
 
 #: access/transam/xlog.c:3501
 #, c-format
@@ -1407,6 +1407,9 @@ msgid ""
 "Online backup started with pg_start_backup() must be ended with "
 "pg_stop_backup(), and all WAL up to that point must be available at recovery."
 msgstr ""
+"pg_start_backup() を使ったオンラインバックアップは pg_stop_backup() で"
+"終了する必要があり、またその時点までのすべての WAL はリカバリにおいて"
+"利用可能でなければなりません"
 
 #: access/transam/xlog.c:6677
 msgid "WAL ends before consistent recovery point"
@@ -2101,7 +2104,7 @@ msgid ""
 "indexing."
 msgstr ""
 "バッファページの1/3を超える値をインデックスすることができません。\n"
-"値のMD5ハッシュへのインデックスを行う関数インデックスを検討してください。\n"
+"値のMD5ハッシュへのインデックスを行う関数インデックスを検討するか、"
 "もしくは全文テキストインデックスを使用してください。"
 
 #: access/heap/rewriteheap.c:597 access/heap/hio.c:175
@@ -2738,11 +2741,11 @@ msgstr "行の集合を返す関数はNULL値を返すことはできません"
 
 #: executor/execQual.c:2144
 msgid "rows returned by function are not all of the same row type"
-msgstr ""
+msgstr "関数から戻された行はすべてが同じ行型ではありません"
 
 #: executor/execQual.c:2335
 msgid "IS DISTINCT FROM does not support set arguments"
-msgstr "IS DISTINCT FROM<は集合引数をサポートしません"
+msgstr "IS DISTINCT FROM は集合引数をサポートしません"
 
 #: executor/execQual.c:2412
 msgid "op ANY/ALL (array) does not support set arguments"
@@ -3174,7 +3177,7 @@ msgstr "テーブル\"%s\"に複数のプライマリキーを持たせること
 
 #: parser/parse_utilcmd.c:1438
 msgid "cannot use an existing index in CREATE TABLE"
-msgstr ""
+msgstr "CREATE TABLE では既存のインデックスを使えません"
 
 #: parser/parse_utilcmd.c:1447 commands/tablecmds.c:218
 #, c-format
@@ -3184,7 +3187,7 @@ msgstr "インデックス\"%s\"は存在しません"
 #: parser/parse_utilcmd.c:1458
 #, c-format
 msgid "index \"%s\" is already associated with a constraint"
-msgstr ""
+msgstr "インデックス \"%s\" はすでに１つの制約に割り当てられれいます"
 
 #: parser/parse_utilcmd.c:1466
 #, c-format
@@ -3209,7 +3212,7 @@ msgstr "\"%s\"はユニークインデックスではありません"
 #: parser/parse_utilcmd.c:1486 parser/parse_utilcmd.c:1493
 #: parser/parse_utilcmd.c:1500 parser/parse_utilcmd.c:1570
 msgid "Cannot create a PRIMARY KEY or UNIQUE constraint using such an index."
-msgstr ""
+msgstr "そのようなインデックスを使って"
 
 #: parser/parse_utilcmd.c:1492
 #, c-format
@@ -3307,11 +3310,11 @@ msgstr "ON DELETEルールではNEWを使用できません"
 
 #: parser/parse_utilcmd.c:2156
 msgid "cannot refer to OLD within WITH query"
-msgstr ""
+msgstr "WITH クエリー内では OLD は参照できません"
 
 #: parser/parse_utilcmd.c:2163
 msgid "cannot refer to NEW within WITH query"
-msgstr ""
+msgstr "WITH クエリー内では NEW は参照できません"
 
 #: parser/parse_utilcmd.c:2446
 msgid "misplaced DEFERRABLE clause"
@@ -3434,7 +3437,7 @@ msgstr "JOIN で指定できるのは、最大 %d カラムです"
 #: parser/parse_relation.c:1405
 #, c-format
 msgid "WITH query \"%s\" does not have a RETURNING clause"
-msgstr ""
+msgstr "WITH クエリー \"%s\" に RETURNING 句がありません"
 
 #: parser/parse_relation.c:2087
 #, c-format
@@ -3878,6 +3881,8 @@ msgid ""
 "The insertion source is a row expression containing the same number of "
 "columns expected by the INSERT. Did you accidentally use extra parentheses?"
 msgstr ""
+"挿入元の行表現に INSERT が期待するのと同じ列数が含まれています。"
+"うっかり余計なカッコをつけたりしませんでしたか？"
 
 #: parser/analyze.c:1084
 msgid "DEFAULT can only appear in a VALUES list within INSERT"
@@ -3960,6 +3965,7 @@ msgstr "DECLARE CURSORではINTOを指定できません"
 #: parser/analyze.c:2193
 msgid "DECLARE CURSOR must not contain data-modifying statements in WITH"
 msgstr ""
+"DECLARE CURSOR では WITH にデータを変更するステートメントを含んではなりません"
 
 #: parser/analyze.c:2199
 msgid "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE is not supported"
@@ -4346,7 +4352,8 @@ msgstr "WITH における副問い合わせでは SELECT INTO を使用できま
 #: parser/parse_cte.c:271
 msgid ""
 "WITH clause containing a data-modifying statement must be at the top level"
-msgstr ""
+msgstr "データを変更するようなステートメントを含む WITH 句は"
+"トップレベルでなければなりません"
 
 #: parser/parse_cte.c:320
 #, c-format
@@ -4372,7 +4379,7 @@ msgstr ""
 
 #: parser/parse_cte.c:335
 msgid "Use the COLLATE clause to set the collation of the non-recursive term."
-msgstr ""
+msgstr "非再帰項目の照合順序を設定するには COLLATE 句を使ってください"
 
 #: parser/parse_cte.c:426
 #, c-format
@@ -4547,18 +4554,19 @@ msgstr ""
 #: parser/parse_collate.c:214 parser/parse_collate.c:538
 #, c-format
 msgid "collation mismatch between implicit collations \"%s\" and \"%s\""
-msgstr ""
+msgstr "暗黙の照合順序 \"%s\" と \"%s\" の間に照合順序のミスマッチがあります"
 
 #: parser/parse_collate.c:217 parser/parse_collate.c:541
 msgid ""
 "You can choose the collation by applying the COLLATE clause to one or both "
 "expressions."
 msgstr ""
+"片方もしくは両方の式に対して COLLATE 句を適用することで照合順序を選択できます"
 
 #: parser/parse_collate.c:763
 #, c-format
 msgid "collation mismatch between explicit collations \"%s\" and \"%s\""
-msgstr ""
+msgstr "明示的な照合順序 \"%s\" と \"%s\" の間に照合順序のミスマッチがあります"
 
 #: parser/parse_node.c:83
 #, c-format
@@ -4642,17 +4650,17 @@ msgstr ""
 #: replication/syncrep.c:357
 #, c-format
 msgid "standby \"%s\" now has synchronous standby priority %u"
-msgstr ""
+msgstr "スタンバイの \"%s\" には優先度 %u で同期スタンバイが設定されています"
 
 #: replication/syncrep.c:450
 #, c-format
 msgid "standby \"%s\" is now the synchronous standby with priority %u"
-msgstr ""
+msgstr "スタンバイの \"%s\" には優先度 %u で同期スタンバイが設定されています"
 
 #: replication/syncrep.c:657 catalog/namespace.c:3516 utils/misc/guc.c:8151
 #: commands/variable.c:59 commands/tablespace.c:1121
 msgid "List syntax is invalid."
-msgstr ""
+msgstr "リストの文法が無効です"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:101
 #, c-format
@@ -4831,7 +4839,7 @@ msgstr "レプリケーションタイムアウトにより WAL 送信プロセ�
 #: replication/walsender.c:838
 #, c-format
 msgid "standby \"%s\" has now caught up with primary"
-msgstr ""
+msgstr "スタンバイの \"%s\" はプライマリに昇格しました"
 
 #: replication/walsender.c:907
 #, c-format
@@ -5711,11 +5719,11 @@ msgstr "このビルドでは local 接続はサポートされていません"
 
 #: libpq/hba.c:853
 msgid "hostssl requires SSL to be turned on"
-msgstr ""
+msgstr "hostssl は SSL を有効にするよう要求しています"
 
 #: libpq/hba.c:854
 msgid "Set ssl = on in postgresql.conf."
-msgstr ""
+msgstr "postgresql.conf で ssl = on に設定してください"
 
 #: libpq/hba.c:862
 #, 
@@ -5751,7 +5759,7 @@ msgstr "IP アドレス \"%s\" は有効ではありません: %s"
 #: libpq/hba.c:1000
 #, c-format
 msgid "specifying both host name and CIDR mask is invalid: \"%s\""
-msgstr ""
+msgstr "ホスト名と CIDR マスクを両方指定するのは無効です：\"%s\""
 
 #: libpq/hba.c:1014
 #, c-format
@@ -6380,6 +6388,7 @@ msgstr "\"%s\" は既存の列挙型ラベルではありません"
 #: catalog/pg_enum.c:325
 msgid "ALTER TYPE ADD BEFORE/AFTER is incompatible with binary upgrade"
 msgstr ""
+"ALTER TYPE ADD BEFORE/AFTER はバイナリアップグレードでは互換性がありません"
 
 #: catalog/pg_proc.c:206
 msgid ""
@@ -7082,7 +7091,7 @@ msgstr "演算子クラス%sの所有者でなければなりません"
 #: catalog/aclchk.c:3134
 #, c-format
 msgid "must be owner of operator family %s"
-msgstr "演算子族%sの所有者でなければなりません"
+msgstr "演算子ファミリー %s の所有者でなければなりません"
 
 #: catalog/aclchk.c:3136
 #, c-format
@@ -8190,7 +8199,7 @@ msgid ""
 "This may indicate an incomplete PostgreSQL installation, or that the file \"%"
 "s\" has been moved away from its proper location."
 msgstr ""
-"これは、PostgreSQLのインストールが不完全であること、または、ファイル\"%s\"が"
+"これは、PostgreSQLのインストールが不完全であるかまたは、ファイル\"%s\"が"
 "本来の場所からなくなってしまったことを示しています。"
 
 #: postmaster/postmaster.c:1195
@@ -8573,7 +8582,8 @@ msgstr "詳細はサーバログの最近のメッセージを調査してくだ
 #: postmaster/bgwriter.c:1223
 #, c-format
 msgid "compacted fsync request queue from %d entries to %d entries"
-msgstr ""
+msgstr "ぎっしり詰まった fsync リクエストのキューのうち"
+" %d から %d までのエントリ"
 
 #: postmaster/pgstat.c:330
 #, c-format
@@ -8988,6 +8998,7 @@ msgstr "ファイル \"%s\" を fsync できませんでした: %m"
 #: storage/smgr/md.c:1270
 msgid "could not forward fsync request because request queue is full"
 msgstr ""
+"リクエストキューが満杯につき fsync リクエストのフォワードができませんでした"
 
 #: storage/smgr/md.c:1637
 #, c-format
@@ -11204,7 +11215,7 @@ msgstr "絶対経路はできません"
 
 #: utils/adt/genfile.c:76
 msgid "path must be in or below the current directory"
-msgstr ""
+msgstr "パスはカレントディレクトリもしくはその配下でなければなりません"
 
 #: utils/adt/genfile.c:122 commands/copy.c:2193
 #, c-format
@@ -12391,7 +12402,7 @@ msgstr ""
 
 #: utils/misc/guc.c:601
 msgid "Error Handling"
-msgstr ""
+msgstr "エラーハンドリング"
 
 #: utils/misc/guc.c:603
 msgid "Preset Options"
@@ -12555,11 +12566,11 @@ msgstr "これはデバッグ用です。"
 
 #: utils/misc/guc.c:881
 msgid "Terminate session on any error."
-msgstr ""
+msgstr "何からのエラーがあればセッションを終了します"
 
 #: utils/misc/guc.c:890
 msgid "Reinitialize after backend crash."
-msgstr ""
+msgstr "バックエンドがクラッシュしたら再初期化します"
 
 #: utils/misc/guc.c:900
 msgid "Logs the duration of each completed SQL statement."
@@ -12812,7 +12823,8 @@ msgstr "リカバリー中でも接続とクエリを受け付けます"
 #: utils/misc/guc.c:1381
 msgid ""
 "Allows feedback from a hot standby primary that will avoid query conflicts."
-msgstr ""
+msgstr "クエリーの衝突を避けるホットスタンバイのプライマリからの"
+"フィードバックを受け付けます"
 
 #: utils/misc/guc.c:1391
 msgid "Allows modifications of the structure of system tables."
@@ -12846,7 +12858,7 @@ msgstr ""
 
 #: utils/misc/guc.c:1425
 msgid "When generating SQL fragments, quote all identifiers."
-msgstr ""
+msgstr "SQL フラグメントを生成する時は、すべての識別子を引用符で囲んでください"
 
 #: utils/misc/guc.c:1444
 msgid ""
@@ -12946,6 +12958,7 @@ msgstr ""
 msgid ""
 "Sets the maximum interval between WAL receiver status reports to the master."
 msgstr ""
+"WAL レシーバーのステータスレポートからマスターへの最大間隔を設定します"
 
 #: utils/misc/guc.c:1581
 msgid "Sets the maximum number of concurrent connections."
@@ -13663,7 +13676,7 @@ msgstr "一時的な統計情報ファイルを指定したディレクトリに
 
 #: utils/misc/guc.c:2968
 msgid "List of potential standby names to synchronise with."
-msgstr ""
+msgstr "同期すべきスタンバイ名の可能性がある一覧"
 
 #: utils/misc/guc.c:2979
 msgid "Sets default text search configuration."
@@ -14153,7 +14166,7 @@ msgstr "PowerUsersグループのSIDを入手できませんでした: エラー
 
 #: port/win32/crashdump.c:108
 msgid "could not load dbghelp.dll, cannot write crashdump\n"
-msgstr ""
+msgstr "dbghelp.dll をロードできず、クラッシュダンプも書き込めません\n"
 
 #: port/win32/crashdump.c:116
 #, 
@@ -14288,7 +14301,7 @@ msgstr "トランザクションの周回によるデータ損失が発生して
 #: commands/vacuum.c:917
 #, c-format
 msgid "skipping vacuum of \"%s\" --- lock not available"
-msgstr ""
+msgstr "\"%s\" のバキュームをスキップしています -- ロックを利用できません"
 
 #: commands/vacuum.c:943
 #, c-format
@@ -14486,12 +14499,13 @@ msgstr ""
 
 #: commands/seclabel.c:58
 msgid "no security label providers have been loaded"
-msgstr ""
+msgstr "セキュリティラベルのプロバイダがロードされませんでした"
 
 #: commands/seclabel.c:62
 msgid ""
 "must specify provider when multiple security label providers have been loaded"
-msgstr ""
+msgstr "複数のセキュリティラベルプロバイダがロードされた時は、"
+"プロバイダを指定しなければなりません"
 
 #: commands/seclabel.c:80
 #, c-format
@@ -15331,7 +15345,7 @@ msgstr "列\"%s\"を型\"%s\"にキャストできません"
 
 #: commands/tablecmds.c:6724
 msgid "ALTER TYPE USING is only supported on plain tables"
-msgstr ""
+msgstr "ALTER TYPE USING は単純なテーブルでのみサポートされています"
 
 #: commands/tablecmds.c:6749
 #, c-format
@@ -15809,12 +15823,13 @@ msgstr "無効なインデックス\"%s\"をクラスタ化できません"
 #: commands/cluster.c:879
 #, c-format
 msgid "clustering \"%s.%s\" using index scan on \"%s\""
-msgstr ""
+msgstr " \"%3$s\" に対するインデックススキャンを使って \"%1$s.%2$s\" を"
+"クラスタ化しています"
 
 #: commands/cluster.c:885
 #, c-format
 msgid "clustering \"%s.%s\" using sequential scan and sort"
-msgstr ""
+msgstr "シーケンシャルスキャンとソートを使って \"%s.%s\" をクラスタ化しています"
 
 #: commands/cluster.c:1050
 #, c-format
@@ -17255,7 +17270,7 @@ msgstr "列\"%s\"のデータがありません"
 
 #: commands/copy.c:2476
 msgid "received copy data after EOF marker"
-msgstr ""
+msgstr "EOF マーカーの後ろでコピーデータを受信しました"
 
 #: commands/copy.c:2483
 #, c-format
@@ -18030,23 +18045,27 @@ msgstr "リレーション\"%s\"のルールで無限再帰を検出しました
 msgid ""
 "DO INSTEAD NOTHING rules are not supported for data-modifying statements in "
 "WITH"
-msgstr ""
+msgstr "WITH にデータを変更するステートメントがある場合は"
+" DO INSTEAD NOTHING ルールはサポートされません"
 
 #: rewrite/rewriteHandler.c:1896
 msgid ""
 "conditional DO INSTEAD rules are not supported for data-modifying statements "
 "in WITH"
-msgstr ""
+msgstr "WITH にデータを変更するステートメントがある場合は、"
+"条件付き DO INSTEAD ルールはサポートされません"
 
 #: rewrite/rewriteHandler.c:1900
 msgid "DO ALSO rules are not supported for data-modifying statements in WITH"
-msgstr ""
+msgstr "WITH にデータを変更するステートメントがある場合は"
+" DO ALSO ルールはサポートされません"
 
 #: rewrite/rewriteHandler.c:1905
 msgid ""
 "multi-statement DO INSTEAD rules are not supported for data-modifying "
 "statements in WITH"
-msgstr ""
+msgstr "WITH にデータを変更するステートメントがある場合は"
+"マルチステートメントの DO INSTEAD ルールはサポートされません"
 
 #: rewrite/rewriteHandler.c:2059
 #, c-format
@@ -18082,7 +18101,8 @@ msgstr "RETURNING句を持つ無条件のON DELETE DO INSTEADルールが必要�
 msgid ""
 "WITH cannot be used in a query that is rewritten by rules into multiple "
 "queries"
-msgstr ""
+msgstr "複数クエリーに対するルールにより書き換えられたクエリーでは"
+" WITH を使用できません"
 
 #: rewrite/rewriteManip.c:1012
 msgid "conditional utility statements are not implemented"
@@ -18131,7 +18151,8 @@ msgstr "SELECTに対するルールはINSTEAD SELECTアクションを持たな�
 
 #: rewrite/rewriteDefine.c:337
 msgid "rules on SELECT must not contain data-modifying statements in WITH"
-msgstr ""
+msgstr "SELECT のルールでは WITH にデータを変更するステートメントを"
+"含むことはできません"
 
 #: rewrite/rewriteDefine.c:345
 msgid "event qualifications are not implemented for rules on SELECT"
