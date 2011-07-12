@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0 beta 3\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-06-14 21:38+0900\n"
-"PO-Revision-Date: 2011-06-14 21:56+0900\n"
+"POT-Creation-Date: 2011-07-12 20:26+0900\n"
+"PO-Revision-Date: 2011-07-12 20:33+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
 "MIME-Version: 1.0\n"
@@ -34,21 +34,27 @@ msgstr "%s: PIDファイル\"%s\"内に無効なデータがあります\n"
 msgid ""
 "\n"
 "%s: -w option is not supported when starting a pre-9.1 server\n"
-msgstr "\n%s: 9.1より前のサーバを起動する際に-wオプションはサポートされません\n"
+msgstr ""
+"\n"
+"%s: 9.1より前のサーバを起動する際に-wオプションはサポートされません\n"
 
 #: pg_ctl.c:540
 #, c-format
 msgid ""
 "\n"
 "%s: -w option cannot use a relative socket directory specification\n"
-msgstr "\n%s: -wオプションでは相対ソケットディレクトリ指定を使用することができません\n"
+msgstr ""
+"\n"
+"%s: -wオプションでは相対ソケットディレクトリ指定を使用することができません\n"
 
 #: pg_ctl.c:588
 #, c-format
 msgid ""
 "\n"
 "%s: this data directory appears to be running a pre-existing postmaster\n"
-msgstr "\n%s: このデータディレクトリでは既存のpostasterが実行しているようです。\n"
+msgstr ""
+"\n"
+"%s: このデータディレクトリでは既存のpostasterが実行しているようです。\n"
 
 #: pg_ctl.c:638
 #, c-format
@@ -197,7 +203,8 @@ msgid ""
 "HINT: The \"-m fast\" option immediately disconnects sessions rather than\n"
 "waiting for session-initiated disconnection.\n"
 msgstr ""
-"ヒント: \"-m fast\"オプションは、セッション切断が始まるまで待機するのではなく\n"
+"ヒント: \"-m fast\"オプションは、セッション切断が始まるまで待機するのではな"
+"く\n"
 "即座にセッションを切断します。\n"
 
 #: pg_ctl.c:922 pg_ctl.c:1012
@@ -241,7 +248,8 @@ msgstr "サーバにシグナルを送信しました\n"
 #: pg_ctl.c:1079
 #, c-format
 msgid "%s: cannot promote server; single-user server is running (PID: %ld)\n"
-msgstr "%s: サーバを昇進できません。シングルユーザサーバ(PID: %ld)が動作中です\n"
+msgstr ""
+"%s: サーバを昇進できません。シングルユーザサーバ(PID: %ld)が動作中です\n"
 
 #: pg_ctl.c:1088
 #, c-format
@@ -349,6 +357,31 @@ msgstr "サーバは起動し、接続を受け付けています\n"
 msgid "%s: could not start service \"%s\": error code %d\n"
 msgstr "%s: サービス\"%s\"の起動に失敗しました: エラーコード %d\n"
 
+#: pg_ctl.c:1573
+#, c-format
+msgid "%s: WARNING: cannot create restricted tokens on this platform\n"
+msgstr "%s: 警告: このプラットフォームでは制限付きトークンを作成できません\n"
+
+#: pg_ctl.c:1582
+#, c-format
+msgid "%s: could not open process token: %lu\n"
+msgstr "%s: プロセストークンをオープンできませんでした: %lu\n"
+
+#: pg_ctl.c:1595
+#, c-format
+msgid "%s: could not allocate SIDs: %lu\n"
+msgstr "%s: SIDを割り当てられませんでした: %lu\n"
+
+#: pg_ctl.c:1614
+#, c-format
+msgid "%s: could not create restricted token: %lu\n"
+msgstr "%s: 制限付きトークンを作成できませんでした: %lu\n"
+
+#: pg_ctl.c:1652
+#, c-format
+msgid "%s: WARNING: could not locate all job object functions in system API\n"
+msgstr "%s: 警告: システムAPI内にすべてのジョブオブジェクト関数を格納できませんでした\n"
+
 #: pg_ctl.c:1738
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
@@ -359,7 +392,8 @@ msgstr "詳細は\"%s --help\"を実行してください。\n"
 msgid ""
 "%s is a utility to initialize, start, stop, or control a PostgreSQL server.\n"
 "\n"
-msgstr "%sはPostgreSQLサーバの初期化、起動、停止、制御を行うユーティリティです。\n"
+msgstr ""
+"%sはPostgreSQLサーバの初期化、起動、停止、制御を行うユーティリティです。\n"
 
 #: pg_ctl.c:1747
 #, c-format
@@ -610,20 +644,24 @@ msgstr "  -U USERNAME     PostgreSQLサーバを登録するアカウントの�
 #: pg_ctl.c:1800
 #, c-format
 msgid "  -S START-TYPE   service start type to register PostgreSQL server\n"
-msgstr "  -S START-TYPE   PostgreSQLサーバを登録するためのサービス起動種類です\n"
+msgstr ""
+"  -S START-TYPE   PostgreSQLサーバを登録するためのサービス起動種類です\n"
 
 #: pg_ctl.c:1802
 #, c-format
 msgid ""
 "\n"
 "Start types are:\n"
-msgstr "\n起動種類は以下の通りです:\n"
+msgstr ""
+"\n"
+"起動種類は以下の通りです:\n"
 
 #: pg_ctl.c:1803
 #, c-format
 msgid ""
 "  auto       start service automatically during system startup (default)\n"
-msgstr "  auto       システムの起動時にサービスを自動的に開始します（デフォルト）\n"
+msgstr ""
+"  auto       システムの起動時にサービスを自動的に開始します（デフォルト）\n"
 
 #: pg_ctl.c:1804
 #, c-format
