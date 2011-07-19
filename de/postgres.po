@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: postgres.po,v 1.103 2011/07/15 19:32:37 petere Exp $
+# $Id: postgres.po,v 1.104 2011/07/19 04:14:16 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-07-15 08:58+0000\n"
-"PO-Revision-Date: 2011-07-15 22:32+0300\n"
+"POT-Creation-Date: 2011-07-18 04:58+0000\n"
+"PO-Revision-Date: 2011-07-18 23:00+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -25,24 +25,6 @@ msgstr ""
 #, c-format
 msgid "could not find array type for data type %s"
 msgstr "konnte Arraytyp für Datentyp %s nicht finden"
-
-#: nodes/print.c:85 catalog/dependency.c:928 catalog/dependency.c:929
-#: catalog/dependency.c:935 catalog/dependency.c:936 catalog/dependency.c:947
-#: catalog/dependency.c:948 catalog/objectaddress.c:315 commands/user.c:956
-#: commands/user.c:957 commands/tablecmds.c:689 commands/trigger.c:894
-#: commands/trigger.c:910 commands/trigger.c:922 tcop/postgres.c:4297
-#: storage/lmgr/deadlock.c:942 storage/lmgr/deadlock.c:943
-#: port/win32/security.c:51 utils/adt/xml.c:1366 utils/adt/xml.c:1367
-#: utils/adt/xml.c:1373 utils/adt/xml.c:1444 utils/fmgr/dfmgr.c:381
-#: utils/misc/guc.c:5397 utils/misc/guc.c:5711 utils/misc/guc.c:7988
-#: utils/misc/guc.c:7992 utils/misc/guc.c:7994 utils/misc/guc.c:8022
-#: utils/misc/guc.c:8026 utils/misc/guc.c:8028 utils/misc/guc.c:8056
-#: utils/misc/guc.c:8060 utils/misc/guc.c:8062 utils/misc/guc.c:8090
-#: utils/misc/guc.c:8094 utils/misc/guc.c:8096 utils/misc/guc.c:8124
-#: utils/misc/guc.c:8129 utils/misc/guc.c:8131
-#, c-format
-msgid "%s"
-msgstr "%s"
 
 #: tsearch/dict_ispell.c:53 tsearch/dict_thesaurus.c:615
 msgid "multiple DictFile parameters"
@@ -861,7 +843,7 @@ msgstr "konnte Datei »%s« nicht schließen: %m"
 #: storage/file/copydir.c:165 storage/file/copydir.c:255 storage/smgr/md.c:542
 #: storage/smgr/md.c:802 replication/basebackup.c:725
 #: utils/init/miscinit.c:1039 utils/init/miscinit.c:1153
-#: utils/error/elog.c:1469
+#: utils/error/elog.c:1496
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "konnte Datei »%s« nicht öffnen: %m"
@@ -2765,6 +2747,16 @@ msgstr[1] ""
 #, c-format
 msgid "cannot drop %s because other objects depend on it"
 msgstr "kann %s nicht löschen, weil andere Objekte davon abhängen"
+
+#: catalog/dependency.c:928 catalog/dependency.c:929 catalog/dependency.c:935
+#: catalog/dependency.c:936 catalog/dependency.c:947 catalog/dependency.c:948
+#: catalog/objectaddress.c:315 commands/user.c:957 commands/tablecmds.c:689
+#: storage/lmgr/deadlock.c:943 port/win32/security.c:51 utils/misc/guc.c:5397
+#: utils/misc/guc.c:5711 utils/misc/guc.c:7994 utils/misc/guc.c:8028
+#: utils/misc/guc.c:8062 utils/misc/guc.c:8096 utils/misc/guc.c:8131
+#, c-format
+msgid "%s"
+msgstr "%s"
 
 #: catalog/dependency.c:930 catalog/dependency.c:937
 msgid "Use DROP ... CASCADE to drop the dependent objects too."
@@ -5805,7 +5797,7 @@ msgstr ""
 "setval: Wert %s ist außerhalb des gültigen Bereichs von Sequenz »%s« (%s..%s)"
 
 #: commands/sequence.c:1017 lib/stringinfo.c:266 libpq/auth.c:1007
-#: libpq/auth.c:1361 libpq/auth.c:1429 libpq/auth.c:1831
+#: libpq/auth.c:1367 libpq/auth.c:1435 libpq/auth.c:1837
 #: storage/ipc/procarray.c:784 storage/ipc/procarray.c:1183
 #: storage/ipc/procarray.c:1190 storage/ipc/procarray.c:1425
 #: storage/ipc/procarray.c:1819 storage/buffer/buf_init.c:154
@@ -8834,11 +8826,6 @@ msgstr "Kerberos recvauth ergab Fehler %d"
 msgid "Kerberos unparse_name returned error %d"
 msgstr "Kerberos unparse_name ergab Fehler %d"
 
-#: libpq/auth.c:962
-#, c-format
-msgid "%s: %s"
-msgstr "%s: %s"
-
 #: libpq/auth.c:988
 msgid "GSSAPI is not supported in protocol version 2"
 msgstr "GSSAPI wird in Protokollversion 2 nicht unterstützt"
@@ -8855,16 +8842,6 @@ msgstr "Annahme des GSS-Sicherheitskontexts fehlgeschlagen"
 #: libpq/auth.c:1132
 msgid "retrieving GSS user name failed"
 msgstr "Abfrage des GSS-Benutzernamens fehlgeschlagen"
-
-#: libpq/auth.c:1205
-#, c-format
-msgid "SSPI error %x"
-msgstr "SSPI-Fehler %x"
-
-#: libpq/auth.c:1209
-#, c-format
-msgid "%s (%x)"
-msgstr "%s (%x)"
 
 #: libpq/auth.c:1249
 msgid "SSPI is not supported in protocol version 2"
@@ -8883,132 +8860,132 @@ msgstr "SSPI-Antwort erwartet, Message-Typ %d empfangen"
 msgid "could not accept SSPI security context"
 msgstr "konnte SSPI-Sicherheitskontext nicht akzeptieren"
 
-#: libpq/auth.c:1409
+#: libpq/auth.c:1415
 msgid "could not get token from SSPI security context"
 msgstr "konnte kein Token vom SSPI-Sicherheitskontext erhalten"
 
-#: libpq/auth.c:1653
+#: libpq/auth.c:1659
 #, c-format
 msgid "could not create socket for Ident connection: %m"
 msgstr "konnte Socket für Ident-Verbindung nicht erzeugen: %m"
 
-#: libpq/auth.c:1668
+#: libpq/auth.c:1674
 #, c-format
 msgid "could not bind to local address \"%s\": %m"
 msgstr "konnte nicht mit lokaler Adresse »%s« verbinden: %m"
 
-#: libpq/auth.c:1680
+#: libpq/auth.c:1686
 #, c-format
 msgid "could not connect to Ident server at address \"%s\", port %s: %m"
 msgstr "konnte nicht mit Ident-Server auf Adresse »%s«, Port %s verbinden: %m"
 
-#: libpq/auth.c:1700
+#: libpq/auth.c:1706
 #, c-format
 msgid "could not send query to Ident server at address \"%s\", port %s: %m"
 msgstr ""
 "konnte Anfrage an Ident-Server auf Adresse »%s«, Port %s nicht senden: %m"
 
-#: libpq/auth.c:1715
+#: libpq/auth.c:1721
 #, c-format
 msgid ""
 "could not receive response from Ident server at address \"%s\", port %s: %m"
 msgstr ""
 "konnte Antwort von Ident-Server auf Adresse »%s«, Port %s nicht empfangen: %m"
 
-#: libpq/auth.c:1725
+#: libpq/auth.c:1731
 #, c-format
 msgid "invalidly formatted response from Ident server: \"%s\""
 msgstr "ungültig formatierte Antwort vom Ident-Server: »%s«"
 
-#: libpq/auth.c:1764
+#: libpq/auth.c:1770
 msgid "peer authentication is not supported on this platform"
 msgstr "Peer-Authentifizierung wird auf dieser Plattform nicht unterstützt"
 
-#: libpq/auth.c:1768
+#: libpq/auth.c:1774
 #, c-format
 msgid "could not get peer credentials: %m"
 msgstr "konnte Credentials von Gegenstelle nicht ermitteln: %m"
 
-#: libpq/auth.c:1777
+#: libpq/auth.c:1783
 #, c-format
 msgid "local user with ID %d does not exist"
 msgstr "lokaler Benutzer mit ID %d existiert nicht"
 
-#: libpq/auth.c:1860 libpq/auth.c:2132 libpq/auth.c:2492
+#: libpq/auth.c:1866 libpq/auth.c:2138 libpq/auth.c:2498
 msgid "empty password returned by client"
 msgstr "Client gab leeres Passwort zurück"
 
-#: libpq/auth.c:1870
+#: libpq/auth.c:1876
 #, c-format
 msgid "error from underlying PAM layer: %s"
 msgstr "Fehler von der unteren PAM-Ebene: %s"
 
-#: libpq/auth.c:1939
+#: libpq/auth.c:1945
 #, c-format
 msgid "could not create PAM authenticator: %s"
 msgstr "konnte PAM-Authenticator nicht erzeugen: %s"
 
-#: libpq/auth.c:1950
+#: libpq/auth.c:1956
 #, c-format
 msgid "pam_set_item(PAM_USER) failed: %s"
 msgstr "pam_set_item(PAM_USER) fehlgeschlagen: %s"
 
-#: libpq/auth.c:1961
+#: libpq/auth.c:1967
 #, c-format
 msgid "pam_set_item(PAM_CONV) failed: %s"
 msgstr "pam_set_item(PAM_CONV) fehlgeschlagen: %s"
 
-#: libpq/auth.c:1972
+#: libpq/auth.c:1978
 #, c-format
 msgid "pam_authenticate failed: %s"
 msgstr "pam_authenticate fehlgeschlagen: %s"
 
-#: libpq/auth.c:1983
+#: libpq/auth.c:1989
 #, c-format
 msgid "pam_acct_mgmt failed: %s"
 msgstr "pam_acct_mgmt fehlgeschlagen: %s"
 
-#: libpq/auth.c:1994
+#: libpq/auth.c:2000
 #, c-format
 msgid "could not release PAM authenticator: %s"
 msgstr "konnte PAM-Authenticator nicht freigeben: %s"
 
-#: libpq/auth.c:2027 libpq/auth.c:2031
+#: libpq/auth.c:2033 libpq/auth.c:2037
 #, c-format
 msgid "could not initialize LDAP: error code %d"
 msgstr "konnte LDAP nicht initialisieren: Fehlercode %d"
 
-#: libpq/auth.c:2041
+#: libpq/auth.c:2047
 #, c-format
 msgid "could not set LDAP protocol version: error code %d"
 msgstr "konnte LDAP-Protokollversion nicht setzen: Fehlercode %d"
 
-#: libpq/auth.c:2070
+#: libpq/auth.c:2076
 msgid "could not load wldap32.dll"
 msgstr "konnte wldap32.dll nicht laden"
 
-#: libpq/auth.c:2078
+#: libpq/auth.c:2084
 msgid "could not load function _ldap_start_tls_sA in wldap32.dll"
 msgstr "konnte Funktion _ldap_start_tls_sA in wldap32.dll nicht laden"
 
-#: libpq/auth.c:2079
+#: libpq/auth.c:2085
 msgid "LDAP over SSL is not supported on this platform."
 msgstr "LDAP über SSL wird auf dieser Plattform nicht unterstützt"
 
-#: libpq/auth.c:2094
+#: libpq/auth.c:2100
 #, c-format
 msgid "could not start LDAP TLS session: error code %d"
 msgstr "konnte LDAP-TLS-Sitzung nicht öffnen: Fehlercode %d"
 
-#: libpq/auth.c:2116
+#: libpq/auth.c:2122
 msgid "LDAP server not specified"
 msgstr "LDAP-Server nicht angegeben"
 
-#: libpq/auth.c:2168
+#: libpq/auth.c:2174
 msgid "invalid character in user name for LDAP authentication"
 msgstr "ungültiges Zeichen im Benutzernamen für LDAP-Authentifizierung"
 
-#: libpq/auth.c:2183
+#: libpq/auth.c:2189
 #, c-format
 msgid ""
 "could not perform initial LDAP bind for ldapbinddn \"%s\" on server \"%s\": "
@@ -9017,20 +8994,20 @@ msgstr ""
 "erstes LDAP-Binden für ldapbinddn »%s« auf Server »%s« fehlgeschlagen: "
 "Fehlercode %d"
 
-#: libpq/auth.c:2208
+#: libpq/auth.c:2214
 #, c-format
 msgid "could not search LDAP for filter \"%s\" on server \"%s\": error code %d"
 msgstr ""
 "konnte LDAP nicht mit Filter »%s« auf Server »%s« durchsuchen: Fehlercode %d"
 
-#: libpq/auth.c:2218
+#: libpq/auth.c:2224
 #, c-format
 msgid "LDAP search failed for filter \"%s\" on server \"%s\": no such user"
 msgstr ""
 "LDAP-Suche fehlgeschlagen für Filter »%s« auf Server »%s«: Benutzer "
 "existiert nicht"
 
-#: libpq/auth.c:2222
+#: libpq/auth.c:2228
 #, c-format
 msgid ""
 "LDAP search failed for filter \"%s\" on server \"%s\": user is not unique "
@@ -9039,26 +9016,26 @@ msgstr ""
 "LDAP-Suche fehlgeschlagen für Filter »%s« auf Server »%s«: Benutzer ist "
 "nicht eindeutig (%ld Treffer)"
 
-#: libpq/auth.c:2239
+#: libpq/auth.c:2245
 #, c-format
 msgid ""
 "could not get dn for the first entry matching \"%s\" on server \"%s\": %s"
 msgstr ""
 "konnte DN fũr den ersten Treffer für »%s« auf Server »%s« nicht lesen: %s"
 
-#: libpq/auth.c:2259
+#: libpq/auth.c:2265
 #, c-format
 msgid "could not unbind after searching for user \"%s\" on server \"%s\": %s"
 msgstr ""
 "Losbinden fehlgeschlagen nach Suche nach Benutzer »%s« auf Server »%s«: %s"
 
-#: libpq/auth.c:2296
+#: libpq/auth.c:2302
 #, c-format
 msgid "LDAP login failed for user \"%s\" on server \"%s\": error code %d"
 msgstr ""
 "LDAP-Login fehlgeschlagen für Benutzer »%s« auf Server »%s«: Fehlercode %d"
 
-#: libpq/auth.c:2324
+#: libpq/auth.c:2330
 #, c-format
 msgid ""
 "certificate authentication failed for user \"%s\": client certificate "
@@ -9067,91 +9044,91 @@ msgstr ""
 "Zertifikatauthentifizierung für Benutzer »%s« fehlgeschlagen: Client-"
 "Zertifikat enthält keinen Benutzernamen"
 
-#: libpq/auth.c:2448
+#: libpq/auth.c:2454
 msgid "RADIUS server not specified"
 msgstr "RADIUS-Server nicht angegeben"
 
-#: libpq/auth.c:2455
+#: libpq/auth.c:2461
 msgid "RADIUS secret not specified"
 msgstr "RADIUS-Geheimnis nicht angegeben"
 
-#: libpq/auth.c:2471 libpq/hba.c:1403
+#: libpq/auth.c:2477 libpq/hba.c:1403
 #, c-format
 msgid "could not translate RADIUS server name \"%s\" to address: %s"
 msgstr "konnte RADIUS-Servername »%s« nicht in Adresse übersetzen: %s"
 
-#: libpq/auth.c:2499
+#: libpq/auth.c:2505
 msgid ""
 "RADIUS authentication does not support passwords longer than 16 characters"
 msgstr ""
 "RADIUS-Authentifizierung unterstützt keine Passwörter länger als 16 Zeichen"
 
-#: libpq/auth.c:2510
+#: libpq/auth.c:2516
 msgid "could not generate random encryption vector"
 msgstr "konnte zufälligen Verschlüsselungsvektor nicht erzeugen"
 
-#: libpq/auth.c:2533
+#: libpq/auth.c:2539
 msgid "could not perform MD5 encryption of password"
 msgstr "konnte MD5-Verschlüsselung des Passworts nicht durchführen"
 
-#: libpq/auth.c:2555
+#: libpq/auth.c:2561
 #, c-format
 msgid "could not create RADIUS socket: %m"
 msgstr "konnte RADIUS-Socket nicht erstellen: %m"
 
-#: libpq/auth.c:2576
+#: libpq/auth.c:2582
 #, c-format
 msgid "could not bind local RADIUS socket: %m"
 msgstr "konnte lokales RADIUS-Socket nicht binden: %m"
 
-#: libpq/auth.c:2586
+#: libpq/auth.c:2592
 #, c-format
 msgid "could not send RADIUS packet: %m"
 msgstr "konnte RADIUS-Paket nicht senden: %m"
 
-#: libpq/auth.c:2615 libpq/auth.c:2640
+#: libpq/auth.c:2621 libpq/auth.c:2646
 msgid "timeout waiting for RADIUS response"
 msgstr "Zeitüberschreitung beim Warten auf RADIUS-Antwort"
 
-#: libpq/auth.c:2633
+#: libpq/auth.c:2639
 #, c-format
 msgid "could not check status on RADIUS socket: %m"
 msgstr "konnte Status des RADIUS-Sockets nicht prüfen: %m"
 
-#: libpq/auth.c:2662
+#: libpq/auth.c:2668
 #, c-format
 msgid "could not read RADIUS response: %m"
 msgstr "konnte RADIUS-Antwort nicht lesen: %m"
 
-#: libpq/auth.c:2674 libpq/auth.c:2678
+#: libpq/auth.c:2680 libpq/auth.c:2684
 #, c-format
 msgid "RADIUS response was sent from incorrect port: %i"
 msgstr "RADIUS-Antwort wurde von falschem Port gesendet: %i"
 
-#: libpq/auth.c:2687
+#: libpq/auth.c:2693
 #, c-format
 msgid "RADIUS response too short: %i"
 msgstr "RADIUS-Antwort zu kurz: %i"
 
-#: libpq/auth.c:2694
+#: libpq/auth.c:2700
 #, c-format
 msgid "RADIUS response has corrupt length: %i (actual length %i)"
 msgstr "RADIUS-Antwort hat verfälschte Länge: %i (tatsächliche Länge %i)"
 
-#: libpq/auth.c:2702
+#: libpq/auth.c:2708
 #, c-format
 msgid "RADIUS response is to a different request: %i (should be %i)"
 msgstr "RADIUS-Antwort unterscheidet sich von Anfrage: %i (sollte %i sein)"
 
-#: libpq/auth.c:2727
+#: libpq/auth.c:2733
 msgid "could not perform MD5 encryption of received packet"
 msgstr "konnte MD5-Verschlüsselung des empfangenen Pakets nicht durchführen"
 
-#: libpq/auth.c:2736
+#: libpq/auth.c:2742
 msgid "RADIUS response has incorrect MD5 signature"
 msgstr "RADIUS-Antwort hat falsche MD5-Signatur"
 
-#: libpq/auth.c:2753
+#: libpq/auth.c:2759
 #, c-format
 msgid "RADIUS response has invalid code (%i) for user \"%s\""
 msgstr "RADIUS-Antwort hat ungültigen Code (%i) für Benutzer »%s«"
@@ -10151,10 +10128,6 @@ msgstr ""
 "konnte Zugriff nicht serialisieren wegen Lese-/Schreib-Abhängigkeiten "
 "zwischen Transaktionen"
 
-#: storage/lmgr/predicate.c:3779
-msgid "Canceled on identification as a pivot, during conflict out checking."
-msgstr ""
-
 #: storage/lmgr/predicate.c:3780 storage/lmgr/predicate.c:3869
 #: storage/lmgr/predicate.c:3877 storage/lmgr/predicate.c:3916
 #: storage/lmgr/predicate.c:4155 storage/lmgr/predicate.c:4493
@@ -10163,43 +10136,6 @@ msgstr ""
 msgid "The transaction might succeed if retried."
 msgstr ""
 "Die Transaktion könnte erfolgreich sein, wenn sie erneut versucht würde."
-
-#: storage/lmgr/predicate.c:3868
-#, c-format
-msgid "Canceled on conflict out to old pivot %u."
-msgstr ""
-
-#: storage/lmgr/predicate.c:3876
-#, c-format
-msgid ""
-"Canceled on identification as a pivot, with conflict out to old committed "
-"transaction %u."
-msgstr ""
-
-#: storage/lmgr/predicate.c:3915
-msgid "Canceled on conflict out to old pivot."
-msgstr ""
-
-#: storage/lmgr/predicate.c:4154
-msgid "Canceled on identification as a pivot, during conflict in checking."
-msgstr ""
-
-#: storage/lmgr/predicate.c:4492
-msgid "Canceled on identification as a pivot, during write."
-msgstr ""
-
-#: storage/lmgr/predicate.c:4504
-#, c-format
-msgid "Canceled on conflict out to pivot %u, during read."
-msgstr ""
-
-#: storage/lmgr/predicate.c:4546
-msgid "Canceled on identification as a pivot, during commit attempt."
-msgstr ""
-
-#: storage/lmgr/predicate.c:4584
-msgid "Canceled on commit attempt with conflict in from prepared pivot."
-msgstr ""
 
 #: storage/page/bufpage.c:143 storage/page/bufpage.c:390
 #: storage/page/bufpage.c:623 storage/page/bufpage.c:753
@@ -12648,7 +12584,7 @@ msgstr "Einzelheiten finden Sie in den letzten Meldungen im Serverlog."
 #: postmaster/bgwriter.c:1223
 #, c-format
 msgid "compacted fsync request queue from %d entries to %d entries"
-msgstr ""
+msgstr "fsync-Anfrageschlange von %d Einträgen auf %d Einträge zusammengefasst"
 
 #: postmaster/pgarch.c:158
 #, c-format
@@ -16471,96 +16407,96 @@ msgstr "TRAP: ExceptionalCondition: fehlerhafte Argumente\n"
 msgid "TRAP: %s(\"%s\", File: \"%s\", Line: %d)\n"
 msgstr "TRAP: %s(»%s«, Datei: »%s«, Zeile: %d)\n"
 
-#: utils/error/elog.c:1479
+#: utils/error/elog.c:1506
 #, c-format
 msgid "could not reopen file \"%s\" as stderr: %m"
 msgstr "konnte Datei »%s« nicht als stderr neu öffnen: %m"
 
-#: utils/error/elog.c:1492
+#: utils/error/elog.c:1519
 #, c-format
 msgid "could not reopen file \"%s\" as stdout: %m"
 msgstr "konnte Datei »%s« nicht als stdou neu öffnen: %m"
 
-#: utils/error/elog.c:1882 utils/error/elog.c:1892 utils/error/elog.c:1902
+#: utils/error/elog.c:1909 utils/error/elog.c:1919 utils/error/elog.c:1929
 msgid "[unknown]"
 msgstr "[unbekannt]"
 
-#: utils/error/elog.c:2253 utils/error/elog.c:2533 utils/error/elog.c:2611
+#: utils/error/elog.c:2280 utils/error/elog.c:2560 utils/error/elog.c:2638
 msgid "missing error text"
 msgstr "fehlender Fehlertext"
 
-#: utils/error/elog.c:2256 utils/error/elog.c:2259 utils/error/elog.c:2614
-#: utils/error/elog.c:2617
+#: utils/error/elog.c:2283 utils/error/elog.c:2286 utils/error/elog.c:2641
+#: utils/error/elog.c:2644
 #, c-format
 msgid " at character %d"
 msgstr " bei Zeichen %d"
 
-#: utils/error/elog.c:2269 utils/error/elog.c:2276
+#: utils/error/elog.c:2296 utils/error/elog.c:2303
 msgid "DETAIL:  "
 msgstr "DETAIL:  "
 
-#: utils/error/elog.c:2283
+#: utils/error/elog.c:2310
 msgid "HINT:  "
 msgstr "TIPP:  "
 
-#: utils/error/elog.c:2290
+#: utils/error/elog.c:2317
 msgid "QUERY:  "
 msgstr "ANFRAGE:  "
 
-#: utils/error/elog.c:2297
+#: utils/error/elog.c:2324
 msgid "CONTEXT:  "
 msgstr "ZUSAMMENHANG:  "
 
-#: utils/error/elog.c:2307
+#: utils/error/elog.c:2334
 #, c-format
 msgid "LOCATION:  %s, %s:%d\n"
 msgstr "ORT:  %s, %s:%d\n"
 
-#: utils/error/elog.c:2314
+#: utils/error/elog.c:2341
 #, c-format
 msgid "LOCATION:  %s:%d\n"
 msgstr "ORT:  %s:%d\n"
 
-#: utils/error/elog.c:2328
+#: utils/error/elog.c:2355
 msgid "STATEMENT:  "
 msgstr "ANWEISUNG:  "
 
 #. translator: This string will be truncated at 47
 #. characters expanded.
-#: utils/error/elog.c:2726
+#: utils/error/elog.c:2753
 #, c-format
 msgid "operating system error %d"
 msgstr "Betriebssystemfehler %d"
 
-#: utils/error/elog.c:2749
+#: utils/error/elog.c:2776
 msgid "DEBUG"
 msgstr "DEBUG"
 
-#: utils/error/elog.c:2753
+#: utils/error/elog.c:2780
 msgid "LOG"
 msgstr "LOG"
 
-#: utils/error/elog.c:2756
+#: utils/error/elog.c:2783
 msgid "INFO"
 msgstr "INFO"
 
-#: utils/error/elog.c:2759
+#: utils/error/elog.c:2786
 msgid "NOTICE"
 msgstr "HINWEIS"
 
-#: utils/error/elog.c:2762
+#: utils/error/elog.c:2789
 msgid "WARNING"
 msgstr "WARNUNG"
 
-#: utils/error/elog.c:2765
+#: utils/error/elog.c:2792
 msgid "ERROR"
 msgstr "FEHLER"
 
-#: utils/error/elog.c:2768
+#: utils/error/elog.c:2795
 msgid "FATAL"
 msgstr "FATAL"
 
-#: utils/error/elog.c:2771
+#: utils/error/elog.c:2798
 msgid "PANIC"
 msgstr "PANIK"
 
@@ -18691,6 +18627,15 @@ msgstr "win32-Fehlercode %lu nach %d abgebildet"
 #, c-format
 msgid "unrecognized win32 error code: %lu"
 msgstr "unbekannter win32-Fehlercode: %lu"
+
+#~ msgid "%s: %s"
+#~ msgstr "%s: %s"
+
+#~ msgid "SSPI error %x"
+#~ msgstr "SSPI-Fehler %x"
+
+#~ msgid "%s (%x)"
+#~ msgstr "%s (%x)"
 
 #~ msgid "must be superuser to SET SCHEMA of %s"
 #~ msgstr "nur Superuser können Schema von %s ändern"
