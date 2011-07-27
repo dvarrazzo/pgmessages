@@ -1,7 +1,7 @@
 # German message translation file for psql
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: psql.po,v 1.49 2011/07/24 13:02:38 petere Exp $
+# $Id: psql.po,v 1.50 2011/07/27 20:44:50 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-07-24 06:54+0000\n"
-"PO-Revision-Date: 2011-07-24 15:59+0300\n"
+"POT-Creation-Date: 2011-07-27 16:54+0000\n"
+"PO-Revision-Date: 2011-07-27 23:43+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -133,8 +133,8 @@ msgstr "Anfragepuffer wurde gelöscht."
 msgid "Wrote history to file \"%s/%s\".\n"
 msgstr "Befehlsgeschichte in Datei »%s/%s« geschrieben.\n"
 
-#: command.c:1085 common.c:52 common.c:66 input.c:209 mainloop.c:72
-#: mainloop.c:234 print.c:137 print.c:151
+#: command.c:1085 common.c:52 common.c:66 common.c:90 input.c:209
+#: mainloop.c:72 mainloop.c:234 print.c:137 print.c:151
 #, c-format
 msgid "out of memory\n"
 msgstr "Speicher aufgebraucht\n"
@@ -245,7 +245,9 @@ msgstr ""
 msgid ""
 "environment variable PSQL_EDITOR_LINENUMBER_ARG must be set to specify a "
 "line number\n"
-msgstr "Umgebungsvariable PSQL_EDITOR_LINENUMBER_ARG muss gesetzt werden, um eine Zeilennummer angeben zu können\n"
+msgstr ""
+"Umgebungsvariable PSQL_EDITOR_LINENUMBER_ARG muss gesetzt werden, um eine "
+"Zeilennummer angeben zu können\n"
 
 #: command.c:1813
 #, c-format
@@ -258,8 +260,8 @@ msgstr "konnte /bin/sh nicht starten\n"
 
 #: command.c:1853
 #, c-format
-msgid "cannot locate temporary directory: %s"
-msgstr "konnte temporäres Verzeichnis nicht finden: %s"
+msgid "could not locate temporary directory: %s\n"
+msgstr "konnte temporäres Verzeichnis nicht finden: %s\n"
 
 #: command.c:1880
 #, c-format
@@ -397,10 +399,6 @@ msgstr "\\!: fehlgeschlagen\n"
 #, c-format
 msgid "%s: pg_strdup: cannot duplicate null pointer (internal error)\n"
 msgstr "%s: pg_strdup: kann NULL-Zeiger nicht kopieren (interner Fehler)\n"
-
-#: common.c:90
-msgid "out of memory"
-msgstr "Speicher aufgebraucht"
 
 #: common.c:343
 msgid "connection to server was lost\n"
@@ -3410,15 +3408,19 @@ msgstr "Transaktionsmodus"
 msgid "where transaction_mode is one of:"
 msgstr "wobei Transaktionsmodus Folgendes sein kann:"
 
-#: sql_help.c:1009 sql_help.c:1057 sql_help.c:1060 sql_help.c:1083
-#: sql_help.c:1094 sql_help.c:1139 sql_help.c:1143 sql_help.c:1339
-#: sql_help.c:1676 sql_help.c:1688 sql_help.c:1745 sql_help.c:2429
-#: sql_help.c:2434 sql_help.c:2683 sql_help.c:2688 sql_help.c:2769
-#: sql_help.c:2837 sql_help.c:2839 sql_help.c:2868 sql_help.c:2907
-#: sql_help.c:3040 sql_help.c:3042 sql_help.c:3071 sql_help.c:3196
-#: sql_help.c:3198 sql_help.c:3227
+#: sql_help.c:1009 sql_help.c:1060 sql_help.c:1083 sql_help.c:1094
+#: sql_help.c:1139 sql_help.c:1143 sql_help.c:1339 sql_help.c:1676
+#: sql_help.c:1688 sql_help.c:1745 sql_help.c:2429 sql_help.c:2434
+#: sql_help.c:2683 sql_help.c:2688 sql_help.c:2769 sql_help.c:2837
+#: sql_help.c:2839 sql_help.c:2868 sql_help.c:2907 sql_help.c:3040
+#: sql_help.c:3042 sql_help.c:3071 sql_help.c:3196 sql_help.c:3198
+#: sql_help.c:3227
 msgid "table_name"
 msgstr "Tabellenname"
+
+#: sql_help.c:1057
+msgid "relation_name"
+msgstr "Relationsname"
 
 #: sql_help.c:1058 sql_help.c:1340 sql_help.c:1373 sql_help.c:1677
 #: sql_help.c:1690 sql_help.c:1709 sql_help.c:1711 sql_help.c:1718
