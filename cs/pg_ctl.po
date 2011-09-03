@@ -1,452 +1,531 @@
-# translation of pg_ctl-cs.po to 
+# translation of pg_ctl-cs.po to
 # translation of pg_ctl-cs.po to Czech
-# Karel Zak <zakkr@zf.jcu.cz>, 2004.
 #
+# Karel Zak <zakkr@zf.jcu.cz>, 2004, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_ctl-cs\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-27 14:16+0200\n"
-"PO-Revision-Date: 2008-05-13 13:57-0400\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
+"POT-Creation-Date: 2011-08-30 14:58+0200\n"
+"PO-Revision-Date: 2011-08-30 02:17+0200\n"
 "Last-Translator: \n"
-"Language-Team:  <cs@li.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: pg_ctl.c:200 pg_ctl.c:215 pg_ctl.c:1327
+#: pg_ctl.c:229 pg_ctl.c:244 pg_ctl.c:1857
 #, c-format
 msgid "%s: out of memory\n"
-msgstr "%s: nedostatek pamìti\n"
+msgstr "%s: nedostatek pamÄ›ti\n"
 
-#: pg_ctl.c:249
+#: pg_ctl.c:278
 #, c-format
-msgid "%s: could not open PID file \"%s\": %s"
-msgstr "%s: nelze otevøít PID soubor \"%s\": %s"
+msgid "%s: could not open PID file \"%s\": %s\n"
+msgstr "%s: nelze otevÅ™Ã­t PID soubor \"%s\": %s\n"
 
-#: pg_ctl.c:468
+#: pg_ctl.c:285
 #, c-format
-msgid "%s: another postmaster may be running; trying to start postmaster anyway\n"
-msgstr "%s: dal¹í postmaster mo¾ná bì¾í; i tak zkou¹ím start\n"
-
-#: pg_ctl.c:486
-#, c-format
-msgid "%s: could not read file \"%s\"\n"
-msgstr "%s: nelze èíst soubor \"%s\"\n"
-
-#: pg_ctl.c:492
-#, c-format
-msgid "%s: option file \"%s\" must have exactly one line\n"
-msgstr "%s: soubor s pøepínaèi \"%s\" musí mít pøesnì 1 øádku\n"
-
-#: pg_ctl.c:543
-#, c-format
-msgid ""
-"The program \"postmaster\" is needed by %s but was not found in the\n"
-"same directory as \"%s\".\n"
-"Check your installation.\n"
-msgstr ""
-"%s potøebuje program \"postmaster\", kterı ale nebyl  nalezen ve stejném\n"
-"adresáøi jako \"%s\".\n"
-"Zkontrolujte va¹i instalaci.\n"
-
-#: pg_ctl.c:549
-#, c-format
-msgid ""
-"The program \"postmaster\" was found by \"%s\"\n"
-"but was not the same version as %s.\n"
-"Check your installation.\n"
-msgstr ""
-"\"%s\" nalezl program \"postmaster\",\n"
-"ten je ale jiné verze ne¾ %s.\n"
-"Zkontrolujte va¹i instalaci.\n"
+msgid "%s: invalid data in PID file \"%s\"\n"
+msgstr "%s: neplatnÃ¡ data v PID souboru \"%s\"\n"
 
 #: pg_ctl.c:561
 #, c-format
-msgid "%s: could not start postmaster: exit code was %d\n"
-msgstr "%s: nelze nastartovat postmaster: návratovı kód byl %d\n"
+msgid "%s: cannot set core file size limit; disallowed by hard limit\n"
+msgstr "%s: nelze nastavit limit pro core soubor; zakÃ¡zÃ¡no hard limitem\n"
 
-#: pg_ctl.c:572
+#: pg_ctl.c:586
+#, c-format
+msgid "%s: could not read file \"%s\"\n"
+msgstr "%s: nelze ÄÃ­st soubor \"%s\"\n"
+
+#: pg_ctl.c:591
+#, c-format
+msgid "%s: option file \"%s\" must have exactly one line\n"
+msgstr "%s: soubor s volbami \"%s\" musÃ­ mÃ­t pÅ™esnÄ› jednu Å™Ã¡dku\n"
+
+#: pg_ctl.c:639
 #, c-format
 msgid ""
-"%s: could not start postmaster\n"
+"The program \"%s\" is needed by %s but was not found in the\n"
+"same directory as \"%s\".\n"
+"Check your installation.\n"
+msgstr ""
+"Program \"%s\" je vyÅ¾adovÃ¡n aplikacÃ­ %s, ale nebyl nalezen ve stejnÃ©m\n"
+"adresÃ¡Å™i jako \"%s\".\n"
+"Zkontrolujte vaÅ¡i instalaci.\n"
+
+#: pg_ctl.c:645
+#, c-format
+msgid ""
+"The program \"%s\" was found by \"%s\"\n"
+"but was not the same version as %s.\n"
+"Check your installation.\n"
+msgstr ""
+"Program \"%s\" byl nalezen pomocÃ­ \"%s\",\n"
+"ale nebyl ve stejnÃ© verzi jako %s.\n"
+"Zkontrolujte vaÅ¡i instalaci.\n"
+
+#: pg_ctl.c:678
+#, c-format
+msgid "%s: database system initialization failed\n"
+msgstr "%s: inicializace databÃ¡ze selhalo\n"
+
+#: pg_ctl.c:694
+#, c-format
+msgid "%s: another server might be running; trying to start server anyway\n"
+msgstr "%s: dalÅ¡Ã­ server moÅ¾nÃ¡ bÄ›Å¾Ã­; i tak zkouÅ¡Ã­m start\n"
+
+#: pg_ctl.c:731
+#, c-format
+msgid "%s: could not start server: exit code was %d\n"
+msgstr "%s: nelze nastartovat server: nÃ¡vratovÃ½ kÃ³d byl %d\n"
+
+#: pg_ctl.c:742 pg_ctl.c:755
+#, c-format
+msgid ""
+"%s: could not start server\n"
 "Examine the log output.\n"
 msgstr ""
-"%s: nelze spustit postmaster\n"
-"Zkontrolujte záznam v logu.\n"
+"%s: nelze spustit server\n"
+"Zkontrolujte zÃ¡znam v logu.\n"
 
-#: pg_ctl.c:581
-msgid "waiting for postmaster to start..."
-msgstr "èekám na start postmastera..."
+#: pg_ctl.c:751
+msgid "waiting for server to start..."
+msgstr "ÄekÃ¡m na start serveru ..."
 
-#: pg_ctl.c:584
-#, c-format
-msgid "could not start postmaster\n"
-msgstr "nebylo mo¾no spustit postmaster\n"
-
-#: pg_ctl.c:587 pg_ctl.c:653 pg_ctl.c:720
+#: pg_ctl.c:762 pg_ctl.c:843 pg_ctl.c:931
 msgid " done\n"
 msgstr " hotovo\n"
 
-#: pg_ctl.c:588
-msgid "postmaster started\n"
-msgstr "postmaster spu¹tìn\n"
+#: pg_ctl.c:763
+msgid "server started\n"
+msgstr "server spuÅ¡tÄ›n\n"
 
-#: pg_ctl.c:592
-msgid "postmaster starting\n"
-msgstr "postmaster startuje\n"
+#: pg_ctl.c:767
+msgid "server starting\n"
+msgstr "server startuje\n"
 
-#: pg_ctl.c:606 pg_ctl.c:674 pg_ctl.c:734
+#: pg_ctl.c:782 pg_ctl.c:865 pg_ctl.c:953
 #, c-format
 msgid "%s: PID file \"%s\" does not exist\n"
 msgstr "%s: PID soubor \"%s\" neexistuje\n"
 
-#: pg_ctl.c:607 pg_ctl.c:675 pg_ctl.c:735
-msgid "Is postmaster running?\n"
-msgstr "Bì¾í postmaster?\n"
+#: pg_ctl.c:783 pg_ctl.c:867 pg_ctl.c:954
+msgid "Is server running?\n"
+msgstr "BÄ›Å¾Ã­ server?\n"
 
-#: pg_ctl.c:613
+#: pg_ctl.c:789
 #, c-format
-msgid "%s: cannot stop postmaster; postgres is running (PID: %ld)\n"
-msgstr "%s: nemohu zastavit postmaster; postgres bì¾í (PID: %ld)\n"
+msgid "%s: cannot stop server; single-user server is running (PID: %ld)\n"
+msgstr "%s: nemohu zastavit server; postgres bÄ›Å¾Ã­ (PID: %ld)\n"
 
-#: pg_ctl.c:621 pg_ctl.c:692
+#: pg_ctl.c:797 pg_ctl.c:889
 #, c-format
 msgid "%s: could not send stop signal (PID: %ld): %s\n"
-msgstr "%s: nelze poslat stop signál (PID: %ld): %s\n"
+msgstr "%s: nelze poslat stop signÃ¡l (PID: %ld): %s\n"
 
-#: pg_ctl.c:628
-msgid "postmaster shutting down\n"
-msgstr "postmaster se ukonèuje\n"
+#: pg_ctl.c:804
+msgid "server shutting down\n"
+msgstr "server se ukonÄuje\n"
 
-#: pg_ctl.c:633 pg_ctl.c:697
-msgid "waiting for postmaster to shut down..."
-msgstr "èekám na ukonèení postmastera..."
+#: pg_ctl.c:819 pg_ctl.c:904
+msgid ""
+"WARNING: online backup mode is active\n"
+"Shutdown will not complete until pg_stop_backup() is called.\n"
+"\n"
+msgstr ""
+"VAROVÃNÃ: online backup mÃ³d je aktivnÃ­\n"
+"Shutdown nebude ukonÄen dokud nebude zavolÃ¡n pg_stop_backup().\n"
+"\n"
 
-#: pg_ctl.c:648 pg_ctl.c:714
+#: pg_ctl.c:823 pg_ctl.c:908
+msgid "waiting for server to shut down..."
+msgstr "ÄekÃ¡m na ukonÄenÃ­ serveru ..."
+
+#: pg_ctl.c:838 pg_ctl.c:925
 msgid " failed\n"
 msgstr " selhalo\n"
 
-#: pg_ctl.c:650 pg_ctl.c:716
+#: pg_ctl.c:840 pg_ctl.c:927
 #, c-format
-msgid "%s: postmaster does not shut down\n"
-msgstr "%s: postmaster se neukonèuje\n"
+msgid "%s: server does not shut down\n"
+msgstr "%s: server se neukonÄuje\n"
 
-#: pg_ctl.c:655 pg_ctl.c:721
+#: pg_ctl.c:845 pg_ctl.c:932
+msgid "server stopped\n"
+msgstr "server zastaven\n"
+
+#: pg_ctl.c:868 pg_ctl.c:938
+msgid "starting server anyway\n"
+msgstr "pÅ™esto server spouÅ¡tÃ­m\n"
+
+#: pg_ctl.c:877
 #, c-format
-msgid "postmaster stopped\n"
-msgstr "postmaster zastaven\n"
+msgid "%s: cannot restart server; single-user server is running (PID: %ld)\n"
+msgstr "%s: nemohu restartovat server; postgres bÄ›Å¾Ã­ (PID: %ld)\n"
 
-#: pg_ctl.c:676
-msgid "starting postmaster anyway\n"
-msgstr "pøesto postmaster spou¹tím\n"
+#: pg_ctl.c:880 pg_ctl.c:963
+msgid "Please terminate the single-user server and try again.\n"
+msgstr "ProsÃ­m ukonÄete single-user postgres a zkuste to znovu.\n"
 
-#: pg_ctl.c:683
+#: pg_ctl.c:936
 #, c-format
-msgid "%s: cannot restart postmaster; postgres is running (PID: %ld)\n"
-msgstr "%s: nemohu restartovat postmaster; postgres bì¾í (PID: %ld)\n"
+msgid "%s: old server process (PID: %ld) seems to be gone\n"
+msgstr "%s: starÃ½ proces serveru (PID: %ld) zÅ™ejmÄ› skonÄil\n"
 
-#: pg_ctl.c:686 pg_ctl.c:744
-msgid "Please terminate postgres and try again.\n"
-msgstr "Prosím ukonèete postgres a zkuste znovu.\n"
-
-#: pg_ctl.c:741
+#: pg_ctl.c:960
 #, c-format
-msgid "%s: cannot reload postmaster; postgres is running (PID: %ld)\n"
-msgstr "%s: nemohu znovunaèíst postmaster; postgres bì¾í (PID: %ld)\n"
+msgid "%s: cannot reload server; single-user server is running (PID: %ld)\n"
+msgstr ""
+"%s: nemohu znovunaÄÃ­st server; server bÄ›Å¾Ã­ v single-user mÃ³du (PID: %ld)\n"
 
-#: pg_ctl.c:750
+#: pg_ctl.c:969
 #, c-format
 msgid "%s: could not send reload signal (PID: %ld): %s\n"
-msgstr "%s: nelze poslat signál pro reload (PID: %ld): %s\n"
+msgstr "%s: nelze poslat signÃ¡l pro reload (PID: %ld): %s\n"
 
-#: pg_ctl.c:755
-msgid "postmaster signaled\n"
-msgstr "postmaster obdr¾el signál\n"
+#: pg_ctl.c:974
+msgid "server signaled\n"
+msgstr "server obdrÅ¾el signÃ¡l\n"
 
-#: pg_ctl.c:770
+#: pg_ctl.c:1018
 #, c-format
-msgid "%s: neither postmaster nor postgres running\n"
-msgstr "%s: postmaster ani postgres nebì¾í\n"
+msgid "%s: single-user server is running (PID: %ld)\n"
+msgstr "%s: server bÄ›Å¾Ã­ v single-user mÃ³du (PID: %ld)\n"
 
-#: pg_ctl.c:776
+#: pg_ctl.c:1030
 #, c-format
-msgid "%s: a standalone backend \"postgres\" is running (PID: %ld)\n"
-msgstr "%s: samostatnı \"postgres\" bì¾í (PID: %ld)\n"
+msgid "%s: server is running (PID: %ld)\n"
+msgstr "%s: server bÄ›Å¾Ã­ (PID: %ld)\n"
 
-#: pg_ctl.c:783
+#: pg_ctl.c:1041
 #, c-format
-msgid "%s: postmaster is running (PID: %ld)\n"
-msgstr "%s: postmaster bì¾í (PID: %ld)\n"
+msgid "%s: no server running\n"
+msgstr "%s: Å¾Ã¡dnÃ½ server nebÄ›Å¾Ã­\n"
 
-#: pg_ctl.c:799
+#: pg_ctl.c:1052
 #, c-format
 msgid "%s: could not send signal %d (PID: %ld): %s\n"
-msgstr "%s: nelze poslat signál pro reload %d (PID: %ld): %s\n"
+msgstr "%s: nelze poslat signÃ¡l pro reload %d (PID: %ld): %s\n"
 
-#: pg_ctl.c:829
+#: pg_ctl.c:1086
 #, c-format
 msgid "%s: could not find own program executable\n"
-msgstr "%s: nelze najít exe\n"
+msgstr "%s: nemÅ¯Å¾e najÃ­t vlastnÃ­ spustitelnÃ½ soubor\n"
 
-#: pg_ctl.c:838
+#: pg_ctl.c:1096
 #, c-format
-msgid "%s: could not find postmaster program executable\n"
-msgstr "%s: nelze najít spustitelnı postmaster\n"
+msgid "%s: could not find postgres program executable\n"
+msgstr "%s: nelze najÃ­t spustitelnÃ½ program postgres\n"
 
-#: pg_ctl.c:886 pg_ctl.c:918
+#: pg_ctl.c:1161 pg_ctl.c:1193
 #, c-format
 msgid "%s: could not open service manager\n"
-msgstr "%s: nelze otevøít mana¾era slu¾eb\n"
+msgstr "%s: nelze otevÅ™Ã­t manaÅ¾era sluÅ¾eb\n"
 
-#: pg_ctl.c:892
+#: pg_ctl.c:1167
 #, c-format
 msgid "%s: service \"%s\" already registered\n"
-msgstr "%s: slu¾ba \"%s\" je ji¾ registrována\n"
+msgstr "%s: sluÅ¾ba \"%s\" je jiÅ¾ registrovÃ¡na\n"
 
-#: pg_ctl.c:903
+#: pg_ctl.c:1178
 #, c-format
 msgid "%s: could not register service \"%s\": error code %d\n"
-msgstr "%s: nelze zaregistrovat slu¾bu \"%s\": chybovı kód %d\n"
+msgstr "%s: nelze zaregistrovat sluÅ¾bu \"%s\": chybovÃ½ kÃ³d %d\n"
 
-#: pg_ctl.c:924
+#: pg_ctl.c:1199
 #, c-format
 msgid "%s: service \"%s\" not registered\n"
-msgstr "%s: slu¾ba \"%s\" není registrována\n"
+msgstr "%s: sluÅ¾ba \"%s\" nenÃ­ registrovÃ¡na\n"
 
-#: pg_ctl.c:931
+#: pg_ctl.c:1206
 #, c-format
 msgid "%s: could not open service \"%s\": error code %d\n"
-msgstr "%s: nelze otevøít slu¾bu \"%s\": chıbovı kód %d\n"
+msgstr "%s: nelze otevÅ™Ã­t sluÅ¾bu \"%s\": chÃ½bovÃ½ kÃ³d %d\n"
 
-#: pg_ctl.c:938
+#: pg_ctl.c:1213
 #, c-format
 msgid "%s: could not unregister service \"%s\": error code %d\n"
-msgstr "%s: nelze odregistrovat slu¾bu \"%s\": chıbovı kód %d\n"
+msgstr "%s: nelze odregistrovat sluÅ¾bu \"%s\": chÃ½bovÃ½ kÃ³d %d\n"
 
-#: pg_ctl.c:1075
+#: pg_ctl.c:1299
+msgid "Waiting for server startup...\n"
+msgstr "ÄekÃ¡m na start serveru ...\n"
+
+#: pg_ctl.c:1302
+msgid "Timed out waiting for server startup\n"
+msgstr "ÄŒasovÃ½ limit pro ÄekÃ¡nÃ­ na start serveru vyprÅ¡el\n"
+
+#: pg_ctl.c:1306
+msgid "Server started and accepting connections\n"
+msgstr "Server nastartoval a pÅ™ijÃ­mÃ¡ spojenÃ­\n"
+
+#: pg_ctl.c:1356
+#, c-format
+msgid "%s: could not start service \"%s\": error code %d\n"
+msgstr "%s: nelze zaregistrovat sluÅ¾bu \"%s\": chybovÃ½ kÃ³d %d\n"
+
+#: pg_ctl.c:1591
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
-msgstr "Zkuste \"%s --help\" pro více informací.\n"
+msgstr "Zkuste \"%s --help\" pro vÃ­ce informacÃ­.\n"
 
-#: pg_ctl.c:1083
+#: pg_ctl.c:1599
 #, c-format
 msgid ""
 "%s is a utility to start, stop, restart, reload configuration files,\n"
 "report the status of a PostgreSQL server, or signal a PostgreSQL process.\n"
 "\n"
 msgstr ""
-"%s je pomùcka pro spu¹tìní, zastavení, restart, znovunaètení konfiguraèních\n"
-"souborù, nahlá¹ení stavu PostgreSQL serveru nebo ukonèení PostgreSQL procesu.\n"
+"%s je pomÅ¯cka pro spuÅ¡tÄ›nÃ­, zastavenÃ­, restart, znovunaÄtenÃ­ konfiguraÄnÃ­ch\n"
+"souborÅ¯, nahlÃ¡Å¡enÃ­ stavu PostgreSQL serveru nebo ukonÄenÃ­ PostgreSQL "
+"procesu.\n"
 "\n"
 
-#: pg_ctl.c:1085
+#: pg_ctl.c:1601
 #, c-format
 msgid "Usage:\n"
-msgstr "Pou¾ití:\n"
+msgstr "PouÅ¾itÃ­:\n"
 
-#: pg_ctl.c:1086
+#: pg_ctl.c:1602
 #, c-format
-msgid "  %s start   [-w] [-D DATADIR] [-s] [-l FILENAME] [-o \"OPTIONS\"]\n"
-msgstr "  %s start   [-w] [-D ADRESÁØ] [-s] [-l SOUBOR] [-o \"PØEPÍNAÈE\"]\n"
+msgid "  %s init[db]               [-D DATADIR] [-s] [-o \"OPTIONS\"]\n"
+msgstr "  %s init[db]               [-D ADRESÃÅ˜] [-s] [-o \"PÅ˜EPÃNAÄŒE\"]\n"
 
-#: pg_ctl.c:1087
+#: pg_ctl.c:1603
 #, c-format
-msgid "  %s stop    [-W] [-D DATADIR] [-s] [-m SHUTDOWN-MODE]\n"
-msgstr "  %s stop    [-W] [-D ADRESÁØ] [-s] [-m MÓD-UKONÈENÍ]\n"
+msgid ""
+"  %s start   [-w] [-t SECS] [-D DATADIR] [-s] [-l FILENAME] [-o \"OPTIONS"
+"\"]\n"
+msgstr ""
+"  %s start   [-w] [-t SECS] [-D ADRESÃÅ˜] [-s] [-l SOUBOR] [-o \"PÅ˜EPÃNAÄŒE"
+"\"]\n"
 
-#: pg_ctl.c:1088
+#: pg_ctl.c:1604
 #, c-format
-msgid "  %s restart [-w] [-D DATADIR] [-s] [-m SHUTDOWN-MODE] [-o \"OPTIONS\"]\n"
-msgstr "  %s restart [-w] [-D ADRESÁØ] [-s] [-m MÓD-UKONÈENÍ] [-o \"PØEPÍNAÈE\"]\n"
+msgid "  %s stop    [-W] [-t SECS] [-D DATADIR] [-s] [-m SHUTDOWN-MODE]\n"
+msgstr "  %s stop    [-W] [-t SECS] [-D ADRESÃÅ˜] [-s] [-m MÃ“D-UKONÄŒENÃ]\n"
 
-#: pg_ctl.c:1089
+#: pg_ctl.c:1605
+#, c-format
+msgid ""
+"  %s restart [-w] [-t SECS] [-D DATADIR] [-s] [-m SHUTDOWN-MODE]\n"
+"                 [-o \"OPTIONS\"]\n"
+msgstr ""
+"  %s restart [-w] [-t SECS] [-D ADRESÃÅ˜] [-s] [-m MÃ“D-UKONÄŒENÃ]\n"
+"                 [-o \"PÅ˜EPÃNAÄŒE\"]\n"
+
+#: pg_ctl.c:1607
 #, c-format
 msgid "  %s reload  [-D DATADIR] [-s]\n"
-msgstr "  %s reload  [-D ADRESÁØ] [-s]\n"
+msgstr "  %s reload  [-D ADRESÃÅ˜] [-s]\n"
 
-#: pg_ctl.c:1090
+#: pg_ctl.c:1608
 #, c-format
 msgid "  %s status  [-D DATADIR]\n"
-msgstr "  %s status  [-D ADRESÁØ]\n"
+msgstr "  %s status  [-D ADRESÃÅ˜]\n"
 
-#: pg_ctl.c:1091
+#: pg_ctl.c:1609
 #, c-format
 msgid "  %s kill    SIGNALNAME PID\n"
-msgstr "  %s kill    SIGNÁL  IDPROCESU\n"
+msgstr "  %s kill    SIGNÃL  IDPROCESU\n"
 
-#: pg_ctl.c:1093
+#: pg_ctl.c:1611
 #, c-format
 msgid ""
 "  %s register   [-N SERVICENAME] [-U USERNAME] [-P PASSWORD] [-D DATADIR]\n"
-"                    [-w] [-o \"OPTIONS\"]\n"
+"                    [-w] [-t SECS] [-o \"OPTIONS\"]\n"
 msgstr ""
 "  %s register   [-N SERVICENAME] [-U USERNAME] [-P PASSWORD] [-D DATADIR]\n"
 "                    [-w] [-o \"OPTIONS\"]\n"
 
-#: pg_ctl.c:1095
+#: pg_ctl.c:1613
 #, c-format
 msgid "  %s unregister [-N SERVICENAME]\n"
 msgstr "  %s unregister [-N SERVICENAME]\n"
 
-#: pg_ctl.c:1098
+#: pg_ctl.c:1616
 #, c-format
 msgid ""
 "\n"
 "Common options:\n"
 msgstr ""
 "\n"
-"Spoleèné pøepínaèe:\n"
+"SpoleÄnÃ© pÅ™epÃ­naÄe:\n"
 
-#: pg_ctl.c:1099
+#: pg_ctl.c:1617
 #, c-format
 msgid "  -D, --pgdata DATADIR   location of the database storage area\n"
-msgstr "  -D, --pgdata ADRESÁØ   umístìní úlo¾i¹tì databáze\n"
+msgstr "  -D, --pgdata ADRESÃÅ˜   umÃ­stÄ›nÃ­ ÃºloÅ¾iÅ¡tÄ› databÃ¡ze\n"
 
-#: pg_ctl.c:1100
+#: pg_ctl.c:1618
 #, c-format
 msgid "  -s, --silent           only print errors, no informational messages\n"
-msgstr "  -s, --silent           vypisuj jen chyby, ¾ádné informativní zprávy\n"
+msgstr ""
+"  -s, --silent           vypisuj jen chyby, Å¾Ã¡dnÃ© informativnÃ­ zprÃ¡vy\n"
 
-#: pg_ctl.c:1101
+#: pg_ctl.c:1619
+#, c-format
+msgid "  -t SECS                seconds to wait when using -w option\n"
+msgstr ""
+"  -t SECS                poÄet vteÅ™in pro ÄekÃ¡nÃ­ pÅ™i vyuÅ¾itÃ­ volby -w\n"
+
+#: pg_ctl.c:1620
 #, c-format
 msgid "  -w                     wait until operation completes\n"
-msgstr "  -w                     èekat na dokonèení operace\n"
+msgstr "  -w                     Äekat na dokonÄenÃ­ operace\n"
 
-#: pg_ctl.c:1102
+#: pg_ctl.c:1621
 #, c-format
 msgid "  -W                     do not wait until operation completes\n"
-msgstr "  -W                     neèekat na dokonèení operace\n"
+msgstr "  -W                     neÄekat na dokonÄenÃ­ operace\n"
 
-#: pg_ctl.c:1103
+#: pg_ctl.c:1622
 #, c-format
 msgid "  --help                 show this help, then exit\n"
-msgstr "  --help                 vypsat tuto nápovìdu, potom skonèit\n"
+msgstr "  --help                 vypsat tuto nÃ¡povÄ›du, potom skonÄit\n"
 
-#: pg_ctl.c:1104
+#: pg_ctl.c:1623
 #, c-format
 msgid "  --version              output version information, then exit\n"
-msgstr "  --version              vypsat informace o verzi, potom skonèit\n"
+msgstr "  --version              vypsat informace o verzi, potom skonÄit\n"
 
-#: pg_ctl.c:1105
+#: pg_ctl.c:1624
 #, c-format
 msgid ""
 "(The default is to wait for shutdown, but not for start or restart.)\n"
 "\n"
 msgstr ""
-"(Vıchozí chování je èekat na ukonèení, ale ne pøi startu nebo restartu.)\n"
+"(VÃ½chozÃ­ chovÃ¡nÃ­ je Äekat na ukonÄenÃ­, ale ne pÅ™i startu nebo restartu.)\n"
 "\n"
 
-#: pg_ctl.c:1106
+#: pg_ctl.c:1625
 #, c-format
 msgid "If the -D option is omitted, the environment variable PGDATA is used.\n"
-msgstr "Pokud je vynechán parametr -D, pou¾ije se promìnná prostøedí PGDATA.\n"
+msgstr "Pokud je vynechÃ¡n parametr -D, pouÅ¾ije se promÄ›nnÃ¡ prostÅ™edÃ­ PGDATA.\n"
 
-#: pg_ctl.c:1108
+#: pg_ctl.c:1627
 #, c-format
 msgid ""
 "\n"
 "Options for start or restart:\n"
 msgstr ""
 "\n"
-"Pøepínaèe pro start nebo restart:\n"
+"PÅ™epÃ­naÄe pro start nebo restart:\n"
 
-#: pg_ctl.c:1109
+#: pg_ctl.c:1629
+#, c-format
+msgid "  -c, --core-files       allow postgres to produce core files\n"
+msgstr "  -c, --core-files       povolit postgresu vytvÃ¡Å™et core soubory\n"
+
+#: pg_ctl.c:1631
+#, c-format
+msgid "  -c, --core-files       not applicable on this platform\n"
+msgstr "  -c, --core-files       nepouÅ¾itelnÃ© pro tuto platformu\n"
+
+#: pg_ctl.c:1633
 #, c-format
 msgid "  -l, --log FILENAME     write (or append) server log to FILENAME\n"
-msgstr "  -l, --log SOUBOR        zapisuj (nebo pøipoj na konec) log serveru do SOUBORU.\n"
+msgstr ""
+"  -l, --log SOUBOR        zapisuj (nebo pÅ™ipoj na konec) log serveru do "
+"SOUBORU.\n"
 
-#: pg_ctl.c:1110
+#: pg_ctl.c:1634
 #, c-format
 msgid ""
-"  -o OPTIONS             command line options to pass to the postmaster\n"
-"                         (PostgreSQL server executable)\n"
+"  -o OPTIONS             command line options to pass to postgres\n"
+"                         (PostgreSQL server executable) or initdb\n"
 msgstr ""
-"  -o PØEPÍNAÈE            pøepínaèe, které budou pøedány postmasteru\n"
-"                          (co¾ je vlastní program PostgreSQL serveru)\n"
+"  -o PÅ˜EPÃNAÄŒE            pÅ™epÃ­naÄe, kterÃ© budou pÅ™edÃ¡ny postgresu\n"
+"                          (spustitelnÃ©mu souboru PostgreSQL) Äi initdb\n"
 
-#: pg_ctl.c:1112
+#: pg_ctl.c:1636
 #, c-format
-msgid "  -p PATH-TO-POSTMASTER  normally not necessary\n"
-msgstr "  -p CESTA-K-POSTMASTERU  za normálních okolností není potøeba\n"
+msgid "  -p PATH-TO-POSTGRES    normally not necessary\n"
+msgstr "  -p CESTA-K-POSTGRESU  za normÃ¡lnÃ­ch okolnostÃ­ nenÃ­ potÅ™eba\n"
 
-#: pg_ctl.c:1114
+#: pg_ctl.c:1637
 #, c-format
 msgid ""
 "\n"
 "Options for stop or restart:\n"
 msgstr ""
 "\n"
-"Pøepínaèe pro zastavení nebo restart:\n"
+"PÅ™epÃ­naÄe pro zastavenÃ­ nebo restart:\n"
 
-#: pg_ctl.c:1115
+#: pg_ctl.c:1638
 #, c-format
-msgid "  -m SHUTDOWN-MODE   may be \"smart\", \"fast\", or \"immediate\"\n"
-msgstr "  -m SHUTDOWN-MODE   mù¾e bıt \"smart\", \"fast\", or \"immediate\"\n"
+msgid "  -m SHUTDOWN-MODE   can be \"smart\", \"fast\", or \"immediate\"\n"
+msgstr "  -m SHUTDOWN-MODE   mÅ¯Å¾e bÃ½t \"smart\", \"fast\", or \"immediate\"\n"
 
-#: pg_ctl.c:1117
+#: pg_ctl.c:1640
 #, c-format
 msgid ""
 "\n"
 "Shutdown modes are:\n"
 msgstr ""
 "\n"
-"Módy ukonèení jsou:\n"
+"MÃ³dy ukonÄenÃ­ jsou:\n"
 
-#: pg_ctl.c:1118
+#: pg_ctl.c:1641
 #, c-format
 msgid "  smart       quit after all clients have disconnected\n"
-msgstr "  smart       skonèi potom, co se odpojí v¹ichni klienti\n"
+msgstr "  smart       skonÄi potom, co se odpojÃ­ vÅ¡ichni klienti\n"
 
-#: pg_ctl.c:1119
+#: pg_ctl.c:1642
 #, c-format
 msgid "  fast        quit directly, with proper shutdown\n"
-msgstr "  fast        skonèi ihned, s patøiènım ukonèením\n"
+msgstr "  fast        skonÄi ihned, s patÅ™iÄnÃ½m ukonÄenÃ­m\n"
 
-#: pg_ctl.c:1120
+#: pg_ctl.c:1643
 #, c-format
 msgid ""
 "  immediate   quit without complete shutdown; will lead to recovery on "
 "restart\n"
 msgstr ""
-"  immediate   skonèi bez úplného ukonèení; pøi dal¹ím startu se spustí "
-"obnovení\n"
+"  immediate   skonÄi bez ÃºplnÃ©ho ukonÄenÃ­; pÅ™i dalÅ¡Ã­m startu se spustÃ­ "
+"obnovenÃ­\n"
 
-#: pg_ctl.c:1122
+#: pg_ctl.c:1645
 #, c-format
 msgid ""
 "\n"
 "Allowed signal names for kill:\n"
 msgstr ""
 "\n"
-"Povolené signály pro \"kill\":\n"
+"PovolenÃ© signÃ¡ly pro \"kill\":\n"
 
-#: pg_ctl.c:1126
+#: pg_ctl.c:1649
 #, c-format
 msgid ""
 "\n"
 "Options for register and unregister:\n"
 msgstr ""
 "\n"
-"Pøepínaèe pro register nebo unregister:\n"
+"PÅ™epÃ­naÄe pro register nebo unregister:\n"
 
-#: pg_ctl.c:1127
+#: pg_ctl.c:1650
 #, c-format
-msgid "  -N SERVICENAME  service name with which to register PostgreSQL server\n"
-msgstr "  -N SERVICENAME  jméno slu¾by, pod kterım registrovat PostgreSQL server\n"
+msgid ""
+"  -N SERVICENAME  service name with which to register PostgreSQL server\n"
+msgstr ""
+"  -N SERVICENAME  jmÃ©no sluÅ¾by, pod kterÃ½m registrovat PostgreSQL server\n"
 
-#: pg_ctl.c:1128
+#: pg_ctl.c:1651
 #, c-format
 msgid "  -P PASSWORD     password of account to register PostgreSQL server\n"
-msgstr "  -P PASSWORD     heslo k úètu pro registraci PostgreSQL serveru\n"
+msgstr "  -P PASSWORD     heslo k ÃºÄtu pro registraci PostgreSQL serveru\n"
 
-#: pg_ctl.c:1129
+#: pg_ctl.c:1652
 #, c-format
 msgid "  -U USERNAME     user name of account to register PostgreSQL server\n"
-msgstr "  -U USERNAME     u¾ivatelské jméno pro registraci PostgreSQL server\n"
+msgstr "  -U USERNAME     uÅ¾ivatelskÃ© jmÃ©no pro registraci PostgreSQL server\n"
 
-#: pg_ctl.c:1132
+#: pg_ctl.c:1655
 #, c-format
 msgid ""
 "\n"
@@ -455,56 +534,137 @@ msgstr ""
 "\n"
 "Chyby hlaste na adresu <pgsql-bugs@postgresql.org>.\n"
 
-#: pg_ctl.c:1157
+#: pg_ctl.c:1680
 #, c-format
 msgid "%s: unrecognized shutdown mode \"%s\"\n"
-msgstr "%s: neplatnı shutdown mode \"%s\"\n"
+msgstr "%s: neplatnÃ½ mÃ³d ukonÄenÃ­ mode \"%s\"\n"
 
-#: pg_ctl.c:1190
+#: pg_ctl.c:1713
 #, c-format
 msgid "%s: unrecognized signal name \"%s\"\n"
-msgstr "%s: neplatné jméno signálu \"%s\"\n"
+msgstr "%s: neplatnÃ© jmÃ©no signÃ¡lu \"%s\"\n"
 
-#: pg_ctl.c:1255
+#: pg_ctl.c:1778
 #, c-format
 msgid ""
 "%s: cannot be run as root\n"
 "Please log in (using, e.g., \"su\") as the (unprivileged) user that will\n"
 "own the server process.\n"
 msgstr ""
-"%s: nelze spustit jako root root\n"
-"Prosím pøihlaste se (napøíklad pomocí., \"su\") jako (neprivilegovanı) u¾ivatel,\n"
-"kterı bude vlastnit serverovı proces.\n"
+"%s: nelze spustit jako root\n"
+"ProsÃ­m pÅ™ihlaste se (napÅ™Ã­klad pomocÃ­., \"su\") jako (neprivilegovanÃ½) "
+"uÅ¾ivatel,\n"
+"kterÃ½ bude vlastnÃ­kem serverovÃ©ho procesu.\n"
 
-#: pg_ctl.c:1343
-#, c-format
-msgid "%s: invalid option %s\n"
-msgstr "%s: neplatnı pøepínaè %s\n"
-
-#: pg_ctl.c:1354
+#: pg_ctl.c:1887
 #, c-format
 msgid "%s: too many command-line arguments (first is \"%s\")\n"
-msgstr "%s: mnoho parametrù pøíkazové øádky (první je \"%s\")\n"
+msgstr "%s: pÅ™Ã­liÅ¡ mnoho parametrÅ¯ pÅ™Ã­kazovÃ© Å™Ã¡dky (prvnÃ­ je \"%s\")\n"
 
-#: pg_ctl.c:1373
+#: pg_ctl.c:1909
 #, c-format
 msgid "%s: missing arguments for kill mode\n"
-msgstr "%s: chıbìjící argument pro \"kill\" mód\n"
+msgstr "%s: chÃ½bÄ›jÃ­cÃ­ parametr pro \"kill\" mÃ³d\n"
 
-#: pg_ctl.c:1391
+#: pg_ctl.c:1927
 #, c-format
 msgid "%s: unrecognized operation mode \"%s\"\n"
-msgstr "%s: neplatnı mód  \"%s\"\n"
+msgstr "%s: neplatnÃ½ mÃ³d operace \"%s\"\n"
 
-#: pg_ctl.c:1401
+#: pg_ctl.c:1937
 #, c-format
 msgid "%s: no operation specified\n"
-msgstr "%s: není specifikována operace\n"
+msgstr "%s: nenÃ­ specifikovÃ¡na operace\n"
 
-#: pg_ctl.c:1417
+#: pg_ctl.c:1953
 #, c-format
-msgid "%s: no database directory specified and environment variable PGDATA unset\n"
+msgid ""
+"%s: no database directory specified and environment variable PGDATA unset\n"
 msgstr ""
-"%s: není zadán datovı adresáø a ani není nastavena promìnná prostøedí "
+"%s: nenÃ­ zadÃ¡n datovÃ½ adresÃ¡Å™ a ani nenÃ­ nastavena promÄ›nnÃ¡ prostÅ™edÃ­ "
 "PGDATA\n"
 
+#: ../../port/exec.c:125 ../../port/exec.c:239 ../../port/exec.c:282
+#, c-format
+msgid "could not identify current directory: %s"
+msgstr "nelze zÃ­skat aktuÃ¡lnÃ­ adresÃ¡Å™: %s"
+
+#: ../../port/exec.c:144
+#, c-format
+msgid "invalid binary \"%s\""
+msgstr "neplatnÃ½ binÃ¡rnÃ­ soubor\"%s\""
+
+#: ../../port/exec.c:193
+#, c-format
+msgid "could not read binary \"%s\""
+msgstr "nelze ÄÃ­st binÃ¡rnÃ­ soubor \"%s\""
+
+#: ../../port/exec.c:200
+#, c-format
+msgid "could not find a \"%s\" to execute"
+msgstr "nelze najÃ­t spustitelnÃ½ soubor \"%s\""
+
+#: ../../port/exec.c:255 ../../port/exec.c:291
+#, c-format
+msgid "could not change directory to \"%s\""
+msgstr "nelze zmÄ›nit adresÃ¡Å™ na \"%s\""
+
+#: ../../port/exec.c:270
+#, c-format
+msgid "could not read symbolic link \"%s\""
+msgstr "nelze ÄÃ­st symbolickÃ½ link \"%s\""
+
+#: ../../port/exec.c:516
+#, c-format
+msgid "child process exited with exit code %d"
+msgstr "potomek skonÄil s nÃ¡vratovÃ½m kÃ³dem %d"
+
+#: ../../port/exec.c:520
+#, c-format
+msgid "child process was terminated by exception 0x%X"
+msgstr "potomek byl ukonÄen vyjÃ­mkou 0x%X"
+
+#: ../../port/exec.c:529
+#, c-format
+msgid "child process was terminated by signal %s"
+msgstr "potomek byl ukonÄen signÃ¡lem %s"
+
+#: ../../port/exec.c:532
+#, c-format
+msgid "child process was terminated by signal %d"
+msgstr "potomek byl ukonÄen signÃ¡lem %d"
+
+#: ../../port/exec.c:536
+#, c-format
+msgid "child process exited with unrecognized status %d"
+msgstr "potomek skonÄil s nerozponanÃ½m stavem %d"
+
+#~ msgid ""
+#~ "The program \"postmaster\" is needed by %s but was not found in the\n"
+#~ "same directory as \"%s\".\n"
+#~ "Check your installation.\n"
+#~ msgstr ""
+#~ "%s potÅ™ebuje program \"postmaster\", kterÃ½ ale nebyl  nalezen ve stejnÃ©m\n"
+#~ "adresÃ¡Å™i jako \"%s\".\n"
+#~ "Zkontrolujte vaÅ¡i instalaci.\n"
+
+#~ msgid ""
+#~ "The program \"postmaster\" was found by \"%s\"\n"
+#~ "but was not the same version as %s.\n"
+#~ "Check your installation.\n"
+#~ msgstr ""
+#~ "\"%s\" nalezl program \"postmaster\",\n"
+#~ "ten je ale jinÃ© verze neÅ¾ %s.\n"
+#~ "Zkontrolujte vaÅ¡i instalaci.\n"
+
+#~ msgid "could not start postmaster\n"
+#~ msgstr "nebylo moÅ¾no spustit postmaster\n"
+
+#~ msgid "%s: neither postmaster nor postgres running\n"
+#~ msgstr "%s: postmaster ani postgres nebÄ›Å¾Ã­\n"
+
+#~ msgid "%s: a standalone backend \"postgres\" is running (PID: %ld)\n"
+#~ msgstr "%s: samostatnÃ½ \"postgres\" bÄ›Å¾Ã­ (PID: %ld)\n"
+
+#~ msgid "%s: invalid option %s\n"
+#~ msgstr "%s: neplatnÃ½ pÅ™epÃ­naÄ %s\n"
