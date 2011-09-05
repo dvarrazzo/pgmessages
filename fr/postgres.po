@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-83-fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-24 01:26+0000\n"
-"PO-Revision-Date: 2011-06-24 20:04+0100\n"
+"POT-Creation-Date: 2011-09-05 19:26+0000\n"
+"PO-Revision-Date: 2011-09-05 23:08+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team:  <pgsql-fr-generale@postgresql.org>\n"
 "Language: \n"
@@ -705,7 +705,7 @@ msgstr "mauvais format de fichier affixe pour le drapeau"
 #: tsearch/to_tsany.c:166
 #: utils/adt/tsvector.c:227
 #: utils/adt/tsvector.c:276
-#: utils/adt/tsvector_op.c:524
+#: utils/adt/tsvector_op.c:540
 msgid "string is too long for tsvector"
 msgstr "la chaîne est trop longue pour un tsvector"
 
@@ -4290,7 +4290,7 @@ msgstr "format de données binaires incorrect"
 #: commands/indexcmds.c:778
 #: commands/tablecmds.c:1522
 #: parser/parse_expr.c:419
-#: utils/adt/tsvector_op.c:1393
+#: utils/adt/tsvector_op.c:1417
 #, c-format
 msgid "column \"%s\" does not exist"
 msgstr "la colonne « %s » n'existe pas"
@@ -5146,9 +5146,9 @@ msgstr "setval : la valeur %s est en dehors des limites de la séquence « %s » (%
 #: commands/sequence.c:903
 #: lib/stringinfo.c:245
 #: libpq/auth.c:437
-#: libpq/auth.c:815
-#: libpq/auth.c:883
-#: libpq/auth.c:1249
+#: libpq/auth.c:821
+#: libpq/auth.c:889
+#: libpq/auth.c:1255
 #: storage/buffer/buf_init.c:162
 #: storage/buffer/localbuf.c:307
 #: storage/file/fd.c:329
@@ -7142,195 +7142,195 @@ msgstr "en attente d'une réponse SSPI, a reçu un message de type %d"
 msgid "could not accept SSPI security context"
 msgstr "n'a pas pu accepter le contexte de sécurité SSPI"
 
-#: libpq/auth.c:863
+#: libpq/auth.c:869
 msgid "could not get security token from context"
 msgstr "n'a pas pu récupérer le jeton de sécurité à partir du contexte"
 
-#: libpq/auth.c:938
+#: libpq/auth.c:944
 msgid "SSPI not implemented on this server"
 msgstr "SSPI non implémenté sur ce serveur"
 
-#: libpq/auth.c:978
+#: libpq/auth.c:984
 #, c-format
 msgid "authentication failed for user \"%s\": host rejected"
 msgstr "authentification échouée pour l'utilisateur « %s » : hôte rejeté"
 
-#: libpq/auth.c:981
+#: libpq/auth.c:987
 #, c-format
 msgid "Kerberos 5 authentication failed for user \"%s\""
 msgstr "authentification Kerberos 5 échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:984
+#: libpq/auth.c:990
 #, c-format
 msgid "GSSAPI authentication failed for user \"%s\""
 msgstr "authentification GSSAPI échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:987
+#: libpq/auth.c:993
 #, c-format
 msgid "SSPI authentication failed for user \"%s\""
 msgstr "authentification SSPI échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:990
+#: libpq/auth.c:996
 #, c-format
 msgid "\"trust\" authentication failed for user \"%s\""
 msgstr "authentification « trust » échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:993
+#: libpq/auth.c:999
 #, c-format
 msgid "Ident authentication failed for user \"%s\""
 msgstr "authentification Ident échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:998
+#: libpq/auth.c:1004
 #, c-format
 msgid "password authentication failed for user \"%s\""
 msgstr "authentification par mot de passe échouée pour l'utilisateur  « %s »"
 
-#: libpq/auth.c:1002
+#: libpq/auth.c:1008
 #, c-format
 msgid "PAM authentication failed for user \"%s\""
 msgstr "authentification PAM échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:1007
+#: libpq/auth.c:1013
 #, c-format
 msgid "LDAP authentication failed for user \"%s\""
 msgstr "authentification LDAP échouée pour l'utilisateur « %s »"
 
-#: libpq/auth.c:1011
+#: libpq/auth.c:1017
 #, c-format
 msgid "authentication failed for user \"%s\": invalid authentication method"
 msgstr ""
 "authentification échouée pour l'utilisateur « %s » :\n"
 "méthode d'authentification invalide"
 
-#: libpq/auth.c:1040
+#: libpq/auth.c:1046
 msgid "missing or erroneous pg_hba.conf file"
 msgstr "fichier pg_hba.conf manquant ou erroné"
 
-#: libpq/auth.c:1041
+#: libpq/auth.c:1047
 msgid "See server log for details."
 msgstr "Voir les journaux applicatifs du serveur pour plus de détails."
 
-#: libpq/auth.c:1069
+#: libpq/auth.c:1075
 msgid "SSL on"
 msgstr "SSL actif"
 
-#: libpq/auth.c:1069
+#: libpq/auth.c:1075
 msgid "SSL off"
 msgstr "SSL inactif"
 
-#: libpq/auth.c:1067
+#: libpq/auth.c:1073
 #, c-format
 msgid "no pg_hba.conf entry for host \"%s\", user \"%s\", database \"%s\", %s"
 msgstr ""
 "aucune entrée dans pg_hba.conf pour l'hôte « %s », utilisateur « %s »,\n"
 "base de données « %s », %s"
 
-#: libpq/auth.c:1073
+#: libpq/auth.c:1079
 #, c-format
 msgid "no pg_hba.conf entry for host \"%s\", user \"%s\", database \"%s\""
 msgstr ""
 "aucune entrée dans pg_hba.conf pour l'hôte « %s », utilisateur « %s »,\n"
 "base de données « %s »"
 
-#: libpq/auth.c:1117
+#: libpq/auth.c:1123
 #, c-format
 msgid "could not enable credential reception: %m"
 msgstr "n'a pas pu activer la réception de lettres de créance : %m"
 
-#: libpq/auth.c:1278
-#: libpq/auth.c:1509
+#: libpq/auth.c:1284
+#: libpq/auth.c:1515
 msgid "empty password returned by client"
 msgstr "mot de passe vide renvoyé par le client"
 
-#: libpq/auth.c:1288
+#: libpq/auth.c:1294
 #, c-format
 msgid "error from underlying PAM layer: %s"
 msgstr "erreur provenant de la couche PAM : %s"
 
-#: libpq/auth.c:1357
+#: libpq/auth.c:1363
 #, c-format
 msgid "could not create PAM authenticator: %s"
 msgstr "n'a pas pu créer l'authenticateur PAM : %s"
 
-#: libpq/auth.c:1368
+#: libpq/auth.c:1374
 #, c-format
 msgid "pam_set_item(PAM_USER) failed: %s"
 msgstr "pam_set_item(PAM_USER) a échoué : %s"
 
-#: libpq/auth.c:1379
+#: libpq/auth.c:1385
 #, c-format
 msgid "pam_set_item(PAM_CONV) failed: %s"
 msgstr "pam_set_item(PAM_CONV) a échoué : %s"
 
-#: libpq/auth.c:1390
+#: libpq/auth.c:1396
 #, c-format
 msgid "pam_authenticate failed: %s"
 msgstr "pam_authenticate a échoué : %s"
 
-#: libpq/auth.c:1401
+#: libpq/auth.c:1407
 #, c-format
 msgid "pam_acct_mgmt failed: %s"
 msgstr "pam_acct_mgmt a échoué : %s"
 
-#: libpq/auth.c:1412
+#: libpq/auth.c:1418
 #, c-format
 msgid "could not release PAM authenticator: %s"
 msgstr "n'a pas pu fermer l'authenticateur PAM : %s"
 
-#: libpq/auth.c:1443
+#: libpq/auth.c:1449
 msgid "LDAP configuration URL not specified"
 msgstr "URL de configuration de LDAP non précisée"
 
-#: libpq/auth.c:1495
+#: libpq/auth.c:1501
 #, c-format
 msgid "invalid LDAP URL: \"%s\""
 msgstr "URL LDAP invalide : « %s »"
 
-#: libpq/auth.c:1518
-#: libpq/auth.c:1522
+#: libpq/auth.c:1524
+#: libpq/auth.c:1528
 #, c-format
 msgid "could not initialize LDAP: error code %d"
 msgstr "n'a pas pu initialiser LDAP : code d'erreur %d"
 
-#: libpq/auth.c:1532
+#: libpq/auth.c:1538
 #, c-format
 msgid "could not set LDAP protocol version: error code %d"
 msgstr "n'a pas pu initialiser la version du protocole LDAP : code d'erreur %d"
 
-#: libpq/auth.c:1561
+#: libpq/auth.c:1567
 msgid "could not load wldap32.dll"
 msgstr "n'a pas pu charger wldap32.dll"
 
-#: libpq/auth.c:1569
+#: libpq/auth.c:1575
 msgid "could not load function _ldap_start_tls_sA in wldap32.dll"
 msgstr "n'a pas pu charger la fonction _ldap_start_tls_sA de wldap32.dll"
 
-#: libpq/auth.c:1570
+#: libpq/auth.c:1576
 msgid "LDAP over SSL is not supported on this platform."
 msgstr "LDAP via SSL n'est pas supporté sur cette plateforme."
 
-#: libpq/auth.c:1585
+#: libpq/auth.c:1591
 #, c-format
 msgid "could not start LDAP TLS session: error code %d"
 msgstr "n'a pas pu démarrer la session TLS LDAP : code d'erreur %d"
 
-#: libpq/auth.c:1600
+#: libpq/auth.c:1606
 #, c-format
 msgid "LDAP login failed for user \"%s\" on server \"%s\": error code %d"
 msgstr ""
 "échec de connexion LDAP pour l'utilisateur « %s » sur le serveur « %s » :\n"
 "code d'erreur %d"
 
-#: libpq/auth.c:1636
+#: libpq/auth.c:1642
 #, c-format
 msgid "expected password response, got message type %d"
 msgstr "en attente du mot de passe, a reçu un type de message %d"
 
-#: libpq/auth.c:1664
+#: libpq/auth.c:1670
 msgid "invalid password packet size"
 msgstr "taille du paquet du mot de passe invalide"
 
-#: libpq/auth.c:1668
+#: libpq/auth.c:1674
 msgid "received password packet"
 msgstr "paquet du mot de passe reçu"
 
@@ -7393,7 +7393,7 @@ msgstr "erreur SSL : %s"
 
 #: libpq/be-secure.c:310
 #: libpq/be-secure.c:405
-#: libpq/be-secure.c:922
+#: libpq/be-secure.c:928
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "code d'erreur SSL inconnu : %d"
@@ -7413,103 +7413,103 @@ msgstr "SSL a échoué lors de l'envoi de la requête de re-négotiation"
 msgid "could not create SSL context: %s"
 msgstr "n'a pas pu créer le contexte SSL : %s"
 
-#: libpq/be-secure.c:738
+#: libpq/be-secure.c:744
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "n'a pas pu charger le fichier du certificat serveur « %s » : %s"
 
-#: libpq/be-secure.c:744
+#: libpq/be-secure.c:750
 #, c-format
 msgid "could not access private key file \"%s\": %m"
 msgstr "n'a pas pu accéder au fichier de la clé privée « %s » : %m"
 
-#: libpq/be-secure.c:760
+#: libpq/be-secure.c:766
 #, c-format
 msgid "unsafe permissions on private key file \"%s\""
 msgstr "droits non sûrs sur le fichier de la clé privée « %s »"
 
-#: libpq/be-secure.c:762
+#: libpq/be-secure.c:768
 msgid "File must be owned by the database user and must have no permissions for \"group\" or \"other\"."
 msgstr ""
 "Le fichier doit appartenir au propriétaire de la base de données et ne doit\n"
 "pas avoir de droits pour un groupe ou pour les autres."
 
-#: libpq/be-secure.c:769
+#: libpq/be-secure.c:775
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "n'a pas pu charger le fichier de clé privée « %s » : %s"
 
-#: libpq/be-secure.c:774
+#: libpq/be-secure.c:780
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "échec de la vérification de la clé privée : %s"
 
-#: libpq/be-secure.c:793
+#: libpq/be-secure.c:799
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "n'a pas pu charger le fichier du certificat racine « %s » : %s"
 
-#: libpq/be-secure.c:795
+#: libpq/be-secure.c:801
 msgid "Will not verify client certificates."
 msgstr "Ne vérifiera pas les certificats du client."
 
-#: libpq/be-secure.c:816
+#: libpq/be-secure.c:822
 #, c-format
 msgid "SSL certificate revocation list file \"%s\" ignored"
 msgstr "liste de révocation des certificats SSL « %s » ignorée"
 
-#: libpq/be-secure.c:818
+#: libpq/be-secure.c:824
 msgid "SSL library does not support certificate revocation lists."
 msgstr "La bibliothèque SSL ne supporte pas les listes de révocation des certificats."
 
-#: libpq/be-secure.c:824
+#: libpq/be-secure.c:830
 #, c-format
 msgid "SSL certificate revocation list file \"%s\" not found, skipping: %s"
 msgstr "liste de révocation des certificats SSL « %s » introuvable, continue : %s"
 
-#: libpq/be-secure.c:826
+#: libpq/be-secure.c:832
 msgid "Certificates will not be checked against revocation list."
 msgstr "Les certificats ne seront pas vérifiés avec la liste de révocation."
 
-#: libpq/be-secure.c:867
+#: libpq/be-secure.c:873
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "n'a pas pu initialiser la connexion SSL : %s"
 
-#: libpq/be-secure.c:876
+#: libpq/be-secure.c:882
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "n'a pas pu créer le socket SSL : %s"
 
-#: libpq/be-secure.c:902
+#: libpq/be-secure.c:908
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "n'a pas pu accepter la connexion SSL : %m"
 
-#: libpq/be-secure.c:906
-#: libpq/be-secure.c:917
+#: libpq/be-secure.c:912
+#: libpq/be-secure.c:923
 msgid "could not accept SSL connection: EOF detected"
 msgstr "n'a pas pu accepter la connexion SSL : fin de fichier détecté"
 
-#: libpq/be-secure.c:911
+#: libpq/be-secure.c:917
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "n'a pas pu accepter la connexion SSL : %s"
 
-#: libpq/be-secure.c:962
+#: libpq/be-secure.c:968
 msgid "SSL certificate's common name contains embedded null"
 msgstr "le nom commun du certificat SSL contient un NULL imbriqué"
 
-#: libpq/be-secure.c:969
+#: libpq/be-secure.c:975
 #, c-format
 msgid "SSL connection from \"%s\""
 msgstr "connexion SSL de « %s »"
 
-#: libpq/be-secure.c:1013
+#: libpq/be-secure.c:1019
 msgid "no SSL error reported"
 msgstr "aucune erreur SSL reportée"
 
-#: libpq/be-secure.c:1017
+#: libpq/be-secure.c:1023
 #, c-format
 msgid "SSL error code %lu"
 msgstr "erreur SSL %lu"
@@ -13010,43 +13010,43 @@ msgstr "poids en dehors des limites"
 msgid "word is too long (%ld bytes, max %ld bytes)"
 msgstr "le mot est trop long (%ld octets, max %ld octets)"
 
-#: utils/adt/tsvector_op.c:1142
+#: utils/adt/tsvector_op.c:1166
 msgid "ts_stat query must return one tsvector column"
 msgstr "la requête ts_stat doit renvoyer une colonne tsvector"
 
-#: utils/adt/tsvector_op.c:1329
+#: utils/adt/tsvector_op.c:1353
 #, c-format
 msgid "tsvector column \"%s\" does not exist"
 msgstr "la colonne tsvector « %s » n'existe pas"
 
-#: utils/adt/tsvector_op.c:1335
+#: utils/adt/tsvector_op.c:1359
 #, c-format
 msgid "column \"%s\" is not of tsvector type"
 msgstr "la colonne « %s » n'est pas de type tsvector"
 
-#: utils/adt/tsvector_op.c:1347
+#: utils/adt/tsvector_op.c:1371
 #, c-format
 msgid "configuration column \"%s\" does not exist"
 msgstr "la colonne de configuration « %s » n'existe pas"
 
-#: utils/adt/tsvector_op.c:1353
+#: utils/adt/tsvector_op.c:1377
 #, c-format
 msgid "column \"%s\" is not of regconfig type"
 msgstr "la colonne « %s » n'est pas de type regconfig"
 
-#: utils/adt/tsvector_op.c:1360
+#: utils/adt/tsvector_op.c:1384
 #, c-format
 msgid "configuration column \"%s\" must not be null"
 msgstr "la colonne de configuration « %s » ne doit pas être NULL"
 
-#: utils/adt/tsvector_op.c:1373
+#: utils/adt/tsvector_op.c:1397
 #, c-format
 msgid "text search configuration name \"%s\" must be schema-qualified"
 msgstr ""
 "le nom de la configuration de la recherche plein texte « %s » doit être\n"
 "qualifié par son schéma"
 
-#: utils/adt/tsvector_op.c:1398
+#: utils/adt/tsvector_op.c:1422
 #, c-format
 msgid "column \"%s\" is not of character type"
 msgstr "la colonne « %s » n'est pas de type caractère"
@@ -13211,6 +13211,11 @@ msgstr "n'a pas pu créer le fichier d'initialisation relation-cache « %s » : %m"
 #: utils/cache/relcache.c:3851
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Continue malgré tout, mais quelque chose s'est mal passé."
+
+#: utils/cache/relcache.c:4053
+#, c-format
+msgid "could not remove cache file \"%s\": %m"
+msgstr "n'a pas pu supprimer le fichier cache « %s » : %m"
 
 #: utils/mmgr/aset.c:361
 #, c-format
