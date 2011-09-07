@@ -2419,9 +2419,9 @@ msgid "permission denied for operator family %s"
 msgstr "permissão negada para família de operadores %s"
 
 #: catalog/aclchk.c:3092
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied for collation %s"
-msgstr "permissão negada para relação %s"
+msgstr "permissão negada para ordenação %s"
 
 #: catalog/aclchk.c:3094
 #, c-format
@@ -2514,9 +2514,9 @@ msgid "must be owner of operator family %s"
 msgstr "deve ser o dono da família de operadores %s"
 
 #: catalog/aclchk.c:3136
-#, fuzzy, c-format
+#, c-format
 msgid "must be owner of collation %s"
-msgstr "deve ser o dono da relação %s"
+msgstr "deve ser o dono da ordenação %s"
 
 #: catalog/aclchk.c:3138
 #, c-format
@@ -2639,9 +2639,9 @@ msgid "text search configuration with OID %u does not exist"
 msgstr "configuração de busca textual com OID %u não existe"
 
 #: catalog/aclchk.c:4636
-#, fuzzy, c-format
+#, c-format
 msgid "collation with OID %u does not exist"
-msgstr "relação com OID %u não existe"
+msgstr "ordenação com OID %u não existe"
 
 #: catalog/aclchk.c:4662
 #, c-format
@@ -2649,9 +2649,9 @@ msgid "conversion with OID %u does not exist"
 msgstr "conversão com OID %u não existe"
 
 #: catalog/aclchk.c:4703
-#, fuzzy, c-format
+#, c-format
 msgid "extension with OID %u does not exist"
-msgstr "relação com OID %u não existe"
+msgstr "extensão com OID %u não existe"
 
 #: catalog/catalog.c:76
 msgid "invalid fork name"
@@ -2760,9 +2760,9 @@ msgid "cast from %s to %s"
 msgstr "converte de %s para %s"
 
 #: catalog/dependency.c:2265
-#, fuzzy, c-format
+#, c-format
 msgid "collation %s"
-msgstr "relação %s"
+msgstr "ordenação %s"
 
 #: catalog/dependency.c:2289
 #, c-format
@@ -3012,9 +3012,9 @@ msgid "composite type %s cannot be made a member of itself"
 msgstr "tipo composto %s não pode se tornar membro de si mesmo"
 
 #: catalog/heap.c:558
-#, c-format
+#, fuzzy, c-format
 msgid "no collation was derived for column \"%s\" with collatable type %s"
-msgstr ""
+msgstr "nenhuma ordenação foi derivada para coluna \"%s\" com tipo %s ordenável"
 
 #: catalog/heap.c:560 commands/indexcmds.c:931 commands/view.c:145
 #: regex/regc_pg_locale.c:259 utils/adt/formatting.c:1520
@@ -3023,7 +3023,7 @@ msgstr ""
 #: utils/adt/formatting.c:1836 utils/adt/like.c:212 utils/adt/selfuncs.c:4912
 #: utils/adt/selfuncs.c:5029 utils/adt/varlena.c:1315
 msgid "Use the COLLATE clause to set the collation explicitly."
-msgstr ""
+msgstr "Utilize a cláusula COLLATE para definir a ordenação explicitamente."
 
 #: catalog/heap.c:1011 catalog/index.c:769 commands/tablecmds.c:2318
 #, c-format
@@ -3272,9 +3272,9 @@ msgid "improper relation name (too many dotted names): %s"
 msgstr "nome de relação é inválido (nomes com muitos pontos): %s"
 
 #: catalog/namespace.c:3031
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" for encoding \"%s\" does not exist"
-msgstr "restrição \"%s\" na tabela \"%s\" não existe"
+msgstr "ordenação \"%s\" para codificação \"%s\" não existe"
 
 #: catalog/namespace.c:3083
 #, c-format
@@ -3749,14 +3749,14 @@ msgid "shared tables cannot be toasted after initdb"
 msgstr "tabelas compartilhadas não podem ser fatiadas após o initdb"
 
 #: catalog/pg_collation.c:75
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" for encoding \"%s\" already exists"
-msgstr "restrição \"%s\" para domínio \"%s\" já existe"
+msgstr "ordenação \"%s\" para codificação \"%s\" já existe"
 
 #: catalog/pg_collation.c:89
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" already exists"
-msgstr "relação \"%s\" já existe"
+msgstr "ordenação \"%s\" já existe"
 
 #: commands/aggregatecmds.c:103
 #, c-format
@@ -4485,16 +4485,14 @@ msgid ""
 "new collation (%s) is incompatible with the collation of the template "
 "database (%s)"
 msgstr ""
-"novo conjunto de regras de comparação (%s) é incompatível com o conjunto de "
-"regras de comparação do banco de dados modelo (%s)"
+"nova ordenação (%s) é incompatível com a ordenação do banco de dados modelo (%s)"
 
 #: commands/dbcommands.c:362
 msgid ""
 "Use the same collation as in the template database, or use template0 as "
 "template."
 msgstr ""
-"Utilize o mesmo conjunto de regras de comparação do banco de dados modelo ou "
-"utilize template0 como modelo."
+"Utilize a mesma ordenação do banco de dados modelo ou utilize template0 como modelo."
 
 #: commands/dbcommands.c:367
 #, c-format
@@ -5173,14 +5171,13 @@ msgstr "funções em expressão de índice devem ser IMMUTABLE"
 #: commands/indexcmds.c:930
 #, fuzzy
 msgid "could not determine which collation to use for index expression"
-msgstr ""
-"não pôde determinar descrição de registro para função que retorna record"
+msgstr "não pôde determinar qual ordenação utilizar na expressão do índice"
 
 #: commands/indexcmds.c:938 commands/typecmds.c:843 parser/parse_expr.c:2140
 #: parser/parse_type.c:492 parser/parse_utilcmd.c:2556
-#, fuzzy, c-format
+#, c-format
 msgid "collations are not supported by type %s"
-msgstr "collations não são suportadas pelo tipo %s"
+msgstr "ordenações não são suportadas pelo tipo %s"
 
 #: commands/indexcmds.c:976
 #, c-format
@@ -6016,15 +6013,15 @@ msgid "%s versus %s"
 msgstr "%s versus %s"
 
 #: commands/tablecmds.c:1451
-#, fuzzy, c-format
+#, c-format
 msgid "inherited column \"%s\" has a collation conflict"
-msgstr "coluna herdada \"%s\" tem um conflito de tipo"
+msgstr "coluna herdada \"%s\" tem um conflito de ordenação"
 
 #: commands/tablecmds.c:1453 commands/tablecmds.c:1640
 #: commands/tablecmds.c:4220
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" versus \"%s\""
-msgstr "%s versus %s"
+msgstr "\"%s\" versus \"%s\""
 
 #: commands/tablecmds.c:1463
 #, c-format
@@ -6042,9 +6039,9 @@ msgid "column \"%s\" has a type conflict"
 msgstr "coluna \"%s\" tem um conflito de tipo"
 
 #: commands/tablecmds.c:1638
-#, fuzzy, c-format
+#, c-format
 msgid "column \"%s\" has a collation conflict"
-msgstr "coluna \"%s\" tem um conflito de tipo"
+msgstr "coluna \"%s\" tem um conflito de ordenação"
 
 #: commands/tablecmds.c:1650
 #, c-format
@@ -6224,9 +6221,9 @@ msgid "child table \"%s\" has different type for column \"%s\""
 msgstr "tabela descendente \"%s\" tem tipo diferente da coluna \"%s\""
 
 #: commands/tablecmds.c:4218 commands/tablecmds.c:8303
-#, fuzzy, c-format
+#, c-format
 msgid "child table \"%s\" has different collation for column \"%s\""
-msgstr "tabela descendente \"%s\" tem tipo diferente da coluna \"%s\""
+msgstr "tabela descendente \"%s\" tem ordenação diferente da coluna \"%s\""
 
 #: commands/tablecmds.c:4228
 #, c-format
@@ -7415,7 +7412,7 @@ msgstr "permissão negada ao definir role \"%s\""
 #, fuzzy, c-format
 msgid "could not determine which collation to use for view column \"%s\""
 msgstr ""
-"não pôde determinar tipo de retorno atual para função polimófica \"%s\""
+"não pôde determinar qual ordenação utilizar em coluna \"%s\" de visão"
 
 #: commands/view.c:158
 msgid "view must have at least one column"
@@ -7669,34 +7666,32 @@ msgid "%s is not a member of extension \"%s\""
 msgstr "role \"%s\" não é um membro da role \"%s\""
 
 #: commands/collationcmds.c:81
-#, fuzzy, c-format
+#, c-format
 msgid "collation attribute \"%s\" not recognized"
-msgstr "atributo de operador \"%s\" desconhecido"
+msgstr "atributo de ordenação \"%s\" desconhecido"
 
 #: commands/collationcmds.c:126
-#, fuzzy
 msgid "parameter \"lc_collate\" parameter must be specified"
-msgstr "procedimento de operador deve ser especificado"
+msgstr "parâmetro \"lc_collate\" deve ser especificado"
 
 #: commands/collationcmds.c:131
-#, fuzzy
 msgid "parameter \"lc_ctype\" must be specified"
-msgstr "tipo de transição (stype) da agregação deve ser especificado"
+msgstr "parâmetro \"lc_type\" deve ser especificado"
 
 #: commands/collationcmds.c:177
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" does not exist, skipping"
-msgstr "conversão \"%s\" não existe, ignorando"
+msgstr "ordenação \"%s\" não existe, ignorando"
 
 #: commands/collationcmds.c:237 commands/collationcmds.c:416
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" for encoding \"%s\" already exists in schema \"%s\""
-msgstr "relação \"%s\" já existe no esquema \"%s\""
+msgstr "ordenação \"%s\" para codificação \"%s\" já existe no esquema \"%s\""
 
 #: commands/collationcmds.c:249 commands/collationcmds.c:428
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" already exists in schema \"%s\""
-msgstr "relação \"%s\" já existe no esquema \"%s\""
+msgstr "ordenação \"%s\" já existe no esquema \"%s\""
 
 #: tcop/fastpath.c:109 tcop/fastpath.c:485 tcop/fastpath.c:615
 #, c-format
@@ -11118,17 +11113,17 @@ msgid "Cast the output of the non-recursive term to the correct type."
 msgstr "Converta a saída do termo não recursivo para o tipo correto."
 
 #: parser/parse_cte.c:331
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "recursive query \"%s\" column %d has collation \"%s\" in non-recursive term "
 "but collation \"%s\" overall"
 msgstr ""
-"coluna %2$d da consulta recursiva \"%1$s\" tem tipo %3$s no termo não "
-"recursivo mas o tipo %4$s no restante"
+"coluna %2$d da consulta recursiva \"%1$s\" tem ordenação %3$s no termo não "
+"recursivo mas a ordenação %4$s no restante"
 
 #: parser/parse_cte.c:335
 msgid "Use the COLLATE clause to set the collation of the non-recursive term."
-msgstr ""
+msgstr "Utilize a cláusula COLLATE para definir a ordenação do termo não recursivo."
 
 #: parser/parse_cte.c:426
 #, c-format
@@ -13249,9 +13244,8 @@ msgstr ""
 "desabilitando rotação automática (utilize SIGHUP para habilitá-la novamente)"
 
 #: regex/regc_pg_locale.c:258 utils/adt/selfuncs.c:5028
-#, fuzzy
 msgid "could not determine which collation to use for regular expression"
-msgstr "não pôde determinar qual collation utilizar na expressão regular"
+msgstr "não pôde determinar qual ordenação utilizar na expressão regular"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:101
 #, c-format
@@ -14699,15 +14693,15 @@ msgstr "\"%s\" não é um número"
 
 #: utils/adt/formatting.c:1519 utils/adt/formatting.c:1569
 msgid "could not determine which collation to use for lower() function"
-msgstr "não pôde determinar qual collation utilizar na função lower()"
+msgstr "não pôde determinar qual ordenação utilizar na função lower()"
 
 #: utils/adt/formatting.c:1640 utils/adt/formatting.c:1690
 msgid "could not determine which collation to use for upper() function"
-msgstr "não pôde determinar qual collation utilizar na função upper()"
+msgstr "não pôde determinar qual ordenação utilizar na função upper()"
 
 #: utils/adt/formatting.c:1773 utils/adt/formatting.c:1835
 msgid "could not determine which collation to use for initcap() function"
-msgstr "não pôde determinar qual collation utilizar na função initcap()"
+msgstr "não pôde determinar qual ordenação utilizar na função initcap()"
 
 #: utils/adt/formatting.c:2017
 msgid "invalid combination of date conventions"
@@ -15000,7 +14994,7 @@ msgstr "OID fora do intervalo"
 
 #: utils/adt/like.c:211 utils/adt/selfuncs.c:4911
 msgid "could not determine which collation to use for ILIKE"
-msgstr "não pôde determinar qual collation utilizar para ILIKE"
+msgstr "não pôde determinar qual ordenação utilizar para ILIKE"
 
 #: utils/adt/like_match.c:104 utils/adt/like_match.c:164
 msgid "LIKE pattern must not end with escape character"
@@ -15278,12 +15272,12 @@ msgid ""
 "collations with different collate and ctype values are not supported on this "
 "platform"
 msgstr ""
-"collations com diferentes valores de collate e ctype não são suportadas "
+"ordenações com diferentes valores de collate e ctype não são suportadas "
 "nessa plataforma"
 
 #: utils/adt/pg_locale.c:1045
 msgid "nondefault collations are not supported on this platform"
-msgstr "collations não-padrão não são suportados nessa plataforma"
+msgstr "ordenações não-padrão não são suportados nessa plataforma"
 
 #: utils/adt/pg_locale.c:1216
 msgid "invalid multibyte character for locale"
@@ -15917,7 +15911,7 @@ msgstr "valor é muito longo para tipo character varying(%d)"
 
 #: utils/adt/varlena.c:1314
 msgid "could not determine which collation to use for string comparison"
-msgstr "não pôde determinar qual collation utilizar para comparação de cadeia de caracteres"
+msgstr "não pôde determinar qual ordenação utilizar para comparação de cadeia de caracteres"
 
 #: utils/adt/varlena.c:1358 utils/adt/varlena.c:1371
 #, c-format
@@ -17864,13 +17858,11 @@ msgstr "Define o nome do serviço Bonjour."
 
 #: utils/misc/guc.c:2641
 msgid "Shows the collation order locale."
-msgstr "Mostra a configuração regional utilizada na comparação ao ordenar."
+msgstr "Mostra a configuração regional utilizada na ordenação."
 
 #: utils/misc/guc.c:2652
 msgid "Shows the character classification and case conversion locale."
-msgstr ""
-"Mostra a configuração regional de classificação de caracteres e conversão "
-"entre maiúsculas/minúsculas."
+msgstr "Mostra a configuração regional utilizada na classificação de caracteres e na conversão entre maiúsculas/minúsculas."
 
 #: utils/misc/guc.c:2663
 msgid "Sets the language in which messages are displayed."
