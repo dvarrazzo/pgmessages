@@ -1,14 +1,14 @@
 # Spanish message translation file for PostgreSQL server
 #
-# Copyright (C) 2002-2010 PostgreSQL Global Development Group
+# Copyright (C) 2002-2011 PostgreSQL Global Development Group
 # This file is distributed under the same license as the PostgreSQL package.
 #
 # Karim Mribti  <karim@mribti.com> 2002.
-# Alvaro Herrera <alvherre@alvh.no-ip.org> 2003-2010
+# Alvaro Herrera <alvherre@alvh.no-ip.org> 2003-2011
 # Jaime Casanova <systemguards@gmail.com> 2005, 2006
 # Emanuel Calvo Franco <postgres-arg@gmail.com> 2008
 #
-# $Id: postgres.po,v 1.34 2011/09/07 16:06:26 alvherre Exp $
+# $Id: postgres.po,v 1.35 2011/09/07 22:00:09 alvherre Exp $
 #
 #
 # Glosario:
@@ -55,10 +55,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL server 9.0\n"
+"Project-Id-Version: PostgreSQL server 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2011-09-07 04:58+0000\n"
-"PO-Revision-Date: 2011-09-07 13:04-0300\n"
+"PO-Revision-Date: 2011-09-07 18:59-0300\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "Language: \n"
@@ -1664,7 +1664,7 @@ msgid ""
 "might need to choose an earlier recovery target."
 msgstr ""
 "Si esto ha ocurrido más de una vez, algunos datos podrían estar corruptos y "
-"podría necesitar escoger un punto de recuperación anterior."
+"podría ser necesario escoger un punto de recuperación anterior."
 
 #: access/transam/xlog.c:6045
 #, c-format
@@ -7793,25 +7793,24 @@ msgid "parameter \"lc_collate\" parameter must be specified"
 msgstr "el parámetro «lc_collate» debe ser especificado"
 
 #: commands/collationcmds.c:131
-#, fuzzy
 msgid "parameter \"lc_ctype\" must be specified"
 msgstr ""
-"debe especificarse el tipo de transición (stype) de la función de agregación"
+"debe especificarse el parámetro «lc_ctype»"
 
 #: commands/collationcmds.c:177
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" does not exist, skipping"
-msgstr "no existe la conversión «%s», ignorando"
+msgstr "no existe el ordenamiento (collation) «%s», ignorando"
 
 #: commands/collationcmds.c:237 commands/collationcmds.c:416
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" for encoding \"%s\" already exists in schema \"%s\""
-msgstr "ya existe una relación llamada «%s» en el esquema «%s»"
+msgstr "ya existe un ordenamiento (collation) llamado «%s» para la codificación «%s» en el esquema «%s»"
 
 #: commands/collationcmds.c:249 commands/collationcmds.c:428
-#, fuzzy, c-format
+#, c-format
 msgid "collation \"%s\" already exists in schema \"%s\""
-msgstr "ya existe una relación llamada «%s» en el esquema «%s»"
+msgstr "ya existe un ordenamiento llamado «%s» en el esquema «%s»"
 
 #: tcop/fastpath.c:109 tcop/fastpath.c:485 tcop/fastpath.c:615
 #, c-format
@@ -8068,19 +8067,19 @@ msgid "stack depth limit exceeded"
 msgstr "límite de profundidad de stack alcanzado"
 
 #: tcop/postgres.c:3044 tcop/postgres.c:3066
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Increase the configuration parameter \"max_stack_depth\" (currently %dkB), "
 "after ensuring the platform's stack depth limit is adequate."
 msgstr ""
-"Incremente el parámetro de configuración «max_stack_depth», después de "
+"Incremente el parámetro de configuración «max_stack_depth» (actualmente %dkB), después de "
 "asegurarse que el límite de profundidad de stack de la plataforma es "
 "adecuado."
 
 #: tcop/postgres.c:3082
-#, fuzzy, c-format
+#, c-format
 msgid "\"max_stack_depth\" must not exceed %ldkB."
-msgstr "«max_stack_depth» no debe exceder %ldkB"
+msgstr "«max_stack_depth» no debe exceder %ldkB."
 
 #: tcop/postgres.c:3084
 msgid ""
@@ -8225,45 +8224,42 @@ msgid "cannot change TOAST relation \"%s\""
 msgstr "no se puede cambiar la relación TOAST «%s»"
 
 #: executor/execMain.c:1012
-#, fuzzy, c-format
+#, c-format
 msgid "cannot insert into view \"%s\""
-msgstr "no se puede insertar en una vista"
+msgstr "no se puede insertar en la vista «%s»"
 
 #: executor/execMain.c:1014
-#, fuzzy
 msgid ""
 "You need an unconditional ON INSERT DO INSTEAD rule or an INSTEAD OF INSERT "
 "trigger."
-msgstr "Necesita un regla incondicional ON INSERT DO INSTEAD."
+msgstr "Necesita un regla incondicional ON INSERT DO INSTEAD o un disparador INSTEAD OF INSERT."
 
 #: executor/execMain.c:1020
-#, fuzzy, c-format
+#, c-format
 msgid "cannot update view \"%s\""
-msgstr "no se puede actualizar una vista"
+msgstr "no se puede actualizar la vista «%s»"
 
 #: executor/execMain.c:1022
-#, fuzzy
 msgid ""
 "You need an unconditional ON UPDATE DO INSTEAD rule or an INSTEAD OF UPDATE "
 "trigger."
-msgstr "Necesita un regla incondicional ON UPDATE DO INSTEAD."
+msgstr "Necesita un regla incondicional ON UPDATE DO INSTEAD o un disparador INSTEAD OF UPDATE."
 
 #: executor/execMain.c:1028
-#, fuzzy, c-format
+#, c-format
 msgid "cannot delete from view \"%s\""
-msgstr "no se puede eliminar de una vista"
+msgstr "no se puede eliminar de la vista «%s»"
 
 #: executor/execMain.c:1030
-#, fuzzy
 msgid ""
 "You need an unconditional ON DELETE DO INSTEAD rule or an INSTEAD OF DELETE "
 "trigger."
-msgstr "Necesita un regla incondicional ON DELETE DO INSTEAD."
+msgstr "Necesita un regla incondicional ON DELETE DO INSTEAD o un disparador INSTEAD OF DELETE."
 
 #: executor/execMain.c:1040
-#, fuzzy, c-format
+#, c-format
 msgid "cannot change foreign table \"%s\""
-msgstr "no se puede cambiar la relación «%s»"
+msgstr "no se puede cambiar la tabla foránea «%s»"
 
 #: executor/execMain.c:1046
 #, c-format
@@ -8271,29 +8267,29 @@ msgid "cannot change relation \"%s\""
 msgstr "no se puede cambiar la relación «%s»"
 
 #: executor/execMain.c:1070
-#, fuzzy, c-format
+#, c-format
 msgid "cannot lock rows in sequence \"%s\""
-msgstr "no se puede copiar desde la secuencia «%s»"
+msgstr "no se puede bloquear registros de la secuencia «%s»"
 
 #: executor/execMain.c:1077
-#, fuzzy, c-format
+#, c-format
 msgid "cannot lock rows in TOAST relation \"%s\""
-msgstr "no se puede cambiar la relación TOAST «%s»"
+msgstr "no se puede bloquear registros en la relación TOAST «%s»"
 
 #: executor/execMain.c:1084
-#, fuzzy, c-format
+#, c-format
 msgid "cannot lock rows in view \"%s\""
-msgstr "no se puede copiar desde la vista «%s»"
+msgstr "no se puede bloquear registros en la vista «%s»"
 
 #: executor/execMain.c:1091
-#, fuzzy, c-format
+#, c-format
 msgid "cannot lock rows in foreign table \"%s\""
-msgstr "no se puede eliminar el portal activo «%s»"
+msgstr "no se puede bloquear registros en la tabla foránea «%s»"
 
 #: executor/execMain.c:1097
-#, fuzzy, c-format
+#, c-format
 msgid "cannot lock rows in relation \"%s\""
-msgstr "no se pudo obtener un bloqueo en la fila de la relación «%s»"
+msgstr "no se puede bloquear registros en la tabla «%s»"
 
 #: executor/execMain.c:1568
 #, c-format
@@ -8703,9 +8699,9 @@ msgid "user mapping not found for \"%s\""
 msgstr "no se encontró un mapeo para el usuario «%s»"
 
 #: foreign/foreign.c:321
-#, fuzzy, c-format
+#, c-format
 msgid "foreign-data wrapper \"%s\" has no handler"
-msgstr "no existe el conector de datos externos «%s»"
+msgstr "el conector de datos externos «%s» no tiene manejador"
 
 #: foreign/foreign.c:489
 #, c-format
@@ -8745,9 +8741,9 @@ msgid "Ident authentication failed for user \"%s\""
 msgstr "la autentificación Ident falló para el usuario «%s»"
 
 #: libpq/auth.c:269
-#, fuzzy, c-format
+#, c-format
 msgid "Peer authentication failed for user \"%s\""
-msgstr "la autentificación PAM falló para el usuario «%s»"
+msgstr "la autentificación Peer falló para el usuario «%s»"
 
 #: libpq/auth.c:273
 #, c-format
@@ -8844,19 +8840,19 @@ msgstr ""
 "datos «%s»"
 
 #: libpq/auth.c:449
-#, fuzzy, c-format
+#, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup matches."
-msgstr "La dirección IP del cliente resolvió a «%s», el resultado es coincidente."
+msgstr "La dirección IP del cliente fue resuelta a «%s», este resultado es coincidente."
 
 #: libpq/auth.c:451
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup not checked."
-msgstr "La dirección IP del cliente resolvió a «%s», el resultado no fue verificado."
+msgstr "La dirección IP del cliente fue resuelta a «%s», este resultado no fue verificado."
 
 #: libpq/auth.c:453
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup does not match."
-msgstr "La dirección IP del cliente resolvió a «%s», el resultado no es coincidente."
+msgstr "La dirección IP del cliente fue resuelta a «%s», este resultado no es coincidente."
 
 #: libpq/auth.c:462
 #, c-format
@@ -9004,10 +9000,9 @@ msgid "invalidly formatted response from Ident server: \"%s\""
 msgstr "respuesta del servidor Ident en formato no válido: «%s»"
 
 #: libpq/auth.c:1785
-#, fuzzy
 msgid "peer authentication is not supported on this platform"
 msgstr ""
-"método de autentificación «%s» no válido: esta plataforma no lo soporta"
+"método de autentificación peer no está soportado en esta plataforma"
 
 #: libpq/auth.c:1789
 #, c-format
@@ -9440,9 +9435,9 @@ msgstr ""
 "no se pudo abrir el archivo secundario de autentificación «@%s» como «%s»: %m"
 
 #: libpq/hba.c:628
-#, fuzzy, c-format
+#, c-format
 msgid "could not translate host name \"%s\" to address: %s"
-msgstr "no se pudo traducir el nombre «%s» a una dirección: %s\n"
+msgstr "no se pudo traducir el nombre «%s» a una dirección: %s"
 
 #. translator: the second %s is a list of auth methods
 #: libpq/hba.c:779
@@ -9461,9 +9456,8 @@ msgstr ""
 "definido"
 
 #: libpq/hba.c:832
-#, fuzzy
 msgid "local connections are not supported by this build"
-msgstr "SSL no está soportado en este servidor"
+msgstr "las conexiones locales no están soportadas en este servidor"
 
 #: libpq/hba.c:853
 msgid "hostssl requires SSL to be turned on"
@@ -9474,9 +9468,8 @@ msgid "Set ssl = on in postgresql.conf."
 msgstr "Defina «ssl = on» en postgresql.conf."
 
 #: libpq/hba.c:862
-#, fuzzy
 msgid "hostssl is not supported by this build"
-msgstr "SSL no está soportado en este servidor"
+msgstr "hostssl no está soportado en este servidor"
 
 #: libpq/hba.c:863
 msgid "Compile with --with-openssl to use SSL connections."
@@ -9537,10 +9530,10 @@ msgid "invalid authentication method \"%s\""
 msgstr "método de autentificación «%s» no válido"
 
 #: libpq/hba.c:1160
-#, fuzzy, c-format
+#, c-format
 msgid "invalid authentication method \"%s\": not supported by this build"
 msgstr ""
-"método de autentificación «%s» no válido: esta plataforma no lo soporta"
+"método de autentificación «%s» no válido: este servidor no lo soporta"
 
 #: libpq/hba.c:1181
 msgid "krb5 authentication is not supported on local sockets"
@@ -9551,9 +9544,8 @@ msgid "gssapi authentication is not supported on local sockets"
 msgstr "la autentificación gssapi no está soportada en conexiones locales"
 
 #: libpq/hba.c:1203
-#, fuzzy
 msgid "peer authentication is only supported on local sockets"
-msgstr "la autentificación krb5 no está soportada en conexiones locales"
+msgstr "la autentificación peer sólo está soportada en conexiones locales"
 
 #: libpq/hba.c:1220
 msgid "cert authentication is only supported on hostssl connections"
@@ -9565,9 +9557,8 @@ msgid "authentication option not in name=value format: %s"
 msgstr "opción de autentificación en formato nombre=valor: %s"
 
 #: libpq/hba.c:1257
-#, fuzzy
 msgid "ident, peer, krb5, gssapi, sspi and cert"
-msgstr "ident, krb5, gssapi, sspi y cert"
+msgstr "ident, peer, krb5, gssapi, sspi y cert"
 
 #: libpq/hba.c:1271
 msgid "clientcert can only be configured for \"hostssl\" rows"
@@ -10150,7 +10141,7 @@ msgstr ""
 #: storage/lmgr/lock.c:632 storage/lmgr/lock.c:701 storage/lmgr/lock.c:2543
 #: storage/lmgr/lock.c:2608
 msgid "You might need to increase max_locks_per_transaction."
-msgstr "Puede necesitar incrementar max_locks_per_transaction."
+msgstr "Puede ser necesario incrementar max_locks_per_transaction."
 
 #: storage/lmgr/lock.c:2164
 msgid "Not enough memory for reassigning the prepared transaction's locks."
@@ -10217,21 +10208,20 @@ msgid "memory for serializable conflict tracking is nearly exhausted"
 msgstr "la memoria para el seguimiento de conflictos de serialización está casi agotada"
 
 #: storage/lmgr/predicate.c:899
-#, fuzzy
 msgid ""
 "There might be an idle transaction or a forgotten prepared transaction "
 "causing this."
 msgstr ""
-"Hay otras %d sesiones y %d transacciones preparadas usando la base de datos."
+"Puede haber una transacción inactiva o una transacción preparada olvidada que esté causando este problema."
 
 #: storage/lmgr/predicate.c:1181 storage/lmgr/predicate.c:1253
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "not enough shared memory for elements of data structure \"%s\" (%lu bytes "
 "requested)"
 msgstr ""
 "el espacio de memoria compartida es insuficiente para la estructura "
-"«%s» (%lu bytes solicitados"
+"«%s» (%lu bytes solicitados)"
 
 #: storage/lmgr/predicate.c:1536
 msgid "deferrable snapshot was unsafe; trying a new one"
@@ -10239,19 +10229,17 @@ msgstr "la instantánea postergada era insegura; intentando con una nueva"
 
 #: storage/lmgr/predicate.c:2234 storage/lmgr/predicate.c:2249
 #: storage/lmgr/predicate.c:3624
-#, fuzzy
 msgid "You might need to increase max_pred_locks_per_transaction."
-msgstr "Puede necesitar incrementar max_locks_per_transaction."
+msgstr "Puede ser necesario incrementar max_pred_locks_per_transaction."
 
 #: storage/lmgr/predicate.c:3778 storage/lmgr/predicate.c:3867
 #: storage/lmgr/predicate.c:3875 storage/lmgr/predicate.c:3914
 #: storage/lmgr/predicate.c:4153 storage/lmgr/predicate.c:4491
 #: storage/lmgr/predicate.c:4503 storage/lmgr/predicate.c:4545
 #: storage/lmgr/predicate.c:4583
-#, fuzzy
 msgid ""
 "could not serialize access due to read/write dependencies among transactions"
-msgstr "no se pudo serializar el acceso debido a un update concurrente"
+msgstr "no se pudo serializar el acceso debido a dependencias read/write entre transacciones"
 
 #: storage/lmgr/predicate.c:3780 storage/lmgr/predicate.c:3869
 #: storage/lmgr/predicate.c:3877 storage/lmgr/predicate.c:3916
@@ -10460,10 +10448,11 @@ msgid "  -t pa|pl|ex     show timings after each query\n"
 msgstr "  -t pa|pl|ex     mostrar tiempos después de cada consulta\n"
 
 #: main/main.c:312
-#, fuzzy, c-format
+#, c-format
 msgid "  -T              send SIGSTOP to all backend processes if one dies\n"
 msgstr ""
-"  -T              enviar SIGSTOP a todos los backends si uno de ellos muere\n"
+"  -T              enviar SIGSTOP a todos los procesos backend si uno de ellos\n"
+"                  muere\n"
 
 #: main/main.c:313
 #, c-format
@@ -10634,9 +10623,8 @@ msgid "SQL function \"%s\" during inlining"
 msgstr "función SQL «%s», durante expansión en línea"
 
 #: optimizer/util/plancat.c:97
-#, fuzzy
 msgid "cannot access temporary or unlogged relations during recovery"
-msgstr "no se pueden crear tablas temporales durante la recuperación"
+msgstr "no se pueden crear tablas temporales o unlogged durante la recuperación"
 
 #: optimizer/plan/initsplan.c:595
 msgid ""
@@ -10680,13 +10668,12 @@ msgstr ""
 "ordenar."
 
 #: optimizer/path/joinrels.c:673
-#, fuzzy
 msgid ""
 "FULL JOIN is only supported with merge-joinable or hash-joinable join "
 "conditions"
 msgstr ""
 "FULL JOIN sólo está soportado con condiciones que se pueden usar con merge "
-"join"
+"join o hash join"
 
 #: parser/analyze.c:471
 msgid "INSERT ... SELECT cannot specify INTO"
@@ -10861,9 +10848,9 @@ msgstr ""
 "SELECT FOR UPDATE/SHARE debe especificar nombres de relaciones sin calificar"
 
 #: parser/analyze.c:2383
-#, fuzzy, c-format
+#, c-format
 msgid "SELECT FOR UPDATE/SHARE cannot be used with foreign table \"%s\""
-msgstr "SELECT FOR UPDATE/SHARE no puede ser aplicado a un join"
+msgstr "SELECT FOR UPDATE/SHARE no puede ser usado con la tabla foránea «%s»"
 
 #: parser/analyze.c:2402
 msgid "SELECT FOR UPDATE/SHARE cannot be applied to a join"
@@ -11272,12 +11259,12 @@ msgstr ""
 "correcto."
 
 #: parser/parse_cte.c:331
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "recursive query \"%s\" column %d has collation \"%s\" in non-recursive term "
 "but collation \"%s\" overall"
 msgstr ""
-"la columna %2$d en la consulta recursiva «%1$s» tiene tipo %3$s en el "
+"la columna %2$d en la consulta recursiva «%1$s» tiene ordenamiento (collation) %3$s en el "
 "término no recursivo, pero %4$s en general"
 
 #: parser/parse_cte.c:335
@@ -11295,11 +11282,10 @@ msgid "mutual recursion between WITH items is not implemented"
 msgstr "la recursión mutua entre elementos de WITH no está implementada"
 
 #: parser/parse_cte.c:658
-#, fuzzy, c-format
+#, c-format
 msgid "recursive query \"%s\" must not contain data-modifying statements"
 msgstr ""
-"la referencia recursiva a la consulta «%s» no debe aparecer dentro de un "
-"outer join"
+"la consulta recursiva «%s» no debe contener sentencias que modifiquen datos"
 
 #: parser/parse_cte.c:666
 #, c-format
@@ -11517,7 +11503,7 @@ msgid ""
 "Could not choose a best candidate function. You might need to add explicit "
 "type casts."
 msgstr ""
-"No se pudo escoger la función más adecuada. Puede desear agregar "
+"No se pudo escoger la función más adecuada. Puede ser necesario agregar "
 "conversiones explícitas de tipos."
 
 #: parser/parse_func.c:291
@@ -11535,7 +11521,7 @@ msgid ""
 "No function matches the given name and argument types. You might need to add "
 "explicit type casts."
 msgstr ""
-"Ninguna función coincide en el nombre y tipos de argumentos. Puede desear "
+"Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario "
 "agregar conversión explícita de tipos."
 
 #: parser/parse_func.c:412 parser/parse_func.c:478
@@ -11642,7 +11628,7 @@ msgid ""
 "Could not choose a best candidate operator. You might need to add explicit "
 "type casts."
 msgstr ""
-"No se pudo escoger el operador más adecuado. Puede desear agregar "
+"No se pudo escoger el operador más adecuado. Puede ser necesario agregar "
 "conversiones explícitas de tipos."
 
 #: parser/parse_oper.c:720
@@ -11651,7 +11637,7 @@ msgid ""
 "add explicit type casts."
 msgstr ""
 "Ningún operador coincide con el nombre y el tipo de los argumentos. Puede "
-"desear agregar conversiones explícitas de tipos."
+"ser necesario agregar conversiones explícitas de tipos."
 
 #: parser/parse_oper.c:779 parser/parse_oper.c:893
 #, c-format
@@ -11871,9 +11857,9 @@ msgid "invalid type name \"%s\""
 msgstr "el nombre de tipo «%s» no es válido"
 
 #: parser/parse_utilcmd.c:181
-#, fuzzy, c-format
+#, c-format
 msgid "relation \"%s\" already exists, skipping"
-msgstr "la relación «%s» ya existe"
+msgstr "la relación «%s» ya existe, ignorando"
 
 #: parser/parse_utilcmd.c:334
 msgid "array of serial is not implemented"
@@ -11908,9 +11894,9 @@ msgid "index \"%s\" is already associated with a constraint"
 msgstr "el índice «%s» ya está asociado a una restricción"
 
 #: parser/parse_utilcmd.c:1468
-#, fuzzy, c-format
+#, c-format
 msgid "index \"%s\" does not belong to table \"%s\""
-msgstr "no existe el índice «%s»"
+msgstr "el índice «%s» no pertenece a la tabla «%s»"
 
 #: parser/parse_utilcmd.c:1475
 #, c-format
@@ -11933,31 +11919,29 @@ msgid "Cannot create a primary key or unique constraint using such an index."
 msgstr "No se puede crear una restricción de llave primaria o única usando un índice así."
 
 #: parser/parse_utilcmd.c:1494
-#, fuzzy, c-format
+#, c-format
 msgid "index \"%s\" contains expressions"
-msgstr "el índice «%s» tiene una versión de hash incorrecta"
+msgstr "el índice «%s» contiene expresiones"
 
 #: parser/parse_utilcmd.c:1501
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is a partial index"
-msgstr "«%s» es un índice"
+msgstr "«%s» es un índice parcial"
 
 #: parser/parse_utilcmd.c:1513
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is a deferrable index"
-msgstr "«%s» no es una tabla o índice"
+msgstr "«%s» no es un índice postergable (deferrable)"
 
 #: parser/parse_utilcmd.c:1514
-#, fuzzy
 msgid "Cannot create a non-deferrable constraint using a deferrable index."
 msgstr ""
-"no se puede usar una restricción unique postergable para la tabla "
-"referenciada «%s»"
+"No se puede crear una restricción no postergable usando un índice postergable."
 
 #: parser/parse_utilcmd.c:1571
-#, fuzzy, c-format
+#, c-format
 msgid "index \"%s\" does not have default sorting behavior"
-msgstr "el índice «%s» no existe, ignorando"
+msgstr "el índice «%s» no tiene el comportamiento de ordenamiento por omisión"
 
 #: parser/parse_utilcmd.c:1716
 #, c-format
@@ -12093,9 +12077,9 @@ msgid "collation mismatch between explicit collations \"%s\" and \"%s\""
 msgstr "discordancia de ordenamientos (collation) entre los ordenamientos explícitos «%s» y «%s»"
 
 #: gram.y:915
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized role option \"%s\""
-msgstr "opción de EXPLAIN no reconocida «%s»"
+msgstr "opción de rol no reconocida «%s»"
 
 #: gram.y:1301
 msgid "current database cannot be changed"
@@ -12129,9 +12113,8 @@ msgid "duplicate trigger events specified"
 msgstr "se han especificado eventos de disparador duplicados"
 
 #: gram.y:4160
-#, fuzzy
 msgid "conflicting constraint properties"
-msgstr "opciones contradictorias o redundantes"
+msgstr "propiedades de restricción contradictorias"
 
 #: gram.y:4221
 msgid "CREATE ASSERTION is not yet implemented"
@@ -12280,21 +12263,20 @@ msgid "OUT and INOUT arguments aren't allowed in TABLE functions"
 msgstr "los argumentos OUT e INOUT no están permitidos en funciones TABLE"
 
 #: gram.y:12852
-#, fuzzy
 msgid "multiple COLLATE clauses not allowed"
-msgstr "no se permiten múltiples cláusulas LIMIT"
+msgstr "no se permiten múltiples cláusulas COLLATE"
 
 #. translator: %s is CHECK, UNIQUE, or similar
 #: gram.y:12890 gram.y:12903
-#, fuzzy, c-format
+#, c-format
 msgid "%s constraints cannot be marked DEFERRABLE"
-msgstr "las restricciones CHECK no puede ser postergadas"
+msgstr "las restricciones %s no pueden ser marcadas DEFERRABLE"
 
 #. translator: %s is CHECK, UNIQUE, or similar
 #: gram.y:12916
-#, fuzzy, c-format
+#, c-format
 msgid "%s constraints cannot be marked NOT VALID"
-msgstr "las restricciones CHECK no puede ser postergadas"
+msgstr "las restricciones %s no pueden ser marcadas NOT VALID"
 
 #: scan.l:411
 msgid "unterminated /* comment"
@@ -12438,10 +12420,10 @@ msgid "could not get SID for PowerUsers group: error code %d\n"
 msgstr "no se pudo obtener el SID del grupo PowerUsers: código de error %d\n"
 
 #: port/win32/signal.c:189
-#, fuzzy, c-format
+#, c-format
 msgid "could not create signal listener pipe for PID %d: error code %d"
 msgstr ""
-"no se pudo crear tubería para escuchar señales para el pid %d: código de "
+"no se pudo crear tubería para escuchar señales para el PID %d: código de "
 "error %d"
 
 #: port/win32/signal.c:269 port/win32/signal.c:301
@@ -12467,19 +12449,19 @@ msgstr ""
 "no fue posible cargar las funciones requeridas desde dbghelp.dll, no se puede escribir el volcado de la caída\n"
 
 #: port/win32/crashdump.c:147
-#, fuzzy, c-format
+#, c-format
 msgid "could not open crash dump file \"%s\" for writing: error code %u\n"
-msgstr "no se pudo abrir el archivo «%s» para escritura: %m"
+msgstr "no se pudo abrir el archivo del volcado de caída «%s» para escritura: código de error %u\n"
 
 #: port/win32/crashdump.c:154
-#, fuzzy, c-format
+#, c-format
 msgid "wrote crash dump to file \"%s\"\n"
-msgstr "Se escribió la historia en el archivo «%s/%s».\n"
+msgstr "se escribió el volcado de caída en el archivo «%s».\n"
 
 #: port/win32/crashdump.c:156
-#, fuzzy, c-format
+#, c-format
 msgid "could not write crash dump to file \"%s\": error code %08x\n"
-msgstr "no se pudo escribir a archivo «%s»: %s\n"
+msgstr "no se pudo escribir el volcado de caída al archivo «%s»: código de error %08x\n"
 
 #: port/sysv_sema.c:114 port/pg_sema.c:114
 #, c-format
@@ -13432,19 +13414,18 @@ msgid "could not write to log file: %s\n"
 msgstr "no se pudo escribir al archivo de log: %s\n"
 
 #: postmaster/syslogger.c:1042
-#, fuzzy, c-format
+#, c-format
 msgid "could not open log file \"%s\": %m"
-msgstr "no se pudo abrir el archivo de bloqueo «%s»: %m"
+msgstr "no se pudo abrir el archivo de registro «%s»: %m"
 
 #: postmaster/syslogger.c:1111 postmaster/syslogger.c:1156
 msgid "disabling automatic rotation (use SIGHUP to re-enable)"
 msgstr "desactivando rotación automática (use SIGHUP para reactivarla)"
 
 #: regex/regc_pg_locale.c:258 utils/adt/selfuncs.c:5028
-#, fuzzy
 msgid "could not determine which collation to use for regular expression"
 msgstr ""
-"no se pudo encontrar descripción de registro de función que retorna record"
+"no se pudo determinar qué ordenamiento usar para la expresión regular"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:101
 #, c-format
@@ -13465,10 +13446,10 @@ msgid "invalid response from primary server"
 msgstr "respuesta no válida del servidor primario"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:125
-#, fuzzy, c-format
+#, c-format
 msgid "Expected 1 tuple with 3 fields, got %d tuples with %d fields."
 msgstr ""
-"Se esperaba 1 tupla con 2 campos, se obtuvieron %d tuplas con %d campos."
+"Se esperaba 1 tupla con 3 campos, se obtuvieron %d tuplas con %d campos."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:140
 msgid "database system identifier differs between the primary and standby"
@@ -13512,9 +13493,9 @@ msgid "replication terminated by primary server"
 msgstr "replicación terminada por el servidor primario"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:415
-#, fuzzy, c-format
+#, c-format
 msgid "could not send data to WAL stream: %s"
-msgstr "no se pudo enviar datos al servidor: %s\n"
+msgstr "no se pudo enviar datos al flujo de WAL: %s"
 
 #: replication/walreceiver.c:150
 msgid "terminating walreceiver process due to administrator command"
@@ -13550,19 +13531,18 @@ msgid "invalid standby query string: %s"
 msgstr "la cadena de consulta de standby no es válida: %s"
 
 #: replication/walsender.c:518
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby message type \"%c\""
-msgstr "el tipo %d de mensaje de cierre del standby no es válido"
+msgstr "el tipo «%c» de mensaje del standby no es válido"
 
 #: replication/walsender.c:569
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected message type \"%c\""
-msgstr "se esperaba un nombre de tipo"
+msgstr "mensaje de tipo «%c» inesperado"
 
 #: replication/walsender.c:822
-#, fuzzy
 msgid "terminating walsender process due to replication timeout"
-msgstr "terminando el proceso walreceiver debido a una orden del administrador"
+msgstr "terminando el proceso walsender debido a que se agotó el tiempo de espera de replicación"
 
 #: replication/walsender.c:838
 #, c-format
@@ -13591,9 +13571,9 @@ msgstr ""
 "%u, largo %lu: %m"
 
 #: replication/basebackup.c:122 replication/basebackup.c:631
-#, fuzzy, c-format
+#, c-format
 msgid "could not read symbolic link \"%s\": %m"
-msgstr "no se pudo crear el enlace simbólico «%s»: %m"
+msgstr "no se pudo leer el enlace simbólico «%s»: %m"
 
 #: replication/basebackup.c:231 replication/basebackup.c:743
 msgid "base backup could not send data, aborting backup"
@@ -13602,40 +13582,39 @@ msgstr "el respaldo base no pudo enviar datos, abortando el respaldo"
 #: replication/basebackup.c:278 replication/basebackup.c:287
 #: replication/basebackup.c:296 replication/basebackup.c:305
 #: replication/basebackup.c:314
-#, fuzzy, c-format
+#, c-format
 msgid "duplicate option \"%s\""
-msgstr "el nombre de opción «%s» no es válido"
+msgstr "nombre de opción «%s» duplicada"
 
 #: replication/basebackup.c:366
-#, fuzzy, c-format
+#, c-format
 msgid "could not open directory \"pg_tblspc\": %m"
-msgstr "no se pudo abrir el directorio «%s»: %m"
+msgstr "no se pudo abrir el directorio «pg_tblspc»: %m"
 
 #: replication/basebackup.c:576
 msgid "shutdown requested, aborting active base backup"
 msgstr "apagado solicitado, abortando el respaldo base activo"
 
 #: replication/basebackup.c:589
-#, fuzzy, c-format
+#, c-format
 msgid "could not stat file or directory \"%s\": %m"
-msgstr "no se pudo hacer stat al archivo o directorio «%s»: %s\n"
+msgstr "no se pudo hacer stat al archivo o directorio «%s»: %m"
 
 #: replication/basebackup.c:660
-#, fuzzy, c-format
+#, c-format
 msgid "skipping special file \"%s\""
-msgstr "eliminando archivo de registro de transacciones «%s»"
+msgstr "ignorando el archivo especial «%s»"
 
 #: replication/basebackup.c:733
-#, fuzzy, c-format
+#, c-format
 msgid "archive member \"%s\" too large for tar format"
-msgstr "el miembro de archivador es demasiado grande para el formato tar\n"
+msgstr "el miembro de archivador «%s» es demasiado grande para el formato tar"
 
 #: replication/syncrep.c:210
-#, fuzzy
 msgid ""
 "canceling the wait for synchronous replication and terminating connection "
 "due to administrator command"
-msgstr "terminando la conexión debido a una orden del administrador"
+msgstr "cancelando la espera para la replicación sincrónica y terminando la conexión debido a una orden del administrador"
 
 #: replication/syncrep.c:211 replication/syncrep.c:228
 msgid ""
@@ -13646,9 +13625,8 @@ msgstr ""
 "replicada al standby."
 
 #: replication/syncrep.c:227
-#, fuzzy
 msgid "canceling wait for synchronous replication due to user request"
-msgstr "cancelando la sentencia debido a una petición del usuario"
+msgstr "cancelando espera para la replicación sincrónica debido a una petición del usuario"
 
 #: replication/syncrep.c:358
 #, c-format
@@ -13661,14 +13639,13 @@ msgid "standby \"%s\" is now the synchronous standby with priority %u"
 msgstr "el standby «%s» es ahora el standby sincrónico con prioridad %u"
 
 #: repl_scanner.l:76
-#, fuzzy
 msgid "invalid streaming start location"
-msgstr "instrucción de procesamiento XML no válida"
+msgstr "posición de inicio de flujo de WAL no válida"
 
 #: repl_scanner.l:107
-#, fuzzy, c-format
+#, c-format
 msgid "syntax error: unexpected character \"%s\""
-msgstr "error de sintaxis, se esperaba «=»"
+msgstr "error de sintaxis: carácter «%s» inesperado"
 
 #: rewrite/rewriteDefine.c:109 rewrite/rewriteDefine.c:769
 #, c-format
@@ -14078,7 +14055,7 @@ msgstr "El archivo «%s» no contiene datos válidos."
 
 #: utils/init/miscinit.c:1164
 msgid "You might need to initdb."
-msgstr "Puede necesitar ejecutar initdb."
+msgstr "Puede ser necesario ejecutar initdb."
 
 #: utils/init/miscinit.c:1172
 #, c-format
@@ -14100,9 +14077,9 @@ msgid "loaded library \"%s\""
 msgstr "biblioteca «%s» cargada"
 
 #: utils/init/postinit.c:225
-#, fuzzy, c-format
+#, c-format
 msgid "replication connection authorized: user=%s"
-msgstr "conexión de replicación autorizada: usuario=%s host=%s"
+msgstr "conexión de replicación autorizada: usuario=%s"
 
 #: utils/init/postinit.c:229
 #, c-format
@@ -14188,10 +14165,9 @@ msgstr ""
 "debe ser superusuario para conectarse durante el apagado de la base de datos"
 
 #: utils/init/postinit.c:637
-#, fuzzy
 msgid "must be superuser to connect in binary upgrade mode"
 msgstr ""
-"debe ser superusuario para conectarse durante el apagado de la base de datos"
+"debe ser superusuario para conectarse en modo de actualización binaria"
 
 #: utils/init/postinit.c:651
 msgid ""
@@ -14201,9 +14177,8 @@ msgstr ""
 "las conexiones restantes están reservadas a superusuarios y no de replicación"
 
 #: utils/init/postinit.c:666
-#, fuzzy
 msgid "must be replication role to start walsender"
-msgstr "debe ser superusuario para iniciar el walsender"
+msgstr "debe ser ser rol de replicación para iniciar el walsender"
 
 #: utils/init/postinit.c:726
 #, c-format
@@ -14499,15 +14474,14 @@ msgid "cannot compare arrays of different element types"
 msgstr "no se pueden comparar arrays con elementos de distintos tipos"
 
 #: utils/adt/arrayfuncs.c:3563
-#, fuzzy, c-format
+#, c-format
 msgid "could not identify a hash function for type %s"
-msgstr "no se pudo identificar una función de comparación para el tipo %s"
+msgstr "no se pudo identificar una función de hash para el tipo %s"
 
 #: utils/adt/arrayfuncs.c:4814 utils/adt/arrayfuncs.c:4854
-#, fuzzy
 msgid "dimension array or low bound array cannot be null"
 msgstr ""
-"el array de dimensiones o el array de límites inferiores no puede ser NULL"
+"el array de dimensiones o el array de límites inferiores debe ser no nulo"
 
 #: utils/adt/arrayfuncs.c:4917 utils/adt/arrayfuncs.c:4949
 msgid "Dimension array must be one dimensional."
@@ -14756,9 +14730,9 @@ msgid "could not determine actual enum type"
 msgstr "no se pudo determinar el tipo enum efectivo"
 
 #: utils/adt/enum.c:365 utils/adt/enum.c:394
-#, fuzzy, c-format
+#, c-format
 msgid "enum %s contains no values"
-msgstr "la columna «%s» contiene valores nulos"
+msgstr "el enum %s no contiene valores"
 
 #: utils/adt/float.c:54
 msgid "value out of range: overflow"
@@ -14914,25 +14888,19 @@ msgid "\"%s\" is not a number"
 msgstr "«%s» no es un número"
 
 #: utils/adt/formatting.c:1519 utils/adt/formatting.c:1569
-#, fuzzy
 msgid "could not determine which collation to use for lower() function"
 msgstr ""
-"no se pudo determinar el verdadero tipo de resultado para la función "
-"polimórfica «%s»"
+"no se pudo determinar qué ordenamiento (collation) usar para la función lower()"
 
 #: utils/adt/formatting.c:1640 utils/adt/formatting.c:1690
-#, fuzzy
 msgid "could not determine which collation to use for upper() function"
 msgstr ""
-"no se pudo determinar el verdadero tipo de resultado para la función "
-"polimórfica «%s»"
+"no se pudo determinar qué ordenamiento (collation) usar para la función upper()"
 
 #: utils/adt/formatting.c:1773 utils/adt/formatting.c:1835
-#, fuzzy
 msgid "could not determine which collation to use for initcap() function"
 msgstr ""
-"no se pudo determinar el verdadero tipo de resultado para la función "
-"polimórfica «%s»"
+"no se pudo determinar qué ordenamiento (collation) usar para la función initcap()"
 
 #: utils/adt/formatting.c:2017
 msgid "invalid combination of date conventions"
@@ -15223,9 +15191,8 @@ msgid "OID out of range"
 msgstr "OID está fuera de rango"
 
 #: utils/adt/like.c:211 utils/adt/selfuncs.c:4911
-#, fuzzy
 msgid "could not determine which collation to use for ILIKE"
-msgstr "no se pudo determinar el tipo de dato de entrada"
+msgstr "no se pudo determinar qué ordenamiento (collation) usar para ILIKE"
 
 #: utils/adt/like_match.c:104 utils/adt/like_match.c:164
 msgid "LIKE pattern must not end with escape character"
@@ -15495,21 +15462,21 @@ msgstr "el carácter nulo no está permitido"
 
 #: utils/adt/pg_locale.c:1000 utils/adt/pg_locale.c:1013
 #: utils/adt/pg_locale.c:1019
-#, fuzzy, c-format
+#, c-format
 msgid "could not create locale \"%s\": %m"
-msgstr "no se pudo crear el archivo de bloqueo «%s»: %m"
+msgstr "no se pudo crear la configuración regional «%s»: %m"
 
 #: utils/adt/pg_locale.c:1030
-#, fuzzy
 msgid ""
 "collations with different collate and ctype values are not supported on this "
 "platform"
-msgstr "tablespaces no están soportados en esta plataforma"
+msgstr ""
+"los ordenamientos (collation) con valores collate y ctype diferentes no están "
+"soportados en esta plataforma"
 
 #: utils/adt/pg_locale.c:1045
-#, fuzzy
 msgid "nondefault collations are not supported on this platform"
-msgstr "%s: los enlaces simbólicos no están soportados en esta plataforma"
+msgstr "los ordenamientos (collation) distintos del ordenamiento por omisión no están soportados en esta plataforma"
 
 #: utils/adt/pg_locale.c:1216
 msgid "invalid multibyte character for locale"
@@ -15556,14 +15523,12 @@ msgid "cannot display a value of type language_handler"
 msgstr "no se puede desplegar un valor de tipo language_handler"
 
 #: utils/adt/pseudotypes.c:306
-#, fuzzy
 msgid "cannot accept a value of type fdw_handler"
-msgstr "no se puede aceptar un valor de tipo language_handler"
+msgstr "no se puede aceptar un valor de tipo fdw_handler"
 
 #: utils/adt/pseudotypes.c:319
-#, fuzzy
 msgid "cannot display a value of type fdw_handler"
-msgstr "no se puede desplegar un valor de tipo language_handler"
+msgstr "no se puede desplegar un valor de tipo fdw_handler"
 
 #: utils/adt/pseudotypes.c:333
 msgid "cannot accept a value of type internal"
@@ -15606,9 +15571,8 @@ msgid "cannot display a value of a shell type"
 msgstr "no se puede desplegar un valor de un tipo inconcluso"
 
 #: utils/adt/pseudotypes.c:474 utils/adt/pseudotypes.c:498
-#, fuzzy
 msgid "cannot accept a value of type pg_node_tree"
-msgstr "no se puede aceptar un valor de tipo trigger"
+msgstr "no se puede aceptar un valor de tipo pg_node_tree"
 
 #: utils/adt/regexp.c:275 utils/adt/varlena.c:2866
 #, c-format
@@ -16135,11 +16099,9 @@ msgid "value too long for type character varying(%d)"
 msgstr "el valor es demasiado largo para el tipo character varying(%d)"
 
 #: utils/adt/varlena.c:1314
-#, fuzzy
 msgid "could not determine which collation to use for string comparison"
 msgstr ""
-"no se pudo determinar la interpretación del operador de comparación de "
-"registros %s"
+"no se pudo determinar qué ordenamiento usar para la comparación de cadenas"
 
 #: utils/adt/varlena.c:1358 utils/adt/varlena.c:1371
 #, c-format
@@ -16162,28 +16124,25 @@ msgid "field position must be greater than zero"
 msgstr "la posición del campo debe ser mayor que cero"
 
 #: utils/adt/varlena.c:3828 utils/adt/varlena.c:3889
-#, fuzzy
 msgid "unterminated conversion specifier"
-msgstr "un identificador entre comillas está inconcluso"
+msgstr "especificador de conversión inconcluso"
 
 #: utils/adt/varlena.c:3852 utils/adt/varlena.c:3868
-#, fuzzy
 msgid "argument number is out of range"
-msgstr "el número de parámetro %d está fuera del rango 0..%d"
+msgstr "número de argumento fuera del rango"
 
 #: utils/adt/varlena.c:3895
 msgid "conversion specifies argument 0, but arguments are numbered from 1"
 msgstr "la conversión especifica el argumento 0, pero los argumentos se numeran desde 1"
 
 #: utils/adt/varlena.c:3902
-#, fuzzy
 msgid "too few arguments for format"
-msgstr "muy pocos argumentos en la línea %d"
+msgstr "muy pocos argumentos para el formato"
 
 #: utils/adt/varlena.c:3923
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized conversion specifier \"%c\""
-msgstr "parámetro de configuración no reconocido: «%s»"
+msgstr "espeficiador de conversión no reconocido: «%c»"
 
 #: utils/adt/varlena.c:3952
 msgid "null values cannot be formatted as an SQL identifier"
@@ -16372,9 +16331,9 @@ msgid "Continuing anyway, but there's something wrong."
 msgstr "Prosiguiendo de todas maneras, pero hay algo mal."
 
 #: utils/cache/relcache.c:4501
-#, fuzzy, c-format
+#, c-format
 msgid "could not remove cache file \"%s\": %m"
-msgstr "no se pudo eliminar el archivo «%s»: %m"
+msgstr "no se pudo eliminar el archivo de cache «%s»: %m"
 
 #: utils/cache/relmapper.c:454
 msgid "cannot PREPARE a transaction that modified relation mapping"
@@ -16818,14 +16777,12 @@ msgid "Replication"
 msgstr "Replicación"
 
 #: utils/misc/guc.c:557
-#, fuzzy
 msgid "Replication / Master Server"
-msgstr "replicación terminada por el servidor primario"
+msgstr "Replicación / Servidor Maestro"
 
 #: utils/misc/guc.c:559
-#, fuzzy
 msgid "Replication / Standby Servers"
-msgstr "Write-Ahead Log / Servidores Standby"
+msgstr "Replicación / Servidores Standby"
 
 #: utils/misc/guc.c:561
 msgid "Query Tuning"
@@ -17244,15 +17201,16 @@ msgid "Sets the current transaction's read-only status."
 msgstr "Activa el estado de sólo lectura de la transacción en curso."
 
 #: utils/misc/guc.c:1185
-#, fuzzy
 msgid "Sets the default deferrable status of new transactions."
-msgstr "Estado por omisión de sólo lectura de nuevas transacciones."
+msgstr "Estado por omisión de postergable de nuevas transacciones."
 
 #: utils/misc/guc.c:1194
 msgid ""
 "Whether to defer a read-only serializable transaction until it can be "
 "executed with no possible serialization failures."
 msgstr ""
+"Si está activo, las transacciones serializables de sólo lectura serán pausadas "
+"hasta que puedan ejecutarse sin posibles fallas de serialización."
 
 #: utils/misc/guc.c:1204
 msgid "Check function bodies during CREATE FUNCTION."
@@ -17521,20 +17479,17 @@ msgstr ""
 "número con un 0 (cero)."
 
 #: utils/misc/guc.c:1654
-#, fuzzy
 msgid "Sets the file permissions for log files."
 msgstr ""
-"Define el patrón para los nombres de archivo del registro del servidor."
+"Define los privilegios para los archivos del registro del servidor."
 
 #: utils/misc/guc.c:1655
-#, fuzzy
 msgid ""
 "The parameter value is expected to be a numeric mode specification in the "
 "form accepted by the chmod and umask system calls. (To use the customary "
 "octal format the number must start with a 0 (zero).)"
 msgstr ""
-"Los sockets de dominio Unix usan la funcionalidad de permisos de archivos "
-"estándar de Unix. Se espera que el valor de esta opción sea una "
+"Se espera que el valor de esta opción sea una "
 "especificación numérica de modo, en la forma aceptada por las llamadas a "
 "sistema chmod y umask. Para usar el modo octal acostumbrado, comience el "
 "número con un 0 (cero)."
@@ -17633,7 +17588,7 @@ msgstr ""
 
 #: utils/misc/guc.c:1870
 msgid "Sets the maximum number of locks per transaction."
-msgstr "Cantidad máxima de bloqueos (locks) por transacción."
+msgstr "Cantidad máxima de candados (locks) por transacción."
 
 #: utils/misc/guc.c:1871
 msgid ""
@@ -17641,24 +17596,22 @@ msgid ""
 "max_locks_per_transaction * max_connections distinct objects will need to be "
 "locked at any one time."
 msgstr ""
-"El tamaño de la tabla compartida de bloqueos se calcula usando la suposición "
+"El tamaño de la tabla compartida de candados se calcula usando la suposición "
 "de que a lo más max_locks_per_transaction * max_connections objetos "
 "necesitarán ser bloqueados simultáneamente."
 
 #: utils/misc/guc.c:1882
-#, fuzzy
 msgid "Sets the maximum number of predicate locks per transaction."
-msgstr "Cantidad máxima de bloqueos (locks) por transacción."
+msgstr "Cantidad máxima de candados (locks) de predicado por transacción."
 
 #: utils/misc/guc.c:1883
-#, fuzzy
 msgid ""
 "The shared predicate lock table is sized on the assumption that at most "
 "max_pred_locks_per_transaction * max_connections distinct objects will need "
 "to be locked at any one time."
 msgstr ""
-"El tamaño de la tabla compartida de bloqueos se calcula usando la suposición "
-"de que a lo más max_locks_per_transaction * max_connections objetos "
+"El tamaño de la tabla compartida de candados se calcula usando la suposición "
+"de que a lo más max_pred_locks_per_transaction * max_connections objetos "
 "necesitarán ser bloqueados simultáneamente."
 
 #: utils/misc/guc.c:1894
@@ -17719,9 +17672,8 @@ msgstr ""
 "Tiempo de descanso de «WAL sender» entre replicaciones de WAL consecutivas."
 
 #: utils/misc/guc.c:2006
-#, fuzzy
 msgid "Sets the maximum time to wait for WAL replication."
-msgstr "Define el tiempo máximo entre puntos de control de WAL automáticos."
+msgstr "Define el tiempo máximo a esperar la replicación de WAL."
 
 #: utils/misc/guc.c:2017
 msgid ""
@@ -18523,19 +18475,17 @@ msgid "SSL is not supported by this build"
 msgstr "SSL no está soportado en este servidor"
 
 #: utils/misc/guc.c:8372
-#, fuzzy
 msgid "Cannot enable parameter when \"log_statement_stats\" is true."
 msgstr ""
-"no se puede activar el parámetro cuando «log_statement_stats» es verdadero"
+"No se puede activar el parámetro cuando «log_statement_stats» está activo."
 
 #: utils/misc/guc.c:8384
-#, fuzzy
 msgid ""
 "Cannot enable \"log_statement_stats\" when \"log_parser_stats\", "
 "\"log_planner_stats\", or \"log_executor_stats\" is true."
 msgstr ""
-"no se puede activar «log_statement_stats» cuando "
-"«log_parser_stats»,«log_planner_stats» o «log_executor_stats» están activos."
+"No se puede activar «log_statement_stats» cuando "
+"«log_parser_stats», «log_planner_stats» o «log_executor_stats» están activos."
 
 #: utils/misc/help_config.c:131
 msgid "internal error: unrecognized run-time parameter type\n"
@@ -18690,9 +18640,9 @@ msgid "could not set junction for \"%s\": %s\n"
 msgstr "no se pudo definir un junction para «%s»: %s\n"
 
 #: ../port/dirmod.c:358
-#, fuzzy, c-format
+#, c-format
 msgid "could not get junction for \"%s\": %s"
-msgstr "no se pudo obtener junction para «%s»: %s\n"
+msgstr "no se pudo obtener junction para «%s»: %s"
 
 #: ../port/dirmod.c:361
 #, c-format
