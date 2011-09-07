@@ -1507,43 +1507,37 @@ msgid "Recovery control functions can only be executed during recovery."
 msgstr "Funções de controle de recuperação só podem ser executadas durante recuperação."
 
 #: access/transam/xlog.c:5934
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "hot standby is not possible because %s = %d is a lower setting than on the "
 "master server (its value was %d)"
 msgstr ""
-"servidor em espera não é possível porque %s = %d é uma configuração mais "
-"baixa do que no servidor principal (seu valor era %d)"
+"servidor em espera ativo não é possível porque %s = %d é uma configuração mais baixa do que no servidor principal (seu valor era %d)"
 
 #: access/transam/xlog.c:5956
 msgid "WAL was generated with wal_level=minimal, data may be missing"
 msgstr "WAL foi gerado com wal_level=minimal, dados podem estar faltando"
 
 #: access/transam/xlog.c:5957
-#, fuzzy
 msgid ""
 "This happens if you temporarily set wal_level=minimal without taking a new "
 "base backup."
 msgstr ""
-"Isso acontece se você temporariamente definir wal_level=minimal sem realizar "
-"uma nova cópia de segurança física."
+"Isso acontece se você temporariamente definir wal_level=minimal sem realizar uma nova cópia física."
 
 #: access/transam/xlog.c:5968
-#, fuzzy
 msgid ""
 "hot standby is not possible because wal_level was not set to \"hot_standby\" "
 "on the master server"
 msgstr ""
-"servidor em espera não é possível porque wal_level não foi definido para "
-"\"hot_standby\" no servidor principal"
+"servidor em espera ativo não é possível porque wal_level não foi definido para \"hot_standby\" no servidor principal"
 
 #: access/transam/xlog.c:5969
 msgid ""
 "Either set wal_level to \"hot_standby\" on the master, or turn off "
 "hot_standby here."
 msgstr ""
-"Defina wal_level para \"hot_standby\" no primário ou desabilite hot_standby "
-"aqui."
+"Defina wal_level para \"hot_standby\" no primário ou desabilite hot_standby aqui."
 
 #: access/transam/xlog.c:6017
 msgid "control file contains invalid data"
@@ -1704,9 +1698,8 @@ msgstr ""
 "automática está em andamento"
 
 #: access/transam/xlog.c:6377
-#, fuzzy
 msgid "initializing for hot standby"
-msgstr "inicialização para servidor em espera"
+msgstr "inicialização para servidor em espera ativo"
 
 #: access/transam/xlog.c:6505
 #, c-format
@@ -7369,9 +7362,8 @@ msgstr ""
 "somente leitura"
 
 #: commands/variable.c:589
-#, fuzzy
 msgid "transaction read-write mode must be set before any query"
-msgstr "não pode definir modo leitura-escrita de transação durante recuperação"
+msgstr "modo leitura-escrita de transação deve ser definido antes de qualquer consulta"
 
 #: commands/variable.c:595
 msgid "cannot set transaction read-write mode during recovery"
@@ -7388,36 +7380,31 @@ msgstr ""
 "SET TRANSACTION ISOLATION LEVEL não deve ser chamado em uma subtransação"
 
 #: commands/variable.c:655
-#, fuzzy
 msgid "cannot use serializable mode in a hot standby"
-msgstr "inicialização para servidor em espera"
+msgstr "não pode utilizar modo serializável em um servidor em espera ativo"
 
 #: commands/variable.c:656
-#, fuzzy
 msgid "You can use REPEATABLE READ instead."
-msgstr "Você pode remover %s ao invés dele."
+msgstr "Você pode utilizar REPEATABLE READ ao invés disso."
 
 #: commands/variable.c:704
-#, fuzzy
 msgid ""
 "SET TRANSACTION [NOT] DEFERRABLE cannot be called within a subtransaction"
 msgstr ""
-"SET TRANSACTION ISOLATION LEVEL não deve ser chamado em uma subtransação"
+"SET TRANSACTION [NOT] DEFERRABLE não pode ser chamado em uma subtransação"
 
 #: commands/variable.c:710
-#, fuzzy
 msgid "SET TRANSACTION [NOT] DEFERRABLE must be called before any query"
-msgstr ""
-"SET TRANSACTION ISOLATION LEVEL deve ser chamado antes de qualquer consulta"
+msgstr "SET TRANSACTION [NOT] DEFERRABLE deve ser chamado antes de qualquer consulta"
 
 #: commands/variable.c:792
-#, fuzzy, c-format
+#, c-format
 msgid "Conversion between %s and %s is not supported."
-msgstr "conversão entre %s e %s não é suportada"
+msgstr "conversão entre %s e %s não é suportada."
 
 #: commands/variable.c:799
 msgid "Cannot change \"client_encoding\" now."
-msgstr ""
+msgstr "Não pode mudar \"client_encoding\" agora."
 
 #: commands/variable.c:969
 #, c-format
@@ -13269,7 +13256,7 @@ msgstr "não pôde determinar qual collation utilizar na expressão regular"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:101
 #, c-format
 msgid "could not connect to the primary server: %s"
-msgstr "não pôde conectar ao servidor primário: %s"
+msgstr "não pôde conectar ao servidor principal: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:113
 #, c-format
@@ -13278,37 +13265,33 @@ msgid ""
 "primary server: %s"
 msgstr ""
 "não pôde receber identificador do sistema de banco de dados e o ID de linha "
-"do tempo do servidor primário: %s"
+"do tempo do servidor principal: %s"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:124
 msgid "invalid response from primary server"
-msgstr "resposta inválida do servidor primário"
+msgstr "resposta inválida do servidor principal"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:125
-#, fuzzy, c-format
+#, c-format
 msgid "Expected 1 tuple with 3 fields, got %d tuples with %d fields."
-msgstr "Esperada 1 tupla com dois campos, recebeu %d tuplas com %d campos."
+msgstr "Esperada 1 tupla com 3 campos, recebeu %d tuplas com %d campos."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:140
-#, fuzzy
 msgid "database system identifier differs between the primary and standby"
-msgstr ""
-"identificador do sistema de banco de dados difere entre o primário e o "
-"secundário"
+msgstr "identificador do sistema de banco de dados difere entre o servidor principal e o servidor em espera"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:141
-#, fuzzy, c-format
+#, c-format
 msgid "The primary's identifier is %s, the standby's identifier is %s."
 msgstr ""
-"O identificador do servidor primário é %s, o identificador do servidor "
-"secundário é %s."
+"O identificador do servidor principal é %s, o identificador do servidor "
+"em espera é %s."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:153
 #, fuzzy, c-format
 msgid "timeline %u of the primary does not match recovery target timeline %u"
 msgstr ""
-"linha do tempo solicitada %u do servidor primário não combina com linha do "
-"tempo %u alvo da recuperação"
+"linha do tempo solicitada %u do servidor principal não combina com linha do tempo %u alvo da recuperação"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:165
 #, fuzzy, c-format
@@ -13318,7 +13301,7 @@ msgstr "não pôde iniciar envio do WAL: %s"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:171
 #, fuzzy
 msgid "streaming replication successfully connected to primary"
-msgstr "replicação em fluxo conectou-se com sucesso ao servidor primário"
+msgstr "replicação em fluxo conectou-se com sucesso ao servidor principal"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:193
 msgid "socket not open"
@@ -13333,7 +13316,7 @@ msgstr "não pôde receber dados do stream do WAL: %s\n"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:384
 msgid "replication terminated by primary server"
-msgstr "replicação terminada pelo servidor primário"
+msgstr "replicação terminada pelo servidor principal"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:415
 #, fuzzy, c-format
@@ -13341,10 +13324,8 @@ msgid "could not send data to WAL stream: %s"
 msgstr "não pôde enviar dados ao servidor: %s\n"
 
 #: replication/walreceiver.c:150
-#, fuzzy
 msgid "terminating walreceiver process due to administrator command"
-msgstr ""
-"terminando processo walreceiver por causa de um comando do administrador"
+msgstr "terminando processo walreceiver por causa de um comando do administrador"
 
 #: replication/walreceiver.c:299
 #, fuzzy
@@ -13360,9 +13341,8 @@ msgstr ""
 
 #: replication/walsender.c:261 replication/walsender.c:489
 #: replication/walsender.c:547
-#, fuzzy
 msgid "unexpected EOF on standby connection"
-msgstr "EOF inesperado durante conexão do servidor em espera"
+msgstr "EOF inesperado na conexão do servidor em espera"
 
 #: replication/walsender.c:267
 #, fuzzy, c-format
@@ -13370,45 +13350,41 @@ msgid "invalid standby handshake message type %d"
 msgstr "tipo de mensagem do servidor em espera %d é inválido"
 
 #: replication/walsender.c:379
-#, fuzzy
 msgid "standby connections not allowed because wal_level=minimal"
-msgstr ""
-"conexões de servidores em espera não são permitidas porque wal_level=minimal"
+msgstr "conexões de servidores em espera não são permitidas porque wal_level=minimal"
 
 #: replication/walsender.c:461
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby query string: %s"
 msgstr "consulta do servidor em espera inválida: %s"
 
 #: replication/walsender.c:518
-#, fuzzy, c-format
+#, c-format
 msgid "invalid standby message type \"%c\""
-msgstr "tipo de mensagem do servidor em espera %d é inválido"
+msgstr "tipo de mensagem do servidor em espera \"%c\" é inválido"
 
 #: replication/walsender.c:569
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected message type \"%c\""
-msgstr "nome de tipo esperado"
+msgstr "tipo de mensagem \"%c\" inesperado"
 
 #: replication/walsender.c:822
 #, fuzzy
 msgid "terminating walsender process due to replication timeout"
-msgstr ""
-"terminando processo walreceiver por causa de um comando do administrador"
+msgstr "terminando processo walsender por causa do tempo de espera da replicação"
 
 #: replication/walsender.c:838
-#, c-format
+#, fuzzy, c-format
 msgid "standby \"%s\" has now caught up with primary"
-msgstr ""
+msgstr "servidor em espera \"%s\" agora alcançou o servidor principal"
 
 #: replication/walsender.c:907
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "number of requested standby connections exceeds max_wal_senders (currently "
 "%d)"
 msgstr ""
-"número de conexões do servidores em espera solicitadas excedeu "
-"max_wal_senders (atualmente %d)"
+"número de conexões dos servidores em espera solicitadas excedeu max_wal_senders (atualmente %d)"
 
 #: replication/walsender.c:985 replication/walsender.c:1047
 #, c-format
@@ -13423,82 +13399,82 @@ msgstr ""
 "%lu: %m"
 
 #: replication/basebackup.c:122 replication/basebackup.c:631
-#, fuzzy, c-format
+#, c-format
 msgid "could not read symbolic link \"%s\": %m"
-msgstr "não pôde criar link simbólico \"%s\": %m"
+msgstr "não pôde ler link simbólico \"%s\": %m"
 
 #: replication/basebackup.c:231 replication/basebackup.c:743
 msgid "base backup could not send data, aborting backup"
-msgstr ""
+msgstr "cópia física não pôde enviar dados, interrompendo cópia de segurança"
 
 #: replication/basebackup.c:278 replication/basebackup.c:287
 #: replication/basebackup.c:296 replication/basebackup.c:305
 #: replication/basebackup.c:314
-#, fuzzy, c-format
+#, c-format
 msgid "duplicate option \"%s\""
-msgstr "opção \"%s\" é inválida"
+msgstr "opção \"%s\" duplicada"
 
 #: replication/basebackup.c:366
-#, fuzzy, c-format
+#, c-format
 msgid "could not open directory \"pg_tblspc\": %m"
-msgstr "não pôde abrir diretório \"%s\": %m"
+msgstr "não pôde abrir diretório \"pg_tblspc\": %m"
 
 #: replication/basebackup.c:576
 msgid "shutdown requested, aborting active base backup"
-msgstr ""
+msgstr "desligamento solicitado, interrompendo cópia física ativa"
 
 #: replication/basebackup.c:589
-#, fuzzy, c-format
+#, c-format
 msgid "could not stat file or directory \"%s\": %m"
-msgstr "não pôde executar stat no arquivo ou  diretório \"%s\": %s\n"
+msgstr "não pôde executar stat no arquivo ou  diretório \"%s\": %m"
 
 #: replication/basebackup.c:660
-#, fuzzy, c-format
+#, c-format
 msgid "skipping special file \"%s\""
-msgstr "removendo arquivo do log de transação \"%s\""
+msgstr "ignorando arquivo especial \"%s\""
 
 #: replication/basebackup.c:733
-#, fuzzy, c-format
+#, c-format
 msgid "archive member \"%s\" too large for tar format"
-msgstr "membro de arquivo muito grande para o formato tar\n"
+msgstr "membro de archive \"%s\" muito grande para o formato tar"
 
 #: replication/syncrep.c:210
-#, fuzzy
 msgid ""
 "canceling the wait for synchronous replication and terminating connection "
 "due to administrator command"
-msgstr "terminando conexão por causa de um comando do administrador"
+msgstr ""
+"cancelando espera por replicação síncrona e terminando conexão por causa de um comando do administrador"
 
 #: replication/syncrep.c:211 replication/syncrep.c:228
 msgid ""
 "The transaction has already committed locally, but might not have been "
 "replicated to the standby."
 msgstr ""
+"A transação foi efetivada localmente, mas pode não ter sido replicado para o servidor em espera."
 
 #: replication/syncrep.c:227
-#, fuzzy
 msgid "canceling wait for synchronous replication due to user request"
-msgstr "cancelando comando por causa de um pedido do usuário"
+msgstr "cancelando espera por replicação síncrona por causa de um pedido do usuário"
 
 #: replication/syncrep.c:358
 #, c-format
 msgid "standby \"%s\" now has synchronous standby priority %u"
-msgstr ""
+msgstr "servidor em espera \"%s\" agora tem prioridade %u como servidor em espera síncrono"
 
 #: replication/syncrep.c:451
 #, c-format
 msgid "standby \"%s\" is now the synchronous standby with priority %u"
-msgstr ""
+msgstr "servidor em espera \"%s\" agora é um servidor em espera síncrono com prioridade %u"
 
 #: repl_scanner.l:76
 #, fuzzy
 msgid "invalid streaming start location"
-msgstr "instrução de processamento XML é inválida"
+msgstr "local de início do fluxo é inválido"
 
 #: repl_scanner.l:107
-#, fuzzy, c-format
+#, c-format
 msgid "syntax error: unexpected character \"%s\""
-msgstr "erro de sintaxe, \"=\" esperado"
+msgstr "erro de sintaxe: caracter inesperado \"%s\""
 
 #: rewrite/rewriteDefine.c:109 rewrite/rewriteDefine.c:769
 #, c-format
@@ -13913,9 +13889,9 @@ msgid "loaded library \"%s\""
 msgstr "biblioteca \"%s\" foi carregada"
 
 #: utils/init/postinit.c:225
-#, fuzzy, c-format
+#, c-format
 msgid "replication connection authorized: user=%s"
-msgstr "conexão para replicação autorizada: usuário=%s"
+msgstr "conexão de replicação autorizada: usuário=%s"
 
 #: utils/init/postinit.c:229
 #, c-format
@@ -13994,7 +13970,7 @@ msgstr "Você deve executar imediatamente CREATE USER \"%s\" SUPERUSER;."
 #: utils/init/postinit.c:623
 msgid "new replication connections are not allowed during database shutdown"
 msgstr ""
-"novas conexões para replicaão não são permitidas durante desligamento de "
+"novas conexões de replicação não são permitidas durante desligamento de "
 "banco de dados"
 
 #: utils/init/postinit.c:627
@@ -14004,7 +13980,6 @@ msgstr ""
 "dados"
 
 #: utils/init/postinit.c:637
-#, fuzzy
 msgid "must be superuser to connect in binary upgrade mode"
 msgstr "deve ser super-usuário para se conectar no modo de atualização binária"
 
@@ -14018,9 +13993,8 @@ msgstr ""
 "usuário que não sejam usadas para replicação"
 
 #: utils/init/postinit.c:666
-#, fuzzy
 msgid "must be replication role to start walsender"
-msgstr "deve ser role replication para iniciar walsender"
+msgstr "deve ser role de replicação para iniciar walsender"
 
 #: utils/init/postinit.c:726
 #, c-format
@@ -14317,9 +14291,8 @@ msgid "could not identify a hash function for type %s"
 msgstr "não pôde identificar uma função hash para tipo %s"
 
 #: utils/adt/arrayfuncs.c:4814 utils/adt/arrayfuncs.c:4854
-#, fuzzy
 msgid "dimension array or low bound array cannot be null"
-msgstr "matriz de dimensões ou matriz de limites inferiores não pode ser NULL"
+msgstr "matriz de dimensões ou matriz de limites inferiores não pode ser nula"
 
 #: utils/adt/arrayfuncs.c:4917 utils/adt/arrayfuncs.c:4949
 msgid "Dimension array must be one dimensional."
@@ -14725,17 +14698,14 @@ msgid "\"%s\" is not a number"
 msgstr "\"%s\" não é um número"
 
 #: utils/adt/formatting.c:1519 utils/adt/formatting.c:1569
-#, fuzzy
 msgid "could not determine which collation to use for lower() function"
 msgstr "não pôde determinar qual collation utilizar na função lower()"
 
 #: utils/adt/formatting.c:1640 utils/adt/formatting.c:1690
-#, fuzzy
 msgid "could not determine which collation to use for upper() function"
 msgstr "não pôde determinar qual collation utilizar na função upper()"
 
 #: utils/adt/formatting.c:1773 utils/adt/formatting.c:1835
-#, fuzzy
 msgid "could not determine which collation to use for initcap() function"
 msgstr "não pôde determinar qual collation utilizar na função initcap()"
 
@@ -14852,9 +14822,8 @@ msgid "absolute path not allowed"
 msgstr "caminho absoluto não é permitido"
 
 #: utils/adt/genfile.c:76
-#, fuzzy
 msgid "path must be in or below the current directory"
-msgstr "caminho deve deve estar no ou abaixo do diretório atual"
+msgstr "caminho deve estar no ou abaixo do diretório atual"
 
 #: utils/adt/genfile.c:117 utils/adt/oracle_compat.c:184
 #: utils/adt/oracle_compat.c:282 utils/adt/oracle_compat.c:758
@@ -15030,7 +14999,6 @@ msgid "OID out of range"
 msgstr "OID fora do intervalo"
 
 #: utils/adt/like.c:211 utils/adt/selfuncs.c:4911
-#, fuzzy
 msgid "could not determine which collation to use for ILIKE"
 msgstr "não pôde determinar qual collation utilizar para ILIKE"
 
@@ -15306,7 +15274,6 @@ msgid "could not create locale \"%s\": %m"
 msgstr "não pôde criar configuração regional \"%s\": %m"
 
 #: utils/adt/pg_locale.c:1030
-#, fuzzy
 msgid ""
 "collations with different collate and ctype values are not supported on this "
 "platform"
@@ -15315,9 +15282,8 @@ msgstr ""
 "nessa plataforma"
 
 #: utils/adt/pg_locale.c:1045
-#, fuzzy
 msgid "nondefault collations are not supported on this platform"
-msgstr "collation não-padrão não são suportados nessa plataforma"
+msgstr "collations não-padrão não são suportados nessa plataforma"
 
 #: utils/adt/pg_locale.c:1216
 msgid "invalid multibyte character for locale"
@@ -15950,11 +15916,8 @@ msgid "value too long for type character varying(%d)"
 msgstr "valor é muito longo para tipo character varying(%d)"
 
 #: utils/adt/varlena.c:1314
-#, fuzzy
 msgid "could not determine which collation to use for string comparison"
-msgstr ""
-"não pôde determinar qual collation utilizar para comparação de cadeia de "
-"caracteres"
+msgstr "não pôde determinar qual collation utilizar para comparação de cadeia de caracteres"
 
 #: utils/adt/varlena.c:1358 utils/adt/varlena.c:1371
 #, c-format
@@ -15977,9 +15940,8 @@ msgid "field position must be greater than zero"
 msgstr "posição do campo deve ser maior que zero"
 
 #: utils/adt/varlena.c:3828 utils/adt/varlena.c:3889
-#, fuzzy
 msgid "unterminated conversion specifier"
-msgstr "identificador entre aspas não foi terminado"
+msgstr "especificador de conversão foi terminado"
 
 #: utils/adt/varlena.c:3852 utils/adt/varlena.c:3868
 msgid "argument number is out of range"
@@ -15995,9 +15957,9 @@ msgid "too few arguments for format"
 msgstr "poucos argumentos para formato"
 
 #: utils/adt/varlena.c:3923
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized conversion specifier \"%c\""
-msgstr "parâmetro de configuração \"%s\" desconhecido"
+msgstr "especificador de conversão \"%c\" desconhecido"
 
 #: utils/adt/varlena.c:3952
 msgid "null values cannot be formatted as an SQL identifier"
@@ -16628,14 +16590,12 @@ msgid "Replication"
 msgstr "Replicação"
 
 #: utils/misc/guc.c:557
-#, fuzzy
 msgid "Replication / Master Server"
-msgstr "Replicação / Servidor Primário"
+msgstr "Replicação / Servidor Principal"
 
 #: utils/misc/guc.c:559
-#, fuzzy
 msgid "Replication / Standby Servers"
-msgstr "Replicação / Servidores de Espera"
+msgstr "Replicação / Servidores em Espera"
 
 #: utils/misc/guc.c:561
 msgid "Query Tuning"
@@ -17145,10 +17105,12 @@ msgid "Allows connections and queries during recovery."
 msgstr "Permite conexões e consultas durante recuperação."
 
 #: utils/misc/guc.c:1383
+#, fuzzy
 msgid ""
 "Allows feedback from a hot standby to the primary that will avoid query "
 "conflicts."
 msgstr ""
+"Permite retorno do servidor em espera ativo ao servidor principal que evitará conflitos de consulta."
 
 #: utils/misc/guc.c:1393
 msgid "Allows modifications of the structure of system tables."
@@ -17271,17 +17233,20 @@ msgid ""
 "Sets the maximum delay before canceling queries when a hot standby server is "
 "processing archived WAL data."
 msgstr ""
+"Define o tempo máximo antes de cancelar consultas quando um servidor em espera ativo está processando dados do WAL arquivados."
 
 #: utils/misc/guc.c:1561
 msgid ""
 "Sets the maximum delay before canceling queries when a hot standby server is "
 "processing streamed WAL data."
 msgstr ""
+"Define o tempo máximo antes de cancelar consultas quando um servidor em espera ativo está processando dados do WAL enviados."
 
 #: utils/misc/guc.c:1572
 msgid ""
 "Sets the maximum interval between WAL receiver status reports to the primary."
 msgstr ""
+"Define o intervalo máximo entre relatos de status do receptor do WAL ao servidor principal."
 
 #: utils/misc/guc.c:1583
 msgid "Sets the maximum number of concurrent connections."
@@ -17468,7 +17433,7 @@ msgstr "Espera N segundos após autenticação durante inicialização da conex�
 
 #: utils/misc/guc.c:1917
 msgid "Sets the number of WAL files held for standby servers."
-msgstr "Define o número de arquivos WAL mantidos para servidores de espera."
+msgstr "Define o número de arquivos WAL mantidos para servidores em espera."
 
 #: utils/misc/guc.c:1927
 msgid ""
@@ -18512,14 +18477,14 @@ msgid "could not set junction for \"%s\": %s\n"
 msgstr "não pôde definir junção para \"%s\": %s\n"
 
 #: ../port/dirmod.c:358
-#, fuzzy, c-format
+#, c-format
 msgid "could not get junction for \"%s\": %s"
-msgstr "não pôde definir junção para \"%s\": %s"
+msgstr "não pôde obter junção para \"%s\": %s"
 
 #: ../port/dirmod.c:361
-#, fuzzy, c-format
+#, c-format
 msgid "could not get junction for \"%s\": %s\n"
-msgstr "não pôde definir junção para \"%s\": %s\n"
+msgstr "não pôde obter junção para \"%s\": %s\n"
 
 #: ../port/dirmod.c:443
 #, c-format
@@ -18635,44 +18600,3 @@ msgstr "código de erro win32 mapeado de %lu para %d"
 #, c-format
 msgid "unrecognized win32 error code: %lu"
 msgstr "código de erro win32 desconhecido: %lu"
-
-#~ msgid "restore_command = '%s'"
-#~ msgstr "restore_command = '%s'"
-
-#~ msgid "recovery_end_command = '%s'"
-#~ msgstr "recovery_end_command = '%s'"
-
-#~ msgid "archive_cleanup_command = '%s'"
-#~ msgstr "archive_cleanup_command = '%s'"
-
-#, fuzzy
-#~ msgid "pause_at_recovery_target = '%s'"
-#~ msgstr "recovery_target_time = '%s'"
-
-#~ msgid "recovery_target_timeline = %u"
-#~ msgstr "recovery_target_timeline = %u"
-
-#~ msgid "recovery_target_timeline = latest"
-#~ msgstr "recovery_target_timeline = latest"
-
-#~ msgid "recovery_target_xid = %u"
-#~ msgstr "recovery_target_xid = %u"
-
-#~ msgid "recovery_target_time = '%s'"
-#~ msgstr "recovery_target_time = '%s'"
-
-#, fuzzy
-#~ msgid "recovery_target_name = '%s'"
-#~ msgstr "recovery_target_time = '%s'"
-
-#~ msgid "recovery_target_inclusive = %s"
-#~ msgstr "recovery_target_inclusive = %s"
-
-#~ msgid "standby_mode = '%s'"
-#~ msgstr "standby_mode = '%s'"
-
-#~ msgid "primary_conninfo = '%s'"
-#~ msgstr "primary_conninfo = '%s'"
-
-#~ msgid "trigger_file = '%s'"
-#~ msgstr "trigger_file = '%s'"
