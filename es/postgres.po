@@ -8,7 +8,7 @@
 # Jaime Casanova <systemguards@gmail.com> 2005, 2006
 # Emanuel Calvo Franco <postgres-arg@gmail.com> 2008
 #
-# $Id: postgres.po,v 1.35 2011/09/07 22:00:09 alvherre Exp $
+# $Id: postgres.po,v 1.36 2011/09/07 22:12:58 alvherre Exp $
 #
 #
 # Glosario:
@@ -58,7 +58,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL server 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2011-09-07 04:58+0000\n"
-"PO-Revision-Date: 2011-09-07 18:59-0300\n"
+"PO-Revision-Date: 2011-09-07 19:12-0300\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "Language: \n"
@@ -12474,7 +12474,6 @@ msgid "Failed system call was semget(%lu, %d, 0%o)."
 msgstr "La llamada a sistema fallida fue semget(%lu, %d, 0%o)."
 
 #: port/sysv_sema.c:119 port/pg_sema.c:119
-#, fuzzy
 msgid ""
 "This error does *not* mean that you have run out of disk space.  It occurs "
 "when either the system limit for the maximum number of semaphore sets "
@@ -12490,7 +12489,7 @@ msgstr ""
 "(SEMMNI), o bien cuando se excede el total de semáforos del sistema (SEMMNS)."
 "Necesita incrementar el parámetro respectivo del kernel.  Alternativamente, "
 "reduzca el consumo de semáforos de PostgreSQL reduciendo el parámetro "
-"max_connections (actualmente %d).\n"
+"max_connections.\n"
 "La documentación de PostgreSQL contiene más información acerca de cómo "
 "configurar su sistema para PostgreSQL."
 
@@ -12514,7 +12513,7 @@ msgid "Failed system call was shmget(key=%lu, size=%lu, 0%o)."
 msgstr "La llamada a sistema fallida fue shmget(key=%lu, size=%lu, 0%o)."
 
 #: port/sysv_shmem.c:152 port/pg_shmem.c:152
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded your kernel's SHMMAX parameter.  You can either reduce the "
@@ -12531,8 +12530,8 @@ msgstr ""
 "un segmento de memoria compartida excedió el parámetro SHMMAX del kernel.  "
 "Puede reducir el tamaño de la petición o reconfigurar el kernel con un "
 "SHMMAX superior.  Para reducir el tamaño de la petición (actualmente %lu "
-"bytes), reduzca el parámetro de PostgreSQL shared_buffers (actualmente %d) y/"
-"o el parámetro max_connections (actualmente %d).\n"
+"bytes), reduzca el parámetro de PostgreSQL shared_buffers y/"
+"o el parámetro max_connections.\n"
 "Si el tamaño de la petición ya es pequeño, es posible que sea inferior al "
 "parámetro SHMMIN del kernel, en cuyo caso se requiere alzar el tamaño de la "
 "petición o disminuir SHMMIN.\n"
@@ -12540,7 +12539,7 @@ msgstr ""
 "configuración de memoria compartida."
 
 #: port/sysv_shmem.c:165 port/pg_shmem.c:165
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded available memory or swap space, or exceeded your kernel's "
@@ -12555,13 +12554,12 @@ msgstr ""
 "compartida de PostgreSQL excedía la memoria disponible o el espacio de "
 "intercambio (swap), o excedía el valor SHMALL del kernel.  Para reducir el "
 "tamaño de la petición (actualmente %lu bytes), reduzca el parámetro de "
-"PostgreSQL shared_buffers (actualmente %d) y/o el parámetro max_connections "
-"(actualmente %d).\n"
+"PostgreSQL shared_buffers y/o el parámetro max_connections.\n"
 "La documentación de PostgreSQL contiene más información acerca de la "
 "configuración de memoria compartida."
 
 #: port/sysv_shmem.c:176 port/pg_shmem.c:176
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error does *not* mean that you have run out of disk space.  It occurs "
 "either if all available shared memory IDs have been taken, in which case you "
@@ -12578,8 +12576,8 @@ msgstr ""
 "caso puede incrementar el parámetro SHMMNI del kernel, o bien porque se ha "
 "alcanzado el límite total de memoria compartida.  Si no puede incrementar el "
 "límite de memoria compartida, reduzca el tamaño de petición de PostgreSQL "
-"(actualmente %lu bytes) reduciendo el parámetro shared_buffers (actualmente "
-"%d) y/o el parámetro max_connections (actualmente %d).\n"
+"(actualmente %lu bytes) reduciendo el parámetro shared_buffers "
+"y/o el parámetro max_connections.\n"
 "La documentación de PostgreSQL contiene más información acerca de la "
 "configuración de memoria compartida."
 
@@ -18261,9 +18259,8 @@ msgstr ""
 "de reescritura."
 
 #: utils/misc/guc.c:3156
-#, fuzzy
 msgid "Sets the current transaction's synchronization level."
-msgstr "Define el nivel de aislación de la transacción en curso."
+msgstr "Define el nivel de sincronización de la transacción en curso."
 
 #: utils/misc/guc.c:3166
 msgid "Enables logging of recovery-related debugging information."
