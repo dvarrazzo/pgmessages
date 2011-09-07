@@ -418,9 +418,8 @@ msgid "To fix this, do REINDEX INDEX \"%s\"."
 msgstr "Para corrigir isto, faça REINDEX INDEX \"%s\"."
 
 #: access/gist/gist.c:230
-#, fuzzy
 msgid "unlogged GiST indexes are not supported"
-msgstr "índices GiST sem log não são suportados"
+msgstr "índices GiST unlogged não são suportados"
 
 #: access/gist/gist.c:715 access/gist/gistvacuum.c:271
 #, fuzzy, c-format
@@ -1523,7 +1522,7 @@ msgid ""
 "This happens if you temporarily set wal_level=minimal without taking a new "
 "base backup."
 msgstr ""
-"Isso acontece se você temporariamente definir wal_level=minimal sem realizar uma nova cópia física."
+"Isso acontece se você temporariamente definir wal_level=minimal sem realizar uma nova cópia de segurança base."
 
 #: access/transam/xlog.c:5968
 msgid ""
@@ -5755,9 +5754,8 @@ msgid "schema \"%s\" does not exist, skipping"
 msgstr "esquema \"%s\" não existe, ignorando"
 
 #: commands/sequence.c:126
-#, fuzzy
 msgid "unlogged sequences are not supported"
-msgstr "matrizes multidimensionais não são suportadas"
+msgstr "sequências unlogged não são suportadas"
 
 #: commands/sequence.c:634
 #, c-format
@@ -6297,6 +6295,7 @@ msgstr "não pode remover coluna herdada \"%s\""
 msgid ""
 "ALTER TABLE / ADD CONSTRAINT USING INDEX will rename index \"%s\" to \"%s\""
 msgstr ""
+"ALTER TABLE / ADD CONSTRAINT USING INDEX renomeará índice \"%s\" para \"%s\""
 
 #: commands/tablecmds.c:5460
 msgid "constraint must be added to child tables too"
@@ -6304,18 +6303,18 @@ msgstr "restrição deve ser adicionada as tabelas descendentes também"
 
 #: commands/tablecmds.c:5548
 msgid "constraints on permanent tables may reference only permanent tables"
-msgstr ""
+msgstr "restrições em tabelas permanentes só podem referenciar tabelas permanentes"
 
 #: commands/tablecmds.c:5555
 msgid ""
 "constraints on unlogged tables may reference only permanent or unlogged "
 "tables"
 msgstr ""
+"restrições em tabelas unlogged só podem referenciar tabelas permanentes ou unlogged"
 
 #: commands/tablecmds.c:5561
-#, fuzzy
 msgid "constraints on temporary tables may reference only temporary tables"
-msgstr "não pode criar índices em tabelas temporárias de outras sessões"
+msgstr "restrições em tabelas temporárias só podem referenciar tabelas temporárias"
 
 #: commands/tablecmds.c:5622
 msgid "number of referencing and referenced columns for foreign key disagree"
@@ -7433,9 +7432,8 @@ msgid "cannot change data type of view column \"%s\" from %s to %s"
 msgstr "não pode mudar tipo de dado de coluna da visão \"%s\" de %s para %s"
 
 #: commands/view.c:447
-#, fuzzy
 msgid "views must not contain SELECT INTO"
-msgstr "subconsulta não pode ter SELECT INTO"
+msgstr "visões não devem conter SELECT INTO"
 
 #: commands/view.c:451
 msgid "views must not contain data-modifying statements in WITH"
@@ -7446,8 +7444,9 @@ msgid "CREATE VIEW specifies more column names than columns"
 msgstr "CREATE VIEW especificou mais nomes de colunas do que colunas"
 
 #: commands/view.c:487
+#, fuzzy
 msgid "views cannot be unlogged because they do not have storage"
-msgstr ""
+msgstr "visões não podem ser unlogged porque elas não tem armazenamento"
 
 #: commands/view.c:501
 #, c-format
@@ -7469,29 +7468,27 @@ msgid "security label provider \"%s\" is not loaded"
 msgstr "variável \"%s\" não foi declarada"
 
 #: commands/extension.c:148 commands/extension.c:2441
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" does not exist"
-msgstr "relação \"%s\" não existe"
+msgstr "extensão \"%s\" não existe"
 
 #: commands/extension.c:247 commands/extension.c:256 commands/extension.c:268
 #: commands/extension.c:278
-#, fuzzy, c-format
+#, c-format
 msgid "invalid extension name: \"%s\""
-msgstr "nome de zona horária é inválido: \"%s\""
+msgstr "nome de extensão é inválido: \"%s\""
 
 #: commands/extension.c:248
-#, fuzzy
 msgid "Extension names must not be empty."
-msgstr "nome do cursor é inválido: não deve ser vazio"
+msgstr "Nomes de extensão não devem ser vazios."
 
 #: commands/extension.c:257
-#, fuzzy
 msgid "Extension names must not contain \"--\"."
-msgstr "matriz typmod não deve conter valores nulos"
+msgstr "Nomes de extensão não devem conter \"--\"."
 
 #: commands/extension.c:269
 msgid "Extension names must not begin or end with \"-\"."
-msgstr ""
+msgstr "Nomes de extensão não devem começar ou terminar com \"-\"."
 
 #: commands/extension.c:279
 msgid "Extension names must not contain directory separator characters."
@@ -10486,9 +10483,8 @@ msgid "SQL function \"%s\" during inlining"
 msgstr "função SQL \"%s\" durante expansão em linha"
 
 #: optimizer/util/plancat.c:97
-#, fuzzy
 msgid "cannot access temporary or unlogged relations during recovery"
-msgstr "não pode criar tabelas temporárias durante recuperação"
+msgstr "não pode criar tabelas temporárias ou unlogged durante recuperação"
 
 #: optimizer/plan/initsplan.c:595
 msgid ""
@@ -13399,7 +13395,7 @@ msgstr "não pôde ler link simbólico \"%s\": %m"
 
 #: replication/basebackup.c:231 replication/basebackup.c:743
 msgid "base backup could not send data, aborting backup"
-msgstr "cópia física não pôde enviar dados, interrompendo cópia de segurança"
+msgstr "cópia de segurança base não pôde enviar dados, interrompendo cópia de segurança"
 
 #: replication/basebackup.c:278 replication/basebackup.c:287
 #: replication/basebackup.c:296 replication/basebackup.c:305
@@ -13415,7 +13411,7 @@ msgstr "não pôde abrir diretório \"pg_tblspc\": %m"
 
 #: replication/basebackup.c:576
 msgid "shutdown requested, aborting active base backup"
-msgstr "desligamento solicitado, interrompendo cópia física ativa"
+msgstr "desligamento solicitado, interrompendo cópia de segurança base"
 
 #: replication/basebackup.c:589
 #, c-format
