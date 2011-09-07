@@ -3470,9 +3470,9 @@ msgid "default conversion for %s to %s already exists"
 msgstr "conversão padrão de %s para %s já existe"
 
 #: catalog/pg_depend.c:164 commands/extension.c:2735
-#, fuzzy, c-format
+#, c-format
 msgid "%s is already a member of extension \"%s\""
-msgstr "role \"%s\" já é um membro da role \"%s\""
+msgstr "role \"%s\" já é um membro da extensão \"%s\""
 
 #: catalog/pg_depend.c:323
 #, c-format
@@ -3490,13 +3490,13 @@ msgid "Labels must be %d characters or less."
 msgstr "Rótulos devem conter %d caracteres ou menos."
 
 #: catalog/pg_enum.c:264
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not an existing enum label"
-msgstr "\"%s\" não é um número"
+msgstr "\"%s\" não é um rótulo do enum existente"
 
 #: catalog/pg_enum.c:325
 msgid "ALTER TYPE ADD BEFORE/AFTER is incompatible with binary upgrade"
-msgstr ""
+msgstr "ALTER TYPE ADD BEFORE/AFTER é incompatível com atualização binária"
 
 #: catalog/pg_namespace.c:52 commands/schemacmds.c:259
 #, c-format
@@ -3795,19 +3795,19 @@ msgid "function %s already exists in schema \"%s\""
 msgstr "função %s já existe no esquema \"%s\""
 
 #: commands/alter.c:423
-#, fuzzy, c-format
+#, c-format
 msgid "must be superuser to set schema of %s"
-msgstr "deve ser super-usuário para definir concedente"
+msgstr "deve ser super-usuário para definir esquema de %s"
 
 #: commands/alter.c:451
-#, fuzzy, c-format
+#, c-format
 msgid "%s already exists in schema \"%s\""
-msgstr "tipo \"%s\" já existe no esquema \"%s\""
+msgstr "%s já existe no esquema \"%s\""
 
 #: commands/analyze.c:153
 #, c-format
 msgid "skipping analyze of \"%s\" --- lock not available"
-msgstr ""
+msgstr "ignorando análise de \"%s\" --- bloqueio não está disponível"
 
 #: commands/analyze.c:170
 #, c-format
@@ -3959,12 +3959,12 @@ msgstr "não pode agrupar por índice inválido \"%s\""
 #: commands/cluster.c:883
 #, c-format
 msgid "clustering \"%s.%s\" using index scan on \"%s\""
-msgstr ""
+msgstr "agrupando \"%s.%s\" utilizando busca por índice em \"%s\""
 
 #: commands/cluster.c:889
 #, c-format
 msgid "clustering \"%s.%s\" using sequential scan and sort"
-msgstr ""
+msgstr "agrupando \"%s.%s\" utilizando busca sequencial e ordenação"
 
 #: commands/cluster.c:894 commands/vacuumlazy.c:339
 #, c-format
@@ -3972,12 +3972,11 @@ msgid "vacuuming \"%s.%s\""
 msgstr "limpando \"%s.%s\""
 
 #: commands/cluster.c:1054
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
 msgstr ""
-"\"%s\": encontrados %.0f versões de registros removíveis e %.0f não-"
-"removíveis em %u de %u páginas"
+"\"%s\": encontrados %.0f versões de registros removíveis e %.0f não-removíveis em %u páginas"
 
 #: commands/cluster.c:1058
 #, c-format
@@ -3985,6 +3984,8 @@ msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
 "%s."
 msgstr ""
+"%.0f versões de registros não vigentes não podem ser removidas ainda.\n"
+"%s."
 
 #: commands/comment.c:60 commands/dbcommands.c:764 commands/dbcommands.c:909
 #: commands/dbcommands.c:1008 commands/dbcommands.c:1181
@@ -6703,9 +6704,9 @@ msgid "could not remove directory \"%s\": %m"
 msgstr "não pôde remover diretório \"%s\": %m"
 
 #: commands/tablespace.c:1039
-#, fuzzy, c-format
+#, c-format
 msgid "Tablespace \"%s\" does not exist."
-msgstr "tablespace \"%s\" não existe"
+msgstr "Tablespace \"%s\" não existe."
 
 #: commands/tablespace.c:1450
 #, c-format
@@ -6713,18 +6714,18 @@ msgid "tablespace %u is not empty"
 msgstr "tablespace %u não está vazia"
 
 #: commands/trigger.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is a table"
-msgstr "\"%s\" não é uma tabela"
+msgstr "\"%s\" é uma tabela"
 
 #: commands/trigger.c:161
 msgid "Tables cannot have INSTEAD OF triggers."
-msgstr ""
+msgstr "Tabelas não podem ter gatilhos INSTEAD OF."
 
 #: commands/trigger.c:172 commands/trigger.c:179
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is a view"
-msgstr "\"%s\" não é uma visão"
+msgstr "\"%s\" é uma visão"
 
 #: commands/trigger.c:174
 msgid "Views cannot have row-level BEFORE or AFTER triggers."
@@ -6732,7 +6733,7 @@ msgstr ""
 
 #: commands/trigger.c:181
 msgid "Views cannot have TRUNCATE triggers."
-msgstr ""
+msgstr "Visões não podem ter gatilhos TRUNCATE."
 
 #: commands/trigger.c:228
 msgid "TRUNCATE FOR EACH ROW triggers are not supported"
@@ -6744,12 +6745,12 @@ msgstr ""
 
 #: commands/trigger.c:240
 msgid "INSTEAD OF triggers cannot have WHEN conditions"
-msgstr ""
+msgstr "gatilhos INSTEAD OF não podem ter condições WHEN"
 
 #: commands/trigger.c:244
 #, fuzzy
 msgid "INSTEAD OF triggers cannot have column lists"
-msgstr "funções de gatilho não podem ter argumentos declarados"
+msgstr "gatilhos INSTEAD OF não podem ter listas de colunas"
 
 #: commands/trigger.c:288
 msgid "cannot use subquery in trigger WHEN condition"
@@ -7214,7 +7215,7 @@ msgstr ""
 #: commands/vacuum.c:919
 #, c-format
 msgid "skipping vacuum of \"%s\" --- lock not available"
-msgstr ""
+msgstr "ignorando limpeza de \"%s\" --- bloqueio não está disponível"
 
 #: commands/vacuum.c:945
 #, c-format
@@ -7455,17 +7456,18 @@ msgstr "visão \"%s\" será uma visão temporária"
 
 #: commands/seclabel.c:58
 msgid "no security label providers have been loaded"
-msgstr ""
+msgstr "nenhum fornecedor de rótulo de segurança foi carregado"
 
 #: commands/seclabel.c:62
 msgid ""
 "must specify provider when multiple security label providers have been loaded"
 msgstr ""
+"deve especificar fornecedor quando múltiplos fornecedores de rótulo de segurança forem carregados"
 
 #: commands/seclabel.c:80
-#, fuzzy, c-format
+#, c-format
 msgid "security label provider \"%s\" is not loaded"
-msgstr "variável \"%s\" não foi declarada"
+msgstr "fornecedor de rótulo de segurança \"%s\" não foi carregado"
 
 #: commands/extension.c:148 commands/extension.c:2441
 #, c-format
@@ -7519,87 +7521,84 @@ msgid "Version names must not contain directory separator characters."
 msgstr ""
 
 #: commands/extension.c:473
-#, fuzzy, c-format
+#, c-format
 msgid "could not open extension control file \"%s\": %m"
-msgstr "não pôde abrir arquivo de controle \"%s\": %m"
+msgstr "não pôde abrir arquivo de controle da extensão \"%s\": %m"
 
 #: commands/extension.c:494 commands/extension.c:504
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" cannot be set in a secondary extension control file"
 msgstr ""
-"parâmetro \"%s\" não pode ser definido depois que a conexão foi iniciada"
+"parâmetro \"%s\" não pode ser definido em um segundo arquivo de controle da extensão"
 
 #: commands/extension.c:543
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a valid encoding name"
-msgstr "%s não é um nome de codificação válido"
+msgstr "\"%s\" não é um nome de codificação válido"
 
 #: commands/extension.c:557
-#, fuzzy, c-format
+#, c-format
 msgid "parameter \"%s\" must be a list of extension names"
-msgstr "argumento para opção \"%s\" deve ser uma lista de nomes de colunas"
+msgstr "parâmetro \"%s\" deve ser uma lista de nomes de extensões"
 
 #: commands/extension.c:564
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized parameter \"%s\" in file \"%s\""
-msgstr "parâmetro \"%s\" desconhecido"
+msgstr "parâmetro \"%s\" desconhecido em arquivo \"%s\""
 
 #: commands/extension.c:573
-#, fuzzy
 msgid "parameter \"schema\" cannot be specified when \"relocatable\" is true"
-msgstr ""
-"parâmetro \"%s\" não pode ser definido depois que a conexão foi iniciada"
+msgstr "parâmetro \"schema\" não pode ser especificado quando \"relocatable\" é verdadeiro"
 
 #: commands/extension.c:725
 msgid ""
 "transaction control statements are not allowed within an extension script"
 msgstr ""
+"comandos de controle de transação não são permitidos dentro do script da extensão"
 
 #: commands/extension.c:795
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied to create extension \"%s\""
-msgstr "permissão negada ao criar tablespace \"%s\""
+msgstr "permissão negada ao criar extensão \"%s\""
 
 #: commands/extension.c:797
-#, fuzzy
 msgid "Must be superuser to create this extension."
-msgstr "Deve ser super-usuário para criar uma tablespace."
+msgstr "Deve ser super-usuário para criar uma extensão."
 
 #: commands/extension.c:801
-#, fuzzy, c-format
+#, c-format
 msgid "permission denied to update extension \"%s\""
-msgstr "permissão negada ao criar tablespace \"%s\""
+msgstr "permissão negada ao atualizar extensão \"%s\""
 
 #: commands/extension.c:803
-#, fuzzy
 msgid "Must be superuser to update this extension."
-msgstr "Deve ser super-usuário para criar uma tablespace."
+msgstr "Deve ser super-usuário para atualizar esta extensão."
 
 #: commands/extension.c:1083
 #, fuzzy, c-format
 msgid ""
 "extension \"%s\" has no update path from version \"%s\" to version \"%s\""
-msgstr "relação \"%s\" não é um ancestral da relação \"%s\""
+msgstr ""
+"extensão \"%s\" não possui caminho de atualização da versão \"%s\" para versão \"%s\""
 
 #: commands/extension.c:1210
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" already exists, skipping"
-msgstr "relação \"%s\" já existe"
+msgstr "extensão \"%s\" já existe, ignorando"
 
 #: commands/extension.c:1217
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" already exists"
-msgstr "relação \"%s\" já existe"
+msgstr "extensão \"%s\" já existe"
 
 #: commands/extension.c:1228
 #, fuzzy
 msgid "nested CREATE EXTENSION is not supported"
-msgstr "LOCATION não é mais suportado"
+msgstr "CREATE EXTENSION cascateada não é mais suportado"
 
 #: commands/extension.c:1283 commands/extension.c:2501
-#, fuzzy
 msgid "version to install must be specified"
-msgstr "nome da máquina deve ser especificado\n"
+msgstr "versão a ser instalada deve ser especificada"
 
 #: commands/extension.c:1300
 #, c-format
@@ -7607,25 +7606,26 @@ msgid "FROM version must be different from installation target version \"%s\""
 msgstr ""
 
 #: commands/extension.c:1355
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" must be installed in schema \"%s\""
-msgstr "relação \"%s\" já está no esquema \"%s\""
+msgstr "extensão \"%s\" deve ser instalada no esquema \"%s\""
 
 #: commands/extension.c:1434 commands/extension.c:2642
-#, fuzzy, c-format
+#, c-format
 msgid "required extension \"%s\" is not installed"
-msgstr "relação referenciada \"%s\" não é uma tabela"
+msgstr "extensão requerida \"%s\" não está instalada"
 
 #: commands/extension.c:1603
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" does not exist, skipping"
-msgstr "conversão \"%s\" não existe, ignorando"
+msgstr "extensão \"%s\" não existe, ignorando"
 
 #: commands/extension.c:2111
 msgid ""
 "pg_extension_config_dump() can only be called from an SQL script executed by "
 "CREATE EXTENSION"
 msgstr ""
+"pg_extension_config_dump() só pode ser chamada de um script SQL executado por CREATE EXTENSION"
 
 #: commands/extension.c:2123
 #, c-format
@@ -7633,34 +7633,34 @@ msgid "OID %u does not refer to a table"
 msgstr ""
 
 #: commands/extension.c:2128
-#, fuzzy, c-format
+#, c-format
 msgid "table \"%s\" is not a member of the extension being created"
-msgstr "role \"%s\" não é um membro da role \"%s\""
+msgstr "tabela \"%s\" não é um membro da extensão que está sendo criada"
 
 #: commands/extension.c:2311 commands/extension.c:2370
-#, fuzzy, c-format
+#, c-format
 msgid "extension \"%s\" does not support SET SCHEMA"
-msgstr "método de acesso \"%s\" não suporta opções ASC/DESC"
+msgstr "extensão \"%s\" não suporta SET SCHEMA"
 
 #: commands/extension.c:2372
-#, fuzzy, c-format
+#, c-format
 msgid "%s is not in the extension's schema \"%s\""
-msgstr "função %s já existe no esquema \"%s\""
+msgstr "%s não está no esquema da extensão \"%s\""
 
 #: commands/extension.c:2421
 #, fuzzy
 msgid "nested ALTER EXTENSION is not supported"
-msgstr "COPY (SELECT INTO) não é suportado"
+msgstr "ALTER EXTENSION cascateado não é suportado"
 
 #: commands/extension.c:2512
-#, fuzzy, c-format
+#, c-format
 msgid "version \"%s\" of extension \"%s\" is already installed"
-msgstr "coluna \"%s\" da relação \"%s\" já existe"
+msgstr "versao \"%s\" da extensão \"%s\" já está instalada"
 
 #: commands/extension.c:2752
-#, fuzzy, c-format
+#, c-format
 msgid "%s is not a member of extension \"%s\""
-msgstr "role \"%s\" não é um membro da role \"%s\""
+msgstr "%s não é um membro da extensão \"%s\""
 
 #: commands/collationcmds.c:81
 #, c-format
