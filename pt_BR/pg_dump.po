@@ -307,7 +307,7 @@ msgstr "  --no-tablespaces             não copia atribuições a tablespaces\n"
 #: pg_dump.c:863 pg_dumpall.c:555
 #, c-format
 msgid "  --no-unlogged-table-data    do not dump unlogged table data\n"
-msgstr ""
+msgstr "  --no-unlogged-table-data    não copia dados de tabela sem log\n"
 
 #: pg_dump.c:864 pg_dumpall.c:556
 #, c-format
@@ -499,9 +499,9 @@ msgstr[0] "consulta retornou %d registro ao invés de um: %s\n"
 msgstr[1] "consulta retornou %d registros ao invés de um: %s\n"
 
 #: pg_dump.c:2545
-#, fuzzy, c-format
+#, c-format
 msgid "could not find parent extension for %s"
-msgstr "não pôde encontrar extensão para %s"
+msgstr "não pôde encontrar extensão pai para %s"
 
 #: pg_dump.c:2652
 #, c-format
@@ -842,7 +842,6 @@ msgid "reading default privileges\n"
 msgstr "lendo privilégios padrão\n"
 
 #: common.c:185
-#, fuzzy
 msgid "reading user-defined collations\n"
 msgstr "lendo collations definidas pelo usuário\n"
 
@@ -945,7 +944,7 @@ msgid ""
 "cannot restore from compressed archive (compression not supported in this "
 "installation)\n"
 msgstr ""
-"não pode recuperar arquivo comprimido (compressão não é suportada nesta "
+"não pode recuperar archive comprimido (compressão não é suportada nesta "
 "instalação)\n"
 
 #: pg_backup_archiver.c:261
@@ -955,7 +954,7 @@ msgstr "conectando ao banco de dados para restauração\n"
 #: pg_backup_archiver.c:263
 msgid "direct database connections are not supported in pre-1.3 archives\n"
 msgstr ""
-"conexões diretas ao banco de dados não são suportadas em arquivos anteriores "
+"conexões diretas ao banco de dados não são suportadas em archives anteriores "
 "a versão 1.3\n"
 
 #: pg_backup_archiver.c:305
@@ -1129,7 +1128,7 @@ msgstr "fim de arquivo inesperado\n"
 
 #: pg_backup_archiver.c:1759
 msgid "attempting to ascertain archive format\n"
-msgstr "tentando verificar formato de arquivo\n"
+msgstr "tentando verificar formato do archive\n"
 
 #: pg_backup_archiver.c:1785 pg_backup_archiver.c:1795
 #, c-format
@@ -1137,11 +1136,11 @@ msgid "directory name too long: \"%s\"\n"
 msgstr "nome de diretório é muito longo: \"%s\"\n"
 
 #: pg_backup_archiver.c:1803
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "directory \"%s\" does not appear to be a valid archive (\"toc.dat\" does not "
 "exist)\n"
-msgstr "diretório \"%s\" não parece ser um depósito de arquivos válido (\"toc.dat\" não existe)\n"
+msgstr "diretório \"%s\" não parece ser um archive válido (\"toc.dat\" não existe)\n"
 
 #: pg_backup_archiver.c:1811 pg_backup_custom.c:171 pg_backup_custom.c:757
 #: pg_backup_files.c:155 pg_backup_files.c:307
@@ -1166,11 +1165,11 @@ msgstr "arquivo de entrada é muito pequeno (lido %lu, esperado 5)\n"
 
 #: pg_backup_archiver.c:1888
 msgid "input file does not appear to be a valid archive (too short?)\n"
-msgstr "arquivo de entrada não parece ser um arquivo válido (muito pequeno?)\n"
+msgstr "arquivo de entrada não parece ser um archive válido (muito pequeno?)\n"
 
 #: pg_backup_archiver.c:1891
 msgid "input file does not appear to be a valid archive\n"
-msgstr "arquivo de entrada não parece ser um arquivo válido\n"
+msgstr "arquivo de entrada não parece ser um archive válido\n"
 
 #: pg_backup_archiver.c:1911
 #, c-format
@@ -1228,7 +1227,7 @@ msgid ""
 "WARNING: requested compression not available in this installation -- archive "
 "will be uncompressed\n"
 msgstr ""
-"AVISO: compressão requerida não está disponível nesta instalação -- arquivo "
+"AVISO: compressão requerida não está disponível nesta instalação -- archive "
 "será descomprimido\n"
 
 #: pg_backup_archiver.c:3094
@@ -1250,7 +1249,7 @@ msgid ""
 "WARNING: archive was made on a machine with larger integers, some operations "
 "might fail\n"
 msgstr ""
-"AVISO: arquivo foi feito em uma máquina com inteiros longos, algumas "
+"AVISO: archive foi feito em uma máquina com inteiros longos, algumas "
 "operações podem falhar\n"
 
 #: pg_backup_archiver.c:3126
@@ -1263,7 +1262,7 @@ msgid ""
 "WARNING: archive is compressed, but this installation does not support "
 "compression -- no data will be available\n"
 msgstr ""
-"AVISO: arquivo está comprimido, mas esta instalação não suporta compressão "
+"AVISO: archive está comprimido, mas esta instalação não suporta compressão "
 "-- nenhum dado está disponível\n"
 
 #: pg_backup_archiver.c:3160
@@ -1276,14 +1275,12 @@ msgstr "executando restore_toc_entries_parallel\n"
 
 #: pg_backup_archiver.c:3262
 msgid "parallel restore is not supported with this archive file format\n"
-msgstr "restauração paralela não é suportada por este formato de arquivo\n"
+msgstr "restauração paralela não é suportada por este formato de archive\n"
 
 #: pg_backup_archiver.c:3266
 msgid ""
 "parallel restore is not supported with archives made by pre-8.0 pg_dump\n"
-msgstr ""
-"restauração paralela não é suportada por arquivos produzidos por pg_dum "
-"anterior a 8.0\n"
+msgstr "restauração paralela não é suportada por archives produzidos por pg_dump anterior a 8.0\n"
 
 #: pg_backup_archiver.c:3307
 #, c-format
@@ -1376,7 +1373,7 @@ msgstr "OID inválido para objeto grande\n"
 #: pg_backup_custom.c:444
 #, c-format
 msgid "unrecognized data block type (%d) while searching archive\n"
-msgstr "tipo de bloco de dados desconhecido (%d) durante busca no arquivo\n"
+msgstr "tipo de bloco de dados desconhecido (%d) durante busca no archive\n"
 
 #: pg_backup_custom.c:455
 #, c-format
@@ -1390,7 +1387,7 @@ msgid ""
 "restore request, which cannot be handled due to lack of data offsets in "
 "archive\n"
 msgstr ""
-"não pôde encontrar bloco com ID %d no arquivo -- possivelmente por causa de "
+"não pôde encontrar bloco com ID %d no archive -- possivelmente por causa de "
 "pedido de restauração fora de ordem, que não pode ser manipulado pela falta "
 "de deslocamentos no arquivo\n"
 
@@ -1400,15 +1397,14 @@ msgid ""
 "could not find block ID %d in archive -- possibly due to out-of-order "
 "restore request, which cannot be handled due to non-seekable input file\n"
 msgstr ""
-"não pôde encontrar bloco com ID %d no arquivo -- possivelmente por causa de "
-"pedido de restauração fora de ordem, que não pode ser manipulado por arquivo "
-"de entrada não posicionável\n"
+"não pôde encontrar bloco com ID %d no archive -- possivelmente por causa de "
+"pedido de restauração fora de ordem, que não pode ser manipulado porque arquivo de entrada é não posicionável\n"
 
 #: pg_backup_custom.c:475
 #, c-format
 msgid "could not find block ID %d in archive -- possibly corrupt archive\n"
 msgstr ""
-"não pôde encontrar bloco com ID %d em arquivo -- possivelmente arquivo "
+"não pôde encontrar bloco com ID %d em archive -- possivelmente archive "
 "corrompido\n"
 
 #: pg_backup_custom.c:482
@@ -1422,7 +1418,7 @@ msgstr ""
 #, c-format
 msgid "unrecognized data block type %d while restoring archive\n"
 msgstr ""
-"tipo de bloco de dados desconhecido %d durante restauração do arquivo\n"
+"tipo de bloco de dados desconhecido %d durante restauração do archive\n"
 
 #: pg_backup_custom.c:578 pg_backup_custom.c:911
 msgid "could not read from input file: end of file\n"
@@ -1441,11 +1437,11 @@ msgstr "não pôde escrever byte: %s\n"
 #: pg_backup_custom.c:718 pg_backup_custom.c:751
 #, c-format
 msgid "could not close archive file: %s\n"
-msgstr "não pôde fechar arquivo: %s\n"
+msgstr "não pôde fechar archive: %s\n"
 
 #: pg_backup_custom.c:737
 msgid "can only reopen input archives\n"
-msgstr "não pôde reabrir arquivos de entrada\n"
+msgstr "não pôde reabrir archives de entrada\n"
 
 #: pg_backup_custom.c:739
 msgid "cannot reopen stdin\n"
@@ -1458,12 +1454,12 @@ msgstr "não pode reabrir arquivo não posicionável\n"
 #: pg_backup_custom.c:746
 #, c-format
 msgid "could not determine seek position in archive file: %s\n"
-msgstr "não pôde determinar posição de busca no arquivo: %s\n"
+msgstr "não pôde determinar posição de busca no archive: %s\n"
 
 #: pg_backup_custom.c:761
 #, c-format
 msgid "could not set seek position in archive file: %s\n"
-msgstr "não pôde definir posição de busca no arquivo: %s\n"
+msgstr "não pôde definir posição de busca no archive: %s\n"
 
 #: pg_backup_custom.c:781
 msgid "compressor active\n"
@@ -1629,7 +1625,7 @@ msgstr "não pôde abrir arquivo TOC para saída: %s\n"
 
 #: pg_backup_tar.c:218 pg_backup_tar.c:374
 msgid "compression is not supported by tar archive format\n"
-msgstr "compressão não é suportada pelo formato de saída tar\n"
+msgstr "compressão não é suportada pelo formato tar\n"
 
 #: pg_backup_tar.c:226
 #, c-format
@@ -1644,7 +1640,7 @@ msgstr "não pôde abrir arquivo TOC para entrada: %s\n"
 #: pg_backup_tar.c:360
 #, c-format
 msgid "could not find file \"%s\" in archive\n"
-msgstr "não pôde encontrar arquivo \"%s\" no arquivo de dados\n"
+msgstr "não pôde encontrar arquivo \"%s\" no archive\n"
 
 #: pg_backup_tar.c:416
 #, c-format
@@ -1684,11 +1680,11 @@ msgstr "restaurando OID do objeto grande %u\n"
 
 #: pg_backup_tar.c:884
 msgid "could not write null block at end of tar archive\n"
-msgstr "não pôde escrever bloco nulo no fim do arquivo tar\n"
+msgstr "não pôde escrever bloco nulo no fim do archive tar\n"
 
 #: pg_backup_tar.c:1084
 msgid "archive member too large for tar format\n"
-msgstr "membro de arquivo muito grande para o formato tar\n"
+msgstr "membro de archive muito grande para o formato tar\n"
 
 #: pg_backup_tar.c:1099
 #, c-format
@@ -1717,7 +1713,7 @@ msgstr "agora na posição %s do arquivo\n"
 #: pg_backup_tar.c:1166 pg_backup_tar.c:1196
 #, c-format
 msgid "could not find header for file \"%s\" in tar archive\n"
-msgstr "não pôde encontrar cabeçalho do arquivo \"%s\" no arquivo tar\n"
+msgstr "não pôde encontrar cabeçalho do arquivo \"%s\" no archive tar\n"
 
 #: pg_backup_tar.c:1180
 #, c-format
@@ -1730,8 +1726,8 @@ msgid ""
 "restoring data out of order is not supported in this archive format: \"%s\" "
 "is required, but comes before \"%s\" in the archive file.\n"
 msgstr ""
-"restaurar dados fora da ordem não é suportado neste formato de arquivo: \"%s"
-"\" é requerido, mas vem antes de \"%s\" no arquivo.\n"
+"restaurar dados fora da ordem não é suportado neste formato de archive: \"%s"
+"\" é requerido, mas vem antes de \"%s\" no archive.\n"
 
 #: pg_backup_tar.c:1230
 #, c-format
@@ -1775,7 +1771,7 @@ msgstr ""
 msgid ""
 "unrecognized archive format \"%s\"; please specify \"c\", \"d\", or \"t\"\n"
 msgstr ""
-"formato de arquivo desconhecido \"%s\"; por favor especifique \"c\", \"d\" ou \"t\"\n"
+"formato de archive desconhecido \"%s\"; por favor especifique \"c\", \"d\" ou \"t\"\n"
 
 #: pg_restore.c:382
 #, c-format
@@ -1788,7 +1784,7 @@ msgid ""
 "%s restores a PostgreSQL database from an archive created by pg_dump.\n"
 "\n"
 msgstr ""
-"%s restaura um banco de dados PostgreSQL a partir de um arquivo criado pelo "
+"%s restaura um banco de dados PostgreSQL a partir de um archive criado pelo "
 "pg_dump.\n"
 "\n"
 
@@ -1815,7 +1811,7 @@ msgstr "  -F, --format=c|d|t       formato de arquivo de cópia de segurança (d
 #: pg_restore.c:404
 #, c-format
 msgid "  -l, --list               print summarized TOC of the archive\n"
-msgstr "  -l, --list               mostra TOC resumido do arquivo\n"
+msgstr "  -l, --list               mostra TOC resumido do archive\n"
 
 #: pg_restore.c:405
 #, c-format
