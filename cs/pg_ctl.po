@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pg_ctl-cs\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2011-08-30 11:32+0200\n"
-"PO-Revision-Date: 2011-08-30 12:34+0200\n"
+"PO-Revision-Date: 2011-09-06 12:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: \n"
@@ -99,7 +99,7 @@ msgstr ""
 #: pg_ctl.c:755
 #, c-format
 msgid "%s: database system initialization failed\n"
-msgstr "%s: inicializace databáze selhalo\n"
+msgstr "%s: inicializace databáze selhala\n"
 
 #: pg_ctl.c:770
 #, c-format
@@ -165,7 +165,8 @@ msgstr "Běží server?\n"
 #: pg_ctl.c:863
 #, c-format
 msgid "%s: cannot stop server; single-user server is running (PID: %ld)\n"
-msgstr "%s: nemohu zastavit server; postgres běží (PID: %ld)\n"
+msgstr ""
+"%s: nemohu zastavit server; postgres běží v single-user módu (PID: %ld)\n"
 
 #: pg_ctl.c:871 pg_ctl.c:966
 #, c-format
@@ -214,7 +215,8 @@ msgstr "přesto server spouštím\n"
 #: pg_ctl.c:954
 #, c-format
 msgid "%s: cannot restart server; single-user server is running (PID: %ld)\n"
-msgstr "%s: nemohu restartovat server; postgres běží (PID: %ld)\n"
+msgstr ""
+"%s: nemohu restartovat server; postgres běží v single-user módu (PID: %ld)\n"
 
 #: pg_ctl.c:957 pg_ctl.c:1042
 msgid "Please terminate the single-user server and try again.\n"
@@ -244,7 +246,8 @@ msgstr "server obdržel signál\n"
 #, c-format
 msgid "%s: cannot promote server; single-user server is running (PID: %ld)\n"
 msgstr ""
-"%s: nelze povýšit (promote) server; běží jednouživatelský server (PID: %ld)\n"
+"%s: nelze povýšit (promote) server; server běží v single-user módu (PID: %"
+"ld)\n"
 
 #: pg_ctl.c:1088
 #, c-format
@@ -514,7 +517,7 @@ msgid ""
 "(The default is to wait for shutdown, but not for start or restart.)\n"
 "\n"
 msgstr ""
-"(Výchozí chování je čekat na ukončení, ale ne při startu nebo restartu.)\n"
+"(Implicitní chování je čekat na ukončení, ale ne při startu nebo restartu.)\n"
 "\n"
 
 #: pg_ctl.c:1772
@@ -593,7 +596,7 @@ msgstr "  smart       skonči potom, co se odpojí všichni klienti\n"
 #: pg_ctl.c:1789
 #, c-format
 msgid "  fast        quit directly, with proper shutdown\n"
-msgstr "  fast        skonči ihned, s patřičným ukončením\n"
+msgstr "  fast        skonči okamžitě, s korektním zastavením serveru\n"
 
 #: pg_ctl.c:1790
 #, c-format
@@ -601,8 +604,8 @@ msgid ""
 "  immediate   quit without complete shutdown; will lead to recovery on "
 "restart\n"
 msgstr ""
-"  immediate   skonči bez úplného ukončení; při dalším startu se spustí "
-"obnovení\n"
+"  immediate   skonči bez kompletního zastavení; další start provede "
+"                          obnovu po pádu (crash recovery)\n"
 
 #: pg_ctl.c:1792
 #, c-format
