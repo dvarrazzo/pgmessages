@@ -8,7 +8,7 @@
 # Jaime Casanova <systemguards@gmail.com> 2005, 2006
 # Emanuel Calvo Franco <postgres-arg@gmail.com> 2008
 #
-# $Id: postgres.po,v 1.36 2011/09/07 22:12:58 alvherre Exp $
+# $Id: postgres.po,v 1.37 2011/09/08 01:21:33 alvherre Exp $
 #
 #
 # Glosario:
@@ -42,7 +42,6 @@
 # to skip				ignorar
 # trigger				disparador
 # window function			función de ventana deslizante
-
 #
 # FIXME varios:
 # * "port" se traduce en forma inconsistente; corregir
@@ -57,8 +56,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL server 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-09-07 04:58+0000\n"
-"PO-Revision-Date: 2011-09-07 19:12-0300\n"
+"POT-Creation-Date: 2011-09-07 22:58+0000\n"
+"PO-Revision-Date: 2011-09-07 22:19-0300\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: PgSQL Español <pgsql-es-ayuda@postgresql.org>\n"
 "Language: \n"
@@ -466,7 +465,9 @@ msgstr ""
 
 #: access/gin/ginscan.c:401
 msgid "old GIN indexes do not support whole-index scans nor searches for nulls"
-msgstr "los índices GIN antiguos no soportan recorridos del índice completo ni búsquedas de nulos"
+msgstr ""
+"los índices GIN antiguos no soportan recorridos del índice completo ni "
+"búsquedas de nulos"
 
 #: access/gin/ginscan.c:402
 #, c-format
@@ -487,8 +488,8 @@ msgid ""
 "This is caused by an incomplete page split at crash recovery before "
 "upgrading to PostgreSQL 9.1."
 msgstr ""
-"Esto es causado por una división de página incompleta durante una recuperación "
-"antes de actualizar a PostgreSQL 9.1."
+"Esto es causado por una división de página incompleta durante una "
+"recuperación antes de actualizar a PostgreSQL 9.1."
 
 #: access/gist/gistsplit.c:375
 #, c-format
@@ -1194,7 +1195,8 @@ msgstr "IDs de timeline deben ser menores que el ID de timeline del hijo."
 #: access/transam/xlog.c:4313
 #, c-format
 msgid "new timeline %u is not a child of database system timeline %u"
-msgstr "el nuevo timeline %u especificado no es hijo del timeline de sistema %u"
+msgstr ""
+"el nuevo timeline %u especificado no es hijo del timeline de sistema %u"
 
 #: access/transam/xlog.c:4326
 #, c-format
@@ -1577,7 +1579,8 @@ msgstr "la recuperación no está en proceso"
 #: access/transam/xlog.c:5842
 msgid "Recovery control functions can only be executed during recovery."
 msgstr ""
-"Las funciones de control de recuperación sólo pueden ejecutarse durante la recuperación."
+"Las funciones de control de recuperación sólo pueden ejecutarse durante la "
+"recuperación."
 
 #: access/transam/xlog.c:5934
 #, c-format
@@ -1931,8 +1934,7 @@ msgstr "punto de recuperación «%s» creado en %X/%X"
 
 #: access/transam/xlog.c:8390
 msgid "online backup was canceled, recovery cannot continue"
-msgstr ""
-"el respaldo en línea fue cancelado, la recuperación no puede continuar"
+msgstr "el respaldo en línea fue cancelado, la recuperación no puede continuar"
 
 #: access/transam/xlog.c:8442
 #, c-format
@@ -1969,7 +1971,8 @@ msgstr ""
 
 #: access/transam/xlog.c:8864 access/transam/xlog.c:9142
 msgid "must be superuser or replication role to run a backup"
-msgstr "debe ser superusuario o el rol de replicación para ejecutar un respaldo"
+msgstr ""
+"debe ser superusuario o el rol de replicación para ejecutar un respaldo"
 
 #: access/transam/xlog.c:8869 access/transam/xlog.c:9147
 #: access/transam/xlog.c:9410 access/transam/xlog.c:9442
@@ -2090,7 +2093,9 @@ msgstr "el nivel de WAL no es suficiente para crear un punto de recuperación"
 #: access/transam/xlog.c:9456
 #, c-format
 msgid "value too long for restore point (maximum %d characters)"
-msgstr "el valor es demasiado largo para un punto de recuperación (máximo %d caracteres)"
+msgstr ""
+"el valor es demasiado largo para un punto de recuperación (máximo %d "
+"caracteres)"
 
 #: access/transam/xlog.c:9624
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
@@ -3095,7 +3100,9 @@ msgstr "un tipo compuesto %s no puede ser hecho miembro de sí mismo"
 #: catalog/heap.c:558
 #, c-format
 msgid "no collation was derived for column \"%s\" with collatable type %s"
-msgstr "no se derivó ningún ordenamiento (collate) para la columna «%s» con tipo ordenable %s"
+msgstr ""
+"no se derivó ningún ordenamiento (collate) para la columna «%s» con tipo "
+"ordenable %s"
 
 #: catalog/heap.c:560 commands/indexcmds.c:931 commands/view.c:145
 #: regex/regc_pg_locale.c:259 utils/adt/formatting.c:1520
@@ -3104,7 +3111,8 @@ msgstr "no se derivó ningún ordenamiento (collate) para la columna «%s» con 
 #: utils/adt/formatting.c:1836 utils/adt/like.c:212 utils/adt/selfuncs.c:4912
 #: utils/adt/selfuncs.c:5029 utils/adt/varlena.c:1315
 msgid "Use the COLLATE clause to set the collation explicitly."
-msgstr "Use la cláusula COLLATE para establecer el ordenamiento explícitamente."
+msgstr ""
+"Use la cláusula COLLATE para establecer el ordenamiento explícitamente."
 
 #: catalog/heap.c:1011 catalog/index.c:769 commands/tablecmds.c:2318
 #, c-format
@@ -3570,7 +3578,8 @@ msgstr "«%s» no es una etiqueta de enum existente"
 
 #: catalog/pg_enum.c:325
 msgid "ALTER TYPE ADD BEFORE/AFTER is incompatible with binary upgrade"
-msgstr "ALTER TYPE ADD BEFORE/AFTER es incompatible con la actualización binaria"
+msgstr ""
+"ALTER TYPE ADD BEFORE/AFTER es incompatible con la actualización binaria"
 
 #: catalog/pg_namespace.c:52 commands/schemacmds.c:259
 #, c-format
@@ -3784,8 +3793,8 @@ msgid ""
 "cannot reassign ownership of objects owned by %s because they are required "
 "by the database system"
 msgstr ""
-"no se puede reasignar la propiedad de objetos de %s porque son requeridos por el "
-"sistema"
+"no se puede reasignar la propiedad de objetos de %s porque son requeridos "
+"por el sistema"
 
 #: catalog/pg_type.c:241
 #, c-format
@@ -3910,8 +3919,8 @@ msgstr ""
 #, c-format
 msgid "skipping \"%s\" --- cannot analyze non-tables or special system tables"
 msgstr ""
-"ignorando «%s»: no se pueden analizar objetos que no son tablas, ni tablas especiales de "
-"sistema"
+"ignorando «%s»: no se pueden analizar objetos que no son tablas, ni tablas "
+"especiales de sistema"
 
 #: commands/analyze.c:285
 #, c-format
@@ -5274,7 +5283,8 @@ msgstr ""
 #: commands/indexcmds.c:930
 msgid "could not determine which collation to use for index expression"
 msgstr ""
-"no se pudo determinar qué ordenamiento (collation) usar para la expresión de índice"
+"no se pudo determinar qué ordenamiento (collation) usar para la expresión de "
+"índice"
 
 #: commands/indexcmds.c:938 commands/typecmds.c:843 parser/parse_expr.c:2140
 #: parser/parse_type.c:492 parser/parse_utilcmd.c:2556
@@ -6067,8 +6077,7 @@ msgstr ""
 
 #: commands/tablecmds.c:545 commands/tablecmds.c:4351
 msgid "default values on foreign tables are not supported"
-msgstr ""
-"los valores por omisión en tablas foráneas no están soportados"
+msgstr "los valores por omisión en tablas foráneas no están soportados"
 
 #: commands/tablecmds.c:813 commands/tablecmds.c:1142
 #: commands/tablecmds.c:2070 commands/tablecmds.c:3807
@@ -6296,7 +6305,8 @@ msgstr "no se puede alterar el tipo «%s» porque la columna «%s.%s» lo usa"
 msgid ""
 "cannot alter foreign table \"%s\" because column \"%s.%s\" uses its row type"
 msgstr ""
-"no se puede alterar la tabla foránea «%s» porque la columna «%s.%s» usa su tipo"
+"no se puede alterar la tabla foránea «%s» porque la columna «%s.%s» usa su "
+"tipo"
 
 #: commands/tablecmds.c:4017
 #, c-format
@@ -6330,7 +6340,9 @@ msgstr "la tabla hija «%s» tiene un tipo diferente para la columna «%s»"
 #: commands/tablecmds.c:4218 commands/tablecmds.c:8303
 #, c-format
 msgid "child table \"%s\" has different collation for column \"%s\""
-msgstr "la tabla hija «%s» tiene un ordenamiento (collation) diferente para la columna «%s»"
+msgstr ""
+"la tabla hija «%s» tiene un ordenamiento (collation) diferente para la "
+"columna «%s»"
 
 #: commands/tablecmds.c:4228
 #, c-format
@@ -6412,19 +6424,23 @@ msgstr "la restricción debe ser agregada a las tablas hijas también"
 
 #: commands/tablecmds.c:5548
 msgid "constraints on permanent tables may reference only permanent tables"
-msgstr "las restricciones en tablas permanentes sólo pueden hacer referencia a tablas permanentes"
+msgstr ""
+"las restricciones en tablas permanentes sólo pueden hacer referencia a "
+"tablas permanentes"
 
 #: commands/tablecmds.c:5555
 msgid ""
 "constraints on unlogged tables may reference only permanent or unlogged "
 "tables"
 msgstr ""
-"las restricciones en tablas unlogged sólo pueden hacer referencia a tablas permanentes o unlogged"
+"las restricciones en tablas unlogged sólo pueden hacer referencia a tablas "
+"permanentes o unlogged"
 
 #: commands/tablecmds.c:5561
 msgid "constraints on temporary tables may reference only temporary tables"
 msgstr ""
-"las restricciones en tablas temporales sólo pueden hacer referencia a tablas temporales"
+"las restricciones en tablas temporales sólo pueden hacer referencia a tablas "
+"temporales"
 
 #: commands/tablecmds.c:5622
 msgid "number of referencing and referenced columns for foreign key disagree"
@@ -6668,7 +6684,8 @@ msgstr "la tabla no tiene la columna «%s»"
 #: commands/tablecmds.c:8771
 #, c-format
 msgid "table has column \"%s\" where type requires \"%s\""
-msgstr "la tabla tiene columna «%s» en la posición en que el tipo requiere «%s»."
+msgstr ""
+"la tabla tiene columna «%s» en la posición en que el tipo requiere «%s»."
 
 #: commands/tablecmds.c:8780
 #, c-format
@@ -6839,7 +6856,8 @@ msgstr "«%s» es una vista"
 
 #: commands/trigger.c:174
 msgid "Views cannot have row-level BEFORE or AFTER triggers."
-msgstr "Las vistas no pueden tener disparadores BEFORE o AFTER a nivel de fila."
+msgstr ""
+"Las vistas no pueden tener disparadores BEFORE o AFTER a nivel de fila."
 
 #: commands/trigger.c:181
 msgid "Views cannot have TRUNCATE triggers."
@@ -7365,8 +7383,8 @@ msgstr ""
 #, c-format
 msgid "skipping \"%s\" --- cannot vacuum non-tables or special system tables"
 msgstr ""
-"ignorando «%s»: no se puede aplicar VACUUM a objetos que no son tablas o a tablas "
-"especiales de sistema"
+"ignorando «%s»: no se puede aplicar VACUUM a objetos que no son tablas o a "
+"tablas especiales de sistema"
 
 #: commands/vacuumlazy.c:254
 #, c-format
@@ -7538,7 +7556,8 @@ msgstr "se ha denegado el permiso para definir el rol «%s»"
 #, c-format
 msgid "could not determine which collation to use for view column \"%s\""
 msgstr ""
-"no se pudo determinar el ordenamiento (collation) a usar para la columna «%s» de vista"
+"no se pudo determinar el ordenamiento (collation) a usar para la columna "
+"«%s» de vista"
 
 #: commands/view.c:158
 msgid "view must have at least one column"
@@ -7588,7 +7607,8 @@ msgstr "no se ha cargado ningún proveedor de etiquetas de seguridad"
 msgid ""
 "must specify provider when multiple security label providers have been loaded"
 msgstr ""
-"debe especificar un proveedor de etiquetas de seguridad cuando más de uno ha sido cargados"
+"debe especificar un proveedor de etiquetas de seguridad cuando más de uno ha "
+"sido cargados"
 
 #: commands/seclabel.c:80
 #, c-format
@@ -7620,7 +7640,9 @@ msgstr "Los nombres de extensión no deben empezar ni terminar con «-»."
 
 #: commands/extension.c:279
 msgid "Extension names must not contain directory separator characters."
-msgstr "Los nombres de extensión no deben contener caracteres separadores de directorio."
+msgstr ""
+"Los nombres de extensión no deben contener caracteres separadores de "
+"directorio."
 
 #: commands/extension.c:294 commands/extension.c:303 commands/extension.c:312
 #: commands/extension.c:322
@@ -7642,7 +7664,9 @@ msgstr "Los nombres de versión no deben empezar ni terminar con «-»."
 
 #: commands/extension.c:323
 msgid "Version names must not contain directory separator characters."
-msgstr "Los nombres de versión no deben contener caracteres separadores de directorio."
+msgstr ""
+"Los nombres de versión no deben contener caracteres separadores de "
+"directorio."
 
 #: commands/extension.c:473
 #, c-format
@@ -7652,7 +7676,9 @@ msgstr "no se pudo abrir el archivo de control de extensión «%s»: %m"
 #: commands/extension.c:494 commands/extension.c:504
 #, c-format
 msgid "parameter \"%s\" cannot be set in a secondary extension control file"
-msgstr "el parámetro «%s» no se puede cambiar en un archivo control secundario de extensión"
+msgstr ""
+"el parámetro «%s» no se puede cambiar en un archivo control secundario de "
+"extensión"
 
 #: commands/extension.c:543
 #, c-format
@@ -7662,8 +7688,7 @@ msgstr "«%s» no es un nombre válido de codificación"
 #: commands/extension.c:557
 #, c-format
 msgid "parameter \"%s\" must be a list of extension names"
-msgstr ""
-"el parámetro «%s» debe ser una lista de nombres de extensión"
+msgstr "el parámetro «%s» debe ser una lista de nombres de extensión"
 
 #: commands/extension.c:564
 #, c-format
@@ -7672,13 +7697,16 @@ msgstr "parámetro no reconocido «%s» en el archivo «%s»"
 
 #: commands/extension.c:573
 msgid "parameter \"schema\" cannot be specified when \"relocatable\" is true"
-msgstr "el parámetro «schema» no puede ser especificado cuando «relocatable» es verdadero"
+msgstr ""
+"el parámetro «schema» no puede ser especificado cuando «relocatable» es "
+"verdadero"
 
 #: commands/extension.c:725
 msgid ""
 "transaction control statements are not allowed within an extension script"
 msgstr ""
-"las sentencias de control de transacción no están permitidos dentro de un guión de transacción"
+"las sentencias de control de transacción no están permitidos dentro de un "
+"guión de transacción"
 
 #: commands/extension.c:795
 #, c-format
@@ -7702,7 +7730,9 @@ msgstr "Debe ser superusuario para actualizar esta extensión."
 #, c-format
 msgid ""
 "extension \"%s\" has no update path from version \"%s\" to version \"%s\""
-msgstr "la extensión «%s» no tiene ruta de actualización desde la versión «%s» hasta la versión «%s»"
+msgstr ""
+"la extensión «%s» no tiene ruta de actualización desde la versión «%s» hasta "
+"la versión «%s»"
 
 #: commands/extension.c:1210
 #, c-format
@@ -7725,7 +7755,8 @@ msgstr "la versión a instalar debe ser especificada"
 #: commands/extension.c:1300
 #, c-format
 msgid "FROM version must be different from installation target version \"%s\""
-msgstr "la versión FROM debe ser diferente de la versión destino de instalación «%s»"
+msgstr ""
+"la versión FROM debe ser diferente de la versión destino de instalación «%s»"
 
 #: commands/extension.c:1355
 #, c-format
@@ -7747,7 +7778,8 @@ msgid ""
 "pg_extension_config_dump() can only be called from an SQL script executed by "
 "CREATE EXTENSION"
 msgstr ""
-"pg_extension_config_dump() sólo puede ser llamado desde un guión SQL ejecutado por CREATE EXTENSION"
+"pg_extension_config_dump() sólo puede ser llamado desde un guión SQL "
+"ejecutado por CREATE EXTENSION"
 
 #: commands/extension.c:2123
 #, c-format
@@ -7789,13 +7821,12 @@ msgid "collation attribute \"%s\" not recognized"
 msgstr "el atributo de ordenamiento (collation) «%s» no es reconocido"
 
 #: commands/collationcmds.c:126
-msgid "parameter \"lc_collate\" parameter must be specified"
-msgstr "el parámetro «lc_collate» debe ser especificado"
+msgid "parameter \"lc_collate\" must be specified"
+msgstr "debe especificarse el parámetro «lc_collate»"
 
 #: commands/collationcmds.c:131
 msgid "parameter \"lc_ctype\" must be specified"
-msgstr ""
-"debe especificarse el parámetro «lc_ctype»"
+msgstr "debe especificarse el parámetro «lc_ctype»"
 
 #: commands/collationcmds.c:177
 #, c-format
@@ -7805,7 +7836,9 @@ msgstr "no existe el ordenamiento (collation) «%s», ignorando"
 #: commands/collationcmds.c:237 commands/collationcmds.c:416
 #, c-format
 msgid "collation \"%s\" for encoding \"%s\" already exists in schema \"%s\""
-msgstr "ya existe un ordenamiento (collation) llamado «%s» para la codificación «%s» en el esquema «%s»"
+msgstr ""
+"ya existe un ordenamiento (collation) llamado «%s» para la codificación «%s» "
+"en el esquema «%s»"
 
 #: commands/collationcmds.c:249 commands/collationcmds.c:428
 #, c-format
@@ -8072,9 +8105,9 @@ msgid ""
 "Increase the configuration parameter \"max_stack_depth\" (currently %dkB), "
 "after ensuring the platform's stack depth limit is adequate."
 msgstr ""
-"Incremente el parámetro de configuración «max_stack_depth» (actualmente %dkB), después de "
-"asegurarse que el límite de profundidad de stack de la plataforma es "
-"adecuado."
+"Incremente el parámetro de configuración «max_stack_depth» (actualmente "
+"%dkB), después de asegurarse que el límite de profundidad de stack de la "
+"plataforma es adecuado."
 
 #: tcop/postgres.c:3082
 #, c-format
@@ -8232,7 +8265,9 @@ msgstr "no se puede insertar en la vista «%s»"
 msgid ""
 "You need an unconditional ON INSERT DO INSTEAD rule or an INSTEAD OF INSERT "
 "trigger."
-msgstr "Necesita un regla incondicional ON INSERT DO INSTEAD o un disparador INSTEAD OF INSERT."
+msgstr ""
+"Necesita un regla incondicional ON INSERT DO INSTEAD o un disparador INSTEAD "
+"OF INSERT."
 
 #: executor/execMain.c:1020
 #, c-format
@@ -8243,7 +8278,9 @@ msgstr "no se puede actualizar la vista «%s»"
 msgid ""
 "You need an unconditional ON UPDATE DO INSTEAD rule or an INSTEAD OF UPDATE "
 "trigger."
-msgstr "Necesita un regla incondicional ON UPDATE DO INSTEAD o un disparador INSTEAD OF UPDATE."
+msgstr ""
+"Necesita un regla incondicional ON UPDATE DO INSTEAD o un disparador INSTEAD "
+"OF UPDATE."
 
 #: executor/execMain.c:1028
 #, c-format
@@ -8254,7 +8291,9 @@ msgstr "no se puede eliminar de la vista «%s»"
 msgid ""
 "You need an unconditional ON DELETE DO INSTEAD rule or an INSTEAD OF DELETE "
 "trigger."
-msgstr "Necesita un regla incondicional ON DELETE DO INSTEAD o un disparador INSTEAD OF DELETE."
+msgstr ""
+"Necesita un regla incondicional ON DELETE DO INSTEAD o un disparador INSTEAD "
+"OF DELETE."
 
 #: executor/execMain.c:1040
 #, c-format
@@ -8842,17 +8881,23 @@ msgstr ""
 #: libpq/auth.c:449
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup matches."
-msgstr "La dirección IP del cliente fue resuelta a «%s», este resultado es coincidente."
+msgstr ""
+"La dirección IP del cliente fue resuelta a «%s», este resultado es "
+"coincidente."
 
 #: libpq/auth.c:451
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup not checked."
-msgstr "La dirección IP del cliente fue resuelta a «%s», este resultado no fue verificado."
+msgstr ""
+"La dirección IP del cliente fue resuelta a «%s», este resultado no fue "
+"verificado."
 
 #: libpq/auth.c:453
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup does not match."
-msgstr "La dirección IP del cliente fue resuelta a «%s», este resultado no es coincidente."
+msgstr ""
+"La dirección IP del cliente fue resuelta a «%s», este resultado no es "
+"coincidente."
 
 #: libpq/auth.c:462
 #, c-format
@@ -9001,8 +9046,7 @@ msgstr "respuesta del servidor Ident en formato no válido: «%s»"
 
 #: libpq/auth.c:1785
 msgid "peer authentication is not supported on this platform"
-msgstr ""
-"método de autentificación peer no está soportado en esta plataforma"
+msgstr "método de autentificación peer no está soportado en esta plataforma"
 
 #: libpq/auth.c:1789
 #, c-format
@@ -9500,7 +9544,8 @@ msgstr "dirección IP «%s» no válida: %s"
 #: libpq/hba.c:1000
 #, c-format
 msgid "specifying both host name and CIDR mask is invalid: \"%s\""
-msgstr "especificar tanto el nombre de host como la máscara CIDR no es válido: «%s»"
+msgstr ""
+"especificar tanto el nombre de host como la máscara CIDR no es válido: «%s»"
 
 #: libpq/hba.c:1014
 #, c-format
@@ -9532,8 +9577,7 @@ msgstr "método de autentificación «%s» no válido"
 #: libpq/hba.c:1160
 #, c-format
 msgid "invalid authentication method \"%s\": not supported by this build"
-msgstr ""
-"método de autentificación «%s» no válido: este servidor no lo soporta"
+msgstr "método de autentificación «%s» no válido: este servidor no lo soporta"
 
 #: libpq/hba.c:1181
 msgid "krb5 authentication is not supported on local sockets"
@@ -10031,7 +10075,8 @@ msgstr "no se pudo sincronizar (fsync) archivo «%s» pero reintentando: %m"
 
 #: storage/smgr/md.c:1276
 msgid "could not forward fsync request because request queue is full"
-msgstr "no se pudo enviar una petición fsync porque la cola de peticiones está llena"
+msgstr ""
+"no se pudo enviar una petición fsync porque la cola de peticiones está llena"
 
 #: storage/smgr/md.c:1646
 #, c-format
@@ -10188,31 +10233,39 @@ msgstr "el proceso %d no pudo adquirir %s en %s después de %ld.%03d ms"
 
 #: storage/lmgr/predicate.c:665
 msgid "not enough elements in RWConflictPool to record a read/write conflict"
-msgstr "no hay suficientes elementos en RWConflictPool para registrar un conflicto read/write"
+msgstr ""
+"no hay suficientes elementos en RWConflictPool para registrar un conflicto "
+"read/write"
 
 #: storage/lmgr/predicate.c:666 storage/lmgr/predicate.c:694
 msgid ""
 "You might need to run fewer transactions at a time or increase "
 "max_connections."
 msgstr ""
-"Puede ser necesario ejecutar menos transacciones al mismo tiempo, o incrementar max_connections."
+"Puede ser necesario ejecutar menos transacciones al mismo tiempo, o "
+"incrementar max_connections."
 
 #: storage/lmgr/predicate.c:693
 msgid ""
 "not enough elements in RWConflictPool to record a potential read/write "
 "conflict"
-msgstr "no hay suficientes elementos en RWConflictPool para registrar un potencial conflicto read/write"
+msgstr ""
+"no hay suficientes elementos en RWConflictPool para registrar un potencial "
+"conflicto read/write"
 
 #: storage/lmgr/predicate.c:898
 msgid "memory for serializable conflict tracking is nearly exhausted"
-msgstr "la memoria para el seguimiento de conflictos de serialización está casi agotada"
+msgstr ""
+"la memoria para el seguimiento de conflictos de serialización está casi "
+"agotada"
 
 #: storage/lmgr/predicate.c:899
 msgid ""
 "There might be an idle transaction or a forgotten prepared transaction "
 "causing this."
 msgstr ""
-"Puede haber una transacción inactiva o una transacción preparada olvidada que esté causando este problema."
+"Puede haber una transacción inactiva o una transacción preparada olvidada "
+"que esté causando este problema."
 
 #: storage/lmgr/predicate.c:1181 storage/lmgr/predicate.c:1253
 #, c-format
@@ -10239,7 +10292,9 @@ msgstr "Puede ser necesario incrementar max_pred_locks_per_transaction."
 #: storage/lmgr/predicate.c:4583
 msgid ""
 "could not serialize access due to read/write dependencies among transactions"
-msgstr "no se pudo serializar el acceso debido a dependencias read/write entre transacciones"
+msgstr ""
+"no se pudo serializar el acceso debido a dependencias read/write entre "
+"transacciones"
 
 #: storage/lmgr/predicate.c:3780 storage/lmgr/predicate.c:3869
 #: storage/lmgr/predicate.c:3877 storage/lmgr/predicate.c:3916
@@ -10451,7 +10506,8 @@ msgstr "  -t pa|pl|ex     mostrar tiempos después de cada consulta\n"
 #, c-format
 msgid "  -T              send SIGSTOP to all backend processes if one dies\n"
 msgstr ""
-"  -T              enviar SIGSTOP a todos los procesos backend si uno de ellos\n"
+"  -T              enviar SIGSTOP a todos los procesos backend si uno de "
+"ellos\n"
 "                  muere\n"
 
 #: main/main.c:313
@@ -10624,7 +10680,8 @@ msgstr "función SQL «%s», durante expansión en línea"
 
 #: optimizer/util/plancat.c:97
 msgid "cannot access temporary or unlogged relations during recovery"
-msgstr "no se pueden crear tablas temporales o unlogged durante la recuperación"
+msgstr ""
+"no se pueden crear tablas temporales o unlogged durante la recuperación"
 
 #: optimizer/plan/initsplan.c:595
 msgid ""
@@ -10716,7 +10773,9 @@ msgid ""
 "The insertion source is a row expression containing the same number of "
 "columns expected by the INSERT. Did you accidentally use extra parentheses?"
 msgstr ""
-"La fuente de inserción es una expresión de fila que contiene la misma cantidad de columnas que esperaba el INSERT. ¿Usó accidentalmente paréntesis extra?"
+"La fuente de inserción es una expresión de fila que contiene la misma "
+"cantidad de columnas que esperaba el INSERT. ¿Usó accidentalmente paréntesis "
+"extra?"
 
 #: parser/analyze.c:1084
 msgid "DEFAULT can only appear in a VALUES list within INSERT"
@@ -10795,7 +10854,8 @@ msgstr "DECLARE CURSOR no puede especificar INTO"
 
 #: parser/analyze.c:2193
 msgid "DECLARE CURSOR must not contain data-modifying statements in WITH"
-msgstr "DECLARE CURSOR no debe contener sentencias que modifiquen datos en WITH"
+msgstr ""
+"DECLARE CURSOR no debe contener sentencias que modifiquen datos en WITH"
 
 #: parser/analyze.c:2199
 msgid "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE is not supported"
@@ -11241,7 +11301,8 @@ msgstr "una subconsulta en WITH no puede tener SELECT INTO"
 msgid ""
 "WITH clause containing a data-modifying statement must be at the top level"
 msgstr ""
-"la cláusula WITH que contiene las sentencias que modifican datos debe estar en el nivel más externo"
+"la cláusula WITH que contiene las sentencias que modifican datos debe estar "
+"en el nivel más externo"
 
 #: parser/parse_cte.c:320
 #, c-format
@@ -11264,12 +11325,13 @@ msgid ""
 "recursive query \"%s\" column %d has collation \"%s\" in non-recursive term "
 "but collation \"%s\" overall"
 msgstr ""
-"la columna %2$d en la consulta recursiva «%1$s» tiene ordenamiento (collation) %3$s en el "
-"término no recursivo, pero %4$s en general"
+"la columna %2$d en la consulta recursiva «%1$s» tiene ordenamiento "
+"(collation) %3$s en el término no recursivo, pero %4$s en general"
 
 #: parser/parse_cte.c:335
 msgid "Use the COLLATE clause to set the collation of the non-recursive term."
-msgstr "Use la clásula COLLATE para definir el ordenamiento del término no-recursivo."
+msgstr ""
+"Use la clásula COLLATE para definir el ordenamiento del término no-recursivo."
 
 #: parser/parse_cte.c:426
 #, c-format
@@ -11521,8 +11583,8 @@ msgid ""
 "No function matches the given name and argument types. You might need to add "
 "explicit type casts."
 msgstr ""
-"Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario "
-"agregar conversión explícita de tipos."
+"Ninguna función coincide en el nombre y tipos de argumentos. Puede ser "
+"necesario agregar conversión explícita de tipos."
 
 #: parser/parse_func.c:412 parser/parse_func.c:478
 #, c-format
@@ -11916,7 +11978,9 @@ msgstr "«%s» no es un índice único"
 #: parser/parse_utilcmd.c:1488 parser/parse_utilcmd.c:1495
 #: parser/parse_utilcmd.c:1502 parser/parse_utilcmd.c:1572
 msgid "Cannot create a primary key or unique constraint using such an index."
-msgstr "No se puede crear una restricción de llave primaria o única usando un índice así."
+msgstr ""
+"No se puede crear una restricción de llave primaria o única usando un índice "
+"así."
 
 #: parser/parse_utilcmd.c:1494
 #, c-format
@@ -11936,7 +12000,8 @@ msgstr "«%s» no es un índice postergable (deferrable)"
 #: parser/parse_utilcmd.c:1514
 msgid "Cannot create a non-deferrable constraint using a deferrable index."
 msgstr ""
-"No se puede crear una restricción no postergable usando un índice postergable."
+"No se puede crear una restricción no postergable usando un índice "
+"postergable."
 
 #: parser/parse_utilcmd.c:1571
 #, c-format
@@ -12062,19 +12127,24 @@ msgstr "el identificador «%s» se truncará a «%s»"
 #: parser/parse_collate.c:214 parser/parse_collate.c:538
 #, c-format
 msgid "collation mismatch between implicit collations \"%s\" and \"%s\""
-msgstr "discordancia de ordenamientos (collation) entre los ordenamientos implícitos «%s» y «%s»"
+msgstr ""
+"discordancia de ordenamientos (collation) entre los ordenamientos implícitos "
+"«%s» y «%s»"
 
 #: parser/parse_collate.c:217 parser/parse_collate.c:541
 msgid ""
 "You can choose the collation by applying the COLLATE clause to one or both "
 "expressions."
 msgstr ""
-"Puede elegir el ordenamiento aplicando la cláusula COLLATE a una o ambas expresiones."
+"Puede elegir el ordenamiento aplicando la cláusula COLLATE a una o ambas "
+"expresiones."
 
 #: parser/parse_collate.c:763
 #, c-format
 msgid "collation mismatch between explicit collations \"%s\" and \"%s\""
-msgstr "discordancia de ordenamientos (collation) entre los ordenamientos explícitos «%s» y «%s»"
+msgstr ""
+"discordancia de ordenamientos (collation) entre los ordenamientos explícitos "
+"«%s» y «%s»"
 
 #: gram.y:915
 #, c-format
@@ -12440,18 +12510,22 @@ msgstr "no se pudo crear thread de despacho de señales: código de error %d\n"
 
 #: port/win32/crashdump.c:108
 msgid "could not load dbghelp.dll, cannot write crash dump\n"
-msgstr "no se pudo cargar dbghelp.dll, no se puede escribir el volcado de la caída\n"
+msgstr ""
+"no se pudo cargar dbghelp.dll, no se puede escribir el volcado de la caída\n"
 
 #: port/win32/crashdump.c:116
 msgid ""
 "could not load required functions in dbghelp.dll, cannot write crash dump\n"
 msgstr ""
-"no fue posible cargar las funciones requeridas desde dbghelp.dll, no se puede escribir el volcado de la caída\n"
+"no fue posible cargar las funciones requeridas desde dbghelp.dll, no se "
+"puede escribir el volcado de la caída\n"
 
 #: port/win32/crashdump.c:147
 #, c-format
 msgid "could not open crash dump file \"%s\" for writing: error code %u\n"
-msgstr "no se pudo abrir el archivo del volcado de caída «%s» para escritura: código de error %u\n"
+msgstr ""
+"no se pudo abrir el archivo del volcado de caída «%s» para escritura: código "
+"de error %u\n"
 
 #: port/win32/crashdump.c:154
 #, c-format
@@ -12461,7 +12535,9 @@ msgstr "se escribió el volcado de caída en el archivo «%s».\n"
 #: port/win32/crashdump.c:156
 #, c-format
 msgid "could not write crash dump to file \"%s\": error code %08x\n"
-msgstr "no se pudo escribir el volcado de caída al archivo «%s»: código de error %08x\n"
+msgstr ""
+"no se pudo escribir el volcado de caída al archivo «%s»: código de error "
+"%08x\n"
 
 #: port/sysv_sema.c:114 port/pg_sema.c:114
 #, c-format
@@ -12530,8 +12606,8 @@ msgstr ""
 "un segmento de memoria compartida excedió el parámetro SHMMAX del kernel.  "
 "Puede reducir el tamaño de la petición o reconfigurar el kernel con un "
 "SHMMAX superior.  Para reducir el tamaño de la petición (actualmente %lu "
-"bytes), reduzca el parámetro de PostgreSQL shared_buffers y/"
-"o el parámetro max_connections.\n"
+"bytes), reduzca el parámetro de PostgreSQL shared_buffers y/o el parámetro "
+"max_connections.\n"
 "Si el tamaño de la petición ya es pequeño, es posible que sea inferior al "
 "parámetro SHMMIN del kernel, en cuyo caso se requiere alzar el tamaño de la "
 "petición o disminuir SHMMIN.\n"
@@ -12576,8 +12652,8 @@ msgstr ""
 "caso puede incrementar el parámetro SHMMNI del kernel, o bien porque se ha "
 "alcanzado el límite total de memoria compartida.  Si no puede incrementar el "
 "límite de memoria compartida, reduzca el tamaño de petición de PostgreSQL "
-"(actualmente %lu bytes) reduciendo el parámetro shared_buffers "
-"y/o el parámetro max_connections.\n"
+"(actualmente %lu bytes) reduciendo el parámetro shared_buffers y/o el "
+"parámetro max_connections.\n"
 "La documentación de PostgreSQL contiene más información acerca de la "
 "configuración de memoria compartida."
 
@@ -13422,8 +13498,7 @@ msgstr "desactivando rotación automática (use SIGHUP para reactivarla)"
 
 #: regex/regc_pg_locale.c:258 utils/adt/selfuncs.c:5028
 msgid "could not determine which collation to use for regular expression"
-msgstr ""
-"no se pudo determinar qué ordenamiento usar para la expresión regular"
+msgstr "no se pudo determinar qué ordenamiento usar para la expresión regular"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:101
 #, c-format
@@ -13540,7 +13615,9 @@ msgstr "mensaje de tipo «%c» inesperado"
 
 #: replication/walsender.c:822
 msgid "terminating walsender process due to replication timeout"
-msgstr "terminando el proceso walsender debido a que se agotó el tiempo de espera de replicación"
+msgstr ""
+"terminando el proceso walsender debido a que se agotó el tiempo de espera de "
+"replicación"
 
 #: replication/walsender.c:838
 #, c-format
@@ -13612,7 +13689,9 @@ msgstr "el miembro de archivador «%s» es demasiado grande para el formato tar"
 msgid ""
 "canceling the wait for synchronous replication and terminating connection "
 "due to administrator command"
-msgstr "cancelando la espera para la replicación sincrónica y terminando la conexión debido a una orden del administrador"
+msgstr ""
+"cancelando la espera para la replicación sincrónica y terminando la conexión "
+"debido a una orden del administrador"
 
 #: replication/syncrep.c:211 replication/syncrep.c:228
 msgid ""
@@ -13624,7 +13703,9 @@ msgstr ""
 
 #: replication/syncrep.c:227
 msgid "canceling wait for synchronous replication due to user request"
-msgstr "cancelando espera para la replicación sincrónica debido a una petición del usuario"
+msgstr ""
+"cancelando espera para la replicación sincrónica debido a una petición del "
+"usuario"
 
 #: replication/syncrep.c:358
 #, c-format
@@ -13684,7 +13765,9 @@ msgstr "las reglas en SELECT deben tener una acción INSTEAD SELECT"
 
 #: rewrite/rewriteDefine.c:335
 msgid "rules on SELECT must not contain data-modifying statements in WITH"
-msgstr "las reglas en SELECT no deben contener sentencias que modifiquen datos en WITH"
+msgstr ""
+"las reglas en SELECT no deben contener sentencias que modifiquen datos en "
+"WITH"
 
 #: rewrite/rewriteDefine.c:343
 msgid "event qualifications are not implemented for rules on SELECT"
@@ -13811,7 +13894,8 @@ msgid ""
 "WITH query name \"%s\" appears in both a rule action and the query being "
 "rewritten"
 msgstr ""
-"el nombre de consulta WITH «%s» aparece tanto en una acción de regla y en la consulta que está siendo reescrita"
+"el nombre de consulta WITH «%s» aparece tanto en una acción de regla y en la "
+"consulta que está siendo reescrita"
 
 #: rewrite/rewriteHandler.c:543
 msgid "cannot have RETURNING lists in multiple rules"
@@ -13832,27 +13916,30 @@ msgid ""
 "DO INSTEAD NOTHING rules are not supported for data-modifying statements in "
 "WITH"
 msgstr ""
-"las reglas DO INSTEAD NOTHING no están soportadas para sentencias que modifiquen datos en WITH"
+"las reglas DO INSTEAD NOTHING no están soportadas para sentencias que "
+"modifiquen datos en WITH"
 
 #: rewrite/rewriteHandler.c:1896
 msgid ""
 "conditional DO INSTEAD rules are not supported for data-modifying statements "
 "in WITH"
 msgstr ""
-"las reglas DO INSTEAD condicionales no están soportadas para sentencias que modifiquen datos en WITH"
+"las reglas DO INSTEAD condicionales no están soportadas para sentencias que "
+"modifiquen datos en WITH"
 
 #: rewrite/rewriteHandler.c:1900
 msgid "DO ALSO rules are not supported for data-modifying statements in WITH"
 msgstr ""
-"las reglas DO ALSO no están soportadas para sentencias que modifiquen datos en WITH"
-
+"las reglas DO ALSO no están soportadas para sentencias que modifiquen datos "
+"en WITH"
 
 #: rewrite/rewriteHandler.c:1905
 msgid ""
 "multi-statement DO INSTEAD rules are not supported for data-modifying "
 "statements in WITH"
 msgstr ""
-"las reglas DO INSTEAD de múltiples sentencias no están soportadas para sentencias que modifiquen datos en WITH"
+"las reglas DO INSTEAD de múltiples sentencias no están soportadas para "
+"sentencias que modifiquen datos en WITH"
 
 #: rewrite/rewriteHandler.c:2059
 #, c-format
@@ -13895,7 +13982,8 @@ msgid ""
 "WITH cannot be used in a query that is rewritten by rules into multiple "
 "queries"
 msgstr ""
-"WITH no puede ser usado en una consulta que está siendo convertida en múltiples consultas a través de reglas"
+"WITH no puede ser usado en una consulta que está siendo convertida en "
+"múltiples consultas a través de reglas"
 
 #: rewrite/rewriteManip.c:1012
 msgid "conditional utility statements are not implemented"
@@ -14164,8 +14252,7 @@ msgstr ""
 
 #: utils/init/postinit.c:637
 msgid "must be superuser to connect in binary upgrade mode"
-msgstr ""
-"debe ser superusuario para conectarse en modo de actualización binaria"
+msgstr "debe ser superusuario para conectarse en modo de actualización binaria"
 
 #: utils/init/postinit.c:651
 msgid ""
@@ -14888,17 +14975,20 @@ msgstr "«%s» no es un número"
 #: utils/adt/formatting.c:1519 utils/adt/formatting.c:1569
 msgid "could not determine which collation to use for lower() function"
 msgstr ""
-"no se pudo determinar qué ordenamiento (collation) usar para la función lower()"
+"no se pudo determinar qué ordenamiento (collation) usar para la función lower"
+"()"
 
 #: utils/adt/formatting.c:1640 utils/adt/formatting.c:1690
 msgid "could not determine which collation to use for upper() function"
 msgstr ""
-"no se pudo determinar qué ordenamiento (collation) usar para la función upper()"
+"no se pudo determinar qué ordenamiento (collation) usar para la función upper"
+"()"
 
 #: utils/adt/formatting.c:1773 utils/adt/formatting.c:1835
 msgid "could not determine which collation to use for initcap() function"
 msgstr ""
-"no se pudo determinar qué ordenamiento (collation) usar para la función initcap()"
+"no se pudo determinar qué ordenamiento (collation) usar para la función "
+"initcap()"
 
 #: utils/adt/formatting.c:2017
 msgid "invalid combination of date conventions"
@@ -14995,11 +15085,11 @@ msgstr "el uso del año %04d y «BC» es inconsistente"
 msgid "cannot calculate day of year without year information"
 msgstr "no se puede calcular el día del año sin conocer el año"
 
-#: utils/adt/formatting.c:4380
+#: utils/adt/formatting.c:4384
 msgid "\"EEEE\" not supported for input"
 msgstr "«EEEE» no está soportado en la entrada"
 
-#: utils/adt/formatting.c:4392
+#: utils/adt/formatting.c:4396
 msgid "\"RN\" not supported for input"
 msgstr "«RN» no está soportado en la entrada"
 
@@ -15469,12 +15559,14 @@ msgid ""
 "collations with different collate and ctype values are not supported on this "
 "platform"
 msgstr ""
-"los ordenamientos (collation) con valores collate y ctype diferentes no están "
-"soportados en esta plataforma"
+"los ordenamientos (collation) con valores collate y ctype diferentes no "
+"están soportados en esta plataforma"
 
 #: utils/adt/pg_locale.c:1045
 msgid "nondefault collations are not supported on this platform"
-msgstr "los ordenamientos (collation) distintos del ordenamiento por omisión no están soportados en esta plataforma"
+msgstr ""
+"los ordenamientos (collation) distintos del ordenamiento por omisión no "
+"están soportados en esta plataforma"
 
 #: utils/adt/pg_locale.c:1216
 msgid "invalid multibyte character for locale"
@@ -15596,8 +15688,8 @@ msgstr "existe más de una función llamada «%s»"
 msgid "more than one operator named %s"
 msgstr "existe más de un operador llamado %s"
 
-#: utils/adt/regproc.c:635 utils/adt/regproc.c:1485 utils/adt/ruleutils.c:5799
-#: utils/adt/ruleutils.c:5854 utils/adt/ruleutils.c:5891
+#: utils/adt/regproc.c:635 utils/adt/regproc.c:1485 utils/adt/ruleutils.c:5858
+#: utils/adt/ruleutils.c:5913 utils/adt/ruleutils.c:5950
 msgid "too many arguments"
 msgstr "demasiados argumentos"
 
@@ -16131,7 +16223,9 @@ msgstr "número de argumento fuera del rango"
 
 #: utils/adt/varlena.c:3895
 msgid "conversion specifies argument 0, but arguments are numbered from 1"
-msgstr "la conversión especifica el argumento 0, pero los argumentos se numeran desde 1"
+msgstr ""
+"la conversión especifica el argumento 0, pero los argumentos se numeran "
+"desde 1"
 
 #: utils/adt/varlena.c:3902
 msgid "too few arguments for format"
@@ -17207,8 +17301,8 @@ msgid ""
 "Whether to defer a read-only serializable transaction until it can be "
 "executed with no possible serialization failures."
 msgstr ""
-"Si está activo, las transacciones serializables de sólo lectura serán pausadas "
-"hasta que puedan ejecutarse sin posibles fallas de serialización."
+"Si está activo, las transacciones serializables de sólo lectura serán "
+"pausadas hasta que puedan ejecutarse sin posibles fallas de serialización."
 
 #: utils/misc/guc.c:1204
 msgid "Check function bodies during CREATE FUNCTION."
@@ -17297,7 +17391,8 @@ msgid ""
 "Allows feedback from a hot standby to the primary that will avoid query "
 "conflicts."
 msgstr ""
-"Permite retroalimentación desde un hot standby hacia el primario que evitará conflictos en consultas."
+"Permite retroalimentación desde un hot standby hacia el primario que evitará "
+"conflictos en consultas."
 
 #: utils/misc/guc.c:1393
 msgid "Allows modifications of the structure of system tables."
@@ -17437,7 +17532,8 @@ msgstr ""
 msgid ""
 "Sets the maximum interval between WAL receiver status reports to the primary."
 msgstr ""
-"Define el intervalo máximo entre reportes de estado desde un proceso receptor de WAL hacia el primario."
+"Define el intervalo máximo entre reportes de estado desde un proceso "
+"receptor de WAL hacia el primario."
 
 #: utils/misc/guc.c:1583
 msgid "Sets the maximum number of concurrent connections."
@@ -17478,8 +17574,7 @@ msgstr ""
 
 #: utils/misc/guc.c:1654
 msgid "Sets the file permissions for log files."
-msgstr ""
-"Define los privilegios para los archivos del registro del servidor."
+msgstr "Define los privilegios para los archivos del registro del servidor."
 
 #: utils/misc/guc.c:1655
 msgid ""
@@ -17487,10 +17582,9 @@ msgid ""
 "form accepted by the chmod and umask system calls. (To use the customary "
 "octal format the number must start with a 0 (zero).)"
 msgstr ""
-"Se espera que el valor de esta opción sea una "
-"especificación numérica de modo, en la forma aceptada por las llamadas a "
-"sistema chmod y umask. Para usar el modo octal acostumbrado, comience el "
-"número con un 0 (cero)."
+"Se espera que el valor de esta opción sea una especificación numérica de "
+"modo, en la forma aceptada por las llamadas a sistema chmod y umask. Para "
+"usar el modo octal acostumbrado, comience el número con un 0 (cero)."
 
 #: utils/misc/guc.c:1668
 msgid "Sets the maximum memory to be used for query workspaces."
@@ -18452,7 +18546,8 @@ msgid ""
 "\"temp_buffers\" cannot be changed after any temporary tables have been "
 "accessed in the session."
 msgstr ""
-"«temp_buffers» no puede ser cambiado después de que cualquier tabla temporal haya sido accedida en la sesión."
+"«temp_buffers» no puede ser cambiado después de que cualquier tabla temporal "
+"haya sido accedida en la sesión."
 
 #: utils/misc/guc.c:8259
 msgid "SET AUTOCOMMIT TO OFF is no longer supported"
@@ -18481,8 +18576,8 @@ msgid ""
 "Cannot enable \"log_statement_stats\" when \"log_parser_stats\", "
 "\"log_planner_stats\", or \"log_executor_stats\" is true."
 msgstr ""
-"No se puede activar «log_statement_stats» cuando "
-"«log_parser_stats», «log_planner_stats» o «log_executor_stats» están activos."
+"No se puede activar «log_statement_stats» cuando «log_parser_stats», "
+"«log_planner_stats» o «log_executor_stats» están activos."
 
 #: utils/misc/help_config.c:131
 msgid "internal error: unrecognized run-time parameter type\n"
@@ -18760,204 +18855,3 @@ msgstr "código de error win32 %lu mapeado a %d"
 #, c-format
 msgid "unrecognized win32 error code: %lu"
 msgstr "código de error win32 no reconocido: %lu"
-
-#~ msgid "restore_command = '%s'"
-#~ msgstr "restore_command = '%s'"
-
-#~ msgid "recovery_end_command = '%s'"
-#~ msgstr "recovery_end_command = '%s'"
-
-#~ msgid "archive_cleanup_command = '%s'"
-#~ msgstr "archive_cleanup_command = '%s'"
-
-#~ msgid "recovery_target_timeline = latest"
-#~ msgstr "recovery_target_timeline = latest"
-
-#~ msgid "recovery_target_xid = %u"
-#~ msgstr "recovery_target_xid = %u"
-
-#~ msgid "recovery_target_time = '%s'"
-#~ msgstr "recovery_target_time = '%s'"
-
-#~ msgid "recovery_target_inclusive = %s"
-#~ msgstr "recovery_target_inclusive = %s"
-
-#~ msgid "standby_mode = '%s'"
-#~ msgstr "standby_mode = '%s'"
-
-#~ msgid "primary_conninfo = '%s'"
-#~ msgstr "primary_conninfo = '%s'"
-
-#~ msgid "trigger_file = '%s'"
-#~ msgstr "trigger_file = '%s'"
-
-#~ msgid "syntax error in recovery command file: %s"
-#~ msgstr "error de sintaxis en archivo de recuperación: %s"
-
-#~ msgid "Lines should have the format parameter = 'value'."
-#~ msgstr "Las líneas deben tener el formato «parámetro = 'valor'»."
-
-#~ msgid "array must not contain null values"
-#~ msgstr "los arrays no deben contener valores nulos"
-
-#~ msgid "index %u/%u/%u needs VACUUM FULL or REINDEX to finish crash recovery"
-#~ msgstr ""
-#~ "índice %u/%u/%u necesita que se ejecute VACUUM FULL o REINDEX para "
-#~ "finalizar la recuperación"
-
-#~ msgid "Incomplete insertion detected during crash replay."
-#~ msgstr "Inserción incompleta detectada durante recuperación."
-
-#~ msgid "index \"%s\" needs VACUUM or REINDEX to finish crash recovery"
-#~ msgstr ""
-#~ "índice «%s» necesita que se ejecute VACUUM o REINDEX para finalizar la "
-#~ "recuperación"
-
-#~ msgid "index \"%s\" needs VACUUM FULL or REINDEX to finish crash recovery"
-#~ msgstr ""
-#~ "índice «%s» necesita que se ejecute VACUUM FULL o REINDEX para finalizar "
-#~ "la recuperación"
-
-#~ msgid ""
-#~ "cannot drop \"%s\" because it is being used by active queries in this "
-#~ "session"
-#~ msgstr ""
-#~ "no se puede borrar «%s» porque está siendo usada por consultas activas en "
-#~ "esta sesión"
-
-#~ msgid "EnumValuesCreate() can only set a single OID"
-#~ msgstr "EnumValuesCreate() puede definir un único OID"
-
-#~ msgid "clustering \"%s.%s\""
-#~ msgstr "reordenando «%s.%s»"
-
-#~ msgid ""
-#~ "cannot cluster on index \"%s\" because access method does not handle null "
-#~ "values"
-#~ msgstr ""
-#~ "no se puede reordenar en índice «%s» porque el método de acceso no maneja "
-#~ "valores null"
-
-#~ msgid ""
-#~ "You might be able to work around this by marking column \"%s\" NOT NULL, "
-#~ "or use ALTER TABLE ... SET WITHOUT CLUSTER to remove the cluster "
-#~ "specification from the table."
-#~ msgstr ""
-#~ "Quizás pueda corregir esto marcando la columna «%s» NOT NULL, o usando "
-#~ "ALTER TABLE ... SET WITHOUT CLUSTER para eliminar la reordenación para la "
-#~ "tabla."
-
-#~ msgid ""
-#~ "You might be able to work around this by marking column \"%s\" NOT NULL."
-#~ msgstr "Quizás pueda corregir esto marcando la columna «%s» NOT NULL."
-
-#~ msgid ""
-#~ "cannot cluster on expressional index \"%s\" because its index access "
-#~ "method does not handle null values"
-#~ msgstr ""
-#~ "no se puede reordenar en índice de expresión «%s» porque el método de "
-#~ "acceso no maneja valores null"
-
-#~ msgid "\"%s\" is not a table, view, or composite type"
-#~ msgstr "«%s» no es una tabla, vista o tipo compuesto"
-
-#~ msgid "must be member of role \"%s\" to comment upon it"
-#~ msgstr "debe ser miembro del rol «%s» para definirle un comentario"
-
-#~ msgid "must be superuser to comment on procedural language"
-#~ msgstr "debe ser superusuario para comentar un lenguaje procedural"
-
-#~ msgid "must be superuser to comment on text search parser"
-#~ msgstr ""
-#~ "debe ser superusuario para comentar un analizador de búsqueda en texto"
-
-#~ msgid "must be superuser to comment on text search template"
-#~ msgstr ""
-#~ "debe ser superusuario para comentar una plantilla de búsqueda en texto"
-
-#~ msgid "function \"%s\" is already in schema \"%s\""
-#~ msgstr "la función «%s» ya está en el esquema «%s»"
-
-#~ msgid "cannot reference temporary table from permanent table constraint"
-#~ msgstr ""
-#~ "no se puede referir a una tabla temporal en una restricción de una tabla "
-#~ "permanente"
-
-#~ msgid "cannot reference permanent table from temporary table constraint"
-#~ msgstr ""
-#~ "no se puede referir a una tabla permanente en una restricción de una "
-#~ "tabla temporal"
-
-#~ msgid "database \"%s\" not found"
-#~ msgstr "base de datos «%s» no encontrada"
-
-#~ msgid "invalid list syntax for parameter \"datestyle\""
-#~ msgstr "la sintaxis de lista no es válida para el parámetro «datestyle»"
-
-#~ msgid "unrecognized \"datestyle\" key word: \"%s\""
-#~ msgstr "no se reconoce el valor de «datestyle» «%s»"
-
-#~ msgid "invalid interval value for time zone: month not allowed"
-#~ msgstr "no se permite especificar mes en interval para huso horario"
-
-#~ msgid "invalid interval value for time zone: day not allowed"
-#~ msgstr "no se permite especificar día en interval para huso horario"
-
-#~ msgid "unrecognized time zone name: \"%s\""
-#~ msgstr "el nombre de huso horario no es reconocido: «%s»"
-
-#~ msgid "argument to pg_get_expr() must come from system catalogs"
-#~ msgstr "el argumento a pg_get_expr() debe venir de catálogos del sistema"
-
-#~ msgid "cannot change view \"%s\""
-#~ msgstr "no se puede cambiar la vista «%s»"
-
-#~ msgid "could not enable credential reception: %m"
-#~ msgstr "no se pudo activar la recepción de credenciales: %m"
-
-#~ msgid "%s: %s"
-#~ msgstr "%s: %s"
-
-#~ msgid "SSPI error %x"
-#~ msgstr "error SSPI %x"
-
-#~ msgid "%s (%x)"
-#~ msgstr "%s (%x)"
-
-#~ msgid "could not get effective UID from peer credentials: %m"
-#~ msgstr ""
-#~ "no se pudo obtener el UID efectivo desde las credenciales del par: %m"
-
-#~ msgid ""
-#~ "Ident authentication is not supported on local connections on this "
-#~ "platform"
-#~ msgstr ""
-#~ "esta plataforma no soporta autentificación Ident en conexiones locales"
-
-#~ msgid "hostssl not supported on this platform"
-#~ msgstr "hostssl no están soportados en esta plataforma"
-
-#~ msgid "SELECT FOR UPDATE/SHARE cannot be applied to NEW or OLD"
-#~ msgstr "SELECT FOR UPDATE/SHARE no puede ser aplicado a NEW u OLD"
-
-#~ msgid "could not create log file \"%s\": %m"
-#~ msgstr "no se pudo crear archivo de log «%s»: %m"
-
-#~ msgid "could not open new log file \"%s\": %m"
-#~ msgstr "no se pudo abrir el nuevo archivo de log «%s»: %m"
-
-#~ msgid "Write-Ahead Log / Streaming Replication"
-#~ msgstr "Write-Ahead Log / Replicación en Flujo"
-
-#~ msgid "Sets immediate fsync at commit."
-#~ msgstr "Activar fsync inmediato al comprometer transacciones."
-
-#~ msgid "invalid list syntax for parameter \"log_destination\""
-#~ msgstr ""
-#~ "la sintaxis de lista no es válida para el parámetro «log_destination»"
-
-#~ msgid "unrecognized \"log_destination\" key word: \"%s\""
-#~ msgstr "palabra clave de «log_destination» no reconocida: «%s»"
-
-#~ msgid "replication connection authorized: user=%s host=%s port=%s"
-#~ msgstr "conexión de replicación autorizada: usuario=%s host=%s port=%s"
