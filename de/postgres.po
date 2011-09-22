@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2010.
 #
-# $Id: postgres.po,v 1.47.2.21 2011/07/20 04:54:00 petere Exp $
+# $Id: postgres.po,v 1.47.2.22 2011/09/22 03:41:59 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-18 19:28+0000\n"
-"PO-Revision-Date: 2011-07-20 07:52+0300\n"
+"POT-Creation-Date: 2011-09-16 09:27+0000\n"
+"PO-Revision-Date: 2011-09-22 06:41+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -630,7 +630,7 @@ msgid "wrong affix file format for flag"
 msgstr "falsches Affixdateiformat für Flag"
 
 #: tsearch/to_tsany.c:166 utils/adt/tsvector.c:227 utils/adt/tsvector.c:276
-#: utils/adt/tsvector_op.c:524
+#: utils/adt/tsvector_op.c:540
 msgid "string is too long for tsvector"
 msgstr "Zeichenkette ist zu lang für Typ tsvector"
 
@@ -3244,7 +3244,9 @@ msgstr ""
 msgid ""
 "cannot reassign ownership of objects owned by %s because they are required "
 "by the database system"
-msgstr "kann den Eigentümer von Objekten, die %s gehören, nicht neu setzen, weil die Objekte vom Datenbanksystem benötigt werden"
+msgstr ""
+"kann den Eigentümer von Objekten, die %s gehören, nicht neu setzen, weil die "
+"Objekte vom Datenbanksystem benötigt werden"
 
 #: catalog/pg_type.c:219
 #, c-format
@@ -3368,7 +3370,7 @@ msgstr "Spalte »%s« von Relation »%s« existiert nicht"
 msgid "automatic analyze of table \"%s.%s.%s\" system usage: %s"
 msgstr "automatisches Analysieren von Tabelle »%s.%s.%s« Systembenutzung: %s"
 
-#: commands/analyze.c:1078
+#: commands/analyze.c:1076
 #, c-format
 msgid ""
 "\"%s\": scanned %d of %u pages, containing %.0f live rows and %.0f dead "
@@ -3954,7 +3956,7 @@ msgid "incorrect binary data format"
 msgstr "falsches Binärdatenformat"
 
 #: commands/copy.c:3377 commands/indexcmds.c:778 commands/tablecmds.c:1522
-#: parser/parse_expr.c:419 utils/adt/tsvector_op.c:1393
+#: parser/parse_expr.c:419 utils/adt/tsvector_op.c:1417
 #, c-format
 msgid "column \"%s\" does not exist"
 msgstr "Spalte »%s« existiert nicht"
@@ -6893,7 +6895,7 @@ msgstr "konnte Serverdatei »%s« nicht schreiben: %m"
 msgid "SSL error: %s"
 msgstr "SSL-Fehler: %s"
 
-#: libpq/be-secure.c:310 libpq/be-secure.c:405 libpq/be-secure.c:922
+#: libpq/be-secure.c:310 libpq/be-secure.c:405 libpq/be-secure.c:928
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "unbekannter SSL-Fehlercode: %d"
@@ -6911,22 +6913,22 @@ msgstr "SSL konnte keine neue Verhandlungsanfrage senden"
 msgid "could not create SSL context: %s"
 msgstr "konnte SSL-Kontext nicht erzeugen: %s"
 
-#: libpq/be-secure.c:738
+#: libpq/be-secure.c:744
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "konnte Serverzertifikatsdatei »%s« nicht laden: %s"
 
-#: libpq/be-secure.c:744
+#: libpq/be-secure.c:750
 #, c-format
 msgid "could not access private key file \"%s\": %m"
 msgstr "konnte auf private Schlüsseldatei »%s« nicht zugreifen: %m"
 
-#: libpq/be-secure.c:760
+#: libpq/be-secure.c:766
 #, c-format
 msgid "unsafe permissions on private key file \"%s\""
 msgstr "unsichere Berechtigungen für private Schlüsseldatei »%s«"
 
-#: libpq/be-secure.c:762
+#: libpq/be-secure.c:768
 msgid ""
 "File must be owned by the database user and must have no permissions for "
 "\"group\" or \"other\"."
@@ -6934,83 +6936,83 @@ msgstr ""
 "Die Datei muss dem Datenbankbenutzer gehören und keine Berechtigungen für "
 "»Gruppe« oder »Andere« haben."
 
-#: libpq/be-secure.c:769
+#: libpq/be-secure.c:775
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "konnte private Schlüsseldatei »%s« nicht laden: %s"
 
-#: libpq/be-secure.c:774
+#: libpq/be-secure.c:780
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "Überprüfung des privaten Schlüssels fehlgeschlagen: %s"
 
-#: libpq/be-secure.c:793
+#: libpq/be-secure.c:799
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "konnte Root-Zertifikat-Datei »%s« nicht laden: %s"
 
-#: libpq/be-secure.c:795
+#: libpq/be-secure.c:801
 msgid "Will not verify client certificates."
 msgstr "Client-Zertifikate werden nicht überprüft werden."
 
-#: libpq/be-secure.c:816
+#: libpq/be-secure.c:822
 #, c-format
 msgid "SSL certificate revocation list file \"%s\" ignored"
 msgstr "SSL-Certificate-Revocation-List-Datei »%s« ignoriert"
 
-#: libpq/be-secure.c:818
+#: libpq/be-secure.c:824
 msgid "SSL library does not support certificate revocation lists."
 msgstr "SSL-Bibliothek unterstützt keine Certificate-Revocation-Lists."
 
-#: libpq/be-secure.c:824
+#: libpq/be-secure.c:830
 #, c-format
 msgid "SSL certificate revocation list file \"%s\" not found, skipping: %s"
 msgstr ""
 "SSL-Certificate-Revocation-List-Datei »%s« nicht gefunden, wird "
 "übersprungen: %s"
 
-#: libpq/be-secure.c:826
+#: libpq/be-secure.c:832
 msgid "Certificates will not be checked against revocation list."
 msgstr "Zertifikate werden nicht gegen die Revocation-Liste geprüft."
 
-#: libpq/be-secure.c:867
+#: libpq/be-secure.c:873
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "konnte SSL-Verbindung nicht initialisieren: %s"
 
-#: libpq/be-secure.c:876
+#: libpq/be-secure.c:882
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "konnte SSL-Socket nicht setzen: %s"
 
-#: libpq/be-secure.c:902
+#: libpq/be-secure.c:908
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "konnte SSL-Verbindung nicht annehmen: %m"
 
-#: libpq/be-secure.c:906 libpq/be-secure.c:917
+#: libpq/be-secure.c:912 libpq/be-secure.c:923
 msgid "could not accept SSL connection: EOF detected"
 msgstr "konnte SSL-Verbindung nicht annehmen: EOF entdeckt"
 
-#: libpq/be-secure.c:911
+#: libpq/be-secure.c:917
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "konnte SSL-Verbindung nicht annehmen: %s"
 
-#: libpq/be-secure.c:962
+#: libpq/be-secure.c:968
 msgid "SSL certificate's common name contains embedded null"
 msgstr "Common-Name im SSL-Zertifikat enthält Null-Byte"
 
-#: libpq/be-secure.c:969
+#: libpq/be-secure.c:975
 #, c-format
 msgid "SSL connection from \"%s\""
 msgstr "SSL-Verbindung von »%s«"
 
-#: libpq/be-secure.c:1013
+#: libpq/be-secure.c:1019
 msgid "no SSL error reported"
 msgstr "kein SSL-Fehler berichtet"
 
-#: libpq/be-secure.c:1017
+#: libpq/be-secure.c:1023
 #, c-format
 msgid "SSL error code %lu"
 msgstr "SSL-Fehlercode %lu"
@@ -7122,7 +7124,9 @@ msgstr "lokaler Benutzer mit ID %d existiert nicht"
 
 #: libpq/hba.c:1574
 msgid "could not get peer credentials: incorrect control message"
-msgstr "konnte Credentials von Gegenstelle nicht ermitteln: fehlerhafte Kontrollnachricht"
+msgstr ""
+"konnte Credentials von Gegenstelle nicht ermitteln: fehlerhafte "
+"Kontrollnachricht"
 
 #: libpq/hba.c:1596
 msgid ""
@@ -11328,7 +11332,7 @@ msgstr "AM/PM-Stunde muss zwischen 1 und 12 sein"
 msgid "cannot calculate day of year without year information"
 msgstr "kann Tag des Jahres nicht berechnen ohne Jahrinformationen"
 
-#: utils/adt/formatting.c:4442
+#: utils/adt/formatting.c:4446
 msgid "\"RN\" not supported"
 msgstr "»RN« wird nicht unterstützt"
 
@@ -12235,41 +12239,41 @@ msgstr "Gewichtung ist außerhalb des gültigen Bereichs"
 msgid "word is too long (%ld bytes, max %ld bytes)"
 msgstr "Wort ist zu lang (%ld Bytes, maximal %ld Bytes)"
 
-#: utils/adt/tsvector_op.c:1142
+#: utils/adt/tsvector_op.c:1166
 msgid "ts_stat query must return one tsvector column"
 msgstr "ts_stat-Anfrage muss eine tsvector-Spalte zurückgeben"
 
-#: utils/adt/tsvector_op.c:1329
+#: utils/adt/tsvector_op.c:1353
 #, c-format
 msgid "tsvector column \"%s\" does not exist"
 msgstr "tsvector-Spalte »%s« existiert nicht"
 
-#: utils/adt/tsvector_op.c:1335
+#: utils/adt/tsvector_op.c:1359
 #, c-format
 msgid "column \"%s\" is not of tsvector type"
 msgstr "Spalte »%s« hat nicht Typ tsvector"
 
-#: utils/adt/tsvector_op.c:1347
+#: utils/adt/tsvector_op.c:1371
 #, c-format
 msgid "configuration column \"%s\" does not exist"
 msgstr "Konfigurationsspalte »%s« existiert nicht"
 
-#: utils/adt/tsvector_op.c:1353
+#: utils/adt/tsvector_op.c:1377
 #, c-format
 msgid "column \"%s\" is not of regconfig type"
 msgstr "Spalte »%s« hat nicht Typ regconfig"
 
-#: utils/adt/tsvector_op.c:1360
+#: utils/adt/tsvector_op.c:1384
 #, c-format
 msgid "configuration column \"%s\" must not be null"
 msgstr "Konfigurationsspalte »%s« darf nicht NULL sein"
 
-#: utils/adt/tsvector_op.c:1373
+#: utils/adt/tsvector_op.c:1397
 #, c-format
 msgid "text search configuration name \"%s\" must be schema-qualified"
 msgstr "Textsuchekonfigurationsname »%s« muss Schemaqualifikation haben"
 
-#: utils/adt/tsvector_op.c:1398
+#: utils/adt/tsvector_op.c:1422
 #, c-format
 msgid "column \"%s\" is not of character type"
 msgstr "Spalte »%s« hat keinen Zeichenkettentyp"
@@ -12418,6 +12422,11 @@ msgstr ""
 #: utils/cache/relcache.c:3851
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Setze trotzdem fort, aber irgendwas stimmt nicht."
+
+#: utils/cache/relcache.c:4053
+#, c-format
+msgid "could not remove cache file \"%s\": %m"
+msgstr "konnte Cache-Datei »%s« nicht löschen: %m"
 
 #: utils/mmgr/aset.c:361
 #, c-format
