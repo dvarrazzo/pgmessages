@@ -1,7 +1,7 @@
 # German message translation file for PostgreSQL server
 # Peter Eisentraut <peter_e@gmx.net>, 2001 - 2011.
 #
-# $Id: postgres.po,v 1.89.2.5 2011/07/20 04:54:56 petere Exp $
+# $Id: postgres.po,v 1.89.2.6 2011/09/22 03:38:13 petere Exp $
 #
 # Use these quotes: »%s«
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-07-18 19:11+0000\n"
-"PO-Revision-Date: 2011-07-20 07:51+0300\n"
+"POT-Creation-Date: 2011-09-21 23:10+0000\n"
+"PO-Revision-Date: 2011-09-22 06:37+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -496,7 +496,7 @@ msgstr "Ispell-Wörterbuch unterstützt nur den Default-Flag-Wert"
 msgid "wrong affix file format for flag"
 msgstr "falsches Affixdateiformat für Flag"
 
-#: tsearch/to_tsany.c:165 utils/adt/tsvector.c:272 utils/adt/tsvector_op.c:514
+#: tsearch/to_tsany.c:165 utils/adt/tsvector.c:272 utils/adt/tsvector_op.c:530
 #, c-format
 msgid "string is too long for tsvector (%d bytes, max %d bytes)"
 msgstr "Zeichenkette ist zu lang für tsvector (%d Bytes, maximal %d Bytes)"
@@ -2353,12 +2353,12 @@ msgstr "doppelter Schlüsselwert verletzt Unique-Constraint »%s«"
 msgid "Key %s already exists."
 msgstr "Schlüssel »%s« existiert bereits."
 
-#: access/nbtree/nbtinsert.c:448 executor/execUtils.c:1319
+#: access/nbtree/nbtinsert.c:448 executor/execUtils.c:1320
 #, c-format
 msgid "failed to re-find tuple within index \"%s\""
 msgstr "konnte Tupel mit Index »%s« nicht erneut finden"
 
-#: access/nbtree/nbtinsert.c:450 executor/execUtils.c:1321
+#: access/nbtree/nbtinsert.c:450 executor/execUtils.c:1322
 msgid "This may be because of a non-immutable index expression."
 msgstr "Das kann daran liegen, dass der Indexausdruck nicht »immutable« ist."
 
@@ -2526,8 +2526,8 @@ msgstr "Spaltenprivilegien sind nur für Relation gültig"
 #: commands/dbcommands.c:905 commands/dbcommands.c:1004
 #: commands/dbcommands.c:1181 commands/dbcommands.c:1366
 #: commands/dbcommands.c:1410 commands/dbcommands.c:1456 utils/adt/acl.c:2975
-#: utils/adt/dbsize.c:149 utils/init/postinit.c:708 utils/init/postinit.c:776
-#: utils/init/postinit.c:793
+#: utils/adt/dbsize.c:149 utils/init/postinit.c:710 utils/init/postinit.c:778
+#: utils/init/postinit.c:795
 #, c-format
 msgid "database \"%s\" does not exist"
 msgstr "Datenbank »%s« existiert nicht"
@@ -2560,7 +2560,7 @@ msgstr "Schema »%s« existiert nicht"
 #: commands/tablespace.c:410 commands/tablespace.c:808
 #: commands/tablespace.c:875 commands/tablespace.c:980
 #: commands/tablespace.c:1036 commands/tablespace.c:1160
-#: executor/execMain.c:2228 utils/adt/acl.c:4134 utils/adt/dbsize.c:248
+#: executor/execMain.c:2229 utils/adt/acl.c:4134 utils/adt/dbsize.c:248
 #, c-format
 msgid "tablespace \"%s\" does not exist"
 msgstr "Tablespace »%s« existiert nicht"
@@ -3786,7 +3786,9 @@ msgstr ""
 msgid ""
 "cannot reassign ownership of objects owned by %s because they are required "
 "by the database system"
-msgstr "kann den Eigentümer von Objekten, die %s gehören, nicht neu setzen, weil die Objekte vom Datenbanksystem benötigt werden"
+msgstr ""
+"kann den Eigentümer von Objekten, die %s gehören, nicht neu setzen, weil die "
+"Objekte vom Datenbanksystem benötigt werden"
 
 #: catalog/pg_type.c:231
 #, c-format
@@ -3932,7 +3934,7 @@ msgstr "analysiere »%s.%s«"
 msgid "automatic analyze of table \"%s.%s.%s\" system usage: %s"
 msgstr "automatisches Analysieren von Tabelle »%s.%s.%s« Systembenutzung: %s"
 
-#: commands/analyze.c:1225
+#: commands/analyze.c:1224
 #, c-format
 msgid ""
 "\"%s\": scanned %d of %u pages, containing %.0f live rows and %.0f dead "
@@ -3941,7 +3943,7 @@ msgstr ""
 "»%s«: %d von %u Seiten gelesen, enthalten %.0f lebende Zeilen und %.0f tote "
 "Zeilen; %d Zeilen in Stichprobe, schätzungsweise %.0f Zeilen insgesamt"
 
-#: commands/analyze.c:1486 executor/execQual.c:2735
+#: commands/analyze.c:1485 executor/execQual.c:2735
 msgid "could not convert row type"
 msgstr "konnte Zeilentyp nicht umwandeln"
 
@@ -4015,7 +4017,7 @@ msgstr "temporäre Tabellen anderer Sitzungen können nicht gevacuumt werden"
 msgid "clustering \"%s.%s\""
 msgstr "clustere »%s.%s«"
 
-#: commands/cluster.c:390 commands/vacuumlazy.c:315
+#: commands/cluster.c:390 commands/vacuumlazy.c:339
 #, c-format
 msgid "vacuuming \"%s.%s\""
 msgstr "vacuume »%s.%s«"
@@ -4585,7 +4587,7 @@ msgstr "falsches Binärdatenformat"
 
 #: commands/copy.c:3446 commands/indexcmds.c:908 commands/tablecmds.c:1260
 #: commands/tablecmds.c:2065 parser/parse_expr.c:758
-#: utils/adt/tsvector_op.c:1347
+#: utils/adt/tsvector_op.c:1371
 #, c-format
 msgid "column \"%s\" does not exist"
 msgstr "Spalte »%s« existiert nicht"
@@ -4875,57 +4877,57 @@ msgstr "Option »%s« nicht gefunden"
 msgid "option \"%s\" provided more than once"
 msgstr "Option »%s« mehrmals angegeben"
 
-#: commands/foreigncmds.c:209 commands/foreigncmds.c:217
+#: commands/foreigncmds.c:211 commands/foreigncmds.c:219
 #, c-format
 msgid "permission denied to change owner of foreign-data wrapper \"%s\""
 msgstr ""
 "keine Berechtigung, um Eigentümer des Fremddaten-Wrappers »%s« zu ändern"
 
-#: commands/foreigncmds.c:211
+#: commands/foreigncmds.c:213
 msgid "Must be superuser to change owner of a foreign-data wrapper."
 msgstr "Nur Superuser können den Eigentümer eines Fremddaten-Wrappers ändern."
 
-#: commands/foreigncmds.c:219
+#: commands/foreigncmds.c:221
 msgid "The owner of a foreign-data wrapper must be a superuser."
 msgstr "Der Eigentümer eines Fremddaten-Wrappers muss ein Superuser sein."
 
-#: commands/foreigncmds.c:228 commands/foreigncmds.c:452
-#: commands/foreigncmds.c:553 foreign/foreign.c:90
+#: commands/foreigncmds.c:228 commands/foreigncmds.c:454
+#: commands/foreigncmds.c:552 foreign/foreign.c:90
 #, c-format
 msgid "foreign-data wrapper \"%s\" does not exist"
 msgstr "Fremddaten-Wrapper »%s« existiert nicht"
 
-#: commands/foreigncmds.c:270 commands/foreigncmds.c:723
-#: commands/foreigncmds.c:813 commands/foreigncmds.c:1089
+#: commands/foreigncmds.c:270 commands/foreigncmds.c:724
+#: commands/foreigncmds.c:811 commands/foreigncmds.c:1086
 #: foreign/foreign.c:179
 #, c-format
 msgid "server \"%s\" does not exist"
 msgstr "Server »%s« existiert nicht"
 
-#: commands/foreigncmds.c:347
+#: commands/foreigncmds.c:349
 #, c-format
 msgid "permission denied to create foreign-data wrapper \"%s\""
 msgstr "keine Berechtigung, um Fremddaten-Wrapper »%s« zu erzeugen"
 
-#: commands/foreigncmds.c:349
+#: commands/foreigncmds.c:351
 msgid "Must be superuser to create a foreign-data wrapper."
 msgstr "Nur Superuser können Fremddaten-Wrapper anlegen."
 
-#: commands/foreigncmds.c:360
+#: commands/foreigncmds.c:362
 #, c-format
 msgid "foreign-data wrapper \"%s\" already exists"
 msgstr "Fremddaten-Wrapper »%s« existiert bereits"
 
-#: commands/foreigncmds.c:442
+#: commands/foreigncmds.c:444
 #, c-format
 msgid "permission denied to alter foreign-data wrapper \"%s\""
 msgstr "keine Berechtigung, um Fremddaten-Wrapper »%s« zu ändern"
 
-#: commands/foreigncmds.c:444
+#: commands/foreigncmds.c:446
 msgid "Must be superuser to alter a foreign-data wrapper."
 msgstr "Nur Superuser können Fremddaten-Wrapper ändern."
 
-#: commands/foreigncmds.c:472
+#: commands/foreigncmds.c:474
 msgid ""
 "changing the foreign-data wrapper validator can cause the options for "
 "dependent objects to become invalid"
@@ -4933,26 +4935,26 @@ msgstr ""
 "durch Ändern des Validators des Fremddaten-Wrappers können die Optionen von "
 "abhängigen Objekten ungültig werden"
 
-#: commands/foreigncmds.c:544
+#: commands/foreigncmds.c:543
 #, c-format
 msgid "permission denied to drop foreign-data wrapper \"%s\""
 msgstr "keine Berechtigung, um Fremddaten-Wrapper »%s« zu löschen"
 
-#: commands/foreigncmds.c:546
+#: commands/foreigncmds.c:545
 msgid "Must be superuser to drop a foreign-data wrapper."
 msgstr "Nur Superuser können Fremddaten-Wrapper löschen."
 
-#: commands/foreigncmds.c:558
+#: commands/foreigncmds.c:557
 #, c-format
 msgid "foreign-data wrapper \"%s\" does not exist, skipping"
 msgstr "Fremddaten-Wrapper »%s« existiert nicht, wird übersprungen"
 
-#: commands/foreigncmds.c:625
+#: commands/foreigncmds.c:626
 #, c-format
 msgid "server \"%s\" already exists"
 msgstr "Server »%s« existiert bereits"
 
-#: commands/foreigncmds.c:817
+#: commands/foreigncmds.c:815
 #, c-format
 msgid "server \"%s\" does not exist, skipping"
 msgstr "Server »%s« existiert nicht, wird übersprungen"
@@ -4962,16 +4964,16 @@ msgstr "Server »%s« existiert nicht, wird übersprungen"
 msgid "user mapping \"%s\" already exists for server %s"
 msgstr "Benutzerabbildung »%s« existiert bereits für Server »%s«"
 
-#: commands/foreigncmds.c:998 commands/foreigncmds.c:1105
+#: commands/foreigncmds.c:998 commands/foreigncmds.c:1102
 #, c-format
 msgid "user mapping \"%s\" does not exist for the server"
 msgstr "Benutzerabbildung »%s« existiert für den Server nicht"
 
-#: commands/foreigncmds.c:1092
+#: commands/foreigncmds.c:1089
 msgid "server does not exist, skipping"
 msgstr "Server existiert nicht, wird übersprungen"
 
-#: commands/foreigncmds.c:1110
+#: commands/foreigncmds.c:1107
 #, c-format
 msgid "user mapping \"%s\" does not exist for the server, skipping"
 msgstr ""
@@ -5929,11 +5931,11 @@ msgstr "»%s« ist kein Typ"
 msgid "Use DROP TYPE to remove a type."
 msgstr "Verwenden Sie DROP TYPE, um einen Typen zu löschen."
 
-#: commands/tablecmds.c:390 executor/execMain.c:2194
+#: commands/tablecmds.c:390 executor/execMain.c:2195
 msgid "ON COMMIT can only be used on temporary tables"
 msgstr "ON COMMIT kann nur mit temporären Tabellen verwendet werden"
 
-#: commands/tablecmds.c:400 executor/execMain.c:2204
+#: commands/tablecmds.c:400 executor/execMain.c:2205
 msgid "cannot create temporary table within security-restricted operation"
 msgstr ""
 "kann temporäre Tabelle nicht in einer sicherheitsbeschränkten Operation "
@@ -6672,7 +6674,7 @@ msgstr "Triggerfunktion %u gab NULL-Wert zurück"
 msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "Trigger für BEFORE STATEMENT kann keinen Wert zurückgeben"
 
-#: commands/trigger.c:2397 executor/execMain.c:1652
+#: commands/trigger.c:2397 executor/execMain.c:1653
 #: executor/nodeLockRows.c:137 executor/nodeModifyTable.c:334
 #: executor/nodeModifyTable.c:505
 msgid "could not serialize access due to concurrent update"
@@ -7153,38 +7155,38 @@ msgstr ""
 "Schließen Sie bald alle offenen Transaktionen, um Überlaufprobleme zu "
 "vermeiden."
 
-#: commands/vacuum.c:820
+#: commands/vacuum.c:822
 msgid "some databases have not been vacuumed in over 2 billion transactions"
 msgstr ""
 "einige Datenbanken sind seit über 2 Milliarden Transaktionen nicht gevacuumt "
 "worden"
 
-#: commands/vacuum.c:821
+#: commands/vacuum.c:823
 msgid "You might have already suffered transaction-wraparound data loss."
 msgstr ""
 "Sie haben möglicherweise bereits Daten wegen Transaktionsnummernüberlauf "
 "verloren."
 
-#: commands/vacuum.c:939
+#: commands/vacuum.c:941
 #, c-format
 msgid "skipping \"%s\" --- only superuser can vacuum it"
 msgstr "überspringe »%s« --- nur Superuser kann sie vacuumen"
 
-#: commands/vacuum.c:943
+#: commands/vacuum.c:945
 #, c-format
 msgid "skipping \"%s\" --- only superuser or database owner can vacuum it"
 msgstr ""
 "überspringe »%s« --- nur Superuser oder Eigentümer der Datenbank kann sie "
 "vacuumen"
 
-#: commands/vacuum.c:947
+#: commands/vacuum.c:949
 #, c-format
 msgid "skipping \"%s\" --- only table or database owner can vacuum it"
 msgstr ""
 "überspringe »%s« --- nur Eigentümer der Tabelle oder der Datenbank kann sie "
 "vacuumen"
 
-#: commands/vacuum.c:964
+#: commands/vacuum.c:966
 #, c-format
 msgid ""
 "skipping \"%s\" --- cannot vacuum indexes, views, or special system tables"
@@ -7192,7 +7194,7 @@ msgstr ""
 "überspringe »%s« --- kann Indexe, Sichten oder spezielle Systemtabellen "
 "nicht vacuumen"
 
-#: commands/vacuumlazy.c:230
+#: commands/vacuumlazy.c:254
 #, c-format
 msgid ""
 "automatic vacuum of table \"%s.%s.%s\": index scans: %d\n"
@@ -7205,18 +7207,18 @@ msgstr ""
 "Tuple: %.0f entfernt, %.0f noch vorhanden\n"
 "Systembenutzung: %s"
 
-#: commands/vacuumlazy.c:484
+#: commands/vacuumlazy.c:508
 #, c-format
 msgid "relation \"%s\" page %u is uninitialized --- fixing"
 msgstr ""
 "Seite %2$u in Relation »%1$s« ist nicht initialisiert --- wird repariert"
 
-#: commands/vacuumlazy.c:841
+#: commands/vacuumlazy.c:865
 #, c-format
 msgid "\"%s\": removed %.0f row versions in %u pages"
 msgstr "»%s«: %.0f Zeilenversionen in %u Seiten entfernt"
 
-#: commands/vacuumlazy.c:846
+#: commands/vacuumlazy.c:870
 #, c-format
 msgid ""
 "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u out of %u "
@@ -7225,7 +7227,7 @@ msgstr ""
 "»%s«: %.0f entfernbare, %.0f nicht entfernbare Zeilenversionen in %u von %u "
 "Seiten gefunden"
 
-#: commands/vacuumlazy.c:850
+#: commands/vacuumlazy.c:874
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -7238,28 +7240,28 @@ msgstr ""
 "%u Seiten sind vollkommen leer.\n"
 "%s."
 
-#: commands/vacuumlazy.c:908
+#: commands/vacuumlazy.c:932
 #, c-format
 msgid "\"%s\": removed %d row versions in %d pages"
 msgstr "»%s«: %d Zeilenversionen in %d Seiten entfernt"
 
-#: commands/vacuumlazy.c:911 commands/vacuumlazy.c:1003
-#: commands/vacuumlazy.c:1136
+#: commands/vacuumlazy.c:935 commands/vacuumlazy.c:1027
+#: commands/vacuumlazy.c:1160
 #, c-format
 msgid "%s."
 msgstr "%s."
 
-#: commands/vacuumlazy.c:1000
+#: commands/vacuumlazy.c:1024
 #, c-format
 msgid "scanned index \"%s\" to remove %d row versions"
 msgstr "Index »%s« gelesen und %d Zeilenversionen entfernt"
 
-#: commands/vacuumlazy.c:1041
+#: commands/vacuumlazy.c:1065
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "Index »%s« enthält %.0f Zeilenversionen in %u Seiten"
 
-#: commands/vacuumlazy.c:1045
+#: commands/vacuumlazy.c:1069
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -7270,7 +7272,7 @@ msgstr ""
 "%u Indexseiten wurden gelöscht, %u sind gegenwärtig wiederverwendbar.\n"
 "%s."
 
-#: commands/vacuumlazy.c:1133
+#: commands/vacuumlazy.c:1157
 #, c-format
 msgid "\"%s\": truncated %u to %u pages"
 msgstr "»%s«: von %u auf %u Seiten verkürzt"
@@ -7502,7 +7504,7 @@ msgstr ""
 "Benutzeranfrage hat möglicherweise Zeilenversionen sehen müssen, die "
 "entfernt werden müssen."
 
-#: tcop/postgres.c:2289 storage/ipc/standby.c:494
+#: tcop/postgres.c:2289 storage/ipc/standby.c:495
 msgid "User transaction caused buffer deadlock with recovery."
 msgstr ""
 "Benutzertransaktion hat Verklemmung (Deadlock) mit Wiederherstellung "
@@ -7571,7 +7573,7 @@ msgstr "storniere Anfrage wegen Zeitüberschreitung"
 msgid "canceling autovacuum task"
 msgstr "storniere Autovacuum-Aufgabe"
 
-#: tcop/postgres.c:2968 storage/ipc/standby.c:493
+#: tcop/postgres.c:2968 storage/ipc/standby.c:494
 msgid "canceling statement due to conflict with recovery"
 msgstr "storniere Anfrage wegen Konflikt mit der Wiederherstellung"
 
@@ -7738,32 +7740,32 @@ msgstr "kann Zeilen in Sicht »%s« nicht sperren"
 msgid "cannot lock rows in relation \"%s\""
 msgstr "kann Zeilen in »%s« nicht sperren"
 
-#: executor/execMain.c:913
+#: executor/execMain.c:914
 #, c-format
 msgid "cannot change sequence \"%s\""
 msgstr "kann Sequenz »%s« nicht ändern"
 
-#: executor/execMain.c:919
+#: executor/execMain.c:920
 #, c-format
 msgid "cannot change TOAST relation \"%s\""
 msgstr "kann TOAST-Relation »%s« nicht ändern"
 
-#: executor/execMain.c:925
+#: executor/execMain.c:926
 #, c-format
 msgid "cannot change view \"%s\""
 msgstr "kann Sicht »%s« nicht ändern"
 
-#: executor/execMain.c:931
+#: executor/execMain.c:932
 #, c-format
 msgid "cannot change relation \"%s\""
 msgstr "kann Relation »%s« nicht ändern"
 
-#: executor/execMain.c:1356
+#: executor/execMain.c:1357
 #, c-format
 msgid "null value in column \"%s\" violates not-null constraint"
 msgstr "NULL-Wert in Spalte »%s« verletzt Not-Null-Constraint"
 
-#: executor/execMain.c:1368
+#: executor/execMain.c:1369
 #, c-format
 msgid "new row for relation \"%s\" violates check constraint \"%s\""
 msgstr "neue Zeile für Relation »%s« verletzt Check-Constraint »%s«"
@@ -7944,22 +7946,22 @@ msgstr "ROW()-Spalte hat Typ %s statt Typ %s"
 msgid "could not identify a comparison function for type %s"
 msgstr "konnte keine Vergleichsfunktion für Typ %s ermitteln"
 
-#: executor/execUtils.c:1296
+#: executor/execUtils.c:1297
 #, c-format
 msgid "could not create exclusion constraint \"%s\""
 msgstr "konnte Exclusion-Constraint »%s« nicht erzeugen"
 
-#: executor/execUtils.c:1298
+#: executor/execUtils.c:1299
 #, c-format
 msgid "Key %s conflicts with key %s."
 msgstr "Schlüssel %s kollidiert mit Schlüssel %s."
 
-#: executor/execUtils.c:1303
+#: executor/execUtils.c:1304
 #, c-format
 msgid "conflicting key value violates exclusion constraint \"%s\""
 msgstr "kollidierender Schlüsselwert verletzt Exclusion-Constraint »%s«"
 
-#: executor/execUtils.c:1305
+#: executor/execUtils.c:1306
 #, c-format
 msgid "Key %s conflicts with existing key %s."
 msgstr "Schlüssel %s kollidiert mit vorhandenem Schlüssel %s."
@@ -8156,12 +8158,12 @@ msgstr "SQL-Anweisung »%s«"
 msgid "user mapping not found for \"%s\""
 msgstr "Benutzerabbildung für »%s« nicht gefunden"
 
-#: foreign/foreign.c:408
+#: foreign/foreign.c:418
 #, c-format
 msgid "invalid option \"%s\""
 msgstr "ungültige Option »%s«"
 
-#: foreign/foreign.c:409
+#: foreign/foreign.c:419
 #, c-format
 msgid "Valid options in this context are: %s"
 msgstr "Gültige Optionen in diesem Zusammenhang sind: %s"
@@ -8463,7 +8465,9 @@ msgstr "konnte effektive UID nicht aus Peer-Credentials ermitteln: %m"
 
 #: libpq/auth.c:1922
 msgid "could not get peer credentials: incorrect control message"
-msgstr "konnte Credentials von Gegenstelle nicht ermitteln: fehlerhafte Kontrollnachricht"
+msgstr ""
+"konnte Credentials von Gegenstelle nicht ermitteln: fehlerhafte "
+"Kontrollnachricht"
 
 #: libpq/auth.c:1944
 msgid ""
@@ -8751,7 +8755,7 @@ msgstr "konnte Serverdatei »%s« nicht schreiben: %m"
 msgid "SSL error: %s"
 msgstr "SSL-Fehler: %s"
 
-#: libpq/be-secure.c:292 libpq/be-secure.c:387 libpq/be-secure.c:951
+#: libpq/be-secure.c:292 libpq/be-secure.c:387 libpq/be-secure.c:957
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "unbekannter SSL-Fehlercode: %d"
@@ -8769,103 +8773,103 @@ msgstr "SSL konnte keine neue Verhandlungsanfrage senden"
 msgid "could not create SSL context: %s"
 msgstr "konnte SSL-Kontext nicht erzeugen: %s"
 
-#: libpq/be-secure.c:746
+#: libpq/be-secure.c:752
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "konnte Serverzertifikatsdatei »%s« nicht laden: %s"
 
-#: libpq/be-secure.c:752
+#: libpq/be-secure.c:758
 #, c-format
 msgid "could not access private key file \"%s\": %m"
 msgstr "konnte auf private Schlüsseldatei »%s« nicht zugreifen: %m"
 
-#: libpq/be-secure.c:767
+#: libpq/be-secure.c:773
 #, c-format
 msgid "private key file \"%s\" has group or world access"
 msgstr "private Schlüsseldatei »%s« erlaubt Zugriff von Gruppe oder Welt"
 
-#: libpq/be-secure.c:769
+#: libpq/be-secure.c:775
 msgid "Permissions should be u=rw (0600) or less."
 msgstr "Rechte sollten u=rw (0600) oder weniger sein."
 
-#: libpq/be-secure.c:776
+#: libpq/be-secure.c:782
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "konnte private Schlüsseldatei »%s« nicht laden: %s"
 
-#: libpq/be-secure.c:781
+#: libpq/be-secure.c:787
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "Überprüfung des privaten Schlüssels fehlgeschlagen: %s"
 
-#: libpq/be-secure.c:809
+#: libpq/be-secure.c:815
 #, c-format
 msgid "could not access root certificate file \"%s\": %m"
 msgstr "konnte nicht auf Root-Zertifikat-Datei »%s« zugreifen: %m"
 
-#: libpq/be-secure.c:820
+#: libpq/be-secure.c:826
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "konnte Root-Zertifikat-Datei »%s« nicht laden: %s"
 
-#: libpq/be-secure.c:843
+#: libpq/be-secure.c:849
 #, c-format
 msgid "SSL certificate revocation list file \"%s\" ignored"
 msgstr "SSL-Certificate-Revocation-List-Datei »%s« ignoriert"
 
-#: libpq/be-secure.c:845
+#: libpq/be-secure.c:851
 msgid "SSL library does not support certificate revocation lists."
 msgstr "SSL-Bibliothek unterstützt keine Certificate-Revocation-Lists."
 
-#: libpq/be-secure.c:852
+#: libpq/be-secure.c:858
 #, c-format
 msgid "SSL certificate revocation list file \"%s\" not found, skipping: %s"
 msgstr ""
 "SSL-Certificate-Revocation-List-Datei »%s« nicht gefunden, wird "
 "übersprungen: %s"
 
-#: libpq/be-secure.c:854
+#: libpq/be-secure.c:860
 msgid "Certificates will not be checked against revocation list."
 msgstr "Zertifikate werden nicht gegen die Revocation-Liste geprüft."
 
-#: libpq/be-secure.c:896
+#: libpq/be-secure.c:902
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "konnte SSL-Verbindung nicht initialisieren: %s"
 
-#: libpq/be-secure.c:905
+#: libpq/be-secure.c:911
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "konnte SSL-Socket nicht setzen: %s"
 
-#: libpq/be-secure.c:931
+#: libpq/be-secure.c:937
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "konnte SSL-Verbindung nicht annehmen: %m"
 
-#: libpq/be-secure.c:935 libpq/be-secure.c:946
+#: libpq/be-secure.c:941 libpq/be-secure.c:952
 msgid "could not accept SSL connection: EOF detected"
 msgstr "konnte SSL-Verbindung nicht annehmen: EOF entdeckt"
 
-#: libpq/be-secure.c:940
+#: libpq/be-secure.c:946
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "konnte SSL-Verbindung nicht annehmen: %s"
 
-#: libpq/be-secure.c:991
+#: libpq/be-secure.c:997
 msgid "SSL certificate's common name contains embedded null"
 msgstr "Common-Name im SSL-Zertifikat enthält Null-Byte"
 
-#: libpq/be-secure.c:998
+#: libpq/be-secure.c:1004
 #, c-format
 msgid "SSL connection from \"%s\""
 msgstr "SSL-Verbindung von »%s«"
 
-#: libpq/be-secure.c:1042
+#: libpq/be-secure.c:1048
 msgid "no SSL error reported"
 msgstr "kein SSL-Fehler berichtet"
 
-#: libpq/be-secure.c:1046
+#: libpq/be-secure.c:1052
 #, c-format
 msgid "SSL error code %lu"
 msgstr "SSL-Fehlercode %lu"
@@ -9369,16 +9373,16 @@ msgstr ""
 msgid "invalid page header in block %u of relation %s"
 msgstr "ungültiger Seitenkopf in Block %u von Relation %s"
 
-#: storage/buffer/bufmgr.c:2706
+#: storage/buffer/bufmgr.c:2707
 #, c-format
 msgid "could not write block %u of %s"
 msgstr "konnte Block %u von %s nicht schreiben"
 
-#: storage/buffer/bufmgr.c:2708
+#: storage/buffer/bufmgr.c:2709
 msgid "Multiple failures --- write error might be permanent."
 msgstr "Mehrere Fehlschläge --- Schreibfehler ist möglicherweise dauerhaft."
 
-#: storage/buffer/bufmgr.c:2729
+#: storage/buffer/bufmgr.c:2730
 #, c-format
 msgid "writing block %u of relation %s"
 msgstr "schreibe Block %u von Relation %s"
@@ -9417,7 +9421,7 @@ msgid "could not read directory \"%s\": %m"
 msgstr "konnte Verzeichnis »%s« nicht lesen: %m"
 
 #: storage/ipc/procarray.c:270 storage/ipc/sinvaladt.c:302
-#: storage/lmgr/proc.c:289 postmaster/postmaster.c:1833
+#: storage/lmgr/proc.c:292 postmaster/postmaster.c:1833
 msgid "sorry, too many clients already"
 msgstr "tut mir leid, schon zu viele Verbindungen"
 
@@ -9428,8 +9432,8 @@ msgstr ""
 "unvollständig ist"
 
 #: storage/ipc/shmem.c:190 storage/lmgr/lock.c:629 storage/lmgr/lock.c:698
-#: storage/lmgr/lock.c:2132 storage/lmgr/lock.c:2511 storage/lmgr/lock.c:2576
-#: storage/lmgr/proc.c:192 storage/lmgr/proc.c:210 utils/hash/dynahash.c:925
+#: storage/lmgr/lock.c:2125 storage/lmgr/lock.c:2504 storage/lmgr/lock.c:2569
+#: storage/lmgr/proc.c:195 storage/lmgr/proc.c:213 utils/hash/dynahash.c:925
 msgid "out of shared memory"
 msgstr "Shared Memory aufgebraucht"
 
@@ -9552,23 +9556,23 @@ msgstr ""
 "Nur Sperren gleich oder unter RowExclusiveLock können während der "
 "Wiederherstellung auf Datenbankobjekte gesetzt werden."
 
-#: storage/lmgr/lock.c:630 storage/lmgr/lock.c:699 storage/lmgr/lock.c:2512
-#: storage/lmgr/lock.c:2577
+#: storage/lmgr/lock.c:630 storage/lmgr/lock.c:699 storage/lmgr/lock.c:2505
+#: storage/lmgr/lock.c:2570
 msgid "You might need to increase max_locks_per_transaction."
 msgstr "Sie müssen möglicherweise max_locks_per_transaction erhöhen."
 
-#: storage/lmgr/lock.c:2133
+#: storage/lmgr/lock.c:2126
 msgid "Not enough memory for reassigning the prepared transaction's locks."
 msgstr ""
 "Nicht genug Speicher, um die Sperren der vorbereiteten Transaktion zu "
 "übergeben."
 
-#: storage/lmgr/proc.c:1006 utils/adt/misc.c:102
+#: storage/lmgr/proc.c:1013 utils/adt/misc.c:102
 #, c-format
 msgid "could not send signal to process %d: %m"
 msgstr "konnte Signal nicht an Prozess %d senden: %m"
 
-#: storage/lmgr/proc.c:1040
+#: storage/lmgr/proc.c:1047
 #, c-format
 msgid ""
 "process %d avoided deadlock for %s on %s by rearranging queue order after "
@@ -9577,7 +9581,7 @@ msgstr ""
 "Prozess %d vermied Verklemmung wegen %s-Sperre auf %s durch Umordnen der "
 "Queue nach %ld,%03d ms"
 
-#: storage/lmgr/proc.c:1052
+#: storage/lmgr/proc.c:1059
 #, c-format
 msgid ""
 "process %d detected deadlock while waiting for %s on %s after %ld.%03d ms"
@@ -9585,17 +9589,17 @@ msgstr ""
 "Prozess %d hat Verklemmung festgestellt beim Warten auf %s-Sperre auf %s "
 "nach %ld,%03d ms"
 
-#: storage/lmgr/proc.c:1058
+#: storage/lmgr/proc.c:1065
 #, c-format
 msgid "process %d still waiting for %s on %s after %ld.%03d ms"
 msgstr "Prozess %d wartet immer noch auf %s-Sperre auf %s nach %ld,%03d ms"
 
-#: storage/lmgr/proc.c:1062
+#: storage/lmgr/proc.c:1069
 #, c-format
 msgid "process %d acquired %s on %s after %ld.%03d ms"
 msgstr "Prozess %d erlangte %s-Sperre auf %s nach %ld,%03d ms"
 
-#: storage/lmgr/proc.c:1078
+#: storage/lmgr/proc.c:1085
 #, c-format
 msgid "process %d failed to acquire %s on %s after %ld.%03d ms"
 msgstr "Prozess %d konnte %s-Sperre auf %s nach %ld,%03d ms nicht erlangen"
@@ -9628,7 +9632,7 @@ msgstr "verfälschter Item-Zeiger: offset = %u, size = %u"
 msgid "could not find array type for data type %s"
 msgstr "konnte Arraytyp für Datentyp %s nicht finden"
 
-#: optimizer/plan/initsplan.c:585
+#: optimizer/plan/initsplan.c:592
 msgid ""
 "SELECT FOR UPDATE/SHARE cannot be applied to the nullable side of an outer "
 "join"
@@ -12619,15 +12623,20 @@ msgstr "keine binäre Ausgabefunktion verfügbar für Typ %s"
 msgid "cached plan must not change result type"
 msgstr "gecachter Plan darf den Ergebnistyp nicht ändern"
 
-#: utils/cache/relcache.c:4299
+#: utils/cache/relcache.c:4310
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr ""
 "konnte Initialisierungsdatei für Relationscache »%s« nicht erzeugen: %m"
 
-#: utils/cache/relcache.c:4301
+#: utils/cache/relcache.c:4312
 msgid "Continuing anyway, but there's something wrong."
 msgstr "Setze trotzdem fort, aber irgendwas stimmt nicht."
+
+#: utils/cache/relcache.c:4526
+#, c-format
+msgid "could not remove cache file \"%s\": %m"
+msgstr "konnte Cache-Datei »%s« nicht löschen: %m"
 
 #: utils/cache/relmapper.c:454
 msgid "cannot PREPARE a transaction that modified relation mapping"
@@ -13604,11 +13613,11 @@ msgstr "inkonsistente Verwendung von Jahr %04d und »BC«"
 msgid "cannot calculate day of year without year information"
 msgstr "kann Tag des Jahres nicht berechnen ohne Jahrinformationen"
 
-#: utils/adt/formatting.c:4151
+#: utils/adt/formatting.c:4155
 msgid "\"EEEE\" not supported for input"
 msgstr "»E« wird nicht bei der Eingabe unterstützt"
 
-#: utils/adt/formatting.c:4163
+#: utils/adt/formatting.c:4167
 msgid "\"RN\" not supported for input"
 msgstr "»RN« wird nicht bei der Eingabe unterstützt"
 
@@ -14326,13 +14335,13 @@ msgstr ""
 msgid "rule \"%s\" has unsupported event type %d"
 msgstr "Regel »%s« hat nicht unterstützten Ereignistyp %d"
 
-#: utils/adt/selfuncs.c:4776 utils/adt/selfuncs.c:5205
+#: utils/adt/selfuncs.c:4833 utils/adt/selfuncs.c:5262
 msgid "case insensitive matching not supported on type bytea"
 msgstr ""
 "Mustersuche ohne Rücksicht auf Groß-/Kleinschreibung wird für Typ bytea "
 "nicht unterstützt"
 
-#: utils/adt/selfuncs.c:4881 utils/adt/selfuncs.c:5365
+#: utils/adt/selfuncs.c:4938 utils/adt/selfuncs.c:5422
 msgid "regular-expression matching not supported on type bytea"
 msgstr ""
 "Mustersuche mit regulären Ausdrücken wird für Typ bytea nicht unterstützt"
@@ -14532,41 +14541,41 @@ msgstr "Wort ist zu lang (%ld Bytes, maximal %ld Bytes)"
 msgid "string is too long for tsvector (%ld bytes, max %ld bytes)"
 msgstr "Zeichenkette ist zu lang für tsvector (%ld Bytes, maximal %ld Bytes)"
 
-#: utils/adt/tsvector_op.c:1103
+#: utils/adt/tsvector_op.c:1127
 msgid "ts_stat query must return one tsvector column"
 msgstr "ts_stat-Anfrage muss eine tsvector-Spalte zurückgeben"
 
-#: utils/adt/tsvector_op.c:1283
+#: utils/adt/tsvector_op.c:1307
 #, c-format
 msgid "tsvector column \"%s\" does not exist"
 msgstr "tsvector-Spalte »%s« existiert nicht"
 
-#: utils/adt/tsvector_op.c:1289
+#: utils/adt/tsvector_op.c:1313
 #, c-format
 msgid "column \"%s\" is not of tsvector type"
 msgstr "Spalte »%s« hat nicht Typ tsvector"
 
-#: utils/adt/tsvector_op.c:1301
+#: utils/adt/tsvector_op.c:1325
 #, c-format
 msgid "configuration column \"%s\" does not exist"
 msgstr "Konfigurationsspalte »%s« existiert nicht"
 
-#: utils/adt/tsvector_op.c:1307
+#: utils/adt/tsvector_op.c:1331
 #, c-format
 msgid "column \"%s\" is not of regconfig type"
 msgstr "Spalte »%s« hat nicht Typ regconfig"
 
-#: utils/adt/tsvector_op.c:1314
+#: utils/adt/tsvector_op.c:1338
 #, c-format
 msgid "configuration column \"%s\" must not be null"
 msgstr "Konfigurationsspalte »%s« darf nicht NULL sein"
 
-#: utils/adt/tsvector_op.c:1327
+#: utils/adt/tsvector_op.c:1351
 #, c-format
 msgid "text search configuration name \"%s\" must be schema-qualified"
 msgstr "Textsuchekonfigurationsname »%s« muss Schemaqualifikation haben"
 
-#: utils/adt/tsvector_op.c:1352
+#: utils/adt/tsvector_op.c:1376
 #, c-format
 msgid "column \"%s\" is not of a character type"
 msgstr "Spalte »%s« hat keinen Zeichentyp"
@@ -16985,27 +16994,27 @@ msgstr ""
 "Die Datenbank wurde mit LC_CTYPE »%s« initialisiert, was von setlocale() "
 "nicht erkannt wird."
 
-#: utils/init/postinit.c:608
+#: utils/init/postinit.c:610
 msgid "no roles are defined in this database system"
 msgstr "in diesem Datenbanksystem sind keine Rollen definiert"
 
-#: utils/init/postinit.c:609
+#: utils/init/postinit.c:611
 #, c-format
 msgid "You should immediately run CREATE USER \"%s\" SUPERUSER;."
 msgstr "Sie sollten sofort CREATE USER \"%s\" SUPERUSER; ausführen."
 
-#: utils/init/postinit.c:632
+#: utils/init/postinit.c:634
 msgid "new replication connections are not allowed during database shutdown"
 msgstr ""
 "während des Herunterfahrens der Datenbank sind keine neuen "
 "Replikationsverbindungen erlaubt"
 
-#: utils/init/postinit.c:636
+#: utils/init/postinit.c:638
 msgid "must be superuser to connect during database shutdown"
 msgstr ""
 "nur Superuser können während des Herunterfahrens der Datenbank verbinden"
 
-#: utils/init/postinit.c:650
+#: utils/init/postinit.c:652
 msgid ""
 "remaining connection slots are reserved for non-replication superuser "
 "connections"
@@ -17013,25 +17022,25 @@ msgstr ""
 "die verbleibenden Verbindungen sind für Superuser auf Nicht-"
 "Replikationsverbindungen reserviert"
 
-#: utils/init/postinit.c:665
+#: utils/init/postinit.c:667
 msgid "must be superuser to start walsender"
 msgstr "nur Superuser können WAL-Sender starten"
 
-#: utils/init/postinit.c:725
+#: utils/init/postinit.c:727
 #, c-format
 msgid "database %u does not exist"
 msgstr "Datenbank %u existiert nicht"
 
-#: utils/init/postinit.c:777
+#: utils/init/postinit.c:779
 msgid "It seems to have just been dropped or renamed."
 msgstr "Sie wurde anscheinend gerade gelöscht oder umbenannt."
 
-#: utils/init/postinit.c:795
+#: utils/init/postinit.c:797
 #, c-format
 msgid "The database subdirectory \"%s\" is missing."
 msgstr "Das Datenbankunterverzeichnis »%s« fehlt."
 
-#: utils/init/postinit.c:800
+#: utils/init/postinit.c:802
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "konnte nicht auf Verzeichnis »%s« zugreifen: %m"
