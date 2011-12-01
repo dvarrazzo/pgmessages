@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-12-01 01:02-0300\n"
+"POT-Creation-Date: 2011-12-01 17:44-0300\n"
 "PO-Revision-Date: 2010-05-11 08:53-0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
@@ -185,7 +185,6 @@ msgid "User was or might have been using tablespace that must be dropped."
 msgstr "Usuário estava ou pode estar usando tablespace que dev ser removida."
 
 #: tcop/postgres.c:2286
-#, fuzzy
 msgid "User query might have needed to see row versions that must be removed."
 msgstr ""
 "Consulta do usuário pode ter precisado acessar versões de registros que "
@@ -1556,9 +1555,8 @@ msgid "channel name too long"
 msgstr "nome do canal é muito longo"
 
 #: commands/async.c:579
-#, fuzzy
 msgid "payload string too long"
-msgstr "carga útil muito longa"
+msgstr "cadeia da carga é muito longa"
 
 #: commands/async.c:763
 msgid ""
@@ -3065,7 +3063,7 @@ msgstr ""
 "do sistema"
 
 #: commands/analyze.c:271
-#, fuzzy, c-format
+#, c-format
 msgid "analyzing \"%s.%s\" inheritance tree"
 msgstr "analisando árvore da herança de \"%s.%s\""
 
@@ -3443,13 +3441,12 @@ msgid "operator %s is not a member of operator family \"%s\""
 msgstr "operador %s não é um membro da família de operadores \"%s\""
 
 #: commands/indexcmds.c:1022
-#, fuzzy
 msgid ""
 "The exclusion operator must be related to the index operator class for the "
 "constraint."
 msgstr ""
-"Você deve especificar uma classe de operadores para o índice ou definir uma "
-"classe de operadores padrão para o tipo de dado."
+"O operador de exclusão deve estar relacionado à classe de operadores do "
+"índice para a restrição."
 
 #: commands/indexcmds.c:1057
 #, c-format
@@ -4033,9 +4030,9 @@ msgid "%s depends on column \"%s\""
 msgstr "%s depende da coluna \"%s\""
 
 #: commands/tablecmds.c:6182
-#, fuzzy
 msgid "cannot alter type of a column used in a trigger definition"
-msgstr "não pode alterar tipo de uma coluna utilizada por uma visão ou regra"
+msgstr ""
+"não pode alterar tipo de uma coluna utilizada em uma definição de gatilho"
 
 #: commands/tablecmds.c:6534
 #, c-format
@@ -4179,9 +4176,9 @@ msgid "column \"%s\" has pseudo-type %s"
 msgstr "coluna \"%s\" tem pseudo-tipo %s"
 
 #: catalog/heap.c:498
-#, fuzzy, c-format
+#, c-format
 msgid "composite type %s cannot be made a member of itself"
-msgstr "tipo composto %s não pode se tornar membro de si mesmo"
+msgstr "tipo composto %s não pode se tornar membro de si próprio"
 
 #: catalog/heap.c:980
 msgid ""
@@ -5951,7 +5948,6 @@ msgid "WAL writer process"
 msgstr "processo escritor do WAL"
 
 #: postmaster/postmaster.c:2492
-#, fuzzy
 msgid "WAL receiver process"
 msgstr "processo receptor do WAL"
 
@@ -6076,7 +6072,7 @@ msgid "could not fork WAL writer process: %m"
 msgstr "não pôde criar processo escritor do WAL: %m"
 
 #: postmaster/postmaster.c:4454
-#, fuzzy, c-format
+#, c-format
 msgid "could not fork WAL receiver process: %m"
 msgstr "não pôde criar processo receptor do WAL: %m"
 
@@ -6145,13 +6141,11 @@ msgid "Valid options in this context are: %s"
 msgstr "Opções válidas nesse contexto são: %s"
 
 #: replication/walreceiver.c:138
-#, fuzzy
 msgid "terminating walreceiver process due to administrator command"
 msgstr ""
 "terminando processo walreceiver por causa de um comando do administrador"
 
 #: replication/walreceiver.c:287
-#, fuzzy
 msgid "cannot continue WAL streaming, recovery has already ended"
 msgstr "não pode continuar envio do WAL, recuperação já terminou"
 
@@ -6199,20 +6193,22 @@ msgstr "Esperada 1 tupla com dois campos, recebeu %d tuplas com %d campos."
 #: replication/libpqwalreceiver/libpqwalreceiver.c:138
 msgid "database system identifier differs between the primary and standby"
 msgstr ""
-"identificador do sistema de banco de dados difere entre o servidor principal e o servidor em espera"
+"identificador do sistema de banco de dados difere entre o servidor principal "
+"e o servidor em espera"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:139
 #, c-format
 msgid "The primary's identifier is %s, the standby's identifier is %s."
 msgstr ""
-"O identificador do servidor principal é %s, o identificador do servidor "
-"em espera é %s."
+"O identificador do servidor principal é %s, o identificador do servidor em "
+"espera é %s."
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:151
 #, c-format
 msgid "timeline %u of the primary does not match recovery target timeline %u"
 msgstr ""
-"linha do tempo %u do servidor principal não combina com linha do tempo %u da recuperação"
+"linha do tempo %u do servidor principal não combina com linha do tempo %u da "
+"recuperação"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:163
 #, c-format
@@ -6244,10 +6240,10 @@ msgid "replication terminated by primary server"
 msgstr "replicação terminada pelo servidor principal"
 
 #: replication/walsender.c:116
-#, fuzzy
 msgid "recovery is still in progress, can't accept WAL streaming connections"
 msgstr ""
-"recuperação ainda está em progresso, não pode aceitar conexões de envio do WAL"
+"recuperação ainda está em progresso, não pode aceitar conexões de envio do "
+"WAL"
 
 #: replication/walsender.c:278
 msgid "standby connections not allowed because wal_level=minimal"
@@ -7064,13 +7060,12 @@ msgid "WAL was generated with wal_level=minimal, data may be missing"
 msgstr "WAL foi gerado com wal_level=minimal, dados podem estar faltando"
 
 #: access/transam/xlog.c:5667
-#, fuzzy
 msgid ""
 "This happens if you temporarily set wal_level=minimal without taking a new "
 "base backup."
 msgstr ""
 "Isso acontece se você temporariamente definir wal_level=minimal sem realizar "
-"uma nova cópia de segurança física."
+"uma nova cópia de segurança base."
 
 #: access/transam/xlog.c:5678
 msgid ""
@@ -7504,7 +7499,6 @@ msgid "pg_stop_backup complete, all required WAL segments have been archived"
 msgstr "pg_stop_backup concluído, todos os segmentos do WAL foram arquivados"
 
 #: access/transam/xlog.c:8760
-#, fuzzy
 msgid ""
 "WAL archiving is not enabled; you must ensure that all required WAL segments "
 "are copied through other means to complete the backup"
@@ -7559,7 +7553,7 @@ msgid "could not read from log file %u, segment %u, offset %u: %m"
 msgstr "não pôde ler do arquivo de log %u, segmento %u, deslocamento %u: %m"
 
 #: access/transam/xlog.c:9740
-#, fuzzy, c-format
+#, c-format
 msgid "trigger file found: %s"
 msgstr "arquivo de gatilho encontrado: %s"
 
@@ -7962,14 +7956,13 @@ msgid "Key %s already exists."
 msgstr "Chave %s já existe."
 
 #: access/nbtree/nbtinsert.c:448 executor/execUtils.c:1320
-#, fuzzy, c-format
+#, c-format
 msgid "failed to re-find tuple within index \"%s\""
 msgstr "falhou ao reencontrar tupla no índice \"%s\""
 
 #: access/nbtree/nbtinsert.c:450 executor/execUtils.c:1322
-#, fuzzy
 msgid "This may be because of a non-immutable index expression."
-msgstr "Isso pode ser por causa de uma expressão não imutável de índice."
+msgstr "Isso pode ser por causa de uma expressão não imutável do índice."
 
 #: access/nbtree/nbtpage.c:160 access/nbtree/nbtpage.c:364
 #, c-format
@@ -10786,7 +10779,6 @@ msgid "frame starting from following row cannot have preceding rows"
 msgstr "quadro iniciando do próximo registro não pode ter registro anteriores"
 
 #: gram.y:10706
-#, fuzzy
 msgid "type modifier cannot have parameter name"
 msgstr "modificador de tipo não pode ter nome de parâmetro"
 
@@ -11594,7 +11586,7 @@ msgid "invalid RADIUS port number: \"%s\""
 msgstr "número de porta RADIUS é inválido: \"%s\""
 
 #: libpq/hba.c:1267
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized authentication option name: \"%s\""
 msgstr "nome de opção de autenticação desconhecido: \"%s\""
 
@@ -11644,16 +11636,18 @@ msgid "missing entry in file \"%s\" at end of line %d"
 msgstr "faltando entrada no arquivo \"%s\" no fim da linha %d"
 
 #: libpq/hba.c:1777
-#, fuzzy, c-format
+#, c-format
 msgid "provided user name (%s) and authenticated user name (%s) do not match"
-msgstr "usuário fornecido (%s) e usuário autenticado (%s) não correspondem"
+msgstr ""
+"nome de usuário fornecido (%s) e nome de usuário autenticado (%s) não "
+"correspondem"
 
 #: libpq/hba.c:1798
-#, fuzzy, c-format
+#, c-format
 msgid "no match in usermap \"%s\" for user \"%s\" authenticated as \"%s\""
 msgstr ""
-"não há correspondência em mapa de usuários para usuário \"%s\" autenticado "
-"como \"%s\""
+"não há correspondência em mapa de usuários \"%s\" para usuário \"%s\" "
+"autenticado como \"%s\""
 
 #: libpq/hba.c:1822
 #, c-format
@@ -11742,38 +11736,39 @@ msgid "SSL off"
 msgstr "SSL desabilitado"
 
 #: libpq/auth.c:393
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\", %s"
 msgstr ""
-"pg_hba.conf rejeita conexão de replicação para máquina \"%s\", usuário \"%s"
+"pg_hba.conf rejeitou conexão de replicação para máquina \"%s\", usuário \"%s"
 "\", %s"
 
 #: libpq/auth.c:399
-#, fuzzy, c-format
+#, c-format
 msgid "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\""
 msgstr ""
-"pg_hba.conf rejeita conexão de replicação para máquina \"%s\", usuário \"%s\""
+"pg_hba.conf rejeitou conexão de replicação para máquina \"%s\", usuário \"%s"
+"\""
 
 #: libpq/auth.c:408
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s"
 "\", %s"
 msgstr ""
-"pg_hba.conf rejeita conexão para máquina \"%s\", usuário \"%s\", banco de "
+"pg_hba.conf rejeitou conexão para máquina \"%s\", usuário \"%s\", banco de "
 "dados \"%s\", %s"
 
 #: libpq/auth.c:415
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "pg_hba.conf rejects connection for host \"%s\", user \"%s\", database \"%s\""
 msgstr ""
-"pg_hba.conf rejeita conexão para máquina \"%s\", usuário \"%s\", banco de "
+"pg_hba.conf rejeitou conexão para máquina \"%s\", usuário \"%s\", banco de "
 "dados \"%s\""
 
 #: libpq/auth.c:446
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s"
 "\", %s"
@@ -11782,7 +11777,7 @@ msgstr ""
 "usuário \"%s\", %s"
 
 #: libpq/auth.c:452
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "no pg_hba.conf entry for replication connection from host \"%s\", user \"%s\""
 msgstr ""
@@ -11948,9 +11943,8 @@ msgid "could not get effective UID from peer credentials: %m"
 msgstr "não pôde obter UID efetivo das credenciais: %m"
 
 #: libpq/auth.c:1922
-#, fuzzy
 msgid "could not get peer credentials: incorrect control message"
-msgstr "não pôde receber credenciais: %m"
+msgstr "não pôde receber credenciais: mensagem de controle incorreta"
 
 #: libpq/auth.c:1944
 msgid ""
@@ -12034,7 +12028,7 @@ msgid "invalid character in user name for LDAP authentication"
 msgstr "caracter inválido em nome de usuário para autenticação LDAP"
 
 #: libpq/auth.c:2384
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "could not perform initial LDAP bind for ldapbinddn \"%s\" on server \"%s\": "
 "error code %d"
@@ -12043,14 +12037,14 @@ msgstr ""
 "\"%s\": código de erro %d"
 
 #: libpq/auth.c:2409
-#, fuzzy, c-format
+#, c-format
 msgid "could not search LDAP for filter \"%s\" on server \"%s\": error code %d"
 msgstr ""
 "não pôde buscar no LDAP por filtro \"%s\" no servidor \"%s\": código de erro "
 "%d"
 
 #: libpq/auth.c:2419
-#, fuzzy, c-format
+#, c-format
 msgid "LDAP search failed for filter \"%s\" on server \"%s\": no such user"
 msgstr ""
 "busca LDAP falhou para filtro \"%s\" no servidor \"%s\": usuário não existe"
@@ -12062,10 +12056,10 @@ msgid ""
 "(%ld matches)"
 msgstr ""
 "busca LDAP falhou para filtro \"%s\" no servidor \"%s\": usuário não é único "
-"(%ld usuários)erro %d"
+"(%ld usuários)"
 
 #: libpq/auth.c:2440
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "could not get dn for the first entry matching \"%s\" on server \"%s\": %s"
 msgstr ""
@@ -12073,10 +12067,10 @@ msgstr ""
 "servidor \"%s\": %s"
 
 #: libpq/auth.c:2460
-#, fuzzy, c-format
+#, c-format
 msgid "could not unbind after searching for user \"%s\" on server \"%s\": %s"
 msgstr ""
-"não pôde desligar após buscar pelo usuário \"%s\" no servidor \"%s\": %s"
+"não pôde desligar-se após buscar pelo usuário \"%s\" no servidor \"%s\": %s"
 
 #: libpq/auth.c:2497
 #, c-format
@@ -12086,7 +12080,7 @@ msgstr ""
 "erro %d"
 
 #: libpq/auth.c:2525
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "certificate authentication failed for user \"%s\": client certificate "
 "contains no user name"
@@ -12308,7 +12302,7 @@ msgid "cannot extend file \"%s\" beyond %u blocks"
 msgstr "não pode estender arquivo \"%s\" além de %u blocos"
 
 #: storage/smgr/md.c:461 storage/smgr/md.c:621 storage/smgr/md.c:694
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek to block %u in file \"%s\": %m"
 msgstr "não pôde buscar bloco %u no arquivo \"%s\": %m"
 
@@ -12360,9 +12354,9 @@ msgid "could not truncate file \"%s\" to %u blocks: %m"
 msgstr "não pôde truncar arquivo \"%s\" para %u blocos: %m"
 
 #: storage/smgr/md.c:1087
-#, fuzzy, c-format
+#, c-format
 msgid "could not fsync file \"%s\" but retrying: %m"
-msgstr "não pôde executar fsync no arquivo \"%s\": %m"
+msgstr "não pôde executar fsync no arquivo \"%s\" mas tentando novamente: %m"
 
 #: storage/smgr/md.c:1586
 #, c-format
@@ -12370,21 +12364,25 @@ msgid "could not open file \"%s\" (target block %u): %m"
 msgstr "não pôde abrir arquivo \"%s\" (bloco alvo %u): %m"
 
 #: storage/smgr/md.c:1608
-#, fuzzy, c-format
+#, c-format
 msgid "could not seek to end of file \"%s\": %m"
-msgstr "não pôde buscar no fim do arquivo \"%s\": %m"
+msgstr "não pôde buscar fim do arquivo \"%s\": %m"
 
 #: storage/lmgr/lock.c:516
 #, c-format
 msgid ""
 "cannot acquire lock mode %s on database objects while recovery is in progress"
 msgstr ""
+"não pode adquirir modo de bloqueio %s em objetos de banco de dados enquanto "
+"recuperação está em progresso"
 
 #: storage/lmgr/lock.c:518
 msgid ""
 "Only RowExclusiveLock or less can be acquired on database objects during "
 "recovery."
 msgstr ""
+"Somente RowExclusiveLock ou menos pode ser adquirido em objetos de banco de "
+"dados durante recuperação."
 
 #: storage/lmgr/lock.c:629 storage/lmgr/lock.c:698 storage/lmgr/lock.c:2125
 #: storage/lmgr/lock.c:2504 storage/lmgr/lock.c:2569 storage/lmgr/proc.c:195
@@ -12845,14 +12843,12 @@ msgid "Write-Ahead Log / Archiving"
 msgstr "Log de Escrita Prévia / Arquivamento"
 
 #: utils/misc/guc.c:506
-#, fuzzy
 msgid "Write-Ahead Log / Streaming Replication"
-msgstr "Log de Escrita Prévia / Replicação"
+msgstr "Log de Escrita Prévia / Replicação em Fluxo"
 
 #: utils/misc/guc.c:508
-#, fuzzy
 msgid "Write-Ahead Log / Standby Servers"
-msgstr "Log de Escrita Prévia / Servidores de Espera"
+msgstr "Log de Escrita Prévia / Servidores em Espera"
 
 #: utils/misc/guc.c:510
 msgid "Query Tuning"
@@ -15055,7 +15051,6 @@ msgid "Intervals are not tied to specific calendar dates."
 msgstr "Intervalos não estão presos a datas específicas do calendário."
 
 #: utils/adt/formatting.c:1059
-#, fuzzy
 msgid "\"EEEE\" must be the last pattern used"
 msgstr "\"EEEE\" deve ser o último padrão utilizado"
 
@@ -15108,11 +15103,10 @@ msgid "\"EEEE\" is incompatible with other formats"
 msgstr "\"EEEE\" é imcompatível com outros formatos"
 
 #: utils/adt/formatting.c:1211
-#, fuzzy
 msgid ""
 "\"EEEE\" may only be used together with digit and decimal point patterns."
 msgstr ""
-"\"EEEE\" só pode ser utilizado em conjunto com modelos de dígitos e decimais."
+"\"EEEE\" só pode ser utilizado em conjunto com padrões de dígitos e decimais."
 
 #: utils/adt/formatting.c:1411
 #, c-format
@@ -16972,7 +16966,6 @@ msgstr ""
 "dados"
 
 #: utils/init/postinit.c:652
-#, fuzzy
 msgid ""
 "remaining connection slots are reserved for non-replication superuser "
 "connections"
