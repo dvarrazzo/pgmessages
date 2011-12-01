@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-12-01 13:46-0300\n"
+"POT-Creation-Date: 2011-12-01 14:59-0300\n"
 "PO-Revision-Date: 2010-05-11 08:53-0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
@@ -2848,7 +2848,7 @@ msgstr "visões não devem conter SELECT INTO"
 
 #: commands/view.c:451
 msgid "views must not contain data-modifying statements in WITH"
-msgstr "visões não devem conter comandos de modificação de dados no WITH"
+msgstr "visões não devem conter comandos que modificam dados no WITH"
 
 #: commands/view.c:479
 msgid "CREATE VIEW specifies more column names than columns"
@@ -9438,7 +9438,6 @@ msgid "Failed system call was semget(%lu, %d, 0%o)."
 msgstr "Falhou ao executar chamada de sistema semget(%lu, %d, 0%o)."
 
 #: port/pg_sema.c:119 port/sysv_sema.c:119
-#, fuzzy
 msgid ""
 "This error does *not* mean that you have run out of disk space.  It occurs "
 "when either the system limit for the maximum number of semaphore sets "
@@ -9449,12 +9448,12 @@ msgid ""
 "The PostgreSQL documentation contains more information about configuring "
 "your system for PostgreSQL."
 msgstr ""
-"Esse erro *não* significa que você está sem espaço no disco.\n"
-"Isso ocorre quando o número máximo de conjuntos de semáforos (SEMMNI) atinge "
-"o limite do sistema ou o sistema atinge o número máximo de semáforos "
-"(SEMMNS). Você precisa aumentar o parâmetro do kernel que trata disso. "
-"Alternativamente, reduza o consumo de semáforos do PostgreSQL reduzindo o "
-"parâmetro max_connections (atualmente %d).\n"
+"Esse erro *não* significa que você está sem espaço no disco. Isso ocorre "
+"quando o número máximo de conjuntos de semáforos (SEMMNI) atinge o limite do "
+"sistema ou o sistema atinge o número máximo de semáforos (SEMMNS). Você "
+"precisa aumentar o parâmetro do kernel que trata disso. Alternativamente, "
+"reduza o consumo de semáforos do PostgreSQL reduzindo o parâmetro "
+"max_connections.\n"
 "A documentação do PostgreSQL contém informações adicionais sobre como "
 "configurar seu sistema para PostgreSQL."
 
@@ -9478,7 +9477,7 @@ msgid "Failed system call was shmget(key=%lu, size=%lu, 0%o)."
 msgstr "Falhou ao executar chamada de sistema shmget(key=%lu, size=%lu, 0%o)."
 
 #: port/pg_shmem.c:152 port/sysv_shmem.c:152
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded your kernel's SHMMAX parameter.  You can either reduce the "
@@ -9495,8 +9494,8 @@ msgstr ""
 "de memória compartilhada excedeu o parâmetro do kernel SHMMAX. Você pode "
 "reduzir o tamanho requisitado ou configurar o kernel novamente com um valor "
 "maior de SHMMAX. Para reduzir o tamanho requisitado (atualmente %lu bytes), "
-"reduza o parâmetro shared_buffers do PostgreSQL (atualmente %d) e/ou "
-"parâmetro max_connections (atualmente %d).\n"
+"reduza o uso de memória compartilhada pelo PostgreSQL, talvez reduzindo "
+"shared_buffers ou max_connections.\n"
 "Se o tamanho requisitado já está pequeno, é possível que ele seja menor do "
 "que o parâmetro SHMMIN do kernel, nesse caso aumente o tamanho da requisição "
 "ou configure SHMMIN novamente.\n"
@@ -9504,7 +9503,7 @@ msgstr ""
 "configuração de memória compartilhada."
 
 #: port/pg_shmem.c:165 port/sysv_shmem.c:165
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error usually means that PostgreSQL's request for a shared memory "
 "segment exceeded available memory or swap space, or exceeded your kernel's "
@@ -9518,13 +9517,13 @@ msgstr ""
 "Esse erro usualmente significa que a requisição do PostgreSQL por segmento "
 "de memória compartilhada excedeu a memória ou espaço de swap disponível, ou "
 "excedeu o parâmetro SHMALL do kernel. Para reduzir o tamanho requisitado "
-"(atualmente %lu bytes), reduza o parâmetro shared_buffers do PostgreSQL "
-"(atualmente %d) e/ou parâmetro max_connections (atualmente %d).\n"
+"(atualmente %lu bytes), reduza o uso de memória compartilhada pelo "
+"PostgreSQL, talvez reduzindo shared_buffers ou max_connections.\n"
 "A documentação do PostgreSQL contém informações adicionais sobre "
 "configuração de memória compartilhada."
 
 #: port/pg_shmem.c:176 port/sysv_shmem.c:176
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This error does *not* mean that you have run out of disk space.  It occurs "
 "either if all available shared memory IDs have been taken, in which case you "
@@ -9541,9 +9540,8 @@ msgstr ""
 "precisa aumentar o parâmetro SHMMNI do seu kernel, ou porque o limite do "
 "sistema para memória compartilhada foi alcançado. Se você não pode aumentar "
 "o limite de memória compartilhada, reduza o tamanho de memória compartilhada "
-"requisitada pelo PostgreSQL (atualmente %lu bytes), reduzindo o parâmetro "
-"shared_buffers (atualmente %d) e/ou parâmetro max_connections (atualmente "
-"%d).\n"
+"requisitada pelo PostgreSQL (atualmente %lu bytes), talvez reduzindo "
+"shared_buffers ou max_connections.\n"
 "A documentação do PostgreSQL contém informações adicionais sobre "
 "configuração de memória compartilhada."
 
@@ -9643,10 +9641,10 @@ msgid "could not get SID for PowerUsers group: error code %d\n"
 msgstr "não pôde obter SID do grupo PowerUsers: código de erro %d\n"
 
 #: port/win32/signal.c:189
-#, fuzzy, c-format
+#, c-format
 msgid "could not create signal listener pipe for PID %d: error code %d"
 msgstr ""
-"não pôde criar pipe que espera por sinal para pid %d: código de erro %d"
+"não pôde criar pipe que espera por sinal para PID %d: código de erro %d"
 
 #: port/win32/signal.c:269 port/win32/signal.c:301
 #, c-format
@@ -10194,6 +10192,8 @@ msgid ""
 "WITH query name \"%s\" appears in both a rule action and the query being "
 "rewritten"
 msgstr ""
+"nome de consulta WITH \"%s\" aparece em ação da regra e na consulta a ser "
+"reescrita"
 
 #: rewrite/rewriteHandler.c:543
 msgid "cannot have RETURNING lists in multiple rules"
@@ -10214,22 +10214,29 @@ msgid ""
 "DO INSTEAD NOTHING rules are not supported for data-modifying statements in "
 "WITH"
 msgstr ""
+"regras DO INSTEAD NOTHING não são suportadas em comandos que modificam dados "
+"no WITH"
 
 #: rewrite/rewriteHandler.c:1897
 msgid ""
 "conditional DO INSTEAD rules are not supported for data-modifying statements "
 "in WITH"
 msgstr ""
+"regras DO INSTEAD condicionais não são suportadas em comandos que modificam "
+"dados no WITH"
 
 #: rewrite/rewriteHandler.c:1901
 msgid "DO ALSO rules are not supported for data-modifying statements in WITH"
 msgstr ""
+"regras DO ALSO não são suportadas em comandos que modificam dados no WITH"
 
 #: rewrite/rewriteHandler.c:1906
 msgid ""
 "multi-statement DO INSTEAD rules are not supported for data-modifying "
 "statements in WITH"
 msgstr ""
+"regras DO INSTEAD com múltiplos comandos não são suportadas em comandos que "
+"modificam dados no WITH"
 
 #: rewrite/rewriteHandler.c:2060
 #, c-format
@@ -10272,6 +10279,8 @@ msgid ""
 "WITH cannot be used in a query that is rewritten by rules into multiple "
 "queries"
 msgstr ""
+"WITH não pode ser utilizado em uma consulta que reescrita por regras em "
+"múltiplas consultas"
 
 #: rewrite/rewriteManip.c:1012
 msgid "conditional utility statements are not implemented"
@@ -10331,7 +10340,7 @@ msgstr "regras no SELECT devem ter ação INSTEAD SELECT"
 
 #: rewrite/rewriteDefine.c:335
 msgid "rules on SELECT must not contain data-modifying statements in WITH"
-msgstr ""
+msgstr "regras no SELECT não devem conter comandos que modificam dados no WITH"
 
 #: rewrite/rewriteDefine.c:343
 msgid "event qualifications are not implemented for rules on SELECT"
@@ -10624,7 +10633,7 @@ msgstr "junções podem ter no máximo %d colunas"
 #: parser/parse_relation.c:1405
 #, c-format
 msgid "WITH query \"%s\" does not have a RETURNING clause"
-msgstr ""
+msgstr "consulta WITH \"%s\" não tem uma cláusula RETURNING"
 
 #: parser/parse_relation.c:2087
 #, c-format
@@ -10917,7 +10926,7 @@ msgstr ""
 "índice postergável."
 
 #: parser/parse_utilcmd.c:1571
-#, fuzzy, c-format
+#, c-format
 msgid "index \"%s\" does not have default sorting behavior"
 msgstr "índice \"%s\" não tem comportamento de ordenação padrão"
 
@@ -10980,11 +10989,11 @@ msgstr "regra ON DELETE não pode utilizar NEW"
 
 #: parser/parse_utilcmd.c:2159
 msgid "cannot refer to OLD within WITH query"
-msgstr ""
+msgstr "não pode referenciar OLD em uma consulta WITH"
 
 #: parser/parse_utilcmd.c:2166
 msgid "cannot refer to NEW within WITH query"
-msgstr ""
+msgstr "não pode referenciar NEW em uma consulta WITH"
 
 #: parser/parse_utilcmd.c:2449
 msgid "misplaced DEFERRABLE clause"
@@ -11278,6 +11287,8 @@ msgstr "subconsulta no WITH não pode ter SELECT INTO"
 msgid ""
 "WITH clause containing a data-modifying statement must be at the top level"
 msgstr ""
+"cláusula WITH contendo um comando que modifica dados deve estar no nível "
+"superior"
 
 #: parser/parse_cte.c:320
 #, c-format
@@ -11692,9 +11703,8 @@ msgid "duplicate trigger events specified"
 msgstr "eventos de gatilho duplicados especificados"
 
 #: gram.y:4160
-#, fuzzy
 msgid "conflicting constraint properties"
-msgstr "opções conflitantes ou redundantes"
+msgstr "propriedades de restrições conflitantes"
 
 #: gram.y:4221
 msgid "CREATE ASSERTION is not yet implemented"
@@ -11798,7 +11808,6 @@ msgid "frame starting from following row cannot have preceding rows"
 msgstr "quadro iniciando do próximo registro não pode ter registro anteriores"
 
 #: gram.y:11711
-#, fuzzy
 msgid "type modifier cannot have parameter name"
 msgstr "modificador de tipo não pode ter nome de parâmetro"
 
@@ -12033,7 +12042,7 @@ msgstr "DECLARE CURSOR não pode especificar INTO"
 
 #: parser/analyze.c:2193
 msgid "DECLARE CURSOR must not contain data-modifying statements in WITH"
-msgstr ""
+msgstr "DECLARE CURSOR não deve conter comandos que modificam dados no WITH"
 
 #: parser/analyze.c:2199
 msgid "DECLARE CURSOR WITH HOLD ... FOR UPDATE/SHARE is not supported"
@@ -13446,12 +13455,16 @@ msgstr "não pôde buscar fim do arquivo \"%s\": %m"
 msgid ""
 "cannot acquire lock mode %s on database objects while recovery is in progress"
 msgstr ""
+"não pode adquirir modo de bloqueio %s em objetos de banco de dados enquanto "
+"recuperação está em progresso"
 
 #: storage/lmgr/lock.c:519
 msgid ""
 "Only RowExclusiveLock or less can be acquired on database objects during "
 "recovery."
 msgstr ""
+"Somente RowExclusiveLock ou menos pode ser adquirido em objetos de banco de "
+"dados durante recuperação."
 
 #: storage/lmgr/lock.c:631 storage/lmgr/lock.c:700 storage/lmgr/lock.c:2163
 #: storage/lmgr/lock.c:2542 storage/lmgr/lock.c:2607 storage/lmgr/proc.c:197
@@ -13519,6 +13532,8 @@ msgid ""
 "You might need to run fewer transactions at a time or increase "
 "max_connections."
 msgstr ""
+"Talvez seja necessário executar poucas transações ao mesmo tempo or aumentar "
+"max_connections."
 
 #: storage/lmgr/predicate.c:693
 msgid ""
@@ -13531,6 +13546,7 @@ msgstr ""
 #: storage/lmgr/predicate.c:898
 msgid "memory for serializable conflict tracking is nearly exhausted"
 msgstr ""
+"memória para rastreamento de conflitos de serialização está quase esgotada"
 
 #: storage/lmgr/predicate.c:899
 msgid ""
@@ -14536,7 +14552,7 @@ msgstr ""
 
 #: utils/misc/guc.c:1427
 msgid "When generating SQL fragments, quote all identifiers."
-msgstr ""
+msgstr "Ao gerar fragmentos SQL, colocar todos identificadores entre aspas."
 
 #: utils/misc/guc.c:1446
 msgid ""
@@ -15487,9 +15503,8 @@ msgid "Sets the session's behavior for triggers and rewrite rules."
 msgstr "Define o comportamento de sessões para gatilhos e regras de reescrita."
 
 #: utils/misc/guc.c:3156
-#, fuzzy
 msgid "Sets the current transaction's synchronization level."
-msgstr "Define o nível de isolamento da transação atual."
+msgstr "Define o nível de sincronização da transação atual."
 
 #: utils/misc/guc.c:3166
 msgid "Enables logging of recovery-related debugging information."
@@ -16996,6 +17011,8 @@ msgid ""
 "The operating system could not find any locale data for the locale name \"%s"
 "\"."
 msgstr ""
+"O sistema operacional não encontrou nenhum dado sobre a configuração "
+"regional para nome de configuração regional \"%s\"."
 
 #: utils/adt/pg_locale.c:1043
 msgid ""
