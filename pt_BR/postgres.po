@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-12-01 01:02-0300\n"
+"POT-Creation-Date: 2011-12-01 13:46-0300\n"
 "PO-Revision-Date: 2010-05-11 08:53-0300\n"
 "Last-Translator: Euler Taveira de Oliveira <euler@timbira.com>\n"
 "Language-Team: Brazilian Portuguese <pgbr-dev@listas.postgresql.org.br>\n"
@@ -439,7 +439,7 @@ msgstr "\"%s\" é uma visão"
 
 #: commands/trigger.c:174
 msgid "Views cannot have row-level BEFORE or AFTER triggers."
-msgstr ""
+msgstr "Visões não podem ter gatilhos BEFORE ou AFTER a nível de registro."
 
 #: commands/trigger.c:181
 msgid "Views cannot have TRUNCATE triggers."
@@ -457,7 +457,7 @@ msgstr "gatilhos TRUNCATE FOR EACH ROW não são suportados"
 
 #: commands/trigger.c:236
 msgid "INSTEAD OF triggers must be FOR EACH ROW"
-msgstr ""
+msgstr "gatilhos INSTEAD OF devem ser FOR EACH ROW"
 
 #: commands/trigger.c:240
 msgid "INSTEAD OF triggers cannot have WHEN conditions"
@@ -2732,7 +2732,7 @@ msgstr "faltando dados da coluna \"%s\""
 
 #: commands/copy.c:2476
 msgid "received copy data after EOF marker"
-msgstr ""
+msgstr "dados do COPY recebidos após marcador EOF"
 
 #: commands/copy.c:2483
 #, c-format
@@ -2848,7 +2848,7 @@ msgstr "visões não devem conter SELECT INTO"
 
 #: commands/view.c:451
 msgid "views must not contain data-modifying statements in WITH"
-msgstr ""
+msgstr "visões não devem conter comandos de modificação de dados no WITH"
 
 #: commands/view.c:479
 msgid "CREATE VIEW specifies more column names than columns"
@@ -2905,30 +2905,29 @@ msgstr "Nomes de extensão não devem começar ou terminar com \"-\"."
 #: commands/extension.c:280
 msgid "Extension names must not contain directory separator characters."
 msgstr ""
+"Nomes de extensões não devem conter caracteres separadores de diretórios."
 
 #: commands/extension.c:295 commands/extension.c:304 commands/extension.c:313
 #: commands/extension.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "invalid extension version name: \"%s\""
-msgstr "nome da codificação de destino \"%s\" é inválido"
+msgstr "nome de versão da extensão é inválido: \"%s\""
 
 #: commands/extension.c:296
-#, fuzzy
 msgid "Version names must not be empty."
-msgstr "nome do cursor é inválido: não deve ser vazio"
+msgstr "Nomes de versão não devem ser vazios."
 
 #: commands/extension.c:305
-#, fuzzy
 msgid "Version names must not contain \"--\"."
-msgstr "instrução de processamento XML não pode conter \"?>\"."
+msgstr "Nomes de versão não devem conter \"--\"."
 
 #: commands/extension.c:314
 msgid "Version names must not begin or end with \"-\"."
-msgstr ""
+msgstr "Nomes de versão não devem começar ou terminar com \"-\"."
 
 #: commands/extension.c:324
 msgid "Version names must not contain directory separator characters."
-msgstr ""
+msgstr "Nomes de versão não devem conter caracteres separadores de diretórios."
 
 #: commands/extension.c:474
 #, c-format
@@ -2996,7 +2995,7 @@ msgid "Must be superuser to update this extension."
 msgstr "Deve ser super-usuário para atualizar esta extensão."
 
 #: commands/extension.c:1084
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "extension \"%s\" has no update path from version \"%s\" to version \"%s\""
 msgstr ""
@@ -3014,9 +3013,8 @@ msgid "extension \"%s\" already exists"
 msgstr "extensão \"%s\" já existe"
 
 #: commands/extension.c:1229
-#, fuzzy
 msgid "nested CREATE EXTENSION is not supported"
-msgstr "CREATE EXTENSION cascateada não é mais suportado"
+msgstr "CREATE EXTENSION aninhado não é suportado"
 
 #: commands/extension.c:1284 commands/extension.c:2519
 msgid "version to install must be specified"
@@ -3025,7 +3023,7 @@ msgstr "versão a ser instalada deve ser especificada"
 #: commands/extension.c:1301
 #, c-format
 msgid "FROM version must be different from installation target version \"%s\""
-msgstr ""
+msgstr "versão do FROM deve ser diferente da versão da instalação \"%s\""
 
 #: commands/extension.c:1356
 #, c-format
@@ -3048,9 +3046,9 @@ msgid "extension \"%s\" does not exist, skipping"
 msgstr "extensão \"%s\" não existe, ignorando"
 
 #: commands/extension.c:1659
-#, fuzzy, c-format
+#, c-format
 msgid "cannot drop extension \"%s\" because it is being modified"
-msgstr "não pode remover dependência em %s porque ele é um objeto do sistema"
+msgstr "não pode remover extensão \"%s\" porque ela está sendo modificada"
 
 #: commands/extension.c:2129
 msgid ""
@@ -3063,7 +3061,7 @@ msgstr ""
 #: commands/extension.c:2141
 #, c-format
 msgid "OID %u does not refer to a table"
-msgstr ""
+msgstr "OID %u não se refere a uma tabela"
 
 #: commands/extension.c:2146
 #, c-format
@@ -3081,9 +3079,8 @@ msgid "%s is not in the extension's schema \"%s\""
 msgstr "%s não está no esquema da extensão \"%s\""
 
 #: commands/extension.c:2439
-#, fuzzy
 msgid "nested ALTER EXTENSION is not supported"
-msgstr "ALTER EXTENSION cascateado não é suportado"
+msgstr "ALTER EXTENSION aninhado não é suportado"
 
 #: commands/extension.c:2530
 #, c-format
@@ -3166,13 +3163,12 @@ msgid "Must be superuser to alter a foreign-data wrapper."
 msgstr "Deve ser super-usuário para alterar um adaptador de dados externos."
 
 #: commands/foreigncmds.c:587
-#, fuzzy
 msgid ""
 "changing the foreign-data wrapper handler can change behavior of existing "
 "foreign tables"
 msgstr ""
-"mudar o validador do adaptador de dados externos pode mudar o comportamento "
-"de tabelas externas existentes"
+"mudar o manipulador do adaptador de dados externos pode mudar o "
+"comportamento de tabelas externas existentes"
 
 #: commands/foreigncmds.c:601
 msgid ""
@@ -3236,17 +3232,16 @@ msgid "Unrecognized key word: \"%s\"."
 msgstr "Palavra chave desconhecida: \"%s\"."
 
 #: commands/variable.c:172
-#, fuzzy
 msgid "Conflicting \"datestyle\" specifications."
-msgstr "especificações conflitantes de \"datestyle\""
+msgstr "Especificações conflitantes de \"datestyle\""
 
 #: commands/variable.c:328
 msgid "Cannot specify months in time zone interval."
-msgstr ""
+msgstr "Não pode especificar meses em intervalo de zona horária."
 
 #: commands/variable.c:334
 msgid "Cannot specify days in time zone interval."
-msgstr ""
+msgstr "Não pode especificar dias em intervalo de zona horária."
 
 #: commands/variable.c:378 commands/variable.c:517
 #, c-format
@@ -3355,14 +3350,14 @@ msgstr ""
 "analisá-la(o)"
 
 #: commands/analyze.c:194
-#, fuzzy, c-format
+#, c-format
 msgid "skipping \"%s\" --- cannot analyze non-tables or special system tables"
 msgstr ""
-"ignorando \"%s\" --- não pode analisar índices, visões ou tabelas especiais "
-"do sistema"
+"ignorando \"%s\" --- não pode analisar relações que não são tabelas ou "
+"tabelas especiais do sistema"
 
 #: commands/analyze.c:285
-#, fuzzy, c-format
+#, c-format
 msgid "analyzing \"%s.%s\" inheritance tree"
 msgstr "analisando árvore da herança de \"%s.%s\""
 
@@ -3471,10 +3466,8 @@ msgid "directory \"%s\" does not exist"
 msgstr "diretório \"%s\" não existe"
 
 #: commands/tablespace.c:561
-#, fuzzy
 msgid "Create this directory for the tablespace before restarting the server."
-msgstr ""
-"Crie o diretório \"%s\" para esta tablespace antes de reiniciar o servidor."
+msgstr "Crie este diretório para a tablespace antes de reiniciar o servidor."
 
 #: commands/tablespace.c:566
 #, c-format
@@ -3525,9 +3518,8 @@ msgid "collation attribute \"%s\" not recognized"
 msgstr "atributo de ordenação \"%s\" desconhecido"
 
 #: commands/collationcmds.c:126
-#, fuzzy
 msgid "parameter \"lc_collate\" must be specified"
-msgstr "parâmetro \"lc_type\" deve ser especificado"
+msgstr "parâmetro \"lc_collate\" deve ser especificado"
 
 #: commands/collationcmds.c:131
 msgid "parameter \"lc_ctype\" must be specified"
@@ -3746,9 +3738,8 @@ msgid "functions in index expression must be marked IMMUTABLE"
 msgstr "funções em expressão de índice devem ser IMMUTABLE"
 
 #: commands/indexcmds.c:930
-#, fuzzy
 msgid "could not determine which collation to use for index expression"
-msgstr "não pôde determinar qual ordenação utilizar na expressão do índice"
+msgstr "não pôde determinar qual ordenação utilizar para expressão do índice"
 
 #: commands/indexcmds.c:976
 #, c-format
@@ -4148,9 +4139,9 @@ msgstr ""
 "não pode executar %s \"%s\" porque ela tem eventos de gatilho pendentes"
 
 #: commands/tablecmds.c:2502
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is not a composite type"
-msgstr "\"%s\" é um tipo composto"
+msgstr "\"%s\" não é um tipo composto"
 
 #: commands/tablecmds.c:3327
 #, c-format
@@ -4162,14 +4153,14 @@ msgid "cannot rewrite temporary tables of other sessions"
 msgstr "não pode reescrever tabelas temporárias de outras sessões"
 
 #: commands/tablecmds.c:3562
-#, fuzzy, c-format
+#, c-format
 msgid "rewriting table \"%s\""
-msgstr "removendo arquivo \"%s\""
+msgstr "reescrevendo tabela \"%s\""
 
 #: commands/tablecmds.c:3566
-#, fuzzy, c-format
+#, c-format
 msgid "verifying table \"%s\""
-msgstr "para tabela \"%s.%s\""
+msgstr "verificando tabela \"%s\""
 
 #: commands/tablecmds.c:3673
 #, c-format
@@ -4197,9 +4188,9 @@ msgid "\"%s\" is not a table, composite type, or foreign table"
 msgstr "\"%s\" não é uma tabela, tipo composto ou tabela externa"
 
 #: commands/tablecmds.c:3847
-#, fuzzy, c-format
+#, c-format
 msgid "\"%s\" is of the wrong type"
-msgstr "\"%s\" não é um tipo"
+msgstr "\"%s\" é de um tipo incorreto"
 
 #: commands/tablecmds.c:3996 commands/tablecmds.c:4003
 #, c-format
@@ -4484,9 +4475,9 @@ msgid "%s depends on column \"%s\""
 msgstr "%s depende da coluna \"%s\""
 
 #: commands/tablecmds.c:7061
-#, fuzzy
 msgid "cannot alter type of a column used in a trigger definition"
-msgstr "não pode alterar tipo de uma coluna utilizada por uma visão ou regra"
+msgstr ""
+"não pode alterar tipo de uma coluna utilizada em uma definição de gatilho"
 
 #: commands/tablecmds.c:7420
 #, c-format
@@ -4667,9 +4658,9 @@ msgid "column \"%s\" has pseudo-type %s"
 msgstr "coluna \"%s\" tem pseudo-tipo %s"
 
 #: catalog/heap.c:516
-#, fuzzy, c-format
+#, c-format
 msgid "composite type %s cannot be made a member of itself"
-msgstr "tipo composto %s não pode se tornar membro de si mesmo"
+msgstr "tipo composto %s não pode se tornar membro de si próprio"
 
 #: catalog/heap.c:558
 #, fuzzy, c-format
@@ -5259,20 +5250,16 @@ msgid "no schema has been selected to create in"
 msgstr "nenhum esquema foi selecionado para criá-lo(a)"
 
 #: catalog/namespace.c:410 catalog/namespace.c:423
-#, fuzzy
 msgid "cannot create relations in temporary schemas of other sessions"
-msgstr "não pode criar índices em tabelas temporárias de outras sessões"
+msgstr "não pode criar relações em esquemas temporárias de outras sessões"
 
 #: catalog/namespace.c:414
-#, fuzzy
 msgid "cannot create temporary relation in non-temporary schema"
-msgstr "não pode criar tabelas temporárias durante recuperação"
+msgstr "não pode criar relação temporária em esquema que não é temporário"
 
 #: catalog/namespace.c:429
-#, fuzzy
 msgid "only temporary relations may be created in temporary schemas"
-msgstr ""
-"somente relações compartilhadas podem ser armazenadas na tablespace pg_global"
+msgstr "somente relações temporárias podem ser criadas em esquemas temporários"
 
 #: catalog/namespace.c:2389 parser/parse_expr.c:775 parser/parse_target.c:1085
 #, c-format
@@ -5286,9 +5273,9 @@ msgid "improper qualified name (too many dotted names): %s"
 msgstr "nome qualificado é inválido (nomes com muitos pontos): %s"
 
 #: catalog/namespace.c:2523
-#, fuzzy, c-format
+#, c-format
 msgid "%s is already in schema \"%s\""
-msgstr "tipo %s já está no esquema \"%s\""
+msgstr "%s já está no esquema \"%s\""
 
 #: catalog/namespace.c:2531
 msgid "cannot move objects into or out of temporary schemas"
@@ -5353,9 +5340,9 @@ msgid "shared indexes cannot be created after initdb"
 msgstr "índices compartilhados não podem ser criados depois do initdb"
 
 #: catalog/index.c:1727
-#, fuzzy, c-format
+#, c-format
 msgid "building index \"%s\" on table \"%s\""
-msgstr "lendo índices da tabela \"%s\"\n"
+msgstr "construindo índice \"%s\" na tabela \"%s\""
 
 #: catalog/index.c:2800
 msgid "cannot reindex temporary tables of other sessions"
@@ -5612,18 +5599,18 @@ msgstr "classe de operadores %s para método de acesso %s"
 #. description of the operator family, and the last %s is the
 #. textual form of the operator with arguments.
 #: catalog/dependency.c:2459
-#, fuzzy, c-format
+#, c-format
 msgid "operator %d (%s, %s) of %s: %s"
-msgstr "operador %d %s de %s"
+msgstr "operador %d (%s, %s) de %s: %s"
 
 #. translator: %d is the function number, the first two %s's
 #. are data type names, the third %s is the description of the
 #. operator family, and the last %s is the textual form of the
 #. function with arguments.
 #: catalog/dependency.c:2509
-#, fuzzy, c-format
+#, c-format
 msgid "function %d (%s, %s) of %s: %s"
-msgstr "função %d %s de %s"
+msgstr "função %d (%s, %s) de %s: %s"
 
 #: catalog/dependency.c:2549
 #, c-format
@@ -5716,9 +5703,9 @@ msgid " in schema %s"
 msgstr " no esquema %s"
 
 #: catalog/dependency.c:2810
-#, fuzzy, c-format
+#, c-format
 msgid "extension %s"
-msgstr "relação %s"
+msgstr "extensão %s"
 
 #: catalog/dependency.c:2868
 #, c-format
@@ -5919,13 +5906,13 @@ msgstr ""
 "sistema de banco de dados"
 
 #: catalog/pg_shdepend.c:1287
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "cannot reassign ownership of objects owned by %s because they are required "
 "by the database system"
 msgstr ""
-"não pode remover objetos que pertencem a %s porque eles são requeridos pelo "
-"sistema de banco de dados"
+"não pode transferir objetos que pertencem a %s porque eles são requeridos "
+"pelo sistema de banco de dados"
 
 #: catalog/objectaddress.c:286
 msgid "database name cannot be qualified"
@@ -5952,14 +5939,12 @@ msgid "server name cannot be qualified"
 msgstr "nome do servidor não pode ser qualificado"
 
 #: catalog/objectaddress.c:870 catalog/objectaddress.c:886
-#, fuzzy
 msgid "must be superuser"
-msgstr "deve ser super-usuário para ler arquivos"
+msgstr "deve ser super-usuário"
 
 #: catalog/objectaddress.c:877
-#, fuzzy
 msgid "must have CREATEROLE privilege"
-msgstr "Usuário não tem privilégio CONNECT."
+msgstr "deve ter privilégio CREATEROLE"
 
 #: catalog/pg_type.c:241
 #, c-format
@@ -6157,7 +6142,7 @@ msgstr "Consulte mensagens recentes no log do servidor para obter detalhes."
 #: postmaster/bgwriter.c:1223
 #, c-format
 msgid "compacted fsync request queue from %d entries to %d entries"
-msgstr ""
+msgstr "fila de pedidos de fsync compactada de %d entradas para %d entradas"
 
 #: postmaster/pgarch.c:158
 #, c-format
@@ -6324,9 +6309,9 @@ msgid "could not write to log file: %s\n"
 msgstr "não pôde escrever em arquivo de log: %s\n"
 
 #: postmaster/syslogger.c:1042
-#, fuzzy, c-format
+#, c-format
 msgid "could not open log file \"%s\": %m"
-msgstr "não pôde abrir arquivo de bloqueio \"%s\": %m"
+msgstr "não pôde abrir arquivo de log \"%s\": %m"
 
 #: postmaster/syslogger.c:1111 postmaster/syslogger.c:1156
 msgid "disabling automatic rotation (use SIGHUP to re-enable)"
@@ -6600,7 +6585,6 @@ msgid "WAL writer process"
 msgstr "processo escritor do WAL"
 
 #: postmaster/postmaster.c:2521
-#, fuzzy
 msgid "WAL receiver process"
 msgstr "processo receptor do WAL"
 
@@ -6735,7 +6719,7 @@ msgid "could not fork WAL writer process: %m"
 msgstr "não pôde criar processo escritor do WAL: %m"
 
 #: postmaster/postmaster.c:4526
-#, fuzzy, c-format
+#, c-format
 msgid "could not fork WAL receiver process: %m"
 msgstr "não pôde criar processo receptor do WAL: %m"
 
@@ -6794,7 +6778,7 @@ msgid "user mapping not found for \"%s\""
 msgstr "mapeamento de usuários não foi encontrado para \"%s\""
 
 #: foreign/foreign.c:321
-#, fuzzy, c-format
+#, c-format
 msgid "foreign-data wrapper \"%s\" has no handler"
 msgstr "adaptador de dados externos \"%s\" não possui manipulador"
 
@@ -6909,7 +6893,9 @@ msgstr ""
 #: replication/libpqwalreceiver/libpqwalreceiver.c:153
 #, c-format
 msgid "timeline %u of the primary does not match recovery target timeline %u"
-msgstr "linha do tempo %u do servidor principal não combina com linha do tempo %u da recuperação"
+msgstr ""
+"linha do tempo %u do servidor principal não combina com linha do tempo %u da "
+"recuperação"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:165
 #, c-format
@@ -6961,10 +6947,10 @@ msgid "syntax error: unexpected character \"%s\""
 msgstr "erro de sintaxe: caracter inesperado \"%s\""
 
 #: replication/walsender.c:141
-#, fuzzy
 msgid "recovery is still in progress, can't accept WAL streaming connections"
 msgstr ""
-"recuperação ainda está em progresso, não pode aceitar conexões de envio do WAL"
+"recuperação ainda está em progresso, não pode aceitar conexões de envio do "
+"WAL"
 
 #: replication/walsender.c:261 replication/walsender.c:489
 #: replication/walsender.c:547
@@ -7436,16 +7422,16 @@ msgstr ""
 "descendente."
 
 #: access/transam/xlog.c:4313
-#, fuzzy, c-format
+#, c-format
 msgid "new timeline %u is not a child of database system timeline %u"
 msgstr ""
-"linha do tempo solicitada %u não é descendente da linha do tempo %u do "
-"sistema de banco de dados"
+"nova linha do tempo %u não é descendente da linha do tempo %u do sistema de "
+"banco de dados"
 
 #: access/transam/xlog.c:4326
-#, fuzzy, c-format
+#, c-format
 msgid "new target timeline is %u"
-msgstr "recovery_target_timeline = %u"
+msgstr "nova linha do tempo é %u"
 
 #: access/transam/xlog.c:4551
 #, c-format
@@ -7727,7 +7713,6 @@ msgstr ""
 "restore_command"
 
 #: access/transam/xlog.c:5419
-#, fuzzy
 msgid ""
 "The database server will regularly poll the pg_xlog subdirectory to check "
 "for files placed there."
@@ -7934,7 +7919,9 @@ msgstr "registro do ponto de controle está em %X/%X"
 #: access/transam/xlog.c:6163
 #, fuzzy
 msgid "could not find redo location referenced by checkpoint record"
-msgstr "não pôde localizar registro do ponto de controle requerido"
+msgstr ""
+"não pôde encontrar local de redo referenciado pelo registro do ponto de "
+"controle"
 
 #: access/transam/xlog.c:6164 access/transam/xlog.c:6171
 #, c-format
@@ -7976,7 +7963,7 @@ msgstr "próximo MultiXactId: %u; próximo MultiXactOffset: %u"
 #: access/transam/xlog.c:6234
 #, fuzzy, c-format
 msgid "oldest unfrozen transaction ID: %u, in database %u"
-msgstr "extensão da relação %u do banco de dados %u"
+msgstr "ID de transação não congelado mais antigo: %u, no banco de dados %u"
 
 #: access/transam/xlog.c:6238
 msgid "invalid next transaction ID"
@@ -8035,7 +8022,9 @@ msgid ""
 "Online backup started with pg_start_backup() must be ended with "
 "pg_stop_backup(), and all WAL up to that point must be available at recovery."
 msgstr ""
-"Cópia de segurança online que iniciou com pg_start_backup() deve ser terminada com pg_stop_backup(), e todo WAL até aquele ponto deve estar disponível para recuperação."
+"Cópia de segurança online que iniciou com pg_start_backup() deve ser "
+"terminada com pg_stop_backup(), e todo WAL até aquele ponto deve estar "
+"disponível para recuperação."
 
 #: access/transam/xlog.c:6696
 msgid "WAL ends before consistent recovery point"
@@ -8188,9 +8177,10 @@ msgid "could not fdatasync log file %u, segment %u: %m"
 msgstr "não pôde executar fdatasync no arquivo de log %u, segmento %u: %m"
 
 #: access/transam/xlog.c:8879 access/transam/xlog.c:9157
-#, fuzzy
 msgid "must be superuser or replication role to run a backup"
-msgstr "deve ser super-usuário para fazer uma cópia de segurança"
+msgstr ""
+"deve ser super-usuário ou role de replicação para fazer uma cópia de "
+"segurança"
 
 #: access/transam/xlog.c:8884 access/transam/xlog.c:9162
 #: access/transam/xlog.c:9425 access/transam/xlog.c:9457
@@ -8259,6 +8249,8 @@ msgstr "dado inválido no arquivo \"%s\""
 msgid ""
 "pg_stop_backup cleanup done, waiting for required WAL segments to be archived"
 msgstr ""
+"pg_stop_backup concluído, esperando os segmentos do WAL requeridos serem "
+"arquivados"
 
 #: access/transam/xlog.c:9360
 #, c-format
@@ -8270,7 +8262,6 @@ msgstr ""
 "WAL necessários (%d segundos passados)"
 
 #: access/transam/xlog.c:9362
-#, fuzzy
 msgid ""
 "Check that your archive_command is executing properly.  pg_stop_backup can "
 "be canceled safely, but the database backup will not be usable without all "
@@ -8308,7 +8299,8 @@ msgstr "nível do WAL não é suficiente para criar um ponto de restauração"
 #: access/transam/xlog.c:9471
 #, c-format
 msgid "value too long for restore point (maximum %d characters)"
-msgstr "valor é muito longo para ponto de restauração (máximo de %d caracteres)"
+msgstr ""
+"valor é muito longo para ponto de restauração (máximo de %d caracteres)"
 
 #: access/transam/xlog.c:9639
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
@@ -8759,14 +8751,13 @@ msgid "Key %s already exists."
 msgstr "Chave %s já existe."
 
 #: access/nbtree/nbtinsert.c:457
-#, fuzzy, c-format
+#, c-format
 msgid "failed to re-find tuple within index \"%s\""
 msgstr "falhou ao reencontrar tupla no índice \"%s\""
 
 #: access/nbtree/nbtinsert.c:459
-#, fuzzy
 msgid "This may be because of a non-immutable index expression."
-msgstr "Isso pode ser por causa de uma expressão não imutável de índice."
+msgstr "Isso pode ser por causa de uma expressão não imutável do índice."
 
 #: access/nbtree/nbtpage.c:161 access/nbtree/nbtpage.c:365
 #: parser/parse_utilcmd.c:1527
@@ -8838,7 +8829,8 @@ msgid ""
 "This is caused by an incomplete page split at crash recovery before "
 "upgrading to PostgreSQL 9.1."
 msgstr ""
-"Isso é causado por uma divisão de página incompleta durante recuperação de desastre antes da atualização para PostgreSQL 9.1."
+"Isso é causado por uma divisão de página incompleta durante recuperação de "
+"desastre antes da atualização para PostgreSQL 9.1."
 
 #: access/hash/hashutil.c:209
 #, c-format
@@ -9064,7 +9056,7 @@ msgid "  -t pa|pl|ex     show timings after each query\n"
 msgstr "  -t pa|pl|ex     mostra duração depois de cada consulta\n"
 
 #: main/main.c:312
-#, fuzzy, c-format
+#, c-format
 msgid "  -T              send SIGSTOP to all backend processes if one dies\n"
 msgstr ""
 "  -T              envia SIGSTOP para todos os servidores se um deles morrer\n"
@@ -12712,13 +12704,16 @@ msgstr "faltando entrada no arquivo \"%s\" no fim da linha %d"
 #: libpq/hba.c:1963
 #, c-format
 msgid "provided user name (%s) and authenticated user name (%s) do not match"
-msgstr "nome de usuário fornecido (%s) e nome de usuário autenticado (%s) não correspondem"
+msgstr ""
+"nome de usuário fornecido (%s) e nome de usuário autenticado (%s) não "
+"correspondem"
 
 #: libpq/hba.c:1984
 #, c-format
 msgid "no match in usermap \"%s\" for user \"%s\" authenticated as \"%s\""
 msgstr ""
-"não há correspondência em mapa de usuários \"%s\" para usuário \"%s\" autenticado como \"%s\""
+"não há correspondência em mapa de usuários \"%s\" para usuário \"%s\" "
+"autenticado como \"%s\""
 
 #: libpq/hba.c:2008
 #, c-format
@@ -12823,7 +12818,8 @@ msgstr ""
 #, c-format
 msgid "pg_hba.conf rejects replication connection for host \"%s\", user \"%s\""
 msgstr ""
-"pg_hba.conf rejeitou conexão de replicação para máquina \"%s\", usuário \"%s\""
+"pg_hba.conf rejeitou conexão de replicação para máquina \"%s\", usuário \"%s"
+"\""
 
 #: libpq/auth.c:413
 #, c-format
@@ -12850,12 +12846,14 @@ msgstr "Endereço IP do cliente resolveu para \"%s\", pesquisa direta combina."
 #: libpq/auth.c:451
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup not checked."
-msgstr "Endereço IP do cliente resolveu para \"%s\", pesquisa direta não foi feita."
+msgstr ""
+"Endereço IP do cliente resolveu para \"%s\", pesquisa direta não foi feita."
 
 #: libpq/auth.c:453
 #, c-format
 msgid "Client IP address resolved to \"%s\", forward lookup does not match."
-msgstr "Endereço IP do cliente resolveu para \"%s\", pesquisa direta não combina."
+msgstr ""
+"Endereço IP do cliente resolveu para \"%s\", pesquisa direta não combina."
 
 #: libpq/auth.c:462
 #, c-format
@@ -13430,7 +13428,8 @@ msgstr "não pôde executar fsync no arquivo \"%s\" mas tentando novamente: %m"
 
 #: storage/smgr/md.c:1276
 msgid "could not forward fsync request because request queue is full"
-msgstr "não pôde encaminhar pedido de fsync porque a fila de pedidos está cheia"
+msgstr ""
+"não pôde encaminhar pedido de fsync porque a fila de pedidos está cheia"
 
 #: storage/smgr/md.c:1646
 #, c-format
@@ -13511,7 +13510,9 @@ msgstr "processo %d falhou ao obter %s em %s após %ld.%03d ms"
 
 #: storage/lmgr/predicate.c:665
 msgid "not enough elements in RWConflictPool to record a read/write conflict"
-msgstr "não há elementos suficientes em RWConflictPool para registrar um conflito de leitura/escrita"
+msgstr ""
+"não há elementos suficientes em RWConflictPool para registrar um conflito de "
+"leitura/escrita"
 
 #: storage/lmgr/predicate.c:666 storage/lmgr/predicate.c:694
 msgid ""
@@ -13523,7 +13524,9 @@ msgstr ""
 msgid ""
 "not enough elements in RWConflictPool to record a potential read/write "
 "conflict"
-msgstr "não há elementos suficientes em RWConflictPool para registrar um conflito potencial de leitura/escrita"
+msgstr ""
+"não há elementos suficientes em RWConflictPool para registrar um conflito "
+"potencial de leitura/escrita"
 
 #: storage/lmgr/predicate.c:898
 msgid "memory for serializable conflict tracking is nearly exhausted"
@@ -13534,7 +13537,8 @@ msgid ""
 "There might be an idle transaction or a forgotten prepared transaction "
 "causing this."
 msgstr ""
-"Pode haver uma transação ociosa ou uma transação preparada em aberto causando isso."
+"Pode haver uma transação ociosa ou uma transação preparada em aberto "
+"causando isso."
 
 #: storage/lmgr/predicate.c:1181 storage/lmgr/predicate.c:1253
 #, c-format
@@ -13542,7 +13546,8 @@ msgid ""
 "not enough shared memory for elements of data structure \"%s\" (%lu bytes "
 "requested)"
 msgstr ""
-"não há memória compartilhada suficiente para elementos da estrutura de dados \"%s\" (%lu bytes solicitados)"
+"não há memória compartilhada suficiente para elementos da estrutura de dados "
+"\"%s\" (%lu bytes solicitados)"
 
 #: storage/lmgr/predicate.c:1536
 msgid "deferrable snapshot was unsafe; trying a new one"
@@ -13560,7 +13565,9 @@ msgstr "Você pode precisar aumentar max_pred_locks_per_transaction."
 #: storage/lmgr/predicate.c:4583
 msgid ""
 "could not serialize access due to read/write dependencies among transactions"
-msgstr "não pôde serializar acesso devido a dependências de leitura/escrita entre transações"
+msgstr ""
+"não pôde serializar acesso devido a dependências de leitura/escrita entre "
+"transações"
 
 #: storage/lmgr/predicate.c:3780 storage/lmgr/predicate.c:3869
 #: storage/lmgr/predicate.c:3877 storage/lmgr/predicate.c:3916
@@ -14683,7 +14690,9 @@ msgid ""
 "form accepted by the chmod and umask system calls. (To use the customary "
 "octal format the number must start with a 0 (zero).)"
 msgstr ""
-"O valor do parâmetro esperado é uma especificação numérica na forma aceita pelas chamadas de sistema chmod e umask. (Para utilizar formato octal habitual, o número deve começar com um 0 (zero).)"
+"O valor do parâmetro esperado é uma especificação numérica na forma aceita "
+"pelas chamadas de sistema chmod e umask. (Para utilizar formato octal "
+"habitual, o número deve começar com um 0 (zero).)"
 
 #: utils/misc/guc.c:1668
 msgid "Sets the maximum memory to be used for query workspaces."
