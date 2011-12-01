@@ -8339,7 +8339,7 @@ msgstr "\"%s\" foi renomeado para \"%s\"."
 
 #: access/transam/xlog.c:9873
 msgid "online backup mode was not canceled"
-msgstr "mode de cópia de segurança online não foi cancelado"
+msgstr "modo de cópia de segurança online não foi cancelado"
 
 #: access/transam/xlog.c:9874
 #, c-format
@@ -8352,12 +8352,11 @@ msgid "could not read from log file %u, segment %u, offset %u: %m"
 msgstr "não pôde ler do arquivo de log %u, segmento %u, deslocamento %u: %m"
 
 #: access/transam/xlog.c:10498
-#, fuzzy
 msgid "received promote request"
-msgstr "pedido de desligamento inteligente foi recebido"
+msgstr "pedido de promoção foi recebido"
 
 #: access/transam/xlog.c:10511
-#, fuzzy, c-format
+#, c-format
 msgid "trigger file found: %s"
 msgstr "arquivo de gatilho encontrado: %s"
 
@@ -8830,15 +8829,16 @@ msgid "unlogged GiST indexes are not supported"
 msgstr "índices GiST unlogged não são suportados"
 
 #: access/gist/gist.c:715 access/gist/gistvacuum.c:271
-#, fuzzy, c-format
+#, c-format
 msgid "index \"%s\" contains an inner tuple marked as invalid"
-msgstr "índice \"%s\" contém página corrompida no bloco %u"
+msgstr "índice \"%s\" contém uma tupla interna marcada como inválida"
 
 #: access/gist/gist.c:717 access/gist/gistvacuum.c:273
 msgid ""
 "This is caused by an incomplete page split at crash recovery before "
 "upgrading to PostgreSQL 9.1."
 msgstr ""
+"Isso é causado por uma divisão de página incompleta durante recuperação de desastre antes da atualização para PostgreSQL 9.1."
 
 #: access/hash/hashutil.c:209
 #, c-format
@@ -11843,21 +11843,20 @@ msgid "OUT and INOUT arguments aren't allowed in TABLE functions"
 msgstr "argumentos OUT e INOUT não são permitidos em funções TABLE"
 
 #: gram.y:12852
-#, fuzzy
 msgid "multiple COLLATE clauses not allowed"
-msgstr "múltiplas cláusulas LIMIT não são permitidas"
+msgstr "múltiplas cláusulas COLLATE não são permitidas"
 
 #. translator: %s is CHECK, UNIQUE, or similar
 #: gram.y:12890 gram.y:12903
-#, fuzzy, c-format
+#, c-format
 msgid "%s constraints cannot be marked DEFERRABLE"
-msgstr "restrições CHECK não são postergáveis"
+msgstr "restrições %s não podem ser marcadas DEFERRABLE"
 
 #. translator: %s is CHECK, UNIQUE, or similar
 #: gram.y:12916
-#, fuzzy, c-format
+#, c-format
 msgid "%s constraints cannot be marked NOT VALID"
-msgstr "restrições CHECK não são postergáveis"
+msgstr "restrições %s não podem ser marcadas NOT VALID"
 
 #: parser/parse_oper.c:124 parser/parse_oper.c:718 utils/adt/regproc.c:464
 #: utils/adt/regproc.c:484 utils/adt/regproc.c:643
@@ -12491,9 +12490,9 @@ msgstr ""
 "não pôde abrir arquivo de autenticação secundário \"@%s\" como \"%s\": %m"
 
 #: libpq/hba.c:628
-#, fuzzy, c-format
+#, c-format
 msgid "could not translate host name \"%s\" to address: %s"
-msgstr "não pôde traduzir nome da máquina \"%s\" para endereço: %s\n"
+msgstr "não pôde traduzir nome da máquina \"%s\" para endereço: %s"
 
 #. translator: the second %s is a list of auth methods
 #: libpq/hba.c:779
@@ -12510,22 +12509,20 @@ msgstr ""
 "método de autenticação \"%s\" requer que argumento \"%s\" seja definido"
 
 #: libpq/hba.c:832
-#, fuzzy
 msgid "local connections are not supported by this build"
-msgstr "SSL não é suportado por essa construção"
+msgstr "conexões locais não são suportadas por essa construção"
 
 #: libpq/hba.c:853
 msgid "hostssl requires SSL to be turned on"
-msgstr ""
+msgstr "hostssl requer que SSL esteja habilitado"
 
 #: libpq/hba.c:854
 msgid "Set ssl = on in postgresql.conf."
-msgstr ""
+msgstr "Defina ssl = on no postgresql.conf."
 
 #: libpq/hba.c:862
-#, fuzzy
 msgid "hostssl is not supported by this build"
-msgstr "SSL não é suportado por essa construção"
+msgstr "hostssl não é suportado por essa construção"
 
 #: libpq/hba.c:863
 msgid "Compile with --with-openssl to use SSL connections."
@@ -12556,7 +12553,7 @@ msgstr "endereço IP \"%s\" inválido: %s"
 #: libpq/hba.c:1000
 #, c-format
 msgid "specifying both host name and CIDR mask is invalid: \"%s\""
-msgstr ""
+msgstr "especificar nome da máquina e máscara CIDR é inválido: \"%s\""
 
 #: libpq/hba.c:1014
 #, c-format
@@ -12592,10 +12589,10 @@ msgid "invalid authentication method \"%s\""
 msgstr "método de autenticação \"%s\" inválido"
 
 #: libpq/hba.c:1160
-#, fuzzy, c-format
+#, c-format
 msgid "invalid authentication method \"%s\": not supported by this build"
 msgstr ""
-"método de autenticação \"%s\" inválido: não é suportado nesta plataforma"
+"método de autenticação \"%s\" inválido: não é suportado por essa construção"
 
 #: libpq/hba.c:1181
 msgid "krb5 authentication is not supported on local sockets"
@@ -12606,9 +12603,8 @@ msgid "gssapi authentication is not supported on local sockets"
 msgstr "autenticação do tipo gssapi não é suportada em soquetes locais"
 
 #: libpq/hba.c:1203
-#, fuzzy
 msgid "peer authentication is only supported on local sockets"
-msgstr "autenticação krb5 não é suportada em soquetes locais"
+msgstr "autenticação do tipo peer só é suportada em soquetes locais"
 
 #: libpq/hba.c:1220
 msgid "cert authentication is only supported on hostssl connections"
@@ -12620,9 +12616,8 @@ msgid "authentication option not in name=value format: %s"
 msgstr "opção de autenticação não está  no formato nome=valor: %s"
 
 #: libpq/hba.c:1257
-#, fuzzy
 msgid "ident, peer, krb5, gssapi, sspi and cert"
-msgstr "ident, krb5, gssapi, sspi e cert"
+msgstr "ident, peer, krb5, gssapi, sspi e cert"
 
 #: libpq/hba.c:1271
 msgid "clientcert can only be configured for \"hostssl\" rows"
@@ -12715,16 +12710,15 @@ msgid "missing entry in file \"%s\" at end of line %d"
 msgstr "faltando entrada no arquivo \"%s\" no fim da linha %d"
 
 #: libpq/hba.c:1963
-#, fuzzy, c-format
+#, c-format
 msgid "provided user name (%s) and authenticated user name (%s) do not match"
-msgstr "usuário fornecido (%s) e usuário autenticado (%s) não correspondem"
+msgstr "nome de usuário fornecido (%s) e nome de usuário autenticado (%s) não correspondem"
 
 #: libpq/hba.c:1984
-#, fuzzy, c-format
+#, c-format
 msgid "no match in usermap \"%s\" for user \"%s\" authenticated as \"%s\""
 msgstr ""
-"não há correspondência em mapa de usuários para usuário \"%s\" autenticado "
-"como \"%s\""
+"não há correspondência em mapa de usuários \"%s\" para usuário \"%s\" autenticado como \"%s\""
 
 #: libpq/hba.c:2008
 #, c-format
@@ -12752,9 +12746,9 @@ msgid "Ident authentication failed for user \"%s\""
 msgstr "autenticação do tipo Ident falhou para usuário \"%s\""
 
 #: libpq/auth.c:269
-#, fuzzy, c-format
+#, c-format
 msgid "Peer authentication failed for user \"%s\""
-msgstr "autenticação do tipo PAM falhou para usuário \"%s\""
+msgstr "autenticação do tipo peer falhou para usuário \"%s\""
 
 #: libpq/auth.c:273
 #, c-format
