@@ -3,12 +3,15 @@
 # This file is distributed under the same license as the PostgreSQL package.
 # Alexander Lakhin <exclusion@gmail.com>, 2012.
 #
+# ChangeLog:
+#
+#   - February 19, 2012: Complete translation for 9.1. Alexander Lakhin <exclusion@gmail.com>.
 msgid ""
 msgstr ""
-"Project-Id-Version: plpgsql (PostgreSQL 9.0)\n"
+"Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-02-21 16:50+0000\n"
-"PO-Revision-Date: 2012-02-22 10:39-0300\n"
+"POT-Creation-Date: 2012-02-22 14:50+0000\n"
+"PO-Revision-Date: 2012-02-22 21:15+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -17,6 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: pl_comp.c:423 pl_handler.c:256
 #, c-format
@@ -59,7 +63,7 @@ msgstr "компиляция функции PL/pgSQL \"%s\" в районе ст
 #: pl_comp.c:989
 #, c-format
 msgid "column reference \"%s\" is ambiguous"
-msgstr "ссылка на колонку \"%s\" неоднозначна"
+msgstr "неоднозначная ссылка на колонку \"%s\""
 
 #: pl_comp.c:991
 msgid "It could refer to either a PL/pgSQL variable or a table column."
@@ -94,7 +98,7 @@ msgstr "отношение \"%s\" не является таблицей"
 #: pl_comp.c:2046
 #, c-format
 msgid "type \"%s\" is only a shell"
-msgstr "тип \"%s\" является только оболочкой"
+msgstr "тип \"%s\" - лишь пустышка"
 
 #: pl_comp.c:2116 pl_comp.c:2169
 #, c-format
@@ -350,7 +354,7 @@ msgstr "возможность выполнения SELECT ... INTO в EXECUTE �
 
 #: pl_exec.c:3060
 msgid "You might want to use EXECUTE ... INTO instead."
-msgstr ""
+msgstr "Альтернативой может стать EXECUTE ... INTO."
 
 #: pl_exec.c:3350 pl_exec.c:3442
 #, c-format
@@ -382,7 +386,7 @@ msgstr "переменной типа запись можно присвоить
 #: pl_exec.c:3771
 #, c-format
 msgid "number of array dimensions (%d) exceeds the maximum allowed (%d)"
-msgstr "число размерностей массива (%d) превышает лимит (%d)"
+msgstr "число размерностей массива (%d) превышает предел (%d)"
 
 #: pl_exec.c:3785
 msgid "subscripted object is not an array"
@@ -401,8 +405,9 @@ msgstr "запрос \"%s\" не вернул данные"
 #, c-format
 msgid "query \"%s\" returned %d column"
 msgid_plural "query \"%s\" returned %d columns"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "запрос \"%s\" вернул %d строку"
+msgstr[1] "запрос \"%s\" вернул %d строки"
+msgstr[2] "запрос \"%s\" вернул %d строк"
 
 #: pl_exec.c:4232
 #, c-format
@@ -671,10 +676,40 @@ msgstr ""
 #: pl_scanner.c:463
 #, c-format
 msgid "%s at end of input"
-msgstr "%s в конце ввода"
+msgstr "%s в конце"
 
 #. translator: first %s is typically the translation of "syntax error"
 #: pl_scanner.c:479
 #, c-format
 msgid "%s at or near \"%s\""
-msgstr "%s в или рядом \"%s\""
+msgstr "%s (примерное положение: \"%s\")"
+
+#~ msgid "parameter name \"%s\" used more than once"
+#~ msgstr "имя параметра \"%s\" указано неоднократно"
+
+#~ msgid "FOREACH expression must not be null"
+#~ msgstr "выражение FOREACH не может быть равно NULL"
+
+#~ msgid "FOREACH expression must yield an array, not type %s"
+#~ msgstr "выражение в FOREACH должно быть массивом, но не типом %s"
+
+#~ msgid "slice dimension (%d) is out of the valid range 0..%d"
+#~ msgstr "размерность среза (%d) вне допустимого диапазона 0..%d"
+
+#~ msgid "FOREACH ... SLICE loop variable must be of an array type"
+#~ msgstr "переменная цикла FOREACH ... SLICE должна быть массивом"
+
+#~ msgid "FOREACH loop variable must not be of an array type"
+#~ msgstr "переменная цикла FOREACH не должна быть массивом"
+
+#~ msgid "collations are not supported by type %s"
+#~ msgstr "тип %s не поддерживает сравнения (COLLATION)"
+
+#~ msgid ""
+#~ "loop variable of FOREACH must be a known variable or list of variables"
+#~ msgstr ""
+#~ "переменной цикла FOREACH должна быть известная переменная или список "
+#~ "переменных"
+
+#~ msgid "FOREACH over array"
+#~ msgstr "FOREACH для массива"

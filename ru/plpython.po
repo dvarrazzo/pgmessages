@@ -3,12 +3,15 @@
 # This file is distributed under the same license as the PostgreSQL package.
 # Alexander Lakhin <exclusion@gmail.com>, 2012.
 #
+# ChangeLog:
+#
+#   - February 18, 2012: Complete translation for 9.1. Alexander Lakhin <exclusion@gmail.com>.
 msgid ""
 msgstr ""
-"Project-Id-Version: plpython (PostgreSQL 9.0)\n"
+"Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-02-21 16:50+0000\n"
-"PO-Revision-Date: 2012-02-22 10:39-0300\n"
+"POT-Creation-Date: 2012-02-22 14:50+0000\n"
+"PO-Revision-Date: 2012-02-22 21:17+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -17,6 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: plpython.c:418
 #, c-format
@@ -119,7 +123,7 @@ msgstr "ошибка в PyDict_SetItemString() при настройке арг�
 
 #: plpython.c:1326
 msgid "PyCObject_AsVoidPtr() failed"
-msgstr ""
+msgstr "ошибка в PyCObject_AsVoidPtr()"
 
 #: plpython.c:1434
 msgid "trigger functions can only be called as triggers"
@@ -137,7 +141,7 @@ msgstr "функции PL/Python не могут принимать тип %s"
 
 #: plpython.c:1555
 msgid "PyCObject_FromVoidPtr() failed"
-msgstr ""
+msgstr "ошибка в PyCObject_FromVoidPtr()"
 
 #: plpython.c:1613
 #, c-format
@@ -219,11 +223,11 @@ msgstr "plan.status не принимает аргументы"
 
 #: plpython.c:2804 plpython.c:2947
 msgid "transaction aborted"
-msgstr ""
+msgstr "транзакция прервана"
 
 #: plpython.c:2811
 msgid "invalid arguments for plpy.prepare"
-msgstr ""
+msgstr "неверные аргументы plpy.prepare"
 
 #: plpython.c:2818
 msgid "second argument of plpy.prepare must be a sequence"
@@ -240,7 +244,7 @@ msgstr "plpy.prepare не поддерживает составные типы"
 
 #: plpython.c:2924
 msgid "unrecognized error in PLy_spi_prepare"
-msgstr ""
+msgstr "нераспознанная ошибка в PLy_spi_prepare"
 
 #: plpython.c:2960
 msgid "plpy.execute expected a query or a plan"
@@ -258,12 +262,13 @@ msgstr "нельзя выполнить план"
 #, c-format
 msgid "Expected sequence of %d argument, got %d: %s"
 msgid_plural "Expected sequence of %d arguments, got %d: %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ожидалась последовательность из %d аргумента, получено %d: %s"
+msgstr[1] "Ожидалась последовательность из %d аргументов, получено %d: %s"
+msgstr[2] "Ожидалась последовательность из %d аргументов, получено %d: %s"
 
 #: plpython.c:3075
 msgid "unrecognized error in PLy_spi_execute_plan"
-msgstr ""
+msgstr "нераспознанная ошибка в PLy_spi_execute_plan"
 
 #: plpython.c:3094
 #, c-format
@@ -272,7 +277,7 @@ msgstr "ошибка в SPI_execute_plan: %s"
 
 #: plpython.c:3121
 msgid "unrecognized error in PLy_spi_execute_query"
-msgstr ""
+msgstr "нераспознанная ошибка в PLy_spi_execute_query"
 
 #: plpython.c:3130
 #, c-format
@@ -307,7 +312,7 @@ msgstr "необработанная ошибка при инициализац�
 
 #: plpython.c:3268
 msgid "could not create procedure cache"
-msgstr ""
+msgstr "не удалось создать процедурный кэш"
 
 #: plpython.c:3280
 msgid "could not import \"__main__\" module"
@@ -324,7 +329,7 @@ msgstr "не удалось разобрать сообщение об ошиб�
 #: plpython.c:3534 plpython.c:3538
 #, c-format
 msgid "PL/Python: %s"
-msgstr ""
+msgstr "PL/Python: %s"
 
 #: plpython.c:3535
 #, c-format
@@ -333,9 +338,35 @@ msgstr "%s"
 
 #: plpython.c:3648
 msgid "out of memory"
-msgstr "не хватает памяти"
+msgstr "нехватка памяти"
 
 #: plpython.c:3702
 msgid "could not convert Python Unicode object to PostgreSQL server encoding"
 msgstr ""
 "преобразовать объект Python Unicode в серверную кодировку PostgreSQL нельзя"
+
+#~ msgid "forcibly aborting a subtransaction that has not been exited"
+#~ msgstr "принудительное прерывание незавершённой подтранзакции"
+
+#~ msgid ""
+#~ "function returning record called in context that cannot accept type record"
+#~ msgstr ""
+#~ "функция, возвращающая запись, вызвана в контексте, не допускающем этот тип"
+
+#~ msgid "could not compile anonymous PL/Python code block"
+#~ msgstr "не удалось скомпилировать анонимный блок кода PL/Python"
+
+#~ msgid "this subtransaction has already been entered"
+#~ msgstr "эта подтранзакция уже начата"
+
+#~ msgid "this subtransaction has already been exited"
+#~ msgstr "эта подтранзакция уже закончена"
+
+#~ msgid "this subtransaction has not been entered"
+#~ msgstr "эта подтранзакция ещё не начата"
+
+#~ msgid "there is no subtransaction to exit from"
+#~ msgstr "нет подтранзакции, которую нужно закончить"
+
+#~ msgid "could not add the spiexceptions module"
+#~ msgstr "не удалось добавить модуль spiexceptions"
