@@ -5,11 +5,12 @@
 # Copyright (c) 2012 Alexander Lakhin, exclusion@gmail.com
 # Distributed under the same licensing terms as PostgreSQL itself.
 #
-# $Id: pg_dump.po,v 1.3 2012/02/21 18:49:36 alvherre Exp $
+# $Id: pg_dump.po,v 1.4 2012/02/22 13:20:10 alvherre Exp $
 #
 # ChangeLog:
 #
 #   - February 21, 2012: Minor fixes. Alexander Lakhin <exclusion@gmail.com>.
+#     - With corrections from Sergey Burladyan <eshkinkot@gmail.com>
 #   - February 18, 2012: Complete translation for 9.1. Alexander Lakhin <exclusion@gmail.com>.
 #   - January 17, 2005: Complete translation for 8.0, Serguei A. Mokhov <mokhov@cs.concordia.ca>.
 #   - December, 2004: New translation by Oleg Bartunov <oleg@sai.msu.su>.
@@ -23,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-02-21 16:46+0000\n"
-"PO-Revision-Date: 2012-02-21 08:08+0400\n"
+"POT-Creation-Date: 2012-02-20 06:46+0000\n"
+"PO-Revision-Date: 2012-02-21 15:30+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -216,7 +217,7 @@ msgstr "  -n, --schema=СХЕМА          выгрузить только ук�
 #: pg_dump.c:842
 #, c-format
 msgid "  -N, --exclude-schema=SCHEMA do NOT dump the named schema(s)\n"
-msgstr "  -N, --exclude-schema=SCHEMA НЕ выгружать указанную схему(ы)\n"
+msgstr "  -N, --exclude-schema=СХЕМА  НЕ выгружать указанную схему(ы)\n"
 
 #: pg_dump.c:843 pg_dumpall.c:541
 #, c-format
@@ -272,7 +273,7 @@ msgid ""
 "  --column-inserts            dump data as INSERT commands with column "
 "names\n"
 msgstr ""
-"  -D, --column-inserts        выгружать данные в виде INSERT с именами "
+"  --column-inserts            выгружать данные в виде INSERT с именами "
 "колонок\n"
 
 #: pg_dump.c:853 pg_dumpall.c:550
@@ -281,8 +282,7 @@ msgid ""
 "  --disable-dollar-quoting    disable dollar quoting, use SQL standard "
 "quoting\n"
 msgstr ""
-"  -X disable-dollar-quoting, --disable-dollar-quoting\n"
-"                              отключить спецстроки с $, выводить строки\n"
+"  --disable-dollar-quoting    отключить спецстроки с $, выводить строки\n"
 "                              по стандарту SQL\n"
 
 #: pg_dump.c:854 pg_dumpall.c:551
@@ -290,8 +290,7 @@ msgstr ""
 msgid ""
 "  --disable-triggers          disable triggers during data-only restore\n"
 msgstr ""
-"  -X disable-triggers, --disable-triggers\n"
-"                              отключить триггеры при восстановлении одних "
+"  --disable-triggers          отключить триггеры при восстановлении одних "
 "данных\n"
 
 #: pg_dump.c:855 pg_dumpall.c:552
@@ -300,7 +299,7 @@ msgid ""
 "  --inserts                   dump data as INSERT commands, rather than "
 "COPY\n"
 msgstr ""
-"  -d, --inserts               выгрузить данные в виде команд INSERT, вместо "
+"  --inserts                   выгрузить данные в виде команд INSERT, вместо "
 "COPY\n"
 
 #: pg_dump.c:856 pg_dumpall.c:553

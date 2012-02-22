@@ -5,10 +5,11 @@
 # Copyright (c) 2012 Alexander Lakhin, exclusion@gmail.com
 # Distributed under the same licensing terms as PostgreSQL itself.
 #
-# $Id: psql.po,v 1.4 2012/02/21 18:49:36 alvherre Exp $
+# $Id: psql.po,v 1.5 2012/02/22 13:20:11 alvherre Exp $
 #
 # ChangeLog:
-#   - February 20, 2012: Minor fixes: Alexander Lakhin <exclusion@gmail.com>
+#   - February 22, 2012: Minor fixes: Alexander Lakhin <exclusion@gmail.com>
+#     - With corrections from Sergey Burladyan <eshkinkot@gmail.com>
 #   - January 29 - February 13, 2012: Fixes, completion, and updates for 9.1: Alexander Lakhin <exclusion@gmail.com>
 #   - January 17, 2005: Complete translation for 8.0, Serguei A. Mokhov <mokhov@cs.concordia.ca>.
 #   - December, 2004 - January, 2005: New translation by Oleg Bartunov <oleg@sai.msu.su>.
@@ -21,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-02-21 16:44+0000\n"
-"PO-Revision-Date: 2012-02-20 11:35+0400\n"
+"POT-Creation-Date: 2012-02-20 06:44+0000\n"
+"PO-Revision-Date: 2012-02-22 09:52+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -32,8 +33,8 @@ msgstr ""
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "X-Generator: Lokalize 1.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: command.c:113
 #, c-format
@@ -71,8 +72,8 @@ msgid ""
 "You are connected to database \"%s\" as user \"%s\" via socket in \"%s\" at "
 "port \"%s\".\n"
 msgstr ""
-"Вы подключены к базе данных \"%s\" как пользователь \"%s\" через сокет в \"%s"
-"\", порт \"%s\".\n"
+"Вы подключены к базе данных \"%s\" как пользователь \"%s\" через сокет в "
+"\"%s\", порт \"%s\".\n"
 
 #: command.c:315
 #, c-format
@@ -879,7 +880,7 @@ msgid ""
 "  \\g [FILE] or ;         execute query (and send results to file or |pipe)\n"
 msgstr ""
 "  \\g [ФАЙЛ] or ;         выполнить запрос\n"
-"                          (и направить результаты в файл или канал |)\n"
+"                         (и направить результаты в файл или канал |)\n"
 
 #: help.c:168
 #, c-format
@@ -905,7 +906,7 @@ msgid ""
 "  \\e [FILE] [LINE]       edit the query buffer (or file) with external "
 "editor\n"
 msgstr ""
-"  \\e [ФАЙЛ] [СТРОКА]      править буфер запроса (или файл) во внешнем "
+"  \\e [ФАЙЛ] [СТРОКА]     править буфер запроса (или файл) во внешнем "
 "редакторе\n"
 
 #: help.c:174
@@ -969,7 +970,7 @@ msgstr ""
 msgid ""
 "  \\qecho [STRING]        write string to query output stream (see \\o)\n"
 msgstr ""
-"\\qecho [СТРОКА]        записать строку в поток результатов запроса (см. "
+"  \\qecho [СТРОКА]        записать строку в поток результатов запроса (см. "
 "\\o)\n"
 
 #: help.c:191
@@ -996,7 +997,7 @@ msgid "  \\d[S+]  NAME           describe table, view, sequence, or index\n"
 msgstr ""
 "  \\d[S+]  ИМЯ            описание таблицы, представления, "
 "последовательности\n"
-"                          или индекса\n"
+"                         или индекса\n"
 
 #: help.c:195
 #, c-format
@@ -1059,7 +1060,7 @@ msgid ""
 "  \\df[antw][S+] [PATRN]  list [only agg/normal/trigger/window] functions\n"
 msgstr ""
 "  \\df[antw][S+] [МАСКА]  список [агрегатных/нормальных/триггерных/оконных]\n"
-"                          функций соответственно\n"
+"                         функций соответственно\n"
 
 #: help.c:207
 #, c-format
@@ -1123,7 +1124,7 @@ msgid ""
 "  \\dp     [PATTERN]      list table, view, and sequence access privileges\n"
 msgstr ""
 "  \\dp     [МАСКА]        список прав доступа к таблицам, представлениям и\n"
-"                          последовательностям\n"
+"                         последовательностям\n"
 
 #: help.c:219
 #, c-format
@@ -1191,7 +1192,7 @@ msgid ""
 "  \\a                     toggle between unaligned and aligned output mode\n"
 msgstr ""
 "  \\a                     переключение режимов вывода:\n"
-"                          неформатированный/выравненный\n"
+"                         неформатированный/выравненный\n"
 
 #: help.c:234
 #, c-format
@@ -1207,7 +1208,7 @@ msgid ""
 "output\n"
 msgstr ""
 "  \\f [СТРОКА]            показать или установить разделитель полей для\n"
-"                          неформатированного вывода\n"
+"                         неформатированного вывода\n"
 
 #: help.c:236
 #, c-format
@@ -1225,11 +1226,11 @@ msgid ""
 "pager})\n"
 msgstr ""
 "  \\pset ИМЯ [ЗНАЧЕНИЕ]   установить параметр вывода таблицы, где \n"
-"                          ИМЯ := {format|border|expanded|fieldsep|footer|"
+"                         ИМЯ := {format|border|expanded|fieldsep|footer|"
 "null|\n"
-"                          numericlocale|recordsep|tuples_only|title|"
+"                         numericlocale|recordsep|tuples_only|title|"
 "tableattr|\n"
-"                          pager}\n"
+"                         pager}\n"
 
 #: help.c:241
 #, c-format
@@ -1263,7 +1264,7 @@ msgid ""
 "                         connect to new database (currently \"%s\")\n"
 msgstr ""
 "  \\c[onnect] [БД|- ПОЛЬЗОВАТЕЛЬ|- СЕРВЕР|- ПОРТ|-]\n"
-"                          подключиться к другой базе данных (текущая: \"%s"
+"                         подключиться к другой базе данных (текущая: \"%s"
 "\")\n"
 
 #: help.c:252
@@ -1304,7 +1305,7 @@ msgid ""
 "shell\n"
 msgstr ""
 "  \\! [КОМАНДА]           выполнить команду в командной оболочке\n"
-"                          или запустить интерактивную оболочку\n"
+"                         или запустить интерактивную оболочку\n"
 
 #: help.c:264
 #, c-format
@@ -1325,12 +1326,12 @@ msgid ""
 "parameters\n"
 msgstr ""
 "  \\set [ИМЯ [ЗНАЧЕНИЕ]]  установить внутреннюю переменную или вывести все,\n"
-"                          если имя не задано\n"
+"                         если имя не задано\n"
 
 #: help.c:267
 #, c-format
 msgid "  \\unset NAME            unset (delete) internal variable\n"
-msgstr "  \\unset ИМЯ       сбросить (удалить) внутреннюю переменную\n"
+msgstr "  \\unset ИМЯ             сбросить (удалить) внутреннюю переменную\n"
 
 #: help.c:270
 #, c-format
@@ -1467,7 +1468,7 @@ msgstr "Прервано\n"
 #, c-format
 msgid "Cannot add header to table content: column count of %d exceeded.\n"
 msgstr ""
-"Ошибка добавления заголовка таблицы: превышен предел числа столбцов (%d).\n"
+"Ошибка добавления заголовка таблицы: превышен предел числа колонок (%d).\n"
 
 #: print.c:2137
 #, c-format
@@ -1875,7 +1876,7 @@ msgstr ", кластеризованный"
 
 #: describe.c:1554
 msgid ", invalid"
-msgstr ", негодный"
+msgstr ", не рабочий"
 
 #: describe.c:1557
 msgid ", deferrable"
@@ -2834,7 +2835,7 @@ msgstr "ожидать уведомления"
 
 #: sql_help.h:782
 msgid "load a shared library file"
-msgstr "загрузить файл общей библиотеки"
+msgstr "загрузить файл разделяемой библиотеки"
 
 #: sql_help.h:787
 msgid "lock a table"
