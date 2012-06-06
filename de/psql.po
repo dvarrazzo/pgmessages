@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.2\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-06-03 16:15+0000\n"
-"PO-Revision-Date: 2012-06-03 22:43+0300\n"
+"POT-Creation-Date: 2012-06-05 21:45+0000\n"
+"PO-Revision-Date: 2012-06-06 21:15+0300\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -185,9 +185,9 @@ msgid "out of memory\n"
 msgstr "Speicher aufgebraucht\n"
 
 #: command.c:1117
-#, fuzzy, c-format
+#, c-format
 msgid "\\%s: environment variable name must not contain '='\n"
-msgstr "Erweiterungsnamen dürfen nicht »--« enthalten."
+msgstr "\\%s: Name der Umgebungsvariable darf kein »=« enthalten\n"
 
 #: command.c:1159
 #, c-format
@@ -370,9 +370,9 @@ msgid "Null display is \"%s\".\n"
 msgstr "Null-Anzeige ist »%s«.\n"
 
 #: command.c:2285 command.c:2297
-#, fuzzy, c-format
+#, c-format
 msgid "Field separator is zero byte.\n"
-msgstr "Feldtrennzeichen ist »%s«.\n"
+msgstr "Feldtrennzeichen ist ein Null-Byte.\n"
 
 #: command.c:2287
 #, c-format
@@ -380,9 +380,9 @@ msgid "Field separator is \"%s\".\n"
 msgstr "Feldtrennzeichen ist »%s«.\n"
 
 #: command.c:2312 command.c:2326
-#, fuzzy, c-format
+#, c-format
 msgid "Record separator is zero byte.\n"
-msgstr "Satztrennzeichen ist »%s«.\n"
+msgstr "Satztrennzeichen ist ein Null-Byte.\n"
 
 #: command.c:2314
 #, c-format
@@ -524,9 +524,9 @@ msgid "The server (version %d.%d) does not support savepoints for ON_ERROR_ROLLB
 msgstr "Der Server (Version %d.%d) unterstützt keine Sicherungspunkte für ON_ERROR_ROLLBACK.\n"
 
 #: common.c:1006
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected transaction status (%d)\n"
-msgstr "%s: unbekannter Transaktionsstatus\n"
+msgstr "unerwarteter Transaktionsstatus (%d)\n"
 
 #: common.c:1033
 #, c-format
@@ -967,7 +967,7 @@ msgstr "Regeln:"
 #: describe.c:1670
 #, c-format
 msgid "Owned by: %s"
-msgstr ""
+msgstr "Eigentümer: %s"
 
 #: describe.c:1724
 msgid "Indexes:"
@@ -1675,22 +1675,22 @@ msgid "  -x, --expanded           turn on expanded table output\n"
 msgstr "  -x, --expanded           erweiterte Tabellenausgabe einschalten\n"
 
 #: help.c:126
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -z, --field-separator-zero\n"
 "                           set field separator to zero byte\n"
 msgstr ""
-"  -F, --field-separator=ZEICHEN\n"
-"                           Feldtrennzeichen setzen (Standard: »%s«)\n"
+"  -z, --field-separator-zero\n"
+"                           Feldtrennzeichen auf Null-Byte setzen\n"
 
 #: help.c:128
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  -0, --record-separator-zero\n"
 "                           set record separator to zero byte\n"
 msgstr ""
-"  -R, --record-separator=ZEICHEN\n"
-"                           Satztrennzeichen setzen (Standard: Newline)\n"
+"  -0, --record-separator-zero\n"
+"                           Satztrennzeichen auf Null-Byte setzen\n"
 
 #: help.c:131
 #, c-format
@@ -1835,14 +1835,14 @@ msgid "  \\i FILE                execute commands from file\n"
 msgstr "  \\i DATEI               Befehle aus Datei ausführen\n"
 
 #: help.c:191
-#, fuzzy, c-format
+#, c-format
 msgid "  \\ir FILE               as \\i, but relative to location of current script\n"
-msgstr "  \\o DATEI               alle Anfrageergebnisse in Datei oder |Pipe schreiben\n"
+msgstr "  \\ir DATEI              wie \\i, aber relativ zum Ort des aktuellen Skripts\n"
 
 #: help.c:192
 #, c-format
 msgid "  \\o [FILE]              send all query results to file or |pipe\n"
-msgstr "  \\o DATEI               alle Anfrageergebnisse in Datei oder |Pipe schreiben\n"
+msgstr "  \\o [DATEI]             alle Anfrageergebnisse in Datei oder |Pipe schreiben\n"
 
 #: help.c:193
 #, c-format
@@ -2076,15 +2076,15 @@ msgid "  \\H                     toggle HTML output mode (currently %s)\n"
 msgstr "  \\H                     HTML-Ausgabemodus umschalten (gegenwärtig %s)\n"
 
 #: help.c:243
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "  \\pset NAME [VALUE]     set table output option\n"
 "                         (NAME := {format|border|expanded|fieldsep|fieldsep_zero|footer|null|\n"
 "                         numericlocale|recordsep|recordsep_zero|tuples_only|title|tableattr|pager})\n"
 msgstr ""
 "  \\pset NAME [WERT]      Tabellenausgabeoption setzen\n"
-"                         (NAME := {format|border|expanded|fieldsep|footer|null|\n"
-"                         numericlocale|recordsep|tuples_only|title|tableattr|pager})\n"
+"                         (NAME := {format|border|expanded|fieldsep|fieldsep_zero|footer|null|\n"
+"                         numericlocale|recordsep|recordsep_zero|tuples_only|title|tableattr|pager})\n"
 
 #: help.c:246
 #, c-format
@@ -2143,9 +2143,9 @@ msgid "  \\cd [DIR]              change the current working directory\n"
 msgstr "  \\cd [VERZ]             Arbeitsverzeichnis wechseln\n"
 
 #: help.c:264
-#, fuzzy, c-format
+#, c-format
 msgid "  \\setenv NAME [VALUE]   set or unset environment variable\n"
-msgstr "  \\unset NAME            interne Variable löschen\n"
+msgstr "  \\setenv NAME [WERT]    Umgebungsvariable setzen oder löschen\n"
 
 #: help.c:265
 #, c-format
@@ -2335,7 +2335,7 @@ msgstr "%s: Speicher aufgebraucht\n"
 #: psqlscan.l:1908
 #, c-format
 msgid "can't escape without active connection\n"
-msgstr ""
+msgstr "Escape kann nicht ohne aktive Verbindung ausgeführt werden\n"
 
 #: sql_help.c:26 sql_help.c:29 sql_help.c:32 sql_help.c:44 sql_help.c:46
 #: sql_help.c:48 sql_help.c:59 sql_help.c:61 sql_help.c:63 sql_help.c:87
@@ -2505,9 +2505,8 @@ msgid "constraint_name"
 msgstr "Constraint-Name"
 
 #: sql_help.c:206 sql_help.c:729
-#, fuzzy
 msgid "new_constraint_name"
-msgstr "Constraint-Name"
+msgstr "neuer_Constraint-Name"
 
 #: sql_help.c:250 sql_help.c:252 sql_help.c:254 sql_help.c:256 sql_help.c:1365
 #: sql_help.c:2156
@@ -3513,7 +3512,7 @@ msgstr "Zeitzone"
 
 #: sql_help.c:3077
 msgid "snapshot_id"
-msgstr ""
+msgstr "Snapshot-ID"
 
 #: sql_help.c:3225
 msgid "from_list"
@@ -4138,21 +4137,3 @@ msgstr ""
 #, fuzzy, c-format
 msgid "unrecognized boolean value; assuming \"on\".\n"
 msgstr "ungültiger provolatile-Wert für Funktion »%s«\n"
-
-#~ msgid "data type"
-#~ msgstr "Datentyp"
-
-#~ msgid "aggregate"
-#~ msgstr "Aggregat"
-
-#~ msgid "contains support for command-line editing"
-#~ msgstr "enthält Unterstützung für Kommandozeilenbearbeitung"
-
-#~ msgid "\\copy: unexpected response (%d)\n"
-#~ msgstr "\\copy: unerwartete Antwort (%d)\n"
-
-#~ msgid "\\copy: %s"
-#~ msgstr "\\copy: %s"
-
-#~ msgid "\\%s: error\n"
-#~ msgstr "\\%s: Fehler\n"
