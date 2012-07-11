@@ -4,12 +4,15 @@
 # Copyright (c) 2004-2005 Serguei A. Mokhov, mokhov@cs.concordia.ca
 # Distributed under the same licensing terms as PostgreSQL itself.
 #
+# $Id: pg_config.po,v 1.4 2010/12/07 21:22:21 petere Exp $
+#
 # translation of subject-specific terminology, see:
 # перевод некоторых специфичных терминов:
 # http://wiki.postgresql.org/wiki/NLS/ru/dict
 #
 # ChangeLog:
-#
+#   - June 27, 2012: Updates for 9.2. Alexander Lakhin <exclusion@gmail.com>.
+#   - April 2, 2012: Bug fixes. Alexander Lakhin <exclusion@gmail.com>.
 #   - February 17, 2012: Minor fixes. Alexander Lakhin <exclusion@gmail.com>.
 #   - December 1, 2010: translation for 9.1, Andrey Sudnik <sudnikand@gmail.com>.
 #   - March 26, 2009: complete translation for 8.3, Sergey Burladyan <eshkinkot@gmail.com>.
@@ -18,10 +21,10 @@
 #   - October 13 - November 24, 2004: Initial Translation, Serguei A. Mokhov <mokhov@cs.concordia.ca>.
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL 9.1\n"
+"Project-Id-Version: PostgreSQL 9.2\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-02-21 16:45+0000\n"
-"PO-Revision-Date: 2012-02-17 11:24+0400\n"
+"POT-Creation-Date: 2012-07-11 03:46+0000\n"
+"PO-Revision-Date: 2012-06-23 06:58+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -34,6 +37,61 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 1.4\n"
+
+#: ../../port/exec.c:125 ../../port/exec.c:239 ../../port/exec.c:282
+#, c-format
+msgid "could not identify current directory: %s"
+msgstr "не удалось определить текущий каталог: %s"
+
+#: ../../port/exec.c:144
+#, c-format
+msgid "invalid binary \"%s\""
+msgstr "неверный исполняемый файл \"%s\""
+
+#: ../../port/exec.c:193
+#, c-format
+msgid "could not read binary \"%s\""
+msgstr "не удалось прочитать исполняемый файл \"%s\""
+
+#: ../../port/exec.c:200
+#, c-format
+msgid "could not find a \"%s\" to execute"
+msgstr "не удалось найти запускаемый файл \"%s\""
+
+#: ../../port/exec.c:255 ../../port/exec.c:291
+#, c-format
+msgid "could not change directory to \"%s\""
+msgstr "не удалось перейти в каталог \"%s\""
+
+#: ../../port/exec.c:270
+#, c-format
+msgid "could not read symbolic link \"%s\""
+msgstr "не удалось прочитать символическую ссылку \"%s\""
+
+#: ../../port/exec.c:518
+#, c-format
+msgid "child process exited with exit code %d"
+msgstr "дочерний процесс завершился с кодом возврата %d"
+
+#: ../../port/exec.c:522
+#, c-format
+msgid "child process was terminated by exception 0x%X"
+msgstr "дочерний процесс прерван исключением 0x%X"
+
+#: ../../port/exec.c:531
+#, c-format
+msgid "child process was terminated by signal %s"
+msgstr "дочерний процесс завершён по сигналу %s"
+
+#: ../../port/exec.c:534
+#, c-format
+msgid "child process was terminated by signal %d"
+msgstr "дочерний процесс завершён по сигналу %d"
+
+#: ../../port/exec.c:538
+#, c-format
+msgid "child process exited with unrecognized status %d"
+msgstr "дочерний процесс завершился с нераспознанным состоянием %d"
 
 #: pg_config.c:243 pg_config.c:259 pg_config.c:275 pg_config.c:291
 #: pg_config.c:307 pg_config.c:323 pg_config.c:339 pg_config.c:355
@@ -128,8 +186,7 @@ msgstr ""
 #, c-format
 msgid "  --localedir           show location of locale support files\n"
 msgstr ""
-"  --localedir           показать расположение файлов описания локальных "
-"настроек\n"
+"  --localedir           показать расположение файлов описания локалей\n"
 
 #: pg_config.c:442
 #, c-format
@@ -238,8 +295,8 @@ msgstr "  --version             показать версию PostgreSQL\n"
 
 #: pg_config.c:457
 #, c-format
-msgid "  --help                show this help, then exit\n"
-msgstr "  --help                показать эту справку и выйти\n"
+msgid "  -?, --help            show this help, then exit\n"
+msgstr "  -?, --help            показать эту справку и выйти\n"
 
 #: pg_config.c:458
 #, c-format
@@ -271,68 +328,3 @@ msgstr "%s: не удалось найти свой исполняемый фа�
 #, c-format
 msgid "%s: invalid argument: %s\n"
 msgstr "%s: неверный аргумент: %s\n"
-
-#: ../../port/exec.c:125 ../../port/exec.c:239 ../../port/exec.c:282
-#, c-format
-msgid "could not identify current directory: %s"
-msgstr "не удалось получить текущий каталог: %s"
-
-#: ../../port/exec.c:144
-#, c-format
-msgid "invalid binary \"%s\""
-msgstr "неверный двоичный файл \"%s\""
-
-#: ../../port/exec.c:193
-#, c-format
-msgid "could not read binary \"%s\""
-msgstr "не удалось прочитать двоичный файл \"%s\""
-
-#: ../../port/exec.c:200
-#, c-format
-msgid "could not find a \"%s\" to execute"
-msgstr "не удалось найти запускаемый файл \"%s\""
-
-#: ../../port/exec.c:255 ../../port/exec.c:291
-#, c-format
-msgid "could not change directory to \"%s\""
-msgstr "не удалось перейти в каталог \"%s\""
-
-#: ../../port/exec.c:270
-#, c-format
-msgid "could not read symbolic link \"%s\""
-msgstr "не удалось прочитать символическую ссылку \"%s\""
-
-#: ../../port/exec.c:517
-#, c-format
-msgid "child process exited with exit code %d"
-msgstr "дочерний процесс завершился с кодом возврата %d"
-
-#: ../../port/exec.c:521
-#, c-format
-msgid "child process was terminated by exception 0x%X"
-msgstr "дочерний процесс прерван исключением 0x%X"
-
-#: ../../port/exec.c:530
-#, c-format
-msgid "child process was terminated by signal %s"
-msgstr "дочерний процесс завершён по сигналу %s"
-
-#: ../../port/exec.c:533
-#, c-format
-msgid "child process was terminated by signal %d"
-msgstr "дочерний процесс завершён по сигналу %d"
-
-#: ../../port/exec.c:537
-#, c-format
-msgid "child process exited with unrecognized status %d"
-msgstr "дочерний процесс завершился с нераспознанным состоянием %d"
-
-#~ msgid ""
-#~ "  %s [ OPTION ... ]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "  %s [ ОПЦИЯ ... ]\n"
-#~ "\n"
-
-#~ msgid "%s: argument required\n"
-#~ msgstr "%s: требуется аргумент\n"
