@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres-83-fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-20 18:19+0000\n"
-"PO-Revision-Date: 2012-07-22 18:04+0100\n"
+"POT-Creation-Date: 2012-07-26 19:18+0000\n"
+"PO-Revision-Date: 2012-07-27 19:45+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team:  <pgsql-fr-generale@postgresql.org>\n"
 "Language: \n"
@@ -622,7 +622,7 @@ msgstr "le PID %d dans la demande d'annulation ne correspond à aucun processus"
 #: utils/adt/oracle_compat.c:128
 #: utils/adt/oracle_compat.c:176
 #: lib/stringinfo.c:245
-#: commands/sequence.c:903
+#: commands/sequence.c:908
 #: libpq/auth.c:437
 #: libpq/auth.c:821
 #: libpq/auth.c:889
@@ -3346,7 +3346,8 @@ msgstr ""
 #: tcop/postgres.c:4116
 #: commands/user.c:914
 #: nodes/print.c:83
-#: storage/lmgr/deadlock.c:918
+#: storage/lmgr/proc.c:927
+#: storage/lmgr/deadlock.c:926
 #: catalog/pg_shdepend.c:676
 #, c-format
 msgid "%s"
@@ -4717,7 +4718,7 @@ msgstr "la valeur pour le domaine %s viole la contrainte de vérification « %s »"
 #: commands/tablecmds.c:4728
 #: commands/tablecmds.c:4862
 #: commands/analyze.c:259
-#: commands/sequence.c:1251
+#: commands/sequence.c:1284
 #: commands/copy.c:3372
 #: commands/comment.c:577
 #: parser/analyze.c:1569
@@ -4995,7 +4996,7 @@ msgid "PID %d is not a PostgreSQL server process"
 msgstr "le PID %d n'est pas un processus du serveur PostgreSQL"
 
 #: utils/adt/misc.c:105
-#: storage/lmgr/proc.c:920
+#: storage/lmgr/proc.c:937
 #, c-format
 msgid "could not send signal to process %d: %m"
 msgstr "n'a pas pu envoyer le signal au processus %d : %m"
@@ -6366,7 +6367,7 @@ msgstr "la séquence « %s » n'existe pas, poursuite du traitement"
 
 #: tcop/utility.c:85
 #: commands/tablecmds.c:1584
-#: commands/sequence.c:920
+#: commands/sequence.c:925
 #: commands/comment.c:507
 #: catalog/aclchk.c:587
 #, c-format
@@ -8395,7 +8396,7 @@ msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "la contrainte « %s » de la relation « %s » existe déjà"
 
 #: commands/tablecmds.c:3903
-#: commands/sequence.c:1233
+#: commands/sequence.c:1266
 #, c-format
 msgid "referenced relation \"%s\" is not a table"
 msgstr "la relation référencée « %s » n'est pas une table"
@@ -8743,49 +8744,49 @@ msgstr "la conversion « %s » n'existe pas, poursuite du traitement"
 msgid "conversion \"%s\" already exists in schema \"%s\""
 msgstr "la conversion « %s » existe déjà dans le schéma « %s »"
 
-#: commands/sequence.c:442
-#: commands/sequence.c:637
-#: commands/sequence.c:681
-#: commands/sequence.c:717
+#: commands/sequence.c:437
+#: commands/sequence.c:647
+#: commands/sequence.c:691
+#: commands/sequence.c:728
 #: catalog/aclchk.c:1400
 #, c-format
 msgid "permission denied for sequence %s"
 msgstr "droit refusé pour la séquence %s"
 
-#: commands/sequence.c:522
+#: commands/sequence.c:516
 #, c-format
 msgid "nextval: reached maximum value of sequence \"%s\" (%s)"
 msgstr "nextval : valeur maximale de la séquence « %s » (%s) atteinte"
 
-#: commands/sequence.c:545
+#: commands/sequence.c:539
 #, c-format
 msgid "nextval: reached minimum value of sequence \"%s\" (%s)"
 msgstr "nextval : valeur minimale de la séquence « %s » (%s) atteinte"
 
-#: commands/sequence.c:643
+#: commands/sequence.c:653
 #, c-format
 msgid "currval of sequence \"%s\" is not yet defined in this session"
 msgstr ""
 "la valeur courante (currval) de la séquence « %s » n'est pas encore définie\n"
 "dans cette session"
 
-#: commands/sequence.c:662
-#: commands/sequence.c:670
+#: commands/sequence.c:672
+#: commands/sequence.c:680
 msgid "lastval is not yet defined in this session"
 msgstr "la dernière valeur (lastval) n'est pas encore définie dans cette session"
 
-#: commands/sequence.c:734
+#: commands/sequence.c:745
 #, c-format
 msgid "setval: value %s is out of bounds for sequence \"%s\" (%s..%s)"
 msgstr "setval : la valeur %s est en dehors des limites de la séquence « %s » (%s..%s)"
 
-#: commands/sequence.c:1007
-#: commands/sequence.c:1020
-#: commands/sequence.c:1028
-#: commands/sequence.c:1036
-#: commands/sequence.c:1044
-#: commands/sequence.c:1052
-#: commands/sequence.c:1060
+#: commands/sequence.c:1022
+#: commands/sequence.c:1035
+#: commands/sequence.c:1043
+#: commands/sequence.c:1051
+#: commands/sequence.c:1059
+#: commands/sequence.c:1067
+#: commands/sequence.c:1075
 #: commands/functioncmds.c:348
 #: commands/functioncmds.c:436
 #: commands/functioncmds.c:444
@@ -8828,43 +8829,43 @@ msgstr "setval : la valeur %s est en dehors des limites de la séquence « %s » (%
 msgid "conflicting or redundant options"
 msgstr "options en conflit ou redondantes"
 
-#: commands/sequence.c:1075
+#: commands/sequence.c:1097
 msgid "INCREMENT must not be zero"
 msgstr "la valeur INCREMENT ne doit pas être zéro"
 
-#: commands/sequence.c:1121
+#: commands/sequence.c:1153
 #, c-format
 msgid "MINVALUE (%s) must be less than MAXVALUE (%s)"
 msgstr "la valeur MINVALUE (%s) doit être moindre que la valeur MAXVALUE (%s)"
 
-#: commands/sequence.c:1152
+#: commands/sequence.c:1184
 #, c-format
 msgid "START value (%s) cannot be less than MINVALUE (%s)"
 msgstr "la valeur START (%s) ne peut pas être plus petite que celle de MINVALUE (%s)"
 
-#: commands/sequence.c:1164
+#: commands/sequence.c:1196
 #, c-format
 msgid "START value (%s) cannot be greater than MAXVALUE (%s)"
 msgstr "la valeur START (%s) ne peut pas être plus grande que celle de MAXVALUE (%s)"
 
-#: commands/sequence.c:1179
+#: commands/sequence.c:1211
 #, c-format
 msgid "CACHE (%s) must be greater than zero"
 msgstr "la valeur CACHE (%s) doit être plus grande que zéro"
 
-#: commands/sequence.c:1210
+#: commands/sequence.c:1243
 msgid "invalid OWNED BY option"
 msgstr "option OWNED BY invalide"
 
-#: commands/sequence.c:1211
+#: commands/sequence.c:1244
 msgid "Specify OWNED BY table.column or OWNED BY NONE."
 msgstr "Indiquer OWNED BY table.colonne ou OWNED BY NONE."
 
-#: commands/sequence.c:1240
+#: commands/sequence.c:1273
 msgid "sequence must have same owner as table it is linked to"
 msgstr "la séquence doit avoir le même propriétaire que la table avec laquelle elle est liée"
 
-#: commands/sequence.c:1244
+#: commands/sequence.c:1277
 msgid "sequence must be in same schema as table it is linked to"
 msgstr "la séquence doit être dans le même schéma que la table avec laquelle elle est liée"
 
@@ -12472,31 +12473,41 @@ msgstr "n'a pas pu ouvrir le segment %u de la relation %u/%u/%u (bloc cible %u) 
 msgid "could not seek to end of segment %u of relation %u/%u/%u: %m"
 msgstr "n'a pas pu se déplacer à la fin du segment %u de la relation %u/%u/%u : %m"
 
-#: storage/lmgr/proc.c:954
+#: storage/lmgr/proc.c:915
+#, c-format
+msgid "Process %d waits for %s on %s"
+msgstr "Le processus %d attend %s sur %s"
+
+#: storage/lmgr/proc.c:925
+#, c-format
+msgid "sending cancel to blocking autovacuum PID %d"
+msgstr "envoi d'une annulation à l'autovacuum bloquant de PID %d"
+
+#: storage/lmgr/proc.c:971
 #, c-format
 msgid "process %d avoided deadlock for %s on %s by rearranging queue order after %ld.%03d ms"
 msgstr ""
 "le processus %d a évité un verrou mortel pour %s sur %s en modifiant l'ordre\n"
 "de la queue après %ld.%03d ms"
 
-#: storage/lmgr/proc.c:966
+#: storage/lmgr/proc.c:983
 #, c-format
 msgid "process %d detected deadlock while waiting for %s on %s after %ld.%03d ms"
 msgstr ""
 "le processus %d a détecté un verrou mortel alors qu'il était en attente de\n"
 "%s sur %s après %ld.%03d ms"
 
-#: storage/lmgr/proc.c:972
+#: storage/lmgr/proc.c:989
 #, c-format
 msgid "process %d still waiting for %s on %s after %ld.%03d ms"
 msgstr "le processus %d est toujours en attente de %s sur %s après %ld.%03d ms"
 
-#: storage/lmgr/proc.c:976
+#: storage/lmgr/proc.c:993
 #, c-format
 msgid "process %d acquired %s on %s after %ld.%03d ms"
 msgstr "le processus %d a acquis %s sur %s après %ld.%03d ms"
 
-#: storage/lmgr/proc.c:992
+#: storage/lmgr/proc.c:1009
 #, c-format
 msgid "process %d failed to acquire %s on %s after %ld.%03d ms"
 msgstr "le processus %d a échoué pour l'acquisition de %s sur %s après %ld.%03d ms"
@@ -12512,12 +12523,12 @@ msgstr "Vous pourriez avoir besoin d'augmenter max_locks_per_transaction."
 msgid "Not enough memory for reassigning the prepared transaction's locks."
 msgstr "Pas assez de mémoire pour réaffecter les verrous des transactions préparées."
 
-#: storage/lmgr/deadlock.c:908
+#: storage/lmgr/deadlock.c:916
 #, c-format
 msgid "Process %d waits for %s on %s; blocked by process %d."
 msgstr "Le processus %d attend %s sur %s ; bloqué par le processus %d."
 
-#: storage/lmgr/deadlock.c:917
+#: storage/lmgr/deadlock.c:925
 msgid "deadlock detected"
 msgstr "Bloquage mortel détecté"
 
