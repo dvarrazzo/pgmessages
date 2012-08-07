@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL 9.2)\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-08-01 05:16+0000\n"
-"PO-Revision-Date: 2012-08-02 17:44-0400\n"
+"POT-Creation-Date: 2012-08-06 18:46+0000\n"
+"PO-Revision-Date: 2012-08-06 15:36-0400\n"
 "Last-Translator: Álvaro Herrera <alvherre@alvh.no-ip.org>\n"
 "Language-Team: Spanish <pgsql-es-ayuda@postgresql.org>\n"
 "Language: es\n"
@@ -135,7 +135,7 @@ msgstr ""
 "Opciones de conexión:\n"
 
 #: pg_basebackup.c:124 pg_receivexlog.c:68
-#, , c-format
+#, c-format
 msgid ""
 "  -s, --status-interval=INTERVAL\n"
 "                         time between status packets sent to server (in seconds)\n"
@@ -672,7 +672,12 @@ msgstr "%s: no se pudo escribir %u bytes al archivo WAL «%s»: %s\n"
 msgid "%s: unexpected termination of replication stream: %s"
 msgstr "%s: término inesperado del flujo de replicación: %s"
 
-#: receivelog.c:617 receivelog.c:625
+#: receivelog.c:617
+#, c-format
+msgid "%s: replication stream was terminated before stop point\n"
+msgstr "%s: el flujo de replicación terminó antes del punto de término\n"
+
+#: receivelog.c:625 receivelog.c:634
 #, c-format
 msgid "%s: could not close file %s: %s\n"
 msgstr "%s: no se pudo cerrar el archivo %s: %s\n"
