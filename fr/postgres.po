@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2012-08-10 13:12+0000\n"
-"PO-Revision-Date: 2012-08-10 23:52+0100\n"
+"PO-Revision-Date: 2012-08-11 08:38+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "Language: fr\n"
@@ -2164,6 +2164,9 @@ msgstr "Les journaux générés avec full_page_writes=off ont été rejoués depuis le
 #, c-format
 msgid "This means that the backup being taken on standby is corrupt and should not be used. Enable full_page_writes and run CHECKPOINT on the master, and then try an online backup again."
 msgstr ""
+"Cela signifie que la sauvegarde en cours de réalisation est corrompue et ne\n"
+"doit pas être utilisée. Activez full_page_writes et lancez CHECKPOINT sur le\n"
+"maître, puis recommencez la sauvegarde."
 
 #: access/transam/xlog.c:9405
 #, c-format
@@ -2200,6 +2203,8 @@ msgstr "le standby a été promu lors de la sauvegarde en ligne"
 #, c-format
 msgid "This means that the backup being taken is corrupt and should not be used. Try taking another online backup."
 msgstr ""
+"Cela signifie que la sauvegarde en cours de réalisation est corrompue et ne\n"
+"doit pas être utilisée. Recommencez la sauvegarde."
 
 #: access/transam/xlog.c:9669
 #, c-format
@@ -13202,22 +13207,22 @@ msgstr ""
 "code d'erreur %lu\n"
 
 #: port/win32/signal.c:189
-#, fuzzy, c-format
+#, c-format
 msgid "could not create signal listener pipe for PID %d: error code %lu"
 msgstr ""
 "n'a pas pu créer le tube d'écoute de signal pour l'identifiant de processus %d :\n"
-"code d'erreur %d"
+"code d'erreur %lu"
 
 #: port/win32/signal.c:269
 #: port/win32/signal.c:301
-#, fuzzy, c-format
+#, c-format
 msgid "could not create signal listener pipe: error code %lu; retrying\n"
-msgstr "n'a pas pu créer le tube d'écoute de signal : code d'erreur %d ; nouvelle tentative\n"
+msgstr "n'a pas pu créer le tube d'écoute de signal : code d'erreur %lu ; nouvelle tentative\n"
 
 #: port/win32/signal.c:312
-#, fuzzy, c-format
+#, c-format
 msgid "could not create signal dispatch thread: error code %lu\n"
-msgstr "n'a pas pu créer le thread de répartition des signaux : code d'erreur %d\n"
+msgstr "n'a pas pu créer le thread de répartition des signaux : code d'erreur %lu\n"
 
 #: port/win32_sema.c:94
 #, c-format
@@ -13863,9 +13868,11 @@ msgid "aborting startup due to startup process failure"
 msgstr "annulation du démarrage à cause d'un échec dans le processus de lancement"
 
 #: postmaster/postmaster.c:2378
-#, fuzzy, c-format
+#, c-format
 msgid "terminating all walsender processes to force cascaded standby(s) to update timeline and reconnect"
-msgstr "arrêt du processus walreceiver suite à l'expiration du délai de réplication"
+msgstr ""
+"arrêt de tous les processus walsender pour forcer les serveurs standby en\n"
+"cascade à mettre à jour la timeline et à se reconnecter"
 
 #: postmaster/postmaster.c:2408
 #, c-format
@@ -14057,18 +14064,18 @@ msgid "could not remove file \"%s\": %s\n"
 msgstr "n'a pas pu supprimer le fichier « %s » : %s\n"
 
 #: postmaster/postmaster.c:4942
-#, fuzzy, c-format
+#, c-format
 msgid "could not map view of backend variables: error code %lu\n"
 msgstr ""
-"n'a pas pu exécuter MapViewOfFile sur les variables de configuration : code\n"
-"d'erreur %d\n"
+"n'a pas pu exécuter \"map\" la vue des variables serveurs : code\n"
+"d'erreur %lu\n"
 
 #: postmaster/postmaster.c:4951
-#, fuzzy, c-format
+#, c-format
 msgid "could not unmap view of backend variables: error code %lu\n"
 msgstr ""
-"n'a pas pu exécuter UnmapViewOfFile sur les variables de configuration : code\n"
-"d'erreur %d\n"
+"n'a pas pu exécuter \"unmap\" sur la vue des variables serveurs : code\n"
+"d'erreur %lu\n"
 
 #: postmaster/postmaster.c:4958
 #, c-format
@@ -14341,9 +14348,11 @@ msgid "invalid standby handshake message type %d"
 msgstr "type %d du message de handshake du serveur en attente invalide"
 
 #: replication/walsender.c:399
-#, fuzzy, c-format
+#, c-format
 msgid "terminating walsender process to force cascaded standby to update timeline and reconnect"
-msgstr "arrêt du processus walreceiver suite à l'expiration du délai de réplication"
+msgstr ""
+"arrêt du processus walreceiver pour forcer le serveur standby en cascade à\n"
+"mettre à jour la timeline et à se reconnecter"
 
 #: replication/walsender.c:493
 #, c-format
@@ -16810,7 +16819,7 @@ msgstr "le total doit être supérieur à zéro"
 
 #: utils/adt/float.c:2753
 #: utils/adt/numeric.c:1225
-#, fuzzy, c-format
+#, c-format
 msgid "operand, lower bound, and upper bound cannot be NaN"
 msgstr "la limite inférieure et supérieure de l'opérande ne peuvent pas être NaN"
 
@@ -17876,9 +17885,11 @@ msgid "result of range union would not be contiguous"
 msgstr "le résultat de l'union d'intervalle pourrait ne pas être contigü"
 
 #: utils/adt/rangetypes.c:1508
-#, fuzzy, c-format
+#, c-format
 msgid "range lower bound must be less than or equal to range upper bound"
-msgstr "la limite inférieure ne peut pas être plus égale à la limite supérieure"
+msgstr ""
+"la limite inférieure de l'intervalle de valeurs doit être inférieure ou égale\n"
+"à la limite supérieure de l'intervalle de valeurs"
 
 #: utils/adt/rangetypes.c:1891
 #: utils/adt/rangetypes.c:1904
