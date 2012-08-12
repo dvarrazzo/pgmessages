@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PostgreSQL 9.1 beta2\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
 "POT-Creation-Date: 2012-08-12 08:34+0900\n"
-"PO-Revision-Date: 2012-08-12 09:20+0900\n"
+"PO-Revision-Date: 2012-08-12 18:39+0900\n"
 "Last-Translator: HOTTA Michihide <hotta@net-newbie.com>\n"
 "Language-Team: jpug-doc <jpug-doc@ml.postgresql.jp>\n"
 "Language: ja\n"
@@ -68,17 +68,17 @@ msgstr "子プロセスがシグナル %d で終了させられました。"
 #: ../../port/exec.c:546
 #, c-format
 msgid "child process exited with unrecognized status %d"
-msgstr "子プロセスが認識できないステータス %d により終了しました。"
+msgstr "子プロセスが不明な状態%dにより終了しました。"
 
 #: command.c:113
 #, c-format
 msgid "Invalid command \\%s. Try \\? for help.\n"
-msgstr "不正なコマンドです：\\%s。\\? でヘルプを参照してください。\n"
+msgstr "\\%sコマンドは無効です。\\? でヘルプを参照してください。\n"
 
 #: command.c:115
 #, c-format
 msgid "invalid command \\%s\n"
-msgstr "不正なコマンドです：\\%s：\n"
+msgstr "\\%sは無効なコマンドです：\n"
 
 #: command.c:126
 #, c-format
@@ -113,7 +113,7 @@ msgstr "ホスト\"%3$s\"上のポート\"%4$s\"のデータベース\"%1$s\"に
 #: command.c:509 command.c:579 command.c:1336
 #, c-format
 msgid "no query buffer\n"
-msgstr "クエリーバッファがありません。\n"
+msgstr "問い合わせバッファがありません。\n"
 
 #: command.c:542 command.c:2617
 #, c-format
@@ -132,17 +132,17 @@ msgstr "変更なし"
 #: command.c:707
 #, c-format
 msgid "%s: invalid encoding name or conversion procedure not found\n"
-msgstr "%s: 正しいエンコーディング名でないか、または変換用プロシージャが見つかりません。\n"
+msgstr "%s: 符号化方式名が無効、または変換用プロシージャが見つかりません。\n"
 
 #: command.c:787 command.c:825 command.c:839 command.c:856 command.c:963
 #: command.c:1013 command.c:1112 command.c:1316 command.c:1347
 #, c-format
 msgid "\\%s: missing required argument\n"
-msgstr "\\%s: 引数が不足しています。\n"
+msgstr "\\%s: 必要な引数がありません\n"
 
 #: command.c:888
 msgid "Query buffer is empty."
-msgstr "クエリーバッファは空です。"
+msgstr "問い合わせバッファは空です。"
 
 #: command.c:898
 msgid "Enter new password: "
@@ -155,7 +155,7 @@ msgstr "もう一度入力してください："
 #: command.c:903
 #, c-format
 msgid "Passwords didn't match.\n"
-msgstr "パスワードがマッチしません。\n"
+msgstr "パスワードが一致しません。\n"
 
 #: command.c:921
 #, c-format
@@ -169,12 +169,12 @@ msgstr "\\%s: 変数を設定している時にエラー\n"
 
 #: command.c:1033
 msgid "Query buffer reset (cleared)."
-msgstr "クエリーバッファがリセット（クリア）されました。"
+msgstr "問い合わせバッファがリセット（クリア）されました。"
 
 #: command.c:1046
 #, c-format
 msgid "Wrote history to file \"%s/%s\".\n"
-msgstr "ファイル \"%s/%s\" にヒストリを出力しました。\n"
+msgstr "ファイル\"%s/%s\"に履歴を出力しました。\n"
 
 #: command.c:1084 common.c:52 common.c:66 common.c:90 input.c:204
 #: mainloop.c:72 mainloop.c:234 print.c:142 print.c:156 tab-complete.c:3505
@@ -190,7 +190,7 @@ msgstr "\\%s: 環境変数の名前には\"=\"を含められません\n"
 #: command.c:1160
 #, c-format
 msgid "The server (version %d.%d) does not support showing function source.\n"
-msgstr "このサーバー(バージョン%d.%d)は関数ソースの表示をサポートしていません。\n"
+msgstr "このサーバ(バージョン%d.%d)は関数ソースの表示をサポートしていません。\n"
 
 #: command.c:1166
 #, c-format
@@ -491,7 +491,7 @@ msgid ""
 "**************************\n"
 "\n"
 msgstr ""
-"********* クエリー **********\n"
+"********* 問い合わせ ********\n"
 "%s\n"
 "*****************************\n"
 "\n"
@@ -513,10 +513,9 @@ msgid ""
 "%s\n"
 "***(press return to proceed or enter x and return to cancel)********************\n"
 msgstr ""
-"***(シングルステップモード: クエリーを検査してください)****************************************\n"
+"***(シングルステップモード: 問い合わせを検査してください)********\n"
 "%s\n"
-"***([Enter] を押して進むか、x [Enter] でキャンセル)*******\n"
-"*******************\n"
+"***([Enter] を押して進むか、x [Enter] でキャンセル)**************\n"
 
 #: common.c:913
 #, c-format
@@ -1573,7 +1572,7 @@ msgstr "  -e, --echo-queries       サーバーへ送信したコマンドを表
 #: help.c:106
 #, c-format
 msgid "  -E, --echo-hidden        display queries that internal commands generate\n"
-msgstr "  -E, --echo-hidden        内部コマンドが生成したクエリーを表示\n"
+msgstr "  -E, --echo-hidden        内部コマンドが生成した問い合わせを表示\n"
 
 #: help.c:107
 #, c-format
@@ -1588,17 +1587,17 @@ msgstr "  -n, --no-readline        拡張コマンドライン編集機能(readl
 #: help.c:109
 #, c-format
 msgid "  -o, --output=FILENAME    send query results to file (or |pipe)\n"
-msgstr "  -o, --output=ファイル名  クエリーの結果をファイル(または |パイプ)に送る\n"
+msgstr "  -o, --output=ファイル名  問い合わせ結果をファイル(または |パイプ)に送る\n"
 
 #: help.c:110
 #, c-format
 msgid "  -q, --quiet              run quietly (no messages, only query output)\n"
-msgstr "  -q, --quiet              静かに実行(メッセージなしで、クエリー出力のみ)\n"
+msgstr "  -q, --quiet              静かに実行(メッセージなしで、問い合わせの出力のみ)\n"
 
 #: help.c:111
 #, c-format
 msgid "  -s, --single-step        single-step mode (confirm each query)\n"
-msgstr "  -s, --single-step        シングルステップモード(各クエリーごとに確認)\n"
+msgstr "  -s, --single-step        シングルステップモード(各問い合わせごとに確認)\n"
 
 #: help.c:112
 #, c-format
@@ -1753,7 +1752,7 @@ msgstr "  \\copyright             PostgreSQL の使い方と配布条件を表�
 #: help.c:171
 #, c-format
 msgid "  \\g [FILE] or ;         execute query (and send results to file or |pipe)\n"
-msgstr "  \\g [ファイル] または ';'  クエリー実行（し、結果をファイルまたは |パイプ へ書き出す)\n"
+msgstr "  \\g [ファイル] または ';'  問い合わせを実行（し、結果をファイルまたは |パイプ へ書き出す)\n"
 
 #: help.c:172
 #, c-format
@@ -1768,12 +1767,12 @@ msgstr "  \\q                     psql を終了する\n"
 #: help.c:176
 #, c-format
 msgid "Query Buffer\n"
-msgstr "クエリーバッファ\n"
+msgstr "問い合わせバッファ\n"
 
 #: help.c:177
 #, c-format
 msgid "  \\e [FILE] [LINE]       edit the query buffer (or file) with external editor\n"
-msgstr "  \\e [ファイル] [行番号] 現在のクエリーバッファ(やファイル)を外部エディタで編集する\n"
+msgstr "  \\e [ファイル] [行番号] 現在の問い合わせバッファ(やファイル)を外部エディタで編集する\n"
 
 #: help.c:178
 #, c-format
@@ -1783,12 +1782,12 @@ msgstr "  \\e [関数名 [行番号]]   関数定義を外部エディタで編�
 #: help.c:179
 #, c-format
 msgid "  \\p                     show the contents of the query buffer\n"
-msgstr "  \\p                     クエリーバッファの内容を表示する\n"
+msgstr "  \\p                     問い合わせバッファの内容を表示する\n"
 
 #: help.c:180
 #, c-format
 msgid "  \\r                     reset (clear) the query buffer\n"
-msgstr "  \\r                     クエリーバッファをリセット（クリア）する\n"
+msgstr "  \\r                     問い合わせバッファをリセット（クリア）する\n"
 
 #: help.c:182
 #, c-format
@@ -1798,7 +1797,7 @@ msgstr "  \\s [ファイル]          ヒストリを表示またはファイル
 #: help.c:184
 #, c-format
 msgid "  \\w FILE                write query buffer to file\n"
-msgstr "  \\w ファイル            クエリーバッファの内容をファイルに書き出す\n"
+msgstr "  \\w ファイル            問い合わせバッファの内容をファイルに書き出す\n"
 
 #: help.c:187
 #, c-format
@@ -1808,9 +1807,7 @@ msgstr "入出力\n"
 #: help.c:188
 #, c-format
 msgid "  \\copy ...              perform SQL COPY with data stream to the client host\n"
-msgstr ""
-"  \\copy ...              クライアントホストに対し、データストリーム\n"
-"                          を使って SQL コピーを行う\n"
+msgstr "  \\copy ...              クライアントホストに対し、データストリームを使ってSQLコピーを行う\n"
 
 #: help.c:189
 #, c-format
@@ -1830,12 +1827,12 @@ msgstr "  \\ir ファイル          \\iと同じ。ただし現在のスクリ�
 #: help.c:192
 #, c-format
 msgid "  \\o [FILE]              send all query results to file or |pipe\n"
-msgstr "  \\o [ファイル]          すべてのクエリーの結果をファイルまたは |パイプ へ送る\n"
+msgstr "  \\o [ファイル]          すべての問い合わせの結果をファイルまたは |パイプ へ送る\n"
 
 #: help.c:193
 #, c-format
 msgid "  \\qecho [STRING]        write string to query output stream (see \\o)\n"
-msgstr "  \\qecho [文字列]        文字列をクエリー出力ストリームに出力(\\o を参照)\n"
+msgstr "  \\qecho [文字列]        文字列を問い合わせ出力ストリームに出力(\\o を参照)\n"
 
 #: help.c:196
 #, c-format
@@ -2045,14 +2042,12 @@ msgstr "  \\a                     出力モードの 'unaligned' / 'aligned' を
 #: help.c:239
 #, c-format
 msgid "  \\C [STRING]            set table title, or unset if none\n"
-msgstr "  \\C タイトル            テーブルのタイトルをセットする。指定がなければ解除\n"
+msgstr "  \\C タイトル            テーブルのタイトルを設定する。指定がなければ解除\n"
 
 #: help.c:240
 #, c-format
 msgid "  \\f [STRING]            show or set field separator for unaligned query output\n"
-msgstr ""
-"  \\f [文字列]            クエリー出力の際に桁揃えを行わない(unaligned)場合に\n"
-"                          使用するフィールド区切り文字を表示または設定する\n"
+msgstr "  \\f [文字列]            桁揃えを行わない(unaligned)問い合わせ出力におけるフィールド区切り文字を表示または設定\n"
 
 #: help.c:241
 #, c-format
@@ -2268,7 +2263,7 @@ msgstr ""
 "       \\copyright とタイプすると、配布条件を表示します。\n"
 "       \\h とタイプすると、SQL コマンドのヘルプを表示します。\n"
 "       \\? とタイプすると、psql コマンドのヘルプを表示します。\n"
-"       \\g と打つかセミコロンで閉じると、クエリーを実行します。\n"
+"       \\g と打つかセミコロンで閉じると、問い合わせを実行します。\n"
 "       \\q で終了します。\n"
 
 #: print.c:302
@@ -2863,7 +2858,7 @@ msgstr "ファイル名"
 #: sql_help.c:1202 sql_help.c:1809 sql_help.c:2045 sql_help.c:2063
 #: sql_help.c:2565
 msgid "query"
-msgstr "クエリー"
+msgstr "問い合わせ"
 
 #: sql_help.c:1205 sql_help.c:2412
 msgid "where option can be one of:"
@@ -3285,7 +3280,7 @@ msgstr "照合順序"
 #: sql_help.c:2075 sql_help.c:2561 sql_help.c:2933 sql_help.c:3003
 #: sql_help.c:3139 sql_help.c:3218 sql_help.c:3296
 msgid "with_query"
-msgstr "WITH クエリー"
+msgstr "WITH問い合わせ"
 
 #: sql_help.c:2077 sql_help.c:2952 sql_help.c:2955 sql_help.c:2958
 #: sql_help.c:2962 sql_help.c:3158 sql_help.c:3161 sql_help.c:3164
@@ -3424,7 +3419,7 @@ msgstr "列の別名"
 #: sql_help.c:2957 sql_help.c:2974 sql_help.c:3163 sql_help.c:3180
 #: sql_help.c:3320 sql_help.c:3337
 msgid "with_query_name"
-msgstr "WITH クエリー名"
+msgstr "WITH問い合わせ名"
 
 #: sql_help.c:2961 sql_help.c:2966 sql_help.c:3167 sql_help.c:3172
 #: sql_help.c:3324 sql_help.c:3329
@@ -3450,7 +3445,7 @@ msgstr "結合列"
 
 #: sql_help.c:2973 sql_help.c:3179 sql_help.c:3336
 msgid "and with_query is:"
-msgstr "WITH クエリー："
+msgstr "WITH問い合わせ："
 
 #: sql_help.c:2977 sql_help.c:3183 sql_help.c:3340
 msgid "values"
@@ -3738,7 +3733,7 @@ msgstr "新しいテーブルを定義する"
 
 #: sql_help.h:502 sql_help.h:867
 msgid "define a new table from the results of a query"
-msgstr "クエリーの結果から新しいテーブルを生成する"
+msgstr "問い合わせ結果から新しいテーブルを生成する"
 
 #: sql_help.h:507
 msgid "define a new tablespace"
@@ -3930,7 +3925,7 @@ msgstr "ステートメントの実行プランを表示する"
 
 #: sql_help.h:762
 msgid "retrieve rows from a query using a cursor"
-msgstr "カーソルを使ってクエリーから行を取り出す"
+msgstr "カーソルを使って問い合わせから行を取り出す"
 
 #: sql_help.h:767
 msgid "define access privileges"
