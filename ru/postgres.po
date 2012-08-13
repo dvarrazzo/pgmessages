@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.0\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-08-06 12:03+0000\n"
-"PO-Revision-Date: 2012-08-06 17:22+0400\n"
+"POT-Creation-Date: 2012-08-10 22:33+0000\n"
+"PO-Revision-Date: 2012-08-13 09:52+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -338,7 +338,7 @@ msgstr "Команда архивации с ошибкой: %s"
 msgid "archive command was terminated by exception 0x%X"
 msgstr "команда архивации была прервана исключением 0x%X"
 
-#: postmaster/pgarch.c:579 postmaster/postmaster.c:2851
+#: postmaster/pgarch.c:579 postmaster/postmaster.c:2856
 msgid ""
 "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
 msgstr ""
@@ -416,6 +416,11 @@ msgstr ""
 "max_connections\n"
 
 #: postmaster/postmaster.c:734
+#, c-format
+msgid "%s: max_wal_senders must be less than max_connections\n"
+msgstr "%s: параметр max_wal_senders должен быть меньше max_connections\n"
+
+#: postmaster/postmaster.c:739
 msgid ""
 "WAL archival (archive_mode=on) requires wal_level \"archive\" or "
 "\"hot_standby\""
@@ -423,7 +428,7 @@ msgstr ""
 "Для архивации WAL (archive_mode=on) wal_level должен быть \"archive\" или "
 "\"hot_standby\""
 
-#: postmaster/postmaster.c:737
+#: postmaster/postmaster.c:742
 msgid ""
 "WAL streaming (max_wal_senders > 0) requires wal_level \"archive\" or "
 "\"hot_standby\""
@@ -431,58 +436,58 @@ msgstr ""
 "Для потоковой трансляции WAL (max_wal_senders > 0) wal_level должен быть "
 "\"archive\" или \"hot_standby\""
 
-#: postmaster/postmaster.c:745
+#: postmaster/postmaster.c:750
 #, c-format
 msgid "%s: invalid datetoken tables, please fix\n"
 msgstr "%s: ошибка в таблицах маркеров времени, требуется исправление\n"
 
-#: postmaster/postmaster.c:851
+#: postmaster/postmaster.c:856
 msgid "invalid list syntax for \"listen_addresses\""
 msgstr "неверный формат списка для \"listen_addresses\""
 
-#: postmaster/postmaster.c:872
+#: postmaster/postmaster.c:877
 #, c-format
 msgid "could not create listen socket for \"%s\""
 msgstr "не удалось создать принимающий сокет для \"%s\""
 
-#: postmaster/postmaster.c:878
+#: postmaster/postmaster.c:883
 msgid "could not create any TCP/IP sockets"
 msgstr "не удалось создать сокеты TCP/IP"
 
-#: postmaster/postmaster.c:929
+#: postmaster/postmaster.c:934
 msgid "could not create Unix-domain socket"
 msgstr "не удалось создать доменный сокет UNIX"
 
-#: postmaster/postmaster.c:937
+#: postmaster/postmaster.c:942
 msgid "no socket created for listening"
 msgstr "отсутствуют принимающие сокеты"
 
-#: postmaster/postmaster.c:968
+#: postmaster/postmaster.c:973
 msgid "could not create I/O completion port for child queue"
 msgstr "не удалось создать порт завершения ввода/вывода для очереди потомков"
 
-#: postmaster/postmaster.c:1012
+#: postmaster/postmaster.c:1017
 #, c-format
 msgid "%s: could not write external PID file \"%s\": %s\n"
 msgstr "%s: не удалось записать внешний файл PID \"%s\": %s\n"
 
-#: postmaster/postmaster.c:1080 utils/init/postinit.c:197
+#: postmaster/postmaster.c:1085 utils/init/postinit.c:197
 msgid "could not load pg_hba.conf"
 msgstr "не удалось загрузить pg_hba.conf"
 
-#: postmaster/postmaster.c:1127
+#: postmaster/postmaster.c:1132
 #, c-format
 msgid "%s: could not locate matching postgres executable"
 msgstr "%s: подходящий исполняемый файл postgres не найден"
 
-#: postmaster/postmaster.c:1148 utils/misc/tzparser.c:345 utils/adt/misc.c:213
+#: postmaster/postmaster.c:1153 utils/misc/tzparser.c:345 utils/adt/misc.c:213
 #: utils/adt/genfile.c:244 commands/tablespace.c:684 commands/tablespace.c:694
 #: storage/file/fd.c:1600 storage/file/copydir.c:67 storage/file/copydir.c:106
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "не удалось открыть каталог \"%s\": %m"
 
-#: postmaster/postmaster.c:1150 utils/misc/tzparser.c:347
+#: postmaster/postmaster.c:1155 utils/misc/tzparser.c:347
 #, c-format
 msgid ""
 "This may indicate an incomplete PostgreSQL installation, or that the file "
@@ -491,41 +496,41 @@ msgstr ""
 "Возможно, PostgreSQL установлен не полностью или файла \"%s\" нет в "
 "положенном месте."
 
-#: postmaster/postmaster.c:1178
+#: postmaster/postmaster.c:1183
 #, c-format
 msgid "data directory \"%s\" does not exist"
 msgstr "каталог данных \"%s\" не существует"
 
-#: postmaster/postmaster.c:1183
+#: postmaster/postmaster.c:1188
 #, c-format
 msgid "could not read permissions of directory \"%s\": %m"
 msgstr "не удалось считать права на каталог \"%s\": %m"
 
-#: postmaster/postmaster.c:1191
+#: postmaster/postmaster.c:1196
 #, c-format
 msgid "specified data directory \"%s\" is not a directory"
 msgstr "указанный каталог данных \"%s\" не существует"
 
-#: postmaster/postmaster.c:1207
+#: postmaster/postmaster.c:1212
 #, c-format
 msgid "data directory \"%s\" has wrong ownership"
 msgstr "владелец каталога данных \"%s\" определён неверно"
 
-#: postmaster/postmaster.c:1209
+#: postmaster/postmaster.c:1214
 msgid "The server must be started by the user that owns the data directory."
 msgstr ""
 "Сервер должен запускать пользователь, являющийся владельцем каталога данных."
 
-#: postmaster/postmaster.c:1229
+#: postmaster/postmaster.c:1234
 #, c-format
 msgid "data directory \"%s\" has group or world access"
 msgstr "к каталогу данных \"%s\" имеют доступ все или группа"
 
-#: postmaster/postmaster.c:1231
+#: postmaster/postmaster.c:1236
 msgid "Permissions should be u=rwx (0700)."
 msgstr "Права должны быть: u=rwx (0700)."
 
-#: postmaster/postmaster.c:1242
+#: postmaster/postmaster.c:1247
 #, c-format
 msgid ""
 "%s: could not find the database system\n"
@@ -536,94 +541,94 @@ msgstr ""
 "Ожидалось найти её в каталоге \"%s\",\n"
 "но открыть файл \"%s\" не удалось: %s\n"
 
-#: postmaster/postmaster.c:1278
+#: postmaster/postmaster.c:1283
 #, c-format
 msgid "%s: could not open file \"%s\": %s\n"
 msgstr "%s: не удалось открыть файл \"%s\": %s\n"
 
-#: postmaster/postmaster.c:1285
+#: postmaster/postmaster.c:1290
 #, c-format
 msgid "%s: could not open log file \"%s/%s\": %s\n"
 msgstr "%s: не удалось открыть файл протокола \"%s/%s\": %s\n"
 
-#: postmaster/postmaster.c:1296
+#: postmaster/postmaster.c:1301
 #, c-format
 msgid "%s: could not fork background process: %s\n"
 msgstr "%s: не удалось породить фоновый процесс: %s\n"
 
-#: postmaster/postmaster.c:1318
+#: postmaster/postmaster.c:1323
 #, c-format
 msgid "%s: could not dissociate from controlling TTY: %s\n"
 msgstr "%s: не удалось отключиться от управления TTY: %s\n"
 
-#: postmaster/postmaster.c:1413
+#: postmaster/postmaster.c:1418
 #, c-format
 msgid "select() failed in postmaster: %m"
 msgstr "сбой select() в postmaster'е: %m"
 
-#: postmaster/postmaster.c:1570 postmaster/postmaster.c:1601
+#: postmaster/postmaster.c:1575 postmaster/postmaster.c:1606
 msgid "incomplete startup packet"
 msgstr "неполный стартовый пакет"
 
-#: postmaster/postmaster.c:1582
+#: postmaster/postmaster.c:1587
 msgid "invalid length of startup packet"
 msgstr "неверная длина стартового пакета"
 
-#: postmaster/postmaster.c:1639
+#: postmaster/postmaster.c:1644
 #, c-format
 msgid "failed to send SSL negotiation response: %m"
 msgstr "не удалось отправить ответ в процессе SSL-согласования: %m"
 
-#: postmaster/postmaster.c:1668
+#: postmaster/postmaster.c:1673
 #, c-format
 msgid "unsupported frontend protocol %u.%u: server supports %u.0 to %u.%u"
 msgstr ""
 "неподдерживаемый протокол клиентского приложения %u.%u; сервер поддерживает "
 "%u.0 - %u.%u "
 
-#: postmaster/postmaster.c:1719
+#: postmaster/postmaster.c:1724
 msgid "invalid value for boolean option \"replication\""
 msgstr "неверное значение логического параметра \"replication\""
 
-#: postmaster/postmaster.c:1739
+#: postmaster/postmaster.c:1744
 msgid "invalid startup packet layout: expected terminator as last byte"
 msgstr ""
 "неверная структура стартового пакета: последним байтом должен быть терминатор"
 
-#: postmaster/postmaster.c:1767
+#: postmaster/postmaster.c:1772
 msgid "no PostgreSQL user name specified in startup packet"
 msgstr "в стартовом пакете не указано имя пользователя PostgreSQL"
 
-#: postmaster/postmaster.c:1824
+#: postmaster/postmaster.c:1829
 msgid "the database system is starting up"
 msgstr "система баз данных запускается"
 
-#: postmaster/postmaster.c:1829
+#: postmaster/postmaster.c:1834
 msgid "the database system is shutting down"
 msgstr "система баз данных останавливается"
 
-#: postmaster/postmaster.c:1834
+#: postmaster/postmaster.c:1839
 msgid "the database system is in recovery mode"
 msgstr "система баз данных в режиме восстановления"
 
-#: postmaster/postmaster.c:1839 storage/ipc/procarray.c:271
+#: postmaster/postmaster.c:1844 storage/ipc/procarray.c:271
 #: storage/ipc/sinvaladt.c:302 storage/lmgr/proc.c:292
 msgid "sorry, too many clients already"
 msgstr "извините, уже слишком много клиентов"
 
-#: postmaster/postmaster.c:1901
+#: postmaster/postmaster.c:1906
 #, c-format
 msgid "wrong key in cancel request for process %d"
 msgstr "неправильный ключ в запросе на отмену процесса %d"
 
-#: postmaster/postmaster.c:1909
+#: postmaster/postmaster.c:1914
 #, c-format
 msgid "PID %d in cancel request did not match any process"
 msgstr "процесс с кодом %d, полученным в запросе на отмену, не найден"
 
-#: postmaster/postmaster.c:1979 postmaster/postmaster.c:2012
-#: postmaster/postmaster.c:3199 postmaster/postmaster.c:3881
-#: postmaster/postmaster.c:3967 postmaster/postmaster.c:4555
+#: postmaster/postmaster.c:1984 postmaster/postmaster.c:2017
+#: postmaster/postmaster.c:3204 postmaster/postmaster.c:3886
+#: postmaster/postmaster.c:3972 postmaster/postmaster.c:4560
 #: utils/hash/dynahash.c:363 utils/hash/dynahash.c:435
 #: utils/hash/dynahash.c:929 utils/misc/guc.c:2915 utils/misc/guc.c:2928
 #: utils/misc/guc.c:2941 utils/init/miscinit.c:149 utils/init/miscinit.c:170
@@ -642,142 +647,142 @@ msgstr "процесс с кодом %d, полученным в запросе 
 msgid "out of memory"
 msgstr "нехватка памяти"
 
-#: postmaster/postmaster.c:2115
+#: postmaster/postmaster.c:2120
 msgid "received SIGHUP, reloading configuration files"
 msgstr "получен SIGHUP, файлы конфигурации перезагружаются"
 
-#: postmaster/postmaster.c:2138
+#: postmaster/postmaster.c:2143
 msgid "pg_hba.conf not reloaded"
 msgstr "pg_hba.conf не перезагружен"
 
-#: postmaster/postmaster.c:2181
+#: postmaster/postmaster.c:2186
 msgid "received smart shutdown request"
 msgstr "получен запрос на \"вежливое\" выключение"
 
-#: postmaster/postmaster.c:2228
+#: postmaster/postmaster.c:2233
 msgid "received fast shutdown request"
 msgstr "получен запрос на быстрое выключение"
 
-#: postmaster/postmaster.c:2246
+#: postmaster/postmaster.c:2251
 msgid "aborting any active transactions"
 msgstr "прерывание всех активных транзакций"
 
-#: postmaster/postmaster.c:2275
+#: postmaster/postmaster.c:2280
 msgid "received immediate shutdown request"
 msgstr "получен запрос на немедленное выключение"
 
-#: postmaster/postmaster.c:2351 postmaster/postmaster.c:2384
+#: postmaster/postmaster.c:2356 postmaster/postmaster.c:2389
 msgid "startup process"
 msgstr "стартовый процесс"
 
-#: postmaster/postmaster.c:2354
+#: postmaster/postmaster.c:2359
 msgid "aborting startup due to startup process failure"
 msgstr "прерывание запуска из-за ошибки в стартовом процессе"
 
-#: postmaster/postmaster.c:2418
+#: postmaster/postmaster.c:2423
 msgid "database system is ready to accept connections"
 msgstr "система БД готова принимать подключения"
 
-#: postmaster/postmaster.c:2473
+#: postmaster/postmaster.c:2478
 msgid "background writer process"
 msgstr "процесс фоновой записи"
 
-#: postmaster/postmaster.c:2489
+#: postmaster/postmaster.c:2494
 msgid "WAL writer process"
 msgstr "процесс записи WAL"
 
-#: postmaster/postmaster.c:2503
+#: postmaster/postmaster.c:2508
 msgid "WAL receiver process"
 msgstr "процесс считывания WAL"
 
-#: postmaster/postmaster.c:2518
+#: postmaster/postmaster.c:2523
 msgid "autovacuum launcher process"
 msgstr "процесс запуска автоочистки"
 
-#: postmaster/postmaster.c:2533
+#: postmaster/postmaster.c:2538
 msgid "archiver process"
 msgstr "процесс архивации"
 
-#: postmaster/postmaster.c:2549
+#: postmaster/postmaster.c:2554
 msgid "statistics collector process"
 msgstr "процесс сбора статистики"
 
-#: postmaster/postmaster.c:2563
+#: postmaster/postmaster.c:2568
 msgid "system logger process"
 msgstr "процесс системного протоколирования"
 
-#: postmaster/postmaster.c:2598 postmaster/postmaster.c:2614
-#: postmaster/postmaster.c:2621 postmaster/postmaster.c:2639
+#: postmaster/postmaster.c:2603 postmaster/postmaster.c:2619
+#: postmaster/postmaster.c:2626 postmaster/postmaster.c:2644
 msgid "server process"
 msgstr "процесс сервера"
 
-#: postmaster/postmaster.c:2675
+#: postmaster/postmaster.c:2680
 msgid "terminating any other active server processes"
 msgstr "завершение всех остальных активных серверных процессов"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2840
+#: postmaster/postmaster.c:2845
 #, c-format
 msgid "%s (PID %d) exited with exit code %d"
 msgstr "%s (PID %d) завершился с кодом выхода %d"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2849
+#: postmaster/postmaster.c:2854
 #, c-format
 msgid "%s (PID %d) was terminated by exception 0x%X"
 msgstr "%s (PID %d) был прерван исключением 0x%X"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2858
+#: postmaster/postmaster.c:2863
 #, c-format
 msgid "%s (PID %d) was terminated by signal %d: %s"
 msgstr "%s (PID %d) был завершён по сигналу %d: %s"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2868
+#: postmaster/postmaster.c:2873
 #, c-format
 msgid "%s (PID %d) was terminated by signal %d"
 msgstr "%s (PID %d) был завершён по сигналу %d"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2877
+#: postmaster/postmaster.c:2882
 #, c-format
 msgid "%s (PID %d) exited with unrecognized status %d"
 msgstr "%s (PID %d) завершился с неизвестным кодом состояния %d"
 
-#: postmaster/postmaster.c:3057
+#: postmaster/postmaster.c:3062
 msgid "abnormal database system shutdown"
 msgstr "аварийное выключение системы БД"
 
-#: postmaster/postmaster.c:3095
+#: postmaster/postmaster.c:3100
 msgid "all server processes terminated; reinitializing"
 msgstr "все серверные процессы завершены... переинициализация"
 
-#: postmaster/postmaster.c:3267
+#: postmaster/postmaster.c:3272
 #, c-format
 msgid "could not fork new process for connection: %m"
 msgstr "породить новый процесс для соединения не удалось: %m"
 
-#: postmaster/postmaster.c:3309
+#: postmaster/postmaster.c:3314
 msgid "could not fork new process for connection: "
 msgstr "породить новый процесс для соединения не удалось: "
 
-#: postmaster/postmaster.c:3423
+#: postmaster/postmaster.c:3428
 #, c-format
 msgid "connection received: host=%s port=%s"
 msgstr "принято подключение: узел=%s порт=%s"
 
-#: postmaster/postmaster.c:3428
+#: postmaster/postmaster.c:3433
 #, c-format
 msgid "connection received: host=%s"
 msgstr "принято подключение: узел=%s"
 
-#: postmaster/postmaster.c:3656 access/transam/xlog.c:2330
+#: postmaster/postmaster.c:3661 access/transam/xlog.c:2330
 #: access/transam/xlog.c:2463 access/transam/xlog.c:4304
 #: access/transam/xlog.c:8541 access/transam/xlog.c:8696
 #: storage/file/copydir.c:172 storage/smgr/md.c:284
@@ -785,7 +790,7 @@ msgstr "принято подключение: узел=%s"
 msgid "could not create file \"%s\": %m"
 msgstr "создать файл \"%s\" не удалось: %m"
 
-#: postmaster/postmaster.c:3666 postmaster/postmaster.c:3676
+#: postmaster/postmaster.c:3671 postmaster/postmaster.c:3681
 #: utils/misc/guc.c:7054 utils/misc/guc.c:7079 utils/init/miscinit.c:1054
 #: utils/init/miscinit.c:1063 utils/init/miscinit.c:1070
 #: access/transam/xlog.c:2362 access/transam/xlog.c:2495
@@ -795,83 +800,83 @@ msgstr "создать файл \"%s\" не удалось: %m"
 msgid "could not write to file \"%s\": %m"
 msgstr "записать в файл \"%s\" не удалось: %m"
 
-#: postmaster/postmaster.c:3695
+#: postmaster/postmaster.c:3700
 #, c-format
 msgid "could not execute server process \"%s\": %m"
 msgstr "запустить серверный процесс \"%s\" не удалось: %m"
 
-#: postmaster/postmaster.c:4217
+#: postmaster/postmaster.c:4222
 msgid "database system is ready to accept read only connections"
 msgstr "система БД готова к подключениям в режиме \"только чтение\""
 
-#: postmaster/postmaster.c:4458
+#: postmaster/postmaster.c:4463
 #, c-format
 msgid "could not fork startup process: %m"
 msgstr "породить стартовый процесс не удалось: %m"
 
-#: postmaster/postmaster.c:4462
+#: postmaster/postmaster.c:4467
 #, c-format
 msgid "could not fork background writer process: %m"
 msgstr "породить процесс фоновой записи не удалось: %m"
 
-#: postmaster/postmaster.c:4466
+#: postmaster/postmaster.c:4471
 #, c-format
 msgid "could not fork WAL writer process: %m"
 msgstr "породить процесс записи WAL не удалось: %m"
 
-#: postmaster/postmaster.c:4470
+#: postmaster/postmaster.c:4475
 #, c-format
 msgid "could not fork WAL receiver process: %m"
 msgstr "породить процесс считывания WAL не удалось: %m"
 
-#: postmaster/postmaster.c:4474
+#: postmaster/postmaster.c:4479
 #, c-format
 msgid "could not fork process: %m"
 msgstr "породить процесс не удалось: %m"
 
-#: postmaster/postmaster.c:4758
+#: postmaster/postmaster.c:4763
 #, c-format
 msgid "could not duplicate socket %d for use in backend: error code %d"
 msgstr ""
 "продублировать сокет %d для серверного процесса не удалось: код ошибки %d"
 
-#: postmaster/postmaster.c:4790
+#: postmaster/postmaster.c:4795
 #, c-format
 msgid "could not create inherited socket: error code %d\n"
 msgstr "создать наследуемый сокет не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:4819 postmaster/postmaster.c:4826
+#: postmaster/postmaster.c:4824 postmaster/postmaster.c:4831
 #, c-format
 msgid "could not read from backend variables file \"%s\": %s\n"
 msgstr "прочитать файл серверных переменных \"%s\" не удалось: %s\n"
 
-#: postmaster/postmaster.c:4835
+#: postmaster/postmaster.c:4840
 #, c-format
 msgid "could not remove file \"%s\": %s\n"
 msgstr "не удалось стереть файл \"%s\": %s\n"
 
-#: postmaster/postmaster.c:4852
+#: postmaster/postmaster.c:4857
 #, c-format
 msgid "could not map view of backend variables: error code %d\n"
 msgstr "отобразить файл серверных переменных не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:4861
+#: postmaster/postmaster.c:4866
 #, c-format
 msgid "could not unmap view of backend variables: error code %d\n"
 msgstr ""
 "отключить отображение файла серверных переменных не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:4868
+#: postmaster/postmaster.c:4873
 #, c-format
 msgid "could not close handle to backend parameter variables: error code %d\n"
 msgstr ""
 "закрыть указатель файла серверных переменных не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:5012
+#: postmaster/postmaster.c:5017
 msgid "could not read exit code for process\n"
 msgstr "прочитать код завершения процесса не удалось\n"
 
-#: postmaster/postmaster.c:5017
+#: postmaster/postmaster.c:5022
 msgid "could not post child completion status\n"
 msgstr "отправить состояние завершения потомка не удалось\n"
 
