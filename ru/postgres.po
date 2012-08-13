@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-08-06 11:52+0000\n"
-"PO-Revision-Date: 2012-08-06 17:37+0400\n"
+"POT-Creation-Date: 2012-08-11 17:22+0000\n"
+"PO-Revision-Date: 2012-08-13 10:09+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -330,7 +330,7 @@ msgstr "Команда архивации с ошибкой: %s"
 msgid "archive command was terminated by exception 0x%X"
 msgstr "команда архивации была прервана исключением 0x%X"
 
-#: postmaster/pgarch.c:579 postmaster/postmaster.c:2883
+#: postmaster/pgarch.c:579 postmaster/postmaster.c:2888
 msgid ""
 "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
 msgstr ""
@@ -408,6 +408,11 @@ msgstr ""
 "max_connections\n"
 
 #: postmaster/postmaster.c:741
+#, c-format
+msgid "%s: max_wal_senders must be less than max_connections\n"
+msgstr "%s: параметр max_wal_senders должен быть меньше max_connections\n"
+
+#: postmaster/postmaster.c:746
 msgid ""
 "WAL archival (archive_mode=on) requires wal_level \"archive\" or "
 "\"hot_standby\""
@@ -415,7 +420,7 @@ msgstr ""
 "Для архивации WAL (archive_mode=on) wal_level должен быть \"archive\" или "
 "\"hot_standby\""
 
-#: postmaster/postmaster.c:744
+#: postmaster/postmaster.c:749
 msgid ""
 "WAL streaming (max_wal_senders > 0) requires wal_level \"archive\" or "
 "\"hot_standby\""
@@ -423,58 +428,58 @@ msgstr ""
 "Для потоковой трансляции WAL (max_wal_senders > 0) wal_level должен быть "
 "\"archive\" или \"hot_standby\""
 
-#: postmaster/postmaster.c:752
+#: postmaster/postmaster.c:757
 #, c-format
 msgid "%s: invalid datetoken tables, please fix\n"
 msgstr "%s: ошибка в таблицах маркеров времени, требуется исправление\n"
 
-#: postmaster/postmaster.c:852
+#: postmaster/postmaster.c:857
 msgid "invalid list syntax for \"listen_addresses\""
 msgstr "неверный формат списка для \"listen_addresses\""
 
-#: postmaster/postmaster.c:882
+#: postmaster/postmaster.c:887
 #, c-format
 msgid "could not create listen socket for \"%s\""
 msgstr "не удалось создать принимающий сокет для \"%s\""
 
-#: postmaster/postmaster.c:888
+#: postmaster/postmaster.c:893
 msgid "could not create any TCP/IP sockets"
 msgstr "не удалось создать сокеты TCP/IP"
 
-#: postmaster/postmaster.c:939
+#: postmaster/postmaster.c:944
 msgid "could not create Unix-domain socket"
 msgstr "не удалось создать доменный сокет UNIX"
 
-#: postmaster/postmaster.c:947
+#: postmaster/postmaster.c:952
 msgid "no socket created for listening"
 msgstr "отсутствуют принимающие сокеты"
 
-#: postmaster/postmaster.c:986
+#: postmaster/postmaster.c:991
 msgid "could not create I/O completion port for child queue"
 msgstr "не удалось создать порт завершения ввода/вывода для очереди потомков"
 
-#: postmaster/postmaster.c:1030
+#: postmaster/postmaster.c:1035
 #, c-format
 msgid "%s: could not write external PID file \"%s\": %s\n"
 msgstr "%s: не удалось записать внешний файл PID \"%s\": %s\n"
 
-#: postmaster/postmaster.c:1098 utils/init/postinit.c:197
+#: postmaster/postmaster.c:1103 utils/init/postinit.c:197
 msgid "could not load pg_hba.conf"
 msgstr "не удалось загрузить pg_hba.conf"
 
-#: postmaster/postmaster.c:1151
+#: postmaster/postmaster.c:1156
 #, c-format
 msgid "%s: could not locate matching postgres executable"
 msgstr "%s: подходящий исполняемый файл postgres не найден"
 
-#: postmaster/postmaster.c:1172 utils/misc/tzparser.c:323 utils/adt/misc.c:213
+#: postmaster/postmaster.c:1177 utils/misc/tzparser.c:323 utils/adt/misc.c:213
 #: utils/adt/genfile.c:353 commands/tablespace.c:689 commands/tablespace.c:699
 #: storage/file/fd.c:1624 storage/file/copydir.c:67 storage/file/copydir.c:106
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "не удалось открыть каталог \"%s\": %m"
 
-#: postmaster/postmaster.c:1174 utils/misc/tzparser.c:325
+#: postmaster/postmaster.c:1179 utils/misc/tzparser.c:325
 #, c-format
 msgid ""
 "This may indicate an incomplete PostgreSQL installation, or that the file "
@@ -483,41 +488,41 @@ msgstr ""
 "Возможно, PostgreSQL установлен не полностью или файла \"%s\" нет в "
 "положенном месте."
 
-#: postmaster/postmaster.c:1202
+#: postmaster/postmaster.c:1207
 #, c-format
 msgid "data directory \"%s\" does not exist"
 msgstr "каталог данных \"%s\" не существует"
 
-#: postmaster/postmaster.c:1207
+#: postmaster/postmaster.c:1212
 #, c-format
 msgid "could not read permissions of directory \"%s\": %m"
 msgstr "не удалось считать права на каталог \"%s\": %m"
 
-#: postmaster/postmaster.c:1215
+#: postmaster/postmaster.c:1220
 #, c-format
 msgid "specified data directory \"%s\" is not a directory"
 msgstr "указанный каталог данных \"%s\" не существует"
 
-#: postmaster/postmaster.c:1231
+#: postmaster/postmaster.c:1236
 #, c-format
 msgid "data directory \"%s\" has wrong ownership"
 msgstr "владелец каталога данных \"%s\" определён неверно"
 
-#: postmaster/postmaster.c:1233
+#: postmaster/postmaster.c:1238
 msgid "The server must be started by the user that owns the data directory."
 msgstr ""
 "Сервер должен запускать пользователь, являющийся владельцем каталога данных."
 
-#: postmaster/postmaster.c:1253
+#: postmaster/postmaster.c:1258
 #, c-format
 msgid "data directory \"%s\" has group or world access"
 msgstr "к каталогу данных \"%s\" имеют доступ все или группа"
 
-#: postmaster/postmaster.c:1255
+#: postmaster/postmaster.c:1260
 msgid "Permissions should be u=rwx (0700)."
 msgstr "Права должны быть: u=rwx (0700)."
 
-#: postmaster/postmaster.c:1266
+#: postmaster/postmaster.c:1271
 #, c-format
 msgid ""
 "%s: could not find the database system\n"
@@ -528,94 +533,94 @@ msgstr ""
 "Ожидалось найти её в каталоге \"%s\",\n"
 "но открыть файл \"%s\" не удалось: %s\n"
 
-#: postmaster/postmaster.c:1302
+#: postmaster/postmaster.c:1307
 #, c-format
 msgid "%s: could not open file \"%s\": %s\n"
 msgstr "%s: не удалось открыть файл \"%s\": %s\n"
 
-#: postmaster/postmaster.c:1309
+#: postmaster/postmaster.c:1314
 #, c-format
 msgid "%s: could not open log file \"%s/%s\": %s\n"
 msgstr "%s: не удалось открыть файл протокола \"%s/%s\": %s\n"
 
-#: postmaster/postmaster.c:1320
+#: postmaster/postmaster.c:1325
 #, c-format
 msgid "%s: could not fork background process: %s\n"
 msgstr "%s: не удалось породить фоновый процесс: %s\n"
 
-#: postmaster/postmaster.c:1342
+#: postmaster/postmaster.c:1347
 #, c-format
 msgid "%s: could not dissociate from controlling TTY: %s\n"
 msgstr "%s: не удалось отключиться от управления TTY: %s\n"
 
-#: postmaster/postmaster.c:1437
+#: postmaster/postmaster.c:1442
 #, c-format
 msgid "select() failed in postmaster: %m"
 msgstr "сбой select() в postmaster'е: %m"
 
-#: postmaster/postmaster.c:1599 postmaster/postmaster.c:1630
+#: postmaster/postmaster.c:1604 postmaster/postmaster.c:1635
 msgid "incomplete startup packet"
 msgstr "неполный стартовый пакет"
 
-#: postmaster/postmaster.c:1611
+#: postmaster/postmaster.c:1616
 msgid "invalid length of startup packet"
 msgstr "неверная длина стартового пакета"
 
-#: postmaster/postmaster.c:1668
+#: postmaster/postmaster.c:1673
 #, c-format
 msgid "failed to send SSL negotiation response: %m"
 msgstr "не удалось отправить ответ в процессе SSL-согласования: %m"
 
-#: postmaster/postmaster.c:1697
+#: postmaster/postmaster.c:1702
 #, c-format
 msgid "unsupported frontend protocol %u.%u: server supports %u.0 to %u.%u"
 msgstr ""
 "неподдерживаемый протокол клиентского приложения %u.%u; сервер поддерживает "
 "%u.0 - %u.%u "
 
-#: postmaster/postmaster.c:1748
+#: postmaster/postmaster.c:1753
 msgid "invalid value for boolean option \"replication\""
 msgstr "неверное значение логического параметра \"replication\""
 
-#: postmaster/postmaster.c:1768
+#: postmaster/postmaster.c:1773
 msgid "invalid startup packet layout: expected terminator as last byte"
 msgstr ""
 "неверная структура стартового пакета: последним байтом должен быть терминатор"
 
-#: postmaster/postmaster.c:1796
+#: postmaster/postmaster.c:1801
 msgid "no PostgreSQL user name specified in startup packet"
 msgstr "в стартовом пакете не указано имя пользователя PostgreSQL"
 
-#: postmaster/postmaster.c:1853
+#: postmaster/postmaster.c:1858
 msgid "the database system is starting up"
 msgstr "система баз данных запускается"
 
-#: postmaster/postmaster.c:1858
+#: postmaster/postmaster.c:1863
 msgid "the database system is shutting down"
 msgstr "система баз данных останавливается"
 
-#: postmaster/postmaster.c:1863
+#: postmaster/postmaster.c:1868
 msgid "the database system is in recovery mode"
 msgstr "система баз данных в режиме восстановления"
 
-#: postmaster/postmaster.c:1868 storage/ipc/procarray.c:271
+#: postmaster/postmaster.c:1873 storage/ipc/procarray.c:271
 #: storage/ipc/sinvaladt.c:302 storage/lmgr/proc.c:297
 msgid "sorry, too many clients already"
 msgstr "извините, уже слишком много клиентов"
 
-#: postmaster/postmaster.c:1930
+#: postmaster/postmaster.c:1935
 #, c-format
 msgid "wrong key in cancel request for process %d"
 msgstr "неправильный ключ в запросе на отмену процесса %d"
 
-#: postmaster/postmaster.c:1938
+#: postmaster/postmaster.c:1943
 #, c-format
 msgid "PID %d in cancel request did not match any process"
 msgstr "процесс с кодом %d, полученным в запросе на отмену, не найден"
 
-#: postmaster/postmaster.c:2010 postmaster/postmaster.c:2041
-#: postmaster/postmaster.c:3243 postmaster/postmaster.c:3927
-#: postmaster/postmaster.c:4013 postmaster/postmaster.c:4627
+#: postmaster/postmaster.c:2015 postmaster/postmaster.c:2046
+#: postmaster/postmaster.c:3248 postmaster/postmaster.c:3932
+#: postmaster/postmaster.c:4018 postmaster/postmaster.c:4632
 #: utils/hash/dynahash.c:364 utils/hash/dynahash.c:436
 #: utils/hash/dynahash.c:932 utils/misc/guc.c:3298 utils/misc/guc.c:3311
 #: utils/misc/guc.c:3324 utils/misc/tzparser.c:455 utils/init/miscinit.c:150
@@ -634,150 +639,150 @@ msgstr "процесс с кодом %d, полученным в запросе 
 msgid "out of memory"
 msgstr "нехватка памяти"
 
-#: postmaster/postmaster.c:2144
+#: postmaster/postmaster.c:2149
 msgid "received SIGHUP, reloading configuration files"
 msgstr "получен SIGHUP, файлы конфигурации перезагружаются"
 
-#: postmaster/postmaster.c:2167
+#: postmaster/postmaster.c:2172
 msgid "pg_hba.conf not reloaded"
 msgstr "pg_hba.conf не перезагружен"
 
-#: postmaster/postmaster.c:2210
+#: postmaster/postmaster.c:2215
 msgid "received smart shutdown request"
 msgstr "получен запрос на \"вежливое\" выключение"
 
-#: postmaster/postmaster.c:2257
+#: postmaster/postmaster.c:2262
 msgid "received fast shutdown request"
 msgstr "получен запрос на быстрое выключение"
 
-#: postmaster/postmaster.c:2275
+#: postmaster/postmaster.c:2280
 msgid "aborting any active transactions"
 msgstr "прерывание всех активных транзакций"
 
-#: postmaster/postmaster.c:2304
+#: postmaster/postmaster.c:2309
 msgid "received immediate shutdown request"
 msgstr "получен запрос на немедленное выключение"
 
-#: postmaster/postmaster.c:2380 postmaster/postmaster.c:2413
+#: postmaster/postmaster.c:2385 postmaster/postmaster.c:2418
 msgid "startup process"
 msgstr "стартовый процесс"
 
-#: postmaster/postmaster.c:2383
+#: postmaster/postmaster.c:2388
 msgid "aborting startup due to startup process failure"
 msgstr "прерывание запуска из-за ошибки в стартовом процессе"
 
-#: postmaster/postmaster.c:2447
+#: postmaster/postmaster.c:2452
 msgid "database system is ready to accept connections"
 msgstr "система БД готова принимать подключения"
 
-#: postmaster/postmaster.c:2502
+#: postmaster/postmaster.c:2507
 msgid "background writer process"
 msgstr "процесс фоновой записи"
 
-#: postmaster/postmaster.c:2518
+#: postmaster/postmaster.c:2523
 msgid "WAL writer process"
 msgstr "процесс записи WAL"
 
-#: postmaster/postmaster.c:2532
+#: postmaster/postmaster.c:2537
 msgid "WAL receiver process"
 msgstr "процесс считывания WAL"
 
-#: postmaster/postmaster.c:2547
+#: postmaster/postmaster.c:2552
 msgid "autovacuum launcher process"
 msgstr "процесс запуска автоочистки"
 
-#: postmaster/postmaster.c:2562
+#: postmaster/postmaster.c:2567
 msgid "archiver process"
 msgstr "процесс архивации"
 
-#: postmaster/postmaster.c:2578
+#: postmaster/postmaster.c:2583
 msgid "statistics collector process"
 msgstr "процесс сбора статистики"
 
-#: postmaster/postmaster.c:2592
+#: postmaster/postmaster.c:2597
 msgid "system logger process"
 msgstr "процесс системного протоколирования"
 
-#: postmaster/postmaster.c:2627 postmaster/postmaster.c:2646
-#: postmaster/postmaster.c:2653 postmaster/postmaster.c:2671
+#: postmaster/postmaster.c:2632 postmaster/postmaster.c:2651
+#: postmaster/postmaster.c:2658 postmaster/postmaster.c:2676
 msgid "server process"
 msgstr "процесс сервера"
 
-#: postmaster/postmaster.c:2707
+#: postmaster/postmaster.c:2712
 msgid "terminating any other active server processes"
 msgstr "завершение всех остальных активных серверных процессов"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2872
+#: postmaster/postmaster.c:2877
 #, c-format
 msgid "%s (PID %d) exited with exit code %d"
 msgstr "%s (PID %d) завершился с кодом выхода %d"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2881
+#: postmaster/postmaster.c:2886
 #, c-format
 msgid "%s (PID %d) was terminated by exception 0x%X"
 msgstr "%s (PID %d) был прерван исключением 0x%X"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2890
+#: postmaster/postmaster.c:2895
 #, c-format
 msgid "%s (PID %d) was terminated by signal %d: %s"
 msgstr "%s (PID %d) был завершён по сигналу %d: %s"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2900
+#: postmaster/postmaster.c:2905
 #, c-format
 msgid "%s (PID %d) was terminated by signal %d"
 msgstr "%s (PID %d) был завершён по сигналу %d"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:2909
+#: postmaster/postmaster.c:2914
 #, c-format
 msgid "%s (PID %d) exited with unrecognized status %d"
 msgstr "%s (PID %d) завершился с неизвестным кодом состояния %d"
 
-#: postmaster/postmaster.c:3089
+#: postmaster/postmaster.c:3094
 msgid "abnormal database system shutdown"
 msgstr "аварийное выключение системы БД"
 
-#: postmaster/postmaster.c:3128
+#: postmaster/postmaster.c:3133
 msgid "all server processes terminated; reinitializing"
 msgstr "все серверные процессы завершены... переинициализация"
 
-#: postmaster/postmaster.c:3311
+#: postmaster/postmaster.c:3316
 #, c-format
 msgid "could not fork new process for connection: %m"
 msgstr "породить новый процесс для соединения не удалось: %m"
 
-#: postmaster/postmaster.c:3353
+#: postmaster/postmaster.c:3358
 msgid "could not fork new process for connection: "
 msgstr "породить новый процесс для соединения не удалось: "
 
-#: postmaster/postmaster.c:3467
+#: postmaster/postmaster.c:3472
 #, c-format
 msgid "connection received: host=%s port=%s"
 msgstr "принято подключение: узел=%s порт=%s"
 
-#: postmaster/postmaster.c:3472
+#: postmaster/postmaster.c:3477
 #, c-format
 msgid "connection received: host=%s"
 msgstr "принято подключение: узел=%s"
 
-#: postmaster/postmaster.c:3702 access/transam/xlog.c:2392
+#: postmaster/postmaster.c:3707 access/transam/xlog.c:2392
 #: access/transam/xlog.c:2525 access/transam/xlog.c:4423
-#: access/transam/xlog.c:9093 access/transam/xlog.c:9333
+#: access/transam/xlog.c:9093 access/transam/xlog.c:9334
 #: storage/file/copydir.c:172 storage/smgr/md.c:289
 #, c-format
 msgid "could not create file \"%s\": %m"
 msgstr "создать файл \"%s\" не удалось: %m"
 
-#: postmaster/postmaster.c:3712 postmaster/postmaster.c:3722
+#: postmaster/postmaster.c:3717 postmaster/postmaster.c:3727
 #: utils/misc/guc.c:7432 utils/misc/guc.c:7457 utils/init/miscinit.c:1089
 #: utils/init/miscinit.c:1098 utils/init/miscinit.c:1105
 #: access/transam/xlog.c:2424 access/transam/xlog.c:2557
@@ -787,83 +792,83 @@ msgstr "создать файл \"%s\" не удалось: %m"
 msgid "could not write to file \"%s\": %m"
 msgstr "записать в файл \"%s\" не удалось: %m"
 
-#: postmaster/postmaster.c:3741
+#: postmaster/postmaster.c:3746
 #, c-format
 msgid "could not execute server process \"%s\": %m"
 msgstr "запустить серверный процесс \"%s\" не удалось: %m"
 
-#: postmaster/postmaster.c:4263
+#: postmaster/postmaster.c:4268
 msgid "database system is ready to accept read only connections"
 msgstr "система БД готова к подключениям в режиме \"только чтение\""
 
-#: postmaster/postmaster.c:4530
+#: postmaster/postmaster.c:4535
 #, c-format
 msgid "could not fork startup process: %m"
 msgstr "породить стартовый процесс не удалось: %m"
 
-#: postmaster/postmaster.c:4534
+#: postmaster/postmaster.c:4539
 #, c-format
 msgid "could not fork background writer process: %m"
 msgstr "породить процесс фоновой записи не удалось: %m"
 
-#: postmaster/postmaster.c:4538
+#: postmaster/postmaster.c:4543
 #, c-format
 msgid "could not fork WAL writer process: %m"
 msgstr "породить процесс записи WAL не удалось: %m"
 
-#: postmaster/postmaster.c:4542
+#: postmaster/postmaster.c:4547
 #, c-format
 msgid "could not fork WAL receiver process: %m"
 msgstr "породить процесс считывания WAL не удалось: %m"
 
-#: postmaster/postmaster.c:4546
+#: postmaster/postmaster.c:4551
 #, c-format
 msgid "could not fork process: %m"
 msgstr "породить процесс не удалось: %m"
 
-#: postmaster/postmaster.c:4831
+#: postmaster/postmaster.c:4836
 #, c-format
 msgid "could not duplicate socket %d for use in backend: error code %d"
 msgstr ""
 "продублировать сокет %d для серверного процесса не удалось: код ошибки %d"
 
-#: postmaster/postmaster.c:4863
+#: postmaster/postmaster.c:4868
 #, c-format
 msgid "could not create inherited socket: error code %d\n"
 msgstr "создать наследуемый сокет не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:4892 postmaster/postmaster.c:4899
+#: postmaster/postmaster.c:4897 postmaster/postmaster.c:4904
 #, c-format
 msgid "could not read from backend variables file \"%s\": %s\n"
 msgstr "прочитать файл серверных переменных \"%s\" не удалось: %s\n"
 
-#: postmaster/postmaster.c:4908
+#: postmaster/postmaster.c:4913
 #, c-format
 msgid "could not remove file \"%s\": %s\n"
 msgstr "не удалось стереть файл \"%s\": %s\n"
 
-#: postmaster/postmaster.c:4925
+#: postmaster/postmaster.c:4930
 #, c-format
 msgid "could not map view of backend variables: error code %d\n"
 msgstr "отобразить файл серверных переменных не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:4934
+#: postmaster/postmaster.c:4939
 #, c-format
 msgid "could not unmap view of backend variables: error code %d\n"
 msgstr ""
 "отключить отображение файла серверных переменных не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:4941
+#: postmaster/postmaster.c:4946
 #, c-format
 msgid "could not close handle to backend parameter variables: error code %d\n"
 msgstr ""
 "закрыть указатель файла серверных переменных не удалось: код ошибки %d\n"
 
-#: postmaster/postmaster.c:5086
+#: postmaster/postmaster.c:5091
 msgid "could not read exit code for process\n"
 msgstr "прочитать код завершения процесса не удалось\n"
 
-#: postmaster/postmaster.c:5091
+#: postmaster/postmaster.c:5096
 msgid "could not post child completion status\n"
 msgstr "отправить состояние завершения потомка не удалось\n"
 
@@ -4692,7 +4697,7 @@ msgstr "%d не является верным кодом кодировки"
 #: utils/adt/dbsize.c:65 utils/adt/dbsize.c:211 utils/adt/dbsize.c:276
 #: utils/adt/genfile.c:107 utils/adt/genfile.c:279 access/transam/xlog.c:2927
 #: access/transam/xlog.c:3092 access/transam/xlog.c:9078
-#: access/transam/xlog.c:9253 storage/file/copydir.c:86
+#: access/transam/xlog.c:9254 storage/file/copydir.c:86
 #: storage/file/copydir.c:125
 #, c-format
 msgid "could not stat file \"%s\": %m"
@@ -4836,7 +4841,7 @@ msgstr "значение домена %s нарушает ограничение
 #: commands/tablecmds.c:4600 commands/tablecmds.c:4647
 #: commands/tablecmds.c:4743 commands/tablecmds.c:4787
 #: commands/tablecmds.c:4866 commands/tablecmds.c:4950
-#: commands/tablecmds.c:6580 commands/tablecmds.c:6789 commands/analyze.c:343
+#: commands/tablecmds.c:6581 commands/tablecmds.c:6790 commands/analyze.c:343
 #: commands/sequence.c:1443 commands/copy.c:3787 commands/trigger.c:592
 #: catalog/aclchk.c:1428 catalog/objectaddress.c:545 parser/analyze.c:2042
 #: parser/parse_target.c:895 parser/parse_relation.c:2043
@@ -5286,9 +5291,9 @@ msgid "could not seek in file \"%s\": %m"
 msgstr "не удалось переместиться в файле \"%s\": %m"
 
 #: utils/adt/genfile.c:138 access/transam/xlog.c:2538
-#: access/transam/xlog.c:4454 access/transam/xlog.c:9265
-#: access/transam/xlog.c:9278 access/transam/xlog.c:9812
-#: access/transam/xlog.c:9847 storage/file/copydir.c:186
+#: access/transam/xlog.c:4454 access/transam/xlog.c:9266
+#: access/transam/xlog.c:9279 access/transam/xlog.c:9813
+#: access/transam/xlog.c:9848 storage/file/copydir.c:186
 #, c-format
 msgid "could not read file \"%s\": %m"
 msgstr "не удалось прочитать файл \"%s\": %m"
@@ -5572,7 +5577,7 @@ msgstr "нераспознанный тип прав: \"%s\""
 #: utils/adt/acl.c:2008 utils/adt/acl.c:2038 utils/adt/acl.c:2070
 #: utils/adt/acl.c:2102 utils/adt/acl.c:2130 utils/adt/acl.c:2160
 #: commands/tablecmds.c:209 commands/tablecmds.c:2166
-#: commands/tablecmds.c:2413 commands/tablecmds.c:8974
+#: commands/tablecmds.c:2413 commands/tablecmds.c:8975
 #: commands/sequence.c:1032 catalog/aclchk.c:1693 catalog/objectaddress.c:398
 #, c-format
 msgid "\"%s\" is not a sequence"
@@ -6444,7 +6449,7 @@ msgstr ""
 
 #: tcop/utility.c:95 commands/tablecmds.c:815 commands/tablecmds.c:1148
 #: commands/tablecmds.c:1989 commands/tablecmds.c:3726
-#: commands/tablecmds.c:5450 commands/trigger.c:192 commands/trigger.c:1105
+#: commands/tablecmds.c:5451 commands/trigger.c:192 commands/trigger.c:1105
 #: rewrite/rewriteDefine.c:263
 #, c-format
 msgid "permission denied: \"%s\" is a system catalog"
@@ -6631,7 +6636,7 @@ msgstr "\"%s\" - это индекс"
 
 #: access/heap/heapam.c:1094 access/heap/heapam.c:1122
 #: access/heap/heapam.c:1152 commands/tablecmds.c:2188
-#: commands/tablecmds.c:7369 commands/tablecmds.c:9024 catalog/aclchk.c:1685
+#: commands/tablecmds.c:7370 commands/tablecmds.c:9025 catalog/aclchk.c:1685
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" - это составной тип"
@@ -6973,7 +6978,7 @@ msgstr "не удалось создать файл состояния архи�
 msgid "could not write archive status file \"%s\": %m"
 msgstr "не удалось записать в файл состояния архива \"%s\": %m"
 
-#: access/transam/xlog.c:1798 access/transam/xlog.c:10445
+#: access/transam/xlog.c:1798 access/transam/xlog.c:10446
 #: replication/walreceiver.c:515 replication/walsender.c:1004
 #, c-format
 msgid "could not seek in log file %u, segment %u to offset %u: %m"
@@ -7040,7 +7045,7 @@ msgstr ""
 msgid "could not close log file %u, segment %u: %m"
 msgstr "не удалось закрыть файл журнала %u, сегмент %u: %m"
 
-#: access/transam/xlog.c:2935 access/transam/xlog.c:9283 storage/smgr/md.c:374
+#: access/transam/xlog.c:2935 access/transam/xlog.c:9284 storage/smgr/md.c:374
 #: storage/smgr/md.c:423 storage/smgr/md.c:1257
 #, c-format
 msgid "could not remove file \"%s\": %m"
@@ -8002,32 +8007,32 @@ msgstr ""
 "не удалось синхронизировать с ФС данные (fdatasync) файла журнала: %u, "
 "сегмент: %u: %m"
 
-#: access/transam/xlog.c:8923 access/transam/xlog.c:9201
+#: access/transam/xlog.c:8923 access/transam/xlog.c:9202
 msgid "must be superuser or replication role to run a backup"
 msgstr ""
 "запускать резервное копирование может только суперпользователь или роль "
 "репликации"
 
-#: access/transam/xlog.c:8928 access/transam/xlog.c:9206
-#: access/transam/xlog.c:9469 access/transam/xlog.c:9501
-#: access/transam/xlog.c:9542 access/transam/xlog.c:9575
-#: access/transam/xlog.c:9682 access/transam/xlog.c:9757
+#: access/transam/xlog.c:8928 access/transam/xlog.c:9207
+#: access/transam/xlog.c:9470 access/transam/xlog.c:9502
+#: access/transam/xlog.c:9543 access/transam/xlog.c:9576
+#: access/transam/xlog.c:9683 access/transam/xlog.c:9758
 msgid "recovery is in progress"
 msgstr "идёт процесс восстановления"
 
-#: access/transam/xlog.c:8929 access/transam/xlog.c:9207
-#: access/transam/xlog.c:9470 access/transam/xlog.c:9502
-#: access/transam/xlog.c:9543 access/transam/xlog.c:9576
+#: access/transam/xlog.c:8929 access/transam/xlog.c:9208
+#: access/transam/xlog.c:9471 access/transam/xlog.c:9503
+#: access/transam/xlog.c:9544 access/transam/xlog.c:9577
 msgid "WAL control functions cannot be executed during recovery."
 msgstr "Функции управления WAL нельзя использовать в процессе восстановления."
 
-#: access/transam/xlog.c:8934 access/transam/xlog.c:9212
+#: access/transam/xlog.c:8934 access/transam/xlog.c:9213
 msgid "WAL level not sufficient for making an online backup"
 msgstr ""
 "Выбранный уровень WAL недостаточен для резервного копирования \"на ходу\""
 
-#: access/transam/xlog.c:8935 access/transam/xlog.c:9213
-#: access/transam/xlog.c:9508
+#: access/transam/xlog.c:8935 access/transam/xlog.c:9214
+#: access/transam/xlog.c:9509
 msgid ""
 "wal_level must be set to \"archive\" or \"hot_standby\" at server start."
 msgstr ""
@@ -8055,29 +8060,29 @@ msgstr ""
 "Если вы считаете, что информация о резервном копировании неверна, удалите "
 "файл \"%s\" и попробуйте снова."
 
-#: access/transam/xlog.c:9099 access/transam/xlog.c:9345
+#: access/transam/xlog.c:9100 access/transam/xlog.c:9346
 #, c-format
 msgid "could not write file \"%s\": %m"
 msgstr "не удалось записать файл \"%s\": %m"
 
-#: access/transam/xlog.c:9257
+#: access/transam/xlog.c:9258
 msgid "a backup is not in progress"
 msgstr "резервное копирование не запущено"
 
-#: access/transam/xlog.c:9296 access/transam/xlog.c:9827
-#: access/transam/xlog.c:9833
+#: access/transam/xlog.c:9297 access/transam/xlog.c:9828
+#: access/transam/xlog.c:9834
 #, c-format
 msgid "invalid data in file \"%s\""
 msgstr "неверные данные в файле \"%s\""
 
-#: access/transam/xlog.c:9394
+#: access/transam/xlog.c:9395
 msgid ""
 "pg_stop_backup cleanup done, waiting for required WAL segments to be archived"
 msgstr ""
 "очистка в pg_stop_backup выполнена, ожидаются требуемые сегменты WAL для "
 "архивации"
 
-#: access/transam/xlog.c:9404
+#: access/transam/xlog.c:9405
 #, c-format
 msgid ""
 "pg_stop_backup still waiting for all required WAL segments to be archived "
@@ -8086,7 +8091,7 @@ msgstr ""
 "pg_stop_backup всё ещё ждёт все требуемые сегменты WAL для архивации (прошло "
 "%d сек.)"
 
-#: access/transam/xlog.c:9406
+#: access/transam/xlog.c:9407
 msgid ""
 "Check that your archive_command is executing properly.  pg_stop_backup can "
 "be canceled safely, but the database backup will not be usable without all "
@@ -8096,12 +8101,12 @@ msgstr ""
 "можно отменить безопасно, но резервная копия базы данных будет непригодна "
 "без всех сегментов WAL."
 
-#: access/transam/xlog.c:9413
+#: access/transam/xlog.c:9414
 msgid "pg_stop_backup complete, all required WAL segments have been archived"
 msgstr ""
 "команда pg_stop_backup завершена, все требуемые сегменты WAL заархивированы"
 
-#: access/transam/xlog.c:9417
+#: access/transam/xlog.c:9418
 msgid ""
 "WAL archiving is not enabled; you must ensure that all required WAL segments "
 "are copied through other means to complete the backup"
@@ -8109,71 +8114,71 @@ msgstr ""
 "архивация WAL не настроена; вы должны обеспечить копирование всех требуемых "
 "сегментов WAL другими средствами для получения резервной копии"
 
-#: access/transam/xlog.c:9464
+#: access/transam/xlog.c:9465
 msgid "must be superuser to switch transaction log files"
 msgstr ""
 "для переключения файлов журнала транзакций нужно быть суперпользователем"
 
-#: access/transam/xlog.c:9496
+#: access/transam/xlog.c:9497
 msgid "must be superuser to create a restore point"
 msgstr "для создания точки восстановления нужно быть суперпользователем"
 
-#: access/transam/xlog.c:9507
+#: access/transam/xlog.c:9508
 msgid "WAL level not sufficient for creating a restore point"
 msgstr "Выбранный уровень WAL не достаточен для создания точки восстановления"
 
-#: access/transam/xlog.c:9515
+#: access/transam/xlog.c:9516
 #, c-format
 msgid "value too long for restore point (maximum %d characters)"
 msgstr "значение для точки восстановления превышает предел (%d симв.)"
 
-#: access/transam/xlog.c:9683
+#: access/transam/xlog.c:9684
 msgid "pg_xlogfile_name_offset() cannot be executed during recovery."
 msgstr ""
 "Функцию pg_xlogfile_name_offset() нельзя вызывать во время восстановления."
 
-#: access/transam/xlog.c:9693 access/transam/xlog.c:9765
+#: access/transam/xlog.c:9694 access/transam/xlog.c:9766
 #, c-format
 msgid "could not parse transaction log location \"%s\""
 msgstr "не удалось разобрать положение в журнале транзакций \"%s\""
 
-#: access/transam/xlog.c:9758
+#: access/transam/xlog.c:9759
 msgid "pg_xlogfile_name() cannot be executed during recovery."
 msgstr "Функцию pg_xlogfile_name() нельзя вызывать в процессе восстановления."
 
-#: access/transam/xlog.c:9869
+#: access/transam/xlog.c:9870
 #, c-format
 msgid "xlog redo %s"
 msgstr "XLOG-запись REDO: %s"
 
-#: access/transam/xlog.c:9909
+#: access/transam/xlog.c:9910
 msgid "online backup mode canceled"
 msgstr "режим копирования \"на ходу\" отменён"
 
-#: access/transam/xlog.c:9910
+#: access/transam/xlog.c:9911
 #, c-format
 msgid "\"%s\" was renamed to \"%s\"."
 msgstr "Файл \"%s\" был переименован в \"%s\"."
 
-#: access/transam/xlog.c:9917
+#: access/transam/xlog.c:9918
 msgid "online backup mode was not canceled"
 msgstr "режим копирования \"на ходу\" не был отменён"
 
-#: access/transam/xlog.c:9918
+#: access/transam/xlog.c:9919
 #, c-format
 msgid "Could not rename \"%s\" to \"%s\": %m."
 msgstr "Не удалось переименовать файл \"%s\" в \"%s\": %m."
 
-#: access/transam/xlog.c:10431 access/transam/xlog.c:10453
+#: access/transam/xlog.c:10432 access/transam/xlog.c:10454
 #, c-format
 msgid "could not read from log file %u, segment %u, offset %u: %m"
 msgstr "не удалось прочитать файл журнала: %u, сегмент: %u, смещение %u: %m"
 
-#: access/transam/xlog.c:10542
+#: access/transam/xlog.c:10543
 msgid "received promote request"
 msgstr "получен запрос повышения режима"
 
-#: access/transam/xlog.c:10555
+#: access/transam/xlog.c:10556
 #, c-format
 msgid "trigger file found: %s"
 msgstr "найден файл триггера: %s"
@@ -8292,7 +8297,7 @@ msgstr "отношение \"%s.%s\" не существует"
 
 #: commands/lockcmds.c:149 commands/tablecmds.c:203 commands/tablecmds.c:1135
 #: commands/tablecmds.c:2397 commands/tablecmds.c:3744
-#: commands/tablecmds.c:6692 commands/indexcmds.c:200
+#: commands/tablecmds.c:6693 commands/indexcmds.c:200
 #: commands/indexcmds.c:1574 catalog/toasting.c:93 catalog/objectaddress.c:405
 #, c-format
 msgid "\"%s\" is not a table"
@@ -8514,7 +8519,7 @@ msgstr "представление \"%s\" не существует, пропу�
 
 #: commands/tablecmds.c:215 commands/tablecmds.c:2172
 #: commands/tablecmds.c:2429 commands/tablecmds.c:3759
-#: commands/tablecmds.c:8982 commands/view.c:181 catalog/objectaddress.c:412
+#: commands/tablecmds.c:8983 commands/view.c:181 catalog/objectaddress.c:412
 #, c-format
 msgid "\"%s\" is not a view"
 msgstr "\"%s\" - это не представление"
@@ -8551,7 +8556,7 @@ msgstr "\"%s\" - это не тип"
 msgid "Use DROP TYPE to remove a type."
 msgstr "Выполните DROP TYPE для удаления типа."
 
-#: commands/tablecmds.c:231 commands/tablecmds.c:8894
+#: commands/tablecmds.c:231 commands/tablecmds.c:8895
 #, c-format
 msgid "foreign table \"%s\" does not exist"
 msgstr "сторонняя таблица \"%s\" не существует"
@@ -8563,7 +8568,7 @@ msgstr "сторонняя таблица \"%s\" не существует, пр
 
 #: commands/tablecmds.c:233 commands/tablecmds.c:2178
 #: commands/tablecmds.c:2437 commands/tablecmds.c:3762
-#: commands/tablecmds.c:8990 catalog/objectaddress.c:419
+#: commands/tablecmds.c:8991 catalog/objectaddress.c:419
 #, c-format
 msgid "\"%s\" is not a foreign table"
 msgstr "\"%s\" - это не сторонняя таблица"
@@ -8586,7 +8591,7 @@ msgstr ""
 "в рамках операции с ограничениями по безопасности нельзя создать временную "
 "таблицу"
 
-#: commands/tablecmds.c:481 commands/tablecmds.c:7888 commands/indexcmds.c:265
+#: commands/tablecmds.c:481 commands/tablecmds.c:7889 commands/indexcmds.c:265
 #: executor/execMain.c:2460
 msgid "only shared relations can be placed in pg_global tablespace"
 msgstr ""
@@ -8623,12 +8628,12 @@ msgstr "колонка \"%s\" указана неоднократно"
 msgid "inherited relation \"%s\" is not a table"
 msgstr "наследованное отношение \"%s\" не является таблицей"
 
-#: commands/tablecmds.c:1367 commands/tablecmds.c:8120
+#: commands/tablecmds.c:1367 commands/tablecmds.c:8121
 #, c-format
 msgid "cannot inherit from temporary relation \"%s\""
 msgstr "временное отношение \"%s\" не может наследоваться"
 
-#: commands/tablecmds.c:1384 commands/tablecmds.c:8148
+#: commands/tablecmds.c:1384 commands/tablecmds.c:8149
 #, c-format
 msgid "relation \"%s\" would be inherited from more than once"
 msgstr "отношение \"%s\" наследуется неоднократно"
@@ -8747,8 +8752,8 @@ msgstr "нельзя переименовать наследованную ко�
 msgid "column \"%s\" of relation \"%s\" already exists"
 msgstr "колонка \"%s\" отношения \"%s\" уже существует"
 
-#: commands/tablecmds.c:2190 commands/tablecmds.c:7371
-#: commands/tablecmds.c:9026
+#: commands/tablecmds.c:2190 commands/tablecmds.c:7372
+#: commands/tablecmds.c:9027
 msgid "Use ALTER TYPE instead."
 msgstr "Используйте ALTER TYPE."
 
@@ -8874,12 +8879,12 @@ msgstr "тип %s не является составным"
 msgid "cannot add column to typed table"
 msgstr "добавить колонку в типизированную таблицу нельзя"
 
-#: commands/tablecmds.c:4131 commands/tablecmds.c:8302
+#: commands/tablecmds.c:4131 commands/tablecmds.c:8303
 #, c-format
 msgid "child table \"%s\" has different type for column \"%s\""
 msgstr "дочерняя таблица \"%s\" имеет другой тип для колонки \"%s\""
 
-#: commands/tablecmds.c:4137 commands/tablecmds.c:8309
+#: commands/tablecmds.c:4137 commands/tablecmds.c:8310
 #, c-format
 msgid "child table \"%s\" has different collation for column \"%s\""
 msgstr ""
@@ -8902,7 +8907,7 @@ msgstr "колонка также должна быть добавлена к д
 #: commands/tablecmds.c:4519 commands/tablecmds.c:4609
 #: commands/tablecmds.c:4654 commands/tablecmds.c:4750
 #: commands/tablecmds.c:4794 commands/tablecmds.c:4873
-#: commands/tablecmds.c:6589
+#: commands/tablecmds.c:6590
 #, c-format
 msgid "cannot alter system column \"%s\""
 msgstr "системную колонку \"%s\" нельзя изменить"
@@ -8958,27 +8963,27 @@ msgid ""
 msgstr ""
 "ALTER TABLE / ADD CONSTRAINT USING INDEX переименует индекс \"%s\" в \"%s\""
 
-#: commands/tablecmds.c:5269 catalog/pg_constraint.c:645 catalog/heap.c:2296
+#: commands/tablecmds.c:5270 catalog/pg_constraint.c:645 catalog/heap.c:2296
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "ограничение \"%s\" для отношения \"%s\" уже существует"
 
-#: commands/tablecmds.c:5379
+#: commands/tablecmds.c:5380
 msgid "constraint must be added to child tables too"
 msgstr "ограничение также должно быть добавлено к дочерним таблицам"
 
-#: commands/tablecmds.c:5444 commands/sequence.c:1425
+#: commands/tablecmds.c:5445 commands/sequence.c:1425
 #, c-format
 msgid "referenced relation \"%s\" is not a table"
 msgstr "указанный объект \"%s\" не является таблицей"
 
-#: commands/tablecmds.c:5467
+#: commands/tablecmds.c:5468
 msgid "constraints on permanent tables may reference only permanent tables"
 msgstr ""
 "ограничения в постоянных таблицах могут ссылаться только на постоянные "
 "таблицы"
 
-#: commands/tablecmds.c:5474
+#: commands/tablecmds.c:5475
 msgid ""
 "constraints on unlogged tables may reference only permanent or unlogged "
 "tables"
@@ -8986,60 +8991,60 @@ msgstr ""
 "ограничения в нежурналируемых таблицах могут ссылаться только на постоянные "
 "или нежурналируемые таблицы"
 
-#: commands/tablecmds.c:5480
+#: commands/tablecmds.c:5481
 msgid "constraints on temporary tables may reference only temporary tables"
 msgstr ""
 "ограничения во временных таблицах могут ссылаться только на временные таблицы"
 
-#: commands/tablecmds.c:5541
+#: commands/tablecmds.c:5542
 msgid "number of referencing and referenced columns for foreign key disagree"
 msgstr "число колонок в источнике и назначении внешнего ключа не совпадает"
 
-#: commands/tablecmds.c:5630
+#: commands/tablecmds.c:5631
 #, c-format
 msgid "foreign key constraint \"%s\" cannot be implemented"
 msgstr "ограничение внешнего ключа \"%s\" нельзя реализовать"
 
-#: commands/tablecmds.c:5633
+#: commands/tablecmds.c:5634
 #, c-format
 msgid "Key columns \"%s\" and \"%s\" are of incompatible types: %s and %s."
 msgstr "Колонки ключа \"%s\" и \"%s\" имеют несовместимые типы: %s и %s."
 
-#: commands/tablecmds.c:5746
+#: commands/tablecmds.c:5747
 #, c-format
 msgid "foreign key constraint \"%s\" of relation \"%s\" does not exist"
 msgstr "ограничение внешнего ключа \"%s\" в таблице\"%s\" не существует"
 
-#: commands/tablecmds.c:5809
+#: commands/tablecmds.c:5810
 #, c-format
 msgid "column \"%s\" referenced in foreign key constraint does not exist"
 msgstr "колонка \"%s\", указанная в ограничении внешнего ключа, не существует"
 
-#: commands/tablecmds.c:5814
+#: commands/tablecmds.c:5815
 #, c-format
 msgid "cannot have more than %d keys in a foreign key"
 msgstr "во внешнем ключе не может быть больше %d колонок"
 
-#: commands/tablecmds.c:5879
+#: commands/tablecmds.c:5880
 #, c-format
 msgid "cannot use a deferrable primary key for referenced table \"%s\""
 msgstr ""
 "использовать откладываемый первичный ключ в целевой внешней таблице \"%s\" "
 "нельзя"
 
-#: commands/tablecmds.c:5896
+#: commands/tablecmds.c:5897
 #, c-format
 msgid "there is no primary key for referenced table \"%s\""
 msgstr "в целевой внешней таблице \"%s\" нет первичного ключа"
 
-#: commands/tablecmds.c:6046
+#: commands/tablecmds.c:6047
 #, c-format
 msgid "cannot use a deferrable unique constraint for referenced table \"%s\""
 msgstr ""
 "использовать откладываемое ограничение уникальности в целевой внешней "
 "таблице \"%s\" нельзя"
 
-#: commands/tablecmds.c:6051
+#: commands/tablecmds.c:6052
 #, c-format
 msgid ""
 "there is no unique constraint matching given keys for referenced table \"%s\""
@@ -9047,214 +9052,214 @@ msgstr ""
 "в целевой внешней таблице \"%s\" нет ограничения уникальности, "
 "соответствующего данным ключам"
 
-#: commands/tablecmds.c:6102
+#: commands/tablecmds.c:6103
 #, c-format
 msgid "validating foreign key constraint \"%s\""
 msgstr "проверка ограничения внешнего ключа \"%s\""
 
-#: commands/tablecmds.c:6398
+#: commands/tablecmds.c:6399
 #, c-format
 msgid "cannot drop inherited constraint \"%s\" of relation \"%s\""
 msgstr "удалить наследованное ограничение \"%s\" таблицы \"%s\" нельзя"
 
-#: commands/tablecmds.c:6425 commands/tablecmds.c:6538
+#: commands/tablecmds.c:6426 commands/tablecmds.c:6539
 #, c-format
 msgid "constraint \"%s\" of relation \"%s\" does not exist"
 msgstr "ограничение \"%s\" в таблице \"%s\" не существует"
 
-#: commands/tablecmds.c:6431
+#: commands/tablecmds.c:6432
 #, c-format
 msgid "constraint \"%s\" of relation \"%s\" does not exist, skipping"
 msgstr "ограничение \"%s\" в таблице \"%s\" не существует, пропускается"
 
-#: commands/tablecmds.c:6573
+#: commands/tablecmds.c:6574
 msgid "cannot alter column type of typed table"
 msgstr "изменить тип колонки в типизированной таблице нельзя"
 
-#: commands/tablecmds.c:6596
+#: commands/tablecmds.c:6597
 #, c-format
 msgid "cannot alter inherited column \"%s\""
 msgstr "изменить наследованную колонку \"%s\" нельзя"
 
-#: commands/tablecmds.c:6638
+#: commands/tablecmds.c:6639
 msgid "transform expression must not return a set"
 msgstr "выражение преобразования не должно возвращать множество"
 
-#: commands/tablecmds.c:6644
+#: commands/tablecmds.c:6645
 msgid "cannot use subquery in transform expression"
 msgstr "нельзя использовать подзапрос в выражении преобразования"
 
-#: commands/tablecmds.c:6648
+#: commands/tablecmds.c:6649
 msgid "cannot use aggregate function in transform expression"
 msgstr "нельзя использовать агрегатную функцию в выражении преобразования"
 
-#: commands/tablecmds.c:6652
+#: commands/tablecmds.c:6653
 msgid "cannot use window function in transform expression"
 msgstr "нельзя использовать оконную функцию в выражении преобразования"
 
-#: commands/tablecmds.c:6671
+#: commands/tablecmds.c:6672
 #, c-format
 msgid "column \"%s\" cannot be cast to type %s"
 msgstr "колонку \"%s\" нельзя привести к типу %s"
 
-#: commands/tablecmds.c:6718
+#: commands/tablecmds.c:6719
 #, c-format
 msgid "type of inherited column \"%s\" must be changed in child tables too"
 msgstr ""
 "тип наследованной колонки \"%s\" должен быть изменён и в дочерних таблицах"
 
-#: commands/tablecmds.c:6799
+#: commands/tablecmds.c:6800
 #, c-format
 msgid "cannot alter type of column \"%s\" twice"
 msgstr "нельзя изменить тип колонки \"%s\" дважды"
 
-#: commands/tablecmds.c:6835
+#: commands/tablecmds.c:6836
 #, c-format
 msgid "default for column \"%s\" cannot be cast to type %s"
 msgstr "значение по умолчанию для колонки \"%s\" нельзя привести к типу %s"
 
-#: commands/tablecmds.c:6961
+#: commands/tablecmds.c:6962
 msgid "cannot alter type of a column used by a view or rule"
 msgstr ""
 "изменить тип колонки, задействованной в представлении или правиле, нельзя"
 
-#: commands/tablecmds.c:6962 commands/tablecmds.c:6981
+#: commands/tablecmds.c:6963 commands/tablecmds.c:6982
 #, c-format
 msgid "%s depends on column \"%s\""
 msgstr "%s зависит от колонки \"%s\""
 
-#: commands/tablecmds.c:6980
+#: commands/tablecmds.c:6981
 msgid "cannot alter type of a column used in a trigger definition"
 msgstr "изменить тип колонки, задействованной в определении триггера, нельзя"
 
-#: commands/tablecmds.c:7339
+#: commands/tablecmds.c:7340
 #, c-format
 msgid "cannot change owner of index \"%s\""
 msgstr "сменить владельца индекса \"%s\" нельзя"
 
-#: commands/tablecmds.c:7341
+#: commands/tablecmds.c:7342
 msgid "Change the ownership of the index's table, instead."
 msgstr "Однако возможно сменить владельца таблицы, содержащей этот индекс."
 
-#: commands/tablecmds.c:7357
+#: commands/tablecmds.c:7358
 #, c-format
 msgid "cannot change owner of sequence \"%s\""
 msgstr "сменить владельца последовательности \"%s\" нельзя"
 
-#: commands/tablecmds.c:7359 commands/tablecmds.c:9016
+#: commands/tablecmds.c:7360 commands/tablecmds.c:9017
 #, c-format
 msgid "Sequence \"%s\" is linked to table \"%s\"."
 msgstr "Последовательность \"%s\" связана с таблицей \"%s\"."
 
-#: commands/tablecmds.c:7380 commands/tablecmds.c:9034
+#: commands/tablecmds.c:7381 commands/tablecmds.c:9035
 #, c-format
 msgid "\"%s\" is not a table, view, sequence, or foreign table"
 msgstr ""
 "\"%s\" - это не таблица, TOAST-таблица, индекс, представление или "
 "последовательность"
 
-#: commands/tablecmds.c:7665 commands/cluster.c:178
+#: commands/tablecmds.c:7666 commands/cluster.c:178
 #, c-format
 msgid "index \"%s\" for table \"%s\" does not exist"
 msgstr "индекс \"%s\" для таблицы \"%s\" не существует"
 
-#: commands/tablecmds.c:7708
+#: commands/tablecmds.c:7709
 msgid "cannot have multiple SET TABLESPACE subcommands"
 msgstr "в одной инструкции не может быть несколько подкомманд SET TABLESPACE"
 
-#: commands/tablecmds.c:7760
+#: commands/tablecmds.c:7761
 #, c-format
 msgid "\"%s\" is not a table, index, or TOAST table"
 msgstr "\"%s\" - это не таблица, индекс или TOAST-таблица"
 
-#: commands/tablecmds.c:7881
+#: commands/tablecmds.c:7882
 #, c-format
 msgid "cannot move system relation \"%s\""
 msgstr "переместить системную таблицу \"%s\" нельзя"
 
-#: commands/tablecmds.c:7897
+#: commands/tablecmds.c:7898
 msgid "cannot move temporary tables of other sessions"
 msgstr "перемещать временные таблицы других сеансов нельзя"
 
-#: commands/tablecmds.c:8089
+#: commands/tablecmds.c:8090
 msgid "cannot change inheritance of typed table"
 msgstr "изменить наследование типизированной таблицы нельзя"
 
-#: commands/tablecmds.c:8175
+#: commands/tablecmds.c:8176
 msgid "circular inheritance not allowed"
 msgstr "циклическое наследование недопустимо"
 
-#: commands/tablecmds.c:8176
+#: commands/tablecmds.c:8177
 #, c-format
 msgid "\"%s\" is already a child of \"%s\"."
 msgstr "\"%s\" уже является потомком \"%s\"."
 
-#: commands/tablecmds.c:8184
+#: commands/tablecmds.c:8185
 #, c-format
 msgid "table \"%s\" without OIDs cannot inherit from table \"%s\" with OIDs"
 msgstr "таблица \"%s\" без OID не может наследоваться от таблицы \"%s\" с OID"
 
-#: commands/tablecmds.c:8320
+#: commands/tablecmds.c:8321
 #, c-format
 msgid "column \"%s\" in child table must be marked NOT NULL"
 msgstr "колонка \"%s\" в дочерней таблице должна быть помечена как NOT NULL"
 
-#: commands/tablecmds.c:8336
+#: commands/tablecmds.c:8337
 #, c-format
 msgid "child table is missing column \"%s\""
 msgstr "в дочерней таблице не хватает колонки \"%s\""
 
-#: commands/tablecmds.c:8415
+#: commands/tablecmds.c:8416
 #, c-format
 msgid "child table \"%s\" has different definition for check constraint \"%s\""
 msgstr ""
 "дочерняя таблица \"%s\" содержит другое определение ограничения-проверки \"%s"
 "\""
 
-#: commands/tablecmds.c:8439
+#: commands/tablecmds.c:8440
 #, c-format
 msgid "child table is missing constraint \"%s\""
 msgstr "в дочерней таблице не хватает ограничения \"%s\""
 
-#: commands/tablecmds.c:8519
+#: commands/tablecmds.c:8520
 #, c-format
 msgid "relation \"%s\" is not a parent of relation \"%s\""
 msgstr "отношение \"%s\" не является предком отношения \"%s\""
 
-#: commands/tablecmds.c:8736
+#: commands/tablecmds.c:8737
 msgid "typed tables cannot inherit"
 msgstr "типизированные таблицы не могут наследоваться"
 
-#: commands/tablecmds.c:8767
+#: commands/tablecmds.c:8768
 #, c-format
 msgid "table is missing column \"%s\""
 msgstr "в таблице не хватает колонки \"%s\""
 
-#: commands/tablecmds.c:8777
+#: commands/tablecmds.c:8778
 #, c-format
 msgid "table has column \"%s\" where type requires \"%s\""
 msgstr "таблица содержит колонку \"%s\", тогда как тип требует \"%s\""
 
-#: commands/tablecmds.c:8786
+#: commands/tablecmds.c:8787
 #, c-format
 msgid "table \"%s\" has different type for column \"%s\""
 msgstr "таблица \"%s\" содержит колонку \"%s\" другого типа"
 
-#: commands/tablecmds.c:8799
+#: commands/tablecmds.c:8800
 #, c-format
 msgid "table has extra column \"%s\""
 msgstr "таблица содержит лишнюю колонку \"%s\""
 
-#: commands/tablecmds.c:8846
+#: commands/tablecmds.c:8847
 #, c-format
 msgid "\"%s\" is not a typed table"
 msgstr "\"%s\" - это не типизированная таблица"
 
-#: commands/tablecmds.c:9015
+#: commands/tablecmds.c:9016
 msgid "cannot move an owned sequence into another schema"
 msgstr "переместить последовательность с владельцем в другую схему нельзя"
 
-#: commands/tablecmds.c:9091
+#: commands/tablecmds.c:9092
 #, c-format
 msgid "relation \"%s\" already exists in schema \"%s\""
 msgstr "отношение \"%s\" уже существует в схеме \"%s\""
@@ -15033,7 +15038,7 @@ msgstr "таблица \"%s\" не может иметь несколько пе
 msgid "primary keys cannot be expressions"
 msgstr "первичные ключи не могут быть выражениями"
 
-#: catalog/index.c:730 catalog/index.c:1124
+#: catalog/index.c:730 catalog/index.c:1128
 msgid "user-defined indexes on system catalog tables are not supported"
 msgstr ""
 "пользовательские индексы в таблицах системного каталога не поддерживаются"
@@ -15048,12 +15053,12 @@ msgstr ""
 msgid "shared indexes cannot be created after initdb"
 msgstr "нельзя создать разделяемые индексы после initdb"
 
-#: catalog/index.c:1727
+#: catalog/index.c:1740
 #, c-format
 msgid "building index \"%s\" on table \"%s\""
 msgstr "создание индекса \"%s\" для таблицы \"%s\""
 
-#: catalog/index.c:2800
+#: catalog/index.c:2813
 msgid "cannot reindex temporary tables of other sessions"
 msgstr "переиндексировать временные таблицы других сеансов нельзя"
 
