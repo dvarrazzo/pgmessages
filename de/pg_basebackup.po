@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.2\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-08-22 22:16+0000\n"
-"PO-Revision-Date: 2012-08-23 01:58-0400\n"
+"POT-Creation-Date: 2012-08-27 17:16+0000\n"
+"PO-Revision-Date: 2012-08-28 02:24-0400\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -137,22 +137,22 @@ msgstr ""
 
 #: pg_basebackup.c:124 pg_receivexlog.c:68
 #, c-format
+msgid "  -h, --host=HOSTNAME    database server host or socket directory\n"
+msgstr "  -h, --host=HOSTNAME    Name des Datenbankservers oder Socket-Verzeichnis\n"
+
+#: pg_basebackup.c:125 pg_receivexlog.c:69
+#, c-format
+msgid "  -p, --port=PORT        database server port number\n"
+msgstr "  -p, --port=PORT        Portnummer des Datenbankservers\n"
+
+#: pg_basebackup.c:126 pg_receivexlog.c:70
+#, c-format
 msgid ""
 "  -s, --status-interval=INTERVAL\n"
 "                         time between status packets sent to server (in seconds)\n"
 msgstr ""
 "  -s, --status-interval=INTERVALL\n"
 "                         Zeit zwischen an Server gesendeten Statuspaketen (in Sekunden)\n"
-
-#: pg_basebackup.c:126 pg_receivexlog.c:70
-#, c-format
-msgid "  -h, --host=HOSTNAME    database server host or socket directory\n"
-msgstr "  -h, --host=HOSTNAME    Name des Datenbankservers oder Socket-Verzeichnis\n"
-
-#: pg_basebackup.c:127 pg_receivexlog.c:71
-#, c-format
-msgid "  -p, --port=PORT        database server port number\n"
-msgstr "  -p, --port=PORT        Portnummer des Datenbankservers\n"
 
 #: pg_basebackup.c:128 pg_receivexlog.c:72
 #, c-format
@@ -179,9 +179,9 @@ msgstr ""
 "Berichten Sie Fehler an <pgsql-bugs@postgresql.org>.\n"
 
 #: pg_basebackup.c:172
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not read from ready pipe: %s\n"
-msgstr "%s: konnte aus dem Verzeichnis »%s« nicht lesen: %s\n"
+msgstr "%s: konnte nicht aus bereiter Pipe lesen: %s\n"
 
 #: pg_basebackup.c:180 pg_basebackup.c:271 pg_basebackup.c:1187
 #: pg_receivexlog.c:256
@@ -190,9 +190,9 @@ msgid "%s: could not parse transaction log location \"%s\"\n"
 msgstr "%s: konnte Transaktionslogposition »%s« nicht interpretieren\n"
 
 #: pg_basebackup.c:283
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not create pipe for background process: %s\n"
-msgstr "%s: konnte Hintergrundprozess nicht starten (fork-Fehler): %s\n"
+msgstr "%s: konnte Pipe für Hintergrundprozess nicht erzeugen: %s\n"
 
 #: pg_basebackup.c:316
 #, c-format
@@ -382,9 +382,9 @@ msgid "%s: final receive failed: %s"
 msgstr "%s: letztes Empfangen fehlgeschlagen: %s"
 
 #: pg_basebackup.c:1139
-#, fuzzy, c-format
+#, c-format
 msgid "%s: waiting for background process to finish streaming...\n"
-msgstr "%s: konnte Hintergrundprozess nicht starten (fork-Fehler): %s\n"
+msgstr "%s: warte bis Hintergrundprozess Streaming beendet hat...\n"
 
 #: pg_basebackup.c:1145
 #, c-format
@@ -397,9 +397,9 @@ msgid "%s: could not wait for child process: %s\n"
 msgstr "%s: konnte nicht auf Kindprozess warten: %s\n"
 
 #: pg_basebackup.c:1160
-#, fuzzy, c-format
+#, c-format
 msgid "%s: child %d died, expected %d\n"
-msgstr "Feldanzahl in Zeile ist %d, erwartet wurden %d"
+msgstr "%s: Kindprozess %d endete, aber %d wurde erwartet\n"
 
 #: pg_basebackup.c:1166
 #, c-format
@@ -438,8 +438,8 @@ msgstr "%s: --single-transaction --xlog-method können nicht zusammen verwendet 
 
 #: pg_basebackup.c:1328
 #, c-format
-msgid "%s: invalid xlog-method option \"%s\", must be empty, \"fetch\", or \"stream\"\n"
-msgstr "%s: ungültige Option »%s« für --xlog-method, muss leer, »fetch« oder »stream« sein\n"
+msgid "%s: invalid xlog-method option \"%s\", must be \"fetch\" or \"stream\"\n"
+msgstr "%s: ungültige Option »%s« für --xlog-method, muss »fetch« oder »stream« sein\n"
 
 #: pg_basebackup.c:1347
 #, c-format
@@ -479,9 +479,9 @@ msgid "%s: only tar mode backups can be compressed\n"
 msgstr "%s: nur Sicherungen im Tar-Modus können komprimiert werden\n"
 
 #: pg_basebackup.c:1445
-#, fuzzy, c-format
+#, c-format
 msgid "%s: wal streaming can only be used in plain mode\n"
-msgstr "%s kann nur in Transaktionsblöcken verwendet werden"
+msgstr "%s: WAL-Streaming kann nur im »plain«-Modus verwendet werden\n"
 
 #: pg_basebackup.c:1456
 #, c-format
@@ -489,13 +489,11 @@ msgid "%s: this build does not support compression\n"
 msgstr "%s: diese Installation unterstützt keine Komprimierung\n"
 
 #: pg_receivexlog.c:57
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s receives PostgreSQL streaming transaction logs.\n"
 "\n"
-msgstr ""
-"%s setzt den PostgreSQL-Transaktionslog zurück.\n"
-"\n"
+msgstr "%s empfängt PostgreSQL-Streaming-Transaktionslogs.\n\n"
 
 #: pg_receivexlog.c:61
 #, c-format
@@ -507,14 +505,14 @@ msgstr ""
 "Optionen:\n"
 
 #: pg_receivexlog.c:62
-#, fuzzy, c-format
+#, c-format
 msgid "  -D, --directory=DIR    receive transaction log files into this directory\n"
-msgstr "  -X, --xlogdir=XLOGVERZ    Verzeichnis für den Transaktionslog\n"
+msgstr "  -D, --directory=VERZ   Transaktionslogdateien in dieses Verzeichnis empfangen\n"
 
 #: pg_receivexlog.c:63
-#, fuzzy, c-format
+#, c-format
 msgid "  -n, --no-loop          do not loop on connection lost\n"
-msgstr "  -l              ermögliche SSL-Verbindungen\n"
+msgstr "  -n, --no-loop          bei Verbindungsverlust nicht erneut probieren\n"
 
 #: pg_receivexlog.c:82
 #, c-format
@@ -537,9 +535,9 @@ msgid "%s: could not parse transaction log file name \"%s\"\n"
 msgstr "%s: konnte Transaktionslogdateinamen »%s« nicht interpretieren\n"
 
 #: pg_receivexlog.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not stat file \"%s\": %s\n"
-msgstr "%s: konnte Datei »%s« nicht erzeugen: %s\n"
+msgstr "%s: konnte »stat« für Datei »%s« nicht ausführen: %s\n"
 
 #: pg_receivexlog.c:187
 #, c-format
@@ -549,7 +547,7 @@ msgstr "%s: Segmentdatei »%s« hat falsche Größe %d, wird übersprungen\n"
 #: pg_receivexlog.c:277
 #, c-format
 msgid "%s: starting log streaming at %X/%X (timeline %u)\n"
-msgstr ""
+msgstr "%s: starte Log-Streaming bei %X/%X (Zeitleiste %u)\n"
 
 #: pg_receivexlog.c:351
 #, c-format
@@ -564,7 +562,7 @@ msgstr "%s: Verbindung beendet.\n"
 #: pg_receivexlog.c:439
 #, c-format
 msgid "%s: disconnected. Waiting %d seconds to try again\n"
-msgstr ""
+msgstr "%s: Verbindung beendet. Erneuter Versuch in %d Sekunden\n"
 
 #: receivelog.c:72
 #, c-format
@@ -572,9 +570,9 @@ msgid "%s: could not open transaction log file \"%s\": %s\n"
 msgstr "%s: konnte Transaktionslogdatei »%s« nicht öffnen: %s\n"
 
 #: receivelog.c:84
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not stat transaction log file \"%s\": %s\n"
-msgstr "%s: konnte Logdatei »%s« nicht öffnen: %s\n"
+msgstr "%s: konnte »stat« für Transaktionslogdatei »%s« nicht ausführen: %s\n"
 
 #: receivelog.c:94
 #, c-format
@@ -582,24 +580,24 @@ msgid "%s: transaction log file \"%s\" has %d bytes, should be 0 or %d\n"
 msgstr "%s: Transaktionslogdatei »%s« hat %d Bytes, sollte 0 oder %d sein\n"
 
 #: receivelog.c:107
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not pad transaction log file \"%s\": %s\n"
-msgstr "konnte alte Transaktionslogdatei »%s« nicht umbenennen: %m"
+msgstr "%s: konnte Transaktionslogdatei »%s« nicht auffüllen: %s\n"
 
 #: receivelog.c:120
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not seek to beginning of transaction log file \"%s\": %s\n"
-msgstr "konnte alte Transaktionslogdatei »%s« nicht löschen: %m"
+msgstr "%s: konnte Positionszeiger nicht an den Anfang der Transaktionslogdatei »%s« setzen: %s\n"
 
 #: receivelog.c:143
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not determine seek position in file \"%s\": %s\n"
-msgstr "konnte Positionszeiger in Archivdatei nicht ermitteln: %s\n"
+msgstr "%s: konnte Positionszeiger in Datei »%s« nicht ermitteln: %s\n"
 
 #: receivelog.c:150
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not fsync file \"%s\": %s\n"
-msgstr "%s: konnte Datei »%s« nicht öffnen: %s\n"
+msgstr "%s: konnte Datei »%s« nicht fsyncen: %s\n"
 
 #: receivelog.c:177
 #, c-format
@@ -609,22 +607,22 @@ msgstr "%s: konnte Datei »%s« nicht umbenennen: %s\n"
 #: receivelog.c:184
 #, c-format
 msgid "%s: not renaming \"%s\", segment is not complete.\n"
-msgstr ""
+msgstr "%s: »%s« wird nicht umbenannt, Segment ist noch nicht vollständig.\n"
 
 #: receivelog.c:319
 #, c-format
 msgid "%s: system identifier does not match between base backup and streaming connection\n"
-msgstr ""
+msgstr "%s: Systemidentifikator stimmt nicht zwischen Basissicherung und Streaming-Verbindung überein\n"
 
 #: receivelog.c:327
 #, c-format
 msgid "%s: timeline does not match between base backup and streaming connection\n"
-msgstr ""
+msgstr "%s: Zeitleiste stimmt nicht zwischen Basissicherung und Streaming-Verbindung überein\n"
 
 #: receivelog.c:398
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not send feedback packet: %s"
-msgstr "%s: konnte Basissicherungsbefehl nicht senden: %s"
+msgstr "%s: konnte Rückmeldungspaket nicht senden: %s"
 
 #: receivelog.c:449
 #, c-format
@@ -642,42 +640,42 @@ msgid "%s: keepalive message has incorrect size %d\n"
 msgstr "%s: Keepalive-Nachricht hat falsche Größe %d\n"
 
 #: receivelog.c:489
-#, fuzzy, c-format
+#, c-format
 msgid "%s: unrecognized streaming header: \"%c\"\n"
-msgstr "%s: unbekannter Signalname »%s«\n"
+msgstr "%s: unbekannter Streaming-Header: »%c«\n"
 
 #: receivelog.c:495
 #, c-format
 msgid "%s: streaming header too small: %d\n"
-msgstr ""
+msgstr "%s: Streaming-Header zu klein: %d\n"
 
 #: receivelog.c:514
 #, c-format
 msgid "%s: received transaction log record for offset %u with no file open\n"
-msgstr ""
+msgstr "%s: Transaktionslogeintrag für Offset %u erhalten ohne offene Datei\n"
 
 #: receivelog.c:526
 #, c-format
 msgid "%s: got WAL data offset %08x, expected %08x\n"
-msgstr ""
+msgstr "%s: WAL-Daten-Offset %08x erhalten, %08x erwartet\n"
 
 #: receivelog.c:562
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not write %u bytes to WAL file \"%s\": %s\n"
-msgstr "%s: konnte nicht in Datei »%s« schreiben: %s\n"
+msgstr "%s: konnte %u Bytes nicht in WAL-Datei »%s« schreiben: %s\n"
 
 #: receivelog.c:608
-#, fuzzy, c-format
+#, c-format
 msgid "%s: unexpected termination of replication stream: %s"
-msgstr "konnte Editor »%s« nicht starten\n"
+msgstr "%s: unerwarteter Abbruch des Replikations-Streams: %s"
 
 #: receivelog.c:617
 #, c-format
 msgid "%s: replication stream was terminated before stop point\n"
-msgstr ""
+msgstr "%s: Replikationsstrom wurde vor Stopppunkt abgebrochen\n"
 
 #: receivelog.c:625 receivelog.c:634
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not close file %s: %s\n"
 msgstr "%s: konnte Datei »%s« nicht schließen: %s\n"
 
@@ -691,14 +689,14 @@ msgid "Password: "
 msgstr "Passwort: "
 
 #: streamutil.c:152
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not connect to server\n"
-msgstr "%s: konnte nicht mit Server verbinden: %s"
+msgstr "%s: konnte nicht mit Server verbinden\n"
 
 #: streamutil.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "%s: could not connect to server: %s\n"
-msgstr "%s: konnte nicht mit Server verbinden: %s"
+msgstr "%s: konnte nicht mit Server verbinden: %s\n"
 
 #: streamutil.c:188
 #, c-format
@@ -708,4 +706,4 @@ msgstr "%s: konnte Servereinstellung für integer_datetimes nicht ermitteln\n"
 #: streamutil.c:201
 #, c-format
 msgid "%s: integer_datetimes compile flag does not match server\n"
-msgstr ""
+msgstr "%s: Kompilieroption »integer_datetimes« stimmt nicht mit Server überein\n"
