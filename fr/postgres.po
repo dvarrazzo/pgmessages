@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-08-23 21:53+0000\n"
-"PO-Revision-Date: 2012-08-24 10:19+0100\n"
+"POT-Creation-Date: 2012-09-02 23:11+0000\n"
+"PO-Revision-Date: 2012-09-03 22:54+0100\n"
 "Last-Translator: Guillaume Lelarge <guillaume@lelarge.info>\n"
 "Language-Team: French <guillaume@lelarge.info>\n"
 "Language: fr\n"
@@ -1077,10 +1077,10 @@ msgstr "%s n'est pas un enum"
 
 #: utils/hash/dynahash.c:928
 #: storage/ipc/shmem.c:190
-#: storage/lmgr/predicate.c:2233
-#: storage/lmgr/predicate.c:2248
-#: storage/lmgr/predicate.c:3643
-#: storage/lmgr/predicate.c:4787
+#: storage/lmgr/predicate.c:2246
+#: storage/lmgr/predicate.c:2261
+#: storage/lmgr/predicate.c:3656
+#: storage/lmgr/predicate.c:4800
 #: storage/lmgr/proc.c:197
 #: storage/lmgr/proc.c:216
 #: storage/lmgr/lock.c:631
@@ -2963,8 +2963,8 @@ msgstr "n'a pas pu modifier le répertoire par « %s » : %m"
 
 #: utils/init/miscinit.c:432
 #: utils/adt/acl.c:4822
-#: commands/variable.c:882
-#: commands/variable.c:954
+#: commands/variable.c:891
+#: commands/variable.c:963
 #: commands/user.c:623
 #: commands/user.c:825
 #: commands/user.c:905
@@ -3209,44 +3209,44 @@ msgstr ""
 "La base de données a été initialisée avec un LC_CTYPE à « %s »,\n"
 "qui n'est pas reconnu par setlocale()."
 
-#: utils/init/postinit.c:599
+#: utils/init/postinit.c:608
 msgid "no roles are defined in this database system"
 msgstr "aucun rôle n'est défini dans le système de bases de données"
 
-#: utils/init/postinit.c:600
+#: utils/init/postinit.c:609
 #, c-format
 msgid "You should immediately run CREATE USER \"%s\" SUPERUSER;."
 msgstr "Vous devez immédiatement exécuter « CREATE USER \"%s\" CREATEUSER; »."
 
-#: utils/init/postinit.c:623
+#: utils/init/postinit.c:632
 msgid "new replication connections are not allowed during database shutdown"
 msgstr ""
 "les nouvelles connexions pour la réplication ne sont pas autorisées pendant\n"
 "l'arrêt du serveur de base de données"
 
-#: utils/init/postinit.c:627
+#: utils/init/postinit.c:636
 msgid "must be superuser to connect during database shutdown"
 msgstr ""
 "doit être super-utilisateur pour se connecter pendant un arrêt de la base de\n"
 "données"
 
-#: utils/init/postinit.c:637
+#: utils/init/postinit.c:646
 msgid "must be superuser to connect in binary upgrade mode"
 msgstr "doit être super-utilisateur pour se connecter en mode de mise à jour binaire"
 
-#: utils/init/postinit.c:651
+#: utils/init/postinit.c:660
 msgid "remaining connection slots are reserved for non-replication superuser connections"
 msgstr ""
 "les emplacements de connexions restants sont réservés pour les connexion\n"
 "superutilisateur non relatif à la réplication"
 
-#: utils/init/postinit.c:666
+#: utils/init/postinit.c:675
 msgid "must be replication role to start walsender"
 msgstr "doit être un rôle ayant l'attribut de réplication pour exécuter walsender"
 
-#: utils/init/postinit.c:709
-#: utils/init/postinit.c:777
-#: utils/init/postinit.c:794
+#: utils/init/postinit.c:718
+#: utils/init/postinit.c:786
+#: utils/init/postinit.c:803
 #: commands/dbcommands.c:764
 #: commands/dbcommands.c:909
 #: commands/dbcommands.c:1008
@@ -3259,21 +3259,21 @@ msgstr "doit être un rôle ayant l'attribut de réplication pour exécuter walsende
 msgid "database \"%s\" does not exist"
 msgstr "la base de données « %s » n'existe pas"
 
-#: utils/init/postinit.c:726
+#: utils/init/postinit.c:735
 #, c-format
 msgid "database %u does not exist"
 msgstr "la base de données « %u » n'existe pas"
 
-#: utils/init/postinit.c:778
+#: utils/init/postinit.c:787
 msgid "It seems to have just been dropped or renamed."
 msgstr "Cet objet semble avoir été tout juste supprimé ou renommé."
 
-#: utils/init/postinit.c:796
+#: utils/init/postinit.c:805
 #, c-format
 msgid "The database subdirectory \"%s\" is missing."
 msgstr "Le sous-répertoire de la base de données « %s » est manquant."
 
-#: utils/init/postinit.c:801
+#: utils/init/postinit.c:810
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "n'a pas pu accéder au répertoire « %s » : %m"
@@ -7087,7 +7087,7 @@ msgstr "Les valeurs plus larges qu'une page de tampon ne peuvent pas être indexé
 
 #: access/hash/hashutil.c:170
 #: access/nbtree/nbtpage.c:433
-#: access/gist/gistutil.c:589
+#: access/gist/gistutil.c:637
 #, c-format
 msgid "index \"%s\" contains unexpected zero page at block %u"
 msgstr "l'index « %s » contient une page zéro inattendue au bloc %u"
@@ -7099,8 +7099,8 @@ msgstr "l'index « %s » contient une page zéro inattendue au bloc %u"
 #: access/nbtree/nbtpage.c:436
 #: access/nbtree/nbtpage.c:447
 #: access/gist/gist.c:731
-#: access/gist/gistutil.c:592
-#: access/gist/gistutil.c:603
+#: access/gist/gistutil.c:640
+#: access/gist/gistutil.c:651
 #: access/gist/gistvacuum.c:274
 msgid "Please REINDEX it."
 msgstr "Merci d'exécuter REINDEX sur cet objet."
@@ -7108,7 +7108,7 @@ msgstr "Merci d'exécuter REINDEX sur cet objet."
 #: access/hash/hashutil.c:181
 #: access/hash/hashutil.c:193
 #: access/nbtree/nbtpage.c:444
-#: access/gist/gistutil.c:600
+#: access/gist/gistutil.c:648
 #, c-format
 msgid "index \"%s\" contains corrupted page at block %u"
 msgstr "l'index « %s » contient une page corrompue au bloc %u"
@@ -8911,62 +8911,63 @@ msgstr "le fuseau horaire « %s » semble utiliser les secondes « leap »"
 msgid "PostgreSQL does not support leap seconds."
 msgstr "PostgreSQL ne supporte pas les secondes « leap »."
 
-#: commands/variable.c:582
+#: commands/variable.c:587
 msgid "cannot set transaction read-write mode inside a read-only transaction"
 msgstr ""
 "ne peut pas initialiser le mode lecture-écriture de la transaction à\n"
 "l'intérieur d'une transaction en lecture seule"
 
-#: commands/variable.c:589
+#: commands/variable.c:594
 msgid "transaction read-write mode must be set before any query"
 msgstr ""
 "le mode de transaction lecture/écriture doit être configuré avant d'exécuter\n"
 "la première requête"
 
-#: commands/variable.c:595
+#: commands/variable.c:601
 msgid "cannot set transaction read-write mode during recovery"
 msgstr ""
 "ne peut pas initialiser le mode lecture-écriture des transactions lors de la\n"
 "restauration"
 
-#: commands/variable.c:642
+#: commands/variable.c:650
 msgid "SET TRANSACTION ISOLATION LEVEL must be called before any query"
 msgstr "SET TRANSACTION ISOLATION LEVEL doit être appelé avant toute requête"
 
-#: commands/variable.c:649
+#: commands/variable.c:657
 msgid "SET TRANSACTION ISOLATION LEVEL must not be called in a subtransaction"
 msgstr ""
 "SET TRANSACTION ISOLATION LEVEL ne doit pas être appelé dans une\n"
 "sous-transaction"
 
-#: commands/variable.c:655
+#: commands/variable.c:664
+#: storage/lmgr/predicate.c:1570
 msgid "cannot use serializable mode in a hot standby"
 msgstr "ne peut pas utiliser le mode sérialisable sur un serveur en « Hot Standby »"
 
-#: commands/variable.c:656
+#: commands/variable.c:665
 msgid "You can use REPEATABLE READ instead."
 msgstr "Vous pouvez utiliser REPEATABLE READ à la place."
 
-#: commands/variable.c:704
+#: commands/variable.c:713
 msgid "SET TRANSACTION [NOT] DEFERRABLE cannot be called within a subtransaction"
 msgstr ""
 "SET TRANSACTION [NOT] DEFERRABLE ne doit pas être appelé dans une\n"
 "sous-transaction"
 
-#: commands/variable.c:710
+#: commands/variable.c:719
 msgid "SET TRANSACTION [NOT] DEFERRABLE must be called before any query"
 msgstr "SET TRANSACTION [NOT] DEFERRABLE doit être appelé avant toute requête"
 
-#: commands/variable.c:792
+#: commands/variable.c:801
 #, c-format
 msgid "Conversion between %s and %s is not supported."
 msgstr "La conversion entre %s et %s n'est pas supportée."
 
-#: commands/variable.c:799
+#: commands/variable.c:808
 msgid "Cannot change \"client_encoding\" now."
 msgstr "Ne peut pas modifier « client_encoding » maintenant."
 
-#: commands/variable.c:969
+#: commands/variable.c:978
 #, c-format
 msgid "permission denied to set role \"%s\""
 msgstr "droit refusé pour configurer le rôle « %s »"
@@ -15241,42 +15242,52 @@ msgstr ""
 msgid "deferrable snapshot was unsafe; trying a new one"
 msgstr "l'image déferrable est non sûre ; tentative avec une nouvelle image"
 
-#: storage/lmgr/predicate.c:2234
-#: storage/lmgr/predicate.c:2249
-#: storage/lmgr/predicate.c:3644
+#: storage/lmgr/predicate.c:1571
+msgid "\"default_transaction_isolation\" is set to \"serializable\"."
+msgstr "« default_transaction_isolation » est configuré à « serializable »."
+
+#: storage/lmgr/predicate.c:1572
+msgid "You can use \"SET default_transaction_isolation = 'repeatable read'\" to change the default."
+msgstr ""
+"Vous pouvez utiliser « SET default_transaction_isolation = 'repeatable read' »\n"
+"pour modifier la valeur par défaut."
+
+#: storage/lmgr/predicate.c:2247
+#: storage/lmgr/predicate.c:2262
+#: storage/lmgr/predicate.c:3657
 msgid "You might need to increase max_pred_locks_per_transaction."
 msgstr "Vous pourriez avoir besoin d'augmenter max_pred_locks_per_transaction."
 
-#: storage/lmgr/predicate.c:3798
-#: storage/lmgr/predicate.c:3887
-#: storage/lmgr/predicate.c:3895
-#: storage/lmgr/predicate.c:3934
-#: storage/lmgr/predicate.c:4173
-#: storage/lmgr/predicate.c:4511
-#: storage/lmgr/predicate.c:4523
-#: storage/lmgr/predicate.c:4565
-#: storage/lmgr/predicate.c:4603
+#: storage/lmgr/predicate.c:3811
+#: storage/lmgr/predicate.c:3900
+#: storage/lmgr/predicate.c:3908
+#: storage/lmgr/predicate.c:3947
+#: storage/lmgr/predicate.c:4186
+#: storage/lmgr/predicate.c:4524
+#: storage/lmgr/predicate.c:4536
+#: storage/lmgr/predicate.c:4578
+#: storage/lmgr/predicate.c:4616
 msgid "could not serialize access due to read/write dependencies among transactions"
 msgstr ""
 "n'a pas pu sérialiser un accès à cause des dépendances de lecture/écriture\n"
 "parmi les transactions"
 
-#: storage/lmgr/predicate.c:3800
-#: storage/lmgr/predicate.c:3889
-#: storage/lmgr/predicate.c:3897
-#: storage/lmgr/predicate.c:3936
-#: storage/lmgr/predicate.c:4175
-#: storage/lmgr/predicate.c:4513
-#: storage/lmgr/predicate.c:4525
-#: storage/lmgr/predicate.c:4567
-#: storage/lmgr/predicate.c:4605
+#: storage/lmgr/predicate.c:3813
+#: storage/lmgr/predicate.c:3902
+#: storage/lmgr/predicate.c:3910
+#: storage/lmgr/predicate.c:3949
+#: storage/lmgr/predicate.c:4188
+#: storage/lmgr/predicate.c:4526
+#: storage/lmgr/predicate.c:4538
+#: storage/lmgr/predicate.c:4580
+#: storage/lmgr/predicate.c:4618
 msgid "The transaction might succeed if retried."
 msgstr "La transaction pourrait réussir après une nouvelle tentative."
 
 #: storage/lmgr/proc.c:1043
 #, c-format
-msgid "Process %d waits for %s on %s"
-msgstr "Le processus %d attend %s sur %s"
+msgid "Process %d waits for %s on %s."
+msgstr "Le processus %d attend %s sur %s."
 
 #: storage/lmgr/proc.c:1053
 #, c-format
