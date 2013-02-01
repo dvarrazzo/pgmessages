@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2012-12-03 17:11+0000\n"
-"PO-Revision-Date: 2012-12-03 21:52+0400\n"
+"POT-Creation-Date: 2013-01-31 15:11+0000\n"
+"PO-Revision-Date: 2013-02-01 09:57+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -608,8 +608,8 @@ msgstr "процесс с кодом %d, полученным в запросе 
 #: postmaster/postmaster.c:1922 postmaster/postmaster.c:1955
 #: postmaster/postmaster.c:3033 postmaster/postmaster.c:3783
 #: postmaster/postmaster.c:3869 postmaster/postmaster.c:4438
-#: utils/hash/dynahash.c:363 utils/hash/dynahash.c:435
-#: utils/hash/dynahash.c:950 utils/misc/guc.c:2757 utils/misc/guc.c:2770
+#: utils/hash/dynahash.c:367 utils/hash/dynahash.c:444
+#: utils/hash/dynahash.c:956 utils/misc/guc.c:2757 utils/misc/guc.c:2770
 #: utils/misc/guc.c:2783 utils/init/miscinit.c:212 utils/init/miscinit.c:233
 #: utils/init/miscinit.c:243 utils/fmgr/dfmgr.c:224 utils/mb/mbutils.c:335
 #: utils/mb/mbutils.c:596 utils/mmgr/aset.c:385 utils/mmgr/aset.c:564
@@ -921,7 +921,7 @@ msgstr "тип %s не является составным"
 msgid "record type has not been registered"
 msgstr "тип записи не зарегистрирован"
 
-#: utils/hash/dynahash.c:946 storage/ipc/shmem.c:190 storage/ipc/shmem.c:359
+#: utils/hash/dynahash.c:952 storage/ipc/shmem.c:190 storage/ipc/shmem.c:359
 #: storage/lmgr/proc.c:186 storage/lmgr/proc.c:199 storage/lmgr/lock.c:583
 #: storage/lmgr/lock.c:649 storage/lmgr/lock.c:2051 storage/lmgr/lock.c:2339
 #: storage/lmgr/lock.c:2404
@@ -2887,10 +2887,10 @@ msgstr "база данных \"%u не существует"
 
 #: utils/init/postinit.c:421 utils/init/postinit.c:540
 #: utils/init/postinit.c:556 utils/adt/dbsize.c:148 utils/adt/acl.c:2514
-#: commands/dbcommands.c:759 commands/dbcommands.c:903
-#: commands/dbcommands.c:1010 commands/dbcommands.c:1187
-#: commands/dbcommands.c:1374 commands/dbcommands.c:1446
-#: commands/dbcommands.c:1554 commands/comment.c:626 catalog/aclchk.c:536
+#: commands/dbcommands.c:786 commands/dbcommands.c:930
+#: commands/dbcommands.c:1037 commands/dbcommands.c:1214
+#: commands/dbcommands.c:1401 commands/dbcommands.c:1473
+#: commands/dbcommands.c:1581 commands/comment.c:626 catalog/aclchk.c:536
 #, c-format
 msgid "database \"%s\" does not exist"
 msgstr "база данных \"%s\" не существует"
@@ -4183,25 +4183,30 @@ msgstr "шаблоны формата \"TZ\"/\"tz\" не поддерживаю�
 msgid "invalid input string for \"Y,YYY\""
 msgstr "ошибка синтаксиса в значении для шаблона \"Y,YYY\""
 
-#: utils/adt/formatting.c:3208
+#: utils/adt/formatting.c:3085 utils/adt/date.c:167
+#, c-format
+msgid "date out of range: \"%s\""
+msgstr "дата вне диапазона: \"%s\""
+
+#: utils/adt/formatting.c:3214
 #, c-format
 msgid "hour \"%d\" is invalid for the 12-hour clock"
 msgstr "час \"%d\" не соответствует 12-часовому формату времени"
 
-#: utils/adt/formatting.c:3210
+#: utils/adt/formatting.c:3216
 msgid "Use the 24-hour clock, or give an hour between 1 and 12."
 msgstr "Используйте 24-часовой формат или передавайте часы от 1 до 12."
 
-#: utils/adt/formatting.c:3248
+#: utils/adt/formatting.c:3254
 #, c-format
 msgid "inconsistent use of year %04d and \"BC\""
 msgstr "несогласованное использование в годе %04d и \"BC\""
 
-#: utils/adt/formatting.c:3295
+#: utils/adt/formatting.c:3301
 msgid "cannot calculate day of year without year information"
 msgstr "нельзя рассчитать день года без информации о годе"
 
-#: utils/adt/formatting.c:4160
+#: utils/adt/formatting.c:4166
 msgid "\"RN\" not supported"
 msgstr "\"RN\" не поддерживается"
 
@@ -4218,11 +4223,6 @@ msgstr "TIME(%d)%s: точность уменьшена до дозволенн�
 #: utils/adt/date.c:142 utils/adt/datetime.c:1186 utils/adt/datetime.c:1934
 msgid "date/time value \"current\" is no longer supported"
 msgstr "значение \"current\" для даты/времени больше не поддерживается"
-
-#: utils/adt/date.c:167
-#, c-format
-msgid "date out of range: \"%s\""
-msgstr "дата вне диапазона: \"%s\""
 
 #: utils/adt/date.c:347
 msgid "cannot subtract infinite dates"
@@ -4317,12 +4317,12 @@ msgstr "строка слишком длинна для tsvector (%d Б, при 
 msgid "encoding conversion from %s to ASCII not supported"
 msgstr "преобразование кодировки из %s в ASCII не поддерживается"
 
-#: utils/adt/ascii.c:126 commands/dbcommands.c:234
+#: utils/adt/ascii.c:126 commands/dbcommands.c:235
 #, c-format
 msgid "%s is not a valid encoding name"
 msgstr "%s не является верным названием кодировки"
 
-#: utils/adt/ascii.c:144 commands/dbcommands.c:224
+#: utils/adt/ascii.c:144 commands/dbcommands.c:225
 #, c-format
 msgid "%d is not a valid encoding code"
 msgstr "%d не является верным кодом кодировки"
@@ -4346,8 +4346,8 @@ msgid "database with OID %u does not exist"
 msgstr "база данных с OID %u не существует"
 
 #: utils/adt/dbsize.c:246 utils/adt/acl.c:3695 commands/tablecmds.c:412
-#: commands/tablecmds.c:6567 commands/dbcommands.c:431
-#: commands/dbcommands.c:1043 commands/indexcmds.c:210 commands/comment.c:665
+#: commands/tablecmds.c:6567 commands/dbcommands.c:432
+#: commands/dbcommands.c:1070 commands/indexcmds.c:210 commands/comment.c:665
 #: commands/tablespace.c:415 commands/tablespace.c:770
 #: commands/tablespace.c:837 commands/tablespace.c:939
 #: commands/tablespace.c:1072 executor/execMain.c:2922 catalog/aclchk.c:613
@@ -4863,7 +4863,7 @@ msgid "text search configuration name \"%s\" must be schema-qualified"
 msgstr "имя конфигурации текстового поиска \"%s\" должно указываться со схемой"
 
 #: utils/adt/tsvector_op.c:1371 commands/tablecmds.c:1838 commands/copy.c:3422
-#: commands/indexcmds.c:826 parser/parse_expr.c:472
+#: commands/indexcmds.c:826 parser/parse_expr.c:474
 #, c-format
 msgid "column \"%s\" does not exist"
 msgstr "колонка \"%s\" не существует"
@@ -5614,7 +5614,7 @@ msgid "could not open dictionary file \"%s\": %m"
 msgstr "не удалось открыть файл словаря \"%s\": %m"
 
 #: tsearch/spell.c:444 tsearch/spell.c:461 tsearch/spell.c:478
-#: tsearch/spell.c:495 tsearch/spell.c:517 gram.y:10787 gram.y:10804
+#: tsearch/spell.c:495 tsearch/spell.c:517 gram.y:10810 gram.y:10827
 msgid "syntax error"
 msgstr "ошибка синтаксиса"
 
@@ -7250,7 +7250,7 @@ msgstr "идёт процесс автовосстановления"
 msgid ""
 "database system was not properly shut down; automatic recovery in progress"
 msgstr ""
-"система БД была остановлена внештатно; производится автоматическое "
+"система БД была остановлена нештатно; производится автоматическое "
 "восстановление"
 
 #: access/transam/xlog.c:5551
@@ -7917,7 +7917,7 @@ msgstr "конфликт типов в наследованной колонке
 #: commands/tablecmds.c:1295 commands/tablecmds.c:1469
 #: parser/parse_coerce.c:302 parser/parse_coerce.c:1488
 #: parser/parse_coerce.c:1507 parser/parse_coerce.c:1552
-#: parser/parse_expr.c:1881
+#: parser/parse_expr.c:1896
 #, c-format
 msgid "%s versus %s"
 msgstr "%s и %s"
@@ -8518,11 +8518,11 @@ msgstr ""
 #: commands/copy.c:754 commands/copy.c:762 commands/copy.c:770
 #: commands/copy.c:778 commands/copy.c:786 commands/copy.c:794
 #: commands/copy.c:802 commands/copy.c:810 commands/copy.c:818
-#: commands/dbcommands.c:145 commands/dbcommands.c:153
-#: commands/dbcommands.c:161 commands/dbcommands.c:169
-#: commands/dbcommands.c:177 commands/dbcommands.c:185
-#: commands/dbcommands.c:193 commands/dbcommands.c:1323
-#: commands/dbcommands.c:1331 commands/user.c:135 commands/user.c:152
+#: commands/dbcommands.c:146 commands/dbcommands.c:154
+#: commands/dbcommands.c:162 commands/dbcommands.c:170
+#: commands/dbcommands.c:178 commands/dbcommands.c:186
+#: commands/dbcommands.c:194 commands/dbcommands.c:1350
+#: commands/dbcommands.c:1358 commands/user.c:135 commands/user.c:152
 #: commands/user.c:160 commands/user.c:168 commands/user.c:176
 #: commands/user.c:184 commands/user.c:192 commands/user.c:200
 #: commands/user.c:208 commands/user.c:216 commands/user.c:224
@@ -9269,12 +9269,12 @@ msgid "relation \"%s\" page %u is uninitialized --- fixing"
 msgstr ""
 "в отношении \"%s\" не инициализирована страница %u --- ситуация исправляется"
 
-#: commands/vacuumlazy.c:831
+#: commands/vacuumlazy.c:833
 #, c-format
 msgid "\"%s\": removed %.0f row versions in %u pages"
 msgstr "\"%s\": удалено версий строк: %0.f, обработано страниц: %u"
 
-#: commands/vacuumlazy.c:836
+#: commands/vacuumlazy.c:838
 #, c-format
 msgid ""
 "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u out of %u "
@@ -9283,7 +9283,7 @@ msgstr ""
 "\"%s\": найдено удаляемых версий строк: %.0f, неудаляемых - %.0f, обработано "
 "страниц: %u, всего страниц: %u"
 
-#: commands/vacuumlazy.c:840
+#: commands/vacuumlazy.c:842
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -9296,28 +9296,28 @@ msgstr ""
 "Полностью пустых страниц: %u.\n"
 "%s."
 
-#: commands/vacuumlazy.c:898
+#: commands/vacuumlazy.c:900
 #, c-format
 msgid "\"%s\": removed %d row versions in %d pages"
 msgstr "\"%s\": удалено версий строк: %d, обработано страниц: %d"
 
-#: commands/vacuumlazy.c:901 commands/vacuumlazy.c:994
-#: commands/vacuumlazy.c:1129 commands/vacuum.c:2861
+#: commands/vacuumlazy.c:903 commands/vacuumlazy.c:996
+#: commands/vacuumlazy.c:1131 commands/vacuum.c:2861
 #, c-format
 msgid "%s."
 msgstr "%s."
 
-#: commands/vacuumlazy.c:991
+#: commands/vacuumlazy.c:993
 #, c-format
 msgid "scanned index \"%s\" to remove %d row versions"
 msgstr "просканирован индекс \"%s\", удалено версий строк: %d"
 
-#: commands/vacuumlazy.c:1033 commands/vacuum.c:3528 commands/vacuum.c:3605
+#: commands/vacuumlazy.c:1035 commands/vacuum.c:3528 commands/vacuum.c:3605
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "индекс \"%s\" теперь содержит версий строк: %.0f, в страницах: %u"
 
-#: commands/vacuumlazy.c:1037 commands/vacuum.c:3609
+#: commands/vacuumlazy.c:1039 commands/vacuum.c:3609
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -9328,72 +9328,72 @@ msgstr ""
 "Удалено индексных страниц: %u, пригодно для повторного использования: %u.\n"
 "%s."
 
-#: commands/vacuumlazy.c:1126 commands/vacuum.c:3435
+#: commands/vacuumlazy.c:1128 commands/vacuum.c:3435
 #, c-format
 msgid "\"%s\": truncated %u to %u pages"
 msgstr "\"%s\": усечение (было страниц: %u, стало: %u)"
 
-#: commands/dbcommands.c:200
+#: commands/dbcommands.c:201
 msgid "LOCATION is not supported anymore"
 msgstr "LOCATION больше не поддерживается"
 
-#: commands/dbcommands.c:201
+#: commands/dbcommands.c:202
 msgid "Consider using tablespaces instead."
 msgstr "Рассмотрите возможность использования табличных пространств."
 
-#: commands/dbcommands.c:252 commands/dbcommands.c:1355 commands/user.c:250
+#: commands/dbcommands.c:253 commands/dbcommands.c:1382 commands/user.c:250
 #: commands/user.c:547
 #, c-format
 msgid "invalid connection limit: %d"
 msgstr "неверный предел подключений: %d"
 
-#: commands/dbcommands.c:271
+#: commands/dbcommands.c:272
 msgid "permission denied to create database"
 msgstr "нет прав на создание базы данных"
 
-#: commands/dbcommands.c:294
+#: commands/dbcommands.c:295
 #, c-format
 msgid "template database \"%s\" does not exist"
 msgstr "шаблон базы данных \"%s\" не существует"
 
-#: commands/dbcommands.c:306
+#: commands/dbcommands.c:307
 #, c-format
 msgid "permission denied to copy database \"%s\""
 msgstr "нет прав на копирование базы данных \"%s\""
 
-#: commands/dbcommands.c:322
+#: commands/dbcommands.c:323
 #, c-format
 msgid "invalid server encoding %d"
 msgstr "неверная кодировка для сервера: %d"
 
-#: commands/dbcommands.c:328 commands/dbcommands.c:332
+#: commands/dbcommands.c:329 commands/dbcommands.c:333
 #, c-format
 msgid "invalid locale name %s"
 msgstr "неверное имя локали \"%s\""
 
-#: commands/dbcommands.c:365 commands/dbcommands.c:379
+#: commands/dbcommands.c:366 commands/dbcommands.c:380
 #, c-format
 msgid "encoding %s does not match locale %s"
 msgstr "кодировка %s не соответствует локали %s"
 
-#: commands/dbcommands.c:368
+#: commands/dbcommands.c:369
 #, c-format
 msgid "The chosen LC_CTYPE setting requires encoding %s."
 msgstr "Для выбранного параметра LC_CTYPE требуется кодировка %s."
 
-#: commands/dbcommands.c:382
+#: commands/dbcommands.c:383
 #, c-format
 msgid "The chosen LC_COLLATE setting requires encoding %s."
 msgstr "Для выбранного параметра LC_COLLATE требуется кодировка %s."
 
-#: commands/dbcommands.c:400
+#: commands/dbcommands.c:401
 #, c-format
 msgid ""
 "new encoding (%s) is incompatible with the encoding of the template database "
 "(%s)"
 msgstr "новая кодировка (%s) несовместима с кодировкой шаблона базы данных(%s)"
 
-#: commands/dbcommands.c:403
+#: commands/dbcommands.c:404
 msgid ""
 "Use the same encoding as in the template database, or use template0 as "
 "template."
@@ -9401,7 +9401,7 @@ msgstr ""
 "Используйте кодировку шаблона базы данных или выберите в качестве шаблона "
 "template0."
 
-#: commands/dbcommands.c:408
+#: commands/dbcommands.c:409
 #, c-format
 msgid ""
 "new collation (%s) is incompatible with the collation of the template "
@@ -9410,7 +9410,7 @@ msgstr ""
 "новое правило сортировки (%s) несовместимо с правилом в шаблоне базы данных "
 "(%s)"
 
-#: commands/dbcommands.c:410
+#: commands/dbcommands.c:411
 msgid ""
 "Use the same collation as in the template database, or use template0 as "
 "template."
@@ -9418,7 +9418,7 @@ msgstr ""
 "Используйте то же правило сортировки, что и в шаблоне базы данных, или "
 "выберите в качестве шаблона template0."
 
-#: commands/dbcommands.c:415
+#: commands/dbcommands.c:416
 #, c-format
 msgid ""
 "new LC_CTYPE (%s) is incompatible with the LC_CTYPE of the template database "
@@ -9426,7 +9426,7 @@ msgid ""
 msgstr ""
 "новый параметр LC_CTYPE (%s) несовместим с LC_CTYPE в шаблоне базы данных(%s)"
 
-#: commands/dbcommands.c:417
+#: commands/dbcommands.c:418
 msgid ""
 "Use the same LC_CTYPE as in the template database, or use template0 as "
 "template."
@@ -9434,17 +9434,17 @@ msgstr ""
 "Используйте тот же LC_CTYPE, что и в шаблоне базы данных, или выберите в "
 "качестве шаблона template0."
 
-#: commands/dbcommands.c:444 commands/dbcommands.c:1060
+#: commands/dbcommands.c:445 commands/dbcommands.c:1087
 msgid "pg_global cannot be used as default tablespace"
 msgstr ""
 "pg_global нельзя использовать в качестве табличного пространства по умолчанию"
 
-#: commands/dbcommands.c:470
+#: commands/dbcommands.c:471
 #, c-format
 msgid "cannot assign new default tablespace \"%s\""
 msgstr "не удалось назначить новое табличное пространство по умолчанию \"%s\""
 
-#: commands/dbcommands.c:472
+#: commands/dbcommands.c:473
 #, c-format
 msgid ""
 "There is a conflict because database \"%s\" already has some tables in this "
@@ -9453,56 +9453,56 @@ msgstr ""
 "База данных \"%s\" содержит таблицы, которые уже находятся в этом табличном "
 "пространстве."
 
-#: commands/dbcommands.c:492 commands/dbcommands.c:923
+#: commands/dbcommands.c:493 commands/dbcommands.c:950
 #, c-format
 msgid "database \"%s\" already exists"
 msgstr "база данных \"%s\" уже существует"
 
-#: commands/dbcommands.c:506
+#: commands/dbcommands.c:507
 #, c-format
 msgid "source database \"%s\" is being accessed by other users"
 msgstr "исходная база \"%s\" занята другими пользователями"
 
-#: commands/dbcommands.c:766
+#: commands/dbcommands.c:793
 #, c-format
 msgid "database \"%s\" does not exist, skipping"
 msgstr "база данных \"%s\" не существует, пропускается"
 
-#: commands/dbcommands.c:787
+#: commands/dbcommands.c:814
 msgid "cannot drop a template database"
 msgstr "удалить шаблон базы данных нельзя"
 
-#: commands/dbcommands.c:793
+#: commands/dbcommands.c:820
 msgid "cannot drop the currently open database"
 msgstr "удалить базу данных, открытую в данный момент, нельзя"
 
-#: commands/dbcommands.c:804 commands/dbcommands.c:945
-#: commands/dbcommands.c:1082
+#: commands/dbcommands.c:831 commands/dbcommands.c:972
+#: commands/dbcommands.c:1109
 #, c-format
 msgid "database \"%s\" is being accessed by other users"
 msgstr "база данных \"%s\" занята другими пользователями"
 
-#: commands/dbcommands.c:914
+#: commands/dbcommands.c:941
 msgid "permission denied to rename database"
 msgstr "нет прав на переименование базы данных"
 
-#: commands/dbcommands.c:934
+#: commands/dbcommands.c:961
 msgid "current database cannot be renamed"
 msgstr "нельзя переименовать текущую базу данных"
 
-#: commands/dbcommands.c:1034
+#: commands/dbcommands.c:1061
 msgid "cannot change the tablespace of the currently open database"
 msgstr ""
 "изменить табличное пространство открытой в данный момент базы данных нельзя"
 
-#: commands/dbcommands.c:1122
+#: commands/dbcommands.c:1149
 #, c-format
 msgid "some relations of database \"%s\" are already in tablespace \"%s\""
 msgstr ""
 "некоторые отношения базы данных \"%s\" уже находятся в табличном "
 "пространстве \"%s\""
 
-#: commands/dbcommands.c:1124
+#: commands/dbcommands.c:1151
 msgid ""
 "You must move them back to the database's default tablespace before using "
 "this command."
@@ -9510,17 +9510,17 @@ msgstr ""
 "Прежде чем выполнять эту команду, вы должны вернуть их назад в табличное "
 "пространство по умолчанию для этой базы данных."
 
-#: commands/dbcommands.c:1254 commands/dbcommands.c:1826
-#: commands/dbcommands.c:2021 commands/dbcommands.c:2057
+#: commands/dbcommands.c:1281 commands/dbcommands.c:1864
+#: commands/dbcommands.c:2072 commands/dbcommands.c:2108
 #, c-format
 msgid "some useless files may be left behind in old database directory \"%s\""
 msgstr "в старом каталоге базы данных \"%s\" могли остаться ненужные файлы"
 
-#: commands/dbcommands.c:1593
+#: commands/dbcommands.c:1620
 msgid "permission denied to change owner of database"
 msgstr "нет прав на изменение владельца базы данных"
 
-#: commands/dbcommands.c:1914
+#: commands/dbcommands.c:1965
 #, c-format
 msgid ""
 "There are %d other session(s) and %d prepared transaction(s) using the "
@@ -9529,12 +9529,12 @@ msgstr ""
 "С этой базой данных связаны другие сеансы (%d) и подготовленные транзакции "
 "(%d)."
 
-#: commands/dbcommands.c:1917
+#: commands/dbcommands.c:1968
 #, c-format
 msgid "There are %d other session(s) using the database."
 msgstr "Эта база данных используется в других сеансах (%d)."
 
-#: commands/dbcommands.c:1920
+#: commands/dbcommands.c:1971
 #, c-format
 msgid "There are %d prepared transaction(s) using the database."
 msgstr "С этой базой данных связаны подготовленные транзакции (%d)."
@@ -10979,7 +10979,7 @@ msgstr "В данном контексте допустимы параметры
 
 #: nodes/nodeFuncs.c:107 nodes/nodeFuncs.c:133 parser/parse_coerce.c:1618
 #: parser/parse_coerce.c:1635 parser/parse_coerce.c:1693
-#: parser/parse_expr.c:1497 parser/parse_oper.c:994 parser/parse_func.c:310
+#: parser/parse_expr.c:1499 parser/parse_oper.c:994 parser/parse_func.c:310
 #, c-format
 msgid "could not find array type for data type %s"
 msgstr "тип массива для типа данных %s не найден"
@@ -13180,7 +13180,7 @@ msgstr ""
 "удалить объекты, принадлежащие роли %s, нельзя, так как они нужны системе "
 "баз данных"
 
-#: catalog/pg_shdepend.c:1299
+#: catalog/pg_shdepend.c:1302
 #, c-format
 msgid ""
 "cannot reassign ownership of objects owned by %s because they are required "
@@ -13599,12 +13599,12 @@ msgstr "для временных таблиц имя схемы не указы
 msgid "no schema has been selected to create in"
 msgstr "схема для создания объектов не выбрана"
 
-#: catalog/namespace.c:2076 parser/parse_expr.c:584 parser/parse_target.c:909
+#: catalog/namespace.c:2076 parser/parse_expr.c:586 parser/parse_target.c:909
 #, c-format
 msgid "cross-database references are not implemented: %s"
 msgstr "ссылки между базами не реализованы: %s"
 
-#: catalog/namespace.c:2082 gram.y:3434 gram.y:9931 parser/parse_expr.c:618
+#: catalog/namespace.c:2082 gram.y:3434 gram.y:9954 parser/parse_expr.c:620
 #: parser/parse_target.c:919
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
@@ -14343,20 +14343,20 @@ msgstr "%s: неверный эффективный UID: %d\n"
 msgid "%s: could not determine user name (GetUserName failed)\n"
 msgstr "%s: не удалось определить имя пользователя (ошибка в GetUserName)\n"
 
-#: parser/parse_coerce.c:283 parser/analyze.c:2276 parser/parse_expr.c:647
-#: parser/parse_expr.c:654
+#: parser/parse_coerce.c:283 parser/analyze.c:2276 parser/parse_expr.c:649
+#: parser/parse_expr.c:656
 #, c-format
 msgid "there is no parameter $%d"
 msgstr "параметр $%d не существует"
 
-#: parser/parse_coerce.c:300 parser/parse_expr.c:1879
+#: parser/parse_coerce.c:300 parser/parse_expr.c:1894
 #, c-format
 msgid "inconsistent types deduced for parameter $%d"
 msgstr "для параметра $%d выведены несогласованные типы"
 
 #: parser/parse_coerce.c:891 parser/parse_coerce.c:920
 #: parser/parse_coerce.c:938 parser/parse_coerce.c:953
-#: parser/parse_expr.c:1531 parser/parse_expr.c:2034
+#: parser/parse_expr.c:1533 parser/parse_expr.c:2049
 #, c-format
 msgid "cannot cast type %s to %s"
 msgstr "преобразовать тип %s в %s нельзя"
@@ -14458,7 +14458,7 @@ msgstr ""
 "интервал, задающий часовой пояс, должен иметь точность HOUR или HOUR TO "
 "MINUTE"
 
-#: gram.y:1326 gram.y:7744 gram.y:10037
+#: gram.y:1326 gram.y:7744 gram.y:10060
 msgid "interval precision specified twice"
 msgstr "точность интервала указана дважды"
 
@@ -14541,55 +14541,55 @@ msgstr "тип float должен иметь точность меньше 54 б
 msgid "UNIQUE predicate is not yet implemented"
 msgstr "предикат UNIQUE ещё не реализован"
 
-#: gram.y:9414 gram.y:9429
+#: gram.y:9437 gram.y:9452
 msgid "frame start cannot be UNBOUNDED FOLLOWING"
 msgstr "началом рамки не может быть UNBOUNDED FOLLOWING"
 
-#: gram.y:9419 gram.y:9434
+#: gram.y:9442 gram.y:9457
 msgid "frame start at CURRENT ROW is not implemented"
 msgstr "начало рамки в CURRENT ROW не реализовано"
 
-#: gram.y:9439
+#: gram.y:9462
 msgid "frame end cannot be UNBOUNDED PRECEDING"
 msgstr "концом рамки не может быть UNBOUNDED PRECEDING"
 
-#: gram.y:10559
+#: gram.y:10582
 msgid "OLD used in query that is not in a rule"
 msgstr "OLD используется в запросе вне определения правила"
 
-#: gram.y:10569
+#: gram.y:10592
 msgid "NEW used in query that is not in a rule"
 msgstr "NEW используется в запросе вне определения правила"
 
-#: gram.y:10617 gram.y:10824
+#: gram.y:10640 gram.y:10847
 msgid "improper use of \"*\""
 msgstr "недопустимое использование \"*\""
 
-#: gram.y:10756
+#: gram.y:10779
 msgid "wrong number of parameters on left side of OVERLAPS expression"
 msgstr "неверное число параметров в левой части выражения OVERLAPS"
 
-#: gram.y:10763
+#: gram.y:10786
 msgid "wrong number of parameters on right side of OVERLAPS expression"
 msgstr "неверное число параметров в правой части выражения OVERLAPS"
 
-#: gram.y:10886
+#: gram.y:10909
 msgid "multiple ORDER BY clauses not allowed"
 msgstr "ORDER BY можно указать только один раз"
 
-#: gram.y:10897
+#: gram.y:10920
 msgid "multiple OFFSET clauses not allowed"
 msgstr "OFFSET можно указать только один раз"
 
-#: gram.y:10906
+#: gram.y:10929
 msgid "multiple LIMIT clauses not allowed"
 msgstr "LIMIT можно указать только один раз"
 
-#: gram.y:10915
+#: gram.y:10938
 msgid "multiple WITH clauses not allowed"
 msgstr "WITH можно указать только один раз"
 
-#: gram.y:11069
+#: gram.y:11093
 msgid "OUT and INOUT arguments aren't allowed in TABLE functions"
 msgstr "в табличных функциях не может быть аргументов OUT и INOUT"
 
@@ -15080,104 +15080,104 @@ msgstr ""
 "Операторы сортировки должны быть членами \"<\" или \">\" семейств операторов "
 "btree."
 
-#: parser/parse_expr.c:349 parser/parse_target.c:596
+#: parser/parse_expr.c:351 parser/parse_target.c:596
 msgid "row expansion via \"*\" is not supported here"
 msgstr "расширение строки через \"*\" здесь не поддерживается"
 
-#: parser/parse_expr.c:900
+#: parser/parse_expr.c:902
 msgid "NULLIF requires = operator to yield boolean"
 msgstr "для NULLIF требуется, чтобы оператор = возвращал логическое значение"
 
-#: parser/parse_expr.c:1073
+#: parser/parse_expr.c:1075
 msgid "arguments of row IN must all be row expressions"
 msgstr "все аргументы IN со строкой должны быть строковыми выражениями"
 
-#: parser/parse_expr.c:1276
+#: parser/parse_expr.c:1278
 msgid "subquery cannot have SELECT INTO"
 msgstr "подзапрос не может содержать SELECT INTO"
 
-#: parser/parse_expr.c:1304
+#: parser/parse_expr.c:1306
 msgid "subquery must return a column"
 msgstr "подзапрос должен вернуть колонку"
 
-#: parser/parse_expr.c:1311
+#: parser/parse_expr.c:1313
 msgid "subquery must return only one column"
 msgstr "подзапрос должен вернуть только одну колонку"
 
-#: parser/parse_expr.c:1370
+#: parser/parse_expr.c:1372
 msgid "subquery has too many columns"
 msgstr "в подзапросе слишком много колонок"
 
-#: parser/parse_expr.c:1375
+#: parser/parse_expr.c:1377
 msgid "subquery has too few columns"
 msgstr "в подзапросе недостаточно колонок"
 
-#: parser/parse_expr.c:1471
+#: parser/parse_expr.c:1473
 msgid "cannot determine type of empty array"
 msgstr "тип пустого массива определить нельзя"
 
-#: parser/parse_expr.c:1472
+#: parser/parse_expr.c:1474
 msgid "Explicitly cast to the desired type, for example ARRAY[]::integer[]."
 msgstr ""
 "Приведите его к желаемому типу явным образом, например ARRAY[]::integer[]."
 
-#: parser/parse_expr.c:1486
+#: parser/parse_expr.c:1488
 #, c-format
 msgid "could not find element type for data type %s"
 msgstr "не удалось определить тип элемента для типа данных %s"
 
-#: parser/parse_expr.c:1684
+#: parser/parse_expr.c:1699
 msgid "unnamed XML attribute value must be a column reference"
 msgstr "вместо значения XML-атрибута без имени должна указываться колонка"
 
-#: parser/parse_expr.c:1685
+#: parser/parse_expr.c:1700
 msgid "unnamed XML element value must be a column reference"
 msgstr "вместо значения XML-элемента без имени должна указывается колонка"
 
-#: parser/parse_expr.c:1700
+#: parser/parse_expr.c:1715
 #, c-format
 msgid "XML attribute name \"%s\" appears more than once"
 msgstr "имя XML-атрибута \"%s\" указано неоднократно"
 
-#: parser/parse_expr.c:1807
+#: parser/parse_expr.c:1822
 #, c-format
 msgid "cannot cast XMLSERIALIZE result to %s"
 msgstr "привести результат XMLSERIALIZE к типу %s нельзя"
 
-#: parser/parse_expr.c:2075 parser/parse_expr.c:2273
+#: parser/parse_expr.c:2090 parser/parse_expr.c:2288
 msgid "unequal number of entries in row expressions"
 msgstr "разное число элементов в строках"
 
-#: parser/parse_expr.c:2085
+#: parser/parse_expr.c:2100
 msgid "cannot compare rows of zero length"
 msgstr "строки нулевой длины сравнивать нельзя"
 
-#: parser/parse_expr.c:2110
+#: parser/parse_expr.c:2125
 #, c-format
 msgid "row comparison operator must yield type boolean, not type %s"
 msgstr ""
 "оператор сравнения строк должен выдавать результат логического типа, а не %s"
 
-#: parser/parse_expr.c:2117
+#: parser/parse_expr.c:2132
 msgid "row comparison operator must not return a set"
 msgstr "оператор сравнения строк не должен возвращать множество"
 
-#: parser/parse_expr.c:2176 parser/parse_expr.c:2220
+#: parser/parse_expr.c:2191 parser/parse_expr.c:2235
 #, c-format
 msgid "could not determine interpretation of row comparison operator %s"
 msgstr "не удалось выбрать интерпретацию оператора сравнения строк %s"
 
-#: parser/parse_expr.c:2178
+#: parser/parse_expr.c:2193
 msgid ""
 "Row comparison operators must be associated with btree operator families."
 msgstr ""
 "Операторы сравнения строк должны быть связаны с семейством операторов btree."
 
-#: parser/parse_expr.c:2222
+#: parser/parse_expr.c:2237
 msgid "There are multiple equally-plausible candidates."
 msgstr "Оказалось несколько равноценных кандидатур."
 
-#: parser/parse_expr.c:2313
+#: parser/parse_expr.c:2328
 msgid "IS DISTINCT FROM requires = operator to yield boolean"
 msgstr ""
 "для IS DISTINCT FROM требуется, чтобы оператор = возвращал логическое "
