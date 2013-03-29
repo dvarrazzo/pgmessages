@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2013-03-05 18:34+0000\n"
-"PO-Revision-Date: 2013-03-06 19:31-0500\n"
+"POT-Creation-Date: 2013-03-28 20:04+0000\n"
+"PO-Revision-Date: 2013-03-28 22:11-0400\n"
 "Last-Translator: Peter Eisentraut <peter_e@gmx.net>\n"
 "Language-Team: German <peter_e@gmx.net>\n"
 "Language: de\n"
@@ -3053,7 +3053,7 @@ msgstr "konnte Sperrdatei »%s« nicht schreiben: %m"
 #: utils/init/miscinit.c:1046 utils/init/miscinit.c:1161
 #: utils/error/elog.c:1515 access/transam/xlog.c:2515
 #: access/transam/xlog.c:4232 access/transam/xlog.c:4326
-#: access/transam/xlog.c:4482 replication/basebackup.c:791
+#: access/transam/xlog.c:4482 replication/basebackup.c:849
 #: storage/file/copydir.c:165 storage/file/copydir.c:255 storage/smgr/md.c:553
 #: storage/smgr/md.c:810
 #, c-format
@@ -10337,7 +10337,9 @@ msgstr ""
 msgid ""
 "automatic vacuum of table \"%s.%s.%s\": could not (re)acquire exclusive lock "
 "for truncate scan"
-msgstr "automatisches Vacuum von Tabelle »%s.%s.%s«: konnte exklusive Sperre für Truncate-Scan nicht (wieder)erlangen"
+msgstr ""
+"automatisches Vacuum von Tabelle »%s.%s.%s«: konnte exklusive Sperre für "
+"Truncate-Scan nicht (wieder)erlangen"
 
 #: commands/vacuumlazy.c:1222
 #, c-format
@@ -11263,7 +11265,7 @@ msgid "tablespace \"%s\" already exists"
 msgstr "Tablespace »%s« existiert bereits"
 
 #: commands/tablespace.c:377 commands/tablespace.c:529
-#: replication/basebackup.c:150 replication/basebackup.c:676
+#: replication/basebackup.c:152 replication/basebackup.c:734
 msgid "tablespaces are not supported on this platform"
 msgstr "Tablespaces werden auf dieser Plattform nicht unterstützt"
 
@@ -11918,7 +11920,7 @@ msgid "BEFORE STATEMENT trigger cannot return a value"
 msgstr "Trigger für BEFORE STATEMENT kann keinen Wert zurückgeben"
 
 #: commands/trigger.c:2590 executor/nodeLockRows.c:137
-#: executor/nodeModifyTable.c:366 executor/nodeModifyTable.c:582
+#: executor/nodeModifyTable.c:366 executor/nodeModifyTable.c:588
 #: executor/execMain.c:1867
 msgid "could not serialize access due to concurrent update"
 msgstr "kann Zugriff nicht serialisieren wegen gleichzeitiger Aktualisierung"
@@ -12966,47 +12968,52 @@ msgid "could not read from log file %u, segment %u, offset %u, length %lu: %m"
 msgstr ""
 "konnte nicht aus Logdatei %u, Segment %u bei Position %u, Länge %lu lesen: %m"
 
-#: replication/basebackup.c:124 replication/basebackup.c:657
+#: replication/basebackup.c:126 replication/basebackup.c:715
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "konnte symbolische Verknüpfung »%s« nicht lesen: %m"
 
-#: replication/basebackup.c:131 replication/basebackup.c:661
+#: replication/basebackup.c:133 replication/basebackup.c:719
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "Ziel für symbolische Verknüpfung »%s« ist zu lang"
 
-#: replication/basebackup.c:252 replication/basebackup.c:810
+#: replication/basebackup.c:190
+#, c-format
+msgid "could not stat control file \"%s\": %m"
+msgstr "konnte »stat« für Kontrolldatei »%s« nicht ausführen: %m"
+
+#: replication/basebackup.c:267 replication/basebackup.c:868
 msgid "base backup could not send data, aborting backup"
 msgstr "Basissicherung konnte keine Daten senden, Sicherung abgebrochen"
 
-#: replication/basebackup.c:299 replication/basebackup.c:308
-#: replication/basebackup.c:317 replication/basebackup.c:326
-#: replication/basebackup.c:335
+#: replication/basebackup.c:314 replication/basebackup.c:323
+#: replication/basebackup.c:332 replication/basebackup.c:341
+#: replication/basebackup.c:350
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "doppelte Option »%s«"
 
-#: replication/basebackup.c:387
+#: replication/basebackup.c:402
 #, c-format
 msgid "could not open directory \"pg_tblspc\": %m"
 msgstr "konnte Verzeichnis »pg_tblspc« nicht öffnen: %m"
 
-#: replication/basebackup.c:597
-msgid "shutdown requested, aborting active base backup"
-msgstr "Herunterfahren verlangt, aktive Basissicherung wird abgebrochen"
-
-#: replication/basebackup.c:611
+#: replication/basebackup.c:597 replication/basebackup.c:669
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "konnte »stat« für Datei oder Verzeichnis »%s« nicht ausführen: %m"
 
-#: replication/basebackup.c:710
+#: replication/basebackup.c:655
+msgid "shutdown requested, aborting active base backup"
+msgstr "Herunterfahren verlangt, aktive Basissicherung wird abgebrochen"
+
+#: replication/basebackup.c:768
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "überspringe besondere Datei »%s«"
 
-#: replication/basebackup.c:800
+#: replication/basebackup.c:858
 #, c-format
 msgid "archive member \"%s\" too large for tar format"
 msgstr "Archivmitglied »%s« zu groß für Tar-Format"
