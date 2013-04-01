@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2013-03-10 23:52+0000\n"
-"PO-Revision-Date: 2013-03-13 15:25+0400\n"
+"POT-Creation-Date: 2013-04-01 04:33+0000\n"
+"PO-Revision-Date: 2013-04-01 10:15+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <pgtranslation-translators@pgfoundry.org>\n"
 "Language: ru\n"
@@ -3049,7 +3049,7 @@ msgstr "не удалось записать файл блокировки \"%s\
 #: utils/init/miscinit.c:1046 utils/init/miscinit.c:1161
 #: utils/error/elog.c:1515 access/transam/xlog.c:2515
 #: access/transam/xlog.c:4232 access/transam/xlog.c:4326
-#: access/transam/xlog.c:4482 replication/basebackup.c:791
+#: access/transam/xlog.c:4482 replication/basebackup.c:849
 #: storage/file/copydir.c:165 storage/file/copydir.c:255 storage/smgr/md.c:553
 #: storage/smgr/md.c:810
 #, c-format
@@ -11244,7 +11244,7 @@ msgid "tablespace \"%s\" already exists"
 msgstr "табличное пространство \"%s\" уже существует"
 
 #: commands/tablespace.c:377 commands/tablespace.c:529
-#: replication/basebackup.c:150 replication/basebackup.c:676
+#: replication/basebackup.c:152 replication/basebackup.c:734
 msgid "tablespaces are not supported on this platform"
 msgstr "табличные пространства не поддерживаются на этой платформе"
 
@@ -12932,51 +12932,56 @@ msgid "could not read from log file %u, segment %u, offset %u, length %lu: %m"
 msgstr ""
 "не удалось прочитать файл журнала %u, сегмент %u, смещение %u, длина %lu: %m"
 
-#: replication/basebackup.c:124 replication/basebackup.c:657
+#: replication/basebackup.c:126 replication/basebackup.c:715
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "не удалось прочитать символическую ссылку \"%s\": %m"
 
-#: replication/basebackup.c:131 replication/basebackup.c:661
+#: replication/basebackup.c:133 replication/basebackup.c:719
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "целевой путь символической ссылки \"%s\" слишком длинный"
 
-#: replication/basebackup.c:252 replication/basebackup.c:810
+#: replication/basebackup.c:190
+#, c-format
+msgid "could not stat control file \"%s\": %m"
+msgstr "не удалось получить информацию об управляющем файле \"%s\": %m"
+
+#: replication/basebackup.c:267 replication/basebackup.c:868
 msgid "base backup could not send data, aborting backup"
 msgstr ""
 "в процессе базового резервного копирования не удалось передать данные, "
 "копирование прерывается"
 
-#: replication/basebackup.c:299 replication/basebackup.c:308
-#: replication/basebackup.c:317 replication/basebackup.c:326
-#: replication/basebackup.c:335
+#: replication/basebackup.c:314 replication/basebackup.c:323
+#: replication/basebackup.c:332 replication/basebackup.c:341
+#: replication/basebackup.c:350
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "повторяющийся параметр \"%s\""
 
-#: replication/basebackup.c:387
+#: replication/basebackup.c:402
 #, c-format
 msgid "could not open directory \"pg_tblspc\": %m"
 msgstr "не удалось открыть каталог \"pg_tblspc\": %m"
 
-#: replication/basebackup.c:597
+#: replication/basebackup.c:597 replication/basebackup.c:669
+#, c-format
+msgid "could not stat file or directory \"%s\": %m"
+msgstr "не удалось получить информацию о файле или каталоге \"%s\": %m"
+
+#: replication/basebackup.c:655
 msgid "shutdown requested, aborting active base backup"
 msgstr ""
 "запрошено выключение, активный процесс базового резервного копирования "
 "прерывается"
 
-#: replication/basebackup.c:611
-#, c-format
-msgid "could not stat file or directory \"%s\": %m"
-msgstr "не удалось получить информацию о файле или каталоге \"%s\": %m"
-
-#: replication/basebackup.c:710
+#: replication/basebackup.c:768
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "специальный файл \"%s\" пропускается"
 
-#: replication/basebackup.c:800
+#: replication/basebackup.c:858
 #, c-format
 msgid "archive member \"%s\" too large for tar format"
 msgstr "архивируемый файл \"%s\" слишком велик для формата tar"
